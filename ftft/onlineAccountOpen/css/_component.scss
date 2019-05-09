@@ -1,0 +1,1388 @@
+@charset "UTF-8";
+
+$blue: #093e8d;
+$orange: #ea5404;
+$darkGray: #848282;
+$lightGray: #ccc;
+$yellow: #f4c70b;
+$green: #12a012;
+
+// tit ==================================================
+.tit {
+    &-type1 {
+        padding-left: 15px;
+        font-size: 25px;
+        color: $blue;
+        position: relative;
+        margin: 0 0 15px;
+        .tit {
+            &-icon {
+                overflow: hidden;
+                position: absolute;
+                left: 0px;
+                top: 3px;
+                width: 7px;
+                height: 28px;
+                background: $blue;
+                border-radius: 3.5px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    right: 0px;
+                    background: $orange;
+                    height: 50%;
+                }
+            }
+            &-tit {
+                .focus {
+                    color: $orange;
+                    font-size: 30px;
+                    line-height: 1;
+                }
+            }
+            &-stit {
+                font-size: 18px;
+                padding-left: 10px;
+                color: #000;
+            }
+        }
+        & + p {
+            padding-left: 15px;
+        }
+    }
+    &-type2 {
+        padding-left: 15px;
+        padding-left: 0px;
+        font-size: 23px;
+        color: $blue;
+        position: relative;
+        margin: 0 0 15px;
+        .tit {
+            &-icon {
+                overflow: hidden;
+                position: absolute;
+                left: 0px;
+                top: 3px;
+                width: 4px;
+                height: 21px;
+                background: $blue;
+                border-radius: 2px;
+                display: none;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    right: 0px;
+                    background: $orange;
+                    height: 50%;
+                }
+            }
+            &-tit {
+                .focus {
+                    color: $orange;
+                }
+            }
+            &-stit {
+                font-size: 18px;
+                padding-left: 10px;
+                color: #000;
+            }
+        }
+    }
+}
+
+// infoItem ==================================================
+.infoItem {
+    background: #fff;
+    border-radius: 8px;
+    border: solid 1px #f1f1f1;
+    box-shadow: 0px 3px 15px rgba(#000, 0.1);
+    box-sizing: border-box;
+    padding: 25px 30px;
+    margin-top: 25px;
+    .tit-type2 {
+        &:before {
+            content: attr(title);
+            font-size: 15px;
+            width: auto;
+            position: fixed;
+            top: 90px;
+            left: 50%;
+            text-align: center;
+            padding: 3px 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            z-index: 8;
+            transform: translateX(-50%);
+            border-radius: 40px;
+            background: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease all;
+            // pointer-events: none;
+        }
+    }
+    &.here {
+        .tit-type2:before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    @include maxWidth-sm {
+        padding: 20px 10px;
+        margin-left: -5px;
+        margin-right: -5px;
+        &.index {
+            padding: 10px 10px;
+        }
+    }
+    @include maxWidth-xs {
+        .tit-type2:before {
+            top: 63px;
+            font-size: 13px;
+            padding: 5px 10px;
+            width: 85%;
+        }
+    }
+}
+
+// alert ==================================================
+.alert {
+    position: relative;
+    padding: 10px 14px;
+    padding-left: 40px;
+    border: solid 1px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 15px 0px;
+
+    border: none;
+    background: none !important;
+    padding: 10px 0;
+    padding-left: 27px;
+    // margin: 10px 0px;
+    &:before {
+        position: absolute;
+        top: 11px;
+        left: 15px;
+        @extend .fontAwesomeIcon;
+        font-weight: 900;
+
+        left: 0;
+        // top: 1px;
+    }
+    a {
+        border-bottom: dashed 1px;
+        transition: 0.3s ease all;
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+    &-success {
+        color: #007000;
+        background: #e7f5e2;
+        border-color: #d0e9c6;
+        &:before {
+            content: '\f058';
+            color: $green;
+        }
+    }
+    &-info {
+        color: #004085;
+        background: #cce5ff;
+        border-color: #b8daff;
+        &:before {
+            content: '\f05a';
+            color: $blue;
+        }
+    }
+    &-warning {
+        color: #a64f21;
+        color: $orange;
+        background: #fcf8e3;
+        border-color: #ece2b0;
+        &:before {
+            content: '\f071';
+            color: $orange;
+        }
+    }
+    &-danger {
+        color: #9b0300;
+        background: #ebcccc;
+        border-color: #efb0b0;
+        &:before {
+            content: '\f06a';
+            color: #e30400;
+        }
+    }
+    ul,
+    ol {
+        margin: 10px 0px;
+        padding-left: 17px;
+        &:first-of-type {
+            margin-top: 0px;
+        }
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+        li {
+            padding-bottom: 5px;
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
+
+// 外部鏈接 ==================================================
+.externalLink {
+    border-bottom: dashed 1px;
+    transition: 0.3s ease all;
+    &:after {
+        @extend .fontAwesomeIcon;
+        font-weight: 900;
+        content: '\f35d';
+        font-size: 13px;
+    }
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+// button ==================================================
+@mixin buttonTag() {
+    a,
+    button,
+    .fakeButton {
+        @content;
+    }
+}
+.button {
+    margin: 15px 0;
+    @include buttonTag {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-radius: 22px;
+        font-size: 16px;
+        background: $blue;
+        color: #fff;
+        padding: 11px 20px;
+        position: relative;
+        top: 0px;
+        transition: 0.3s ease all;
+        box-sizing: border-box;
+        &:hover {
+            top: -4px;
+            box-shadow: 0px 8px 10px -4px rgba(#000, 0.3);
+        }
+    }
+    &.disable {
+        @include buttonTag {
+            background: #f2f2f2;
+            box-shadow: 0px 0px 0px 2px #bcbcbc inset;
+            color: #9c9c9c;
+            &:hover {
+                top: 0;
+            }
+        }
+    }
+    &.type2 {
+        @include buttonTag {
+            background: #fff;
+            box-shadow: 0px 0px 0px 2px #848282 inset;
+            color: #000;
+        }
+    }
+}
+
+// 可搜尋select ==================================================
+#content .v-select.dropdown {
+    font-size: 17px;
+    .dropdown {
+        &-toggle {
+            border-radius: 8px;
+            border: solid 1px $lightGray;
+            background: #fff;
+            box-sizing: border-box;
+            padding: 11px 10px;
+            input[type="search"] {
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                line-height: 1.4;
+                font-size: 17px;
+                height: 20px;
+            }
+            .clear,
+            .open-indicator {
+                height: 20px;
+            }
+            .selected-tag {
+                margin: 0px;
+                line-height: 1;
+                font-size: 17px;
+                padding: 0px;
+                border: none;
+            }
+            .vs__selected-options {
+                padding: 0px;
+            }
+        }
+        &-menu {
+            z-index: 7;
+            border-top: solid 1px rgba(#000, 0.26);
+            border-radius: 0px 5px 5px 5px;
+            li {
+                & > a {
+                    white-space: normal;
+                    padding: 8px 20px;
+                }
+            }
+        }
+    }
+    @include maxWidth-sm {
+        .dropdown {
+            &-menu {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                max-height: 80vh !important;
+                width: 90vw;
+                z-index: 10;
+                border-radius: 5px;
+                box-sizing: border-box;
+                li {
+                    a {
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+        }
+        &:after {
+            // content: '';
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(#000, 0.5);
+        }
+    }
+}
+/*for ie10 、 ie11*/
+@media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
+    #content .v-select.dropdown .dropdown-toggle button.clear {
+        display: none;
+    }
+}
+
+// 日期選擇器 ==================================================
+#content .datepicker {
+    display: block;
+    & > input {
+        @extend .inputStyle;
+        height: auto;
+        &.focus {
+            box-shadow: none;
+            @extend .inputStyle;
+        }
+    }
+    &-popup {
+        z-index: 7;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    .calendar {
+        &-head {
+            line-height: 37px;
+            height: auto;
+            [class*='-prev'],
+            [class*='-next'] {
+                font-size: 19px;
+            }
+        }
+        &-prev-month-btn {
+            left: 33px;
+        }
+        &-next-month-btn {
+            right: 33px;
+        }
+        &-year-select,
+        &-month-select {
+            font-size: 15px;
+            color: $blue;
+            padding: 0px 8px;
+            border: solid 1px $lightGray;
+            border-radius: 5px;
+            margin: 0px 5px;
+            &:after {
+                @extend .fontAwesomeIcon;
+                content: ' \f0d7';
+                font-weight: 900;
+                padding-left: 4px;
+            }
+        }
+        &-body {
+            width: 300px;
+            height: 230px;
+        }
+        &-week {
+            font-size: 13px;
+            color: #000;
+        }
+    }
+    @include maxWidth-sm {
+        &-popup {
+            position: fixed;
+            z-index: 10;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            margin: 0px;
+            border: none;
+            padding: 10px 5px;
+            transform-origin: center bottom;
+            border-radius: 0;
+            box-shadow: 0px -4px 10px rgba(#000, 0.3);
+        }
+        .calendar {
+            float: none;
+            &-body {
+                width: auto;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.pika {
+    &-single {
+        z-index: 7;
+        border-radius: 5px;
+    }
+    &-lendar {
+        width: 300px;
+    }
+    &-label {
+        &:after {
+            content: " \25be";
+        }
+        select {
+            line-height: 16px;
+            height: 16px;
+        }
+    }
+    &-table {
+        td {
+            padding: 1px;
+        }
+        abbr {
+            text-decoration: none;
+            cursor: auto;
+        }
+    }
+}
+input.pikadayInput {
+    background: #fff url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPjxwYXRoIGQ9Ik01NjQgMTgwLjJINDQ4Yy04LjMgMC0xNS02LjctMTUtMTVzNi43LTE1IDE1LTE1aDExNmM4LjIgMCAxNSA2LjcgMTUgMTVzLTYuOCAxNS0xNSAxNXoiIGZpbGw9IiM5ODk4OTgiLz48cGF0aCBkPSJNOTQ1IDk1Mi4ySDgxLjJjLTguMiAwLTE1LTYuNy0xNS0xNVYxNjIuOGMwLTguMyA2LjgtMTUgMTUtMTVIMjk0YzguMiAwIDE1IDYuNyAxNSAxNXMtNi44IDE1LTE1IDE1SDk2LjJ2NzQ0LjRIOTMwVjE3Ny44SDcxMy42Yy04LjMgMC0xNS02LjctMTUtMTVzNi43LTE1IDE1LTE1SDk0NWM4LjIgMCAxNSA2LjcgMTUgMTV2Nzc0LjRjMCA4LjMtNi44IDE1LTE1IDE1eiIgZmlsbD0iIzk4OTg5OCIvPjxwYXRoIGQ9Ik0zMzMuMyA1NTFIMjE2Yy04LjIgMC0xNS02LjgtMTUtMTVzNi44LTE1IDE1LTE1aDExNy4zYzguMyAwIDE1IDYuNiAxNSAxNXMtNi43IDE1LTE1IDE1em0yMzAuMyAwSDQ0Ni4zYy04LjMgMC0xNS02LjgtMTUtMTVzNi43LTE1IDE1LTE1aDExNy4zYzguMiAwIDE1IDYuNiAxNSAxNXMtNi44IDE1LTE1IDE1em0yMzAuMiAwSDY3Ni42Yy04LjMgMC0xNS02LjgtMTUtMTVzNi43LTE1IDE1LTE1aDExNy4yYzguMyAwIDE1IDYuNiAxNSAxNXMtNi43IDE1LTE1IDE1ek0zMzMuMyA3NDBIMjE2Yy04LjIgMC0xNS02LjgtMTUtMTVzNi44LTE1IDE1LTE1aDExNy4zYzguMyAwIDE1IDYuNiAxNSAxNXMtNi43IDE1LTE1IDE1em0yMzAuMyAwSDQ0Ni4zYy04LjMgMC0xNS02LjgtMTUtMTVzNi43LTE1IDE1LTE1aDExNy4zYzguMiAwIDE1IDYuNiAxNSAxNXMtNi44IDE1LTE1IDE1em0yMzAuMiAwSDY3Ni42Yy04LjMgMC0xNS02LjgtMTUtMTVzNi43LTE1IDE1LTE1aDExNy4yYzguMyAwIDE1IDYuNiAxNSAxNXMtNi43IDE1LTE1IDE1ek0zNzAuOCAyNTguNmMtOC4zIDAtMTUtNi43LTE1LTE1Vjg2LjhjMC04LjIgNi43LTE1IDE1LTE1czE1IDYuOCAxNSAxNXYxNTYuOGMwIDguMy02LjcgMTUtMTUgMTV6bTI3MC4yIDBjLTguMyAwLTE1LTYuNy0xNS0xNVY4Ni44YzAtOC4yIDYuNy0xNSAxNS0xNXMxNSA2LjggMTUgMTV2MTU2LjhjMCA4LjMtNi43IDE1LTE1IDE1ek05NDUgMzcyLjJIODEuMmMtOC4yIDAtMTUtNi43LTE1LTE1czYuOC0xNSAxNS0xNUg5NDVjOC4yIDAgMTUgNi43IDE1IDE1cy02LjggMTUtMTUgMTV6IiBmaWxsPSIjOTg5ODk4Ii8+PC9zdmc+) no-repeat 97% 50%;
+}
+.pika-button:hover,
+.pika-row.pick-whole-week:hover .pika-button {
+    background: $orange;
+}
+.is-selected .pika-button,
+.has-event .pika-button {
+    background: $blue;
+    box-shadow: inset 0 1px 3px $blue;
+}
+
+// 表單 ==================================================
+.formArea {
+    font-size: 0px;
+    margin: 0px -20px;
+    &-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        box-sizing: border-box;
+        font-size: 17px;
+        padding: 25px 20px;
+        transition: 0.3s ease all;
+        &:hover {
+            background: #f9f9f9;
+        }
+        &-tit {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background: $blue;
+                top: -5px;
+                left: -5px;
+                border-radius: 100%;
+                box-shadow: 8px 0px 0px -1px $orange;
+                opacity: 0;
+            }
+            &-text {
+                font-size: 15px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            & + .formArea-item-input {
+                margin-top: 8px;
+            }
+        }
+        &-input {
+            font-size: 0px;
+            position: relative;
+            input,
+            select {
+                width: 100%;
+            }
+            & + .formArea-item-input {
+                margin-top: 8px;
+            }
+            & + .alert {
+                margin: 5px 0 0 !important;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border-bottom: solid 5px;
+                    border-left: solid 8px transparent;
+                    border-right: solid 8px transparent;
+                    top: -5px;
+                    left: 10px;
+                    display: none;
+                }
+                &-success:after {
+                    border-bottom-color: #d0e9c6;
+                }
+                &-info:after {
+                    border-bottom-color: #b8daff;
+                }
+                &-warning:after {
+                    border-bottom-color: #ece2b0;
+                }
+                &-danger:after {
+                    border-bottom-color: #efb0b0;
+                }
+            }
+        }
+        .alert {
+            margin: 8px 0px;
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+        }
+        //錯誤
+        &.error {
+            .formArea-item {
+                &-tit:before {
+                    opacity: 1;
+                    top: -3px;
+                    left: -3px;
+                    transform: translateX(-50%) translateY(-50%);
+                    animation: errorFormItemIcon 0.7s ease-in-out infinite;
+                }
+                &-input {
+                    input {
+                        border-color: #f60000;
+                        box-shadow: 0px 0px 0px 1px #f60000 inset,
+                                    0px 0px 5px rgba(#f60000, 0.5);
+                        background: #fffce6;
+                        background: #fff;
+                    }
+                    select {
+                        border-color: #f60000;
+                        box-shadow: 0px 0px 0px 1px #f60000 inset,
+                                    0px 0px 5px rgba(#f60000, 0.5);
+                        background-color: #fffce6;
+                        background-color: #fff;
+                    }
+                    .checkbox-icon,
+                    .radio-icon {
+                        border-color: #f60000;
+                        background-color: #fffce6;
+                        background: #fff;
+                    }
+                    .dropdown-toggle {
+                        border-color: #f60000;
+                        box-shadow: 0px 0px 0px 1px #f60000 inset,
+                                    0px 0px 5px rgba(#f60000, 0.5);
+                        background: #fffce6;
+                        background: #fff;
+                        input {
+                            box-shadow: none;
+                        }
+                    }
+                    .uploadDocument-info {
+                        border-color: #f60000;
+                        box-shadow: 0px 0px 0px 1px #f60000 inset,
+                                    0px 0px 5px rgba(#f60000, 0.5);
+                    }
+                    #signature,
+                    .signature {
+                        border-color: #f60000;
+                        box-shadow: 0px 0px 0px 1px #f60000 inset,
+                                    0px 0px 5px rgba(#f60000, 0.5);
+                    }
+                }
+            }
+        }
+        // 空格
+        &.space {
+            padding: 0px;
+        }
+        // 100%
+        &.full {
+            width: 100%;
+        }
+        // 姓名
+        &.name {
+            .formArea-item-input {
+                margin-left: -7px;
+                margin-right: -7px;
+                input {
+                    display: inline-block;
+                    width: calc(50% - 14px);
+                    margin: 0px 7px;
+                }
+            }
+        }
+        // 上傳證件
+        &.uploadDocument {
+            input[type="file"] {
+                display: none;
+            }
+            .uploadDocument-info {
+                position: relative;
+                background: #f7f7f7;
+                border: solid 1px $lightGray;
+                border-radius: 8px;
+                overflow: hidden;
+                padding-bottom: 63%;
+                img {
+                    opacity: 0.25;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    transition: 0.3s ease opacity;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
+                .button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    width: 170px;
+                    margin: 0px;
+                    transition: 0.3s ease all;
+                    & > div:before {
+                        content: '上傳 ';
+                        display: inline;
+                    }
+                }
+                &.hasData {
+                    background: #fff;
+                    img {
+                        opacity: 1;
+                    }
+                    .button {
+                        transform: translateX(0) translateY(0);
+                        top: auto;
+                        left: auto;
+                        right: 0px;
+                        bottom: 0px;
+                        & > div {
+                            background: #fff;
+                            color: #000;
+                            box-shadow: 0 0 0 2px #848282 inset;
+                            &:before {
+                                content: '重新上傳 ';
+                            }
+                        }
+                    }
+                }
+            }
+            .formArea-item-input {
+                .loading {
+                    border-radius: 10px;
+                }
+            }
+        }
+        // 確認資料
+        &.confirm {
+            .formArea-item-input {
+                font-size: 17px;
+                border-bottom: dashed 1px #ccc;
+                padding: 10px 5px;
+                word-break: break-all;
+            }
+        }
+        // 單選
+        &.radioBtn {
+            .formArea-item-input {
+                .radio,
+                .checkbox {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .otherOption {
+                    display: block;
+                    .radio,
+                    .checkbox {
+                        // vertical-align: middle;
+                        // margin-right: 15px;
+                        &-icon {
+                            top: 12px;
+                        }
+                        &-text {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 15px;
+                        }
+                    }
+                    input[type="text"] {
+                        width: auto;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        // 地址
+        &.address {
+            .formArea-item-input {
+                select {
+                    width: auto;
+                    margin-bottom: 10px;
+                    &:nth-of-type(2) {
+                        margin-left: 10px;
+                    }
+                }
+                .address-check {
+                    padding: 10px 0px;
+                }
+                .postalCode {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 17px;
+                    padding: 10px 0px;
+                    margin-left: 10px;
+                }
+                .address-select {
+                    margin-bottom: 10px;
+                    .v-select.dropdown {
+                        display: inline-block;
+                        &:nth-of-type(1) {
+                            width: 150px;
+                        }
+                        &:nth-of-type(2) {
+                            width: 120px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        // 電話
+        &.phone {
+            .formArea-item-input {
+                position: relative;
+                .dash,
+                .extension {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 13px;
+                }
+                .dash {
+                    left: 19.5%;
+                }
+                .extension {
+                    left: 73%;
+                }
+                input {
+                    margin-left: 4%;
+                    &:nth-of-type(1) {
+                        width: 18%;
+                        margin-left: 0px;
+                    }
+                    &:nth-of-type(2) {
+                        width: 50%;
+                    }
+                    &:nth-of-type(3) {
+                        width: 24%;
+                    }
+                }
+            }
+        }
+        // 線上簽名
+        &.electronicSignature {
+            .electronicSignature-signature {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                .js-signature {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;
+                    canvas {
+                        border: solid 1px $lightGray !important;
+                    }
+                }
+                &-buttonArea {
+                    position: absolute;
+                    bottom: 10px;
+                    font-size: 0px;
+                    text-align: right;
+                    width: 100%;
+                    .button {
+                        display: inline-block;
+                        margin: 0px 0px;
+                        margin-right: 15px;
+                        &.hide {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            #signature {
+                position: relative;
+                background: #f7f7f7;
+                border: solid 1px $lightGray;
+                border-radius: 8px;
+                padding-bottom: 50%;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
+                .button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    width: 170px;
+                    margin: 0px;
+                    transition: 0.3s ease all;
+                    & > div:before {
+                        content: '簽名 ';
+                        display: inline;
+                    }
+                }
+                &.hasData {
+                    background: #fff;
+                    .button {
+                        transform: translateX(0) translateY(0);
+                        top: auto;
+                        left: auto;
+                        right: 0px;
+                        bottom: 0px;
+                        & > div {
+                            background: #fff;
+                            color: #000;
+                            box-shadow: 0 0 0 2px #848282 inset;
+                            &:before {
+                                content: '重新簽名 ';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-item {
+            &.mobileShow {
+                display: inline-block !important;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        margin: 0px;
+        &-item {
+            display: block;
+            width: auto;
+            padding-left: 0px;
+            padding-right: 0px;
+            &.mobileShow {
+                display: block !important;
+            }
+            &-input {
+                margin-top: 2px;
+            }
+            &.address {
+                .formArea-item-input {
+                    select {
+                        margin-bottom: 6px;
+                        &:nth-of-type(2) {
+                            margin-left: 6px;
+                        }
+                    }
+                    .postalCode {
+                        display: block;
+                        margin: 0px;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            &.radioBtn .formArea-item-input .otherOption {
+                input[type="text"] {
+                    width: 160px;
+                }
+            }
+        }
+    }
+}
+
+// 規定 / 條款 ==================================================
+.provisionArea {
+    &-info {
+        height: 320px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 8px;
+        border: solid 1px $lightGray;
+        margin: 15px 0px;
+        font-size: 16px;
+        box-sizing: border-box;
+        ::-webkit-scrollbar {
+            display: block;
+        }
+        & > div {
+            padding: 30px 25px;
+        }
+        &-tit,
+        &-stit {
+            margin: 0px 0px 15px;
+            text-align: center;
+        }
+        &-tit {
+            font-size: 24px;
+            margin-top: 30px;
+            &:nth-of-type(1) {
+                margin-top: 0px;
+            }
+        }
+        &-stit {
+            font-size: 21px;
+        }
+        &-list {
+            list-style: cjk-ideographic;
+            padding: 0px 0 0 24px;
+            margin: 15px 0px 15px;
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+            .tit {
+                // color: $blue;
+                // font-size: 17px;
+                & + ol,
+                & + ul {
+                    margin-top: 15px;
+                }
+            }
+            p {
+                margin: 10px 0px;
+                &:last-of-type {
+                    margin-bottom: 0px;
+                }
+            }
+            li {
+                padding-bottom: 35px;
+                &:last-of-type {
+                    padding-bottom: 0px;
+                }
+                ol,
+                ul {
+                    margin-top: 10px;
+                    padding-left: 17px;
+                    li {
+                        padding-bottom: 10px;
+                        ol {
+                            list-style: none;
+                            padding: 0px;
+                            li {
+                                padding-left: 34px;
+                                position: relative;
+                                @for $i from 1 through 9 {
+                                    &:nth-of-type(#{$i}) {
+                                        padding-left: 24px;
+                                    }
+                                }
+                                @for $i from 1 through 99 {
+                                    &:nth-of-type(#{$i}) {
+                                        &:before {
+                                            content: '('+$i+')';
+                                            position: absolute;
+                                            top: 0px;
+                                            left: 0px;
+                                        }
+                                    }
+                                }
+                                ol {
+                                    padding-left: 17px;
+                                    list-style: lower-alpha;
+                                    li {
+                                        padding-left: 0px !important;
+                                        &:before {
+                                            content: '' !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    list-style: disc;
+                    li {
+
+                    }
+                }
+            }
+        }
+        p {
+            margin: 15px 0px;
+        }
+        &-time {
+            text-align: right;
+            margin-top: 15px;
+            font-size: 14px;
+            color: $lightGray;
+        }
+    }
+    &-agree {
+        .checkbox {
+            padding-left: 25px;
+            padding-top: 2px;
+            min-height: 25px;
+            &-icon {
+                width: 25px;
+                height: 25px;
+                i {
+                    font-size: 20px;
+                }
+            }
+            &-text {
+                strong {
+                    border-bottom: solid 1px;
+                }
+            }
+        }
+    }
+    @include maxWidth-sm {
+        &-info {
+            padding: 25px 15px;
+        }
+    }
+}
+
+// 下一步 ==================================================
+.nextBtnArea {
+    text-align: right;
+    margin-top: 25px;
+    .button {
+        display: inline-block;
+        min-width: 170px;
+    }
+    &.twoBtn {
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .button {
+            margin-left: 15px;
+            float: right;
+        }
+    }
+    &.alignCenter {
+        text-align: center;
+    }
+    @include maxWidth-sm {
+        text-align: center;
+        .button {
+            display: block;
+        }
+        &.twoBtn .button {
+            margin-left: 0px;
+            float: none;
+        }
+    }
+}
+
+// 分隔線 ==================================================
+.dividingLine {
+    margin: 20px 0px;
+    &-dashed {
+        border-bottom: dashed 1px $lightGray;
+    }
+}
+
+// loading ==================================================
+.loading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.6);
+    &.fixed {
+        position: fixed;
+        z-index: 10;
+        background: rgba(#000, 0.8);
+    }
+    &.alone {
+        position: relative;
+        width: auto;
+        height: auto;
+        background: none;
+        .loading {
+            &-info {
+                position: relative;
+                background: none;
+                top: 0;
+                left: 0;
+                transform: translateX(0) translateY(0);
+                padding: 0px;
+                margin: 15px 0px;
+            }
+        }
+    }
+    &-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        font-size: 17px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 0px 25px;
+    }
+    &-text {
+        margin: 15px 0px;
+    }
+    &-icon {
+        margin: 15px 0px;
+        position: relative;
+        height: 30px;
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background: $blue;
+            animation: loadingIcon 1.3s ease-in infinite;
+            &:nth-of-type(2) {
+                animation-delay: 0.4s;
+                background: $orange;
+            }
+        }
+        & + .loading-text {
+            font-size: 14px;
+        }
+    }
+}
+
+// 關閉鍵 ==================================================
+.closeBtn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 1;
+    i {
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 100%;
+        color: #fff;
+        background: $blue;
+        transition: 0.3s ease all;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    &:hover {
+        i {
+            background: $orange;
+        }
+    }
+}
+
+// 燈箱 ==================================================
+.lightBox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease all;
+    &-bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.5);
+    }
+    &-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-sizing: border-box;
+        width: 890px;
+        max-height: 90%;
+        box-sizing: border-box;
+        & > div {
+            border-radius: 10px;
+            background: #fff;
+            border: solid 4px $lightGray;
+            box-shadow: 0px 4px 10px rgba(#000, 0.3);
+            padding: 30px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+    }
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    @media screen and (max-width: 991px) {
+        &-container {
+            width: 85%;
+            & > div {
+                box-sizing: border-box;
+                padding: 30px 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-container {
+            & > div {
+                border-width: 4px;
+            }
+            &-btn {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.openLightBox {
+    cursor: pointer;
+}
+
+// popup ==================================================
+.popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    transition: 0.3s ease all;
+    visibility: hidden;
+    opacity: 0;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    &-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.5);
+    }
+    &-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        &-bg {
+            border-radius: 10px;
+            background: #fff;
+            max-height: 80vh;
+            width: 320px;
+            max-width: 85vw;
+            overflow-x: hidden;
+            overflow-y: auto;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            text-align: center;
+            border: solid 4px $lightGray;
+            box-shadow: 0px 4px 10px rgba(#000, 0.3);
+        }
+    }
+    &-icon,
+    &-tit,
+    &-text {
+        margin: 10px 0px;
+    }
+    &-icon {
+        color: $blue;
+        font-size: 60px;
+        i {
+            display: block;
+        }
+    }
+    &-tit {
+        font-size: 22px;
+        color: $blue;
+        & + .popup-text {
+            text-align: center;
+        }
+    }
+    &-text {
+        text-align: left;
+    }
+    &-btnArea {
+        .button {
+            display: inline-block;
+            min-width: 170px;
+            margin: 10px 0px;
+        }
+    }
+}
+
+// 純文字 ==================================================
+.text {
+    margin: 15px 0px;
+    &:first-of-type {
+        margin-top: 0px;
+    }
+    & + .tit-type2 {
+        margin-top: 30px;
+    }
+}

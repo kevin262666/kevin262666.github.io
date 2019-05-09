@@ -1,0 +1,923 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#382f4d">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>富蘭克林坦伯頓多空策略基金 ｜ 富蘭克林國民的基金</title>
+    <meta property="og:title" content="富蘭克林坦伯頓多空策略基金 ｜ 富蘭克林國民的基金">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="富蘭克林坦伯頓多空策略基金，為您在市場波動加劇時，追求低波動風險下的資本增值機會！">
+    <meta property="og:description" content="富蘭克林坦伯頓多空策略基金，為您在市場波動加劇時，追求低波動風險下的資本增值機會！">
+    <meta property="og:image" content="https://event.franklin.com.tw/C2018_10_Q4_1641/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/C2018_10_Q4_1641/index.html">
+	
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+	<style>
+		.mainOpacity {
+			opacity: 0;
+			pointer-events: none;
+		}
+	</style>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+	<div id="content">
+
+		<!-- header -->
+		<header class="header" id="top">
+			<div class="container">
+				<div class="lgog">
+					<a href="https://www.franklin.com.tw/" target="_blank" :title="name">
+						<img src="images/logo.png" :alt="name">
+					</a>
+				</div>
+			</div>
+			<div class="pinRight">
+				<div class="ctaArea clearfix">
+					<div class="ctaArea-btn">
+						<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank" title="免費開戶 領取0.3%優惠">
+							<div class="ctaArea-btn-bubble">
+								<strong>領取<br/><span class="ctaArea-btn-bubble-focus">0.3</span>%優惠</strong>
+							</div>
+							<strong>免費<br/>開戶</strong>
+						</a>
+					</div>
+					<div class="ctaArea-btn">
+						<a href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F1641" target="_blank" title="立即下單">
+							<strong>立即<br/>下單</strong>
+						</a>
+					</div>
+				</div>
+				<nav class="navbar" :class="{show: navbarShow}">
+					<div class="nav">
+						<a href="#whyNow" title="為何是現在" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>為何是現在</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#fourStrategies" title="對沖四策略" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>對沖四策略</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#advantage" title="產品優勢" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>產品優勢</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#password" title="投資密碼" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>投資密碼</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#offer" title="申購優惠" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>申購優惠</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#featured" title="更多精選" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>更多精選</strong>
+							</div>
+						</a>
+					</div>
+				</nav>
+			</div>
+
+			<!--手機menu按鍵-->
+			<div class="menuBtn" :class="{active: menuBtnActive}" @click="toggleMobileNavbar()">
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+
+			<div class="magic">
+				<magic-svg></magic-svg>
+			</div>
+
+			<!-- banner -->
+			<div class="banner">
+				<div class="banner-top">
+					<img src="images/banner-tattoo-1.png" alt="">
+				</div>
+				<div class="banner-bottom">
+					<img src="images/banner-tattoo-2.png" alt="" class="banner-bottom-tattoo">
+					<div class="banner-bottom-cover"></div>
+					<a href="#dialogue" class="banner-bottom-arrow">
+						<i class="fas fa-caret-down"></i>
+					</a>
+				</div>
+				<div class="banner-container">
+					<div>
+						<h1 class="banner-tit" title="避震專家 富蘭克林坦伯頓多空策略基金">
+							<img src="images/banner-tit.png" alt="避震專家 富蘭克林坦伯頓多空策略基金">
+						</h1>
+						<div class="banner-card">
+							<img src="images/banner-card.png" alt="1641">
+							<img src="images/banner-card.png" alt="1641">
+							<img src="images/banner-card.png" alt="1641">
+							<magic-svg></magic-svg>
+						</div>
+					</div>
+					<img src="images/banner-tit-no.png" alt="1641" class="banner-container-no">
+				</div>
+			</div>
+
+			<div class="container-2" :class="{mainOpacity : mainOpacity}">
+
+				<!-- banner2 -->
+				<div class="banner2 wow fadeInUp">
+					<a href="#offer">
+						<div class="banner2-tit">
+							<img src="images/promotions-banner-tit.svg" alt="">
+						</div>
+						<img src="images/promotions-banner-img.png" alt="" class="banner2-img">
+					</a>
+				</div>
+
+				<!-- 對話 -->
+				<section id="dialogue" class="dialogue wow fadeInUp">
+					<section-tit :section_tit="sectionTit[0]"></section-tit>
+					<div class="dialogue-dialogueArea clearfix">
+						<div class="dialogue-man">
+							<img src="images/man-2.png" alt="" class="dialogue-man-img">
+							<div class="dialogue-man-text dialogue-man-text-1">
+								尚書大人，您發明的候風地動儀，打造世界第一個測量地震的儀器，也為防震教育帶來開端，可謂造福後代子孫啊！
+							</div>
+							<div class="dialogue-man-text dialogue-man-text-3">
+								莫非大人指的是要<span class="dialogue-man-text-focus">增加另類資產的配置</span>嗎？
+							</div>
+						</div>
+						<div class="dialogue-man">
+							<img src="images/man-1-name.png" alt="張衡" class="dialogue-man-name">
+							<img src="images/man-1.png" alt="" class="dialogue-man-img">
+							<div class="dialogue-man-text dialogue-man-text-2">
+								過獎、過獎。但你可知道，除了住宅要防震，在市場波動加大時，<span class="dialogue-man-text-focus">投資的資產組合也要懂得避震嗎？</span>
+							</div>
+							<div class="dialogue-man-text dialogue-man-text-4">
+								聰明！不愧是行走江湖多年的富國民！
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+			<!-- 為何是現在 -->
+			<section id="whyNow" class="item type2 whyNow" :class="{mainOpacity : mainOpacity}">
+				<div class="itemType2-bg">
+					<div class="itemType2-bg-left">
+						<img src="images/tattoo-1.png" alt="">
+						<img src="images/tattoo-2.png" alt="">
+					</div>
+					<div class="itemType2-bg-right">
+						<img src="images/tattoo-3.png" alt="">
+						<img src="images/tattoo-4.png" alt="">
+					</div>
+				</div>
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[1]"></section-tit>
+					<div class="item-text wow fadeInUp">
+						<strong v-html="accessDatabase.entry[11].content.$t">
+							擔心全球貿易戰升溫，市場波動超乎想像嗎？
+							<br/>為何在市場波動加大、利率走升的環境中，許多高資產客戶，
+							<br/>會將具有對沖策略的另類資產納入投資組合中？
+						</strong>
+					</div>
+
+					<div class="line-dashed type2"></div>
+
+					<div class="infoItem wow fadeInUp">
+						<h3 class="tit-3 type2" :title="accessDatabase.entry[14].content.$t">
+							<strong v-html="accessDatabase.entry[14].content.$t">原因1：市場波動加大，降低波動避爭端</strong>
+						</h3>
+						<img-chart :img_chart_list="imgChartList[0]"></img-chart>
+					</div>
+
+					<div class="line-dashed type2"></div>
+
+					<div class="infoItem wow fadeInUp">
+						<h3 class="tit-3 type2" :title="accessDatabase.entry[23].content.$t">
+							<strong v-html="accessDatabase.entry[23].content.$t">原因2：利率上揚環境，有利對沖策略表現</strong>
+						</h3>
+						<img-chart :img_chart_list="imgChartList[1]"></img-chart>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 對沖四策略 -->
+			<section id="fourStrategies" class="item fourStrategies" :class="{mainOpacity : mainOpacity}">
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[2]"></section-tit>
+					<div class="item-text wow fadeInUp">
+						<strong v-html="accessDatabase.entry[36].content.$t">
+							許多投資人以為另類資產的對沖策略操作方式相當複雜，有放空、有套利、還有許多很難懂的技術面操作。
+							<br/>其實，對沖策略主要是以「股票對沖」、「事件驅動」、「相對價值」、「全球宏觀」等四大投資策略為根基，
+							<br/>靈活運用策略，爭取超額報酬機會。
+						</strong>
+					</div>
+
+					<div class="line-dashed"></div>
+
+					<div class="infoItem">
+						<h3 class="tit-2 wow fadeInUp" title="四大策略的運作模式">
+							<strong>四大策略的運作模式</strong>
+						</h3>
+						<div class="fourStrategies-infoArea">
+							<div class="fourStrategies-infoArea-bg wow fadeIn">
+								<div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+
+							<div>
+								<div class="fourStrategies-item clearfix">
+									<div class="fourStrategies-item-left wow fadeInLeft">
+										<div class="fourStrategies-item-left-icon">
+											<img src="images/tactics-icon-1.png" alt="股票對沖">
+										</div>
+										<div class="fourStrategies-item-left-tit">
+											<strong>股票對沖</strong>
+										</div>
+									</div>
+									<div class="fourStrategies-item-right">
+										<div class="fourStrategies-item-right-text">
+											<strong v-html="accessDatabase.entry[39].content.$t">透過作多強勢族群和作空弱勢族群/指數的交易組合，減低市場波動風險，並爭取最大利潤。</strong>
+										</div>
+										<div class="fourStrategies-item-right-moreBtn">
+											案例分享 <i class="fas fa-info-circle"></i><i class="fas fa-chevron-circle-down"></i>
+										</div>
+										<div class="fourStrategies-item-popOver">
+											<img-chart :img_chart_list="imgChartList[2]"></img-chart>
+										</div>
+									</div>
+								</div>
+
+								<div class="fourStrategies-item clearfix">
+									<div class="fourStrategies-item-left wow fadeInRight">
+										<div class="fourStrategies-item-left-icon">
+											<img src="images/tactics-icon-2.png" alt="事件驅動">
+										</div>
+										<div class="fourStrategies-item-left-tit">
+											<strong>事件驅動</strong>
+										</div>
+									</div>
+									<div class="fourStrategies-item-right">
+										<div class="fourStrategies-item-right-text">
+											<strong v-html="accessDatabase.entry[46].content.$t">作多被收購公司，因收購價往往高於當今股價；作空收購公司，因買方需支付超過被收購公司的價值(溢價)來彌補不確性。</strong>
+										</div>
+										<div class="fourStrategies-item-right-moreBtn">
+											案例分享 <i class="fas fa-info-circle"></i><i class="fas fa-chevron-circle-down"></i>
+										</div>
+										<div class="fourStrategies-item-popOver">
+											<img-chart :img_chart_list="imgChartList[3]"></img-chart>
+										</div>
+									</div>
+								</div>
+
+								<div class="fourStrategies-item clearfix">
+									<div class="fourStrategies-item-left wow fadeInLeft">
+										<div class="fourStrategies-item-left-icon">
+											<img src="images/tactics-icon-3.png" alt="相對價值">
+										</div>
+										<div class="fourStrategies-item-left-tit">
+											<strong>相對價值</strong>
+										</div>
+									</div>
+									<div class="fourStrategies-item-right">
+										<div class="fourStrategies-item-right-text">
+											<strong v-html="accessDatabase.entry[53].content.$t">透過基本面和數理分析，分析不同債券資產間，是否存在套利空間。</strong>
+										</div>
+										<div class="fourStrategies-item-right-moreBtn">
+											案例分享 <i class="fas fa-info-circle"></i><i class="fas fa-chevron-circle-down"></i>
+										</div>
+										<div class="fourStrategies-item-popOver">
+											<img-chart :img_chart_list="imgChartList[4]"></img-chart>
+										</div>
+									</div>
+								</div>
+
+								<div class="fourStrategies-item clearfix">
+									<div class="fourStrategies-item-left wow fadeInRight">
+										<div class="fourStrategies-item-left-icon">
+											<img src="images/tactics-icon-4.png" alt="全球宏觀">
+										</div>
+										<div class="fourStrategies-item-left-tit">
+											<strong>全球宏觀</strong>
+										</div>
+									</div>
+									<div class="fourStrategies-item-right">
+										<div class="fourStrategies-item-right-text">
+											<strong v-html="accessDatabase.entry[60].content.$t">透過經濟指標的變動，尋找股票、固定收益、貨幣的投資機會，包括人為決策和系統決策。</strong>
+										</div>
+										<div class="fourStrategies-item-right-moreBtn">
+											案例分享 <i class="fas fa-info-circle"></i><i class="fas fa-chevron-circle-down"></i>
+										</div>
+										<div class="fourStrategies-item-popOver">
+											<img-chart :img_chart_list="imgChartList[5]"></img-chart>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 產品優勢 -->
+			<section id="advantage" class="item type2 advantage" :class="{mainOpacity : mainOpacity}">
+				<div class="itemType2-bg">
+					<div class="itemType2-bg-left">
+						<img src="images/tattoo-1.png" alt="">
+						<img src="images/tattoo-2.png" alt="">
+					</div>
+					<div class="itemType2-bg-right">
+						<img src="images/tattoo-3.png" alt="">
+						<img src="images/tattoo-4.png" alt="">
+					</div>
+				</div>
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[3]"></section-tit>
+					<div class="item-text wow fadeInUp">
+						<strong v-html="accessDatabase.entry[71].content.$t">
+							為什麼在過去30年內，另類資產基金的資產規模成長超過80倍？擁有對沖策略的另類資產基金，
+							<br/>對你的投資組合會帶來什麼樣的好處呢？
+						</strong>
+					</div>
+
+					<div class="line-dashed type2"></div>
+
+					<div class="infoItem wow fadeInUp">
+						<h3 class="tit-3 type2" :title="accessDatabase.entry[74].content.$t">
+							<strong v-html="accessDatabase.entry[74].content.$t">好處1：平衡傳統股債的下檔風險</strong>
+						</h3>
+						<img-chart :img_chart_list="imgChartList[6]"></img-chart>
+					</div>
+
+					<div class="line-dashed type2"></div>
+
+					<div class="infoItem wow fadeInUp">
+						<h3 class="tit-3 type2" :title="accessDatabase.entry[81].content.$t">
+							<strong v-html="accessDatabase.entry[81].content.$t">好處2：提升投資組合效益</strong>
+						</h3>
+						<img-chart :img_chart_list="imgChartList[7]"></img-chart>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 產品優勢2 -->
+			<section class="advantage2" :class="{mainOpacity : mainOpacity}">
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[4]"></section-tit>
+					<h3 class="tit-2" :title="accessDatabase.entry[92].content.$t">
+						<strong v-html="accessDatabase.entry[92].content.$t">富蘭克林坦伯頓多空策略基金</strong>
+					</h3>
+
+					<div class="infoItem wow fadeInUp">
+						<h4 class="tit-3" :title="accessDatabase.entry[95].content.$t">
+							<strong v-html="accessDatabase.entry[95].content.$t">對沖策略老司機</strong>
+						</h4>
+						<div class="infoItem-text" v-html="accessDatabase.entry[97].content.$t">基金經理團隊超過23年的對沖操作經驗，對多空策略有深度了解，竭力為投資人創造風險調整後的報酬空間。</div>
+					</div>
+
+					<div class="infoItem wow fadeInUp">
+						<h4 class="tit-3" :title="accessDatabase.entry[100].content.$t">
+							<strong v-html="accessDatabase.entry[100].content.$t">降低波動有訣竅</strong>
+						</h4>
+						<div class="infoItem-text">
+							{{accessDatabase.entry[102].content.$t}}
+							<!-- 經理團隊嚴控波動風險，基金年化波動度約3-4%，僅為世界指數的三成，搭配股債投資，有助提高投資組合的績效表現。 -->
+							<br/>
+							<span class="chart-remark" v-html="accessDatabase.entry[104].content.$t">(資料來源：富蘭克林坦伯頓基金集團，2018/10月)</span>
+						</div>
+					</div>
+
+					<div class="infoItem wow fadeInUp">
+						<h4 class="tit-3" :title="accessDatabase.entry[107].content.$t">
+							<strong v-html="accessDatabase.entry[107].content.$t">動態調整四策略</strong>
+						</h4>
+						<div class="infoItem-text" v-html="accessDatabase.entry[109].content.$t">
+							基金採取多空雙向配置，以達到管控波動風險、追求長期資產增值機會的目標，動態調整四大策略，以收股、債、外匯等相關資產潛力。
+						</div>
+						<div class="chart-table chart-table-1">
+							<div class="chart-table-row chart-table-row-tit">
+								<div class="chart-table-col align-center">
+									<strong>四大策略</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>配置比重</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>現階段投資機會</strong>
+								</div>
+							</div>
+							<div class="chart-table-row" v-for="n in 4">
+								<div class="chart-table-col align-center">
+									<strong v-html="accessDatabase.entry[n * 7 + 105].content.$t"></strong>
+								</div>
+								<div class="chart-table-col align-center" v-html="accessDatabase.entry[n * 7 + 107].content.$t"></div>
+								<div class="chart-table-col" v-html="accessDatabase.entry[n * 7 + 109].content.$t"></div>
+							</div>
+							<!-- <div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>股票對沖</strong>
+								</div>
+								<div class="chart-table-col align-center">39.12%</div>
+								<div class="chart-table-col">貿易糾紛和國際消息頻傳，市場波動加大使股票表現分歧，有助獲取超額報酬。</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>相對價值</strong>
+								</div>
+								<div class="chart-table-col align-center">24.66%</div>
+								<div class="chart-table-col">多已偏向於低存續期間策略，因應利率上揚環境。</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>事件驅動</strong>
+								</div>
+								<div class="chart-table-col align-center">18.94%</div>
+								<div class="chart-table-col">減稅效益和現金匯回皆有助企業活動，有助併購產生，帶動事件驅動投資機會。</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>全球宏觀</strong>
+								</div>
+								<div class="chart-table-col align-center">17.28%</div>
+								<div class="chart-table-col">主要央行分歧的貨幣政策走向，將使利率和外匯產生波動，提供全球宏觀投資機會。</div>
+							</div> -->
+						</div>
+						<div class="chart-remark" v-html="accessDatabase.entry[139].content.$t">資料來源：富蘭克林坦伯頓基金集團，截至2018年9月底配置。富蘭克林證券投顧整理，2018/11/7</div>
+					</div>
+
+					<div class="infoItem wow fadeInUp">
+						<h4 class="tit-3" :title="accessDatabase.entry[142].content.$t">
+							<strong v-html="accessDatabase.entry[142].content.$t">基金單筆投資績效</strong>
+						</h4>
+						<div class="chart-table chart-table-2">
+							<div class="chart-table-row chart-table-row-tit">
+								<div class="chart-table-col align-center">
+									<strong>累積報酬率%</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>三個月</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>六個月</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>一年</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>二年</strong>
+								</div>
+								<div class="chart-table-col align-center">
+									<strong>三年</strong>
+								</div>
+								<!--<div class="chart-table-col align-center">
+									<strong>成立以來</strong>
+								</div>-->
+								<div class="chart-table-col align-center">
+									<strong>波動風險</strong>
+								</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>本基金</strong>
+								</div>
+								<div class="chart-table-col align-center" v-for="n in 6" v-html="accessDatabase.entry[n + 149].content.$t"></div>
+								<!-- <div class="chart-table-col align-center">-2.04</div>
+								<div class="chart-table-col align-center">-0.63</div>
+								<div class="chart-table-col align-center">0.09</div>
+								<div class="chart-table-col align-center">5.85</div>
+								<div class="chart-table-col align-center">6.05</div>
+								<div class="chart-table-col align-center">3.34</div>
+								<div class="chart-table-col align-center">3.34</div> -->
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col align-center">
+									<strong>HFRX<br/>全球對沖基金指數</strong>
+								</div>
+								<div class="chart-table-col align-center" v-for="n in 6" v-html="accessDatabase.entry[n + 156].content.$t"></div>
+								<!-- <div class="chart-table-col align-center">-3.34</div>
+								<div class="chart-table-col align-center">-3.41</div>
+								<div class="chart-table-col align-center">-3.53</div>
+								<div class="chart-table-col align-center">3.20</div>
+								<div class="chart-table-col align-center">1.85</div>
+								<div class="chart-table-col align-center">3.86</div>
+								<div class="chart-table-col align-center">3.86</div> -->
+							</div>
+						</div>
+						<div class="chart-remark" v-html="accessDatabase.entry[164].content.$t">資料來源︰理柏資訊，原幣報酬率截至2018/10/31，取基金之Ａ股美元累積股份為準，基金成立日為2014/9/15，波動風險為過去三年月報酬率的標準差年化值。基金過去績效不代表未來績效之保證</div>
+					</div>
+
+					<div class="btnArea wow fadeInUp">
+						<div class="btn-1">
+							<a href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F1641" target="_blank" title="立即擁有">
+								<strong>立即擁有</strong> <i class="fas fa-caret-right"></i>
+							</a>
+						</div>
+						<div class="btn-1 type2 pcShow">
+							<a href="https://www.franklin.com.tw/Fund/BasicInformation/1641" target="_blank" title="了解更多">
+								<strong>了解更多</strong> <i class="fas fa-caret-right"></i>
+							</a>
+						</div>
+						<div class="btn-1 type2 mobileShow">
+							<a href="https://www.franklin.com.tw/Mobile/Fund/FundInfo?fundGuid=1641" target="_blank" title="了解更多">
+								<strong>了解更多</strong> <i class="fas fa-caret-right"></i>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 投資密碼 -->
+			<section id="password" class="item type2 password" :class="{mainOpacity : mainOpacity}">
+				<div class="itemType2-bg">
+					<div class="itemType2-bg-left">
+						<img src="images/tattoo-1.png" alt="">
+						<img src="images/tattoo-2.png" alt="">
+					</div>
+					<div class="itemType2-bg-right">
+						<img src="images/tattoo-3.png" alt="">
+						<img src="images/tattoo-4.png" alt="">
+					</div>
+				</div>
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[5]"></section-tit>
+					<div class="item-text wow fadeInUp">
+						<strong v-html="accessDatabase.entry[167].content.$t">
+							在市場波動加大，擔心股債發生同步走跌的現象嗎？
+							<br/>投資組合要如何調整，才能降低波動風險，找到報酬機會呢？第一手佈局策略大公開！
+						</strong>
+					</div>
+
+					<div class="line-dashed type2"></div>
+
+					<div class="infoItem">
+						<div class="clearfix">
+							<div class="password-item wow fadeInLeft">
+								<h3 title="市場動態一把抓" class="tit-3 type2">
+									<strong>市場動態一把抓</strong>
+								</h3>
+								<div class="password-item-bottom">
+									<div class="password-item-bottom-img">
+										<img src="images/password-img-1.png" alt="">
+									</div>
+									<ul class="password-item-bottom-list">
+										<li v-for="n in 2">
+											<a :href="accessDatabase.entry[n * 4 + 168].content.$t" target="_blank"
+												:title="accessDatabase.entry[n * 4 + 166].content.$t"
+												v-html="accessDatabase.entry[n * 4 + 166].content.$t"></a>
+										</li>
+										<!-- <li>
+											<a href="https://www.franklin.com.tw/GlobalMarket/Detail/e8f845bd-6fc9-4061-8ab9-8d6f076428d9" target="_blank" title="擔心股債齊漲齊跌？納入這類資產降波動">
+												擔心股債齊漲齊跌？納入這類資產降波動
+											</a>
+										</li>
+										<li>
+											<a href="https://www.franklin.com.tw/GlobalMarket/Detail/f26af6ee-9567-46e7-b5a4-b418952a6215" target="_blank" title="波動環境中，這類資產需求大增！">
+												波動環境中，這類資產需求大增！
+											</a>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="password-item wow fadeInRight">
+								<h3 :title="accessDatabase.entry[179].content.$t" class="tit-3 type2">
+									<strong v-html="accessDatabase.entry[179].content.$t">對沖策略大解密</strong>
+								</h3>
+								<div class="password-item-bottom">
+									<div class="password-item-bottom-img">
+										<img src="images/password-img-2.png" alt="">
+									</div>
+									<ul class="password-item-bottom-list">
+										<li v-for="n in 3">
+											<a :href="accessDatabase.entry[n * 4 + 179].content.$t" target="_blank"
+												:title="accessDatabase.entry[n * 4 + 177].content.$t"
+												v-html="accessDatabase.entry[n * 4 + 177].content.$t"></a>
+										</li>
+										<!-- <li>
+											<a href="https://www.franklin.com.tw/FundsResearches/Detail/41e5cee7-56bf-4ab7-bffa-e1aa15f4830b" target="_blank" title="這些原因，另類資產規模可望大幅增長！">
+												這些原因，另類資產規模可望大幅增長！
+											</a>
+										</li>
+                                        <li>
+											<a href="https://www.youtube.com/watch?v=L8w3LjoLKIE" target="_blank" title="傳統股債之外的投資選擇">
+												傳統股債之外的投資選擇
+											</a>
+										</li>
+										<li>
+											<a href="https://www.franklin.com.tw/FundsResearches/Detail/ed7b6471-22d8-4b1c-8e51-fde26a0166dd" target="_blank" title="跳脫傳統股債，納入另類資產的時候到了！">
+												跳脫傳統股債，納入另類資產的時候到了！
+											</a>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="btnArea">
+							<div class="btn-1 type2 pcShow">
+								<a href="https://www.franklin.com.tw/FundsResearches/Index/bcf937d2-9ab4-4a01-b152-78147085bfca" target="_blank" title="更多資訊">
+									<strong>更多資訊</strong> <i class="fas fa-caret-right"></i>
+								</a>
+							</div>
+							<div class="btn-1 type2 mobileShow">
+								<a href="https://www.franklin.com.tw/Mobile/Money/MoneyArticle?Chapter=8" target="_blank" title="更多資訊">
+									<strong>更多資訊</strong> <i class="fas fa-caret-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 申購優惠 -->
+			<section id="offer" class="item offer" :class="{mainOpacity : mainOpacity}">
+				<div class="container-2">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[6]"></section-tit>
+
+					<div class="infoItem clearfix">
+						<div class="offer-item wow fadeInLeft">
+							<div class="offer-item-top">
+								<h3 class="offer-item-top-tit" title="精選好基金 投資好優惠">
+									精選好基金<br/>投資好優惠
+								</h3>
+								<div class="offer-item-top-text"><strong>手續費限時<span class="offer-item-top-text-focus">0.3</span>%</strong></div>
+								<div class="btn-1">
+									<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank" title="免費開戶、領取0.3%優惠">
+										<strong>免費開戶、領取0.3%優惠</strong> <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+							<div class="btnArea">
+								<div class="btn-1 type2">
+									<a href="https://www.franklin.com.tw/ReservationAccount/ECOffer" target="_blank" title="更多優惠">
+										<strong>更多優惠</strong> <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="offer-item wow fadeInRight">
+							<div class="offer-item-top">
+								<h3 class="offer-item-top-tit" title="翻身妙計獨家公開">
+									<br/>翻身妙計獨家公開
+								</h3>
+								<div class="offer-item-top-text"><strong><span class="offer-item-top-text-focus">2000</span>元買<span class="offer-item-top-text-focus">2</span>檔好基金</strong></div>
+								<div class="btn-1 type3">
+									<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank" title="免費開戶、啟動翻身第一步">
+										<strong>免費開戶、啟動翻身第一步</strong> <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+							<div class="btnArea">
+								<div class="btn-1 type2">
+									<a href="https://event.franklin.com.tw/C2018_04_YRSP/index.html" target="_blank" title="詳閱妙計">
+										<strong>詳閱妙計</strong> <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 精選基金 -->
+			<section id="featured" class="item type2 featured" :class="{mainOpacity : mainOpacity}">
+				<div class="itemType2-bg">
+					<div class="itemType2-bg-left">
+						<img src="images/tattoo-1.png" alt="">
+						<img src="images/tattoo-2.png" alt="">
+					</div>
+					<div class="itemType2-bg-right">
+						<img src="images/tattoo-3.png" alt="">
+						<img src="images/tattoo-4.png" alt="">
+					</div>
+				</div>
+				<div class="container">
+
+					<section-tit class="wow fadeInUp" :section_tit="sectionTit[7]"></section-tit>
+
+					<div class="featured-item-area">
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2017_07_Q3_101/" target="_blank" title="坦伯頓成長基金(本基金之配息來源可能為本金)">
+								<img src="images/featured-img-2.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									坦伯頓成長基金<span class="featured-item-tit-focus">(本基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html" target="_blank" title="全球債券基金(本基金之配息來源可能為本金)">
+								<img src="images/featured-0810.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									全球債券基金<span class="featured-item-tit-focus">(本基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2017_04_Q2/" target="_blank" title="新興國家固定收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+								<img src="images/featured-img-1.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									新興國家固定收益基金<span class="featured-item-tit-focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2017_06_Q3_1009/" target="_blank" title="亞洲小型企業基金">
+								<img src="images/featured-1009.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									亞洲小型企業基金
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2017_08_Q3_0839/" target="_blank" title="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+								<img src="images/featured-0839.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									穩定月收益基金<span class="featured-item-tit-focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_10_fund/0427.html" target="_blank" title="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+								<img src="images/featured-0427.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									精選收益基金<span class="featured-item-tit-focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_10_Q4_1641/" target="_blank" title="多空策略基金">
+								<img src="images/featured-1641.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									多空策略基金
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_12_fund/1107.html" target="_blank" title="富蘭克林公用事業基金(本基金之配息來源可能為本金)">
+								<img src="images/featured-1107.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									富蘭克林公用事業基金<span class="featured-item-tit-focus">(本基金之配息來源可能為本金)</span>
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html" target="_blank" title="美國機會基金">
+								<img src="images/featured-0799.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									美國機會基金
+								</div>
+							</a>
+						</div>
+
+
+						<!-- <div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_07_Q3_0797/" target="_blank" title="科技基金">
+								<img src="images/featured-img-4.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									科技基金
+								</div>
+							</a>
+						</div>
+						<div class="featured-item wow fadeInUp">
+							<a href="https://event.franklin.com.tw/C2018_07_Q3_0796/" target="_blank" title="生技領航基金">
+								<img src="images/featured-img-5.png" alt="" class="featured-item-img">
+								<div class="featured-item-tit">
+									生技領航基金
+								</div>
+							</a>
+						</div> -->
+						
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 注意事項 -->
+			<section class="notice">
+				<div class="container">
+					<div class="notice-tit">
+						注意事項
+					</div>
+					<ul class="notice-list">
+						<li>
+							本網頁提及之0.3%優惠活動期間為2019年1月1日~2019年3月31日
+						</li>
+						<li>
+							本優惠活動限新申購適用，單筆、定期定額與天天自由扣均適用，不限交易次數、金額與幣別，唯不適用AI智能理財專區
+						</li>
+						<li>
+							本公司保留是否接受預約開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動之權利。
+						</li>
+						<li>
+							本優惠活動相關規定請依
+							<a href="https://www.franklin.com.tw/ReservationAccount/ECOffer" target="_blank">
+								富蘭克林基金理財網優惠活動網頁
+							</a>
+							公告為準。
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+		<div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+	</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/component-dist.js"></script>
+	<!-- <script src="js/loading.js"></script> -->
+	<script src="js/common.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		$(window).load(function () {
+			setTimeout(function () {
+				new WOW().init();
+				content.mainOpacity = false
+			}, 500);
+		});
+	</script>
+</body>
+</html>

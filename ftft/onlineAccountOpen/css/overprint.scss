@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+// @import '_base.scss';
+
+$blue: #093e8d;
+$orange: #ea5404;
+$darkGray: #848282;
+$lightGray: #ccc;
+$yellow: #f4c70b;
+$green: #12a012;
+
+// 套印 ==================================================
+$printFontSize-sText: 6pt;
+$printFontSize-text: 7pt;
+$printFontSize-tit: 9pt;
+$printFontSize-tit2: 10pt;
+$printFontSize-tit3: 13pt;
+body {
+    background: #fff;
+    font-family: 'MingLiU';
+}
+// @page {
+//     margin: 1cm;                    /*print邊界*/
+//     size: 210mm 297mm;              /*列印紙張大小*/
+//     size: A4 portrait;
+// }
+.overprint {
+    // background: #fff;
+    // max-width: 687px;
+    // width: 950px;
+    width: 718px;
+    // min-height: 100%;
+    // min-height: calc(100vh - 20px);
+    // height: 850px;
+    height: 1015px;
+    margin: 10px auto;
+    // padding: 28.346px;
+    // box-sizing: border-box;
+    position: relative;
+    font-size: $printFontSize-text;
+    line-height: 1.1;
+    // letter-spacing: -0.8px;
+    overflow: hidden;
+    table {
+        border-spacing: 0px;
+        td {
+            word-break: break-all;
+            box-sizing: border-box;
+            vertical-align: middle;
+            &.vAlign {
+                &-top {
+                    vertical-align: top;
+                }
+            }
+            &.textAlign {
+                &-right {
+                    text-align: right;
+                }
+                &-center {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &-header {
+        &-logo {
+            // width: 130px;
+            width: 110px;
+            display: block;
+        }
+        &-info {
+            border-top: solid 4px $blue;
+            margin-top: 4px;
+            width: 100%;
+            td {
+                text-align: center;
+                padding: 4px 0 0;
+            }
+        }
+    }
+    &-typeTit {
+        font-weight: bold;
+        text-align: center;
+        font-size: $printFontSize-tit3;
+        margin-top: 10px;
+        position: relative;
+        &-typeSTit {
+            font-size: $printFontSize-tit2;
+        }
+        .accountNumbers {
+            // position: absolute;
+            // right: 0px;
+            // bottom: 0px;
+            font-weight: normal;
+            font-size: $printFontSize-text;
+        }
+    }
+    &-item {
+        margin: 5px 0px;
+        page-break-inside: avoid;
+        & + .overprint-item {
+            margin-top: 15px;
+        }
+        &-tit {
+            font-weight: bold;
+            font-size: $printFontSize-tit;
+            // border: double 4px;
+            border: solid 1px #7b7b7b;
+            background: #e8e8e8;
+            padding: 5px 10px;
+            width: 100%;
+            td {
+                padding: 0px;
+            }
+            &-accountNumbers {
+                width: 190px;
+                font-weight: normal;
+            }
+            &-timeTit {
+                width: 90px;
+                font-weight: normal;
+            }
+            &-time {
+                width: 60px;
+                text-align: right;
+                font-weight: normal;
+            }
+        }
+        &-table {
+            width: 100%;
+            // border-right: solid 2px #000;
+            // border-bottom: solid 2px #000;
+            // border-top: solid 2px #000;
+            // border-left: solid 2px #000;
+            border: solid 2px #000;
+            margin-top: 5px;
+            tr {
+                td {
+                    border-top: solid 1px #7b7b7b;
+                    border-left: solid 1px #7b7b7b;
+                    padding: 3px 1px;
+                    text-align: left;
+                    &.textAlign-center {
+                        text-align: center;
+                    }
+                }
+            }
+            &-tit {
+                &-remark {
+                    font-size: $printFontSize-sText;
+                }
+                &-2 {
+                    font-size: $printFontSize-tit;
+                }
+            }
+            &-stit {
+                font-size: $printFontSize-sText;
+                padding-bottom: 1px;
+            }
+            &-remark {
+                font-size: $printFontSize-sText;
+            }
+            &.noBorder {
+                border: none;
+                & > tbody > tr > td {
+                    border: none;
+                    .overprint-item-table {
+                        margin: -3px 0px;
+                    }
+                }
+            }
+            &.special {
+                &-1 {
+                    td {
+                        padding: 1px 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 簽章
+.signature {
+    border: solid 2px #000;
+    padding: 5px;
+    &-tit {
+        text-align: center;
+        font-size: $printFontSize-tit;
+    }
+    &-img {
+        max-width: 100%;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    &-text {
+        text-align: center;
+    }
+}
+
+// 身份證明文件
+.identificationDoc {
+    &-tit {
+        text-align: center;
+        font-size: $printFontSize-tit;
+    }
+    .overprint-item-table td {
+        text-align: center;
+    }
+    &-img {
+        max-width: 100%;
+        max-height: 200px;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+// 勾選icon
+.checkIcon {
+    // font-size: 26px;
+    // line-height: 0.8;
+    // vertical-align: middle;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: solid 1px #000;
+    margin-bottom: -2px;
+    &.checked {
+        // background: #000;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1px;
+            border-left: solid 2px #000;
+        }
+        &:before {
+            height: 4px;
+            transform: rotate(-40deg);
+            top: 2px;
+            left: 1px;
+        }
+        &:after {
+            height: 8px;
+            transform: rotate(40deg);
+            top: -2px;
+            left: 5px;
+        }
+    }
+}
+
+// 文字資訊
+.textInfo {
+    &-tit {
+        font-size: $printFontSize-tit;
+    }
+    &-list {
+        margin: 5px 0px;
+        padding-left: 14px;
+        li {
+            padding-bottom: 1px;
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+            ol {
+                padding-left: 14px;
+                padding-top: 3px;
+            }
+        }
+    }
+}
+ul.textInfo-list {
+    padding-left: 16px;
+}
+
+// 自我證明表
+.selfCertification-footer {
+    padding-left: 410px;
+    &-signature {
+        img {
+            display: inline;
+            vertical-align: middle;
+            width: auto;
+            height: auto;
+            max-width: 200px;
+            max-height: 80px;
+        }
+    }
+    &-time {
+
+    }
+}

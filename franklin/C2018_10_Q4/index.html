@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#291d14">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>富蘭克林國民的基金-理財大補湯</title>
+    <meta property="og:title" content="富蘭克林國民的基金-理財大補湯">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="理財大補湯要在冷冷的冬天，幫你補氣又補血，氣血通了，理財就輕鬆了！">
+    <meta property="og:description" content="理財大補湯要在冷冷的冬天，幫你補氣又補血，氣血通了，理財就輕鬆了！">
+    <meta property="og:image" content="https://event.franklin.com.tw/C2018_10_Q4/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/C2018_10_Q4/index.html">
+	
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+	<script src="js/vue.min.js"></script>
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+	<div id="content">
+
+		<!-- header -->
+		<header class="header" id="top">
+			<div class="container">
+				<div class="lgog">
+					<a href="https://www.franklin.com.tw/" target="_blank" :title="name">
+						<img src="images/logo.png" :alt="name">
+					</a>
+				</div>
+			</div>
+
+			<nav class="navbar" :class="{show: navbarShow}">
+				<div class="container clearfix">
+					<div class="nav">
+						<a href="#tonifyingQi" title="補氣" @click="hideMobileNavbar()">
+							<strong>補氣</strong>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#tonifyingBlood" title="補血" @click="hideMobileNavbar()">
+							<strong>補血</strong>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#questionnaire" title="太醫院把脈" @click="hideMobileNavbar()">
+							<strong>太醫院把脈</strong>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#specialPrice" title="每月特價" @click="hideMobileNavbar()">
+							<strong>每月特價</strong>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#notic" title="注意事項" @click="hideMobileNavbar()">
+							<strong>注意事項</strong>
+						</a>
+					</div>
+					<div class="nav">
+						<a :href="accountOpeningUrl" target="_blank" title="預約開戶買湯去">
+							<strong>預約開戶買湯去</strong> <i class="fas fa-caret-right"></i>
+						</a>
+					</div>
+				</div>
+			</nav>
+
+			<account-opening-btn></account-opening-btn>
+			<login-order-btn></login-order-btn>
+
+			<!--手機menu按鍵-->
+			<div class="menuBtn" :class="{active: menuBtnActive}" @click="toggleMobileNavbar()">
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+
+			<div class="banner">
+				<div class="banner-bg banner-bg-1"></div>
+				<div class="banner-bg banner-bg-2"></div>
+				<div class="banner-bg banner-bg-3"></div>
+				<div class="container">
+					<div class="banner-img banner-img-1">
+						<img src="images/banner-img-1.png" alt="">
+					</div>
+					<div class="banner-img banner-img-2">
+						<img src="images/banner-img-2.png" alt="">
+					</div>
+					<div class="banner-btn">
+						<a class="btn btn-type1 btn-type2 btn-type2-style2" href="#questionnaire">
+							<div class="btn-type1-info">
+								<div class="btn-type1-info-tit">
+									喝湯前先把脈 <i class="fas fa-caret-down"></i></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 補氣 -->
+			<section id="tonifyingQi" class="item tonifyingQi">
+				<img class="tonifyingQi-tattoo tonifyingQi-tattoo-1" src="images/tattoo-1.png" alt="">
+				<img class="tonifyingQi-tattoo tonifyingQi-tattoo-2"src="images/tattoo-2.png" alt="">
+				<div class="container">
+					<div class="tonifyingQi-frameCorner">
+						<img src="images/frame-corner-1.png" alt="">
+						<img src="images/frame-corner-2.png" alt="">
+						<img src="images/frame-corner-4.png" alt="">
+						<img src="images/frame-corner-3.png" alt="">
+					</div>
+					<div class="tonifyingQi-infoArea">
+						<div class="tonifyingQi-tit wow fadeInDown">
+							<img src="images/section-1-tit.png" alt="">
+						</div>
+						<div class="tonifyingQi-info wow fadeInUp">
+							<div class="infoFrameCorner">
+								<div class="infoFrameCorner-cornerRound">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="infoFrameCorner-cornerIcon">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-1.png" alt="症狀">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										氣虛體質常常像洩氣輪胎，投資時常感覺疲勞、無力，不喜歡冒險
+									</div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-2.png" alt="補中益氣湯">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										富含多檔穩健型基金，既可定期提供現金流，又可長期持有分散風險，時時補氣與提供源源不絕的活力！
+									</div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-3.png" alt="成分">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										<ul class="linkList">
+											<li @click="toggleLightBox('fund'), fundNo('3')">
+												<strong>全球債券基金</strong><strong>(本基金之配息來源可能為本金)</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('0')">
+												<strong>精選收益基金</strong><strong>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('1')">
+												<strong>新興國家固定收益基金</strong><strong>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('2')">
+												<strong>穩定月收益基金</strong><strong>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('4')">
+												<strong>多空策略基金</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tonifyingQi-btnArea">
+							<div class="tonifyingQi-btn">
+								<account-opening-btn></account-opening-btn>
+							</div>
+							<div class="tonifyingQi-btn">
+								<login-order-btn></login-order-btn>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 補血 -->
+			<section id="tonifyingBlood" class="item tonifyingQi tonifyingBlood">
+				<img class="tonifyingQi-tattoo tonifyingQi-tattoo-1" src="images/tattoo-1.png" alt="">
+				<img class="tonifyingQi-tattoo tonifyingQi-tattoo-2"src="images/tattoo-3.png" alt="">
+				<div class="container">
+					<div class="tonifyingQi-frameCorner">
+						<img src="images/frame-corner-1.png" alt="">
+						<img src="images/frame-corner-2.png" alt="">
+						<img src="images/frame-corner-4.png" alt="">
+						<img src="images/frame-corner-3.png" alt="">
+					</div>
+					<div class="tonifyingQi-infoArea">
+						<div class="tonifyingQi-info wow fadeInLeft">
+							<div class="infoFrameCorner">
+								<div class="infoFrameCorner-cornerRound">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="infoFrameCorner-cornerIcon">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-1.png" alt="症狀">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										貧血者像失去光澤的蘋果，投資時過於保守，想參與市場行情，但往往挑投資標的時緊張到容易手腳冰冷。
+									</div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-4.png" alt="當歸補血湯">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										當歸補血湯含有多檔具潛力的基金，補充鐵質和滿滿的營養，讓投資更有衝勁！切記一次服用過量，建議分批或定時定量飲用，效果更佳唷!
+									</div>
+								</div>
+								<div class="tonifyingQi-info-item">
+									<div class="tonifyingQi-info-item-tit">
+										<img src="images/section-1-tit-3.png" alt="成分">
+									</div>
+									<div class="tonifyingQi-info-item-text">
+										<ul class="linkList">
+											<li @click="toggleLightBox('fund'), fundNo('5')">
+												<strong>坦伯頓成長基金</strong><strong>(本基金之配息來源可能為本金)</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('6')">
+												<strong>亞洲小型企業基金</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('7')">
+												<strong>科技基金</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+											<li @click="toggleLightBox('fund'), fundNo('8')">
+												<strong>生技領航基金</strong> <i class="fas fa-external-link-alt"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tonifyingQi-tit wow fadeInDown">
+							<img src="images/section-2-tit.png" alt="">
+						</div>
+						<div class="tonifyingQi-btnArea">
+							<div class="tonifyingQi-btn">
+								<account-opening-btn></account-opening-btn>
+							</div>
+							<div class="tonifyingQi-btn">
+								<login-order-btn></login-order-btn>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 太醫院把脈 -->
+			<img src="images/section-3-man-2.png" alt="" class="hide">
+			<img src="images/section-3-man-3.png" alt="" class="hide">
+			<img src="images/section-3-man-4.png" alt="" class="hide">
+			<img src="images/section-3-man-5.png" alt="" class="hide">
+			<section id="questionnaire" class="item questionnaire">
+				<img src="images/section-3-bg-1.png" alt="" class="questionnaire-tottoo questionnaire-tottoo-1">
+				<img src="images/section-3-bg-2.png" alt="" class="questionnaire-tottoo questionnaire-tottoo-2">
+				<div class="container">
+					<div class="questionnaire-infoArea">
+						<div class="questionnaire-tit wow fadeInDown">
+							<img src="images/section-3-tit.png" alt="太醫院把脈">
+						</div>
+						<questionnaire-right>
+							<slot slot="btn">
+								<button class="btn btn-type1 btn-type2 btn-type2-style2" v-if="this.questionnaireBtn" @click="toggleLightBox('prescription')">
+									<div class="btn-type1-info">
+										<div class="btn-type1-info-tit">
+											點此拿藥方 <i class="fas fa-caret-right"></i>
+										</div>
+									</div>
+								</button>
+							</slot>
+						</questionnaire-right>
+					</div>
+				</div>
+			</section>
+
+			<!-- 每月特價 -->
+			<div id="octoberSpecials" @click="toggleLightBox('specialPrice'), specialPrice_No('0')"></div>
+			<!-- <div id="novemberSpecials" @click="toggleLightBox('specialPrice'), specialPrice_No('1')"></div> -->
+			<div id="decemberSpecials" @click="toggleLightBox('specialPrice'), specialPrice_No('2')"></div>
+			<section id="specialPrice" class="item specialPrice">
+				<img class="tonifyingQi-tattoo specialPrice-tattoo-1" src="images/tattoo-1.png" alt="">
+				<img class="tonifyingQi-tattoo specialPrice-tattoo-2" src="images/tattoo-4.png" alt="">
+				<img class="tonifyingQi-tattoo specialPrice-tattoo-3" src="images/tattoo-5.png" alt="">
+				<img class="tonifyingQi-tattoo specialPrice-tattoo-4" src="images/tattoo-8.png" alt="">
+				<div class="container">
+					<div class="infoFrameCorner">
+						<div class="infoFrameCorner-cornerRound">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="infoFrameCorner-cornerIcon">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="specialPrice-area">
+							<div>
+								<div class="specialPrice-tit wow fadeInDown">
+									<img src="images/section-4-tit.png" alt="每月特價">
+								</div>
+								<div class="specialPrice-linkItem-area clearfix">
+									<div class="specialPrice-linkItem wow fadeInLeft" @click="toggleLightBox('specialPrice'), specialPrice_No('0')">
+										<div class="specialPrice-linkItem-img">
+											<img src="images/section-4-icon-1.png" alt="十月限定優惠">
+										</div>
+										<div class="specialPrice-linkItem-text">
+											<strong>
+												<span class="focus">3,000</span>元買<span class="focus">3</span>檔
+											</strong>
+											<br/>(好評延長至12/31)
+										</div>
+									</div>
+									<div class="specialPrice-linkItem wow fadeInLeft" @click="toggleLightBox('specialPrice'), specialPrice_No('1')">
+										<div class="specialPrice-linkItem-img">
+											<img src="images/section-4-icon-2.png" alt="十一月限定優惠">
+											<div class="waitMask">
+												<img src="images/section-4-expired.png" alt="">
+											</div>
+										</div>
+										<div class="specialPrice-linkItem-text">
+											<strong>
+												精選基金
+												<br/>單筆<span class="focus">0.1</span>％優惠
+											</strong>
+										</div>
+									</div>
+									<div class="specialPrice-linkItem wow fadeInLeft" @click="toggleLightBox('specialPrice'), specialPrice_No('2')">
+										<div class="specialPrice-linkItem-img">
+											<img src="images/section-4-icon-3.png" alt="十二月限定優惠">
+											<!-- <div class="waitMask">
+												<img src="images/section-4-wait.png" alt="">
+											</div> -->
+										</div>
+										<div class="specialPrice-linkItem-text">
+											<strong>
+												限定優惠
+												<br/><span class="focus">扣</span>多多<span class="focus">省</span>多多
+											</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 注意事項 -->
+			<section id="notic" class="item notic wow fadeInUp">
+				<img class="tonifyingQi-tattoo notic-tattoo-1" src="images/tattoo-6.png" alt="">
+				<img class="tonifyingQi-tattoo notic-tattoo-2" src="images/tattoo-7.png" alt="">
+				<div class="container">
+					<div class="notic-area">
+						<div>
+							<h2 class="tit" title="注意事項">
+								<img src="images/section-5-tit.png" alt="注意事項">
+							</h2>
+							<ul class="notic-list">
+								<li>
+									<strong>「3千元買3檔」方案：</strong>
+									<ol>
+										<li>
+											限2018/10/1~2018/12/31透過活動下單專頁以新台幣最低3,000元(起)申購定期定額組合(同時申購3檔基金，1檔基金每次扣款1千元，以新台幣1千元累加，手續費外加)，手續費3折優惠；組合中任一檔基金未來若申請異動(含停扣、贖回)均不影響原契約優惠，但必須3檔基金分別申請。
+										</li>
+										<li>
+											各組合配息型基金的配息方式預設為「轉入再投資(配單位數)」，若需修改，需待契約生效後次一營業日登入國民e帳戶之「定期定額變更」進行異動。
+										</li>
+										<li>
+											各組合基金需依富蘭克林基金理財網活動公告為準，若透過其他方案或非本活動下單專頁申購者不適用此申購門檻。
+										</li>
+									</ol>
+								</li>
+								<li>
+									<strong>「12月定期定額扣款滿次降手續費率」方案：</strong>
+									<ol>
+										<li>
+											限2018/12/1~2018/12/31透過國民e帳戶交易平台新下單定期定額契約適用(優惠類別請選擇「定期定額扣款滿次優惠」)，後續扣款次數達下表各級距，則最新一次扣款將比照對應之手續費率扣取手續費；國民e帳戶全系列基金均適用(不限精選基金)，各契約次數分開計算。
+											<div class="notic-list-table">
+												<div class="notic-list-table-row notic-list-table-row-tit">
+													<div class="notic-list-table-col">
+														<strong>定期定額扣款次數</strong>
+													</div>
+													<div class="notic-list-table-col">
+														<strong>手續費優惠費率</strong>
+													</div>
+												</div>
+												<div class="notic-list-table-row">
+													<div class="notic-list-table-col">
+														1-6次
+													</div>
+													<div class="notic-list-table-col">
+														0.3%
+													</div>
+												</div>
+												<div class="notic-list-table-row">
+													<div class="notic-list-table-col">
+														7-12次
+													</div>
+													<div class="notic-list-table-col">
+														0.2%
+													</div>
+												</div>
+												<div class="notic-list-table-row">
+													<div class="notic-list-table-col">
+														13次(含)以上
+													</div>
+													<div class="notic-list-table-col">
+														0.1%
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											若扣款期間進行契約異動(例如：變更扣款金額、扣款日期或暫停扣款)不影響扣款次數計算，唯需扣款成功方納入各扣款次數級距累加；若終止扣款則無法保留已扣款次數，需重新下單。
+										</li>
+									</ol>
+								</li>
+								<li>
+									本公司保留是否接受預約開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動權利；活動規定需依各活動通知以及富蘭克林基金理財網公告為準。
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+		<div class="topBtn">
+			<a href="#top">
+				<span class="topBtn-bg"></span>
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<!-- 基金介紹燈箱 -->
+		<light-box ref="fund" class="fundLightbox-area">
+			<slot slot="infoArea">
+				<fund-introduction v-bind:no="findno" v-bind:list="findList"></fund-introduction>
+			</slot>
+		</light-box>
+		
+		<!-- 把脈完答案燈箱 -->
+		<light-box ref="prescription">
+			<slot slot="infoArea">
+				<prescription-lightbox v-bind:list="questionnaireAnswerList" v-bind:no="questionnaireAnswer"></prescription-lightbox>
+			</slot>
+		</light-box>
+
+		<!-- 每月特價燈箱 -->
+		<light-box ref="specialPrice">
+			<slot slot="infoArea">
+				<special-price-lightbox v-bind:no="specialPriceNo" v-bind:list="specialPriceList"></special-price-lightbox>
+			</slot>
+		</light-box>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/component-dist.js"></script>
+	<!-- <script src="js/loading.js"></script> -->
+	<script src="js/common.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+</body>
+</html>

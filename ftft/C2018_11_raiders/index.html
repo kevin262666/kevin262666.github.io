@@ -1,0 +1,867 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+		w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+		}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+				'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NFX5WB');
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<script src="js/vue.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#60110f">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+    <title>中國市場研習攻略 │ 投資找阿富</title>
+    <meta property="og:title" content="中國市場研習攻略 │ 投資找阿富">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="中國市場”研習攻略”，點這裡線上看，走心不虐心，錯過保證不重播。網路定期定額限時0手續費！">
+    <meta property="og:description" content="中國市場”研習攻略”，點這裡線上看，走心不虐心，錯過保證不重播。網路定期定額限時0手續費！">
+    <meta property="og:image" content="https://www.ftft.com.tw/Areas/C2018_11_raiders/images/fb.png">
+	<meta property="og:url" content="https://www.ftft.com.tw/Areas/C2018_11_raiders/index.html">
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFX5WB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager -->
+
+	<div id="content">
+
+		<div class="loading">
+			<div class="loading-bg-white">
+				<div>
+					<!-- <div class="loading-bg-reel"></div> -->
+				</div>
+				<div></div>
+			</div>
+			<div class="loading-bg-red"></div>
+			<div class="banner-petal">
+				<div class="banner-petal-1">
+					<img src="images/banner-petal-1.png" alt="">
+				</div>
+				<div class="banner-petal-2">
+					<img src="images/banner-petal-2.png" alt="">
+				</div>
+				<div class="banner-petal-3">
+					<img src="images/banner-petal-3.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<header id="top">
+
+			<div class="container">
+				<div class="logo">
+					<a href="http://www.ftft.com.tw" title="富蘭克林華美投信" target="_blank">
+						<img src="images/logo.png" alt="富蘭克林華美投信">
+					</a>
+				</div>
+			</div>
+
+			<div class="pinRight">
+				<div class="pinCta clearfix">
+					<div class="pinCta-btn">
+						<a href="https://etrade.ftft.com.tw/san_register.htm" target="_blank" title="立即開戶" class="event-open">
+							<strong>立即<br/>開戶</strong>
+						</a>
+					</div>
+					<div class="pinCta-btn">
+						<a href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank" title="馬上申購" class="event-purchase">
+							<strong>馬上<br/>申購</strong>
+						</a>
+					</div>
+					<div class="pinCta-btn">
+						<a href="https://line.me/R/ti/p/f6-PRJRsNi" target="_blank" title="加入LINE好友">
+							<strong><i class="fas fa-plus"></i> LINE<br/>好友</strong>
+						</a>
+					</div>
+				</div>
+				<nav class="navbar" :class="{show: navbarShow}">
+					<div class="nav">
+						<a href="#chancePoint" title="研習機會點" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>研習機會點</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#raidersFocus" title="攻略重點" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>攻略重點</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#inspirationalQuotes" title="攻略金句" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>攻略金句</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#target" title="攻略目標" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>攻略目標</strong>
+							</div>
+						</a>
+					</div>
+					<div class="nav">
+						<a href="#notice" title="注意事項" @click="hideMobileNavbar()">
+							<div class="nav-tit">
+								<strong>注意事項</strong>
+							</div>
+						</a>
+					</div>
+				</nav>
+			</div>
+
+			<div class="pinLeft">
+				<div class="shareBtn clearfix">
+					<div class="shareBtn-item">
+<a href="javascript:void(0);" title="分享到Facebook" onclick="window.open(' https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/2Qbyxu0 ', '發佈到Facebook', config='height=600, width=400, scrollbars=yes, top=100px, left=300px');">
+							<img src="images/fb.svg" alt="">
+						</a>
+					</div>
+					<div class="shareBtn-item">
+						<a href="http://line.naver.jp/R/msg/text/?中國市場”研習攻略”，點這裡線上看，走心不虐心，錯過保證不重播。網路定期定額限時0手續費！ | https://bit.ly/2yK5N4T" title="分享到LINE" target="_blank">
+							<img src="images/line.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!--手機menu按鍵-->
+			<div class="menuBtn" :class="{active: menuBtnActive}" @click="toggleMobileNavbar()">
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+				<span>
+				</span>
+			</div>
+
+		</header>
+
+		<article class="main">
+
+			<div class="banner">
+				<div class="banner-top">
+					<div class="banner-top-line"></div>
+					<img src="images/banner-top-bg.png" alt="" class="banner-top-bg">
+					<img src="images/banner-cloud-1.png" alt="" class="banner-cloud-1">
+					<img src="images/banner-cloud-2.png" alt="" class="banner-cloud-2">
+					<img src="images/banner-left-house.png" alt="" class="banner-left-house">
+					<img src="images/banner-right-house.png" alt="" class="banner-right-house">
+					<img src="images/banner-left-flower.png" alt="" class="banner-left-flower">
+					<img src="images/banner-right-flower.png" alt="" class="banner-right-flower">
+					<div class="banner-tit">
+						<img src="images/banner-tit-bg.png" alt="" class="banner-tit-bg">
+						<img src="images/banner-tit-cloud-1.png" alt="" class="banner-tit-cloud-1">
+						<h1 title="中國市場 研習攻略">
+							<img src="images/banner-tit-2.png" alt="研習攻略" class="banner-tit-2">
+							<img src="images/banner-tit-1.png" alt="中國市場" class="banner-tit-1">
+						</h1>
+						<img src="images/banner-tit-seal.png" alt="" class="banner-tit-seal">
+						<img src="images/banner-tit-cloud-2.png" alt="" class="banner-tit-cloud-2">
+					</div>
+					<div class="banner-woman">
+						<img src="images/banner-woman.png" alt="" class="banner-woman-img">
+						<img src="images/banner-woman-flower.png" alt="" class="banner-woman-flower">
+					</div>
+					<div class="container">
+						<div class="banner-text">
+							<div>
+								<div>
+									<strong>
+										貿易戰造成中國市場波動不斷，回到投資最基本的方法，我們要找便宜並且有機會的目標，
+										<br />就像買東西都要比C/P值，那投資的時候低檔分批進入是不是更能增加獲利機會呢?
+									</strong>
+									<img src="images/text-img.png" alt="" class="banner-text-img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="banner-bottom">
+					<img src="images/banner-bottom-bg.png" alt="" class="banner-bottom-img">
+				</div>
+				<div class="banner-petal">
+					<div class="banner-petal-1">
+						<img src="images/banner-petal-1.png" alt="">
+					</div>
+					<div class="banner-petal-2">
+						<img src="images/banner-petal-2.png" alt="">
+					</div>
+					<div class="banner-petal-3">
+						<img src="images/banner-petal-3.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<!-- 研習機會點 -->
+			<section class="item chancePoint" id="chancePoint">
+				<div class="item-tattoo item-tattoo-left-1">
+					<img src="images/item-tattoo-1.png" alt="">
+				</div>
+				<div class="item-tattoo item-tattoo-right-1">
+					<img src="images/item-tattoo-2.png" alt="">
+				</div>
+				<div class="container-2">
+					<h2 class="tit-type1 wow fadeInUp" title="研習機會點">
+						<div>
+							<div>研習機會點</div>
+							<img src="images/item-tit-left.png" alt="" class="tit-type1-left">
+							<img src="images/item-tit-right.png" alt="" class="tit-type1-right">
+						</div>
+					</h2>
+					
+					<div class="info-item wow fadeInUp">
+						<div class="info-item-text">
+							A股走勢自成一格，與全球連動性甚低。上證指數和標普500指數過去2年相關係數為0.06，接近無相關；中國A股不僅處在估值低位，適合中長線投資者逢低佈局；對於全球型或區域型配置的投資者，也可利用A股獨立特性，適時加入投資組合做為分散風險的工具。
+						</div>
+
+						<h3 class="tit-type2" title="過去2年上證指數和全球指數的相關係數">
+							<div>
+								過去2年上證指數和全球指數的相關係數
+								<div class="tit-type2-left"></div>
+								<div class="tit-type2-right"></div>
+							</div>
+						</h3>
+
+						<div class="chart-table">
+							<div class="chart-table-row">
+								<div class="chart-table-col">
+									<strong>Index</strong>
+								</div>
+								<div class="chart-table-col">
+									<strong>上證綜合指數</strong>
+								</div>
+								<div class="chart-table-col">
+									<strong>S&P 500指數</strong>
+								</div>
+								<div class="chart-table-col">
+									<strong>MSCI 新興市場</strong>
+								</div>
+								<div class="chart-table-col">
+									<strong>MSCI 世界</strong>
+								</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col">
+									<strong>上證綜合指數</strong>
+								</div>
+								<div class="chart-table-col">
+									1
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.116</span>
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.535</span>
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.253</span>
+								</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col">
+									<strong>S&P 500指數</strong>
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.116</span>
+								</div>
+								<div class="chart-table-col">
+									1
+								</div>
+								<div class="chart-table-col">
+									0.379
+								</div>
+								<div class="chart-table-col">
+									0.919
+								</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col">
+									<strong>MSCI 新興市場</strong>
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.535</span>
+								</div>
+								<div class="chart-table-col">
+									0.379
+								</div>
+								<div class="chart-table-col">
+									1
+								</div>
+								<div class="chart-table-col">
+									0.570
+								</div>
+							</div>
+							<div class="chart-table-row">
+								<div class="chart-table-col">
+									<strong>MSCI 世界</strong>
+								</div>
+								<div class="chart-table-col">
+									<span class="chart-table-focus">0.253</span>
+								</div>
+								<div class="chart-table-col">
+									0.919
+								</div>
+								<div class="chart-table-col">
+									0.570
+								</div>
+								<div class="chart-table-col">
+									1
+								</div>
+							</div>
+						</div>
+
+						<div class="chart-source">
+							資料來源：Bloomberg，2016/10/15-2018/10/15，富蘭克林華美投信整理
+						</div>
+					</div>
+
+					<div class="line-dashed wow fadeIn"></div>
+
+					<div class="info-item wow fadeInUp">
+						<div class="info-item-text">
+							MSCI九月剛調升A股入摩比重，進一步考慮要再大幅調升至20%，2019年維持大盤股的加入，2020年則進一步擴大至中型股的加入，估計將帶來623億美元的被動資金流入。可見A股投資價值及<strong class="info-item-text-focus">長線發展潛力</strong>對國際市場極具吸引力。
+						</div>
+						
+						<h3 class="tit-type2" title="A股納入MSCI 新興市場指數比重計畫">
+							<div>
+								A股納入MSCI 新興市場指數比重計畫
+								<div class="tit-type2-left"></div>
+								<div class="tit-type2-right"></div>
+							</div>
+						</h3>
+
+						<div class="chart-img">
+							<img src="images/chart1.svg" alt="">
+						</div>
+
+						<div class="chart-source">
+							資料來源：MSCI，數據截至2018/9/3，新興證券經濟與金融研究院整理
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<img src="images/item-divide-2.png" alt="" class="item-divide">
+
+			<!-- 攻略重點 -->
+			<section class="item type2 raidersFocus" id="raidersFocus">
+				<div class="item-tattoo item-tattoo-left-2">
+					<img src="images/item-tattoo-2.png" alt="">
+				</div>
+				<div class="item-tattoo item-tattoo-right-1">
+					<img src="images/item-tattoo-2.png" alt="">
+				</div>
+				<div class="container-2">
+
+					<h2 class="tit-type1 wow fadeInUp" title="攻略重點">
+						<div>
+							<div>攻略重點</div>
+							<img src="images/item-tit-left.png" alt="" class="tit-type1-left">
+							<img src="images/item-tit-right.png" alt="" class="tit-type1-right">
+						</div>
+					</h2>
+					<div class="item-text wow fadeInUp">
+						<strong>
+							告訴你為什麼2018最後一季是繼續佈局中國市場的好機會
+						</strong>
+					</div>
+
+					<div class="info-item wow fadeInUp">
+						<h3 class="tit-type3" title="市場估值與流動性來到低點">
+							<div>
+								<div class="tit-type3-no">1</div>
+								<div class="tit-type3-tit">
+									市場估值與流動性來到低點
+								</div>
+								<div class="tit-type3-topLeft"></div>
+								<div class="tit-type3-topRight"></div>
+								<div class="tit-type3-bottomLeft"></div>
+								<div class="tit-type3-bottomRight"></div>
+							</div>
+						</h3>
+						<h4 class="info-item-tit" title="估值底：上證指數修正接近2016年最大跌幅，起漲需配合信心築底，著眼結構性投資機會">
+							估值底：上證指數修正接近2016年最大跌幅，起漲需配合信心築底，著眼結構性投資機會
+						</h4>
+						<div class="info-item-text">
+							目前上證指數自今年高點向下修正達25%，跌幅接近2016年修正幅度，本益比已回到 2014年股市突破盤整區時的起漲點，與中國強勁的經濟表現相比，A股明顯被嚴重低估，也開始吸引國際資金進駐。
+						</div>
+						<h5 class="tit-type2" title="上證指數波段修正已深，然需配合信心面回復">
+							<div>
+								上證指數波段修正已深，然需配合信心面回復
+								<div class="tit-type2-left"></div>
+								<div class="tit-type2-right"></div>
+							</div>
+						</h5>
+						
+						<div class="chart-img">
+							<img src="images/chart2.svg" alt="">
+						</div>
+						
+						<div class="chart-source">
+							資料來源：Wind，富蘭克林華美投信整理，2018/10/15
+						</div>
+					</div>
+
+					<div class="line-dashed wow fadeIn"></div>
+
+					<div class="info-item wow fadeInUp">
+						<h4 class="info-item-tit" title="流動性底：A股日成交量跌破千億，價跌量縮，中國股市下行壓力減小">
+							流動性底：A股日成交量跌破千億，價跌量縮，中國股市下行壓力減小
+						</h4>
+						<div class="info-item-text">
+							中國上證指數8/22~23成交額跌破千億創下近三年來新低，若不考慮特例，上次日成交金額跌破千億為2014年，當時市場經過很長的盤整，隨後立即進入一波牛市行情。
+						</div>
+						<h5 class="tit-type2" title="上證指數走勢與成交量變化">
+							<div>
+								上證指數走勢與成交量變化
+								<div class="tit-type2-left"></div>
+								<div class="tit-type2-right"></div>
+							</div>
+						</h5>
+					
+						<div class="chart-img">
+							<img src="images/chart3.svg" alt="">
+						</div>
+					
+						<div class="chart-source">
+							資料來源：鉅亨網，富蘭克林華美投信整理，2018/10/15
+						</div>
+					</div>
+
+					<div class="line-dashed type2 wow fadeIn"></div>
+
+					<div class="info-item wow fadeInUp">
+						<h3 class="tit-type3" title="中國政策能應對世界經濟不確定性的衝擊">
+							<div>
+								<div class="tit-type3-no">2</div>
+								<div class="tit-type3-tit">
+									中國政策能應對世界經濟不確定性的衝擊
+								</div>
+								<div class="tit-type3-topLeft"></div>
+								<div class="tit-type3-topRight"></div>
+								<div class="tit-type3-bottomLeft"></div>
+								<div class="tit-type3-bottomRight"></div>
+							</div>
+						</h3>
+						<h4 class="info-item-tit" title="資金活水再現，中國寬鬆4.0，官方政策密集推出往往離底部不遠">
+							資金活水再現，中國寬鬆4.0，官方政策密集推出往往離底部不遠
+						</h4>
+						<div class="info-item-text">
+							回顧過去十年，中國共3次透過寬鬆政策以提振經濟，每次背景、手段及效果各異，但大致看來寬鬆確立實施後市場都呈現轉佳的態勢。
+						</div>
+						<h5 class="tit-type2" title="2008-2018上證綜合指數在政策下的走勢">
+							<div>
+								2008-2018上證綜合指數在政策下的走勢
+								<div class="tit-type2-left"></div>
+								<div class="tit-type2-right"></div>
+							</div>
+						</h5>
+					
+						<div class="chart-img">
+							<img src="images/chart4.svg" alt="">
+						</div>
+					
+						<div class="chart-source">
+							資料來源：Wind，天風證券研究所，2018/10/15，富蘭克林華美投信整理
+						</div>
+					</div>
+
+					<div class="line-dashed wow fadeIn"></div>
+
+					<div class="info-item wow fadeInUp">
+						<h4 class="info-item-tit" title="中國調控選擇多，經濟失速風險低">
+							中國調控選擇多，經濟失速風險低
+						</h4>
+						<div class="info-item-text">
+							中國經濟數據尚佳，通膨維穩在2%左右，具備政府負債率低、基本利率高等優勢，擁有更多刺激經濟政策可運用，中國經濟失速下滑機率小。
+							<br /><br />
+							對美出口總額佔中國整體GDP比重不到10%，美關稅打擊對中國經濟實際影響有限，加上近期中國力推政策以加強內需及經濟轉型亦有助減少對美依賴。
+						</div>
+
+						<div class="raidersFocus-twoChart clearfix">
+							<div class="raidersFocus-twoChart-item">
+								<h5 class="tit-type2" title="中國政府負債率低+基本利率高，政策空間大">
+									<div>
+										中國政府負債率低+基本利率高，政策空間大
+										<div class="tit-type2-left"></div>
+										<div class="tit-type2-right"></div>
+									</div>
+								</h5>
+								<div class="chart-img">
+									<img src="images/chart5.svg" alt="">
+								</div>
+								<div class="chart-source">
+									資料來源：Bloomberg，2018/8/14
+								</div>
+							</div>
+							<div class="raidersFocus-twoChart-item">
+								<h5 class="tit-type2" title="中國企業海外收入佔比不到10%">
+									<div>
+										中國企業海外收入佔比不到10%
+										<div class="tit-type2-left"></div>
+										<div class="tit-type2-right"></div>
+									</div>
+								</h5>
+								<div class="chart-img">
+									<img src="images/chart6.svg" alt="">
+								</div>
+								<div class="chart-source">
+									資料來源：Wind，興業證券經濟與經容研究院整理
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<img src="images/item-divide-1.png" alt="" class="item-divide">
+
+			<!-- 攻略金句 -->
+			<section class="item inspirationalQuotes" id="inspirationalQuotes">
+				<div class="item-tattoo item-tattoo-left-3">
+					<img src="images/item-tattoo-3.png" alt="">
+				</div>
+				<div class="item-tattoo item-tattoo-right-2">
+					<img src="images/item-tattoo-4.png" alt="">
+				</div>
+				<div class="container-2">
+					<h2 class="tit-type1 wow fadeInUp" title="攻略金句">
+						<div>
+							<div>攻略金句</div>
+							<img src="images/item-tit-left.png" alt="" class="tit-type1-left">
+							<img src="images/item-tit-right.png" alt="" class="tit-type1-right">
+						</div>
+					</h2>
+					<div class="item-text wow fadeInUp">
+						<strong>
+							投資心法：在低點佈局使用定期定額分散風險的方式，長線投資，來期待中國市場的反彈機會。
+						</strong>
+					</div>
+					<div class="inspirationalQuotes-item wow fadeInLeft">
+						<div>
+							<div class="inspirationalQuotes-item-text">
+								<strong>
+									「危機入市的精髓在於要看準便宜的時機點，學會分散風險與耐心等待，等到反彈的機會，等到天時(市場)、地利(產品)、人和(堅持)，過去累積的能量將有機會幫助您力挽狂瀾。」
+								</strong>
+							</div>
+							<div class="inspirationalQuotes-item-remark">
+								--阿富投資金句【1】--
+							</div>
+						</div>
+					</div>
+					<div class="inspirationalQuotes-item wow fadeInRight">
+						<div>
+							<div class="inspirationalQuotes-item-text">
+								<strong>
+									「堅持正確的路或許孤單，但這也是您之所以能超越別人的關鍵，如果遇到強大的阻礙，讓你猶豫該如何繼續前行，就要用對的方式，試著分散風險、分批進入，定期定額的投資，等到時機成熟的那一天。」
+								</strong>
+							</div>
+							<div class="inspirationalQuotes-item-remark">
+								--阿富投資金句【2】--
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<img src="images/item-divide-2.png" alt="" class="item-divide">
+
+			<!-- 攻略目標 -->
+			<section class="item type2 target" id="target">
+				<div class="item-tattoo item-tattoo-left-2">
+					<img src="images/item-tattoo-2.png" alt="">
+				</div>
+				<div class="item-tattoo item-tattoo-right-1">
+					<img src="images/item-tattoo-2.png" alt="">
+				</div>
+				<div class="container-2">
+				
+					<h2 class="tit-type1 wow fadeInUp" title="攻略目標">
+						<div>
+							<div>攻略目標</div>
+							<img src="images/item-tit-left.png" alt="" class="tit-type1-left">
+							<img src="images/item-tit-right.png" alt="" class="tit-type1-right">
+						</div>
+					</h2>
+
+					<div class="target-item-area">
+						<div class="target-item-area-tag target-item-area-tag-1">
+							<strong>選股</strong>
+						</div>
+						<div class="target-item-area-tag target-item-area-tag-2">
+							<strong>配置</strong>
+						</div>
+						<div class="target-item target-item-1 wow fadeInLeft">
+							<h3 class="target-item-tit" title="中國消費基金">
+								<strong>中國消費基金</strong>
+							</h3>
+							<div class="target-item-text target-item-text-1">
+								<div class="target-item-area-tag target-item-area-tag-1">
+									<strong>選股</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>側重消費類股</strong>
+								</div>
+								<div class="target-item-text-info">
+									中國經濟轉型帶來消費力提升，市場規模擴大後的產業成長
+								</div>
+							</div>
+							<div class="target-item-text target-item-text-2">
+								<div class="target-item-area-tag target-item-area-tag-2">
+									<strong>配置</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>港股為主，A股為輔</strong>
+								</div>
+								<div class="target-item-text-info">
+									港股流動性高，外資進入中國股市相對容易
+								</div>
+							</div>
+							<div class="target-item-cta">
+								<a href="https://etrade.ftft.com.tw/ftft/Login.html?otype=X&evid=D5078&fid=11" target="_blank" class="event-purchase">
+									<strong>馬上申購</strong> <i class="fas fa-caret-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="target-item target-item-2 wow fadeInUp">
+							<h3 class="target-item-tit" title="中華基金">
+								<strong>中華基金</strong>
+							</h3>
+							<div class="target-item-text target-item-text-1">
+								<div class="target-item-area-tag target-item-area-tag-1">
+									<strong>選股</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>精選科技類股</strong>
+								</div>
+								<div class="target-item-text-info">
+									市場表現分化，資金易流往盈利穩健、規模大的龍頭股，科技為中國經濟轉型的重點，政策將持續推出扶植科技產業。
+								</div>
+							</div>
+							<div class="target-item-text target-item-text-2">
+								<div class="target-item-area-tag target-item-area-tag-2">
+									<strong>配置</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>大中華區域輪動配置</strong>
+								</div>
+								<div class="target-item-text-info">
+									中港台市場特性不同，掌握三地強弱勢輪動，彈性配置
+								</div>
+							</div>
+							<div class="target-item-cta">
+								<a href="https://etrade.ftft.com.tw/ftft/Login.html?otype=X&evid=D5078&fid=06" target="_blank" class="event-purchase">
+									<strong>馬上申購</strong> <i class="fas fa-caret-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="target-item target-item-3 wow fadeInRight">
+							<h3 class="target-item-tit" title="中國A股基金">
+								<strong>中國A股基金</strong>
+							</h3>
+							<div class="target-item-text target-item-text-1">
+								<div class="target-item-area-tag target-item-area-tag-1">
+									<strong>選股</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>參與政策紅利和轉型題材</strong>
+								</div>
+								<div class="target-item-text-info">
+									金融：產業估值偏低
+									<br/>消費：消費力道強勁
+									<br/>基建：深化供給側改革
+									<br/>科技：中國轉型重點
+									<br/>政府政策利多，以及經濟轉型下環保、創新、消費升級等新經濟題材
+								</div>
+							</div>
+							<div class="target-item-text target-item-text-2">
+								<div class="target-item-area-tag target-item-area-tag-2">
+									<strong>配置</strong>
+								</div>
+								<div class="target-item-text-tit">
+									<strong>A股純度高</strong>
+								</div>
+								<div class="target-item-text-info">
+									A股投資逾六成，直接參與中國股市反彈契機
+								</div>
+							</div>
+							<div class="target-item-cta">
+								<a href="https://etrade.ftft.com.tw/ftft/Login.html?otype=X&evid=D5078&fid=23" target="_blank" class="event-purchase">
+									<strong>馬上申購</strong> <i class="fas fa-caret-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-text wow fadeInUp">
+						<strong>
+							現在開始佈局把握機會，網路定期定額限時0手續費。
+						</strong>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- 注意事項 -->
+			<section class="item type2 notice" id="notice">
+				<div class="container-2">
+				
+					<h2 class="tit-type1 wow fadeInUp" title="注意事項">
+						<div>
+							<div>注意事項</div>
+							<img src="images/item-tit-left.png" alt="" class="tit-type1-left">
+							<img src="images/item-tit-right.png" alt="" class="tit-type1-right">
+						</div>
+					</h2>
+
+					<ul class="notice-list wow fadeIn">
+						<li>
+							定期(不)定額：於2018/10/31 PM 4:00 ~ 2018/12/28 PM 4:00止(以委託確認時間為準)，申購前述任一精選基金，享終身0手續費。若未來變更投資基金，或連續三次扣款失敗，則視同終止契約，自動取消優惠資格，並不另行通知。
+						</li>
+						<li>
+							定期投資法：於活動期間內，僅限新申購者，且定期基金須為前述任一精選境內基金，並完成設定定期投資法交易，享終身0手續費。(若符合新申購者，但設定定期定額基金非精選基金，則不符合此活動規則)
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</article>
+
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="clearfix">
+						<div class="footer-logo">
+							<a href="https://www.ftft.com.tw/" target="_blank" title="富蘭克林華美投信">
+								<img src="images/footer-logo.png" alt="">
+							</a>
+						</div>
+						<div class="footer-phone">
+							<strong class="footer-phone-tit">基金專線</strong>
+							<strong class="footer-phone-phone">
+								<a href="tel:0800-088-899" title="0800-088-899">0800-088-899</a>
+							</strong>
+						</div>
+					</div>
+					<div class="footer-info">
+						富蘭克林華美證券投資信託股份有限公司 107金管投信新字第006號
+					</div>
+					<div class="footer-contactInfo">
+						<div class="footer-contactInfo-item clearfix">
+							<div class="footer-contactInfo-item-name">台北總公司</div>
+							<div class="footer-contactInfo-item-address">106台北市大安區忠孝東路四段87號12樓</div>
+							<div class="footer-contactInfo-item-phone">電話：(02)2781-9599</div>
+							<div class="footer-contactInfo-item-phone">傳真：(02)2781-8299</div>
+						</div>
+						<div class="footer-contactInfo-item clearfix">
+							<div class="footer-contactInfo-item-name">新竹分公司</div>
+							<div class="footer-contactInfo-item-address">302新竹縣竹北市自強南路8號11樓之5</div>
+							<div class="footer-contactInfo-item-phone">電話：(03)668-1988</div>
+							<div class="footer-contactInfo-item-phone">傳真：(03)657-9258</div>
+						</div>
+						<div class="footer-contactInfo-item clearfix">
+							<div class="footer-contactInfo-item-name">台中分公司</div>
+							<div class="footer-contactInfo-item-address">404台中市北區文心路4段208-1號11樓之1</div>
+							<div class="footer-contactInfo-item-phone">電話：(04)2293-2988</div>
+							<div class="footer-contactInfo-item-phone">傳真：(04)2295-6588</div>
+						</div>
+						<div class="footer-contactInfo-item clearfix">
+							<div class="footer-contactInfo-item-name">台南分公司</div>
+							<div class="footer-contactInfo-item-address">700臺南市中西區民生路二段307號12樓之1</div>
+							<div class="footer-contactInfo-item-phone">電話：(06)225-3788</div>
+							<div class="footer-contactInfo-item-phone">傳真：(06)225-3299</div>
+						</div>
+						<div class="footer-contactInfo-item clearfix">
+							<div class="footer-contactInfo-item-name">高雄分公司</div>
+							<div class="footer-contactInfo-item-address">802高雄市苓雅區海邊路31號27樓之1</div>
+							<div class="footer-contactInfo-item-phone">電話：(07)269-3555</div>
+							<div class="footer-contactInfo-item-phone">傳真：(07)269-3518</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-warning">
+				<div class="container">
+					<ul>
+						<li>
+							基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。配息型基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。該基金進行配息前未先扣除應負擔之相關費用。本公司於<a href="https://www.ftft.com.tw/Divinfo/Ftft" target="_blank">公司網站</a>揭露各配息型基金近12個月內由本金支付配息之相關資料供查詢。投資人於申購時應謹慎考量。
+						</li>
+						<li>
+							由於新興市場基金之主要投資風險除包含一般股票型基金之投資組合跌價與匯率風險外，與成熟市場相比須承受較高之政治與金融管理風險，而因市值及制度性因素，流動性風險也相對較高，新興市場投資組合波動性普遍高於成熟市場。基金投資均涉及風險且不負任何抵抗投資虧損之擔保。投資風險之詳細資料請參閱基金公開說明書。
+						</li>
+						<li>
+							基金投資證券交易市場交易之反向型ETF、商品ETF及槓桿型ETF，不得超過該基金淨資產價值之百分之十。
+						</li>
+						<li>
+							基於經理公司申請獲得大陸地區合格境外機構投資者之額度及大陸地區相關規定之特定因素，本基金保留婉拒申購或暫停買回之權利。
+						</li>
+						<li>
+							本基金經金融監督管理委員會核准或同意生效，惟不表示本基金絕無風險。本證券投資信託事業以往之經理績效不保證本基金之最低投資收益；本證券投資信託事業除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱本基金公開說明書。
+						</li>
+						<li>
+							全權委託投資帳戶並非絕無風險，經理公司以往之經理績效不保證委託投資資產之最低收益；經理公司除盡善良管理人之注意義務外，不負責委託投資資產之盈虧，亦不保證最低之收益，客戶簽約前應詳閱全權委託投資說明書。本文提及之經濟走勢預測不必然代表本全權委託投資帳戶之績效。本帳戶之主要投資風險除包含一般股票型基金之投資組合跌價與匯率風險外，與成熟市場相比須承受較高之政治與金融管理風險，而因市值及制度性因素，流動性風險也相對較高，新興市場投資組合波動性普遍高於成熟市場。由於高收益債券之信用評等未達投資等級或未經信用評等，且對利率變動的敏感度甚高，故本帳戶可能會因利率上升、市場流動性下降，或債券發行機構違約不支付本金、利息或破產而蒙受虧損。本帳戶較適合投資屬性中風險承受度較高之投資人，投資人投資以高收益債券為訴求之基金不宜占其投資組合過高之比重。
+						</li>
+						<li>
+							本基金以多幣別計價，如投資人以其他非本基金計價幣別之貨幣換匯後投資本基金者，須自行承擔匯率變動之風險，當本基金計價幣別相對其他貨幣貶值時，將產生匯兌損失，因投資人與銀行進行外匯交易有買價與賣價之差異，投資人進行換匯時須承擔買賣價差，此價差依各報價而定，此外，投資人尚須承擔匯款費用，且外幣匯款費用可能高於新臺幣匯款費用，投資人亦須留意外幣匯款到達時點可能因受款行作業時間而遞延。
+						</li>
+						<li>
+							以上指數試算結果並非代表特定基金之投資成果，亦不代表對特定基金之買賣建議，基金不同於指數，基金可能會有中途清算或合併等情形，投資人無法直接投資指數。本文提及之經濟走勢預測不必然代表本基金之績效，本基金投資風險請詳閱基金公開說明書。
+						</li>
+						<li>
+							本網站提及個股評論並非對個股進行推介、建議或買賣，且並不完全代表本基金之投資標的。本網站提及經濟走勢預測，不必然代表基金之績效，本基金投資風險請詳閱基金公開說明書。本網站資訊僅供參考。本公司自盡力為讀者及客戶提供正確的意見及消息，如有錯漏或疏忽，本公司或關係企業與其任何董事或受僱人，並不負任何法律責任。本網站內容未經同意，不得重製、散布、改作，亦不得轉載於任何形式媒體。
+							<div class="footer-warning-remark">【富蘭克林華美投信獨立經營管理】</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+	</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/component-dist.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/wow.min.js"></script>
+
+	<script>
+        new WOW().init();
+    </script>
+
+</body>
+</html>

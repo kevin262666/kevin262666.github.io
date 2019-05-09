@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a3575">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>線上開戶 | 富蘭克林華美投信理財網</title>
+    <meta property="og:title" content="線上開戶 | 富蘭克林華美投信理財網">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="線上開戶">
+	<meta property="og:description" content="線上開戶">
+    <!-- <meta property="og:image" content="#">
+	<meta property="og:url" content="#"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<header-area></header-area>
+
+		<!-- main -->
+		<article class="main">
+			<div class="container">
+
+				<div class="pageTop wow fadeIn">
+					<h1 class="tit-type1" title="預約開戶 只要5分鐘">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							預約開戶 只要<span class="focus">5</span>分鐘
+						</strong>
+						<!-- <strong class="tit-stit">
+							基金自助理財，就從這一步開始！
+						</strong> -->
+					</h1>
+					<p>
+						提供多種理財方案及優惠手續費，幫助您掌握交易優勢，贏得交易先機。
+					</p>
+				</div>
+
+				<div class="infoItem index wow fadeIn">
+					<div class="selectOpenType-mobileTab-area clearfix">
+						<div class="selectOpenType-mobileTab active">
+							網銀線上開戶
+						</div>
+						<div class="selectOpenType-mobileTab">
+							一般寄件開戶
+						</div>
+					</div>
+					<div class="selectOpenType clearfix">
+						<div class="selectOpenType-item wow fadeInUp active" data-wow-delay="0.3s">
+							<h2 class="selectOpenType-item-tit" title="網銀線上開戶">
+								<img src="images/tit-icon-1.svg" alt="" class="selectOpenType-item-tit-icon">
+								<strong>
+									網銀線上開戶
+								</strong>
+							</h2>
+							<p>
+								線上填寫資料，登入網路銀行進行線上開戶，開戶申請<strong>在線上即可完成!</strong>
+							</p>
+							<div class="alert alert-info">
+								<strong>開戶前確認以下項目，即可加快申辦速度!</strong>
+							</div>
+							<ul class="selectOpenType-item-checklist">
+								<li>
+									已開立<strong>華南</strong>或<strong>兆豐</strong>網路銀行帳戶
+								</li>
+								<li>
+									備妥身分證及健保卡或駕照
+								</li>
+								<li>
+									限台幣帳戶
+								</li>
+								<li>
+									年滿20歲之中華民國國民
+								</li>
+							</ul>
+							<div class="selectOpenType-item-btnArea">
+								<div class="button">
+									<a href="step1.html" title="立即線上開戶">
+										立即線上開戶 <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="selectOpenType-item wow fadeInUp" data-wow-delay="0.6s">
+							<h2 class="selectOpenType-item-tit" title="一般寄件開戶">
+								<img src="images/tit-icon-2.svg" alt="" class="selectOpenType-item-tit-icon">
+								<strong>
+									一般寄件開戶
+								</strong>
+							</h2>
+							<p>
+								線上填寫資料，<strong>需列印紙本並寄回</strong>富蘭克林華美投信，才算完成開戶申請。
+							</p>
+							<div class="alert alert-info">
+								<strong>開戶前確認以下項目，即可加快申辦速度!</strong>
+							</div>
+							<ul class="selectOpenType-item-checklist">
+								<li>
+									備妥身分證
+								</li>
+								<li>
+									扣款銀行存簿(限台幣帳戶)
+								</li>
+								<li>
+									銀行原留印鑑
+								</li>
+								<li>
+									中華民國國民(未成年人需加付法定代理人資料)
+								</li>
+							</ul>
+							<div class="selectOpenType-item-btnArea">
+								<div class="button">
+									<a href="https://etrade.ftft.com.tw/san_register.htm" title="線上填寫表單">
+										線上填寫表單 <i class="fas fa-caret-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/component-dist.js"></script>
+	<script>
+		$('.selectOpenType-mobileTab').on('click', function(){
+			var tabN = $(this).index();
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.selectOpenType-item').eq(tabN).addClass('active').siblings().removeClass('active');
+		});
+	</script>
+</body>
+</html>

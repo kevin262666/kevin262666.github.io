@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a3575">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>線上開戶 | 富蘭克林華美投信理財網</title>
+    <meta property="og:title" content="線上開戶 | 富蘭克林華美投信理財網">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="線上開戶">
+	<meta property="og:description" content="線上開戶">
+    <!-- <meta property="og:image" content="#">
+	<meta property="og:url" content="#"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<header-area></header-area>
+
+		<!-- main -->
+		<article class="main">
+			<div class="container">
+
+				<div class="infoItem wow fadeInUp">
+					<h2 class="tit-type2" title="境內約定扣款授權">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							境內約定扣款授權
+						</strong>
+					</h2>
+					<div class="alert alert-danger">
+						<strong>帳戶授權失敗！</strong>
+						<br/>
+						請確認您的帳戶是否填寫正確，或改用
+						<a href="https://etrade.ftft.com.tw/san_register.htm" class="externalLink" target="_blank">
+							寄件開戶
+						</a>
+					</div>
+					<div class="formArea">
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>銀行</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<!-- <v-select :options="bankSortData" label="bank" v-model="bank" placeholder="請選擇銀行"> -->
+								<v-select v-model="bank" placeholder="請選擇銀行">
+									<slot slot="no-options">查無此資料</slot>
+								</v-select>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>分行</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<!-- <v-select :options="branches" :disabled="branches == ''" :reset-on-options-change="true" v-model="bankBranch" placeholder="請選擇分行"> -->
+								<v-select v-model="bankBranch" placeholder="請選擇分行">
+									<slot slot="no-options">查無此資料</slot>
+								</v-select>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="account">
+									<strong>帳戶</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="account" placeholder="" value="012938271623">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nextBtnArea wow fadeInUp">
+					<div class="button">
+						<button onclick="location.href='step10.html'">
+							重新送出 <i class="fas fa-caret-right"></i>
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-select.js"></script>
+	<script src="js/bank.js"></script>
+	<script>
+		Vue.component('v-select', VueSelect.VueSelect);
+
+		// ie Object.keys: 引數不是物件 error
+		Object.keys = function(obj) {
+			var keys = [];
+			for (var i in obj) {
+				if (obj.hasOwnProperty(i)) {
+					keys.push(i);
+				}
+			}
+			return keys;
+		};
+	</script>
+	<script src="js/component-dist.js"></script>
+	<script>
+		content._data.bankData = bankData;
+		content._data.bank = '兆豐銀行';
+		content._data.bankBranch = '台北金南分行';
+	</script>
+</body>
+</html>

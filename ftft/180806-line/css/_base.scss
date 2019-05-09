@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+// reset
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    // background: #eaded6;
+    // background: #fbdc31 url(../images/bg-star-30.png) top left repeat;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+    // background: #ff407a;
+}
+
+/*Webkit,Opera9.5+,Ie9+ 控制文字選取時的顏色*/
+::selection {
+	background:#e0214b;
+	color:#fff;
+}
+
+/*Mozilla Firefox 控制文字選取時的顏色*/
+::-moz-selection {
+	background:#e0214b;
+	color:#fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border: none;
+}
+
+// input
+.checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    input[type="checkbox"] {
+        display: none;
+        &:checked + span {
+            background: #ea0043;
+            border-color: #ea0043;
+            &:before {
+                // color: #ff407a;
+            }
+        }
+    }
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease all;
+        position: relative;
+        &:before {
+            @extend .fontAwesomeIcon;
+            content: '\f00c';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s ease all;
+        }
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    color: #fff;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    cursor: pointer;
+    i {
+        margin-left: 5px;
+    }
+}
+
+input,
+button {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+}
+
+// component
+.container {
+    margin: 0 auto;
+    padding: 0px;
+    width: 1170px;
+    @media screen and (max-width: 1199px) {
+        margin: 0px 25px;
+        width: auto;
+    }
+    @media screen and (max-width: 767px) {
+        margin: 0px 15px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.mobileShow {
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    .pcShow {
+        display: none;
+    }
+    .mobileShow {
+        display: initial;
+    }
+}
+
+//--fontAwesome
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

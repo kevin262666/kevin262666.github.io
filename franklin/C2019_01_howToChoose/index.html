@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+	<script src="js/vue.js"></script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#bb1b11">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>不知如何選基金？ 入門指標在這裡！ | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="想投資？入門指標在這裡">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="不知道如何投資？想找到基礎的入門指標嗎？快跟著基金贏家富蘭克林一起，打造專屬的投資組合吧！">
+	<meta property="og:description" content="不知道如何投資？想找到基礎的入門指標嗎？快跟著基金贏家富蘭克林一起，打造專屬的投資組合吧！">
+    <meta property="og:image" content="https://event.franklin.com.tw/C2019_01_howToChoose/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/C2019_01_howToChoose/index.html">
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<div class="header-space" id="top"></div>
+		<header-area :navbar-show="navbarShow"
+					 :menu-btn-active="menuBtnActive"
+					 :toggle-mobile-navbar="toggleMobileNavbar"
+					 :hide-mobile-navbar="hideMobileNavbar"
+					 :banner-data="bannerData[0]"></header-area>
+
+		<!-- main -->
+		<article class="main">
+
+			<banner-area :banner-data="bannerData[0]"></banner-area>
+			<keyword-area :keyword-data="keywordData[0]"></keyword-area>
+			<gift-area :gift-item-data="giftItemData"></gift-area>
+			<notice-area></notice-area>
+
+			<!-- footer -->
+			<footer-area></footer-area>
+
+			<div class="topBtn">
+				<a href="#top">
+					<span>
+						<i class="fas fa-caret-up"></i>
+						TOP
+					</span>
+				</a>
+			</div>
+
+		</article>
+
+		<product-lightbox :product1="product1" :product2="product2"></product-lightbox>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/component-dist.js"></script>
+	<!-- <script src="js/common.js"></script> -->
+</body>
+</html>

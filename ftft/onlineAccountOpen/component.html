@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a3575">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	
+	<!-- 日期選擇 start -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.css">
+	<!-- 日期選擇 end -->
+	
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Component | 富蘭克林華美投信理財網</title>
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<header-area></header-area>
+
+		<!-- main -->
+		<article class="main">
+			<div class="container">
+
+				<div class="infoItem">
+
+					<!-- ***********************************************************
+						Title 
+					*********************************************************** -->
+					<h1>Title</h1>
+					<h1 class="tit-type1" title="預約開戶 只要5分鐘">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							預約開戶 只要<span class="focus">5</span>分鐘
+						</strong>
+						<strong class="tit-stit">
+							基金自助理財，就從這一步開始！
+						</strong>
+					</h1>
+
+					<h2 class="tit-type2" title="請填寫聯絡資料">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							請填寫聯絡資料
+						</strong>
+					</h2>
+
+					<!-- ***********************************************************
+						Alert 
+					*********************************************************** -->
+					<br/><br/>
+					<h1>Alert</h1>
+					<div class="alert alert-success">
+						<strong>Success</strong> - 成功訊息
+					</div>
+					<div class="alert alert-info">
+						<strong>Info</strong> - 一般訊息
+					</div>
+					<div class="alert alert-warning">
+						<strong>Warning</strong> - 警示訊息
+					</div>
+					<div class="alert alert-danger">
+						<strong>Danger</strong> - 錯誤訊息
+					</div>
+
+					<!-- ***********************************************************
+						Button 
+					*********************************************************** -->
+					<br/><br/>
+					<h1>Button</h1>
+					<div class="button">
+						<a href="step1.html" title="立即線上開戶">
+							立即線上開戶 <i class="fas fa-caret-right"></i>
+						</a>
+					</div>
+					<div class="button disable">
+						<a href="javascript:void(0);" title="立即線上開戶">
+							立即線上開戶 <i class="fas fa-caret-right"></i>
+						</a>
+					</div>
+					<div class="button type2">
+						<button onclick="location.href='step5.html'">
+							<i class="fas fa-caret-left"></i> 上一步
+						</button>
+					</div>
+
+					<!-- ***********************************************************
+						Form 
+					*********************************************************** -->
+					<br/><br/>
+					<h1>Form</h1>
+					<div class="formArea">
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="base">
+									<strong>基本型</strong>
+									<span class="formArea-item-tit-text">
+										(說明文字)
+									</span>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="base" placeholder="">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp full">
+							<div class="formArea-item-tit">
+								<label for="base">
+									<strong>100%</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="base" placeholder="">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp error">
+							<div class="formArea-item-tit">
+								<label for="base">
+									<strong>錯誤</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="base" placeholder="">
+							</div>
+							<div class="alert alert-danger">
+								<strong>Danger</strong>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp name">
+							<div class="formArea-item-tit">
+								<label for="lastName">
+									<strong>姓名</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="lastName" placeholder="姓">
+								<input type="text" name="" id="" placeholder="名">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp confirm">
+							<div class="formArea-item-tit">
+								<strong>確認資料</strong>
+							</div>
+							<div class="formArea-item-input">
+								王小明
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp space">
+							<!-- 空格 -->
+						</div>
+						<div class="formArea-item wow fadeInUp radioBtn">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>性別</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<label class="radio">
+									<input type="radio" name="sex" id="" disabled>
+									<span class="radio-icon">
+										<i class="fas fa-check"></i>
+									</span>
+									<span class="radio-text">
+										男
+									</span>
+								</label>
+								<label class="radio">
+									<input type="radio" name="sex" id="">
+									<span class="radio-icon">
+										<i class="fas fa-check"></i>
+									</span>
+									<span class="radio-text">
+										女
+									</span>
+								</label>
+								<label class="radio otherOption">
+									<input type="radio" name="sex" id="">
+									<span class="radio-icon">
+										<i class="fas fa-check"></i>
+									</span>
+									<span class="radio-text">
+										其他
+									</span>
+									<input type="text" name="" id="" placeholder="選擇其他時為必填">
+								</label>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp phone">
+							<div class="formArea-item-tit">
+								<label for="companyPhone">
+									<strong>電話</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="companyPhone" placeholder="">
+								<span class="dash">-</span>
+								<input type="text" name="" id="" placeholder="">
+								<span class="extension">#</span>
+								<input type="text" name="" id="" placeholder="分機">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp full address">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>通訊地址</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<div class="address-check">
+									<label class="checkbox">
+										<input type="checkbox" name="" id="">
+										<span class="checkbox-icon">
+											<i class="fas fa-check"></i>
+										</span>
+										<span class="checkbox-text">
+											同戶籍地址
+										</span>
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="" id="">
+										<span class="checkbox-icon">
+											<i class="fas fa-check"></i>
+										</span>
+										<span class="checkbox-text">
+											同現居地址
+										</span>
+									</label>
+								</div>
+								<!-- <select name="" id="">
+									<option value="">請選擇縣市</option>
+								</select>
+								<select name="" id="">
+									<option value="">請選擇區</option>
+								</select> -->
+								<div class="address-select">
+									<v-select :options="sortData" label="city" v-model="city" placeholder="請選擇縣市">
+										<slot slot="no-options">查無此資料</slot>
+									</v-select>
+									<v-select :options="countries" :disabled="countries == ''" :reset-on-options-change="true" v-model="country" placeholder="請選擇區">
+										<slot slot="no-options">查無此資料</slot>
+									</v-select>
+									<div class="postalCode">
+										郵遞區號：
+									</div>
+								</div>
+								<input type="text" name="" id="" placeholder="街名/道路/巷/號/樓">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="birthday">
+									<strong>出生日期</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<vue-datepicker-local v-model="datepicker" clearable format="YYYY年MM月DD日"></vue-datepicker-local>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="birthday">
+									<strong>出生日期</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" id="datepicker" class="pikadayInput" autocomplete="off">
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp uploadDocument">
+							<div class="formArea-item-tit">
+								<label for="identityCardBack">
+									<strong>上傳證件</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<label for="identityCardBack">
+									<input type="file" name="" id="identityCardBack">
+									<!-- 有選檔案時[.uploadDocument-info]加[.hasData] -->
+									<div class="uploadDocument-info">
+										<img src="images/example-2.png" alt="">
+										<div class="button">
+											<div class="fakeButton">
+												<i class="fas fa-upload"></i>
+											</div>
+										</div>
+									</div>
+								</label>
+								<div class="loading">
+									<div class="loading-info">
+										<div class="loading-icon">
+											<div></div>
+											<div></div>
+										</div>
+										<div class="loading-text">
+											loading...
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp electronicSignature">
+							<div class="formArea-item-tit">
+								<label for="signature">
+									<strong>手寫簽名</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<div class="electronicSignature-signature hide">
+									<div id="js-signature" class="js-signature"
+										data-width="600"
+										data-height="200"
+										data-background="#ffffff"
+										data-line-color="#000000"
+										data-auto-fit="true">
+									</div>
+									<div class="electronicSignature-signature-buttonArea">
+										<div class="button hide">
+											<button id="saveBtn" onclick="saveSignature();">
+												提交
+											</button>
+										</div>
+										<div class="button type2">
+											<button onclick="clearCanvas();">
+												清除
+											</button>
+										</div>
+										<div class="button type2">
+											<button onclick="closeCanvas();">
+												關閉
+											</button>
+										</div>
+									</div>
+									<!-- <button id="clearBtn" onclick="clearCanvas();">Clear Canvas</button>
+									<button id="saveBtn" onclick="saveSignature();" disabled>Save Signature</button> -->
+								</div>
+								<!-- 有簽名時[#signature]加[.hasData] -->
+								<div id="signature">
+									<img src="" alt="">
+									<div class="button">
+										<div class="fakeButton">
+											<i class="fas fa-file-signature"></i>
+										</div>
+									</div>
+								</div>  
+							</div>
+						</div>
+						
+					</div>
+
+					<!-- ***********************************************************
+						分隔線 
+					*********************************************************** -->
+					<br/><br/>
+					<h1>分隔線</h1>
+					<div class="dividingLine dividingLine-dashed"></div>
+
+					<!-- ***********************************************************
+						外部鏈接 
+					*********************************************************** -->
+					<br/><br/>
+					<h1>外部鏈接</h1>
+					<a href="http://www.ftft.com.tw/BuyableFundList" target="_blank" class="externalLink">
+						請點選連結
+					</a>
+
+					<!-- ***********************************************************
+						popup 
+						1.[data-XXX]可以刪掉  只是我示意jq用的
+						2.要顯示popup時加[.show]
+						3.[.closePopup]這個class無意義 只是我示意jq用的
+					*********************************************************** -->
+					<br/><br/>
+					<h1>popup</h1>
+					<a href="javascript:void(0);" class="openPopup" data-openpopup="test">打開popup</a>
+					<div class="popup" data-popup="test">
+						<div class="popup-bg"></div>
+						<div class="popup-info">
+							<div class="closeBtn">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+							<div class="popup-info-bg">
+								<div class="popup-icon">
+									<i class="fas fa-exclamation-circle"></i>
+								</div>
+								<div class="popup-tit">
+									<strong>提醒您！</strong>
+								</div>
+								<div class="popup-text">
+									因您非年齡70歲以上，教育程度為國中畢業(含)以下或領有重大傷病卡之投資人，故系統將依您所填寫之投資適性分析結果提供基金下單服務。
+								</div>
+								<div class="popup-btnArea">
+									<div class="button type2 closePopup">
+										<a href="javascript:void(0);" title="確定">
+											確定
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ***********************************************************
+						Lightbox
+						1.[data-XXX]可以刪掉  只是我示意jq用的
+						2.要顯示popup時加[.show]
+						3.[.closePopup]這個class無意義 只是我示意jq用的
+					*********************************************************** -->
+					<br/><br/>
+					<h1>Lightbox</h1>
+					<a href="javascript:void(0);" class="openLightbox" data-openlightbox="test">打開Lightbox</a>
+					<div class="lightBox" data-lightBox="test">
+						<div class="lightBox-bg"></div>
+						<div class="lightBox-container">
+							<div>
+								<div class="closeBtn">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</div>
+								<!-- 資料放置區 star -->
+
+								<!-- 資料放置區 end -->
+							</div>
+						</div>
+					</div>
+
+					<!-- ***********************************************************
+						loading
+						1.單獨為一個區塊時加[.alone]
+						2.整個畫面loading時加[.fixed]
+					*********************************************************** -->
+					<br/><br/>
+					<h1>loading</h1>
+					<div class="loading alone">
+						<div class="loading-info">
+							<div class="loading-icon">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="loading-text">
+								loading...
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-select.js"></script>
+	<script src="js/vue-datepicker-local.js"></script>
+	<script src="js/area.js"></script>
+	<script>
+		Vue.component('v-select', VueSelect.VueSelect);
+		
+		// ie Object.keys: 引數不是物件 error
+		Object.keys = function(obj) {
+			var keys = [];
+			for (var i in obj) {
+				if (obj.hasOwnProperty(i)) {
+					keys.push(i);
+				}
+			}
+			return keys;
+		};
+	</script>
+	<!-- 日期選擇 start -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+	<!-- 日期選擇 end -->
+	<script src="js/component-dist.js"></script>
+	<script>
+		content._data.areaData = areaData;
+	</script>
+	
+	<!-- 直接簽名 -->
+	<script src="js/jq-signature.min.js">// http://www.htmleaf.com/html5/html5-canvas/201505281921.html</script>
+	<script>
+		$(document).on('ready', function() {
+			$('.js-signature').jqSignature();
+		});
+		
+		function clearCanvas() {
+			// $('#signature').html('<p><em>Your signature will appear here when you click "Save Signature"</em></p>');
+			$('#signature').removeClass('hasData').children('img').attr('src', '');
+			$('.js-signature').jqSignature('clearCanvas');
+			$('#saveBtn').parent('.button').addClass('hide');
+		}
+		
+		function saveSignature() {
+			// $('#signature').empty();
+			var dataUrl = $('.js-signature').jqSignature('getDataURL');
+			// var img = $('<img>').attr('src', dataUrl);
+			// $('#signature').append($('<p>').text("Here's your signature:"));
+			$('#signature img').attr('src', dataUrl);
+			closeCanvas();
+			$('#signature').addClass('hasData');
+		}
+		
+		$('.js-signature').on('jq.signature.changed', function() {
+			$('#saveBtn').parent('.button').removeClass('hide');
+		});
+		
+		// 簽名時禁止body滾動 (阻止下拉滑動)
+		document.getElementById('js-signature').addEventListener('touchmove', function (event) {
+			event.preventDefault();
+		}, {passive: false}); //passive 參數不能省略，用来兼容ios和android
+
+		// 複寫canvas大小
+		function setCanvasSize() {
+			var canvas = $('#js-signature canvas');
+			var canvasWidth = $('#js-signature').innerWidth();
+			var canvasHeight = $('#js-signature').innerHeight();
+			canvas.attr('width', canvasWidth);
+			canvas.attr('height', canvasHeight);
+			canvas.css({
+				'width' : canvasWidth + 'px',
+				'height' : canvasHeight + 'px',
+			})
+		}
+		setCanvasSize();
+		$(window).resize(function(){
+			setCanvasSize();
+		});
+
+		// 簽名區顯示/隱藏
+		$('#signature').find('.button').on('click', function(){
+			$('.electronicSignature-signature').removeClass('hide');
+			setCanvasSize();
+		});
+
+		function closeCanvas(){
+			$('.electronicSignature-signature').addClass('hide');
+		}
+	</script>
+</body>
+</html>

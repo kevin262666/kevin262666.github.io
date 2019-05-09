@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a3575">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>線上開戶 | 富蘭克林華美投信理財網</title>
+    <meta property="og:title" content="線上開戶 | 富蘭克林華美投信理財網">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="線上開戶">
+	<meta property="og:description" content="線上開戶">
+    <!-- <meta property="og:image" content="#">
+	<meta property="og:url" content="#"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<!-- <header-area></header-area> -->
+
+		<!-- main -->
+		<!-- <article class="main">
+			<div class="container">
+
+				
+
+			</div>
+		</article> -->
+
+		<!-- footer -->
+		<!-- <footer-area></footer-area> -->
+
+		<div class="afuLoading">
+			<div class="afuLoading-info">
+				<div class="afuLoading-info-bubble">
+					<img src="images/logo.svg" alt="富蘭克林華美投信">文件簽署處理中<br/>請勿關閉本視窗
+				</div>
+				<img src="images/afu.gif" alt="" class="afuLoading-info-afu">
+				<div class="afuLoading-dot">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="loading fixed">
+			<div class="loading-info">
+				<div class="loading-text">
+					憑證部署中
+				</div>
+				<div class="loading-icon">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div> -->
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/component-dist.js"></script>
+
+	<script>
+		setTimeout(function(){
+			$('.afuLoading-info-bubble').html('<img src="images/logo.svg" alt="富蘭克林華美投信">憑證簽署處理中<br/>請勿關閉本視窗');
+			setTimeout(function(){
+				document.location.href = "step11.html";
+			}, 3000);
+		}, 2000);
+	</script>
+
+</body>
+</html>

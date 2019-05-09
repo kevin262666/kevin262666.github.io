@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+$maxWidth-xxl: 1799px;
+$maxWidth-xl: 1399px;
+$maxWidth-lg: 1199px;
+$maxWidth-md: 991px;
+$maxWidth-sm: 767px;
+$maxWidth-xs: 479px;
+
+$blue: #093e8d;
+$orange: #ea5404;
+$darkGray: #848282;
+$lightGray: #ccc;
+$yellow: #f4c70b;
+$green: #12a012;
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: $maxWidth-xxl) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: $maxWidth-xl) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: $maxWidth-lg) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: $maxWidth-md) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: $maxWidth-sm) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: $maxWidth-xs) {
+        @content;
+    }
+}
+
+// 用法範例
+// @include maxWidth-xxl {
+//     margin: 20px;
+// }
+
+
+// reset ========================================================================
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    font-size: 17px;
+    line-height: 1.4;
+    background: #f7f7f7;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%; /*強制瀏覽器不要縮放文字*/
+    @include maxWidth-sm {
+        font-size: 16px;
+    }
+}
+
+/*Webkit,Opera9.5+,Ie9+ 控制文字選取時的顏色*/
+::selection {
+	background:#ffde00;
+	color:#000;
+}
+
+/*Mozilla Firefox 控制文字選取時的顏色*/
+::-moz-selection {
+	background:#ffde00;
+	color:#000;
+}
+
+a {
+    text-decoration: none;
+    color: #0057d4;
+}
+
+img {
+    outline: none;
+    border: none;
+    height: auto;
+}
+
+p {
+    margin: 0px;
+}
+
+// input ========================================================================
+.checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    min-height: 20px;
+    margin-right: 15px;
+    &:last-of-type {
+        margin-right: 0px;
+    }
+    input[type="checkbox"] {
+        display: none;
+        &:checked + .checkbox-icon {
+            background: #fae103;
+            border-color: #fad203;
+            i {
+                color: #000;
+                opacity: 1;
+            }
+        }
+    }
+    input[type="checkbox"] {
+        &:disabled + .checkbox-icon {
+            background: $lightGray;
+        }
+    }
+    &-icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease all;
+        display: block;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s ease all;
+            opacity: 0;
+        }
+    }
+    &-text {
+        font-size: 17px;
+        padding-left: 5px;
+        display: block;
+    }
+}
+
+.radio {
+    @extend .checkbox;
+    input[type="radio"] {
+        display: none;
+        &:checked + .radio-icon {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+                opacity: 1;
+            }
+        }
+    }
+    input[type="radio"] {
+        &:disabled + .radio-icon {
+            background: $lightGray;
+        }
+    }
+    &-icon {
+        @extend .checkbox-icon;
+        border-radius: 100%;
+    }
+    &-text {
+        @extend .checkbox-text;
+    }
+}
+
+label {
+    cursor: pointer;
+    vertical-align: top;
+}
+
+button {
+    border: none;
+    color: #fff;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    cursor: pointer;
+    i {
+        margin-left: 5px;
+    }
+}
+
+input,
+button,
+select {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.inputStyle {
+    border-radius: 8px;
+    border: solid 1px $lightGray;
+    background: #fff;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 11px 10px;
+}
+
+input {
+    &[type="text"] {
+        @extend .inputStyle;
+    }
+}
+
+select {
+    box-sizing: border-box;
+    padding: 0 24px 0 10px;
+    font-size: 17px;
+    line-height: 42px;
+    height: 44px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+            appearance: none;
+    background: #fff url(../images/icon-dropdown.png) right center no-repeat;
+    background-size: 18px;
+    border-radius: 8px;
+    border: solid 1px $lightGray;
+    &::-ms-expand {
+        display: none;
+    }
+    &.focus {
+        border-color: $blue;
+        box-shadow: 0px 0px 0px 1px $blue inset,
+                    0px 0px 5px rgba($blue, 0.5);
+    }
+}
+
+// component ========================================================================
+.container {
+    margin: 0 auto;
+    padding: 0px;
+    width: 950px;
+    @include maxWidth-lg {
+        margin: 0px 25px;
+        width: auto;
+    }
+    @include maxWidth-sm {
+        margin: 0px 15px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.mobileShow {
+    display: none !important;
+}
+@include maxWidth-md {
+    .pcShow {
+        display: none !important;
+    }
+    .mobileShow {
+        display: inherit !important;
+    }
+}
+
+//--fontAwesome ========================================================================
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//--解決animate.css引起的z-index問題 ========================================================================
+.animated {
+    animation-fill-mode: backwards;
+}

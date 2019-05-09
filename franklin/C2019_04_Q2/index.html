@@ -1,0 +1,2051 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+	<script src="js/vue.js"></script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#005598">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/slick.css" /> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>國民輕鬆省 投資一日3省！ | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="國民輕鬆省 投資一日3省！">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="想投資卻怕麻煩? 富蘭克林教你投資如何「一日3省」，讓你省時省力又省心!">
+	<meta property="og:description" content="想投資卻怕麻煩? 富蘭克林教你投資如何「一日3省」，讓你省時省力又省心!">
+    <meta property="og:image" content="https://event.franklin.com.tw/C2019_04_Q2/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/C2019_04_Q2/index.html">
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<!-- ie用的遮罩 -->
+		<div class="ieUseMask">
+			<div class="ieUseMask-text">
+				<strong>建議您使用現代化瀏覽器瀏覽</strong><br/><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+				<div class="ieUseMask-dot"></div>
+			</div>
+		</div>
+
+		<!-- header -->
+		<header class="header" id="top">
+			<div class="container">
+				<div class="navbar" :class="{show: navbarShow}">
+					<nav>
+						<div class="navShadow"></div>
+						<a href="#oneDay" @click="hideMobileNavbar(), oneDayChange1()">
+							入門最省
+						</a>
+					</nav>
+					<nav>
+						<div class="navShadow"></div>
+						<a href="#oneDay" @click="hideMobileNavbar(), oneDayChange2()">
+							限時揪團
+						</a>
+					</nav>
+					<nav>
+						<div class="navShadow"></div>
+						<a href="#oneDay" @click="hideMobileNavbar(), oneDayChange3()">
+							3省錦囊
+						</a>
+					</nav>
+					<nav>
+						<div class="navShadow"></div>
+						<a href="#gift" @click="hideMobileNavbar()">
+							優惠好禮
+						</a>
+					</nav>
+				</div>
+				<div class="logo">
+					<!-- <a href="javascript:void(0);" target="_blank" title="富蘭克林．國民的基金"> -->
+						<header-logo></header-logo>
+						<div class="logo-name">
+							富蘭克林．國民的基金
+						</div>
+					<!-- </a> -->
+				</div>
+				<div class="menuBtn" data-wow-delay="0.8s" :class="{active: menuBtnActive}" @click="toggleMobileNavbar()">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+
+			<!-- banner -->
+			<div class="banner">
+				<div class="banner-arrow">
+					<img src="images/bannerArrow-topLeft.svg" alt="" class="banner-arrow-topLeft">
+					<img src="images/bannerArrow-topRight.svg" alt="" class="banner-arrow-topRight">
+					<img src="images/bannerArrow-bottomRight.svg" alt="" class="banner-arrow-bottomRight">
+					<div class="banner-arrow-bottomLeft"></div>
+				</div>
+				<!-- <img src="images/banner-signboard.svg" alt="" class="banner-signboard"> -->
+				<!-- <img src="images/banner-table.svg" alt="" class="banner-table"> -->
+				<img src="images/banner-tit.svg" alt="" class="banner-tit">
+				<img src="images/banner-stit.svg" alt="" class="banner-stit">
+				<div class="banner-people">
+					<banner-people></banner-people>
+				</div>
+
+				<div class="banner-counter">
+					<a href="#oneDay" @click="oneDayChange2()">
+						<div class="banner-counter-shadow"></div>
+
+						<!-- 第一階 star -->
+						<!-- <counter-item :text="stage1Text"></counter-item> -->
+						<!-- 第一階 end -->
+
+						<!-- 第二階 star -->
+						<counter-item :text="stage2Text"></counter-item>
+						<!-- 第二階 end -->
+
+						<div class="banner-counter-goBtn">
+							<!-- <a href="#"> -->
+								<div class="banner-counter-goBtn-arrow">
+									<i class="fas fa-caret-down"></i>
+								</div>
+								<span>
+									揪團GO省!
+								</span>
+							<!-- </a> -->
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div id="oneDay"></div>
+			<a href="#oneDay" class="oneDayPosLink"></a>
+			<section class="item oneDay" :class="{rightShow : onedayRightShow}">
+				<div class="oneDay-container wow fadeInUp">
+
+					<div class="oneDay-mask">
+						<div class="oneDay-mask-left">
+							<div class="oneDay-mask-man girl">
+								<oneday-girl></oneday-girl>
+							</div>
+						</div>
+						<div class="oneDay-mask-right">
+							<div class="oneDay-mask-man boy">
+								<oneday-boy></oneday-boy>
+							</div>
+						</div>
+						<div class="oneDay-mask-toggleBtn-area">
+							<div class="oneDay-mask-toggleBtn" @click="onedayRightShowToggle()">
+								<div class="oneDay-mask-toggleBtn-shadow">
+								</div>
+								<div class="oneDay-mask-toggleBtn-arrow">
+									<div class="oneDay-mask-toggleBtn-left">
+										<i class="fas fa-angle-left"></i>
+									</div>
+									<div class="oneDay-mask-toggleBtn-right">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</div>
+								<div class="oneDay-mask-toggleBtn-tooltip">
+									<!-- 點我切換！ -->
+								</div>
+							</div>
+						</div>
+						<div class="oneDay-mask-tit" @click="onedayRightShowToggle()">
+							<oneday-tit></oneday-tit>
+						</div>
+					</div>
+
+					<div class="oneDay-info oneDay-info-left">
+						<div class="oneDay-info-text">
+							想投資卻怕麻煩? 富蘭克林教你投資如何「一日3省(ㄕㄥˇ)」，讓你<strong class="focus">省時省力又省心!</strong>
+						</div>
+						<div class="oneDay-info-left-tabArea">
+							<div class="oneDay-info-left-tabArea-tab tabItem-area">
+								<div class="oneDay-info-left-tabArea-tab-item tabItem active">
+									<strong>入門最省</strong>
+								</div>
+								<div class="oneDay-info-left-tabArea-tab-item tabItem">
+									<strong>揪團最省</strong>
+								</div>
+								<div class="oneDay-info-left-tabArea-tab-item tabItem">
+									<strong>時間最省</strong>
+								</div>
+							</div>
+							<div class="oneDay-info-left-tabArea-info tabItemInfo-area">
+								<div class="oneDay-info-left-tabArea-info-item tabItemInfo">
+									<div class="tit-type2">
+										<strong>
+											第一省: 全民投資入門最省，2檔基金=2000元/月
+										</strong>
+									</div>
+									<div class="textInfo">
+										投資不必拿著大把鈔票，富蘭克林推出A、B兩款低門檻投資方案，限時實施中!
+									</div>
+									<div class="dividingLine dased"></div>
+									<div class="programInfo">
+										<div class="programInfo-item">
+											<div class="programInfo-item-no">
+												A
+											</div>
+											<span class="programInfo-item-tit">
+												<strong>全民輕鬆<span class="programInfo-item-tit-focus">扣</span>:</strong> 
+											</span>
+											<span class="programInfo-item-text">
+												不限年齡，每月2,000元就能買2檔基金，輕鬆入門最省
+											</span>
+											<plan-a :fun="toggleLightBox"></plan-a>
+										</div>
+										<div class="programInfo-item">
+											<div class="programInfo-item-no">
+												B
+											</div>
+											<span class="programInfo-item-tit">
+												<strong>全民輕鬆<span class="programInfo-item-tit-focus">購</span>:</strong> 
+											</span>
+											<span class="programInfo-item-text">
+												不限年齡，1萬元即可單筆申購任1檔<span class="focusLink" @click="toggleLightBox('featuredFund-list');">第二季精選基金</span> <i class="fas fa-external-link-square-alt"></i>，掌握投資契機最省
+											</span>
+										</div>
+									</div>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+												<strong>
+													立即開戶 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+										<div class="btn type2">
+											<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+												<strong>
+													立即下單 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="oneDay-info-left-tabArea-info-item tabItemInfo">
+									<div class="tit-type2">
+										<strong>
+											第二省: 新朋友、老朋友揪團一起省
+										</strong>
+									</div>
+									<div class="textInfo">
+										好東西就想和好朋友分享，即日起~6/30前，累積新開戶人數達888人，就送1筆1折手續費優惠，不限投資方式均可使用，新朋友老朋友一起省!
+									</div>
+
+									<!-- 第一階 star -->
+									<div class="counterInfo-area hide">
+										<counter-item :text="stage1Text"></counter-item>
+									</div>
+									<!-- 第一階 end -->
+
+									<!-- 第二階 star -->
+									<div class="counterInfo-area">
+										<counter-item :text="stage2Text"></counter-item>
+										<div class="counterInfo-item-area">
+											<div class="counterInfo-item">
+												<div class="counterInfo-item-top">
+													<div class="counterInfo-item-top-stit">
+														階段目標
+													</div>
+													<div class="counterInfo-item-top-tit">
+														<strong>
+															累積新開戶達<span class="focus">888</span>人
+														</strong>
+													</div>
+												</div>
+												<div class="counterInfo-item-bottom">
+													<strong>
+														1折手續費優惠x1
+													</strong>
+												</div>
+												<div class="completeIcon">
+													<i class="fas fa-check"></i>
+													達成
+												</div>
+											</div>
+											<div class="counterInfo-item">
+												<div class="counterInfo-item-top">
+													<div class="counterInfo-item-top-stit">
+														階段目標
+													</div>
+													<div class="counterInfo-item-top-tit">
+														<strong>
+															累積新開戶達<span class="focus">1288</span>人
+														</strong>
+													</div>
+												</div>
+												<div class="counterInfo-item-bottom">
+													<strong>
+														0.1%手續費優惠x1
+													</strong>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 第二階 end -->
+									
+									<div class="dividingLine dased"></div>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="新朋友，立即開戶參加">
+												<strong>
+													新朋友，立即開戶參加 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+										<div class="btn type2">
+											<a href="javascript:void(0);" target="_blank" title="老朋友，登入參加" @click="toggleLightBox('activity-login');">
+												<strong>
+													老朋友，登入參加 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="oneDay-info-left-tabArea-info-item tabItemInfo">
+									<div class="tit-type2">
+										<strong>
+											第三省: 今天申辦隔日開通，網銀開戶最省時
+										</strong>
+									</div>
+									<div class="textInfo">
+										告別舊時代，開戶不用再等2個禮拜，現在使用網路銀行開戶服務，今天申辦隔日即可開通，替您省下寶貴時間，不必擔心好行情沒跟上! 適用行庫持續增加中，搶先體驗再享加碼優惠!
+									</div>
+									<div class="dividingLine dased"></div>
+									<div class="experienceOpeningAccount">
+										<div class="tit-type1">
+											<div>
+												<div class="tit-type1-border">
+													<div></div>
+													<div></div>
+												</div>
+												<div class="tit-type1-tit">
+													立即體驗網銀開戶
+												</div>
+												<div class="tit-type1-stit">
+													限時再搶加碼禮！
+												</div>
+											</div>
+										</div>
+										<div class="experienceOpeningAccount-item-area">
+											<div class="experienceOpeningAccount-item">
+												<div>
+													<div class="experienceOpeningAccount-item-left">
+														<div class="focus">6/30前</div>
+														凡透過網銀線上開戶成功者
+													</div>
+													<div class="experienceOpeningAccount-item-right">
+														<div class="experienceOpeningAccount-item-right-tit">
+															<strong>
+																單筆
+															</strong>
+														</div>
+														<div class="experienceOpeningAccount-item-right-gift">
+															<div class="experienceOpeningAccount-item-right-gift-shadow"></div>
+															<span class="experienceOpeningAccount-item-right-gift-num">
+																1<span class="unit">折</span>
+															</span>
+														</div>
+														<div class="experienceOpeningAccount-item-right-tit-stit">
+															(一筆)
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="experienceOpeningAccount-item">
+												<div>
+													<div class="experienceOpeningAccount-item-left">
+														搶先於<span class="focus">4/22前</span>完成者
+													</div>
+													<div class="experienceOpeningAccount-item-right">
+														<div class="experienceOpeningAccount-item-right-tit">
+															<strong>
+																再額外贈送一筆
+															</strong>
+														</div>
+														<div class="experienceOpeningAccount-item-right-gift">
+															<div class="experienceOpeningAccount-item-right-gift-shadow"></div>
+															<span class="experienceOpeningAccount-item-right-gift-num">
+																0<span class="unit">元</span>
+															</span>
+															<div class="experienceOpeningAccount-item-right-gift-stit">
+																優惠
+															</div>
+														</div>
+														<div class="experienceOpeningAccount-item-right-tit-stit">
+															(不限交易方式)
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated" target="_blank" title="華南銀/兆豐銀 客戶搶先體驗">
+												<strong>
+													華南銀/兆豐銀 客戶搶先體驗 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+										<div class="btn type2">
+											<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank" title="其他行庫客戶 寄件開戶">
+												<strong>
+													其他行庫客戶 寄件開戶 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="oneDay-info oneDay-info-right">
+						<div class="oneDay-info-text">
+							<strong>古語新解：</strong>曾子曰：吾日三省吾身，面對全球金融市場震盪加劇，有三省錦囊必須謹記在心，時時提醒自己在情勢混沌不明時，掌握回歸基本面的重要性，才能清楚投資方向，堅定長期投資信心向前行。
+						</div>
+						<a href="#bagPos" class="bagPosLink"></a>
+						<div class="oneDay-info-right-tabArea" id="bagPos">
+							<div class="tit-type1">
+								<div>
+									<div class="tit-type1-border">
+										<div></div>
+										<div></div>
+									</div>
+									<div class="tit-type1-tit">
+										投資3省錦囊
+									</div>
+								</div>
+							</div>
+							<div class="oneDay-info-right-tabArea-tab tabItem-area">
+								<div class="oneDay-info-right-tabArea-tab-item bag1 tabItem" @click="scrollToBagPos()">
+									<div class="oneDay-info-right-tabArea-tab-item-info">
+										<div class="oneDay-info-right-tabArea-tab-item-top">
+											<div class="bag">
+												<bag-svg></bag-svg>
+											</div>
+										</div>
+										<div class="oneDay-info-right-tabArea-tab-item-bottom">
+											<div class="tit-type1">
+												<div>
+													<div class="tit-type1-border">
+														<div></div>
+														<div></div>
+													</div>
+													<div class="tit-type1-tit">
+														趨勢
+													</div>
+													<div class="tit-type1-stit">
+														錦囊
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="oneDay-info-right-tabArea-tab-item-arrow"></div>
+								</div>
+								<div class="oneDay-info-right-tabArea-tab-item bag2 tabItem" @click="scrollToBagPos()">
+									<div class="oneDay-info-right-tabArea-tab-item-info">
+										<div class="oneDay-info-right-tabArea-tab-item-top">
+											<div class="bag">
+												<bag-svg></bag-svg>
+											</div>
+										</div>
+										<div class="oneDay-info-right-tabArea-tab-item-bottom">
+											<div class="tit-type1">
+												<div>
+													<div class="tit-type1-border">
+														<div></div>
+														<div></div>
+													</div>
+													<div class="tit-type1-tit">
+														配置
+													</div>
+													<div class="tit-type1-stit">
+														錦囊
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="oneDay-info-right-tabArea-tab-item-arrow"></div>
+								</div>
+								<div class="oneDay-info-right-tabArea-tab-item bag3 tabItem" @click="scrollToBagPos()">
+									<div class="oneDay-info-right-tabArea-tab-item-info">
+										<div class="oneDay-info-right-tabArea-tab-item-top">
+											<div class="bag">
+												<bag-svg></bag-svg>
+											</div>
+										</div>
+										<div class="oneDay-info-right-tabArea-tab-item-bottom">
+											<div class="tit-type1">
+												<div>
+													<div class="tit-type1-border">
+														<div></div>
+														<div></div>
+													</div>
+													<div class="tit-type1-tit">
+														標的
+													</div>
+													<div class="tit-type1-stit">
+														錦囊
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="oneDay-info-right-tabArea-tab-item-arrow"></div>
+								</div>
+							</div>
+							<div class="oneDay-info-right-tabArea-info tabItemInfo-area">
+								<div class="closeBtn">
+									<i class="fas fa-times"></i>
+								</div>
+								<div class="oneDay-info-right-tabArea-info-item bag1 tabItemInfo">
+									<div class="oneDay-info-right-tabArea-info-item-bag">
+										<bagopen-svg></bagopen-svg>
+									</div>
+									<div class="tit-type1">
+										<div>
+											<div class="tit-type1-border">
+												<div></div>
+												<div></div>
+											</div>
+											<div class="tit-type1-stit">
+												投資3省錦囊
+											</div>
+											<div class="tit-type1-tit">
+												趨勢包
+											</div>
+										</div>
+									</div>
+									<div class="textInfo">
+										<p>
+											投資做功課的第一優先順序就是先找趨勢。趨勢一旦形成，通常不會突然反轉，跟著趨勢順勢而為，勝算可望提高。
+										</p>
+										<p>
+											怎麼找趨勢呢? 「國際股債市日訊」和「一週搶先報」是很好的市場趨勢工具。現在網路上資訊量爆炸，富蘭克林每日/週提供投資重點精華內容，幫你更新最即時市場議題和投資風向!
+										</p>
+									</div>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://event.franklin.com.tw/transfer/franklinofficial/edm.html" target="_blank" title="立即領取趨勢包錦囊">
+												<strong>
+													立即領取趨勢包錦囊 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+									<div class="oneDay-info-right-tabArea-info-item-aFu" @click="toggleLightBox('bag1-aFu');">
+										<div class="oneDay-info-right-tabArea-info-item-aFu-bubble">
+											習慣看影片的朋友有福啦！<strong class="focusLink">點我</strong>教你第二季如何投資!
+										</div>
+										<img src="images/aFuOpenDoor.svg" alt="">
+									</div>
+								</div>
+								<div class="oneDay-info-right-tabArea-info-item bag2 tabItemInfo">
+									<div class="oneDay-info-right-tabArea-info-item-bag">
+										<bagopen-svg></bagopen-svg>
+									</div>
+									<div class="tit-type1">
+										<div>
+											<div class="tit-type1-border">
+												<div></div>
+												<div></div>
+											</div>
+											<div class="tit-type1-stit">
+												投資3省錦囊
+											</div>
+											<div class="tit-type1-tit">
+												配置包
+											</div>
+										</div>
+									</div>
+									<div class="textInfo">
+										<p>
+											當發現了市場趨勢之後，第二步就必須想想如何跟上趨勢?不用擔心，現在你可以依照個人的投資需求、風險承受度選擇適合自己的投資組合，讓您以輕鬆、便利的方式，為自己的荷包加碼！
+										</p>
+									</div>
+									<div class="dividingLine dased"></div>
+									<div class="tit-type2">
+										<strong>
+											全民輕鬆扣: 2檔基金=2000元/月
+										</strong>
+									</div>
+									<plan-a :fun="toggleLightBox"></plan-a>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+												<strong>
+													立即開戶 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+										<div class="btn type2">
+											<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+												<strong>
+													立即下單 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="oneDay-info-right-tabArea-info-item bag3 tabItemInfo">
+									<div class="oneDay-info-right-tabArea-info-item-bag">
+										<bagopen-svg></bagopen-svg>
+									</div>
+									<div class="tit-type1">
+										<div>
+											<div class="tit-type1-border">
+												<div></div>
+												<div></div>
+											</div>
+											<div class="tit-type1-stit">
+												投資3省錦囊
+											</div>
+											<div class="tit-type1-tit">
+												標的包
+											</div>
+										</div>
+									</div>
+									<div class="textInfo">
+										<p>
+											查看『精選基金』標的其實是非常方便的投資風向球，一方面「偷師」專業團隊的策略，二方面也可透過每月/季的推薦標的，看看是否符合自己對市場的觀察。現在就一起來看看本季有哪些精選基金和優惠吧!
+										</p>
+									</div>
+									<div class="dividingLine dased"></div>
+									<div class="tit-type2">
+										<strong>
+											富蘭克林第二季精選基金
+										</strong>
+									</div>
+									<div class="textInfo">
+										<strong>
+											申購精選基金均享3折優惠，單筆申購最低只要10,000元，定期定額2檔基金最低只要2,000元唷!
+										</strong>
+									</div>
+									<featured-fund-list :fun="toggleLightBox"></featured-fund-list>
+									<div class="btn-area">
+										<div class="btn">
+											<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+												<strong>
+													立即開戶 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+										<div class="btn type2">
+											<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+												<strong>
+													立即下單 <i class="fas fa-angle-right"></i>
+												</strong>
+											</a>
+										</div>
+									</div>
+									<div class="oneDay-info-right-tabArea-info-item-aFu" @click="toggleLightBox('bag3-aFu');">
+										<div class="oneDay-info-right-tabArea-info-item-aFu-bubble">
+											看完3個錦囊還是不知道怎麼投資? <strong class="focusLink">找我就對了!</strong>
+										</div>
+										<img src="images/aFuOpenDoor.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="oneDay-toggleBlock left" @click="onedayRightShowToggle()"></div>
+					<div class="oneDay-toggleBlock right" @click="onedayRightShowToggle()"></div>
+				</div>
+				<div class="oneDay-bottomArrow"></div>
+			</section>
+
+			<div id="gift"></div>
+			<a href="#gift" class="giftPosLink"></a>
+			<section class="item gift">
+				<div class="gift-bottomArrow"></div>
+				<div class="gift-container wow fadeInUp">
+					<div class="gift-tit">
+						<img src="images/item2-tit.svg" alt="">
+					</div>
+					<div class="gift-slider-area">
+						<img src="images/sliderShadow.png" alt="" class="gift-slider-shadow">
+						<div class="gift-slider-arrow gift-slider-arrow-left">
+							<i class="fas fa-angle-left"></i>
+						</div>
+						<div class="gift-slider-arrow gift-slider-arrow-right">
+							<i class="fas fa-angle-right"></i>
+						</div>
+						<div class="gift-slider">
+							<div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-1.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													全民同享優惠好禮
+												</strong>
+											</div>
+											<div class="gift-card-info">
+												<div class="textInfo">
+													<p>
+														<strong>
+															A.全民輕鬆扣:
+														</strong>
+														<br/>
+														不限年齡，每月2,000元起即可定期定額申購富蘭克林<strong class="openLightBox" @click="toggleLightBox('fundPortfolio');">第二季精選基金組合 <i class="fas fa-external-link-square-alt"></i></strong>，二檔基金同享3折手續費優惠。
+													</p>
+													<p>
+														<strong>
+															B.全民輕鬆購:
+														</strong>
+														<br/>
+														不限年齡，新台幣1萬元起即可單筆申購富蘭克林<strong class="openLightBox" @click="toggleLightBox('featuredFund-list');">第二季精選基金 <i class="fas fa-external-link-square-alt"></i></strong>，並享3折優惠。
+													</p>
+												</div>
+											</div>
+											<div class="btn-area">
+												<div class="btn type3">
+													<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+												<div class="btn type2">
+													<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+														<strong>
+															立即下單 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年4月8日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-2.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													揪團好友一起省
+												</strong>
+											</div>
+											<div class="gift-card-info">
+
+												<!-- 第一階 star -->
+												<div class="textInfo hide">
+													<p>
+														即日起~6/30前，累積新開戶人數達888人，就送1筆1折手續費優惠，不限投資方式均可使用，新朋友老朋友一起省!
+													</p>
+												</div>
+												<!-- 第一階 end -->
+
+												<!-- 第二階 star -->
+												<div class="textInfo">
+													<p>
+														即日起~6/30前，累積新開戶人數達指定的階段目標，就送超值手續費優惠，不限投資方式均可使用，新朋友老朋友一起省!
+													</p>
+													<div class="friendCard-table">
+														<div class="friendCard-row tit">
+															<div class="friendCard-col">
+																階段目標
+															</div>
+															<div class="friendCard-col">
+																優惠內容
+															</div>
+														</div>
+														<div class="friendCard-row">
+															<div class="friendCard-col">
+																累積新開戶達<strong class="focus">888</strong>人
+															</div>
+															<div class="friendCard-col">
+																<strong class="focus">
+																	1折手續費優惠x1*
+																</strong>
+															</div>
+															<div class="completeIcon">
+																<i class="fas fa-check"></i>
+																達成
+															</div>
+														</div>
+														<div class="friendCard-row">
+															<div class="friendCard-col">
+																累積新開戶達<strong class="focus">1,288</strong>人
+															</div>
+															<div class="friendCard-col">
+																<strong class="focus">
+																	0.1%手續費優惠x1*
+																</strong>
+															</div>
+														</div>
+													</div>
+													<p class="gift-card-info-remark">
+														*5/1前已有國民e帳戶者，需有至少1戶新戶填寫您的推薦碼開戶成功，始可獲得0.1%手續費優惠
+													</p>
+												</div>
+												<!-- 第二階 end -->
+
+											</div>
+											<div class="btn-area">
+												<div class="btn type3 twoText">
+													<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+														<div class="btn-stit">
+															- 未開戶 -
+														</div>
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+												<div class="btn type2 twoText">
+													<a href="javascript:void(0);" target="_blank" title="登入參加" @click="toggleLightBox('activity-login');">
+														<div class="btn-stit">
+															- 已開戶 -
+														</div>
+														<strong>
+															登入參加 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年4月8日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-tag">
+												<div>
+													新戶限定
+												</div>
+											</div>
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-3.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													線上開戶 方便快速
+												</strong>
+											</div>
+											<div class="gift-card-info">
+												<div class="textInfo">
+													<p>
+														6/30前，凡透過網銀線上開戶成功者，享單筆申購1折手續費優惠1筆。
+													</p>
+													<p>
+														搶先於4/22前完成者，再額外贈送1筆0元優惠(不限投資方式)。
+													</p>
+												</div>
+											</div>
+											<div class="btn-area">
+												<div class="btn type3">
+													<a href="https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated" target="_blank" title="立即開戶">
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年4月8日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-tag type2">
+												<div>
+													會員限定
+												</div>
+											</div>
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-4.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													精選基金3折
+												</strong>
+											</div>
+											<div class="gift-card-info">
+												<div class="textInfo">
+													<p>
+														於活動期間申購<strong class="openLightBox" @click="toggleLightBox('featuredFund-list');">第二季精選基金 <i class="fas fa-external-link-square-alt"></i></strong>，無論單筆、天天自由扣、定期定額皆享有3折手續費申購優惠，快把握時機，為手中資產打造新風貌！
+													</p>
+												</div>
+											</div>
+											<div class="btn-area">
+												<div class="btn type3">
+													<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+												<div class="btn type2">
+													<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+														<strong>
+															立即下單 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年4月1日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-tag">
+												<div>
+													新戶限定
+												</div>
+											</div>
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-5.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													開戶限時優惠
+												</strong>
+											</div>
+											<div class="gift-card-info">
+												<div class="textInfo">
+													<p>
+														活動期間完成國民e帳戶開戶並送件成功，即享1筆定期定額手續費0.3%終身優惠；優惠使用期限至2019/7/31(含假日)，不限基金與下單金額。
+													</p>
+												</div>
+											</div>
+											<div class="btn-area">
+												<div class="btn type3">
+													<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+												<div class="btn type2">
+													<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+														<strong>
+															立即下單 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年1月1日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="gift-card">
+										<div class="gift-card-bg">
+											<div class="gift-card-tag">
+												<div>
+													新戶限定
+												</div>
+											</div>
+											<div class="gift-card-img">
+												<img src="images/giftItemImg-6.png" alt="">
+											</div>
+											<div class="gift-card-tit">
+												<strong>
+													紅利點數3000點
+												</strong>
+											</div>
+											<div class="gift-card-info">
+												<div class="textInfo">
+													<p>
+														凡於國民e帳戶成功開戶後，首次下單申購並扣款成功即贈送紅利點數3,000點，祝您在往後投資的道路，有更多的優惠隨行。
+													</p>
+													<p class="gift-card-info-remark">
+														註：紅利1點可折抵新台幣1元(適用單筆或天天自由扣申購手續費)
+													</p>
+												</div>
+											</div>
+											<div class="btn-area">
+												<div class="btn type3">
+													<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+														<strong>
+															立即開戶 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+												<div class="btn type2">
+													<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+														<strong>
+															立即下單 <i class="fas fa-angle-right"></i>
+														</strong>
+													</a>
+												</div>
+											</div>
+											<div class="gift-card-remark">
+												活動期間：2019年1月1日~2019年6月30日
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div id="activityRules"></div>
+			<a href="#activityRules" class="activityRulesPosLink"></a>
+			<section class="item activityRules">
+				<img src="images/bubble-1.png" alt="" class="activityRules-floatImg activityRules-floatImg-1 wow fadeInUp">
+				<img src="images/bubble-2.png" alt="" class="activityRules-floatImg activityRules-floatImg-2 wow fadeInUp">
+				<img src="images/bubble-3.png" alt="" class="activityRules-floatImg activityRules-floatImg-3 wow fadeInUp">
+				<div class="activityRules-container wow fadeInUp">
+					<div class="tit-type1">
+						<div>
+							<div class="tit-type1-border">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="tit-type1-tit">
+								活動規則
+							</div>
+						</div>
+					</div>
+					<div class="activityRules-infoItem">
+						<div class="activityRules-infoItem-tit">
+							<strong>活動期間</strong>
+						</div>
+						<div class="activityRules-infoItem-text">
+							<div>
+								<strong>全民禮 / 揪團禮 / 加碼禮：</strong><span class="activityRules-infoItem-text-date">2019年4月8日</span>~<span class="activityRules-infoItem-text-date">2019年6月30日</span>
+							</div>
+							<div>
+								<strong>精選禮：</strong><span class="activityRules-infoItem-text-date">2019年4月1日</span>~<span class="activityRules-infoItem-text-date">2019年6月30日</span>
+							</div>
+							<div>
+								<strong>見面禮 / 首購禮：</strong><span class="activityRules-infoItem-text-date">2019年1月1日</span>~<span class="activityRules-infoItem-text-date">2019年6月30日</span>
+							</div>
+						</div>
+					</div>
+					<div class="dividingLine"></div>
+					<div class="activityRules-infoItem">
+						<div class="activityRules-infoItem-tit">
+							<strong>活動規則</strong>
+						</div>
+						<div class="activityRules-infoItem-text">
+							<ol>
+								<li>
+									<strong>全民禮：</strong>
+									限以台幣於下單專頁申購適用，其他管道下單無法適用本優惠。
+									<br/>
+									<ol>
+										<li>
+											<strong>全民輕鬆扣:</strong> 不限年齡，每次(月)2,000元起即可定期定額申購富蘭克林<strong class="focusLink" @click="toggleLightBox('fundPortfolio');">第二季精選基金組合 <i class="fas fa-external-link-square-alt"></i></strong>，二檔基金同享3折手續費優惠。
+										</li>
+										<li>
+											<strong>全民輕鬆購:</strong> 不限年齡，新台幣1萬元起即可單筆申購富蘭克林<strong class="focusLink" @click="toggleLightBox('featuredFund-list');">第二季精選基金 <i class="fas fa-external-link-square-alt"></i></strong>，並享3折手續費優惠。
+										</li>
+									</ol>
+								</li>
+								<li>
+									<strong>揪團禮：</strong>
+									<ul>
+										<li>
+											活動期間內，累積新開戶人數達888人，即送1筆1折手續費優惠(4/8前已開戶者需於活動網頁登入後同享優惠)。
+										</li>
+										<li>
+											本活動取得優惠不限交易方式，每筆優惠每人限得一次；待累積戶數達上述人數後10工作天內匯入應得優惠，使用期限均至2019年7月31日(含假日)。
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>加碼禮：</strong>
+									6/30前，凡透過網銀線上開戶成功者，享單筆申購1折手續費優惠1筆。搶先於4/22前完成者，再額外贈送1筆0元優惠(不限投資方式)。
+								</li>
+								<li>
+									<strong>精選禮：</strong>
+									申購<strong class="focusLink" @click="toggleLightBox('featuredFund-list');">第二季精選基金 <i class="fas fa-external-link-square-alt"></i></strong>手續費享3折手續費優惠，不限交易方式、交易次數、金額與幣別。
+								</li>
+								<li>
+									<strong>見面禮：</strong>
+									活動期間完成國民e帳戶開戶並送件成功，即享1筆定期定額手續費0.3%終身優惠，優惠使用期限至2019/7/31(含假日)，不限基金與下單金額。
+								</li>
+								<li>
+									<strong>首購禮：</strong>
+									於活動期間首次於國民e帳戶下單且扣款成功，即得紅利點數3000點；紅利點數1點折抵新台幣手續費1元，使用期限為一年。
+									<a href="https://www.franklin.com.tw/ReservationAccount/ECFAQ" target="_blank">
+										<span class="focusLink">(紅利點數使用問與答 <i class="fas fa-link"></i>)</span>
+									</a>
+								</li>
+							</ol>
+							<ul>
+								<li>
+									所有活動優惠限新申購適用，已贖回、轉申購、已成立或扣款之定期定額、天天自由扣契約與AI智能理財專區下單者不適用。
+								</li>
+								<li>
+									各項活動取得的優惠與紅利點數僅限「國民e帳戶」網路交易使用，尚未辦理「國民e帳戶」開戶者，需完成開戶、核印，並於活動期間內下單方適用本活動各項優惠。
+								</li>
+								<li>
+									本公司保留是否接受預約開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動權利；活動規定需依各活動通知以及富蘭克林基金理財網公告為準。
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+		
+		<!-- <div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div> -->
+
+		<!-- 錦囊用假游標 -->
+		<div class="bagUseFakeMouse">
+			<img src="images/openIcon.png" alt="">
+		</div>
+
+		<!-- 假游標 -->
+		<div class="fakeMouse">
+			<!-- <div class="fakeMouse-dot"></div> -->
+			<!-- <img src="images/mouseImg-1.svg" alt="" class="fakeMouse-img fakeMouse-img-1"> -->
+			<div class="fakeMouse-img-1"></div>
+			<img src="images/mouseImg-2.svg" alt="" class="fakeMouse-img fakeMouse-img-2">
+		</div>
+
+		<!-- pin在右邊 -->
+		<div class="pinRightBar">
+			<div class="pinRightBar-logo">
+				<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林．國民的基金">
+					<header-logo></header-logo>
+				</a>
+			</div>
+			<div class="pinRightBar-btnArea">
+				<!-- <div class="pinRightBar-btn">
+					<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+						立即開戶
+					</a>
+				</div> -->
+				<div class="pinRightBar-btn">
+					<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="網銀開戶">
+						
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+						網銀開戶
+						<div class="pinRightBar-btn-newIcon">
+							NEW
+						</div>
+					</a>
+					<div class="pinRightBar-bubble show">
+						<a href="#gift" @click="scrollToGiftAndShow3()">
+							<div class="pinRightBar-bubble-shadow"></div>
+							<div class="tit-type1 yellow">
+								<div>
+									<div class="tit-type1-border">
+										<div></div>
+										<div></div>
+									</div>
+									<div class="tit-type1-stit">
+										告別舊時代！
+									</div>
+									<div class="tit-type1-tit">
+										開戶不用再等待
+									</div>
+								</div>
+							</div>
+							<div class="pinRightBar-bubble-text">
+								網銀開戶，今天申辦隔日開通
+								<br />
+								立即體驗，限時再搶加碼禮!!
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="pinRightBar-btn">
+					<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+						立即下單
+					</a>
+				</div>
+			</div>
+			<div class="pinRightBar-copyright">
+				©FRANKLIN TEMPLETON INVESTMENTS
+			</div>
+			<div class="pinRightBar-topBtn">
+				<a href="#top">
+					<span>
+						<i class="fas fa-caret-up"></i>
+					</span>
+					TOP
+				</a>
+			</div>
+		</div>
+
+		<!-- -------------------------------------燈箱區------------------------------------- -->
+
+		<!-- 趨勢錦囊 點阿富 -->
+		<light-box ref="bag1-aFu">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							想高升？求加薪？別忘了投資也要「高升加新」
+						</div>
+					</div>
+				</div>
+				<div class="textInfo text-center">
+					想透過投資理財創造額外收入的機會，抓緊市場趨勢，找對投資標的是打造財富堡壘的重要開端。面對2019第二季，千萬別錯過掌握「高息資產、趨勢/價值回升、加入防禦配置、新興市場」的「高升加新」的投資策略喔!
+				</div>
+				<div class="lightBox-youtube">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/5lTQE_ls80A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 標的錦囊 點阿富 -->
+		<light-box ref="bag3-aFu">
+			<slot slot="infoArea">
+				<div class="bag3-aFu-cta">
+					<img src="images/varySmartImg.png" alt="">
+					<div class="btn type4">
+						<a href="https://www.franklin.com.tw/AI_robo/onepage.html" target="_blank" title="體驗一下">
+							<strong>
+								體驗一下 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+				<div class="textInfo text-center">
+					如果看了三個錦囊還是不知道該怎麼投資，不妨試試AI智能理財新選擇，針對您的需求替您選擇適合的基金，AI再平衡調整功能為您的投資組合時時調整至最佳狀態，挑選基金不再苦惱、管理部位不再費神!
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+							<strong>
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					<div class="btn type2">
+						<a href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FAI_Robo" target="_blank" title="立即下單">
+							<strong>
+								立即下單 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 基金組合 點阿富 -->
+		<light-box ref="fundPortfolio">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							全民輕鬆扣精選基金組合
+						</div>
+					</div>
+				</div>
+				<plan-a :fun="toggleLightBox"></plan-a>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+							<strong>
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					<div class="btn type2">
+						<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+							<strong>
+								立即下單 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- --------------------老朋友登入參加-------------------- -->
+		<!-- 登入 -->
+		<light-box ref="activity-login">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							登入國民e帳戶
+						</div>
+					</div>
+				</div>
+
+				<!-- 第一階 star -->
+				<div class="textInfo text-center hide">
+					<p>
+						哈囉！親愛的國民e帳戶會員朋友，<strong class="focus">請先登入國民e帳戶</strong>，即可參加本活動，同享揪團優惠!
+					</p>
+					<p>
+						<span class="focus">
+							如親友填寫您的推薦碼開戶成功，您與對方還可額外各獲1筆天天自由扣1折手續費優惠唷!
+						</span>
+					</p>
+				</div>
+				<!-- 第一階 end -->
+
+				<!-- 第二階 star -->
+				<div class="textInfo text-center">
+					<p>
+						哈囉！親愛的國民e帳戶會員朋友，<strong class="focus">請先登入國民e帳戶</strong>，即可參加本活動，<br/><strong class="focus">並獲得1筆1折手續費優惠(888人達標優惠)。</strong>
+					</p>
+					<p>
+						<span class="focus">
+							活動期間內若有親友填寫您的推薦碼開戶成功，雙方均可獲得1筆天天自由扣1折優惠。若累積新開戶達1288人，且有親友填寫您的推薦碼開戶成功，您還可再獲1筆不限方式0.1%手續費優惠!
+						</span>
+					</p>
+				</div>
+				<!-- 第二階 end -->
+				
+				<div class="formArea">
+					<!--
+						有錯誤時加[.error]
+						例：<div class="formArea-item error"> 
+					-->
+					<div class="formArea-item">
+						<div class="formArea-item-input">
+							<input type="text" name="" id="" placeholder="請輸入身分證字號">
+							<div class="formArea-item-input-tit">
+								帳號
+							</div>
+							<div class="formArea-item-input-errorText">
+								身分證字號錯誤，請確認！
+							</div>
+						</div>
+					</div>
+					<div class="formArea-item">
+						<div class="formArea-item-input">
+							<input type="password" name="" id="" placeholder="請輸入登入密碼">
+							<div class="formArea-item-input-tit">
+								密碼
+							</div>
+							<div class="formArea-item-input-errorText">
+								您的密碼有誤，請確認！
+							</div>
+						</div>
+					</div>
+					<div class="formArea-item captcha">
+						<div class="formArea-item-input">
+							<input type="text" name="" id="" placeholder="請輸入驗證碼">
+							<div class="formArea-item-input-tit">
+								驗證碼
+							</div>
+							<img src="images/captcha.png" alt="" class="captcha-img">
+							<div class="captcha-reload">
+								<i class="fas fa-redo-alt"></i>
+								重新產生
+							</div>
+							<div class="formArea-item-input-errorText">
+								驗證碼有誤，請確認！
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-area">
+
+					<!-- 成功 -->
+					<div class="btn">
+						<a href="javascript:void(0);" target="_blank" title="確認送出" @click="toggleLightBox('activity-send'); toggleLightBox('activity-login');">
+							<strong>
+								確認送出 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+
+					<!-- 還不是會員 -->
+					<div class="btn hide">
+						<a href="javascript:void(0);" target="_blank" title="確認送出" @click="toggleLightBox('activity-notMember'); toggleLightBox('activity-login');">
+							<strong>
+								確認送出 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+
+					<!-- 已享有貴賓客戶專屬優惠 -->
+					<div class="btn hide">
+						<a href="javascript:void(0);" target="_blank" title="確認送出" @click="toggleLightBox('activity-vip'); toggleLightBox('activity-login');">
+							<strong>
+								確認送出 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+
+					<!-- 已經參加過 -->
+					<div class="btn hide">
+						<a href="javascript:void(0);" target="_blank" title="確認送出" @click="toggleLightBox('activity-already'); toggleLightBox('activity-login');">
+							<strong>
+								確認送出 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					
+					<div class="btn type2">
+						<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="開戶去">
+							<strong>
+								還不是會員? 開戶去 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 資料送出 - 成功 -->
+		<light-box ref="activity-send">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							參加成功!
+						</div>
+					</div>
+				</div>
+
+				<!-- 第一階 star -->
+				<div class="textInfo hide">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						恭喜您已成功參加本活動！
+						<br/>
+						即日起至6/30前，累積新開戶達888人，就送您1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)，快邀請您的親友一起來參加吧！
+					</p>
+					<p>
+						如親友填寫您的推薦碼開戶成功，您與對方還可額外各獲1筆天天自由扣1折手續費優惠唷！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第一階 end -->
+
+				<!-- 第二階 star -->
+				<div class="textInfo hide">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						恭喜您已成功參加本活動！
+						<br/>
+						目前已累積新開戶達888人，恭喜您獲得1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)囉!
+					</p>
+					<p>
+						即日起至6/30前，若有親友填寫您的推薦碼開戶成功，雙方均可獲得1筆天天自由扣<strong class="focus">1折</strong>優惠。若累積新開戶達1288人，且有親友填寫您的推薦碼開戶成功，我們將再加碼送1筆<strong class="focus">0.1%</strong>手續費優惠(不限投資方式)給您，快邀請您的親友一起來參加！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第二階 end -->
+
+				<!-- 第三階 star -->
+				<div class="textInfo">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						恭喜您已成功參加本活動！
+						<br/>
+						目前已累積新開戶達1288人，恭喜您獲得1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)囉!
+					</p>
+					<p>
+						即日起至6/30前，若有親友填寫您的推薦碼開戶成功，雙方均可獲得1筆天天自由扣<strong class="focus">1折</strong>優惠。此外再加碼送<strong class="focus">限量1筆0.1%</strong>手續費優惠(不限投資方式)給您，快邀請您的親友一起來參加！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第三階 end -->
+
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://www.facebook.com/sharer.php?u=https://event.franklin.com.tw/C2019_04_Q2/" target="_blank" title="分享到FB">
+							<strong>
+								分享到FB <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					<div class="btn lineStyle">
+						<a href="http://line.naver.jp/R/msg/text/?想投資卻怕麻煩？富蘭克林教你投資如何「一日3省」，讓你省時省力又省心!https://event.franklin.com.tw/C2019_04_Q2/ 我的推薦碼：「123456」"
+							target="_blank" title="分享到LINE">
+							<strong>
+								分享到LINE <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 資料送出 - 還不是會員 -->
+		<light-box ref="activity-notMember">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							只差一步
+						</div>
+					</div>
+				</div>
+				<div class="textInfo text-center">
+					<p>
+						您還不是國民e帳戶客戶
+						<br/>
+						或開戶尚未完成
+					</p>
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+							<strong>
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 資料送出 - 已享有貴賓客戶專屬優惠 -->
+		<light-box ref="activity-vip">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							資格不符
+						</div>
+					</div>
+				</div>
+				<div class="textInfo text-center">
+					<p>
+						您已享有貴賓客戶專屬優惠，
+						<br/>
+						非本活動適用對象
+					</p>
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="javascript:void(0);" target="_blank" title="確認" @click="toggleLightBox('activity-vip')">
+							<strong>
+								確認 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 資料送出 - 已經參加過 -->
+		<light-box ref="activity-already">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							您已參加過囉!
+						</div>
+					</div>
+				</div>
+				
+				<!-- 第一階 star -->
+				<div class="textInfo hide">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						您已參加過本活動囉！
+						<br/>
+						即日起至6/30前，累積新開戶達888人，就送您1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)，快邀請您的親友一起來參加吧！
+					</p>
+					<p>
+						如親友填寫您的推薦碼開戶成功，您與對方還可額外各獲1筆天天自由扣1折手續費優惠唷！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第一階 end -->
+
+				<!-- 第二階 star -->
+				<div class="textInfo hide">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						您已參加過本活動囉！
+						<br/>
+						目前已累積新開戶達888人，恭喜您獲得1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)囉!
+					</p>
+					<p>
+						即日起至6/30前，若有親友填寫您的推薦碼開戶成功，雙方均可獲得1筆天天自由扣<strong class="focus">1折</strong>優惠。若累積新開戶達1288人，且有親友填寫您的推薦碼開戶成功，我們將再加碼送1筆<strong class="focus">0.1%</strong>手續費優惠(不限投資方式)給您，快邀請您的親友一起來參加！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第二階 end -->
+
+				<!-- 第三階 star -->
+				<div class="textInfo">
+					<p>
+						<strong class="focus activitySend-name">親愛的OOO，您好！</strong>
+					</p>
+					<p>
+						您已參加過本活動囉！
+						<br/>
+						目前已累積新開戶達1288人，恭喜您獲得1筆<strong class="focus">1折</strong>手續費優惠(不限投資方式)囉!
+					</p>
+					<p>
+						即日起至6/30前，若有親友填寫您的推薦碼開戶成功，雙方均可獲得1筆天天自由扣<strong class="focus">1折</strong>優惠。此外再加碼送<strong class="focus">限量1筆0.1%</strong>手續費優惠(不限投資方式)給您，快邀請您的親友一起來參加！
+					</p>
+					<p>
+						您的推薦碼為
+						<strong class="recommendedCode">
+							123456
+						</strong>
+						，立即分享給親朋好友吧！
+					</p>
+				</div>
+				<!-- 第三階 end -->
+
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://www.facebook.com/sharer.php?u=https://event.franklin.com.tw/C2019_04_Q2/" target="_blank" title="分享到FB">
+							<strong>
+								分享到FB <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					<div class="btn lineStyle">
+						<a href="http://line.naver.jp/R/msg/text/?想投資卻怕麻煩？富蘭克林教你投資如何「一日3省」，讓你省時省力又省心!https://event.franklin.com.tw/C2019_04_Q2/ 我的推薦碼：「123456」"
+							target="_blank" title="分享到LINE">
+							<strong>
+								分享到LINE <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- --------------------精選基金-------------------- -->
+		<!-- 第二季精選基金 -->
+		<light-box ref="featuredFund-list">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							富蘭克林第二季精選基金
+						</div>
+					</div>
+				</div>
+				<featured-fund-list :fun="toggleLightBox"></featured-fund-list>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://etrade.franklin.com.tw/Open/Entrace" target="_blank" title="立即開戶">
+							<strong>
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+					<div class="btn type2">
+						<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+							<strong>
+								立即下單 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 亞小 -->
+		<light-box ref="featuredFund-1009">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							亞洲小型企業基金
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					基金搶先挖掘亞洲明日之星，若您看好資金回流新興市場、中國政策改革的擴散效應，以及亞洲國家大選後的資金回流行情，想掌握亞洲翻轉的中長線投資商機，是您不能錯過的強檔基金！
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2017_06_Q3_1009/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 美國機會 -->
+		<light-box ref="featuredFund-0799">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							美國機會基金
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					經理團隊精選具有競爭優勢、穩健財務和創新管理團隊的美國高品質成長股，目前看好生技醫療、數位科技轉型等帶來顛覆式創新的發展商機，並聚焦消費、工業、軍工等政策題材，掌握美股輪動的投資商機。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 公用事業基金 -->
+		<light-box ref="featuredFund-1107">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							富蘭克林公用事業基金<span class="focus">(本基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					基金成立超過70個年頭，聚焦於與其他資產連動性低，更擁有內需導向、高股利色彩與較不受景氣循環影響等防禦特性的公用事業類股，是投資人在防禦波動風險時，可納入投資組合的配置之一。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2018_12_fund/1107.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 新興國家基金 -->
+		<light-box ref="featuredFund-0806">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							新興國家基金
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					美國聯準會轉向鴿派，加上新興市場歷經去年修正後，相較成熟市場更具投資優勢，且包含中國在內的新興國家持續推出政策利多，在政策、股價評價面等優勢支撐下，新興市場可望持續吸金。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2018_01_Q1_0806/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 坦伯頓成長基金 -->
+		<light-box ref="featuredFund-101">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							坦伯頓成長基金<span class="focus">(本基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					基金成立超過60個年頭，成功走過亞洲金融風暴、網路泡沫、金融海嘯等多次市場考驗危機。目前側重美歐股市，並精選亞洲及各地資產，分散單一市場持股風險，掌握區域股市輪動行情。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2017_07_Q3_101/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 全球債券基金 -->
+		<light-box ref="featuredFund-0810">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							全球債券基金<span class="focus">(本基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					想爭取債息收益，又想降低債券倒債風險嗎？別錯過本基金的佈局機會。基金經理團隊在維持高債信評級的原則下，目前嚴選具有高債息的新興市場債券資產，為投資人開創每月現金流機會，迎接收益共享新時代！
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 精選收益基金 -->
+		<light-box ref="featuredFund-0427">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							精選收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					面對中美貿易紛爭，想爭取高息機會，又想避開較大波動嗎？基金經理團隊全球化佈局，替投資人精挑細選企業債、政府債及浮動利率貸款，藉以網羅更高的獲利機會，是您抗波動，穩收益的關鍵選擇！
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2018_10_fund/0427.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 穩定月收益基金 -->
+		<light-box ref="featuredFund-0839">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							穩定月收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					在波動加劇的環境中，想靈活佈局美國股債資產，打造攻守兼備的投資組合嗎？基金除佈局美國高股利股票和高收益債等投資題材外，並佈局抗波動等防禦資產，是您爭取抗波動、穩收益不能錯過的美國平衡型基金。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2017_08_Q3_0839/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+		<!-- 精選基金 新興國家固定收益基金 -->
+		<light-box ref="featuredFund-1049">
+			<slot slot="infoArea">
+				<div class="tit-type1">
+					<div>
+						<div class="tit-type1-border">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tit-type1-tit">
+							新興國家固定收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+						</div>
+					</div>
+				</div>
+				<div class="textInfo">
+					在低利環境中，基金積極爭取高息收益機會，現階段配置具高息優勢的新興國家當地公債為主，瞄準新興國家經濟轉強締造的增值機會。是您爭取高息、開創每月現金流機會的絕佳夥伴。
+				</div>
+				<div class="btn-area">
+					<div class="btn">
+						<a href="https://event.franklin.com.tw/C2017_04_Q2/index.html" target="_blank" title="更多基金資訊">
+							<strong>
+								更多基金資訊 <i class="fas fa-angle-right"></i>
+							</strong>
+						</a>
+					</div>
+				</div>
+			</slot>
+		</light-box>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/component-dist.js"></script>
+	<!-- <script src="js/common.js"></script> -->
+</body>
+</html>

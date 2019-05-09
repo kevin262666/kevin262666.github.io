@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#382f4d">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>寵愛粉絲感恩節特別企劃 謝謝您陪我們一同成長 ｜ 富蘭克林國民的基金</title>
+    <meta property="og:title" content="寵愛粉絲感恩節特別企劃 謝謝您陪我們一同成長 ｜ 富蘭克林國民的基金">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="感恩節到了，想要對千萬的國民e帳戶會員及LINE友說，感謝你們陪富蘭克林走過近30個年頭，感謝你們每一次的信任與希望託付，你們的支持，讓我們堅持變的更好。立即留下資料領取國民e帳戶520點紅利，同時還可抽火雞禮籃LINE Points 20點等多項感恩好禮哦！">
+	<meta property="og:description" content="【富蘭克林感恩節特別企劃】參加活動拿520點紅利，再抽LINE Points 20點等多項好禮！人人有獎點此參加→https://bit.ly/2DCFYb2">
+    <meta property="og:image" content="https://event.franklin.com.tw/C2018_11_thanksgiving/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/C2018_11_thanksgiving/index.html">
+	
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+	<script src="js/vue.js"></script>
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+	<div id="content">
+
+		<!-- header -->
+		<header class="header" id="top">
+			<div class="container">
+				<div class="lgog">
+					<a href="https://www.franklin.com.tw/" target="_blank" :title="name">
+						<img src="images/logo.png" :alt="name">
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+			
+			<section class="item index" :class="{shake : hittingTurkey}">
+				<div class="container indexContainer" :class="{hidden : indexHide}">
+					<h1 class="index-tit" title="寵愛粉絲感恩節特別企劃 謝謝您陪我們一同成長">
+						<img src="images/tit.png" alt="寵愛粉絲感恩節特別企劃 謝謝您陪我們一同成長">
+						<div class="index-tit-time">
+							活動期間：2018/11/21～2018/11/29
+						</div>
+					</h1>
+					<div class="index-textArea">
+						<div class="index-textArea-text">
+							感恩節到了
+							<br/>想要對千萬的國民e帳戶會員及LINE友說
+							<br/>感謝你們陪富蘭克林走過近30個年頭
+							<br/>感謝你們每一次的信任與希望託付
+							<br/>你們的支持，讓我們堅持變的更好
+							<br/>
+							<br/>立即留下資料領取<strong class="index-textArea-text-focus">國民e帳戶520點紅利</strong>
+							<br/>同時還<strong class="index-textArea-text-focus">可抽火雞禮籃
+							<br/>LINE Points 20點等多項感恩好禮</strong>哦！
+						</div>
+						<div class="index-textArea-cta">
+							<button @click="showTurkey()">
+								<strong>來去抽火雞禮籃 </strong> <i class="fas fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+					<img src="images/index-turkey.png" alt="" class="index-turkey">
+				</div>
+				<div class="game hide" v-if="gameShow" :class="{show : gameShow}">
+					<div class="crazyMode hide" :class="{show : crazyModeOpen}">
+						<div class="crazyMode-mask"></div>
+						<img src="images/rock-icon.png" alt="" class="crazyMode-rockIcon">
+						<div class="crazyMode-killQuantity">
+							您已打飛{{killQuantity}}隻
+						</div>
+					</div>
+					<a href="javascript: void(0);" class="crazyMode-openBtn" @click="crazyMode();"></a>
+
+					<div class="game-top">
+						<img src="images/game-turkey-0.png" alt="" class="game-top-turkey">
+						<div class="game-top-text">
+							<strong v-html="turkeyText[turkeyTextNo]"></strong>
+						</div>
+					</div>
+					<div class="game-bottom">
+						<turkey-item :turkeyset="turkeySet[0]" @click.native="hitTurkey(0), toggleTurkeyType()"></turkey-item>
+						<turkey-item :turkeyset='turkeySet[1]' @click.native="hitTurkey(1), toggleTurkeyType()"></turkey-item>
+						<turkey-item :turkeyset='turkeySet[2]' @click.native="hitTurkey(2), toggleTurkeyType()"></turkey-item>
+						<turkey-item :turkeyset='turkeySet[3]' @click.native="hitTurkey(3), toggleTurkeyType()"></turkey-item>
+					</div>
+				</div>
+				<div class="index-top">
+					<img src="images/cloud.png" alt="" class="index-top-cloud index-top-cloud-1">
+					<img src="images/cloud.png" alt="" class="index-top-cloud index-top-cloud-2">
+					<img src="images/cloud.png" alt="" class="index-top-cloud index-top-cloud-3">
+					<img src="images/maple-leaf.png" alt="" class="index-top-mapleLeaf">
+					<img src="images/forest-3.png" alt="" class="index-top-forest index-top-forest-3">
+					<img src="images/forest-3.png" alt="" class="index-top-forest index-top-forest-4">
+					<img src="images/forest-1.png" alt="" class="index-top-forest index-top-forest-1">
+					<img src="images/forest-2.png" alt="" class="index-top-forest index-top-forest-2">
+				</div>
+				<div class="index-bottom">
+					<img src="images/lawn.png" alt="" class="index-bottom-lawn">
+				</div>
+			</section>
+
+			<!-- 注意事項 -->
+			<section class="notice">
+				<div class="container">
+					<div class="notice-list">
+						<h2 class="notice-list-tit">
+							<strong>注意事項：</strong>
+						</h2>
+						<ol>
+							<li>
+								火雞禮籃感恩好禮包含LINE Points 20點或1筆天天自由扣手續費0.3%優惠，我們將於12月7日前隨機抽出您所獲得的感恩好禮並寄至您本活動留存的E-mail。
+							</li>
+							<li>
+								參加活動取得之紅利點數或手續費優惠，限於「國民e帳戶」使用，我們將於12月7日前寄至您本活動留存的E-mail，優惠使用/兌換到期日為2019年1月11日，提醒尚未申辦「國民e帳戶」者，需於前述使用期限內完成開戶、核印與下單，方適用本項優惠。
+							</li>
+							<li>
+								活動參加者有下列情形之一時，主辦單位得取消其參加資格：
+								<ul>
+									<li>
+										參加者資料為非真實或冒用第三人之資料。
+									</li>
+									<li>
+										參加者未填寫正確之中文姓名、連絡電話及電郵地址。
+									</li>
+									<li>
+										本公司之員工及享有專屬優惠之親友無法參加本活動紅利點數與優惠券部份，請將名額讓給其他網友囉。
+									</li>
+								</ul>
+							</li>
+							<li>
+								參加者於送出資料參加本活動之同時，即同意及遵守本活動辦法及注意事項之規範。如有違反本活動辦法及注意事項者，主辦單位得取消其參加資格，並對於任何破壞本活動之行為保留法律追訴權。
+							</li>
+							<li>
+								本公司保留修改所有活動規則權利到活動結束前。
+							</li>
+							<li>
+								雖然獎品真的很吸引人，但每人限領一次，請把機會留給其他人喔。
+							</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+		<!-- <div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div> -->
+
+		<div class="lightBox hide" id="formLightBox" :class="{show : formLightBoxShow}">
+			<div class="lightBox-bg"></div>
+			<div class="lightBox-container">
+				<div>
+					<!-- <div class="lightBox-close closeBtn"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+					<div class="completeInfo">
+						<h2 class="completeInfo-tit" title="真的是太厲害了！恭喜率先獲得520點紅利">
+							<div class="completeInfo-tit-left"></div>
+							<div class="completeInfo-tit-right"></div>
+							<img src="images/ribbon.png" alt="" class="completeInfo-tit-ribbon">
+							<strong>真的是太厲害了！恭喜率先獲得520點紅利</strong>
+						</h2>
+						<div class="completeInfo-text">
+							趕快填好以下個人資料，我們將於<strong class="completeInfo-text-focus">12月7日前隨機抽出感恩好禮並寄發得獎EDM於您留存的電子信箱</strong>。
+							<br/>溫馨提醒：人人有獎，填錯可就拿不到好禮囉！
+						</div>
+						<div class="formArea">
+							<form id="send">
+								<input name="" id="giftType" type="hidden" value="">
+								<div class="formArea-item formArea-item-half">
+									<div class="formArea-item-tit">
+										<label for="name">
+											<strong>姓名</strong>
+										</label>
+									</div>
+									<div class="formArea-item-input">
+										<input type="text" id="name" placeholder="請輸入您的姓名" name="Friend_Name" maxlength="4">
+									</div>
+									<!-- <div class="formArea-item-error">
+										您的姓名有誤
+									</div> -->
+								</div>
+								<div class="formArea-item formArea-item-half">
+									<div class="formArea-item-tit">
+										<label>
+											<strong>性別</strong>
+										</label>
+									</div>
+									<div class="formArea-item-input">
+										<div class="formArea-item-input-sex">
+											<label for="sex_M" class="radio">
+												<input type="radio" id="sex_M" name="Sex" value="49">
+												<span class="radio-fake">
+													<i class="fas fa-check"></i>
+												</span>
+											</label>
+											<label for="sex_M" class="radio-text">男</label>
+										</div>
+										<div class="formArea-item-input-sex">
+											<label for="sex_F" class="radio">
+												<input type="radio" id="sex_F" name="Sex" value="50">
+												<span class="radio-fake">
+													<i class="fas fa-check"></i>
+												</span>
+											</label>
+											<label for="sex_F" class="radio-text">女</label>
+										</div>
+									</div>
+									<!-- <div class="formArea-item-error">
+										您的姓名有誤
+									</div> -->
+								</div>
+								<div class="formArea-item">
+									<div class="formArea-item-tit">
+										<label for="phone">
+											<strong>手機</strong>
+										</label>
+									</div>
+									<div class="formArea-item-input">
+										<input type="text" id="phone" maxlength="10" placeholder="請輸入您的手機" name="M_Tel">
+									</div>
+									<!-- <div class="formArea-item-error">
+										您的手機有誤
+									</div> -->
+								</div>
+								<div class="formArea-item">
+									<div class="formArea-item-tit">
+										<label for="mail">
+											<strong>Email</strong>
+										</label>
+									</div>
+									<div class="formArea-item-input">
+										<input type="text" id="mail" placeholder="請輸入您的Email" name="Email">
+									</div>
+									<!-- <div class="formArea-item-error">
+										您的Email有誤
+									</div> -->
+								</div>
+								<div class="formArea-item-agree">
+									<label for="check" class="checkbox">
+										<input type="checkbox" id="check" name="IsAgree">
+										<span><i class="fas fa-check"></i></span>
+									</label>
+									<label for="check">我已閱讀並同意接受</label>
+									<a href="https://www.franklin.com.tw/Privacy" target="_blank">
+										「富蘭克林證券投顧個人資料告知義務內容」。
+									</a>
+								</div>
+								<div class="formArea-item">
+									<div class="completeInfo-btn">
+										<!-- 資料送出成功 -->
+										<button class="Signon">
+											<strong>送出資料等領獎</strong> <i class="fas fa-angle-right"></i>
+										</button>
+
+										<!-- 資料送出 失敗 -->
+										<!-- <button onclick="submitFail();">
+											<strong>送出資料等領獎</strong> <i class="fas fa-angle-right"></i>
+										</button> -->
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lightBox hide" id="success">
+			<div class="lightBox-bg"></div>
+			<div class="lightBox-container">
+				<div>
+					<!-- <div class="lightBox-close closeBtn"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+					<div class="completeInfo">
+						<h2 class="completeInfo-tit">
+							<div class="completeInfo-tit-left"></div>
+							<div class="completeInfo-tit-right"></div>
+							<img src="images/ribbon.png" alt="" class="completeInfo-tit-ribbon">
+							<strong>填寫完成</strong>
+						</h2>
+						<div class="completeInfo-text">
+							敬請鎖定『富蘭克林 國民的基金』LINE官方帳號，不錯過任何最新好康消息!
+						</div>
+						<div class="completeInfo-btn-area clearfix threeBtn">
+							<div class="completeInfo-btn addLine">
+								<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank">
+									<strong>即刻加入LINE官方帳號</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn" v-if="toggleLineBtn">
+								<a href="http://line.naver.jp/R/msg/text/?【富蘭克林感恩節特別企劃】參加活動拿520點紅利，再抽LINE Points 20點等多項好禮！人人有獎點此參加→https://bit.ly/2DCFYb2" target="_blank">
+									<strong>把好康分享給朋友</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn" v-if="toggleFacebookBtn">
+								<a href="javascript:void(0);" onclick="window.open(' https://www.facebook.com/sharer/sharer.php?u=https://event.franklin.com.tw/C2018_11_thanksgiving/', '發佈到Facebook', config='height=600, width=400, scrollbars=yes, top=100px, left=300px');">
+									<strong>把好康分享給朋友</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn reservation">
+								<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank">
+									<strong>立即預約開戶去</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lightBox hide" id="fail">
+			<div class="lightBox-bg"></div>
+			<div class="lightBox-container">
+				<div>
+					<!-- <div class="lightBox-close closeBtn"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+					<div class="completeInfo">
+						<h2 class="completeInfo-tit">
+							<div class="completeInfo-tit-left"></div>
+							<div class="completeInfo-tit-right"></div>
+							<strong>您已經參加過活動囉！</strong>
+						</h2>
+						<div class="completeInfo-text">
+							我們將於<strong class="completeInfo-text-focus">12月7日前隨機抽出感恩好禮並寄發得獎EDM於您留存的電子信箱</strong>。敬請持續鎖定富蘭克林LINE官方帳號，不錯過任何好康消息!
+						</div>
+						<div class="completeInfo-btn-area clearfix threeBtn">
+							<div class="completeInfo-btn addLine">
+								<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank">
+									<strong>即刻加入LINE官方帳號</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn" v-if="toggleLineBtn">
+								<a href="http://line.naver.jp/R/msg/text/?【富蘭克林感恩節特別企劃】參加活動拿520點紅利，再抽LINE Points 20點等多項好禮！人人有獎點此參加→https://bit.ly/2DCFYb2" target="_blank">
+									<strong>把好康分享給朋友</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn" v-if="toggleFacebookBtn">
+								<a href="javascript:void(0);" onclick="window.open(' https://www.facebook.com/sharer/sharer.php?u=https://event.franklin.com.tw/C2018_11_thanksgiving/', '發佈到Facebook', config='height=600, width=400, scrollbars=yes, top=100px, left=300px');">
+									<strong>把好康分享給朋友</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="completeInfo-btn reservation">
+								<a href="https://etrade.franklin.com.tw/Open/NewMember" target="_blank">
+									<strong>立即預約開戶去</strong> <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/component-dist.js"></script>
+	<!-- <script src="js/loading.js"></script> -->
+	<script src="js/common.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script data-main="ft/thanksgiving.js" src="ft/lib/require.js" defer async></script>
+</body>
+</html>

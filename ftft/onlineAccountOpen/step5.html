@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a3575">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>線上開戶 | 富蘭克林華美投信理財網</title>
+    <meta property="og:title" content="線上開戶 | 富蘭克林華美投信理財網">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="線上開戶">
+	<meta property="og:description" content="線上開戶">
+    <!-- <meta property="og:image" content="#">
+	<meta property="og:url" content="#"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- header -->
+		<header-area></header-area>
+
+		<!-- main -->
+		<article class="main">
+			<div class="container">
+
+				<div class="pageTop wow fadeIn">
+					<h1 class="tit-type1" title="預約開戶 只要5分鐘">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							預約開戶 只要<span class="focus">5</span>分鐘
+						</strong>
+						<!-- <strong class="tit-stit">
+							基金自助理財，就從這一步開始！
+						</strong> -->
+					</h1>
+					<p>
+						提供多種理財方案及優惠手續費，幫助您掌握交易優勢，贏得交易先機。
+					</p>
+				</div>
+
+				<div class="infoItem wow fadeInUp">
+					<h2 class="tit-type2" title="填寫銀行帳戶資料">
+						<div class="tit-icon"></div>
+						<strong class="tit-tit">
+							填寫銀行帳戶資料
+						</strong>
+					</h2>
+					<p class="text">
+						只接受<strong>華南</strong>或<strong>兆豐</strong>銀行帳戶，如沒有請改用
+						<a href="https://etrade.ftft.com.tw/san_register.htm" target="_blank" class="externalLink">
+							寄件開戶
+						</a>
+					</p>
+					<div class="formArea">
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>銀行</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<!-- <select name="" id="">
+									<option value="">請選擇銀行</option>
+									<option value="">華南銀行</option>
+									<option value="">兆豐銀行</option>
+								</select> -->
+								<v-select :options="bankSortData" label="bank" v-model="bank" placeholder="請選擇銀行">
+									<slot slot="no-options">查無此資料</slot>
+								</v-select>
+							</div>
+							<div class="alert alert-info">
+								請選擇交易銀行，本帳戶將做為日後基金台幣扣款或買回、配息入帳使用。
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="">
+									<strong>分行</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<!-- <select name="" id="">
+									<option value="">請選擇分行</option>
+								</select> -->
+								<v-select :options="branches" :disabled="branches == ''" :reset-on-options-change="true" v-model="bankBranch" placeholder="請選擇分行">
+									<slot slot="no-options">查無此資料</slot>
+								</v-select>
+							</div>
+						</div>
+						<div class="formArea-item wow fadeInUp">
+							<div class="formArea-item-tit">
+								<label for="account">
+									<strong>帳戶</strong>
+								</label>
+							</div>
+							<div class="formArea-item-input">
+								<input type="text" name="" id="account" placeholder="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nextBtnArea twoBtn wow fadeInUp">
+					<div class="button">
+						<button onclick="location.href='step6.html'">
+							下一步 <i class="fas fa-caret-right"></i>
+						</button>
+					</div>
+					<div class="button type2">
+						<button onclick="location.href='step4.html'">
+							<i class="fas fa-caret-left"></i> 上一步
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</article>
+
+		<!-- 步驟 -->
+		<div class="step step3">
+			<div class="container">
+				<div class="step-item">
+					<div class="step-item-no">
+						1
+					</div>
+					<div class="step-item-tit">
+						證件上傳
+					</div>
+				</div>
+				<div class="step-item">
+					<div class="step-item-no">
+						2
+					</div>
+					<div class="step-item-tit">
+						基本資料
+					</div>
+				</div>
+				<div class="step-item">
+					<div class="step-item-no">
+						3
+					</div>
+					<div class="step-item-tit">
+						帳戶資料
+					</div>
+				</div>
+				<div class="step-item">
+					<div class="step-item-no">
+						4
+					</div>
+					<div class="step-item-tit">
+						風險評估與確認
+					</div>
+				</div>
+				<div class="step-item">
+					<div class="step-item-no">
+						5
+					</div>
+					<div class="step-item-tit">
+						資料確認
+					</div>
+				</div>
+				<div class="step-item">
+					<div class="step-item-no">
+						6
+					</div>
+					<div class="step-item-tit">
+						開戶完成
+					</div>
+				</div>
+			</div>
+			<div class="step-progressBar"></div>
+		</div>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-select.js"></script>
+	<script src="js/bank.js"></script>
+	<script>
+		Vue.component('v-select', VueSelect.VueSelect);
+
+		// ie Object.keys: 引數不是物件 error
+		Object.keys = function(obj) {
+			var keys = [];
+			for (var i in obj) {
+				if (obj.hasOwnProperty(i)) {
+					keys.push(i);
+				}
+			}
+			return keys;
+		};
+	</script>
+	<script src="js/component-dist.js"></script>
+	<script>
+		content._data.bankData = bankData;
+	</script>
+</body>
+</html>
