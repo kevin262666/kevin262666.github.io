@@ -1,0 +1,172 @@
+    <!--footer-->
+    <div class="footer">
+        
+        <div class="footerTop">
+            <div class="wrap">
+
+                <div class="footerTop-logo">
+                    <a href="index.html">
+                        <picture>
+                            <source srcset="images/footerLogo-base.png, images/footerLogo-large.png 2x" media="(min-width: 0px)">
+                            <img src="images/footerLogo-base.png" alt="Zi.media 字媒體-華文閱讀生活中心">
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="footerTop-navbar">
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            美食
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            旅遊
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            3C
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            時尚
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            親子
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            運動
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            電影
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            生活
+                        </a>
+                    </div>
+                    <div class="footerTop-navbar-nav">
+                        <a href="category.html">
+                            寰宇
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <div class="wrap">
+
+                <div class="footerBottom-linkArea">
+                    <div class="footerBottom-link">
+                        <a href="#">
+                            聯絡我們
+                        </a>
+                    </div>
+                    <div class="footerBottom-link">
+                        <a href="#">
+                            加入字媒體
+                        </a>
+                    </div>
+                    <div class="footerBottom-link">
+                        <a href="#">
+                            關於字媒體
+                        </a>
+                    </div>
+                    <div class="footerBottom-link">
+                        <a href="#">
+                            隱私權政策
+                        </a>
+                    </div>
+                    <div class="footerBottom-link">
+                        <a href="#">
+                            <i class="fa fa-rss" aria-hidden="true"></i>
+                            <span>
+                                RSS
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    © 2017, Captain Wei. All rights reserved.
+                </div>
+
+                <div class="clearfloat"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--手機版加入line好友-->
+    <div class="addLine">
+        <div class="wrap">
+            <div class="addLine-ad">
+                <a href="#">
+                    <div class="addLine-ad-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;"></div>
+                    <span class="addLine-ad-tit">
+                        快數數看你吃過幾間？台北最值得一吃38間餐廳排名公開
+                    </span>
+                    <div class="clearfloat"></div>
+                </a>
+            </div>
+            <div class="addLine-btn">
+                <a href="#">
+                    <img src="images/lineLogo.png" alt="加入line好友">
+                    <span>
+                        加入好友
+                    </span>
+                </a>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+    </div>
+
+    <div class="addLine addLine-noImg" style="display:none;">
+        <div class="wrap">
+            <div class="addLine-ad">
+                <a href="#">
+                    <span class="addLine-ad-tit">
+                        快數數看你吃過幾間？台北最值得一吃38間餐廳排名公開
+                    </span>
+                    <div class="clearfloat"></div>
+                </a>
+            </div>
+            <div class="addLine-btn">
+                <a href="#">
+                    <img src="images/lineLogo.png" alt="加入line好友">
+                    <span>
+                        加入好友
+                    </span>
+                </a>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+    </div>
+
+    <!--返回最上面-->
+    <div class="topBtn">
+        <a href="#top">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+            TOP
+        </a>
+    </div>
+
+    <!--漣漪效果 第二塊 start-->
+    <script type="text/javascript">
+		$.material.init();
+	</script>
+    <!--漣漪效果 第二塊 end-->
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script>

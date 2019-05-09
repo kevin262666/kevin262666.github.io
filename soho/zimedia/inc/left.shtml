@@ -1,0 +1,589 @@
+            <!--左邊-->
+            <div class="left">
+
+                <section class="dom">
+                    <h3 class="tit-h3">
+                        今日熱門
+                    </h3>
+
+                    <!--左側列表樣式1-->
+                    <div class="left-LinkListType1_area">
+
+                        <article class="left-LinkListType1-first">
+                            <div class="left-LinkListType1-first-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="left-LinkListType1-ranked">1</div>
+                            </div>
+                            <div class="left-LinkListType1-first-info">
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <h4 class="left-LinkListType1-first-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <ul>
+                            <li>
+                                <h4>
+                                    <div class="left-LinkListType1-ranked">2</div>
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>
+                                    <div class="left-LinkListType1-ranked">3</div>
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>
+                                    <div class="left-LinkListType1-ranked">4</div>
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>
+                                    <div class="left-LinkListType1-ranked">5</div>
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>
+                                    <div class="left-LinkListType1-ranked">6</div>
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
+
+                <!--左側廣告-->
+                <div class="left-ad">
+                    <img src="images/adDemo1.png" alt="google廣告" width="300" height="250">
+                </div>
+
+                <section class="dom">
+                    <h3 class="tit-h3">
+                        編輯精選
+                    </h3>
+
+                    <!--左側列表樣式2-->
+                    <div class="left-LinkListType2_area">
+                        
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="left-LinkListType2">
+                            <div class="left-LinkListType2-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                    <div class="tabsArea-tab tabsArea-tab-new">
+                                        <a href="category.html" title="NEW">
+                                            NEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType2-info">
+
+                                <h4 class="left-LinkListType2-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+
+                                <div class="linkListDetails">
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <div>
+                                            by
+                                            <a href="search.html" title="by 王小小">
+                                                王小小
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="linkListDetails-list">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <div>
+                                            2小時前
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="clearfloat"></div>
+
+                    </div>
+                </section>
+
+                <section class="dom">
+                    <h3 class="tit-h3">
+                        編輯精選
+                    </h3>
+
+                    <!--左側列表樣式3-->
+                    <div class="left-LinkListType3_area">
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                        <article class="left-LinkListType3">
+                            <div class="left-LinkListType3-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                <div class="tabsArea">
+                                    <div class="tabsArea-tab">
+                                        <a href="category.html" title="美食">
+                                            美食
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-LinkListType3-info">
+                                <h4 class="left-LinkListType3-info-tit">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                        近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section class="dom">
+                    <h3 class="tit-h3">
+                        編輯精選
+                    </h3>
+
+                    <!--左側列表樣式4-->
+                    <div class="left-LinkListType4_area">
+
+                        <article class="left-LinkListType4">
+                            <div>
+                                <div class="left-LinkListType4-img" style="background: url(images/demoImg.jpg) center center; background-size: cover;">
+                                    <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭"></a>
+                                </div>
+                                <div class="left-LinkListType4-info">
+
+                                    <div class="tabsArea">
+                                        <div class="tabsArea-tab">
+                                            <a href="category.html" title="美食">
+                                                美食
+                                            </a>
+                                        </div>
+                                        <div class="tabsArea-tab">
+                                            <a href="category.html" title="東南旅遊" style="background:#0b2d95;">
+                                                東南旅遊
+                                            </a>
+                                        </div>
+                                        <div class="tabsArea-tab tabsArea-tab-new">
+                                            <a href="category.html" title="NEW">
+                                                NEW
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="left-LinkListType4-info-tit">
+                                        <a href="page.html" title="近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭">
+                                            近期追蹤的Instagram穿搭達人名單x10 我最愛的極簡個性穿搭
+                                        </a>
+                                    </h4>
+
+                                    <div class="linkListDetails">
+                                        <div class="linkListDetails-list">
+                                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                            <div>
+                                                by
+                                                <a href="search.html" title="by 王小小">
+                                                    王小小
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="linkListDetails-list">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <div>
+                                                2小時前
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="linkListDots">
+                            <span></span>
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>

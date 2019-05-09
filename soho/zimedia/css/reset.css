@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+html, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dt, dd, li,
+fieldset, form, label, legend,
+ caption, tbody, tfoot, thead, th,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+body{ 
+	margin: 0; 
+	padding: 0;
+	background: #fff;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif, "Century Gothic", "Times New Roman", Times, serif, "微軟正黑體", "新細明體";
+	/*letter-spacing: 1px;*/
+	-webkit-text-size-adjust: none;
+}
+ul, ol, dl {
+	padding: 0 0 0  40px;
+	margin: 0;
+}
+a img {
+	border: none;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	behavior:expression(this.onFocus=this.blur());
+}
+a:hover { 
+	text-decoration:underline;
+}
+a:active, a:focus {
+	text-decoration: none;
+}
+area {
+	outline:none;
+}

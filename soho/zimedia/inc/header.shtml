@@ -1,0 +1,221 @@
+    <div id="top"></div>
+    
+    <!--header-->
+    <div class="header">
+        
+        <!--版頭上-->
+        <div class="headerTop">
+            <div class="wrap">
+                <div class="headerTop-left">
+                    Zi.media 字媒體-華文閱讀生活中心
+                </div>
+                <div class="headerTop-right">
+                    <a href="#" title="關於字媒體">
+                        關於字媒體
+                    </a>
+                    <a href="#" title="加入字媒體">
+                        加入字媒體
+                    </a>
+                    <a href="#" title="聯絡我們">
+                        聯絡我們
+                    </a>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </div>
+
+        <div class="wrap">
+
+            <!--logo-->
+            <div class="logo">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="images/logo-base.png, images/logo-large.png 2x" media="(min-width: 0px)">
+                        <img src="images/logo-base.png" alt="Zi.media 字媒體-華文閱讀生活中心">
+                    </picture>
+                </a>
+            </div>
+
+            <!--主案件-->
+            <nav class="navbar">
+                <ul>
+                    <li class="active"><!--當前模式時加active-->
+                        <a href="category.html" title="美食">
+                            美食
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="旅遊">
+                            旅遊
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="3C">
+                            3C
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="時尚">
+                            時尚
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="親子">
+                            親子
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="運動">
+                            運動
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="電影">
+                            電影
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="生活">
+                            生活
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html" title="寰宇">
+                            寰宇
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--手機版選單-->
+            <div class="mobileMenu">
+
+                <!--menu鍵-->
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="mNavBar">
+                    <ul>
+                        <li class="pcNone">
+                            <a href="category.html" title="美食">
+                                美食
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="旅遊">
+                                旅遊
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="3C">
+                                3C
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="時尚">
+                                時尚
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="親子">
+                                親子
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="運動">
+                                運動
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="電影">
+                                電影
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="生活">
+                                生活
+                            </a>
+                        </li>
+                        <li class="pcNone">
+                            <a href="category.html" title="寰宇">
+                                寰宇
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" title="第10個">
+                                第10個
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" title="第11個">
+                                第11個
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" title="第12個">
+                                第12個
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" title="第13個">
+                                第13個
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!--fb連結-->
+            <div class="fbLink">
+                <a href="#" title="FB粉絲團">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!--新增部分 by kevin 20170906 start-->
+            <!--返回首頁-->
+            <div class="homeLink">
+                <a href="index.html" title="返回首頁">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!--新增部分 by kevin 20170906 end-->
+
+            <!--版頭搜尋-->
+            <div class="headerSearch">
+                <div class="searchIcon">
+                    <label for="searchText">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="searchText">
+                    <form action="search.html">
+                        <input type="text" placeholder="你今天想找什麼呢？" id="searchText">
+                        <label>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="submit" value="搜尋">
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="clearfloat"></div>
+
+        </div>
+
+    </div>
+
+    <div class="headerSpace"></div>
+
+    <!--新增部分 by kevin 20170731 start-->
+    <!--版頭廣告區-->
+    <div class="headerAd" style="display: none;">
+        <a href="#">
+            <img src="images/headerAdDemo-pc-1440x160.jpg" alt="" class="headerAd-pc">
+            <img src="images/headerAdDemo-mobile-480x280.jpg" alt="" class="headerAd-mobile">
+        </a>
+    </div>
+    <!--新增部分 by kevin 20170731 end-->
