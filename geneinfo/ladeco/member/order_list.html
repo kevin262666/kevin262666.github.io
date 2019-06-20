@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/member/order_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:39:25 GMT -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>La déco : CASA & SELECTS - ESTD 1975</title>
+
+<link rel="shortcut icon" href="../images/favicon.html" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+
+	<!--主按鍵寬度調整用-->
+	<script type="text/javascript">
+        $(document).ready(function(e) {
+            
+            var setNavbarWidth=function(){
+                var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+                var logoWidth=document.getElementById("logo").offsetWidth;             //logo寬度
+                var searchWidth=document.getElementById("header_search").offsetWidth;  //版頭產品搜尋寬度
+                var loginWidth=document.getElementById("header_login").offsetWidth;    //版頭會員登入寬度
+                var navbarWidth=document.getElementById("navbar").offsetWidth;         //主按鍵寬度
+                
+                $(".navbar").css("width",bodywidth-36-logoWidth-searchWidth-loginWidth);
+            }
+            
+            setNavbarWidth();
+            
+            $(window).resize(function(e) {
+                setNavbarWidth();
+            });
+        });
+    </script>
+    
+    <!--導航菜單懸浮置頂-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			
+			if( $(".navbar-example").length > 0 ){             //判斷是否有class=navbar-example這個DOM
+				                                               //如果有
+				$(window).scroll(function(){
+					if( $(window).scrollTop() < 57 ){          //窗口滾動小於57 移除style
+						$('.header').removeAttr("style");
+						$('.navbar-example').removeAttr("style");
+					}if( $(window).scrollTop() > 57 ){         //窗口大於57 讓版頭和滾動偵測導航停在要的位置
+						$('.header').css("position","fixed").css("top","-57px");
+						$('.navbar-example').css("position","fixed").css("top","0px");
+					}
+				});
+			}else{
+				                                               //沒有的話
+				$(".header").addClass("header_fixed");         //版頭固定在上方
+				$(".main").addClass("main_no_navbar-example"); //main的上方撐出版頭的高度
+			}
+			
+		});
+	</script>
+    
+    <!--錨點平滑滾動效果-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+
+	<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+	
+    <!--錨點用-->
+    <div id="top">
+    </div>
+    
+    <!--版頭-->
+	<div class="header">
+    	<div class="wrap">
+        	
+            <!--logo-->
+        	<div class="logo" id="logo">
+            	<a href="../index/index.html">
+               	<img src="../images/logo.png" width="120" />
+                </a>
+            </div>
+            
+            <!--主按鍵-->
+            <div class="navbar" id="navbar">
+            
+            	<div class="h_nav">
+                	<a href="../about/about.html" class="transition_02s">
+                    	About us
+                        <br/>
+                        關於傢作
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../product/product.html" class="transition_02s">
+                    	Products
+                        <br/>
+                        產品內容
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../crafts/crafts.html" class="transition_02s">
+                    	Crafts
+                        <br/>
+                        材料工藝
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../service/service.html" class="transition_02s">
+                    	Service
+                        <br/>
+                        服務項目
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../shopping/shopping.html" class="transition_02s">
+                    	Shopping
+                        <br/>
+                        購物筆記
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+          	<script type="text/javascript">
+				$(document).ready(function(e) {
+                    $(".h_l_member_btn").click(function(e) {
+                        $(".header_member_open").slideToggle();
+                    });
+                });
+			</script>
+            
+            <!--版頭會員登入-->
+            <div class="header_login" id="header_login">
+            	<!--<a href="../member/login.html" class="transition_02s">
+                	LOGIN
+                </a>-->
+                <!--↑會員登入前  會員登入後↓-->
+                <a href="javascript: void(0)" class="transition_02s h_l_member_btn">
+                	MEMBER
+                </a>
+            </div>
+            
+            <!--版頭會員專區選單-->
+            <div class="header_member_open">
+            	<a href="member_modify.html" class="transition_02s">
+                	會員資料修改
+                </a>
+                <a href="order_list.html" class="transition_02s">
+                	<!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+                	歷史訂單查詢
+                    <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                </a>
+                <a href="login.html" class="transition_02s">
+                	會員登出
+                </a>
+            </div>
+            
+            <!--版頭產品搜尋-->
+            <div class="header_search" id="header_search">
+            	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                    <input type="text" class="transition_03s" />
+                    <label class="lsf search">
+                    	<input type="submit" />
+                    </label>
+                </form>
+            </div>
+            
+            <!--↓↓↓↓ 修改部分 by kevin 20151102 ↓↓↓↓-->
+            <script type="text/javascript">
+				$(document).ready(function(e) {
+					//手機版次選單展開
+                    $(".m_m_l_has_open a").click(function(e) {
+                        $(this).next(".m_m_l_open_area").slideToggle();
+                    });
+					
+					//手機版主按鍵展開
+					$(".mobile_menu_brn").click(function(e) {
+                        $(".mobile_menu_list_area").slideToggle();
+                    });
+					
+					$(window).resize(function(e) {
+						var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+						
+						if ( bodywidth >= 910 ) {
+							$(".mobile_menu_list_area").removeAttr("style");
+						}
+
+                    });
+					
+                });
+			</script>
+            <!--手機版按鍵區-->
+            <div class="mobile_menu_area">
+            
+                <!--手機版menu鍵-->
+                <div class="mobile_menu_brn">
+                    MENU
+                </div>
+                
+                <!--手機版主按鍵-->
+                <div class="mobile_menu_list_area">
+                
+                	<div class="mobile_menu_list m_m_l_search"><!--產品搜尋-->
+                    	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                            <input type="text" placeholder="產品搜尋" />
+                            <input type="submit" value="" />
+                        </form>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../about/about.html">
+                            About us
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../product/product.html">
+                            Products
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../crafts/crafts.html">
+                            Crafts
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../service/service.html">
+                            Service
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../shopping/shopping.html">
+                            Shopping
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list m_m_l_has_open"><!--有次選單的-->
+                        <a href="javascript:void(0);">
+                            MEMBER
+                        </a>
+                        
+                        <!--展開的次選單-->
+                        <div class="m_m_l_open_area">
+                        	<div class="m_m_l_open">
+                            	<a href="member_modify.html">
+                                	會員資料修改
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="order_list.html">
+                                	詢價回覆查詢
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="login.html">
+                                	會員登入
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!--↑↑↑↑ 修改部分 by kevin 20151102 ↑↑↑↑-->
+            
+            <div class="clearfloat">
+            </div>
+        
+        </div>
+    </div>
+    
+	<!-- InstanceBeginEditable name="navbar-example" -->
+    <!-- InstanceEndEditable -->
+    
+    <!--main-->
+    <div class="main">
+	<!-- InstanceBeginEditable name="main" -->
+    
+    	<!--詢價回覆標題-->
+    	<div class="order_list_tit">
+        	<!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+            歷史訂單查詢
+            <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+    </div>
+        
+        <!--詢價回覆列表-->
+        <div class="order_list_table_area">
+        	
+          	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+            	<!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+            	<tr>
+                	<td align="center" valign="middle">
+                    	訂購日期
+                    </td>
+                    <td align="center" valign="middle">
+                    	訂單編號
+                    </td>
+                    <td align="center" valign="middle">
+                    	訂單狀態
+                    </td>
+                    <td align="center" valign="middle">
+                    	訂單明細
+                    </td>
+                </tr>
+                <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                
+            	<tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    
+                    <!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+                    <td align="center" valign="middle">已出貨</td>
+                    <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                    
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center" valign="middle">
+                    	2015/01/01
+                    </td>
+                    <td align="center" valign="middle">
+                    	2015010100001
+                    </td>
+                    <td align="center" valign="middle">已出貨</td>
+                    <td align="center" valign="middle">
+                    	<input type="button" value="查詢" onclick="location='../member/order_detail.html'" />
+                    </td>
+                </tr>
+            </table>
+            
+    	</div>
+        
+        <!--頁碼 RWD版 by kevin 20150629-->
+        <div class="wrap">
+            <div class="page_area">
+                <div class="page_left_arrow">
+                	<!--註：如果要隱藏上一頁/下一頁按鍵 只能去掉div內的<a> 不然會跑版-->
+                    <!--<a href="#">
+                        &lt;
+                    </a>-->
+                </div>
+                <div class="page_select">
+                    <select>
+                        <option>
+                            1
+                        </option>
+                        <option>
+                            2
+                        </option>
+                    </select>
+                </div>
+                <div class="page_right_arrow">
+                    <a href="#">
+                        &gt;
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+            </div>
+        </div>
+        
+	<!-- InstanceEndEditable -->
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	<div class="wrap">
+            
+            <!--footer公司資訊-->
+            <div class="footer_company_info">
+                傢作有限公司
+                <br/>
+                221新北市汐止區南陽街83之3號 | 電話：886-2-8695-1353
+                <br/>
+                No.83-3, Nanyang St., Xizhi Dist., New Taipei City 221, Taiwan (R.O.C.) 
+            </div>
+            
+            <!--copyright-->
+            <div class="copyright">
+                © 2015 <a href="http://www.doweb.com.tw/web/index.jsp">Greatest Idea Strategy Co., Ltd.</a> All Rights Reversed.
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/member/order_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:39:25 GMT -->
+</html>

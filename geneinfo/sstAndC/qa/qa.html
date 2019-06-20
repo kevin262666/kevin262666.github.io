@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_sstandc/qa/qa.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 05:51:04 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="X-Frame-Options" content="Sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="Robots" content="none" /><!--不被搜尋引擎搜到-->
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<!--android 手機板主題顏色用 更改網址列顏色-->
+<meta name="theme-color" content="#031d40">
+<!--android 手機板主題顏色用-->
+
+<meta name="format-detection" content="telephone=no"><!--取消行動版 safari 自動偵測數字成電話號碼-->
+
+<title>SSTandC</title>
+
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="../js/common.js" type="text/javascript"></script><!--JavaScript共用區-->
+	
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+   
+<!--修改部分 by kevin 20161107 start-->
+<!--google material icon-->
+<link rel="stylesheet" href="../icon_fonts/material_icons/material-icons.css">
+<!--修改部分 by kevin 20161107 end-->
+    
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	
+    <div id="top">
+    </div>
+
+	<!--語系-->
+    <div class="lang">
+    
+    	<div class="lang_list_now">
+        	<img src="../images/tw_flag.png" width="24" />
+            ZH
+        </div>
+        
+        <div class="lang_slider">
+        
+        	<div class="iS_remark">
+            	請選擇國家及語系
+            </div>
+            
+            <div class="iS_slider_area">
+            	<div class="iSS_tit">
+                	<span>
+                        <img src="../images/tw_flag.png" width="24" />
+                        Taiwan
+                    </span>
+                </div>
+                <div class="iSS_slider">
+                	<div>
+                    	<img src="../images/tw_flag.png" width="24" />
+                        Taiwan
+                    </div>
+                    <div>
+                    	<img src="../images/en_flag.png" width="24" />
+                        US
+                    </div>
+                    <div>
+                    	<img src="../images/sg_flag.png" width="24" />
+                        Singapore
+                    </div>
+                </div>
+            </div>
+            
+            <div class="iS_slider_area">
+            	<div class="iSS_tit">
+                	<span>
+                    	中文
+                    </span>
+                </div>
+                <div class="iSS_slider">
+                	<div>
+                    	中文
+                    </div>
+                    <div>
+                    	English
+                    </div>
+                </div>
+            </div>
+            
+            <div class="iS_btn">
+            	<input type="submit" value="送出" onclick="location.reload();" />
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--手機版版頭-->
+    <div class="mobile_header">
+    	
+        <!--手機menu按鍵-->
+        <div class="menu_btn">
+            <span>
+            </span>
+            <span>
+            </span>
+            <span>
+            </span>
+        </div>
+        
+        <!--手機版LOGO-->
+        <div class="mH_logo">
+        	<a href="../index/index.html">
+            	<img src="../images/logo_b.png" />
+            </a>
+        </div>
+        
+    </div>
+    
+    <!--左-->
+    <div class="left">
+    	
+        <!--logo-->
+        <div class="logo">
+        	<a href="../index/index.html">
+            	<img src="../images/logo.png" width="90" height="26" class="logo_s" />
+                <img src="../images/logo_b.png" width="90" height="26" class="logo_b" />
+            </a>
+        </div>
+        
+        <!--主按鍵-->
+        <div class="navbar navbar1">
+        	
+            <div class="nav">
+            	<a href="../store/store.html">
+                	門市據點<!--STORE-->
+                </a>
+            </div>
+            
+            <!-- InstanceBeginEditable name="n_product" -->
+            <div class="nav n_product">
+            	<a href="../products/products.html">
+                	正裝
+                </a>
+            </div>
+            <!-- InstanceEndEditable -->
+            
+            <div class="nav n_product">
+            	<a href="../products/products.html">
+                	休閒
+                </a>
+            </div>
+            <div class="nav n_product">
+            	<a href="../products/products.html">
+                	配件
+                </a>
+            </div>
+            
+        </div>
+        
+        <!--主按鍵-->
+        <div class="navbar navbar2">
+        	
+            <div class="nav">
+            	<a href="../brand/brand.html">
+                	品牌故事<!--BRAND-->
+                </a>
+            </div>
+            <div class="nav">
+            	<a href="../events/events.html">
+                	最新活動<!--EVENTS-->
+                </a>
+            </div>
+            <div class="nav has_open"><!--有選單時class內加has_open-->
+            	<a href="javascript:void(0);">
+                	常見問題<!--Q&amp;A-->
+                </a>
+                
+                <!--展開選單-->
+                <div class="nav_open">
+                	<div class="nO_list">
+                    	<a href="qa.html">
+                        	洗滌及保養
+                        </a>
+                    </div>
+                    <div class="nO_list">
+                    	<a href="qa.html">
+                        	特色
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="nav">
+            	<a href="../hr/hr.html">
+                	徵才資訊<!--H&amp;R-->
+                </a>
+            </div>
+            <div class="nav has_open"><!--有選單時class內加has_open-->
+            	<a href="javascript:void(0);">
+                	下載專區<!--DOWNLOAD-->
+                </a>
+                
+                <!--展開選單-->
+                <div class="nav_open">
+                	<div class="nO_list">
+                    	<a href="../download/download.html">
+                        	型錄下載
+                        </a>
+                    </div>
+                    <div class="nO_list">
+                    	<a href="../download/app.html">
+                        	APP下載
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="nav">
+            	<a href="../contact/contact.html">
+                	聯絡我們<!--CONTACT US-->
+                </a>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <!--右-->
+    <div class="right">
+    	
+        <div class="right_bg">
+        <!-- InstanceBeginEditable name="main" -->
+        	
+            <!--內頁大標-->
+            <div class="in_tit has_sort"><!--有類別選單時class內加has_sort-->
+            	洗滌及保養
+            </div>
+            
+            <!--手機版類別選單-->
+            <div class="mobile_sort_list_area">
+            	<div class="mSL_list">
+                	<a href="qa.html">
+                    	洗滌及保養
+                    </a>
+                </div>
+                <div class="mSL_list">
+                	<a href="qa.html">
+                    	特色
+                    </a>
+                </div>
+            </div>
+            
+            <!--QA收合-->
+        	<script type="text/javascript">
+				$(function(){
+					$(".qa_list").eq(0).children(".qaL_text").show();
+					$(".qa_list").eq(0).addClass("active");
+					
+					$(".qa_list").children(".qaL_tit").click(function(e) {
+						$(".qa_list").children(".qaL_tit").not(this).parent(".qa_list").removeClass("active");
+						$(this).parent(".qa_list").toggleClass("active");
+						
+						$(".qa_list").children(".qaL_tit").not(this).siblings(".qaL_text").slideUp();
+                        $(this).next(".qaL_text").slideToggle();
+                    });
+				})
+			</script>
+            
+            <!--常見問題列表-->
+            <div class="qa_list_area">
+                
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何保養SST&amp;C皮鞋?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        皮鞋：
+                        <br/>
+                        要想使SST&amp;C皮鞋經久耐穿，在初買半個月內最要注意保護，最好是穿完後就整理一遍，否則灰塵侵到皮革組織裏，能把皮子弄壞。整理的方法是，脫下來以後，用乾手中和舊絨布把泥土和灰塵擦掉，再往上擦油，有折的地力要多擦些，前尖和後跟少擦些，然後用刷子刷好，再用舊布多擦幾遍，皮鞋油不宜擦的過多，擦多了鞋會走樣子，也不宜擦得厚薄不均勻，如果厚薄不均勻，乾了以後，色澤不一，非常難看，假使碰到這樣的情形，可用汽油把太厚的油輕輕擦掉。
+                        <br/><br/>
+                        
+                        麂皮鞋：
+                        <br/>
+                        麂皮鞋買回來以後應該立即做保養。以刷子輕刷後噴上防水噴霧(重覆兩次)。
+                        <br/>
+                        防水噴霧購買地點：運動用品店
+                        <br/>
+                        有一個很容易取得的東西可以去除麂皮上的污漬，那就是橡皮擦(軟橡皮)，但是一定要輕輕擦，如果太用力了，麂皮表面的細毛會脫落喔。如果污漬的面積不大，可以用橡皮擦去除。對於沒有上油的麂皮來說，"刷"可以說是保養的全部。要訣就是朝同一個方向小心地刷，慢慢的鞋面上的髒污垢去除，千萬不要用水去擦拭。
+                        <br/>
+                        (1)交替穿
+                        <br/>
+                        盡量避免連續多天穿著同一雙鞋，以便有足夠的時間使麂皮恢復原狀。
+                        <br/>
+                        (2)淋雨時的保養
+                        <br/>
+                        遇水、淋濕後，清除鞋面的灰塵污垢，用軟布輕拭乾多餘的水份，再把報紙及乾燥劑塞入鞋內，放置陰涼處通風陰乾，自然風乾方能延長壽命；切勿使用吹風機、烘乾機或日曬等快速方式，因快速乾燥加速老化、縮短麂皮的壽命。
+                        <br/>
+                        (3)不穿時的收藏
+                        <br/>
+                        先用專用刷把鞋子刷拭乾淨、保養好，等其乾燥後，鞋子內用鞋撐或塞入舊報紙團固定，放入鞋盒內，最好還放入幾包乾燥劑，置於通風陰涼處保存，注意應偶爾拿出來透氣。
+                    </div>
+                    
+                </div>
+                
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        正確燙SST&amp;C襯衫的方法?
+                    </div>
+                    
+                    <div class="qaL_text">
+                    	<ol>
+                        	<li>
+                            	襯衫領口、袖口可使用衣領精或濃縮洗衣粉刷過再放進洗衣機洗。
+                            </li>
+                            <li>
+                            	襯衫洗好後可在領口、袖口上漿，可減少污垢的堆積。
+                            </li>
+                            <li>
+                            	若特別髒時可以配合浸泡方式清洗。
+                            </li>
+                            <li>
+                            	燙衣服時，棉麻襯衫可用高溫，並在燙之前噴水，衣服會更筆挺。化學纖維襯衫則用中低溫燙 。
+                            </li>
+                        </ol>
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何洗滌與保養SST&amp;C西裝、襯衫?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        羊毛：
+                        <br/>
+                        柔軟而富有彈性，為西裝主要成分，因長時間穿著可能造成變矛、易毛球，一整日穿著後請稍間隔再穿。
+                        <br/>
+                        洗滌：乾洗，2-3個星期就要做清洗，保持纖維的壽命，晾於陰涼處，勿烘乾。
+                        <br/>
+                        保養：低溫隔布熨燙，請包裝掛架收藏，衣櫥放防潮劑或防蟲劑，有髒污時請立即送乾洗。
+                        <br/><br/>
+                        
+                        聚酯纖維／滌綸：
+                        <br/>
+                        彈性不大，對熱敏感，清洗後不易變形、易乾，水洗不易縮。
+                        <br/>
+                        洗滌：適用各種洗劑，可水洗，但也請勿高溫烘乾。
+                        <br/>
+                        保養：以溫水洗滌，低溫整燙。
+                        <br/><br/>
+                        
+                        嫘縈／人造絲：
+                        <br/>
+                        人工製造的纖維。由天然的植物纖維素加工製造而成，平滑而有光澤，易、易產生靜電。
+                        <br/>
+                        洗滌：遇水纖維強度會變弱，適合乾洗，若水洗，請勿用力摩擦扭絞，使用中性洗劑。
+                        <br/>
+                        保養：使用中溫熨燙，或使用蒸氣熨斗，以保持光澤平整。
+                        <br/><br/>
+                        
+                        尼龍
+                        <br/>
+                        人造纖維，大部分屬於沒彈性知風衣類材質。
+                        <br/>
+                        洗滌：一般洗滌，不需漂白去污，勿高溫烘乾。
+                        <br/>
+                        保養：低溫隔布熨燙。
+                        <br/><br/>
+                        
+                        棉：
+                        <br/>
+                        為襯衫主要成分，有彈性，縮水率2-3%，吸濕抗熱性較好，而且穿著舒適、涼爽。
+                        <br/>
+                        洗滌：可水洗，勿高溫烘乾，勿浸泡過久，用溫和洗衣精，與有色衣物必須分開洗滌。
+                        <br/>
+                        保養：低溫隔布熨燙。
+                        <br/><br/>
+                        
+                        麻
+                        <br/>
+                        布質易皺，縮水率2-3%，具有調溫、防靜電、抗菌的功能，吸性好，導濕快，是夏季衣衫的主要纖維原料之一。
+                        <br/>
+                        洗滌：建議手洗，洗滌時間勿過長，可適度水洗，勿使用漂白劑或濃縮洗劑，勿浸泡、烘乾，晾於陰涼處。
+                        <br/>
+                        保養：低溫隔布熨燙，請套衣套掛式收藏。
+                        <br/><br/>
+                        
+                        合成皮
+                        <br/>
+                        本身為塑膠原料，根據不同強度、耐磨度、耐寒度和色彩、光、花紋圖案等要求加工製成。
+                        <br/>
+                        洗滌：勿機洗、日曬，小污點可沾水及去汙劑輕刷去除或濕布擦拭，不能接觸有機溶劑，忌汽油擦洗。水洗溫度不能超過40度，太髒還是要做清洗(針對髒汙點手洗)。
+                        <br/>
+                        保養：薄塗凡士林或過期乳液(可先在不起眼處先測試)，收藏時務必要乾燥，切勿摺疊、捲曲收藏，可用防塵套加以保護，不能用塑膠防塵套，要以不織布套為主。另外，因台灣屬海島型氣候較為潮濕，合成皮革年限一久可能產生水解(脫皮)狀況。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何收藏及保養SST&amp;C領帶?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        取下領帶後，記得要將結解開，用捲筒物如膠膜捲軸平整捲起收好，若偷懶將領帶打結原型放著，日後打開領帶，領帶就會像麻花一樣捲曲，再也打不出漂亮的領帶結了。
+                        <ol>
+                        	<li>
+                            	一般深色絲織物易褪色，宜常溫冷水洗滌，不宜長時間浸泡，應輕柔捏洗，忌用力搓洗，忌擰絞；機洗時儘量選擇滾筒洗衣機輕柔檔，並使用洗衣袋
+                            </li>
+                            <li>
+                            	陰涼處懸掛晾乾，不宜烘乾，勿陽光曝曬，以免變黃；
+                            </li>
+                            <li>
+                            	衣物晾至八成乾時，用中溫熨燙，可保持衣物光澤，更耐穿。熨燙時需墊布反面熨燙，避免產生極光；忌噴水，以免造成水痕
+                            </li>
+                            <li>
+                            	使用柔順劑柔軟和抗靜電
+                            </li>
+                        </ol>
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        要如何辦理門市退換貨?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        1. 商品自購買十天內可退換貨、三十天內可換貨，需持吊牌、發票、信用卡簽單回原購買門市處理，保持商品全新並維持可銷售狀況，若經修改商品無法退換貨。
+                        <br/>
+                        2.本公司商品保固項目分為西裝、西褲、襯衫、休閒外套、休閒褲、針織衫、POLO衫、T-Shirt、背心、圍巾、公事包、皮夾、皮帶、皮鞋、休閒鞋、帽子、領帶、領結、領夾、領針、袖扣、袋巾共22項商品。
+                        <br/>
+                        3.商品質量問題的認定存在一定的主觀性，除明顯瑕疵特徵以外的質量問題請與我們協商認定。
+                        <br/>
+                        4.服飾商品有時效的特殊特性，請在退換貨過程中務必積極快速，以免由於處理時間過長，造成商品過季貶值，影響到正常的銷售進程。
+                        <br/>
+                        5.若無發票單據、非會員、查無購買紀錄或用別人的會員帳號，皆以此商品上市時間為主。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        SST&amp;C領帶有何特色?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        男人的衣櫃裡，可以只有一件西服，但不可以只有一條領帶，SST&amp;C對色彩的敏感與領悟，賦予了絕妙的色彩運作，前衛時尚的設計風格更賦予了領帶鮮活而浪漫的生命力。運用不同色階來延展單一色調，豐富色彩層次，顯得富有立體感，深邃而持重。絲綢豐富的質地，也為男性提供了不同的風格與氣質，SST&amp;C TIES是您時尚的最佳選擇。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        SST&amp;C襯衫有何特色?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        SST&amp;C襯衫，兼具時尚的穿著，質感、舒適透氣的選擇。淺淡的色彩點亮男人的領口，襯托膚色，感覺輕鬆自然，緩解傳統深色西裝的壓抑沉悶。每天不同的襯衫，隨着顏色、花色、領型….等細微變化，SST&C讓男人每天都有不同的心情，展現個人的風格。商品採抗皺處理、舒適耐穿、透氣吸汗、不起毛球。立體剪裁，細緻車縫，使襯衫穿起來更為合身。領子內墊片設計，不論打領帶與否都能保持衣領筆挺不變形。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        SST&amp;C袖扣有何特色?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        袖扣男人的重要配飾，一種高品位的象徵。SST&amp;C每季都會推出最新的袖扣設計。材質一般選用貴重金屬，有的還要鑲嵌鉆石、水鑽、寶石等。進口時尚袖扣，與歐美同步流行 ，結合完美哲學及時尚奢華，型男必備，穿出流行時尚新品味。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何搭配SST&amp;C袖扣?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        配袖扣大有學問，講究一點的人，會挑與皮帶扣或是領帶夾同色的袖扣；更為講究的，則會購買大品牌皮帶扣、領帶夾、袖扣的套裝商品，跟隨大品牌設計師的推薦總沒有大錯。袖扣顏色搭配關鍵，一般來講，水晶玻璃袖扣因其透明，最好搭配白色襯衫；而紅色襯衫搭配金色袖扣，有華麗有時髦的感覺；黑、白、灰襯衫搭配銀色袖扣，則有沉穩、高貴的效果。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        SST&amp;C圍巾有何特色?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        對於追求都會男性時尚者而言，他們渴望在低調且無憂的生活方式中，大膽嘗試多變的豐富人生經驗，服裝當然是傳遞身份及心理狀態的外在影像重點。都會男性會從當天的衣著中演譯自我己獨特的個性，因此，SST&amp;C的精品西服完全跳脫台灣男人對「西裝」的「嚴肅、拘謹、昂貴」印象，但卻以精品的等級，貼近消費者的價格，打破品牌迷思，強調窄身合腰的修身剪裁，展露精準俐落的摩登風尚，運用簡鍊的線條、細膩的做工；重視內裡的變化、襯衫領型及袖口的設計來塑造都會型男的Guide Line。
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何成為SST&amp;C會員? 有什麼好處?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        <img src="http://www.sstandc.com/ckfinder/userfiles/images/201603_會員申請書.jpg" width="100%" style="max-width:727px;" />
+                    </div>
+                    
+                </div>
+                <div class="qa_list">
+                    
+                    <div class="qaL_tit">
+                        如何變更個人相關資料?
+                    </div>
+                    
+                    <div class="qaL_text">
+                        請由SST&amp;C官網首頁下方「聯絡我們」來信告知您欲修改的行動電話或出生日期或相關基本資料，將由專員為您修改。
+						<br/>
+                        [請注意]會員帳號是無法更改。
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+		<!-- InstanceEndEditable -->
+        </div>
+        
+        <!--footer-->
+        <div class="footer">
+        	
+            <div class="wrap">
+            	<div class="footer_socil">
+                	<div class="fS_link">
+                    	<a href="#">
+                        	<img src="../images/fb_icon.png" />
+                        </a>
+                    </div>
+                    <div class="fS_link">
+                    	<a href="#">
+                        	<img src="../images/ig_icon.png" />
+                        </a>
+                    </div>
+                    <div class="clearfloat">
+                    </div>
+                </div>
+            	<div class="copyright">
+            		© 2016 <a href="http://www.doweb.com.tw/">Greatest Idea Strategy Co.,Ltd</a> All rights reserved.
+                </div>
+                <div class="clearfloat">
+                </div>
+            </div>
+            
+            <div class="top_btn">
+            	<a href="#top">
+                	TOP
+                </a>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <div class="clearfloat">
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_sstandc/qa/qa.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 05:51:04 GMT -->
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/product/product_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:39:40 GMT -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>La déco : CASA & SELECTS - ESTD 1975</title>
+
+<link rel="shortcut icon" href="../images/favicon.html" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+
+	<!--主按鍵寬度調整用-->
+	<script type="text/javascript">
+        $(document).ready(function(e) {
+            
+            var setNavbarWidth=function(){
+                var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+                var logoWidth=document.getElementById("logo").offsetWidth;             //logo寬度
+                var searchWidth=document.getElementById("header_search").offsetWidth;  //版頭產品搜尋寬度
+                var loginWidth=document.getElementById("header_login").offsetWidth;    //版頭會員登入寬度
+                var navbarWidth=document.getElementById("navbar").offsetWidth;         //主按鍵寬度
+                
+                $(".navbar").css("width",bodywidth-36-logoWidth-searchWidth-loginWidth);
+            }
+            
+            setNavbarWidth();
+            
+            $(window).resize(function(e) {
+                setNavbarWidth();
+            });
+        });
+    </script>
+    
+    <!--導航菜單懸浮置頂-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			
+			if( $(".navbar-example").length > 0 ){             //判斷是否有class=navbar-example這個DOM
+				                                               //如果有
+				$(window).scroll(function(){
+					if( $(window).scrollTop() < 57 ){          //窗口滾動小於57 移除style
+						$('.header').removeAttr("style");
+						$('.navbar-example').removeAttr("style");
+					}if( $(window).scrollTop() > 57 ){         //窗口大於57 讓版頭和滾動偵測導航停在要的位置
+						$('.header').css("position","fixed").css("top","-57px");
+						$('.navbar-example').css("position","fixed").css("top","0px");
+					}
+				});
+			}else{
+				                                               //沒有的話
+				$(".header").addClass("header_fixed");         //版頭固定在上方
+				$(".main").addClass("main_no_navbar-example"); //main的上方撐出版頭的高度
+			}
+			
+		});
+	</script>
+    
+    <!--錨點平滑滾動效果-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+
+	<!-- InstanceBeginEditable name="head" -->
+    
+    <!--社群分享區套件 AddThis 開始-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54ac92887a29a9fb" async="async"></script>
+    <!--↓↓↓↓ 修改部分 by kevin 20151102 開始 ↓↓↓↓-->
+	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54ac92887a29a9fb" async="async"></script>
+    <!--↑↑↑↑ 修改部分 by kevin 20151102 結束 ↑↑↑↑-->
+    <!--社群分享區套件 AddThis 結束-->
+    
+    
+    <!-- fb和google+分享用 開始------------------------------------>
+    <!--
+    	html標簽中加xmlns:og='http://ogp.me/ns#'
+
+    	資料會被FB快取抓住 如果資料有更新 需要至
+        https://developers.facebook.com/tools/debug/
+        填入網址 重新抓取
+    -->
+    <!--網頁標題--><meta property="og:title" content="fb時尚照型桌椅測試 | La déco : CASA & SELECTS - ESTD 1975" />
+    <!--網站類型--><!--<meta property="og:type" content="網站類型"></meta>-->
+    <!-- 網址  --><meta property="og:url" content="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco_test/product/product_in.html" />
+    <!-- 縮圖  --><meta property="og:image" content="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco_test/product/images/product_1_img.jpg" />
+    <!--網頁敘述--><meta property="og:description"  content="fb時尚前衛的螺旋造型，。" />
+	<!--網站名稱--><meta property="og:site_name" content="La déco : CASA & SELECTS - ESTD 1975" />
+    <!-- fb和google+分享用 結束------------------------------------>
+    
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+	
+    <!--錨點用-->
+    <div id="top">
+    </div>
+    
+    <!--版頭-->
+	<div class="header">
+    	<div class="wrap">
+        	
+            <!--logo-->
+        	<div class="logo" id="logo">
+            	<a href="../index/index.html">
+               	<img src="../images/logo.png" width="120" />
+                </a>
+            </div>
+            
+            <!--主按鍵-->
+            <div class="navbar" id="navbar">
+            
+            	<div class="h_nav">
+                	<a href="../about/about.html" class="transition_02s">
+                    	About us
+                        <br/>
+                        關於傢作
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="product.html" class="transition_02s">
+                    	Products
+                        <br/>
+                        產品內容
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../crafts/crafts.html" class="transition_02s">
+                    	Crafts
+                        <br/>
+                        材料工藝
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../service/service.html" class="transition_02s">
+                    	Service
+                        <br/>
+                        服務項目
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../shopping/shopping.html" class="transition_02s">
+                    	Shopping
+                        <br/>
+                        購物筆記
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+          	<script type="text/javascript">
+				$(document).ready(function(e) {
+                    $(".h_l_member_btn").click(function(e) {
+                        $(".header_member_open").slideToggle();
+                    });
+                });
+			</script>
+            
+            <!--版頭會員登入-->
+            <div class="header_login" id="header_login">
+            	<!--<a href="../member/login.html" class="transition_02s">
+                	LOGIN
+                </a>-->
+                <!--↑會員登入前  會員登入後↓-->
+                <a href="javascript: void(0)" class="transition_02s h_l_member_btn">
+                	MEMBER
+                </a>
+            </div>
+            
+            <!--版頭會員專區選單-->
+            <div class="header_member_open">
+            	<a href="../member/member_modify.html" class="transition_02s">
+                	會員資料修改
+                </a>
+                <a href="../member/order_list.html" class="transition_02s">
+                	<!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+                	歷史訂單查詢
+                    <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                </a>
+                <a href="../member/login.html" class="transition_02s">
+                	會員登出
+                </a>
+            </div>
+            
+            <!--版頭產品搜尋-->
+            <div class="header_search" id="header_search">
+            	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                    <input type="text" class="transition_03s" />
+                    <label class="lsf search">
+                    	<input type="submit" />
+                    </label>
+                </form>
+            </div>
+            
+            <!--↓↓↓↓ 修改部分 by kevin 20151102 ↓↓↓↓-->
+            <script type="text/javascript">
+				$(document).ready(function(e) {
+					//手機版次選單展開
+                    $(".m_m_l_has_open a").click(function(e) {
+                        $(this).next(".m_m_l_open_area").slideToggle();
+                    });
+					
+					//手機版主按鍵展開
+					$(".mobile_menu_brn").click(function(e) {
+                        $(".mobile_menu_list_area").slideToggle();
+                    });
+					
+					$(window).resize(function(e) {
+						var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+						
+						if ( bodywidth >= 910 ) {
+							$(".mobile_menu_list_area").removeAttr("style");
+						}
+
+                    });
+					
+                });
+			</script>
+            <!--手機版按鍵區-->
+            <div class="mobile_menu_area">
+            
+                <!--手機版menu鍵-->
+                <div class="mobile_menu_brn">
+                    MENU
+                </div>
+                
+                <!--手機版主按鍵-->
+                <div class="mobile_menu_list_area">
+                
+                	<div class="mobile_menu_list m_m_l_search"><!--產品搜尋-->
+                    	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                            <input type="text" placeholder="產品搜尋" />
+                            <input type="submit" value="" />
+                        </form>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../about/about.html">
+                            About us
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="product.html">
+                            Products
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../crafts/crafts.html">
+                            Crafts
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../service/service.html">
+                            Service
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../shopping/shopping.html">
+                            Shopping
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list m_m_l_has_open"><!--有次選單的-->
+                        <a href="javascript:void(0);">
+                            MEMBER
+                        </a>
+                        
+                        <!--展開的次選單-->
+                        <div class="m_m_l_open_area">
+                        	<div class="m_m_l_open">
+                            	<a href="../member/member_modify.html">
+                                	會員資料修改
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="../member/order_list.html">
+                                	詢價回覆查詢
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="../member/login.html">
+                                	會員登入
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!--↑↑↑↑ 修改部分 by kevin 20151102 ↑↑↑↑-->
+            
+            <div class="clearfloat">
+            </div>
+        
+        </div>
+    </div>
+    
+	<!-- InstanceBeginEditable name="navbar-example" -->
+    <!--滾動偵測導航-->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="../js/bootstrap-3.3.5-dist/bootstrap.js"></script>
+    <script type="text/javascript">
+		//通过 JavaScript 调用滚动监听，选取要监听的元素，然后调用 .scrollspy() 函数
+		$('body').scrollspy({ 
+			target: '.navbar-example',
+			offset: 200,
+		});
+	</script>
+    <div class="navbar-example">
+        <ul class="nav">
+        	<li class="prodcut_in_top_back">
+            	<a href="product.html">
+                	<img src="images/arrow_left.png" width="42" />
+                </a>
+            </li>
+            <li class="active">
+            	<a href="#nav_content_1">
+                	產品
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_2">
+                	內容
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_3">
+                	搭配
+                </a>
+            </li>
+            <li class="mobile_none"><!--←←←← 修改部分 by kevin 20151102 增加class ←←←←-->
+            	<a href="#nav_content_4">
+                	塗裝
+                </a>
+            </li>
+        </ul>
+	</div>
+    <!-- InstanceEndEditable -->
+    
+    <!--main-->
+    <div class="main">
+	<!-- InstanceBeginEditable name="main" -->
+    
+    	<div class="product_in_img" style="display:none;">
+        	<!--給分享用的縮圖 主要是讓Pinterest能抓到這頁所介紹的產品的圖片-->
+        	<img src="images/product_1_img.jpg" width="285" height="200" />
+        </div>
+    
+    	<!--滾動偵測導航對應到的DOM-->
+      	<div id="nav_content_1">
+        
+            <!--輪播特效 第一塊 開始-->
+            <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+            <!--輪播特效 第一塊 結束-->
+            
+            <!--輪播-->
+            <script type="text/javascript">
+				//讓banner高度和螢幕一樣高
+				$(document).ready(function(e) {
+                    var bodyHeight=document.documentElement.clientHeight-107;<!--修改部分 by kevin 20150820 增加-107-->
+					$(".banner").css("height",bodyHeight);
+                });
+			</script>
+            <div class="banner">
+                <div class="device">
+                
+                    <a class="arrow-left" href="javascript: void(0)">
+                        <img src="images/left_arrow.png" width="15" height="31" />
+                    </a> 
+                    <a class="arrow-right" href="javascript: void(0)">
+                        <img src="images/right_arrow.png" width="15" height="31" />
+                    </a>
+                  
+                    <div class="swiper-container index_banner">
+                        <div class="swiper-wrapper">
+                        
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(images/product_1_img.jpg) center center; background-size: cover;">
+                                    
+                                    <!--產品內頁輪播文字區-->
+                                    <div class="product_banner_text_area">
+                                    	<div class="p_b_t_tit">
+                                        	時尚造型桌具時尚造型桌具
+                                        </div>
+                                        <div class="p_b_t_text">
+                                        	時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(../index/images/banner.jpg) center center; background-size: cover;">
+                                    
+                                    <!--產品內頁輪播文字區-->
+                                    <div class="product_banner_text_area">
+                                    	<div class="p_b_t_tit">
+                                        	時尚造型桌具
+                                        </div>
+                                        <div class="p_b_t_text">
+                                        	時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(images/product_1_img.jpg) center center; background-size: cover;">
+                                    
+                                    <!--產品內頁輪播文字區-->
+                                    <div class="product_banner_text_area">
+                                    	<div class="p_b_t_tit">
+                                        	時尚造型桌具
+                                        </div>
+                                        <div class="p_b_t_text">
+                                        	時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="pagination"></div>
+                  
+                </div>
+            </div>
+            
+            <!--輪播特效 第二塊 開始-->
+            <script src="../js/swiper/idangerous.swiper.min.js"></script>
+            <script>
+                //說明資料API http://swiper2.swiper.com.cn/api/index.html
+                var mySwiper = new Swiper('.index_banner',{
+                  //pagination: '.pagination',                 //輪播點點開關
+                  //paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+                  
+                  simulateTouch : false,                     //默认为true，Swiper接受鼠标点击、拖动。 設置為false時無法拖動
+                  loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+                  //grabCursor: true,                        //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+                  calculateHeight : false,                   //当值为true时，Swiper根据slides内容计算容器高度
+                  
+				  //↓↓↓↓ 修改部分 by kevin 20150827 開始 ↓↓↓↓
+				  autoplay : 6000,                           //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+				  autoplayDisableOnInteraction : true,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+				  //↑↑↑↑ 修改部分 by kevin 20150827 結束 ↑↑↑↑
+				  
+                  //slidesPerView : 2,                       //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。
+                  //loopedSlides :6,                         //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
+                  autoplayStopOnLast : true,                 //如果设置为true，当切换到最后一个slide时停止自动切换。（在没有设置loop的情况下）。Swiper 2.7.0版才會生效
+                  
+                  //左右鍵區1 開始
+                  onInit: function(swiper){
+                      swiper.swipeNext()
+                  },
+                  //左右鍵區1 結束
+                  
+                })
+                
+                //左右鍵區2 開始
+                $('.arrow-left').click(function(){
+                    //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                    mySwiper.swipePrev(); 
+                });
+                $('.arrow-right').click(function(){
+                    //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                    mySwiper.swipeNext(); 
+                });
+                //左右鍵區2 結束
+        
+            </script>
+            <!--輪播特效 第二塊 結束-->
+            
+        </div>
+    
+      	<div id="nav_content_2">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_1.png" width="48" height="48" />
+                    <br/>
+                    內容
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+				$(document).ready(function(e) {
+                    
+					$(window).scroll(function(e) {
+						
+						var prodcutLeftScrollTop = $(".product_content2_left").position().top;    //取得DOM距離螢幕頂部位置
+						var prodcutRightScrollTop = $(".product_content2_right").position().top;  //取得DOM距離螢幕頂部位置
+						var windowScroll = $(window).scrollTop();                                 //取得捲軸位置
+						
+						var productLeftHeight = $(".product_content2_left").height();             //取得DOM高度
+						var productRightHeight = $(".product_content2_right").height();           //取得DOM高度
+						
+						var leftRightDifference = productLeftHeight-productRightHeight;           //取得左和右相差的高度
+						
+						var productLeftBottom = prodcutLeftScrollTop+productLeftHeight;           //取得左邊DOM底離螢幕頂的高度
+						var productRightBottom = prodcutRightScrollTop+productRightHeight;        //取得左邊DOM底離螢幕頂的高度
+						
+						var windowHeight = $(window).height();                                    //取得螢幕高度
+						
+						if( productLeftHeight>productRightHeight ){ //如果左邊高於右邊
+						
+							if( prodcutLeftScrollTop <= windowScroll ){  //如果左邊離頂部的高度 小於 等於 捲軸位置
+							
+								$(".product_content2_right").css("position","fixed").css("top","0px").css("right","0px"); //右邊添加css
+								
+								if( windowScroll >= prodcutLeftScrollTop+leftRightDifference ){  //如果捲軸位置 大於 等於 左邊離頂部的高度 + 左右相差的高度
+									
+									$(".product_content2_right").css("position","relative").css("top",leftRightDifference); //右邊添加css
+								}
+							}if( windowScroll <= prodcutLeftScrollTop ){   //如果捲軸位置 小於 等於 左邊離頂部位置
+								
+								$(".product_content2_right").css("position","relative").css("top","0"); //添加css
+							}
+						}
+                        
+                    });
+					
+                });
+			</script>
+            
+            <!--產品內頁內容區左側-->
+            <div class="product_content2_left">
+            	
+                <div class="p_c_l_tit">
+                	時尚造型桌具
+                </div>
+                
+                <div class="p_c_l_text_area">
+                
+                	<!--網編區-->
+                    <div class="text_area">
+                    	<p style="font-size:15px; line-height:24px;">
+                        	時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。時尚前衛的螺旋造型，以黑色顯現出低調奢華的時尚感，提升整體室內的擺設品味。
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <div class="p_c_l_select_area">
+                    尺寸：
+                    <select>
+                        <option>
+                            請選擇
+                        </option>
+                    </select>
+                    <br/>
+                    顏色：
+                    <select>
+                        <option>
+                            請選擇
+                        </option>
+                    </select>
+                </div>
+                
+                <div class="p_c_l_text_area">
+                
+                	<!--網編區-->
+                    <div class="text_area">
+                    	<p style="font-size:15px; line-height:24px;">
+                        	即使在潮濕的北部，也不易發霉變形，保養容易，因為材質本身超強的堅固性，結實牢固柚木實木實感好，製作的家具紋理優美，質地均勻，表面細緻滑溜，柚木自身的油脂能夠保護家具的色澤，光亮持久；拋光面透過光合作用氧化作......即使在潮濕的北部，也不易發霉變形，保養容易，因為材質本身超強的堅固性，結實牢固柚木實木實感好，製作的家具紋理優美，質地均勻，表面細緻滑溜，柚木自身的油脂能夠保護家具的色澤，光亮持久；拋光面透過光合作用氧化作......即使在潮濕的北部，也不易發霉變形，保養容易，因為材質本身超強的堅固性，結實牢固柚木實木實感好，製作的家具紋理優美，質地均勻，表面細緻滑溜，柚木自身的油脂能夠保護家具的色澤，光亮持久；拋光面透過光合作用氧化作......
+                        </p>
+                        <a href="#" style="font-size:15px; line-height:24px; text-decoration:underline; color:#b3692e;">
+                        	了解更多
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="p_c_l_select_area">
+                	<label>
+                    	數量：
+                        <input type="text" />
+                    </label>
+                </div>
+                
+                <!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+                <!--售價-->
+                <div class="pCL_price">
+                	價格：<span>NT 29,000</span>
+                </div>
+                <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                
+                <div class="p_c_l_btn">
+                	<input type="submit" value="加入購物筆記" onclick="location='../shopping/shopping.html'" />
+                </div>
+                
+            </div>
+            
+            <script type="text/javascript">
+				//讓產品內頁內容區右側高度和螢幕一樣高
+				$(document).ready(function(e) {
+                    var bodyHeight=document.documentElement.clientHeight;
+					$(".product_content2_right").css("height",bodyHeight);
+                });
+			</script>
+            
+            <!--產品內頁內容區右側-->
+            <div class="product_content2_right" style="background:url(images/product_in_content_2_demo.jpg) center center; background-size: cover;">
+            	<!--圖片建議尺寸 1200*1200px-->
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+        
+      	<div id="nav_content_3">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_2.png" width="48" height="48" />
+                    <br/>
+                    搭配
+                </div>
+            </div>
+            
+            <!--網編區-->
+            <div class="text_area">
+            	<div style="width:5%; display:inline-block;">
+                </div>
+                <div style="width:22.5%; display:inline-block;">
+                	<a href="product_in.html">
+                    	<img src="images/demo.jpg" width="100%" />
+                    </a>
+                </div>
+                <div style="width:22.5%; display:inline-block;">
+                	<a href="product_in.html">
+                    	<img src="images/demo.jpg" width="100%" />
+                    </a>
+                </div>
+                <div style="width:22.5%; display:inline-block;">
+                	<a href="product_in.html">
+                    	<img src="images/demo.jpg" width="100%" />
+                    </a>
+                </div>
+                <div style="width:22.5%; display:inline-block;">
+                	<a href="product_in.html">
+                    	<img src="images/demo.jpg" width="100%" />
+                    </a>
+                </div>
+                <div style="width:5%; display:inline-block;">
+                </div>
+            </div>
+            
+        </div>
+    
+      	<div id="nav_content_4">
+            
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_3.png" width="48" height="48" />
+                    <br/>
+                    塗裝
+                </div>
+            </div>
+            
+            <!--網編區-->
+            <div class="text_area">
+            	<div style="width:5%; display:inline-block;">
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:5%; display:inline-block;">
+                </div>
+                
+                <br/>
+                
+                <div style="width:5%; display:inline-block;">
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:15%; display:inline-block; text-align:center; line-height: 30px; padding:0px 0px 20px 0px;">
+                	<a href="../crafts/crafts.html">
+                    	<img src="images/demo_2.jpg" width="90%" />
+                    </a>
+                    Marble
+                </div>
+                <div style="width:5%; display:inline-block;">
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!--社群分享區懸浮收合-->
+		<script type="text/javascript">
+            $(document).ready(function(e) {
+				
+				$(window).scroll(function(){
+					if( $(window).scrollTop() < 200 ){          //窗口滾動小於200 移除style
+						$('.share_btn_area').removeAttr("style");
+					}if( $(window).scrollTop() > 200 ){         //窗口大於200
+						$('.share_btn_area').css("right","0px");
+					}
+				});
+                
+            });
+        </script>
+        
+        
+	<!-- InstanceEndEditable -->
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	<div class="wrap">
+            
+            <!--footer公司資訊-->
+            <div class="footer_company_info">
+                傢作有限公司
+                <br/>
+                221新北市汐止區南陽街83之3號 | 電話：886-2-8695-1353
+                <br/>
+                No.83-3, Nanyang St., Xizhi Dist., New Taipei City 221, Taiwan (R.O.C.) 
+            </div>
+            
+            <!--copyright-->
+            <div class="copyright">
+                © 2015 <a href="http://www.doweb.com.tw/web/index.jsp">Greatest Idea Strategy Co., Ltd.</a> All Rights Reversed.
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/product/product_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:40:19 GMT -->
+</html>

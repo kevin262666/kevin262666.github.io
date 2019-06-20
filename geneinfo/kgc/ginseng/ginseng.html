@@ -1,0 +1,866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgc/ginseng/ginseng.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:47:15 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="x-frame-options" content="sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>台灣正官庄官方網站</title>
+
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<!--<link href="../css/style.css" rel="stylesheet" type="text/css" />-->
+<link href="../css/style.min.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+	
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+    
+    <script type="text/javascript">
+	//錨點平滑滾動效果
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+    
+    <script type='text/javascript'>
+		//浮動式top鍵
+		$(function(){
+		　$(window).load(function(){
+		　　$(window).bind('scroll resize', function(){
+		　　var $this = $(this);
+		　　var $this_Top=$this.scrollTop();
+		
+		　　//當高度小於100時，關閉區塊 
+		　　if($this_Top < 100){
+		　　　$('.top_btn').stop().animate({bottom:"-70px"});
+		　　　}
+		　　　　if($this_Top > 100){
+		　　　　$('.top_btn').stop().animate({bottom:"133px"});
+		　　　 }
+		　　}).scroll();
+		　});
+		});
+	</script>
+    
+    <!--主選單選單展開 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			//主按鍵點擊時展開第一層
+            $(".nav").children("a").click(function(e) {
+				$(".nav").children("a").not(this).next(".nav_open_area").slideUp(200);
+                $(this).next(".nav_open_area").slideToggle(200);
+            });
+        });
+	</script>
+    <!--主選單選單展開 結束-->
+    
+    <!--手機版主選單效果 開始-->
+    <script type="text/javascript">
+		
+		//手機選單展開效果
+		$(document).ready(function(e) {
+			
+			//menu按鍵動畫效果
+			$(".menu_btn").click(function(e) {
+				
+				$(".m_b_line").toggleClass("menu_but_animaiton");
+				$(".navbar").slideToggle();
+				
+				setTimeout(
+					function()
+					{
+						var bodyHeight = document.documentElement.clientHeight;                    //取得螢幕可見高度
+						var headerHeight = $(".header").height();								   //取得版頭高度
+						var menuHeight = $(".navbar").height();                                    //取得選單高度
+						
+						var headerAllHeight = headerHeight+menuHeight;                             //取得版頭完整高度
+						var newMenuHeight = bodyHeight-headerHeight;                               //選單的新高度
+						
+						if (  bodyHeight <= headerAllHeight ) {                                    //如果螢幕高度比版頭整個高度還矮
+							$(".navbar").css ({
+								"height":newMenuHeight,											   //讓選單部分變成有scrollBar
+								"overflow-y":"scroll",
+							});
+						}else {
+							$(".navbar").css ({
+								"height":"auto",
+							});
+						}
+						//alert(menuHeight);
+					},
+					500
+				);
+				
+			});
+            
+        });
+		
+		$(window).resize(function(e) {
+			var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+			if( bodywidth >= 736 ) {
+				$(".m_b_line").removeClass("menu_but_animaiton");
+				$(".navbar").removeAttr("style");
+				$(".nav_open_area").removeAttr("style");
+			}
+		});
+		
+	</script>
+    <!--手機版主選單效果 結束-->
+    
+    <!--網站地圖 收合 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+            $(".f_map_tit").click(function(e) {
+                $(".footer_map_list_area").slideToggle();
+            });
+        });
+	</script>
+    <!--網站地圖 收合 結束-->
+    
+    <!--左選單收合 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			$(".left_list_active").children(".left_list_open_area").show();
+			
+            $(".left_list").click(function(e) {
+				$(".left_list").not(this).children(".left_list_open_area").slideUp();
+				$(".left_list").not(this).removeClass("left_list_active");
+                $(this).children(".left_list_open_area").slideToggle();
+				$(this).toggleClass("left_list_active")
+            });
+			
+			//手機版時樣式
+			$(".now_tit").click(function(e) {
+                $(".left_list_area").slideToggle();
+            });
+			$(window).resize(function(e) {
+                var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+                if( bodywidth >= 960 ) {
+                    $(".left_list_area").removeAttr("style");
+                }
+            });
+			
+        });
+	</script>
+    <!--左選單收合 結束-->
+    
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header" id="top">
+    	<div class="wrap">
+        	
+            <!--logo-->
+            <div class="logo">
+            
+            	<a href="../index/index.html">
+                	<img src="../images/logo.png" width="176" class="pc_logo" />
+                    <img src="../images/logo_2.png" width="176" class="mobile_logo" />
+                </a>
+                
+                <!--logo用小閃光-->
+				<script type="text/javascript">
+                    $(document).ready(function(e) {
+                        
+                        function logoFlash(){
+                            $(".logo_flash").addClass("logo_flash_hover");
+                            window.setTimeout(function(){
+                                $(".logo_flash").removeClass("logo_flash_hover");
+                            },500);
+                        }
+                        
+                        window.setTimeout(logoFlash,500);
+                        //window.setInterval(logoFlash,5000);
+                        
+                        
+                        $(".logo img").mouseover(function(e) {
+                            logoFlash();
+                        });
+                    });
+                </script>
+                
+                <!--logo的閃光-->
+              	<div class="logo_flash">
+                </div>
+                
+            </div>
+            
+            <!--menu鍵-->
+            <div class="menu_btn_area">
+                
+                <div class="menu_btn">
+                    <div class="m_b_line">
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!--主按鍵-->
+            <div class="navbar">
+            	
+                <div class="nav">
+                	
+                    <a href="javascript:void(0);">
+                    	關於我們
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                KGC介紹
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                企業嚴格
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                Network
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                研發團隊
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                正官庄
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                SGS檢驗
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	關於高麗蔘
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="ginseng.html">
+                                高麗蔘歷史
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="ginseng.html">
+                                人蔘分類
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="ginseng.html">
+                                高麗參分類
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	產品介紹
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                條蔘
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                高麗蔘製品
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                保養品
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/qa.html">
+                                產品Q&amp;A
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/reviews_list.html">
+                                見證分享
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	食譜專區
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                食譜推薦
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                紅蔘點心
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                健康飲品
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	報導/消息
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                最新活動
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                媒體報導
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                影音廣告
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	門市資訊
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                北部
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                中部
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                南部
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	招募人員
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../join/join.html">
+                                人才
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../join/join.html">
+                                人事/福利制度
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="#">
+                                招募人才
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--主體-->
+    <div class="main">
+   	  <div class="wrap">
+        	
+            <!--左邊-->
+            <div class="left">
+				<!-- InstanceBeginEditable name="left" -->
+            	
+                <!--左模組標題-->
+                <div class="left_module_tit">
+                	關於高麗蔘
+                </div>
+                
+                <!--現在頁面的標題 會跟右標題一樣的字-->
+                <div class="now_tit">
+                	高麗蔘歷史
+                </div>
+                
+                <!--手機才出現的右上圖-->
+                <div class="mobile_right_top_img">
+                    <img src="images/in_right_img.png" width="506" />
+                </div>
+                
+                <!--左選單-->
+                <div class="left_list_area">
+                
+                	<div class="left_list left_list_active">
+                    <!--↑↑↑↑當前模式時class內加left_list_active↑↑↑↑-->
+                    
+                    	<a href="ginseng.html">
+                        	高麗蔘歷史
+                        </a>
+                        
+                    </div>
+
+                    <div class="left_list">
+                    	<a href="ginseng.html">
+                        	人蔘分類
+                        </a>
+                    </div>
+                    <div class="left_list">
+                    	<a href="ginseng.html">
+                        	高麗蔘分類
+                        </a>
+                    </div>
+
+                </div>
+                
+                <!-- InstanceEndEditable -->
+        	</div>
+            
+            <!--右邊-->
+            <div class="right">
+				<!-- InstanceBeginEditable name="right" -->
+            	
+                <!--右邊上-->
+                <div class="right_top">
+                	
+                    <!--麵包屑-->
+                    <div class="crumb">
+                    	<a href="../index/index.html">
+                        	HOME
+                        </a>
+                        -關於高麗蔘-高力蔘歷史
+                    </div>
+                    
+                    <!--右標題-->
+                    <div class="right_tit">
+                    	高力蔘歷史
+                  	</div>
+                    
+                    <!--右上圖-->
+                    <div class="right_top_img">
+                    	<img src="images/in_right_img.png" width="506" />
+                    </div>
+                    
+                </div>
+                
+                <!--右邊資料區-->
+                <div class="right_main">
+                
+                	<!--網編區-->
+                    <div class="text_area">
+                    	
+                        <p style="font-size:15px; line-height:24px;">
+                        	人蔘作為藥草的最早記錄於《神農本草經》(西元456~536年)
+                            <br/>
+                            按照產地分區，有韓國高麗蔘、中國人身，還有產於美國、加拿大的西洋蔘。
+                        </p>
+                        <br/>
+                        <img src="images/demo.jpg" width="100%" />
+                        
+                        <p style="font-size:12px; color:#404040; text-align:right; padding:7px 0px 0px 0px;">
+                        	韓國人蔘博物館
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <!-- InstanceEndEditable -->
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	<div class="wrap">
+        	
+            <!--網站地圖-->
+            <div class="footer_map_area">
+            	
+                <div class="f_map_tit">
+                	網站地圖 ▼
+                </div>
+                
+                <div class="footer_map_list_area">
+                	
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	關於我們
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../about/about.html">
+                                	KGC介紹
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	企業沿革
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	Network
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	研發團隊
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	正官庄
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	SGS檢驗
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	關於高麗蔘
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="ginseng.html">
+                                	高麗蔘歷史
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="ginseng.html">
+                                	人蔘分類
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="ginseng.html">
+                                	高麗蔘分類
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	產品介紹
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../product/product.html">
+                                	條蔘
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/product.html">
+                                	高麗蔘製品
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/product.html">
+                                	保養品
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/qa.html">
+                                	產品Q&amp;A
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/reviews_list.html">
+                                	見證分享
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_3">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	食譜專區
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../recipe/recipe.html">
+                                	食譜推薦
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../recipe/recipe.html">
+                                	紅蔘點心
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../recipe/recipe.html">
+                                	健康飲品
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	報導/消息
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../news/news.html">
+                                	最新活動
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../news/news.html">
+                                	媒體報導
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../news/news.html">
+                                	影音廣告
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	門市資訊
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../stores/stores.html">
+                                	北部
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../stores/stores.html">
+                                	中部
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../stores/stores.html">
+                                	南部
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_3">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	招募人員
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../join/join.html">
+                                	人才
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../join/join.html">
+                                	人事/福利制度
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#">
+                                	招募人才
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!--footer公司資訊-->
+            <div class="footer_company_info">
+            	<span>
+                	客服信箱：
+                    <a href="mailto:twadmin@kgc.co.kr">
+                    	twadmin@kgc.co.kr
+                    </a>
+                </span>
+                <span>
+                	客服電話：
+                    <a href="tel:0800-259-889">
+                    	0800-259-889
+                    </a>
+                </span>
+                <span>
+                	服務時間： 09:00~12:00/13:00~18:00(例假日休息)
+                </span>
+            </div>
+            
+            <!--copyright-->
+            <div class="copyright_area">
+            	資料來源 | Euromonitor Intemational Ltd 維他命和營養補充劑2005-2014以零售額計算市場佔有率
+                <br/>
+				正官庄股份有限公司 CHEONG KWAN JANG TAIWAN CORPORATION
+                <span class="copyright">
+                	© 2015 <a href="http://www.geneinfo.com.tw/web/index/index.jsp">Genesis Information Inc.</a> All Rights Reversed.
+                </span>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--浮動top鍵-->
+    <div class="top_btn">
+    	<a href="#top">
+        	TOP
+        </a>
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgc/ginseng/ginseng.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:47:21 GMT -->
+</html>

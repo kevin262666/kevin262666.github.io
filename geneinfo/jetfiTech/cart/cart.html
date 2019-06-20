@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_jetfi-tech/cart/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 04:04:30 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="X-Frame-Options" content="Sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="Robots" content="none" /><!--不被搜尋引擎搜到-->
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<!--android 手機板主題顏色用 更改網址列顏色-->
+<meta name="theme-color" content="#ffe500">
+<!--android 手機板主題顏色用-->
+
+<meta name="format-detection" content="telephone=no"><!--取消行動版 safari 自動偵測數字成電話號碼-->
+
+<title>桔豐科技股份有限公司</title>
+
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="../js/common.js" type="text/javascript"></script><!--JavaScript共用區-->
+    
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header">
+    	
+        <!--版頭上-->
+        <div class="header_top">
+        	<div class="wrap">
+            	
+                <!--版頭上廣告-->
+        		<div class="hT_ad">
+                	<a href="#">
+                    	<img src="../images/top_ad.png" width="397" height="70" />
+                    </a>
+                </div>
+                
+                <!--版頭上右-->
+        		<div class="hT_right">
+                
+                	<div class="hTR_member">
+                    	<div class="hTRM_tit">
+                        	<span class="hTR_pc">
+                        		會員專區
+                            </span>
+                            <span class="hTR_mobile">
+                            	<img src="../images/member_icon.png" width="35" />
+                            </span>
+                        </div>
+                        <div class="hTRM_list_area">
+                        	<div class="hTRM_list">
+                            	<a href="javascript:void(0);" class="login_open">
+                                <!--class內加login_open即可開啟會員登入和忘記密碼視窗-->
+                                	會員登入
+                                </a>
+                            </div>
+                            <div class="hTRM_list">
+                            	<a href="../member/add.html">
+                                	加入會員
+                                </a>
+                            </div>
+                            <div class="hTRM_list">
+                            	<a href="../member/modify.html">
+                                	會員資料修改
+                                </a>
+                            </div>
+                            <div class="hTRM_list">
+                            	<a href="../member/rent_order_list.html">
+                                	方案訂單查詢
+                                </a>
+                            </div>
+                            <div class="hTRM_list">
+                            	<a href="../member/product_order_list.html">
+                                	訂單查詢
+                                </a>
+                            </div>
+                            <div class="hTRM_list">
+                            	<a href="../member/bonus.html">
+                                	紅利使用紀錄
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                	<div class="hTR_cart">
+                    	<a href="cart.html">
+                        	<span class="hTR_pc">
+                        		購物車
+                            </span>
+                            <span class="hTR_mobile">
+                            	<img src="../images/cart_icon.png" width="35" />
+                            </span>
+                        </a>
+                    </div>
+                    
+                	<div class="hTR_social_link_area">
+                    	<div class="hTRS_link">
+                        	<a href="#">
+                            	<img src="../images/fb_icon.png" width="35" />
+                            </a>
+                        </div>
+                        <div class="hTRS_link">
+                        	<a href="../contact/contact.html">
+                            	<img src="../images/mail_icon.png" width="35" />
+                            </a>
+                        </div>
+                        <div class="hTRS_link">
+                        	<a href="#">
+                            	<img src="../images/line_icon.png" width="35" />
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    
+                	<div class="hTR_nowBtn">
+                    	<a href="../plan/rental.html">
+                        	立即租用
+                            <img src="../images/mouse_icon.png" width="16" />
+                        </a>
+                    </div>
+                    
+                	<div class="clearfloat"></div>
+                    
+                </div>
+                
+                <div class="clearfloat"></div>
+                
+        	</div>
+        </div>
+        
+        <!--版頭下-->
+        <div class="header_bottom">
+        	<div class="wrap">
+            
+            	<!--logo-->
+        		<div class="logo">
+                	<a href="../index/index.html">
+                    	<img src="../images/logo.png" width="88" />
+                    </a>
+                </div>
+                
+                <!--主按鍵-->
+        		<div class="navbar">
+                	<div class="nav">
+                        <a href="../product/product.html">
+                        	產品資訊
+                        </a>
+                    </div>
+                	<div class="nav">
+                        <a href="javascript:void(0);">
+                        	資費方案
+                        </a>
+                        <div class="nav_open">
+                        	<div class="nO_list">
+                            	<a href="../plan/plan.html">
+                                	各國資費方案
+                                </a>
+                            </div>
+                            <div class="nO_list">
+                            	<a href="../plan/rental.html">
+                                	租借申請
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav">
+                        <a href="javascript:void(0);">
+                        	租借指南
+                        </a>
+                        <div class="nav_open">
+                        	<div class="nO_list">
+                            	<a href="../rental/rental.html">
+                                	租借流程
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav">
+                        <a href="../qa/qa.html">
+                        	常見問題
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="javascript:void(0);">
+                        	線上購物
+                        </a>
+                        <div class="nav_open">
+                        	<div class="nO_list">
+                            	<a href="../onlineshop/onlineshop.html">
+                                	WIFI分享器
+                                </a>
+                            </div>
+                            <div class="nO_list">
+                            	<a href="../onlineshop/onlineshop.html">
+                                	旅行用品組
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfloat">
+                    </div>
+                </div>
+                
+                <!--手機menu按鍵-->
+                <div class="menu_btn">
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+        	</div>
+        </div>
+
+    </div>
+    
+    <!--main-->
+    <div class="main">
+    	
+    	<!--內頁大標-->
+        <!-- InstanceBeginEditable name="in_tit" -->
+        <div class="in_tit"><!--有左選單時class內加has_open-->
+        	<div class="wrap">
+                購物車
+                <div class="in_tit_line">
+                </div>
+            </div>
+        </div>
+        <!-- InstanceEndEditable -->
+        
+        <!-- InstanceBeginEditable name="left_list_area" -->
+        <!-- InstanceEndEditable -->
+        
+        <!--空白-->
+        <div class="space">
+        </div>
+        
+		<!-- InstanceBeginEditable name="main" -->
+        <div class="wrap">
+        	
+            <!--購物車步驟-->
+            <div class="step_area">
+            
+                <div class="step_list now"><!--當前模式時class內加now-->
+                    <strong>
+                        Step 1
+                    </strong>
+                    確認訂單
+                </div>
+                <div class="step_list">
+                    <strong>
+                        Step 2
+                    </strong>
+                    填寫資料
+                </div>
+                <div class="step_list">
+                    <strong>
+                        Step 3
+                    </strong>
+                    完成訂購
+                </div>
+                
+            </div>
+            
+            <!--白底-->
+            <div class="white_bg">
+            
+                <!--購物車區塊-->
+                <div class="cart_area">
+                    
+                    <!--購物車商品列表-->
+                    <div class="cart_product_list_area">
+                        
+                        <table cellpadding="0" cellspacing="0" border="0">
+                        
+                            <tr>
+                                <td width="52%">
+                                    商品名稱
+                                </td>
+                                <td width="14%">
+                                    單價
+                                </td>
+                                <td width="10%">
+                                    數量
+                                </td>
+                                <td width="14%">
+                                    小計
+                                </td>
+                                <td width="10%">
+                                    刪除
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="cPL_product">
+                                        <a href="../onlineshop/onlineshop_in.html">
+                                            <img src="../product/images/demo_1.png" />
+                                        </a>
+                                        <div class="cPL_product_tit">
+                                            303ZT softbank
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-name="單價： ">
+                                    $ 1,542
+                                </td>
+                                <td data-name="數量： ">
+                                    <select>
+                                        <option>
+                                            1
+                                        </option>
+                                        <option>
+                                            99
+                                        </option>
+                                    </select>
+                                </td>
+                                <td data-name="小計： ">
+                                    $ 542
+                                </td>
+                                <td>
+                                    <input type="button" value="X" />
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="cPL_product">
+                                        <a href="../onlineshop/onlineshop_in.html">
+                                            <img src="../product/images/demo_2.png" />
+                                        </a>
+                                        <div class="cPL_product_tit">
+                                           303ZT softbank
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-name="單價： ">
+                                    $ 1,542
+                                </td>
+                                <td data-name="數量： ">
+                                    <select>
+                                        <option>
+                                            2
+                                        </option>
+                                        <option>
+                                            99
+                                        </option>
+                                    </select>
+                                </td>
+                                <td data-name="小計： ">
+                                    $ 1,084
+                                </td>
+                                <td>
+                                    <input type="button" value="X" />
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+            <br/><br/>
+            
+            <!--白底-->
+            <div class="white_bg">
+            
+                <!--購物車區塊-->
+                <div class="cart_area">
+                    
+                    <!--購物車合計區-->
+                    <div class="cart_total_area">
+                    
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr>
+                                <td>
+                                    合計
+                                </td>
+                                <td>
+                                    $ 
+                                    <strong>
+                                        1,084
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    紅利餘額
+                                </td>
+                                <td>
+                                    <strong>
+                                        6
+                                    </strong>
+                                    點
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    紅利抵扣
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="bonus" />
+                                        是
+                                    </label>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" name="bonus" />
+                                        否
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    抵扣金額
+                                </td>
+                                <td>
+                                    $ 
+                                    <strong>
+                                        0
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    寄送地區
+                                </td>
+                                <td>
+                                    <select>
+                                        <option>
+                                            台灣本島
+                                        </option>
+                                        <option>
+                                            離島
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    運費
+                                </td>
+                                <td>
+                                    $ 
+                                    <strong>
+                                        200
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    總計
+                                </td>
+                                <td>
+                                    $ 
+                                    <strong>
+                                        1,284
+                                    </strong>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+            <br/>
+            
+            <!--按鍵區-->
+            <div class="btn_area">
+                <input type="submit" value="確認送出" onclick="location='../cart/cart2.html'" />
+                <input type="button" value="繼續購物" onclick="location='../product/product.html'" />
+                <div class="clearfloat">
+                </div>
+            </div>
+            
+        </div>
+        <!-- InstanceEndEditable -->
+        
+        <!--空白-->
+        <div class="space">
+        </div>
+
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	
+        <!--內頁廣告區-->
+        <div class="in_ad_area">
+        	<div class="wrap">
+                <div class="in_ad_list">
+                    <span><!--←←←← 修改部分 by kevin 20160921 如果沒有連結時<a>改為<span> ←←←←-->
+                        <img src="../index/images/link_demo_1.png" width="100%" />
+                        <div class="inAdList_tit">
+                        	走吧！讓我們旅行去～AJ的旅行地圖
+                        </div>
+                    </span>
+                </div>
+                <div class="in_ad_list">
+                    <a href="#">
+                        <img src="../index/images/link_demo_2.png" width="100%" />
+                        <div class="inAdList_tit">
+                        	旅遊美食部落格哪裡找?推薦知名人氣部落客快速查
+                        </div>
+                    </a>
+                </div>
+                <div class="in_ad_list">
+                    <a href="#">
+                        <img src="../index/images/link_demo_3.png" width="100%" />
+                        <div class="inAdList_tit">
+                        	連假要去哪裡玩？排行程別錯過，鄉民最推的10大旅遊部落客
+                        </div>
+                    </a>
+                </div>
+                <div class="in_ad_list">
+                    <a href="#">
+                        <img src="../index/images/link_demo_4.png" width="100%" />
+                        <div class="inAdList_tit">
+                        	推薦行程規劃@必玩景點
+                        </div>
+                    </a>
+                </div>
+				<div class="clearfloat">
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--版腳主按鍵-->
+        <div class="footer_navbar">
+        	<div class="wrap">
+            
+            	<div class="f_nav">
+                	<a href="../about/about.html">
+                    	公司簡介
+                    </a>
+                </div>
+                <div class="f_nav">
+                	<a href="../contact/contact.html">
+                    	聯絡我們
+                    </a>
+                </div>
+                <div class="f_nav">
+                	<a href="../news/news.html">
+                    	最新消息
+                    </a>
+                </div>
+                
+                <div class="f_nav">
+                	<a href="#">
+                    	出遊首選
+                    </a>
+                </div>
+                <div class="f_nav">
+                	<a href="#">
+                    	使用教學
+                    </a>
+                </div>
+                <div class="f_nav">
+                	<a href="#">
+                    	名人推薦
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="wrap">
+        	
+            <!--版腳logo-->
+            <div class="footer_logo">
+            	<a href="../index/index.html">
+                	<img src="../images/footer_logo.png" width="124" />
+                </a>
+            </div>
+            
+            <!--版腳公司資訊區-->
+            <div class="footer_company_info">
+            	
+                <span>桔豐科技股份有限公司</span><span>jetfi technology co.,ltd.</span>
+                <br/>
+                <span data-name='服務電話：'>02-2751-9338</span>
+                <span data-name='客服信箱：'><a href="mailto:service@jetfi-tech.com">service@jetfi-tech.com</a></span>
+                <br/>
+                <span data-name='公司地址：'>10572台北市松山區南京東路三段248號3樓之二(兄弟飯店對面) </span>
+                
+                <div class="copyright">
+                	© 2016 <a href="http://www.geneinfo.com.tw/">Genesis Information Inc.</a> All rights reserved.
+                </div>
+                
+            </div>
+            
+            <!--qr code-->
+            <div class="qrCode">
+            
+            	<div class="qrCodeList">
+            		<img src="../images/qr_code.png" width="78" height="78" />
+                    <div class="qrCodeListTit">
+                    	Line
+                    </div>
+                </div>
+                <div class="qrCodeList">
+            		<img src="../images/qr_code.png" width="78" height="78" />
+                    <div class="qrCodeListTit">
+                    	WeChat
+                    </div>
+                </div>
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <!--會員登入區-->
+    <div class="member_login_area">
+        <div class="mL_info">
+        	
+            <div class="mL_close">
+            	X
+            </div>
+        	
+            <div class="mLI_logo">
+            	<img src="../images/logo.png" height="34"/>
+            </div>
+            
+            <div class="mLI_input">
+            	<input type="text" placeholder="帳號(Email)" />
+            </div>
+            <div class="mLI_input">
+            	<input type="password" placeholder="密碼" />
+            </div>
+            <div class="mLI_input">
+            	<label>
+                    <input type="checkbox" />
+                    記住帳號
+                </label>
+            </div>
+            
+            <div class="mLI_btn">
+            	<input type="submit" value="登入" onclick="location='../member/rent_order_list.html'" />
+                <input type="button" value="加入會員" onclick="location='../member/add.html'" />
+                <div class="clearfloat">
+                </div>
+            </div>
+            
+            <!--<hr />-->
+            
+            <div class="mLI_bottom">
+                <div class="mLI_tit">
+                    忘記您的密碼了? / 還未收到認證信?
+                </div>
+                
+                <div class="mLI_input">
+                    <input type="text" placeholder="請輸入您的帳號(Email)" />
+                </div>
+                
+                <div class="mLI_btn mLI_btn_2">
+                    <input type="submit" value="重新取得密碼" />
+                    <input type="submit" value="重發認證信" />
+                    <div class="clearfloat">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_jetfi-tech/cart/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 04:04:34 GMT -->
+</html>

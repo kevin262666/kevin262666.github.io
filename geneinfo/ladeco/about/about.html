@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/about/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:34:10 GMT -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>La déco : CASA & SELECTS - ESTD 1975</title>
+
+<link rel="shortcut icon" href="../images/favicon.html" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+
+	<!--主按鍵寬度調整用-->
+	<script type="text/javascript">
+        $(document).ready(function(e) {
+            
+            var setNavbarWidth=function(){
+                var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+                var logoWidth=document.getElementById("logo").offsetWidth;             //logo寬度
+                var searchWidth=document.getElementById("header_search").offsetWidth;  //版頭產品搜尋寬度
+                var loginWidth=document.getElementById("header_login").offsetWidth;    //版頭會員登入寬度
+                var navbarWidth=document.getElementById("navbar").offsetWidth;         //主按鍵寬度
+                
+                $(".navbar").css("width",bodywidth-36-logoWidth-searchWidth-loginWidth);
+            }
+            
+            setNavbarWidth();
+            
+            $(window).resize(function(e) {
+                setNavbarWidth();
+            });
+        });
+    </script>
+    
+    <!--導航菜單懸浮置頂-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			
+			if( $(".navbar-example").length > 0 ){             //判斷是否有class=navbar-example這個DOM
+				                                               //如果有
+				$(window).scroll(function(){
+					if( $(window).scrollTop() < 57 ){          //窗口滾動小於57 移除style
+						$('.header').removeAttr("style");
+						$('.navbar-example').removeAttr("style");
+					}if( $(window).scrollTop() > 57 ){         //窗口大於57 讓版頭和滾動偵測導航停在要的位置
+						$('.header').css("position","fixed").css("top","-57px");
+						$('.navbar-example').css("position","fixed").css("top","0px");
+					}
+				});
+			}else{
+				                                               //沒有的話
+				$(".header").addClass("header_fixed");         //版頭固定在上方
+				$(".main").addClass("main_no_navbar-example"); //main的上方撐出版頭的高度
+			}
+			
+		});
+	</script>
+    
+    <!--錨點平滑滾動效果-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+
+	<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+	
+    <!--錨點用-->
+    <div id="top">
+    </div>
+    
+    <!--版頭-->
+	<div class="header">
+    	<div class="wrap">
+        	
+            <!--logo-->
+        	<div class="logo" id="logo">
+            	<a href="../index/index.html">
+               	<img src="../images/logo.png" width="120" />
+                </a>
+            </div>
+            
+            <!--主按鍵-->
+            <div class="navbar" id="navbar">
+            
+            	<div class="h_nav">
+                	<a href="about.html" class="transition_02s">
+                    	About us
+                        <br/>
+                        關於傢作
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../product/product.html" class="transition_02s">
+                    	Products
+                        <br/>
+                        產品內容
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../crafts/crafts.html" class="transition_02s">
+                    	Crafts
+                        <br/>
+                        材料工藝
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../service/service.html" class="transition_02s">
+                    	Service
+                        <br/>
+                        服務項目
+                    </a>
+                </div>
+                <div class="h_nav">
+                	<a href="../shopping/shopping.html" class="transition_02s">
+                    	Shopping
+                        <br/>
+                        購物筆記
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+          	<script type="text/javascript">
+				$(document).ready(function(e) {
+                    $(".h_l_member_btn").click(function(e) {
+                        $(".header_member_open").slideToggle();
+                    });
+                });
+			</script>
+            
+            <!--版頭會員登入-->
+            <div class="header_login" id="header_login">
+            	<!--<a href="../member/login.html" class="transition_02s">
+                	LOGIN
+                </a>-->
+                <!--↑會員登入前  會員登入後↓-->
+                <a href="javascript: void(0)" class="transition_02s h_l_member_btn">
+                	MEMBER
+                </a>
+            </div>
+            
+            <!--版頭會員專區選單-->
+            <div class="header_member_open">
+            	<a href="../member/member_modify.html" class="transition_02s">
+                	會員資料修改
+                </a>
+                <a href="../member/order_list.html" class="transition_02s">
+                	<!--↓↓↓↓ 修改部分 by kevin 20160414 開始 ↓↓↓↓-->
+                	歷史訂單查詢
+                    <!--↑↑↑↑ 修改部分 by kevin 20160414 結束 ↑↑↑↑-->
+                </a>
+                <a href="../member/login.html" class="transition_02s">
+                	會員登出
+                </a>
+            </div>
+            
+            <!--版頭產品搜尋-->
+            <div class="header_search" id="header_search">
+            	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                    <input type="text" class="transition_03s" />
+                    <label class="lsf search">
+                    	<input type="submit" />
+                    </label>
+                </form>
+            </div>
+            
+            <!--↓↓↓↓ 修改部分 by kevin 20151102 ↓↓↓↓-->
+            <script type="text/javascript">
+				$(document).ready(function(e) {
+					//手機版次選單展開
+                    $(".m_m_l_has_open a").click(function(e) {
+                        $(this).next(".m_m_l_open_area").slideToggle();
+                    });
+					
+					//手機版主按鍵展開
+					$(".mobile_menu_brn").click(function(e) {
+                        $(".mobile_menu_list_area").slideToggle();
+                    });
+					
+					$(window).resize(function(e) {
+						var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+						
+						if ( bodywidth >= 910 ) {
+							$(".mobile_menu_list_area").removeAttr("style");
+						}
+
+                    });
+					
+                });
+			</script>
+            <!--手機版按鍵區-->
+            <div class="mobile_menu_area">
+            
+                <!--手機版menu鍵-->
+                <div class="mobile_menu_brn">
+                    MENU
+                </div>
+                
+                <!--手機版主按鍵-->
+                <div class="mobile_menu_list_area">
+                
+                	<div class="mobile_menu_list m_m_l_search"><!--產品搜尋-->
+                    	<form action="http://lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/search/search.html">
+                            <input type="text" placeholder="產品搜尋" />
+                            <input type="submit" value="" />
+                        </form>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="about.html">
+                            About us
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../product/product.html">
+                            Products
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../crafts/crafts.html">
+                            Crafts
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../service/service.html">
+                            Service
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list">
+                        <a href="../shopping/shopping.html">
+                            Shopping
+                        </a>
+                    </div>
+                    <div class="mobile_menu_list m_m_l_has_open"><!--有次選單的-->
+                        <a href="javascript:void(0);">
+                            MEMBER
+                        </a>
+                        
+                        <!--展開的次選單-->
+                        <div class="m_m_l_open_area">
+                        	<div class="m_m_l_open">
+                            	<a href="../member/member_modify.html">
+                                	會員資料修改
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="../member/order_list.html">
+                                	詢價回覆查詢
+                                </a>
+                            </div>
+                            <div class="m_m_l_open">
+                            	<a href="../member/login.html">
+                                	會員登入
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!--↑↑↑↑ 修改部分 by kevin 20151102 ↑↑↑↑-->
+            
+            <div class="clearfloat">
+            </div>
+        
+        </div>
+    </div>
+    
+	<!-- InstanceBeginEditable name="navbar-example" -->
+    <!--滾動偵測導航-->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="../js/bootstrap-3.3.5-dist/bootstrap.js"></script>
+    <script type="text/javascript">
+		//通过 JavaScript 调用滚动监听，选取要监听的元素，然后调用 .scrollspy() 函数
+		$('body').scrollspy({ 
+			target: '.navbar-example',
+			offset: 200,
+		});
+	</script>
+    <div class="navbar-example">
+        <ul class="nav">
+            <li class="active">
+            	<a href="#nav_content_1">
+                	品牌精神
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_2">
+                	歷史沿革
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_3">
+                	生產團隊
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_4">
+                	品質控管
+                </a>
+            </li>
+            <li>
+            	<a href="#nav_content_5">
+                	人才招募
+                </a>
+            </li>
+        </ul>
+	</div>
+    <!-- InstanceEndEditable -->
+    
+    <!--main-->
+    <div class="main">
+	<!-- InstanceBeginEditable name="main" -->
+    
+    	<!--滾動偵測導航對應到的DOM-->
+      	<div id="nav_content_1">
+        	
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_1.png" width="48" height="48" />
+                    <br/>
+                    品牌精神
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+				//讓banner高度和螢幕一樣高
+				$(document).ready(function(e) {
+                    var bodyHeight=document.documentElement.clientHeight-194;<!--修改部分 by kevin 20150820 增加-194-->
+					$(".about_content_1_text").css("height",bodyHeight);
+                });
+			</script>
+            
+            <!--關於傢作-品牌精神的圖片文字區-->
+            <div class="about_content_1_text" style="background: url(images/about_1_img.jpg) center center; background-size: cover;">
+            	<div class="about_content_1_text_area">
+                	<div class="a_c_1_t_tit">
+                    	空間主角換人當
+                    </div>
+                    <div class="a_c_l_t_text">
+                    	簡單的裝修設計，放上具有獨特魅力的主題性傢俱，一幅傢俱就能決定空間的風景;是自我個性的表現、是帶的走的裝潢、更是可以流傳於後世的珍品。保留法式風格的歷史DNA，不按牌理出牌，卻時尚，更浪漫、也冒險，更經典。愈成熟、愈簡單，空間也是一樣，我們重新定義用傢俱取代裝潢『空間主角換人當』的當代精神。『Furniture Glories』用傢俱的光芒閃耀您的空間、France Glories在法式的展現下發現不敗魅力。傢作，純粹，傢的作品，打造，家中佳作。
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+      	<div id="nav_content_2">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_2.png" width="48" height="48" />
+                    <br/>
+                    歷史沿革
+                </div>
+            </div>
+            
+            <!--網編區-->
+            <div class="text_area">
+            	
+                <div style="width:50%; border-right: solid 1px #000; float:left; height:350px; text-align: right;">
+                	<p style="font-weight:bold; padding: 30px 32px 20px 0px; text-align: left; width: 479px; display: inline-block;">
+                    	與傳統走向未來
+                    </p>
+                    <p style="font-size: 15px; line-height: 24px; padding: 0px 32px 30px 0px; text-align: left; width: 484px; display: inline-block; text-align: justify;">
+                    	談論未來，必須了解過去。每一個成功的背後有著承諾和創造性的同伴希望一起努力有所作為。每一個成功的願景，指導著共同路徑的未來。
+                        <br/>
+                        在傢俱產業經過近40年，回頭看公司的歷史 - 從個體製作的台灣內銷到出口全世界的軟體傢俱，是全球傢俱產業的主要製造商之一。與此同時，憑藉雄厚的過去和充滿希望的未來，提供客戶洞察趨勢流行的產品。
+                    </p>
+                </div>
+                
+                <div style="width:49%; float:right;">
+                	<img src="http://lab.geneinfo.com.tw:82/ladeco/uploads/root//about/demo_1.png" width="501" height="339" />
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+                <div style=" text-align:center;">
+                	<div style="width:5px; height:5px; border-radius:100%; background:#000; display:inline-block; position: relative; top: -3px; left: 3px;">
+                    </div>
+                    <br/>
+                    <em style="font-size:36px; font-family: monotype corsiva; position: relative; left: -5px;">
+                    	1974
+                    </em>
+                </div>
+                
+                <br/>
+                
+                <div style="width:49%; float:left; text-align: right;">
+                	<img src="http://lab.geneinfo.com.tw:82/ladeco/uploads/root//about/demo_2.png" width="501" height="339" />
+                </div>
+                
+                <div style="width:50%; border-left: solid 1px #000; float:right; height:350px;">
+                	<p style="padding: 22px 0px 20px 32px; font-weight: bold; width: 484px;">
+                    	從1974年談起
+                    </p>
+                    <p style=" font-size: 15px; line-height: 24px; padding: 0px 0px 30px 32px; width: 484px; text-align: justify;">
+                    	1974年，公司成立的三年前，台北內湖附近的一個村莊廢棄農舍裡，創辦人從一塊木頭開始了第一件傢俱的製造。喜歡動手做出好作品的他，始終認為只有法式精神及原木家具能夠傳達手工藝術的精雕神韻，堅持使用質地堅實緻密的天然硬木來做出最好的傢俱作品，在1977這年，正式成立了工作室。 
+                        <br/>
+                        原本的一名小工匠，一個收購木材的貨車小弟，隨著公司的成長，開始購買土地，興建店面和辦公樓，並且設立公司總部。在這個時候也出現了第一個仍用手繪製的產品目錄。1985年已經有20名員工的家具工作室。訂單越來越多，但堅持手工雕刻的創辦人，並沒有改為機器生產。也因如此，公司在市場奠定了高檔傢俱的品牌地位。
+                    </p>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+                <div style=" text-align:center;">
+                	<div style="width:5px; height:5px; border-radius:100%; background:#000; display:inline-block; position: relative; top: -3px; left: 2px;">
+                    </div>
+                    <br/>
+                    <em style="font-size:36px; font-family: monotype corsiva; position: relative; left: -5px;">
+                    	1988
+                    </em>
+                </div>
+                
+                <br/>
+                
+                <div style="width:50%; border-right: solid 1px #000; float:left; height:350px; text-align: right;">
+                	<p style="font-weight:bold; padding: 30px 32px 20px 0px; text-align: left; width: 479px; display: inline-block;">
+                    	在1988年轉變
+                    </p>
+                    <p style="font-size: 15px; line-height: 24px; padding: 0px 32px 30px 0px; text-align: left; width: 484px; display: inline-block; text-align: justify;">
+                    	1988年創建出北台灣高品質木製傢俱的巨大成功。我們將繼續呈現再一次開拓性的工作，重新組織公司為名城有限公司。成功所導致資源的不足，1988年設立海外生產線，選定印尼為生產廠地點，重要決定因素為原料取得與製造技術。全世界80%的傢俱木頭產製印尼，主要以桃花心木、柚木、檀木、胡桃木等為主，是傢俱藝匠們的首選材料。
+                        <br/>
+                        將業務範圍拓展至製造、進出口及銷售傢俱等，同樣的進貨儲藏空間仍是不夠。1990年至汐止買下一個大型的倉儲空間，規劃現代化的組裝、分裝部門，多年來，穩健踏實的經營，逐步在市場上建立良好的商譽，並開始全球化的事業布局。
+                    </p>
+                </div>
+                
+                <div style="width:49%; float:right;">
+                	<img src="http://lab.geneinfo.com.tw:82/ladeco/uploads/root//about/demo_3.png" width="501" height="339" />
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+                <div style=" text-align:center;">
+                	<div style="width:5px; height:5px; border-radius:100%; background:#000; display:inline-block; position: relative; top: -3px; left: 3px;">
+                    </div>
+                    <br/>
+                    <em style="font-size:36px; font-family: monotype corsiva; position: relative; left: -5px;">
+                    	1995
+                    </em>
+                </div>
+                
+                <br/>
+                
+                <div style="width:49%; float:left; text-align: right;">
+                	<img src="http://lab.geneinfo.com.tw:82/ladeco/uploads/root//about/demo_4.png" width="501" height="339" />
+                </div>
+                
+                <div style="width:50%; border-left: solid 1px #000; float:right; height:350px;">
+                	<p style="padding: 22px 0px 20px 32px; font-weight: bold; width: 484px;">
+                    	1995年至今
+                    </p>
+                    <p style=" font-size: 15px; line-height: 24px; padding: 0px 0px 30px 32px; width: 484px; text-align: justify;">
+                    	除台北總公司與印尼製造廠外，全球事業與產品多原化時代來臨，1995年設立台南分公司，主要以現代風格產品製造與豪宅室內設計師合作生產為主，成功連成南北傢俱網絡。2000年全台佔已達近萬坪規模，公司內勤人員、雕刻技師、設計師、噴漆技師、到物流人員及業務團隊等，全體系近百人的龐大規模，是目前在台傢俱產業的龍頭之一。 
+                        <br/>
+                        40年來的經驗累積與純精工藝，2015年，我們決定向廣大的客戶直接對話，讓台灣傢俱產業，原本的製造代工、設計師所面臨的設計代工到台灣自有品牌，一條龍生產銷售，提供給予客戶最直接、最有價值的永傳傢俱
+                    </p>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+                <div style=" text-align:center;">
+                	<div style="width:5px; height:5px; border-radius:100%; background:#000; display:inline-block; position: relative; top: -3px; left: 2px;">
+                    </div>
+                    <br/>
+                    <em style="font-size:36px; font-family: monotype corsiva; position: relative; left: -5px;">
+                    	2015
+                    </em>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+      	<div id="nav_content_3">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_3.png" width="48" height="48" />
+                    <br/>
+                    生產團隊
+                </div>
+            </div>
+            
+            <!--輪播特效 第一塊 開始-->
+            <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+            <!--輪播特效 第一塊 結束-->
+            
+            <!--輪播-->
+            <script type="text/javascript">
+				//讓banner高度和螢幕一樣高
+				$(document).ready(function(e) {
+                    var bodyHeight=document.documentElement.clientHeight;
+					$(".banner").css("height",bodyHeight)
+                });
+				
+				//banner內的QA效果
+				$(document).ready(function(e) {
+					$(".b_s_l_text_first").show();
+					
+                    $(".b_s_l_tit_1").click(function(e) {
+						$(".b_s_l_tit_1").not(this).next(".b_s_l_text_1:visible").slideUp();
+                        $(this).next(".b_s_l_text_1").slideToggle();
+                    });
+					$(".b_s_l_tit_2").click(function(e) {
+						$(".b_s_l_tit_2").not(this).next(".b_s_l_text_2:visible").slideUp();
+                        $(this).next(".b_s_l_text_2").slideToggle();
+                    });
+					$(".b_s_l_tit_3").click(function(e) {
+						$(".b_s_l_tit_3").not(this).next(".b_s_l_text_3:visible").slideUp();
+                        $(this).next(".b_s_l_text_3").slideToggle();
+                    });
+                });
+			</script>
+            <div class="banner">
+                <div class="device">
+                	
+                    <!--↓↓↓↓ 修改部分 by kevin 20150821 開始 ↓↓↓↓-->
+                    <!--<a class="arrow-left" href="javascript: void(0)">
+                        <img src="../index/images/left_arrow.png" width="14" height="31" />
+                    </a> 
+                    <a class="arrow-right" href="javascript: void(0)">
+                        <img src="../index/images/right_arrow.png" width="14" height="31" />
+                    </a>-->
+                    <!--↑↑↑↑ 修改部分 by kevin 20150821 結束 ↑↑↑↑-->
+                  
+                    <div class="swiper-container index_banner">
+                        <div class="swiper-wrapper">
+                        
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(images/team_banner.jpg) center center; background-size: cover;">
+                                    
+                                    <!--輪播區收合區-->
+                                    <div class="banner_sliber_area">
+                                    	
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_1">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_1 b_s_l_text_first"><!--class內加b_s_l_text_first為預設展開-->
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_1">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_1">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_1">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_1">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_1">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_1">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(images/team_banner.jpg) center center; background-size: cover;">
+                                    
+                                    <!--輪播區收合區-->
+                                    <div class="banner_sliber_area">
+                                    	
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_2">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_2 b_s_l_text_first"><!--class內加b_s_l_text_first為預設展開-->
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_2">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_2">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_2">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_2">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_2">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_2">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner_img" style="background: url(images/team_banner.jpg) center center; background-size: cover;">
+                                    
+                                    <!--輪播區收合區-->
+                                    <div class="banner_sliber_area">
+                                    	
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_3">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_3 b_s_l_text_first"><!--class內加b_s_l_text_first為預設展開-->
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_3">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_3">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_3">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_3">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        <div class="banner_slider_list">
+                                        	<div class="b_s_l_tit b_s_l_tit_3">
+                                            	台灣製造
+                                            </div>
+                                            <div class="b_s_l_text b_s_l_text_3">
+                                            	為了快速和優質實現個別客戶的要求，我們完全依賴於企業所在地台灣。隨著員工約百人，除原料進口外，我們生產的所有產品加工到組裝都在台灣本島，北部與南部兩生產據點，所有的流程，從接訂單到交貨已優化到最小細節。在超過萬坪的工廠，我廠以最優質的服務來滿足客戶。並在2015年正式加入歐盟，成為國際大廠服務全球。
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="pagination"></div>
+                  
+                </div>
+            </div>
+            
+            <!--輪播特效 第二塊 開始-->
+            <script src="../js/swiper/idangerous.swiper.min.js"></script>
+            <script>
+                //說明資料API http://swiper2.swiper.com.cn/api/index.html
+                var mySwiper = new Swiper('.index_banner',{
+                  //pagination: '.pagination',                 //輪播點點開關
+                  //paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+                  
+                  simulateTouch : false,                     //默认为true，Swiper接受鼠标点击、拖动。 設置為false時無法拖動
+                  loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+                  //grabCursor: true,                        //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+                  calculateHeight : false,                   //当值为true时，Swiper根据slides内容计算容器高度
+                  //autoplay : 5000,                         //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+                  autoplayDisableOnInteraction : false,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+                  //slidesPerView : 2,                       //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。
+                  //loopedSlides :6,                         //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
+                  autoplayStopOnLast : true,                 //如果设置为true，当切换到最后一个slide时停止自动切换。（在没有设置loop的情况下）。Swiper 2.7.0版才會生效
+                  
+                  //左右鍵區1 開始
+                  onInit: function(swiper){
+                      swiper.swipeNext()
+                  },
+                  //左右鍵區1 結束
+                  
+                })
+                
+                //左右鍵區2 開始
+                $('.arrow-left').click(function(){
+                    //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                    mySwiper.swipePrev(); 
+                });
+                $('.arrow-right').click(function(){
+                    //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                    mySwiper.swipeNext(); 
+                });
+                //左右鍵區2 結束
+        
+            </script>
+            <!--輪播特效 第二塊 結束-->
+            
+        </div>
+    
+      	<div id="nav_content_4">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_4.png" width="48" height="48" />
+                    <br/>
+                    品質控管
+                </div>
+            </div>
+            
+            <!--網編區-->
+            <div class="text_area">
+            	
+                <div style="background:#000; color:#fff; padding:20px 40px;">
+                
+                	<p style="font-size:18px; font-weight:bold; padding: 20px 0px 10px 0px;">
+                    	1.完美細節
+                    </p>
+                    <p style="font-size:15px; line-height:24px; padding:0px 0px 20px 0px;">
+                    	傢俱會陪伴人一生很長一段時間。我們清楚知道每樣傢俱的細節，都是責任承擔。在效益、專業與責任的抗衡是我們所重視的工藝根本。
+                    </p>
+                    
+                    <p style="font-size:18px; font-weight:bold; padding: 20px 0px 10px 0px;">
+                    	2.證明
+                    </p>
+                    <p style="font-size:15px; line-height:24px; padding:0px 0px 20px 0px;">
+                    	為客戶提供最好的傢俱品質，我們每一天都再提升效率流程和組織結構。確實已在10年前創建並受到國際客戶的信賴。在那一年的傢俱展中，我們當下直接將產品拆解，客戶看見了無可挑剔的實在，因此建立出許多長久忠實客戶。
+                    </p>
+                    
+                    <p style="font-size:18px; font-weight:bold; padding: 20px 0px 10px 0px;">
+                    	3.材質認證
+                    </p>
+                    <p style="font-size:15px; line-height:24px; padding:0px 0px 20px 0px;">
+                    	我們擁有先進的生產技術和高品質的材料保證卓越品質。布與皮革是傢俱最重要的外衣，所有的材料我們都要求原料商必須經過國家認證SGS等標準。從廣泛的材料測試、品質保證的台灣製造，來提供客戶最安心的選擇。
+                    </p>
+                    
+                    <p style="font-size:18px; font-weight:bold; padding: 20px 0px 10px 0px;">
+                    	4.供應來源
+                    </p>
+                    <p style="font-size:15px; line-height:24px; padding:0px 0px 20px 0px;">
+                    	原料供應商來源也是我們決定品質的條件之一。為確保龐大的供應鏈，堅持使用台灣製造的在地供應商，即使成本無法與大陸相比，但我們毫無保留的挑選配合廠商，將產品保有最好的品質。
+                    </p>
+                    
+                    <p style="font-size:18px; font-weight:bold; padding: 20px 0px 10px 0px;">
+                    	5.品質管制
+                    </p>
+                    <p style="font-size:15px; line-height:24px; padding:0px 0px 20px 0px;">
+                    	即使是進口品牌，大多也是由接單後直接第三方生產國製造，完成後直接配送至該國客戶手上，途中生產國與經銷商的監督品質難以控管。但我們每件傢俱要離開工廠前，必須經過成嚴格審查、由接單人、監督人與單位經理一一確認後才會獲立最終出貨批准，並蓋上製造日印章來確認保固。
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+      	<div id="nav_content_5">
+        
+            <!--滾動偵測導航對應到的DOM的tit-->
+            <div class="nav_content_tit">
+            	<div class="n_c_tit_line">
+                </div>
+                <div class="n_c_tit">
+                	<img src="images/c_n_tit_icon_5.png" width="48" height="48" />
+                    <br/>
+                    人才招募
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+				//讓banner高度和螢幕一樣高
+				$(document).ready(function(e) {
+                    var bodyHeight=document.documentElement.clientHeight;
+					$(".about_content_5_text").css("height",bodyHeight);<!--←←←← 修改部分 by kevin 20150820 可以整個換掉 ←←←←-->
+                });
+			</script>
+            
+            <!--關於傢作-人才招募的圖片文字區-->
+            <!--↓↓↓↓ 修改部分 by kevin 20150820 class內增加about_content_5_text ↓↓↓↓-->
+            <div class="about_content_1_text about_content_5_text" style="background: url(images/about_5_img.jpg) center center; background-size: cover;">
+            	<div class="about_content_5_img_area">
+                	<img src="images/about_5_img.png" width="496" height="131" />
+                </div>
+                <div class="about_content_5_text_area">
+                	<div class="a_c_5_t_tit">
+                    	引領當代傢俱經典，攜手打造世界市場！
+                    </div>
+                    <div class="a_c_5_t_text">
+                    	過去40 年我們成功的將台灣傢俱行銷國際，
+                        <br/>
+                        高端傢俱製造一直是我們所擅長的，
+                        <br/>
+                        近年由各行銷、設計領域所集結的本職專才，
+                        <br/>
+                        在全球化的事業版圖洗禮後，回到台灣這片土地開花結果
+                        <br/>
+                        完整的全程服務與分享，集結各擁專才的天才團隊，
+                        <br/>
+                        共同攜手打造引領世界傢俱的台灣品牌，
+                        <br/>
+                        再次用不同的態度走向世界，再創世界級新價值。
+                        <br/>
+                        <br/>
+                        若您有與我們有共同信念，歡迎與我們成為最佳”夥伴”。
+                    </div>
+                    
+                    <!--修改部分 by kevin 20150820 開始-->
+                    <div class="m_l_l_form_area" style="text-align: center; padding: 10px 29px 35px 29px;">
+                        <input type="button" value="來信" style="width:95px;" onclick="location='../service/service.html#nav_content_2'" />
+                    </div>
+                    <!--修改部分 by kevin 20150820 結束-->
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+	<!-- InstanceEndEditable -->
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	<div class="wrap">
+            
+            <!--footer公司資訊-->
+            <div class="footer_company_info">
+                傢作有限公司
+                <br/>
+                221新北市汐止區南陽街83之3號 | 電話：886-2-8695-1353
+                <br/>
+                No.83-3, Nanyang St., Xizhi Dist., New Taipei City 221, Taiwan (R.O.C.) 
+            </div>
+            
+            <!--copyright-->
+            <div class="copyright">
+                © 2015 <a href="http://www.doweb.com.tw/web/index.jsp">Greatest Idea Strategy Co., Ltd.</a> All Rights Reversed.
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_ladeco/about/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:36:49 GMT -->
+</html>

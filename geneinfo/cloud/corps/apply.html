@@ -1,0 +1,1305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_cloud/corps/apply.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 07:09:46 GMT -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="x-frame-options" content="sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+<title>雲端服務暨巨量資料產業發展計畫網站</title>
+
+<link rel="shortcut icon" href="../images/favicon.html" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+    
+    <script type='text/javascript'>
+		//浮動式top鍵
+		$(function(){
+		　$(window).load(function(){
+		　　$(window).bind('scroll resize', function(){
+		　　var $this = $(this);
+		　　var $this_Top=$this.scrollTop();
+		
+		　　//當高度小於100時，關閉區塊 
+		　　if($this_Top < 100){
+		　　　$('.top_but').stop().animate({bottom:"-70px"});
+		　　　}
+		　　　　if($this_Top > 100){
+		　　　　$('.top_but').stop().animate({bottom:"133px"});
+		　　　 }
+		　　}).scroll();
+		　});
+		});
+	</script>
+    
+    <script type="text/javascript">
+	//錨點平滑滾動效果
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+    
+    <!--電腦版主選單效果 開始-->
+    <script type="text/javascript">
+	$(document).ready(function(e) {
+        $(".nav a").click(function(e) {
+			$(".nav a").not(this).next(".nav_open:visible").slideUp(60);
+            $(this).next(".nav_open").slideToggle(200);
+        });
+    });
+	</script>
+    <!--電腦版主選單效果 結束-->
+    
+    <!--手機版主選單效果 開始-->
+    <script type="text/javascript">
+	$(document).ready(function(e) {
+		$(".mobile_nav_list").hide();
+		
+        $(".m_navbar_but_area").click(function(e) {
+			
+			/*
+			var headerHeight = document.getElementById("top").clientHeight;//取得版頭高度
+			var bodyHidth=document.documentElement.clientHeight;           //取得螢幕可見高度
+			var mobileNavHeight=bodyHidth-headerHeight;                    //將螢幕高度減版頭高度得到手機版主按鍵高度
+			
+			if($(".mobile_nav_list").is(":visible")){
+				//$(".header").css("height",headerHeight);
+				$(".header").animate({
+					height:headerHeight,
+				},600);
+			}else {
+				$(".header").css("height",mobileNavHeight);
+			}
+			*/
+			
+            $(".m_navbar_but").toggleClass("menu_but_animaiton");
+			$(".mobile_nav_list").slideToggle(500);
+        });
+		
+		//主選單第2層收合
+		$(".m_nav_open").hide();
+		
+		$(".m_nav a").click(function(e) {
+            $(this).next(".m_nav_open").slideToggle();
+        });
+		
+		//如果螢幕大於960px 手機版主按鍵就隱藏
+		$(window).resize(function() {
+			var bodywidth=document.documentElement.clientWidth;//取得螢幕可見寬度
+			if(bodywidth>960){
+				$(".mobile_nav_list").hide();
+				$(".m_navbar_but").removeClass("menu_but_animaiton");
+			}
+		});
+		
+    });
+	</script>
+    <!--手機版主選單效果 結束-->
+
+<!-- InstanceBeginEditable name="head" -->
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$("#ok").hide();
+		$("#check1").attr("checked",false);//讓chcekbox預設不勾選
+		
+		//checkbox勾選時顯示相應的區塊，反之則隱藏
+        $("#check1").click(function(){
+			if($("#check1").attr('checked')){
+			   //如給被勾選將做什麼事
+				$("#ok").toggle();
+				$("#no").hide();
+			}else{
+			   //沒被勾選做什麼事
+				$("#no").toggle();
+				$("#ok").hide();
+			}
+		});
+	});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header" id="header">
+    	
+        <!--版頭上-->
+    	<div class="header_top">
+            <div class="wrap">
+            
+            	<!--logo-->
+            	<div class="logo">
+                	<a href="../index/index.html" accesskey="H" title="返回首頁">
+                    	<img src="../images/logo.png" width="502" height="42" alt="網站LOGO" />
+                    </a>
+                </div>
+                
+                <!--手機版logo-->
+                <div class="mobile_logo">
+                	<a href="../index/index.html" title="返回首頁">
+                    	<img src="../images/mobile_logo.png" width="1050" height="216" alt="網站LOGO" />
+                    </a>
+                </div>
+                
+                <!--版頭上會員登入-->
+                <div class="header_top_member_login">
+                	<a href="../member/member_login.html" class="transition_02s" title="會員登入">
+                    	會員登入▼<!--或會員登出-->
+                    </a>
+                </div>
+                
+                <!--版頭上聯絡我們-->
+                <div class="header_top_contact">
+                	<a href="../contact/contact.html" class="transition_02s" title="聯絡我們">
+                    	聯絡我們
+                    </a>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+                <!--手機主按鍵-->
+                <div class="mobile_navbar">
+                    
+                    <div class="m_navbar_but_area">
+                        <div class="m_navbar_but">
+                            <span>
+                            </span>
+                            <span>
+                            </span>
+                            <span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+        
+        <!--主按鍵-->
+        <div class="navbar">
+            <div class="wrap">
+            
+                <div class="nav">
+                    <a href="javascript: void(0)" class="transition_02s" accesskey="A" title="活動專區 快速鍵A展開選單">
+                        活動專區
+                    </a>
+                    
+                    <!--主選單展開-->
+                    <div class="nav_open">
+                    	<div class="nav_open_list">
+                        	<a href="../activity/activity.html" class="transition_02s" title="活動訊息">
+                            	活動訊息
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../activity/activity.html" class="transition_02s" title="宣傳影片">
+                            	宣傳影片
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../activity/activity.html" class="transition_02s" title="活動照片">
+                            	活動照片
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                    <a href="javascript: void(0)" class="transition_02s" accesskey="B" title="研究/成果專區 快速鍵B展開選單">
+                        研究/成果專區
+                    </a>
+                    
+                    <!--主選單展開-->
+                    <div class="nav_open">
+                    	<div class="nav_open_list">
+                        	<a href="../result/result.html" class="transition_02s" title="研究專題">
+                            	研究專題
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../result/result.html" class="transition_02s" title="案例分享">
+                            	案例分享
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav">
+                    <a href="javascript: void(0)" class="transition_02s" accesskey="C" title="計劃簡介 快速鍵C展開選單">
+                        計劃簡介
+                    </a>
+                    
+                    <!--主選單展開-->
+                    <div class="nav_open">
+                    	<div class="nav_open_list">
+                        	<a href="../about/about.html" class="transition_02s" title="關於我們">
+                            	關於我們
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../about/about.html" class="transition_02s" title="計劃架構">
+                            	計劃架構
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../about/about.html" class="transition_02s" title="主要任務">
+                            	主要任務
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../about/about.html" class="transition_02s" title="服務項目">
+                            	服務項目
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../about/about.html" class="transition_02s" title="推動重點">
+                            	推動重點
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../about/about_download.html" class="transition_02s" title="政策宣導">
+                            	政策宣導
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav">
+                    <a href="javascript: void(0)" class="transition_02s" accesskey="G" title="雲端產業服務團 快速鍵G展開選單">
+                        雲端產業服務團
+                    </a>
+                    
+
+                    <!--主選單展開-->
+                    <div class="nav_open">
+                    	<div class="nav_open_list">
+                        	<a href="corps_about.html" class="transition_02s" title="雲端產業服務團介紹">
+                            	雲端產業服務團介紹
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="company_search.html" class="transition_02s" title="廠商搜尋/介紹">
+                            	廠商搜尋/介紹
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="seminar_list.html" class="transition_02s" title="服務團說明會報名">
+                            	服務團說明會報名
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="download.html" class="transition_02s" title="相關文件下載">
+                            	相關文件下載
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="apply.html" class="transition_02s" title="入團申請">
+                            	入團申請
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="platform.html" class="transition_02s" title="需求登錄平台">
+                            	需求登錄平台
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav">
+                    <a href="javascript: void(0)" class="transition_02s" accesskey="I" title="會員專區 快速鍵I展開選單">
+                        會員專區
+                    </a>
+                    
+                    <!--主選單展開-->
+                    <div class="nav_open">
+                    	<div class="nav_open_list">
+                        	<a href="../member/member_add.html" class="transition_02s" title="加入會員">
+                            	加入會員
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../member/member_modify.html" class="transition_02s" title="會員個人資料修改">
+                            	會員個人資料修改
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../member/apply.html" class="transition_02s" title="入團申請資料">
+                            	入團申請資料
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../member/review_status.html" class="transition_02s" title="審查狀態查詢">
+                            	審查狀態查詢
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../member/activity_list.html" class="transition_02s" title="已報名活動查詢">
+                            	已報名活動查詢
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../member/data_maint.html" class="transition_02s" title="產品與服務維護">
+                            	產品與服務維護
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--手機主按鍵列表-->
+        <div class="mobile_nav_list">
+        
+        	<div class="m_nav m_nav_member_login">
+                <a href="../member/member_login.html">
+                	會員登入<!--或會員登出-->
+                </a>
+            </div>
+        	
+            <div class="wrap">
+        
+                <div class="m_nav">
+                    <a href="javascript: void(0)">
+                        <span class="m_n_tw">
+                            活動專區
+                        </span>
+                    </a>
+                    
+                    <!--手機版主按彈談出次選單-->
+                    <div class="m_nav_open">
+                        <div class="m_n_o_list">
+                            <a href="../activity/activity.html">
+                                活動訊息
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../activity/activity.html">
+                                宣傳影片
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../activity/activity.html">
+                                活動照片
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="m_nav">
+                    <a href="javascript: void(0)">
+                        <span class="m_n_tw">
+                            研究/成果專區
+                        </span>
+                    </a>
+                    
+                    <!--手機版主按彈談出次選單-->
+                    <div class="m_nav_open">
+                        <div class="m_n_o_list">
+                            <a href="../result/result.html">
+                                研究專題
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../result/result.html">
+                                案例分享
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m_nav">
+                    <a href="javascript: void(0)">
+                        <span class="m_n_tw">
+                            計畫簡介
+                        </span>
+                    </a>
+                    
+                    <!--手機版主按彈談出次選單-->
+                    <div class="m_nav_open">
+                        <div class="m_n_o_list">
+                            <a href="../about/about.html">
+                                關於我們
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../about/about.html">
+                                計畫架構
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../about/about.html">
+                                主要任務
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../about/about.html">
+                                服務項目
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../about/about.html">
+                                推動重點
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../about/about_download.html">
+                                政策宣導
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m_nav">
+                    <a href="javascript: void(0)">
+                        <span class="m_n_tw">
+                            雲端產業服務團
+                        </span>
+                    </a>
+                    
+                    <!--手機版主按彈談出次選單-->
+                    <div class="m_nav_open">
+                        <div class="m_n_o_list">
+                            <a href="corps_about.html">
+                                雲端產業服務團介紹
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="company_search.html">
+                                廠商搜尋/介紹
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="seminar_list.html">
+                                服務團說明會報名
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="download.html">
+                                相關文件下載
+                            </a>
+                        </div>
+                        <div class="m_n_o_list mobile_none"><!--手機版不顯示時class內加mobile_none-->
+                            <a href="apply.html">
+                                入團申請
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="platform.html">
+                                需求登錄平台
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m_nav">
+                    <a href="javascript: void(0)">
+                        <span class="m_n_tw">
+                            會員專區
+                        </span>
+                    </a>
+                    
+                    <!--手機版主按彈談出次選單-->
+                    <div class="m_nav_open">
+                        <div class="m_n_o_list">
+                            <a href="../member/member_add.html">
+                                加入會員
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../member/member_modify.html">
+                                會員個人資料修改
+                            </a>
+                        </div>
+                        <div class="m_n_o_list mobile_none"><!--手機版不顯示時class內加mobile_none-->
+                            <a href="../member/apply.html">
+                                入團申請資訊
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../member/review_status.html">
+                                審查狀態查詢
+                            </a>
+                        </div>
+                        <div class="m_n_o_list">
+                            <a href="../member/activity_list.html">
+                                已報名活動查詢
+                            </a>
+                        </div>
+                        <div class="m_n_o_list mobile_none"><!--手機版不顯示時class內加mobile_none-->
+                            <a href="../member/data_maint.html">
+                                產品與服務維護
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m_nav">
+                    <a href="../contact/contact.html">
+                        <span class="m_n_tw">
+                            聯絡我們
+                        </span>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--撐版頭高度用-->
+    <script type="text/javascript">
+	$(document).ready(function(e) {
+        var headerHeight=document.getElementById("header").clientHeight;
+		$(".find_heder_height").css("height",headerHeight);
+		
+		$(window).resize(function() {
+			var headerHeight=document.getElementById("header").clientHeight;
+			$(".find_heder_height").css("height",headerHeight);
+		});
+		
+    });
+	</script>
+    <div class="find_heder_height" id="top">
+    </div>
+    
+    <!-- InstanceBeginEditable name="in_big_tit" -->
+    <!--內頁大標-->
+	<div class="in_big_tit font_sans_serif">
+    	入團申請
+    </div>
+    <!-- InstanceEndEditable -->
+    
+    <!-- InstanceBeginEditable name="main" -->
+    <!--main-->
+    <div class="main">
+        <div class="wrap">
+            
+            <!--網編區-->
+            <div class="text_area">
+            	
+                <p style="font-size:16px; text-align:center; padding:0px 0px 30px 0px; font-weight:bold;">
+                	經濟部工業局 雲端產業服務團參團申請須知
+                </p>
+                
+                <p style="font-size:12px; line-height:25px; letter-spacing:1px;">
+                    為加速產業向雲端遷移，縮短產業間雲端整備度落差，創造成熟雲端服務發展環境，達到深化產業雲端應用目的，經濟部工業局成立「雲端產業服務團」，透過盤整國內
+                    雲端服務能量，協助雲端應用推動、開創商機，搭配輔導與媒合機制，促成應用典範擴散，同時整合我國軟硬開發能耐，打造多元、創新之行業典範雲端應用，提昇產業整體競爭力。
+                    <br/><br/>
+                    有關「雲端產業服務團」之申請、審查、入團證明及輔導推動等相關行政作業，由經濟部工業局委託財團法人資訊工業策進會協助辦理。
+                </p>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    一、申請資格
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (一)、依法辦理公司登記或商業登記之獨資、合夥事業或公司。
+                    <br/>
+                    (二)、具備雲端產品提供或雲端服務營運能力。
+                    <br/>
+                    (三)、取得台灣雲端運算產業協會、台北市電腦商業同業公會、中華民國資訊軟體協會等公協會推薦，或已有具體實績或有得獎紀錄之業者。
+                </p>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    二、參團選擇
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    申請企業可選擇參與A團或B團(可同時申請)：
+                    <br/>
+                    (一)、  雲端產業服務團(A團)：提供既有雲端產品與服務，配合產業雲端應用推廣。
+                    <br/>
+                    (二)、  雲端產業服務團(B團)：發展創新雲端應用，協助產業深化應用與轉型升級。
+                </p>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    三、參團效益
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (一)、  雲端產業服務團(A團)：
+                </p>
+                
+                <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                    <li>
+                        策略引導：結合政策工具如投資抵減，鼓勵應用服務採用與推廣。
+                    </li>
+                    <li>
+                        擴散媒合：參與工業局之產業推動與商洽媒合。
+                    </li>
+                    <li>
+                        驗證優化：參與「雲端開發測試平台」提供之測試驗證服務，並申請進階輔導。
+                    </li>
+                </ol>
+                
+                <br/>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (二)、  雲端產業服務團(B團)：
+                </p>
+                
+                <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                    <li>
+                        資源轉介：參與申請主題性之應用開發計畫，發展產業創新應用。
+                    </li>
+                    <li>
+                        技術整合：參與法人或廠商之研發合作，組成技術團隊，完成技術組合。
+                    </li>
+                    <li>
+                        協同推廣：聯結產業公協會，完成業務組合、服務實證與推廣行銷等服務驗證。
+                    </li>
+                </ol>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    四、申請資料
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (一)、雲端產業服務團參團申請表。（附件1）
+                    <br/>
+                    (二)、產品服務說明表。（A團請填附件2、B團請填附件3）
+                </p>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    五、申請程序
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (一)、申請企業填妥申請資料，於申請受理期間內，將申請資料送達執行單位。
+                    <br/>
+                    (二)、符合資格之申請企業，將安排經濟部「雲端開發測試平台」協助雲端產品與服務之驗測。
+                    <br/>
+                    (三)、通過雲端測試之案件，將由審查委員會進行審查，並由執行單位通知審查結果，審查通過者，由執行單位頒發入團證明。
+
+                </p>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    六、收件日期
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    每季開放參團申請，受理期間如下：
+                </p>
+                
+                <ul style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 19px;">
+                    <li>
+                        第一季申請期間：前年度12/20至當年度1/10。
+                    </li>
+                    <li>
+                        第二季申請期間：3/20~4/10。
+                    </li>
+                    <li>
+                        第三季申請期間：6/20~7/10。
+                    </li>
+                    <li>
+                        第四季申請期間：9/20~10/10。
+                    </li>
+                </ul>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    七、收件地點與諮詢服務
+                </strong>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    (一)、收件地點：財團法人資訊工業策進會創新應用服務研究所（台北市松山區民生東路4段133號2樓）
+                    <br/>
+                    (二)、服務窗口：財團法人資訊工業策進會創新應用服務研究所 / 電話：02-6607-2257，吳先生
+                    <br/><br/>
+                    (三)、收件時間認定：
+                </p>
+                
+                <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                    <li>
+                        郵寄方式：以郵務單位郵戳時間為準。
+                    </li>
+                    <li>
+                        親送：以執行單位收件時間為準。
+                    </li>
+                </ol>
+                
+                <br/>
+                
+                <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                    八、 其他資訊
+                </strong>
+                
+                <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                    <li>
+                        申請資格經審查不符合者，不予受理。
+                    </li>
+                    <li>
+                        檢送之相關申請文件，無論是否通過審查，均不予退還。
+                    </li>
+                </ol>
+                
+                <br/>
+                
+                <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                    如有任何疑問，請洽(02) 6607-2257 ,吳先生 或來信 troywu@iii.org.tw 指教~謝謝
+                </p>
+                
+                
+            </div>
+            
+            <!--表單區-->
+            <div class="form_area">
+            	<!--條款區-->
+                <div class="provision_area">
+                    
+                    <div class="provision_top_text">
+                        請仔細閱讀以下內容後勾選同意：
+                    </div>
+                    
+                    <div class="provision_text_area">
+                    	
+                        <!--網編區-->
+                        <div class="text_area">
+                        
+                            <p style="font-size:12px; line-height:25px; letter-spacing:1px;">
+                                為加速產業向雲端遷移，縮短產業間雲端整備度落差，創造成熟雲端服務發展環境，達到深化產業雲端應用目的，經濟部工業局成立「雲端產業服務團」，透過盤整國內
+                                雲端服務能量，協助雲端應用推動、開創商機，搭配輔導與媒合機制，促成應用典範擴散，同時整合我國軟硬開發能耐，打造多元、創新之行業典範雲端應用，提昇產業整體競爭力。
+                                <br/><br/>
+                                有關「雲端產業服務團」之申請、審查、入團證明及輔導推動等相關行政作業，由經濟部工業局委託財團法人資訊工業策進會協助辦理。
+                            </p>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                一、申請資格
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (一)、依法辦理公司登記或商業登記之獨資、合夥事業或公司。
+                                <br/>
+                                (二)、具備雲端產品提供或雲端服務營運能力。
+                                <br/>
+                                (三)、取得台灣雲端運算產業協會、台北市電腦商業同業公會、中華民國資訊軟體協會等公協會推薦，或已有具體實績或有得獎紀錄之業者。
+                            </p>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                二、參團選擇
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                申請企業可選擇參與A團或B團(可同時申請)：
+                                <br/>
+                                (一)、  雲端產業服務團(A團)：提供既有雲端產品與服務，配合產業雲端應用推廣。
+                                <br/>
+                                (二)、  雲端產業服務團(B團)：發展創新雲端應用，協助產業深化應用與轉型升級。
+                            </p>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                三、參團效益
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (一)、  雲端產業服務團(A團)：
+                            </p>
+                            
+                            <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                                <li>
+                                    策略引導：結合政策工具如投資抵減，鼓勵應用服務採用與推廣。
+                                </li>
+                                <li>
+                                    擴散媒合：參與工業局之產業推動與商洽媒合。
+                                </li>
+                                <li>
+                                    驗證優化：參與「雲端開發測試平台」提供之測試驗證服務，並申請進階輔導。
+                                </li>
+                            </ol>
+                            
+                            <br/>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (二)、  雲端產業服務團(B團)：
+                            </p>
+                            
+                            <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                                <li>
+                                    資源轉介：參與申請主題性之應用開發計畫，發展產業創新應用。
+                                </li>
+                                <li>
+                                    技術整合：參與法人或廠商之研發合作，組成技術團隊，完成技術組合。
+                                </li>
+                                <li>
+                                    協同推廣：聯結產業公協會，完成業務組合、服務實證與推廣行銷等服務驗證。
+                                </li>
+                            </ol>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                四、申請資料
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (一)、雲端產業服務團參團申請表。（附件1）
+                                <br/>
+                                (二)、產品服務說明表。（A團請填附件2、B團請填附件3）
+                            </p>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                五、申請程序
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (一)、申請企業填妥申請資料，於申請受理期間內，將申請資料送達執行單位。
+                                <br/>
+                                (二)、符合資格之申請企業，將安排經濟部「雲端開發測試平台」協助雲端產品與服務之驗測。
+                                <br/>
+                                (三)、通過雲端測試之案件，將由審查委員會進行審查，並由執行單位通知審查結果，審查通過者，由執行單位頒發入團證明。
+            
+                            </p>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                六、收件日期
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                每季開放參團申請，受理期間如下：
+                            </p>
+                            
+                            <ul style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 19px;">
+                                <li>
+                                    第一季申請期間：前年度12/20至當年度1/10。
+                                </li>
+                                <li>
+                                    第二季申請期間：3/20~4/10。
+                                </li>
+                                <li>
+                                    第三季申請期間：6/20~7/10。
+                                </li>
+                                <li>
+                                    第四季申請期間：9/20~10/10。
+                                </li>
+                            </ul>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                七、收件地點與諮詢服務
+                            </strong>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                (一)、收件地點：財團法人資訊工業策進會創新應用服務研究所（台北市松山區民生東路4段133號2樓）
+                                <br/>
+                                (二)、服務窗口：財團法人資訊工業策進會創新應用服務研究所 / 電話：02-6607-2257，吳先生
+                                <br/><br/>
+                                (三)、收件時間認定：
+                            </p>
+                            
+                            <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                                <li>
+                                    郵寄方式：以郵務單位郵戳時間為準。
+                                </li>
+                                <li>
+                                    親送：以執行單位收件時間為準。
+                                </li>
+                            </ol>
+                            
+                            <br/>
+                            
+                            <strong style="font-size:12px; color:#5ba8ff; line-height:25px;">
+                                八、 其他資訊
+                            </strong>
+                            
+                            <ol style="font-size:12px; letter-spacing:1px; line-height:25px; padding: 0px 0px 0px 63px;">
+                                <li>
+                                    申請資格經審查不符合者，不予受理。
+                                </li>
+                                <li>
+                                    檢送之相關申請文件，無論是否通過審查，均不予退還。
+                                </li>
+                            </ol>
+                            
+                            <br/>
+                            
+                            <p style="font-size:12px; letter-spacing:1px; line-height:25px;">
+                                如有任何疑問，請洽(02) 6607-2257 ,吳先生 或來信 troywu@iii.org.tw 指教~謝謝
+                            </p>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="provision_check_area">
+                    	<label accesskey="Y">
+                            <input type="checkbox" id="check1" /> 
+                            我同意上述條款所有內容
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!--回上一頁-->
+            <div class="back_but">
+            	<a href="apply_2.html" id="ok">
+                	下一頁
+                </a>
+                <a href="javascript: void(0)" id="no">
+                	下一頁
+                </a>
+            </div>
+            
+        </div>
+        
+	</div>
+    <!-- InstanceEndEditable -->
+    
+	<!--footer-->
+	<div class="footer">
+    	
+        <!--下方主按鍵-->
+        <div class="footer_navbar">
+        	
+            <script type="text/javascript">
+				//下方主按鍵收合
+				$(document).ready(function(e) {
+					
+					var bodywidth=document.documentElement.clientWidth;//取得螢幕可見寬度
+					if(bodywidth>625){
+						$(".f_n_list_area").hide();
+						$(".footer_nav_list_hide").hide();
+					}
+					
+					$(".footer_navbar_top_line,.footer_navbar_top_bg,.f_n_l_tit_click").click(function(e) {
+						$(".f_n_list_area").slideToggle();
+						$(".footer_nav_list_hide").slideToggle();
+					});
+					
+					$(window).resize(function(e) {
+						var bodywidth=document.documentElement.clientWidth;//取得螢幕可見寬度
+                        if(bodywidth<625){
+							$(".f_n_list_area").show();
+							$(".footer_nav_list_hide").show();
+						}else {
+							$(".f_n_list_area").hide();
+							$(".footer_nav_list_hide").hide();
+						}
+                    });
+					
+				});
+			</script>
+        
+        	<div class="footer_navbar_top_line" accesskey="J">
+            	<img src="../images/footer_arrow.png" width="8" alt="展開下方網頁地圖 可以用快速鍵J" />
+            </div>
+            
+            <div class="footer_navbar_top_bg">
+            </div>
+
+            <div class="footer_navbar">
+            	<div class="wrap">
+                
+                    <div class="footer_nav_list">
+                    	<div class="f_n_l_tit f_n_l_tit_click">
+                        	活動專區
+                        </div>
+                        <div class="f_n_list_area">
+                            <div class="f_n_list">
+                                <a href="../activity/activity.html" class="transition_02s">
+                                    活動訊息
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../activity/activity.html" class="transition_02s">
+                                    宣傳影片
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../activity/activity.html" class="transition_02s">
+                                    活動照片
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer_nav_list">
+                    	<div class="f_n_l_tit f_n_l_tit_click">
+                        	研究/成果專區
+                        </div>
+                        <div class="f_n_list_area">
+                            <div class="f_n_list">
+                                <a href="../result/result.html" class="transition_02s">
+                                    研究專題
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../result/result.html" class="transition_02s">
+                                    案例分享
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfloat footer_nav_clearfloat">
+                    </div>
+                    
+                    <div class="footer_nav_list">
+                    	<div class="f_n_l_tit f_n_l_tit_click">
+                        	計劃簡介
+                        </div>
+                        <div class="f_n_list_area">
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    關於我們
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    設立緣由
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    計劃架構
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    主要任務
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    服務項目
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about.html" class="transition_02s">
+                                    推動重點
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="../about/about_download.html" class="transition_02s">
+                                    政策宣導
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer_nav_list">
+                    	<div class="f_n_l_tit f_n_l_tit_click">
+                        	雲端產業服務團
+                        </div>
+                        <div class="f_n_list_area">
+                        	<div class="f_n_list">
+                                <a href="corps_about.html" class="transition_02s">
+                                    雲端產業服務團介紹
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="company_search.html" class="transition_02s">
+                                    廠商搜尋/介紹
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="seminar_list.html" class="transition_02s">
+                                    服務團說明會報名
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="download.html" class="transition_02s">
+                                    相關文件下載
+                                </a>
+                            </div>
+                            <div class="f_n_list mobile_none"><!--手機版不顯示時class內加mobile_none-->
+                                <a href="apply.html" class="transition_02s">
+                                    入團申請
+                                </a>
+                            </div>
+                            <div class="f_n_list">
+                                <a href="platform.html" class="transition_02s">
+                                    需求登錄平台
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                    
+                    <div class="footer_nav_list footer_nav_list_hide">
+                    	<div class="f_n_l_tit">
+                        	<a href="../member/member_modify.html" class="transition_02s">
+                        		會員專區
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer_nav_list footer_nav_list_hide">
+                    	<div class="f_n_l_tit">
+                        	<a href="../contact/contact.html" class="transition_02s">
+                        		聯絡我們
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <!--新增部分 by kevin 20150730 開始-->
+        <!--單位名稱-->
+        <div class="footer_tit">
+        	經濟部工業局 雲端服務暨巨量資料產業發展計畫網站 專案委辦
+        </div>
+        <!--新增部分 by kevin 20150730 結束-->
+        
+        <!--copyright-->
+        <div class="copyright_area">
+        	<div class="wrap">
+            
+            	<div class="footer_logo_area">
+                	<a href="#">
+                    	<img src="../images/accessibility_icon.png" width="88" height="31" alt="無障礙網站標章" />
+                    </a>
+                    <img src="../images/footer_logo.png" width="139" alt="經濟部工業局LOGO" />
+                </div>
+                
+                <!--↓↓↓↓ 修改部分 by kevin 20150714 開始 ↓↓↓↓-->
+                <!--計數器-->
+                <div class="century_gothic">
+                	瀏覽人數：
+                    <span>
+                    	000001
+                    </span>
+                </div>
+                <!--↑↑↑↑ 修改部分 by kevin 20150714 結束 ↑↑↑↑-->
+            
+            	<div class="copyright">
+                	© 2015 <a href="http://www.doweb.com.tw/web/index.jsp" target="_blank">Greatest Idea Strategy Co., Ltd.</a> All Rights Reversed.
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+            
+            </div>
+        </div>
+        
+        <!--返回最上面-->
+        <div class="top_but">
+        	<a href="#top">
+            	<img src="../images/top_but.png" width="51" height="51" alt="返回最上面icon" />
+            </a>
+        </div>
+        
+    </div>
+    
+    <!--輪播特效 第二塊 開始-->
+    <script src="../js/swiper/idangerous.swiper.min.js"></script>
+    <script>
+		//說明資料API http`://swiper2.swiper.com.cn/api/index.html
+		var mySwiper = new Swiper('.swiper-container_pc',{
+		  //pagination: '.pagination',               //輪播點點開關
+		  paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+		  
+		  loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+		  grabCursor: true,                          //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+		  calculateHeight : true,                    //当值为true时，Swiper根据slides内容计算容器高度
+		  autoplay : 5000,                           //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+		  autoplayDisableOnInteraction : false,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+		  //slidesPerView : 2,                       //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。
+		  //loopedSlides :6,                         //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
+		  
+		  //左右鍵
+		  onInit: function(swiper){
+			  swiper.swipeNext()
+			}
+		})
+		
+		$('.arrow-left').click(function(){
+			//var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+			mySwiper.swipePrev(); 
+		});
+		$('.arrow-right').click(function(){
+			//var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+			mySwiper.swipeNext(); 
+		});
+		
+		
+		//手機版用
+		var mySwiper2 = new Swiper('.swiper-container_mobile',{
+		  pagination: '.mobile_banner_pagination',               //輪播點點開關
+		  paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+		  
+		  loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+		  grabCursor: true,                          //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+		  calculateHeight : true,                    //当值为true时，Swiper根据slides内容计算容器高度
+		  autoplay : 5000,                           //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+		  autoplayDisableOnInteraction : false,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+		})
+
+    </script>
+    <!--輪播特效 第二塊 結束-->
+    
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_cloud/corps/apply.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 07:09:48 GMT -->
+</html>

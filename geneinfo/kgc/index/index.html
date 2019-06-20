@@ -1,0 +1,1231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgc/index/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:45:32 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="x-frame-options" content="sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>台灣正官庄官方網站</title>
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!--<link href="../css/style.min.css" rel="stylesheet" type="text/css" />-->
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+	
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+    
+    <script type="text/javascript">
+	//錨點平滑滾動效果
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+    
+    <!--主選單選單展開 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			//主按鍵點擊時展開第一層
+            $(".nav").children("a").click(function(e) {
+				$(".nav").children("a").not(this).next(".nav_open_area").slideUp(200);
+                $(this).next(".nav_open_area").slideToggle(200);
+            });
+        });
+	</script>
+    <!--主選單選單展開 結束-->
+    
+    <!--手機版主選單效果 開始-->
+    <script type="text/javascript">
+		
+		//手機選單展開效果
+		$(document).ready(function(e) {
+			
+			//menu按鍵動畫效果
+			$(".menu_btn").click(function(e) {
+				
+				$(".m_b_line").toggleClass("menu_but_animaiton");
+				$(".navbar").slideToggle();
+				
+				setTimeout(
+					function()
+					{
+						var bodyHeight = document.documentElement.clientHeight;                    //取得螢幕可見高度
+						var headerHeight = $(".header").height();								   //取得版頭高度
+						var menuHeight = $(".navbar").height();                                    //取得選單高度
+						
+						var headerAllHeight = headerHeight+menuHeight;                             //取得版頭完整高度
+						var newMenuHeight = bodyHeight-headerHeight;                               //選單的新高度
+						
+						if (  bodyHeight <= headerAllHeight ) {                                    //如果螢幕高度比版頭整個高度還矮
+							$(".navbar").css ({
+								"height":newMenuHeight,											   //讓選單部分變成有scrollBar
+								"overflow-y":"scroll",
+							});
+						}else {
+							$(".navbar").css ({
+								"height":"auto",
+							});
+						}
+						//alert(menuHeight);
+					},
+					500
+				);
+				
+			});
+            
+        });
+		
+		$(window).resize(function(e) {
+			var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+			if( bodywidth >= 736 ) {
+				$(".m_b_line").removeClass("menu_but_animaiton");
+				$(".navbar").removeAttr("style");
+				$(".nav_open_area").removeAttr("style");
+			}
+		});
+		
+	</script>
+    <!--手機版主選單效果 結束-->
+    
+    <!--網站地圖 收合 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+            $(".f_map_tit").click(function(e) {
+                $(".footer_map_list_area").slideToggle();
+            });
+        });
+	</script>
+    <!--網站地圖 收合 結束-->
+    
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header index_header" id="top">
+    	<div class="wrap">
+        	
+            <!--logo-->
+            <div class="logo">
+            
+            	<a href="index.html">
+                	<img src="../images/logo.png" width="176" class="pc_logo" />
+                    <img src="../images/logo_2.png" width="176" class="mobile_logo" />
+                </a>
+                
+                <!--logo用小閃光-->
+				<script type="text/javascript">
+                    $(document).ready(function(e) {
+                        
+                        function logoFlash(){
+                            $(".logo_flash").addClass("logo_flash_hover");
+                            window.setTimeout(function(){
+                                $(".logo_flash").removeClass("logo_flash_hover");
+                            },500);
+                        }
+                        
+                        window.setTimeout(logoFlash,500);
+                        //window.setInterval(logoFlash,5000);
+                        
+                        
+                        $(".logo img").mouseover(function(e) {
+                            logoFlash();
+                        });
+                    });
+                </script>
+                
+                <!--logo的閃光-->
+              	<div class="logo_flash">
+                </div>
+                
+            </div>
+            
+            <!--menu鍵-->
+            <div class="menu_btn_area">
+                
+                <div class="menu_btn">
+                    <div class="m_b_line">
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!--主按鍵-->
+            <div class="navbar">
+            	
+                <div class="nav">
+                	
+                    <a href="javascript:void(0);">
+                    	關於我們
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                KGC介紹
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                企業嚴格
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                Network
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                研發團隊
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                正官庄
+                            </a>
+                        </div>
+                        <div class="nav_open">
+                            <a href="../about/about.html">
+                                SGS檢驗
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	關於高麗蔘
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../ginseng/ginseng.html">
+                                高麗蔘歷史
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../ginseng/ginseng.html">
+                                人蔘分類
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../ginseng/ginseng.html">
+                                高麗參分類
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	產品介紹
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                條蔘
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                高麗蔘製品
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/product.html">
+                                保養品
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/qa.html">
+                                產品Q&amp;A
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../product/reviews_list.html">
+                                見證分享
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	食譜專區
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                食譜推薦
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                紅蔘點心
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../recipe/recipe.html">
+                                健康飲品
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	報導/消息
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                最新活動
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                媒體報導
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../news/news.html">
+                                影音廣告
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	門市資訊
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                北部
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                中部
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../stores/stores.html">
+                                南部
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	招募人員
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    
+                        <div class="nav_open">
+                            <a href="../join/join.html">
+                                人才
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="../join/join.html">
+                                人事/福利制度
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open">
+                            <a href="#">
+                                招募人才
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--輪播-->
+    <div class="banner">
+        <div class="device">
+        
+            <a class="arrow-left" href="javascript: void(0)">
+                <img src="images/left_arrow.png" width="37" />
+            </a> 
+            <a class="arrow-right" href="javascript: void(0)">
+                <img src="images/right_arrow.png" width="37" />
+            </a>
+            
+            <div class="swiper-container swiper-container_pc">
+                <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide">
+                        <a href="#">
+                        	
+                            <!--電腦版輪播背景圖-->
+                            <div class="pc_banner_bg" style="background:url(images/banner.png) center center no-repeat; background-size:cover;">
+                            	<!--建議尺寸 1280*390px-->
+                            </div>
+                            
+                            <!--手機版輪播背景圖-->
+                            <div class="mobile_banner_bg">
+                            	<img src="images/mobile_banner.png" width="1280" height="782" />
+                            </div>
+                            
+                            <!--電腦版輪播圖中央資訊區-->
+                            <div class="pc_banner_text_area">
+                            	<img src="images/banner_text.png" width="912" style="width:100%;" />
+                            </div>
+                            
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="#">
+                        	
+                            <!--電腦版輪播背景圖-->
+                            <div class="pc_banner_bg" style="background:url(images/banner_2.png) center center no-repeat; background-size:cover;">
+                            	<!--建議尺寸 1280*390px-->
+                            </div>
+                            
+                            <!--手機版輪播背景圖-->
+                            <div class="mobile_banner_bg">
+                            	<img src="images/mobile_banner_2.png" width="1280" height="782" />
+                            </div>
+                            
+                            <!--電腦版輪播圖中央資訊區-->
+                            <div class="pc_banner_text_area">
+                            	<img src="images/banner_text.png" width="912" style="width:100%;" />
+                            </div>
+                            
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="pagination"></div>
+        
+        </div>
+    </div>
+    
+    <!--輪播特效 第二塊 開始-->
+    <script src="../js/swiper/idangerous.swiper.min.js"></script>
+    <script>
+        //說明資料API http`://swiper2.swiper.com.cn/api/index.html
+        var mySwiper = new Swiper('.swiper-container_pc',{
+          //pagination: '.pagination',                 //輪播點點開關
+          paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+          
+          simulateTouch: true,                      //默認為true，swiper接受鼠標點擊、拖動。設置為false時無法拖動
+          loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+          grabCursor: true,                          //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+          calculateHeight : true,                    //当值为true时，Swiper根据slides内容计算容器高度
+          autoplay : 5000,                           //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+          autoplayDisableOnInteraction : false,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+          //slidesPerView : 2,                       //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。
+          //loopedSlides :6,                         //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
+          
+		  //左右鍵
+		  onInit: function(swiper){
+			  swiper.swipeNext()
+			}
+		  
+        })
+		
+		$('.arrow-left').click(function(){
+			//var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+			mySwiper.swipePrev(); 
+		});
+		$('.arrow-right').click(function(){
+			//var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+			mySwiper.swipeNext(); 
+		});
+        
+    </script>
+    <!--輪播特效 第二塊 結束-->
+    
+    <!--首頁資訊區-->
+    <div class="index_main">
+    	<div class="wrap">
+        	
+            <!--首頁最新消息-->
+            <div class="index_news_area">
+            	
+                <!--首頁最新消息標題-->
+                <div class="i_news_tit_area i_news_tit_area_1">
+                	<div class="i_n_tit">
+                    	<span class="i_n_t_tw">
+                        	最新活動
+                        </span>
+                        <span class="i_n_t_en">
+                        	/ LATEST EVENTS
+                        </span>
+                    </div>
+                    <div class="i_n_tit_more">
+                    	<a href="../news/news.html">
+                        	MORE >
+                        </a>
+                    </div>
+                    <div class="i_n_t_line">
+                    </div>
+                    <div class="clearfloat">
+                    </div>
+                </div>
+                
+                <!--首頁最新消息列表-->
+                <div class="index_news_list_area">
+                	
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!--首頁最新消息-->
+            <div class="index_news_area index_news_area_2">
+            	
+                <!--首頁最新消息標題-->
+                <div class="i_news_tit_area i_news_tit_area_2">
+                	<div class="i_n_tit">
+                    	<span class="i_n_t_tw">
+                        	媒體報導
+                        </span>
+                        <span class="i_n_t_en">
+                        	/ MEDIA REPORT
+                        </span>
+                    </div>
+                    <div class="i_n_tit_more">
+                    	<a href="../news/news.html">
+                        	MORE >
+                        </a>
+                    </div>
+                    <div class="i_n_t_line">
+                    </div>
+                    <div class="clearfloat">
+                    </div>
+                </div>
+                
+                <!--首頁最新消息列表-->
+                <div class="index_news_list_area">
+                	
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    <div class="i_n_list">
+                    	<div class="i_n_l_time">
+                        	2015/01/01
+                        </div>
+                        <div class="i_n_l_tit">
+                        	<a href="../news/news_in.html">
+                            	用健康讓老爸活力充沛！蔘經百戰！
+                            </a>
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!--首頁資訊區第三塊-->
+            <div class="index_info_3_area">
+            	
+                <!--首頁外聯icon區-->
+                <div class="index_link_icon_area">
+                
+                	<div class="i_link_icon shop">
+                    	<a href="#">
+                        	<img src="images/icon_shop.png" width="33" />
+                        </a>
+                    </div>
+                    
+                    <div class="i_link_icon fb">
+                    	<a href="#">
+                        	<img src="images/icon_fb.png" width="33" />
+                        </a>
+                    </div>
+                    
+                    <div class="i_link_icon line">
+                    	<a href="#">
+                        	<img src="images/icon_line.png" width="33" />
+                        </a>
+                    </div>
+                    
+                    <div class="i_link_icon youtube">
+                    	<a href="#">
+                        	<img src="images/icon_youtube.png" width="33" />
+                        </a>
+                    </div>
+                    
+                    <div class="i_link_icon mail">
+                    	<a href="mailto:twadmin@kgc.co.kr">
+                        	<img src="images/icon_mail.png" width="33" />
+                        </a>
+                    </div>
+                    
+                    <div class="i_link_icon phone">
+                    	<a href="tel:0800-259-889">
+                        	<img src="images/icon_phone.png" width="33" />
+                        </a>
+                        <div class="i_l_icon_open">
+                        	0800-259-889
+                        </div>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                    
+                </div>
+                
+                <!--首頁fb粉絲團-->
+                <div class="index_fb_api">
+                
+                	<div id="fb-root"></div>
+					<script>
+                        (function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = "http://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="fb-page" data-href="https://www.facebook.com/kgctaiwan" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/kgctaiwan"><a href="https://www.facebook.com/kgctaiwan">正官庄-給您健康的承諾</a></blockquote></div></div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    	<div class="wrap">
+        	
+            <!--網站地圖-->
+            <div class="footer_map_area">
+            	
+                <div class="f_map_tit">
+                	網站地圖 ▼
+                </div>
+                
+                <div class="footer_map_list_area">
+                	
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	關於我們
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../about/about.html">
+                                	KGC介紹
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	企業沿革
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	Network
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	研發團隊
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	正官庄
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../about/about.html">
+                                	SGS檢驗
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	關於高麗蔘
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../ginseng/ginseng.html">
+                                	高麗蔘歷史
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../ginseng/ginseng.html">
+                                	人蔘分類
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../ginseng/ginseng.html">
+                                	高麗蔘分類
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	產品介紹
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../product/product.html">
+                                	條蔘
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/product.html">
+                                	高麗蔘製品
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/product.html">
+                                	保養品
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/qa.html">
+                                	產品Q&amp;A
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../product/reviews_list.html">
+                                	見證分享
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_3">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	食譜專區
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../recipe/recipe.html">
+                                	食譜推薦
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../recipe/recipe.html">
+                                	紅蔘點心
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../recipe/recipe.html">
+                                	健康飲品
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	報導/消息
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../news/news.html">
+                                	最新活動
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../news/news.html">
+                                	媒體報導
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../news/news.html">
+                                	影音廣告
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	門市資訊
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../stores/stores.html">
+                                	北部
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../stores/stores.html">
+                                	中部
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../stores/stores.html">
+                                	南部
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_2">
+                    </div>
+                    
+                    <div class="clearfloat f_m_clear_3">
+                    </div>
+                    
+                    <div class="f_m_list">
+                    	<div class="f_m_l_tit">
+                        	招募人員
+                        </div>
+                        <ul>
+                        	<li>
+                            	<a href="../join/join.html">
+                                	人才
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="../join/join.html">
+                                	人事/福利制度
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#">
+                                	招募人才
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!--footer公司資訊-->
+            <div class="footer_company_info">
+            	
+                <!--修改部分 by kevin 20151217 1.將全形的"："改為半形的":"  2.分號":"後的文字改為不換行-->
+            	<span>
+                	客服信箱:<a href="mailto:twadmin@kgc.co.kr">twadmin@kgc.co.kr</a>
+                </span>
+                <span>
+                	客服電話:<a href="tel:0800-259-889">0800-259-889</a>
+                </span>
+                <span>
+                	服務時間:09:00~12:00/13:00~18:00(例假日休息)
+                </span>
+            </div>
+            
+            <!--copyright-->
+            <div class="copyright_area">
+            	資料來源 | Euromonitor Intemational Ltd 維他命和營養補充劑2005-2014以零售額計算市場佔有率
+                <br/>
+				正官庄股份有限公司 CHEONG KWAN JANG TAIWAN CORPORATION
+                <span class="copyright">
+                	© 2015 <a href="http://www.geneinfo.com.tw/web/index/index.jsp">Genesis Information Inc.</a> All Rights Reversed.
+                </span>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--浮動top鍵-->
+    <div class="top_btn">
+    	<a href="#top">
+        	TOP
+        </a>
+    </div>
+    
+    <script type="text/javascript" src="../js/lightbox.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            
+            //----------------------------------------------------自動開啟的燈箱用
+            var hasAuto =  $(".auto").length;
+            
+            $(".auto_lightbox").click(function(e) {
+                $(".auto").siblings().hide();
+                $(".lightboxArea").addClass("auto_use");
+            });
+            
+            if ( hasAuto > 0 ) {                                   //如果有自動開啟燈箱 才執行
+                if( $.cookie("limit")==null ){                       //如果沒有這個cookie
+                    $(".auto").siblings().hide();
+                    $(".lightboxArea").addClass("auto_use");
+                    
+                    lightboxShow();
+                }
+            }
+			
+			//----------------------------------------------------顯示 關閉燈箱 
+			//註：個人網路速度不同以致影片載入速度不同 建議設定的關閉時間拉長5~10秒
+			
+			var time = 36000;						//關閉燈箱的時間
+			
+			setTimeout(function(){
+				$(".lightboxCloseBtn").css({
+					'opacity':'1',
+					'pointer-events':'auto'
+				})
+			},time-5000)
+			
+			//↓↓↓↓ 修改部分 by kevin 20160422 開始 ↓↓↓↓
+			//----------------------------------------------------縮放 燈箱
+			$(".scaling_btn").click(function(e) {
+                $(".lightboxArea").toggleClass("narrow");
+            });
+			//↑↑↑↑ 修改部分 by kevin 20160422 結束 ↑↑↑↑
+    
+        });
+    </script>
+    
+    <!--燈箱-->
+    <div class="lightboxArea">
+        
+        <!--燈箱黑底-->
+        <div class="lightboxBG">
+        </div>
+        
+        <!--燈箱主體-->
+        <div class="lightboxMain">
+            
+            <!--關閉燈箱按鍵-->
+            <div class="lightboxCloseBtn lightboxClose">
+                X
+            </div>
+            
+            <!--↓↓↓↓ 修改部分 by kevin 20160422 開始 ↓↓↓↓-->
+            <!--縮放按鍵-->
+            <div class="scaling_btn lsf">
+            </div>
+            <!--↑↑↑↑ 修改部分 by kevin 20160422 結束 ↑↑↑↑-->
+            
+            <!--燈箱資料區-->
+            <div class="lightboxContentArea">
+            
+                <!--自動開啟的燈箱-->
+                <div class="auto" id="auto_show_area">
+                	
+                    <iframe class="lightBox_iframe" width="100%" height="315" src="https://www.youtube.com/embed/Ip2AWsTH60M?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			
+			//隱藏小廣告用
+			$(".iSAB_right").click(function(e) {
+				$(this).parents(".index_small_ad").css({
+					'opacity':'0',
+					'pointer-events':'none'
+				})
+            });
+			
+			//今天不再顯示用
+			//console.log( $.cookie('ad1'),$.cookie('ad2') );			//檢查cookie是否存在用
+			//$.cookie('ad1', '', { expires: -1 }); 					// 删除 cookie
+			//$.cookie('ad2', '', { expires: -1 }); 					// 删除 cookie
+			
+			$(".iSAB_left label input[type=checkbox]").click(function(e) {
+				
+				var cookieName = $(this).val();
+				
+				if ( $(this).prop('checked') ) {						//如果checkbox勾選了
+					$.cookie(cookieName, cookieName, { expires: 1 }); 	// 存储一个带1天期限的 cookie 
+				}else {
+					$.cookie(cookieName, cookieName, { expires: -1 });	// 删除 cookie
+				}
+				
+            });
+			
+			if( $.cookie("ad1")=="ad1" ){								//如果有相對應的cookie就隱藏對應的小廣告
+				$(".index_small_ad").eq(0).hide();
+			}if( $.cookie("ad2")=="ad2" ){
+				$(".index_small_ad").eq(1).hide();
+			};
+
+		});
+	</script>
+    
+    <!--首頁小廣告-->
+    <div class="index_small_ad_area">
+    
+        <div class="index_small_ad">
+            <div class="iSA_img">
+            	<a href="#">
+                	<!--↓↓↓↓ 修改部分 by kevin 20160115 修改width 開始 ↓↓↓↓-->
+                	<img src="http://www.kgc.co.kr/images/popup/pop160106.jpg" width="176" height="124" />
+                    <!--↑↑↑↑ 修改部分 by kevin 20160115 結束 ↑↑↑↑-->
+                </a>
+            </div>
+            <div class="iSA_bottom">
+                <div class="iSAB_left">
+                    <label>
+                        今天不再顯示
+                        <input type="checkbox" value="ad1" />
+                    </label>
+                </div>
+                <div class="iSAB_right">
+                    關閉 X
+                </div>
+            </div>
+        </div>
+        
+        <div class="index_small_ad">
+            <div class="iSA_img">
+            	<a href="#">
+                	<img src="http://www.kgc.co.kr/images/popup/pop160106.jpg" width="176" height="124" />
+                </a>
+            </div>
+            <div class="iSA_bottom">
+                <div class="iSAB_left">
+                    <label>
+                        今天不再顯示
+                        <input type="checkbox" value="ad2" />
+                    </label>
+                </div>
+                <div class="iSAB_right">
+                    關閉 X
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgc/index/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:46:48 GMT -->
+</html>

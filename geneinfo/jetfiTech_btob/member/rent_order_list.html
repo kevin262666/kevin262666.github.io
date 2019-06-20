@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_jetfi-tech_btob/member/rent_order_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2019 01:29:36 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="X-Frame-Options" content="Sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="Robots" content="none" /><!--不被搜尋引擎搜到-->
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<!--android 手機板主題顏色用 更改網址列顏色-->
+<meta name="theme-color" content="#ffe500">
+<!--android 手機板主題顏色用-->
+
+<meta name="format-detection" content="telephone=no"><!--取消行動版 safari 自動偵測數字成電話號碼-->
+
+<title>桔豐科技股份有限公司-特約商專區</title>
+
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="../js/common.js" type="text/javascript"></script><!--JavaScript共用區-->
+    
+<!--google material icon-->
+<link rel="stylesheet" href="../icon_fonts/material_icons/material-icons.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header">
+        
+        <!--版頭下-->
+        <div class="header_bottom">
+        	<div class="wrap">
+            
+            	<!--logo-->
+        		<div class="logo">
+                	<a href="../index/index.html">
+                    	<img src="../images/logo.png" width="88" />
+                    </a>
+                </div>
+                
+                <!--主按鍵-->
+        		<div class="navbar">
+                	
+                	<div class="nav">
+                        <a href="javascript:void(0);">
+                        	資費方案
+                        </a>
+                        <div class="nav_open">
+                        	<div class="nO_list">
+                            	<a href="../plan/plan.html">
+                                	各國資費方案
+                                </a>
+                            </div>
+                            <div class="nO_list">
+                            	<a href="../plan/rental.html">
+                                	租借申請
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav">
+                        <a href="javascript:void(0);">
+                        	特約廠商專區
+                        </a>
+                        <div class="nav_open">
+                        	<div class="nO_list">
+                            	<a href="#">
+                                	會員登出
+                                </a>
+                            </div>
+                        	<div class="nO_list">
+                            	<a href="modify.html">
+                                	會員資料修改
+                                </a>
+                            </div>
+                            <div class="nO_list">
+                            	<a href="rent_order_list.html">
+                                	方案訂單查詢
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfloat">
+                    </div>
+                </div>
+                
+                <!--手機menu按鍵-->
+                <div class="menu_btn">
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                </div>
+                
+                <div class="clearfloat">
+                </div>
+                
+        	</div>
+        </div>
+
+    </div>
+    
+    <!--main-->
+    <div class="main">
+    	
+    	<!--內頁大標-->
+        <!-- InstanceBeginEditable name="in_tit" -->
+        <div class="in_tit has_open"><!--有左選單時class內加has_open-->
+        	<div class="wrap">
+                方案訂單查詢
+                <div class="in_tit_line">
+                </div>
+            </div>
+        </div>
+        <!-- InstanceEndEditable -->
+        
+        <!-- InstanceBeginEditable name="left_list_area" -->
+        <!--左選單-->
+        <div class="left_list_area">
+        	<div class="wrap">
+                <div class="left_list">
+                    <a href="modify.html">
+                        會員資料修改
+                    </a>
+                </div>
+                <div class="left_list active">
+                    <a href="rent_order_list.html">
+                        方案訂單查詢
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+            </div>
+        </div>
+        <!-- InstanceEndEditable -->
+        
+        <!--空白-->
+        <div class="space">
+        </div>
+        
+		<!-- InstanceBeginEditable name="main" -->
+        <div class="wrap">
+        	
+            <!--時間搜尋區-->
+            <div class="time_search_area">
+                
+                <div class="time_search">
+                    <select>
+                        <option>
+                            2016
+                        </option>
+                    </select>
+                    年
+                    <select>
+                        <option>
+                            01
+                        </option>
+                    </select>
+                    月
+                    <select>
+                        <option>
+                            01
+                        </option>
+                    </select>
+                    日
+                </div>
+                <span>
+                    至
+                </span>
+                <div class="time_search">
+                    <select>
+                        <option>
+                            2017
+                        </option>
+                    </select>
+                    年
+                    <select>
+                        <option>
+                            04
+                        </option>
+                    </select>
+                    月
+                    <select>
+                        <option>
+                            30
+                        </option>
+                    </select>
+                    日
+                </div>
+                
+                <label class="lsf">
+                    search
+                    <input type="submit" value="" />
+                </label>
+                
+            </div>
+            
+            <br/>
+            
+            <!--白底-->
+            <div class="white_bg">
+            
+                <!--購物車商品列表--><!--訂單列表-->
+                <div class="cart_product_list_area order_list">
+                    
+                    <table cellpadding="0" cellspacing="0" border="0">
+                    
+                        <tr>
+                            <td>
+                                訂購日期
+                            </td>
+                            <td>
+                                訂單編號
+                            </td>
+                            <td>方案</td>
+                            <td>
+                                訂單狀態
+                            </td>
+                            <td>
+                                訂單明細
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td><!--有兩個按鍵時class內加cPL_twoBtn-->
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                <span class="unpaid">
+                                    未付款
+                                </span>
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                <span class="unpaid">
+                                    未付款
+                                </span>
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                <span class="cancel">
+                                    已取消
+                                </span>
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-name="訂購日期： ">
+                                2016/01/01
+                            </td>
+                            <td data-name="訂單編號： ">
+                                10002453454
+                            </td>
+                            <td data-name="方案： ">
+                            	<ul class="order_product_list">
+                                	<li>
+                                    	歐洲漫遊37國 / 450 元 / 日
+                                    </li>
+                                    <li>
+                                    	日本 / 199 元 / 日
+                                    </li>
+                                </ul>
+                            </td>
+                            <td data-name="訂單狀態： ">
+                                已付款
+                            </td>
+                            <td>
+                                <input type="button" value="查詢" onclick="location='../member/rent_order_in.html'" />
+                                <div class="clearfloat">
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+            </div>
+            
+            <!--頁碼 RWD版 by kevin 20151202-->
+            <div class="page_area_rwd">
+                <div class="page_left_arrow">
+                    <!--註：如果要隱藏上一頁/下一頁按鍵 只能去掉div內的<a> 不然會跑版-->
+                    <!--<a href="#">
+                        &lt;
+                    </a>-->
+                </div>
+                <div class="page_select">
+                    <select>
+                        <option>
+                            1
+                        </option>
+                        <option>
+                            2
+                        </option>
+                    </select>
+                </div>
+                <div class="page_right_arrow">
+                    <a href="#">
+                        &gt;
+                    </a>
+                </div>
+                <div class="clearfloat">
+                </div>
+            </div>
+            
+        </div>
+        <!-- InstanceEndEditable -->
+        
+        <!--空白-->
+        <div class="space">
+        </div>
+
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+        
+        <div class="wrap">
+        	
+            <!--版腳logo-->
+            <div class="footer_logo">
+            	<a href="../index/index.html">
+                	<img src="../images/footer_logo.png" width="124" />
+                </a>
+            </div>
+            
+            <!--版腳公司資訊區-->
+            <div class="footer_company_info">
+            	
+                <span>桔豐科技股份有限公司</span><span>jetfi technology co.,ltd.</span>
+                <br/>
+                <span data-name='服務電話：'>02-2751-9338</span>
+                <span data-name='客服信箱：'><a href="mailto:service@jetfi-tech.com">service@jetfi-tech.com</a></span>
+                <br/>
+                <span data-name='公司地址：'>10572台北市松山區南京東路三段248號3樓之二(兄弟飯店對面) </span>
+                
+                <div class="copyright">
+                	© 2016 <a href="http://www.geneinfo.com.tw/">Genesis Information Inc.</a> All rights reserved.
+                </div>
+                
+            </div>
+            
+            <!--qr code-->
+            <div class="qrCode">
+            
+            	<!--修改部分 by kevin 20161004 start-->
+                <div class="qrCodeList">
+            		<img src="../images/qr_code.png" width="78" height="78" />
+                    <div class="qrCodeListTit">
+                    	Line
+                    </div>
+                </div>
+                <div class="qrCodeList">
+            		<img src="../images/qr_code.png" width="78" height="78" />
+                    <div class="qrCodeListTit">
+                    	WeChat
+                    </div>
+                </div>
+                <div class="clearfloat">
+                </div>
+                <!--修改部分 by kevin 20161004 end-->
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <!--浮動立即訂購-->
+    <div class="fixedRightAddBtn">
+    	<a href="../plan/rental.html">
+        	<i class="material-icons">&#xE913;</i>
+        	立即申請
+        </a>
+    </div>
+    
+    <!--浮動右側會員logo--><!--會員登入後才會出現-->
+    <div class="fixedRightLogo">
+    	<img src="../images/footer_logo.png" />
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_jetfi-tech_btob/member/rent_order_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2019 01:29:36 GMT -->
+</html>
