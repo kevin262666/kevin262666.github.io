@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/in.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgcshop/health/health_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:59:18 GMT -->
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+<meta http-equiv="x-frame-options" content="sameorigin" /><!--資安用 拒絕網頁被iframe嵌入-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--RWD用-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--RWD用-->
+
+<title>正官庄電子商務</title>
+
+<link rel="shortcut icon" href="../images/favicon.png" /><!--電腦版icon-->
+<link rel="apple-touch-icon" href="../images/icon.png" /><!--手機版icon  57x57px-->
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" /><!--手機版icon  72x72px-->
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon%402-2.png" /><!--手機版icon  114x114px-->
+
+<!--<link href="../css/style.css" rel="stylesheet" type="text/css" />-->
+<link href="../css/style.min.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../js/minwt.auto_full_height.mini.js" type="text/javascript">//讓footer置底特效</script>
+	
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+    
+    <script type="text/javascript">
+	//錨點平滑滾動效果
+	$(document).ready(function() {
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+    
+    <!--主選單選單展開 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			//主按鍵點擊時展開第一層
+            $(".nav").children("a").click(function(e) {
+				$(".nav").children("a").not(this).next(".nav_open_area").slideUp(200);
+                $(this).next(".nav_open_area").slideToggle(200);
+            });
+        });
+	</script>
+    <!--主選單選單展開 結束-->
+    
+    <!--手機版主選單效果 開始-->
+    <script type="text/javascript">
+		
+		//手機選單展開效果
+		$(document).ready(function(e) {
+			
+			//menu按鍵動畫效果
+			$(".menu_btn").click(function(e) {
+				
+				$(".m_b_line").toggleClass("menu_but_animaiton");
+				$(".navbar .wrap").slideToggle();
+				$(".pc_h_r_search").slideUp("fast");      //版頭產品搜尋收起
+				$(".pc_h_r_top").slideUp("fast");		  //版頭右上會員專區收起
+				
+				setTimeout(
+					function()
+					{
+						var bodyHeight = document.documentElement.clientHeight;                    //取得螢幕可見高度
+						var headerHeight = $(".header").height();								   //取得版頭高度
+						var menuHeight = $(".navbar .wrap").height();                                    //取得選單高度
+						
+						var headerAllHeight = headerHeight+menuHeight;                             //取得版頭完整高度
+						var newMenuHeight = bodyHeight-headerHeight;                               //選單的新高度
+						
+						//if (  bodyHeight <= headerAllHeight ) {                                    //如果螢幕高度比版頭整個高度還矮
+							$(".navbar .wrap").css ({
+								"height":newMenuHeight,											   //讓選單部分變成有scrollBar
+								"overflow-y":"scroll",
+							});
+						/*}else {
+							$(".navbar .wrap").css ({
+								"height":"auto",
+							});
+						}*/
+						//alert(menuHeight);
+					},
+					500
+				);
+				
+			});
+            
+        });
+		
+		$(window).resize(function(e) {
+			var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+			if( bodywidth >= 690 ) {
+				$(".m_b_line").removeClass("menu_but_animaiton");
+				$(".navbar .wrap").removeAttr("style");
+				$(".nav_open_area").removeAttr("style");
+			}
+		});
+		
+	</script>
+    <!--手機版主選單效果 結束-->
+    
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			
+			//版頭產品搜尋收合
+            $(".pc_h_r_link.search_icon").click(function(e) {
+                $(".pc_h_r_search").slideToggle("fast");
+				$(".pc_h_r_top").slideUp("fast");
+            });
+			
+			//版頭會員專區收合
+			$(".pc_h_r_link.member").click(function(e) {
+                $(".pc_h_r_top").slideToggle("fast");
+				$(".pc_h_r_search").slideUp("fast");
+            });
+			
+			$(".pc_h_r_link.search_icon, .pc_h_r_link.member").click(function(e) {
+				var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+				if(  bodywidth < 690 ) {
+					$(".navbar .wrap").slideUp("fast");                 //主選單收起
+					$(".m_b_line").removeClass("menu_but_animaiton");
+				}
+			});
+			
+			$(window).resize(function(e) {
+				var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+				if( bodywidth >= 736 ) {
+					$(".pc_h_r_search").removeAttr("style");
+					$(".pc_h_r_top").removeAttr("style");
+				}
+			});
+			
+        });
+	</script>
+    
+    <!--左選單收合 開始-->
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+			
+			//手機版時樣式
+			$(".now_tit").click(function(e) {
+                $(".left_list_area").slideToggle();
+            });
+			$(window).resize(function(e) {
+                var bodywidth=document.documentElement.clientWidth;                    //取得螢幕可見寬度
+                if( bodywidth >= 990 ) {
+                    $(".left_list_area").removeAttr("style");
+                }
+            });
+			
+        });
+	</script>
+    <!--左選單收合 結束-->
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+    
+    <!--版頭-->
+    <div class="header index_header" id="top">
+    
+    	<div class="wrap">
+        	
+            <!--logo-->
+            <div class="logo">
+            
+            	<a href="../index/index.html">
+                	<img src="../images/logo.png" width="277" class="pc_logo" />
+                    <img src="../images/logo_2.png" width="277" class="mobile_logo" />
+                </a>
+                
+                <!--logo用小閃光-->
+				<script type="text/javascript">
+                    $(document).ready(function(e) {
+                        
+                        function logoFlash(){
+                            $(".logo_flash").addClass("logo_flash_hover");
+                            window.setTimeout(function(){
+                                $(".logo_flash").removeClass("logo_flash_hover");
+                            },500);
+                        }
+                        
+                        window.setTimeout(logoFlash,500);
+                        //window.setInterval(logoFlash,5000);
+                        
+                        
+                        $(".logo img").mouseover(function(e) {
+                            logoFlash();
+                        });
+                    });
+                </script>
+                
+                <!--logo的閃光-->
+              	<div class="logo_flash">
+                </div>
+                
+            </div>
+            
+            <!--電腦版版頭右-->
+            <div class="pc_header_rigt">
+            	
+                <!--電腦版版頭右上-->
+                <div class="pc_h_r_top">
+                	
+                    <span class="pc_h_r_t_member_name" style="display:none;"><!--登入後要顯示時將style刪除即可-->
+                    	王小明(VIP會員)&nbsp;
+                    </span>
+                    <a href="../member/login.html">
+                    	會員登出<!--或會員登入-->
+                    </a>
+                    &nbsp;｜&nbsp; 
+                    <a href="../member/order_list.html">
+                    	會員中心
+                    </a>
+                    <span class="pc_h_r_t_mobile_none">
+                        &nbsp;｜&nbsp;
+                        <a href="../cart/cart.html">
+                            購物車(500)
+                        </a>
+                    </span>
+                    
+                </div>
+                
+                <!--電腦版版版頭右下-->
+                <div class="pc_h_r_bottom">
+                	
+                    <!--電腦版版頭產品搜尋-->
+                    <div class="pc_h_r_search">
+                    	<input type="text" placeholder="商品搜尋" id="search" />
+                        <input type="submit" value="" onclick="location='../search/search.html'" />
+                    </div>
+                    
+                    <!--電腦版版頭社群聯結-->
+                    <div class="pc_h_r_link_area">
+                    	
+                        <div class="pc_h_r_link member mobile">
+                        	<a href="javascript:void(0);">
+                            	<img src="../images/member_icon.png" width="36" />
+                            </a>
+                        </div>
+                        
+                        <div class="pc_h_r_link search_icon mobile">
+                            <a href="javascript:void(0);">
+                                <label for="search">
+                                    <img src="../images/search_icon.png" width="36" />
+                                </label>
+                            </a>
+                        </div>
+                        
+                        <div class="pc_h_r_link cart_icon mobile">
+                        	<a href="../cart/cart.html">
+                            	<img src="../images/cart_icon.png" width="36" />
+                            </a>
+                        </div>
+                        
+                        <div class="pc_h_r_link fb">
+                        	<a href="#">
+                            	<img src="../images/fb_icon.png" width="36" />
+                            </a>
+                        </div>
+                        
+                        <div class="pc_h_r_link line">
+                        	<a href="#">
+                            	<img src="../images/line_icon.png" width="36" />
+                            </a>
+                        </div>
+                        
+                        <div class="pc_h_r_link youtube">
+                        	<a href="#">
+                            	<img src="../images/youtube_icon.png" width="36" />
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+            <!--menu鍵-->
+            <div class="menu_btn_area">
+                
+                <div class="menu_btn">
+                    <div class="m_b_line">
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                        <span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+        <!--主按鍵-->
+        <div class="navbar"><!--只有首頁有index_navbar 內頁沒有-->
+        	<div class="wrap">
+            	
+                <div class="nav">
+                	
+                    <a href="javascript:void(0);">
+                    	商品介紹
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    	
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	商品總覽
+                            </a>
+                        </div>
+                        
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	蔘精
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	蔘糖
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	蔘茶
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	燉飲
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../product/product.html">
+                            	錠膠囊
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	促銷活動
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    	
+                        <div class="nav_open_list">
+                        	<a href="../promotions/promotions.html">
+                            	本月特惠
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../promotions/promotions.html">
+                            	中秋 特惠理合
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../promotions/promotions.html">
+                            	週四限定
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../promotions/promotions.html">
+                            	福利品特賣會
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../promotions/promotions.html">
+                            	申請試飲/試用
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	推薦商品
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    	
+                        <div class="nav_open_list">
+                        	<a href="../recommend/recommend.html">
+                            	熱銷商品
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../recommend/recommend.html">
+                            	店長推薦
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../recommend/recommend.html">
+                            	送禮自用兩相宜
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../recommend/recommend.html">
+                            	孝敬長輩最「盒」宜
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../recommend/recommend.html">
+                            	滋補養身
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                
+                	<a href="javascript:void(0);">
+                    	最新消息
+                    </a>
+                    
+                    <!--主按鍵展開-->
+                    <div class="nav_open_area">
+                    	
+                        <div class="nav_open_list">
+                        	<a href="../news/news.html">
+                            	最新消息
+                            </a>
+                        </div>
+                        <div class="nav_open_list">
+                        	<a href="../news/news.html">
+                            	歷史訊息
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="nav">
+                	<a href="#">
+                    	人蔘料理
+                    </a>
+                </div>
+                
+                <div class="nav">
+                	<a href="health.html">
+                    	保健話題
+                    </a>
+                </div>
+                
+                <div class="nav">
+                	<a href="#">
+                    	見證分享
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--主體-->
+    <div class="main">
+    	<div class="wrap">
+			<!-- InstanceBeginEditable name="main" -->
+        	
+            <!--左邊-->
+            <div class="left no_left"><!--沒有左選單時class內加no_left 和 把左模組標題、左選單、左廣告刪除-->
+            	
+                <!--左模組標題-->
+                
+                <!--現在頁面的標題 會跟右標題一樣的字-->
+                <!--現在頁面的標題 產品跟最新消息內頁抓產品標題、最新消息標題-->
+                <div class="now_tit">
+                	補鐵~一個永不過時的保健話題
+                </div>
+                
+                <!--左選單-->
+                
+                
+                <!--左廣告-->
+                
+                
+            </div>
+            
+            <!--右邊-->
+            <div class="right no_left"><!--沒有左選單時class內加no_left-->
+            	
+                <!--右標題-->
+                <div class="right_tit">
+                	保鍵話題
+                </div>
+                
+                <!--麵包屑-->
+                <div class="crumb">
+                	<a href="../index/index.html">HOME</a>
+                    &nbsp;>&nbsp;保鍵話題
+                </div>
+                
+                <!--內頁輪播-->
+                <div class="banner in_banner">
+                    <div class="device">
+                    
+                        <a class="arrow-left" href="javascript: void(0);">
+                            <img src="../index/images/left_arrow.png" width="37" />
+                        </a> 
+                        <a class="arrow-right" href="javascript: void(0);">
+                            <img src="../index/images/right_arrow.png" width="37" />
+                        </a>
+                      
+                        <div class="swiper-container index_banner">
+                            <div class="swiper-wrapper">
+                            
+                                <div class="swiper-slide">
+                                	<a href="#">
+                                    	<img src="../index/images/banner.png" width="0" height="0" />
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                    	<img src="../index/images/banner.png" width="0" height="0" />
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="pagination"></div>
+                      
+                    </div>
+                </div>
+                
+                <!--輪播特效 第二塊 開始-->
+                <script src="../js/swiper/idangerous.swiper.min.js"></script>
+                <script>
+                    $(document).ready(function(e) {
+                                
+                        //說明資料API http://swiper2.swiper.com.cn/api/index.html
+                        var mySwiper = new Swiper('.index_banner',{
+                          //pagination: '.pagination',                 //輪播點點開關
+                          //paginationClickable: true,                 //值为true时，点击分页器的指示点时会发生Swiper
+                          
+                          simulateTouch : true,                      //默认为true，Swiper接受鼠标点击、拖动。 設置為false時無法拖動
+                          loop:true,                                 //设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换
+                          grabCursor: true,                          //设置为true时，鼠标覆盖Swiper时指针会变成抓手形状
+                          calculateHeight : true,                    //当值为true时，Swiper根据slides内容计算容器高度
+                          
+                          //↓↓↓↓ 修改部分 by kevin 20150821 開始 ↓↓↓↓
+                          autoplay : 6000,                           //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+                          autoplayDisableOnInteraction : false,      //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay
+                          //↑↑↑↑ 修改部分 by kevin 20150821 結束 ↑↑↑↑
+                          
+                          //slidesPerView : 2,                       //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。
+                          //loopedSlides :6,                         //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
+                          autoplayStopOnLast : false,                //如果设置为true，当切换到最后一个slide时停止自动切换。（在没有设置loop的情况下）。Swiper 2.7.0版才會生效
+                          
+                          //左右鍵區1 開始
+                          /*onInit: function(swiper){
+                              swiper.swipeNext()
+                          },*/
+                          //左右鍵區1 結束
+                          
+                          //輪播頁籤區1開始
+                          onSlideChangeStart: function(){
+                              $(".slider_tabs .active").removeClass('active');
+                              $(".slider_tabs a").eq(mySwiper.activeIndex).addClass('active');
+                          }
+                          //輪播頁籤區1結束
+                          
+                        })
+                        
+                        //左右鍵區2 開始
+                        $('.arrow-left').click(function(){
+                            //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                            mySwiper.swipePrev(); 
+                        });
+                        $('.arrow-right').click(function(){
+                            //var swiper = $(this).siblings('.swiper-container_pc').data('swiper');
+                            mySwiper.swipeNext(); 
+                        });
+                        //左右鍵區2 結束
+                        
+                    });
+    
+                </script>
+                <!--輪播特效 第二塊 結束-->
+                
+                <!--最新消息內頁標題-->
+                <div class="news_in_tit">
+                	補鐵~一個永不過時的保健話題
+                </div>
+                
+                <!--最新消息內頁時間-->
+                <div class="news_in_time">
+                	2015/10/20
+                </div>
+                
+                <!--網編區-->
+              	<div class="text_area">
+                
+               		<p style="font-size:14px; line-height:26px; color:#2c2c2c;">
+               	  		<strong style="font-size:18px; color:#a67939;">《正官庄》高麗蔘雞精</strong>
+                        <br/>
+                  		<strong style="color:#090909;">● 當品質保證的雞精，遇上，擁有百年正統的高麗蔘精華，一瓶沒有雞腥味的雞精，顛覆您對雞精的印象</strong>
+                        <br/>
+                        ◎ 順口好飲易吸收、清香蔘味好爽口。
+                        <br/>
+                        ◎ 雙重作用，滋補強身、增強體力到達顛峰狀態。
+                        <br/>
+                        ◎ 高麗蔘雞精有助於促進新陳代謝、調節生理機能。
+                        <br/><br/>
+                        
+                  		<strong style="color:#090909;">● 讓您活力充沛、思慮清晰、健康維持好夥伴</strong>
+                        <br/>
+                        ◎ 採用不含生長激素及抗生素的上選雞隻。
+                        <br/>
+                        ◎ 未添加防腐劑、香料、色素、粘稠劑。
+                        <br/>
+                        ◎ 零脂肪、零膽固醇、低鈉配方。
+                        <br/>
+                        ◎ 健康營養補給零負擔
+                        <br/><br/>
+                        
+                  		<strong style="color:#090909;">《正官庄》高麗蔘糖</strong>
+                        <br/>
+                        ◎高麗蔘香氣濃郁的高級糖果，口感清新獨特
+                        <br/>
+                        ◎含有木糖醇成份，可讓口氣清新
+                        <br/>
+                        ◎素食者亦可食用
+                	</p>
+                    
+              	</div>
+                
+                <!--回上一頁-->
+                <div class="back">
+                	<a href="health.html">
+                    	回上一頁
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="clearfloat">
+            </div>
+            
+            <!-- InstanceEndEditable -->
+        </div>
+    </div>
+    
+    <!--footer-->
+	<div class="footer">
+    
+    	<!--右側浮動-->
+        <div class="fixed_right_area">
+        	
+            <!--立即結帳-->
+            <div class="go_cart">
+            	<a href="../cart/cart.html">
+                	<div class="g_cart_tab"><!--購物車沒有東西時加 style="display:none;"-->
+                    	立即結帳
+                    </div>
+                    <div class="g_cart_icon">
+                    	<img src="../images/right_cart_icon.png" width="21" />
+                    </div>
+                    <div class="g_cart_price">
+                    	99,999
+                    </div>
+                </a>
+            </div>
+            
+            <!--瀏覽紀錄-->
+            <div class="f_r_record_list_area">
+            	
+                <div class="f_r_record_list">
+                	<a href="../product/product_in.html">
+                    	<img src="../images/demo.jpg" />
+                    </a>
+                </div>
+                
+                <div class="f_r_record_list">
+                	<a href="../product/product_in.html">
+                    	<img src="../images/demo.jpg" />
+                    </a>
+                </div>
+                <div class="f_r_record_list">
+                	<a href="../product/product_in.html">
+                    	<img src="../images/demo.jpg" />
+                    </a>
+                </div>
+                <div class="f_r_record_list">
+                	<a href="../product/product_in.html">
+                    	<img src="../images/demo.jpg" />
+                    </a>
+                </div>
+                <div class="f_r_record_list">
+                	<a href="../product/product_in.html">
+                    	<img src="../images/demo.jpg" />
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!--返回最上面-->
+            <div class="top_btn">
+            	<a href="#top">
+                	▲TOP
+                </a>
+            </div>
+            
+        </div>
+    	
+        <!--版腳其他連結區-->
+        <div class="footer_other_link_area">
+        	<div class="wrap">
+            	
+                <!--版腳其他聯結列表-->
+                <div class="f_o_link_list">
+                
+                	<div class="f_o_l_l_tit">
+                    	<strong>
+                        	ABOUT
+                        </strong>
+                        關於正官庄
+                    </div>
+                    
+                    <ul>
+                    	<li>
+                        	<a href="../news/news.html">
+                            	最新消息
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	品牌故事
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	安心品質
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	見證分享
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	蔘活雜誌 電子書
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	正官庄台灣官方網站
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="f_o_link_list">
+                
+                	<div class="f_o_l_l_tit">
+                    	<strong>
+                        	SHOPPING
+                        </strong>
+                        購物說明
+                    </div>
+                    
+                    <ul>
+                    	<li>
+                        	<a href="../guide/guide_1.html">
+                            	購物說明
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="../guide/guide_2.html">
+                            	紅利及優惠券說明
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="../guide/guide_3.html">
+                            	產品Q&amp;A
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="../guide/guide_4.html">
+                            	企業團購
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	型錄下載
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="f_o_link_list">
+                
+                	<div class="f_o_l_l_tit">
+                    	<strong>
+                        	正官庄購物網
+                        </strong>
+                        客服與聯絡資訊
+                    </div>
+                    
+                    <div class="f_o_l_l_phone">
+                    	<a href="tel:0800-259-899">
+                        	<img src="../images/phone_icon.png" width="11" />
+                            0800-259-899
+                        </a>
+                    </div>
+                    
+                    <ul>
+                    	<li>
+                        	<strong>
+                            	客服信箱：
+                            </strong>
+                            <a href="#" style="display:inline-block;">
+                            	twadmin@kgc.co.kr
+                            </a>
+                        </li>
+                        <li>
+                        	<strong>
+                            	LINE客服ID：
+                            </strong>
+                            000221234
+                        </li>
+                        <li>
+                        	<strong>
+                            	客服時間：
+                            </strong>
+                            週一~週五09:00-12:00/13:00-18:00
+                        </li>
+                    </ul>
+                    
+                    <div class="f_o_l_l_fb_btn_area">
+                    	<a href="#">
+                        	<img src="../images/line_icon_2.png" width="30" />
+                            成為好友
+                        </a>
+                        <a href="#">
+                        	<img src="../images/fb_icon_2.png" width="30" />
+                            成為粉絲
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="wrap">
+        	
+            <!--copyright-->
+            <div class="copyright">
+            	資料來源 | Euromonitor Intemational Ltd 維他命和營養補充劑,2005-2014以零售額計算市場佔有率
+                <span>
+                	© 2015 <a href="http://www.geneinfo.com.tw/web/index/index.jsp">Genesis Information Inc.</a> All Rights Reversed.
+                </span>
+                <div class="clearfloat">
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from lab.geneinfo.com.tw:85/custom/kevin_demo/web_kgcshop/health/health_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 06:59:18 GMT -->
+</html>
