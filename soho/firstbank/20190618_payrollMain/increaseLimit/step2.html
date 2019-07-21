@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+    <script src="../js/vue.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#00573e">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone6-plus.png">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/1b9b519604.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <!--[if IE 9]>
+	<link rel="stylesheet" href="../css/forIe9.css">
+	<![endif]-->
+    <title>薪轉戶專區 | 第一銀行</title>
+    <meta property="og:title" content="薪轉戶專區 | 第一銀行">
+    <meta property="og:type" content="website">
+    <!-- <meta property="fb:app_id" content="#"> -->
+    <meta name="description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <meta property="og:description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <!-- <meta property="og:image" content="XXXXXXXXXX/images/fb.png">
+	<meta property="og:url" content="XXXXXXXXXX"> -->
+</head>
+
+<body>
+
+    <div id="content" class="increaseLimit" v-cloak>
+
+        <increase-limit-head></increase-limit-head>
+
+        <step-area other-class="step2"></step-area>
+
+        <section class="container">
+            <div class="increaseLimit-formContent wow fadeInUp">
+                <div class="increaseLimit-formContent-text first">
+                    審核需1～2個工作天，若您欲立即刷卡，敬請來電客服中心。
+                </div>
+                <div class="formArea">
+                    <div class="formArea-item confirm">
+                        <div class="formArea-item-tit">
+                            <strong>持卡人姓名</strong>
+                        </div>
+                        <div class="formArea-item-input">
+                            王**
+                        </div>
+                    </div>
+                    <div class="formArea-item confirm">
+                        <div class="formArea-item-tit">
+                            <strong>身分證字號</strong>
+                        </div>
+                        <div class="formArea-item-input">
+                            *****00000
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="increaseLimit-formContent-text">
+                    <b>
+                        注意事項
+                    </b>
+                    <br/>
+                    本系統已自動發送簡訊動態密碼至您行動電話號碼，請於10分鐘內輸入簡訊動態密碼，以完成身分驗證，同一號碼一天最多發送三次簡訊動態密碼。若您未收到簡訊動態密碼，請洽客服專線0800-052-888或手機請撥02-21732999。
+                </div> -->
+            </div>
+            <div class="increaseLimit-formContent wow fadeInUp">
+                <div class="tabArea">
+                    <div class="tabBtn-area">
+                        <div class="tabBtn-area-bg">
+                            <div class="tabBtn active">
+                                <a href="javascript:void(0);" title="臨時信用額度">
+                                    臨時信用額度
+                                </a>
+                            </div>
+                            <div class="tabBtn">
+                                <a href="javascript:void(0);" title="長期信用額度">
+                                    長期信用額度
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent-area">
+                        <div class="tabContent show">
+                            <div class="formArea">
+                                <div class="formArea-item moneyInput">
+                                    <div class="formArea-item-tit">
+                                        <label for="amount">
+                                            <strong>申請調高信用額度至</strong>
+                                        </label>
+                                    </div>
+                                    <div class="formArea-item-input">
+                                        <span>新台幣</span>
+                                        <input type="number" name="" id="amount" placeholder="">
+                                        <span>萬元</span>
+                                    </div>
+                                </div>
+                                <div class="formArea-item reason">
+                                    <div class="formArea-item-tit">
+                                        <label for="">
+                                            <strong>調高額度用途</strong>
+                                        </label>
+                                    </div>
+                                    <div class="formArea-item-input">
+                                        <select @change="reason()">
+                                            <option value="">
+                                                一般消費
+                                            </option>
+                                            <option value="">
+                                                國內旅遊
+                                            </option>
+                                            <option value="">
+                                                國外旅遊
+                                            </option>
+                                            <option value="">
+                                                購屋消費
+                                            </option>
+                                            <option value="">
+                                                購置家具
+                                            </option>
+                                            <option value="">
+                                                購置家電
+                                            </option>
+                                            <option value="">
+                                                結婚費用
+                                            </option>
+                                            <option value="">
+                                                飯店費用
+                                            </option>
+                                            <option value="">
+                                                保險
+                                            </option>
+                                            <option value="">
+                                                繳交學費
+                                            </option>
+                                            <option value="">
+                                                修車費用
+                                            </option>
+                                            <option value="">
+                                                稅款費用
+                                            </option>
+                                            <option value="" id="otherReason">
+                                                其他
+                                            </option>
+                                        </select>
+                                        <input type="text" name="" id="" placeholder="請輸入原因">
+                                    </div>
+                                </div>
+                                <div class="formArea-item full period">
+                                    <div class="formArea-item-tit">
+                                        <label for="">
+                                            <strong>調高額度使用期間（最長30天）</strong>
+                                        </label>
+                                    </div>
+                                    <div class="formArea-item-input">
+                                        <select name="" id="" class="period-year">
+                                            <option>2019</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option>01</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option>01</option>
+                                        </select>
+                                        <span>至</span>
+                                        <select name="" id="" class="period-year">
+                                            <option>2019</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option>01</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option>01</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="increaseLimit-formContent-text">
+                                <b>
+                                    注意事項
+                                </b>
+                                <ol>
+                                    <li style="color: #f00;">
+                                        本行將依您的結帳週期及審核結果核定臨時信用額度調整起迄日。
+                                    </li>
+                                    <li>
+                                        本次額度臨時調整將適用於您所持有的每張信用卡(不含公司卡、簽帳金融卡)。
+                                    </li>
+                                    <li>
+                                        臨時調高之額度將無法使用分期交易。
+                                    </li>
+                                    <li>
+                                        下次帳單結帳時，若有超過原信用額度的部分，須全額繳清。
+                                    </li>
+                                    <li>
+                                        調高期間結束後，會恢復原信用額度，屆時如您所使用之額度已超過原信用額度，將暫時無法繼續刷卡。
+                                    </li>
+                                    <li>
+                                        若臨調需求超過30天，請洽客服專線0800-052-888或手機請撥02-21732999辦理。
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="btn-area">
+                                <div class="btn">
+                                    <a href="temporary-step3.html" title="下一步">
+                                        下一步 <i class="fas fa-caret-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabContent">
+                            <div class="formArea">
+                                <div class="formArea-item moneyInput">
+                                    <div class="formArea-item-tit">
+                                        <label for="amount">
+                                            <strong>申請提高永久信用額度至</strong>
+                                        </label>
+                                    </div>
+                                    <div class="formArea-item-input">
+                                        <span>新台幣</span>
+                                        <input type="number" name="" id="amount" placeholder="">
+                                        <span>萬元</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="increaseLimit-formContent-text">
+                                <b>
+                                    注意事項
+                                </b>
+                                <ol>
+                                    <li>
+                                        本次額度調整為申請調高您永久信用額度，並適用於您所持的每張信用卡(不含公司卡、簽帳金融卡)
+                                    </li>
+                                    <li>
+                                        生效說明：申請調高永久信用額度審核約需2-3個工作天，台端可致電客服專線0800-052-888或手機請撥02-21732999或於
+                                        <a href="#" target="_blank">網路銀行</a>查詢最新信用額度。
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="btn-area">
+                                <div class="btn">
+                                    <a href="long-step3.html" title="下一步">
+                                        下一步 <i class="fas fa-caret-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <warning-area></warning-area>
+        <footer-area></footer-area>
+
+        <div class="popup show" data-popup="alert">
+            <div class="popup-bg"></div>
+            <!-- <div class="popup-bg-type2"></div> -->
+            <div class="popup-info">
+                <div class="closeBtn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="popup-info-bg">
+                    <div class="popup-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <!-- <div class="popup-tit">
+                        <strong>提醒您！</strong>
+                    </div> -->
+                    <div class="popup-text">
+                        由於您已申請臨時信用額度，若仍需要再次申請臨時額度，請撥打客服專線：0800-052-888；手機請撥(02)2173-2999，由專人為您服務。
+                    </div>
+                    <!-- <div class="popup-btnArea">
+                        <div class="btn type2">
+                            <a href="#" title="立即申辦">
+                                立即申辦 <i aria-hidden="true" class="fas fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/scrollspy.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script src="../js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap');
+
+$maxWidth-xxl: 1799px;
+$maxWidth-xl: 1399px;
+$maxWidth-lg: 1199px;
+$maxWidth-md: 991px;
+$maxWidth-sm: 767px;
+$maxWidth-xs: 479px;
+
+$lightGray: #ccc;
+$blue: #093e8d;
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: $maxWidth-xxl) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: $maxWidth-xl) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: $maxWidth-lg) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: $maxWidth-md) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: $maxWidth-sm) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: $maxWidth-xs) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/
+
+// reset ========================================================================
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #272727;
+    font-size: 17px;
+    line-height: 1.4;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;         /*強制瀏覽器不要縮放文字*/
+}
+
+/*控制文字選取時的顏色*/
+::selection {
+	background:#00573e;
+	color:#fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border: none;
+    height: auto;
+}
+
+p {
+    margin: 0px;
+}
+
+// input ========================================================================
+.checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    min-height: 20px;
+    margin-right: 15px;
+    &:last-of-type {
+        margin-right: 0px;
+    }
+    input[type="checkbox"] {
+        display: none;
+        &:checked + .checkbox-icon {
+            background: #fae103;
+            border-color: #fad203;
+            i {
+                color: #000;
+                opacity: 1;
+            }
+        }
+    }
+    input[type="checkbox"] {
+        &:disabled + .checkbox-icon {
+            background: $lightGray;
+        }
+    }
+    &-icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease all;
+        display: block;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s ease all;
+            opacity: 0;
+        }
+    }
+    &-text {
+        font-size: 17px;
+        padding-left: 5px;
+        display: block;
+    }
+}
+
+.radio {
+    @extend .checkbox;
+    input[type="radio"] {
+        display: none;
+        &:checked + .radio-icon {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+                opacity: 1;
+            }
+        }
+    }
+    input[type="radio"] {
+        &:disabled + .radio-icon {
+            background: $lightGray;
+        }
+    }
+    &-icon {
+        @extend .checkbox-icon;
+        border-radius: 100%;
+    }
+    &-text {
+        @extend .checkbox-text;
+    }
+}
+
+label {
+    cursor: pointer;
+    vertical-align: top;
+}
+
+button {
+    border: none;
+    color: #fff;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    cursor: pointer;
+    i {
+        margin-left: 5px;
+    }
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.inputStyle {
+    border-radius: 8px;
+    border: solid 1px $lightGray;
+    background: #fff;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 8px 10px 9px;
+    box-shadow: none;
+    appearance: none;
+    margin: 0px;
+}
+
+input {
+    &[type="text"],
+    &[type="password"],
+    &[type="tel"],
+    &[type="search"],
+    &[type="number"],
+    &[type="email"] {
+        @extend .inputStyle;
+    }
+}
+
+textarea {
+    @extend .inputStyle;
+    resize: none;
+    width: 100%;
+}
+
+select {
+    box-sizing: border-box;
+    padding: 0 24px 0 10px;
+    font-size: 17px;
+    line-height: 42px;
+    height: 44px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+            appearance: none;
+    background: #fff url(../images/icon-dropdown.png) right center no-repeat;
+    background-size: 18px;
+    border-radius: 8px;
+    border: solid 1px $lightGray;
+    &::-ms-expand {
+        display: none;
+    }
+    &.focus {
+        border-color: $blue;
+        box-shadow: 0px 0px 0px 1px $blue inset,
+                    0px 0px 5px rgba($blue, 0.5);
+    }
+}
+
+// component ========================================================================
+.container {
+    margin: 0 50px;
+    padding: 0px;
+    // width: 1170px;
+    @include maxWidth-lg {
+        // margin: 0px 65px;
+        // width: auto;
+    }
+    @include maxWidth-md {
+        margin: 0px 25px;
+    }
+    @include maxWidth-sm {
+        margin: 0px 10px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.mobileShow {
+    display: none !important;
+}
+@include maxWidth-md {
+    .pcShow {
+        display: none !important;
+    }
+    .mobileShow {
+        display: initial !important;
+    }
+}
+
+ol {
+    &.base,
+    &.tradChineseInformal {
+        margin: 5px 0px;
+        padding-left: 19px;
+        li {
+            padding-bottom: 4px;
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+        }
+    }
+    &.tradChineseInformal {
+        // list-style: trad-chinese-informal;
+        list-style: none;
+        // padding-left: 28px;
+        padding-left: 0px;
+        & > li {
+            padding-left: 28px;
+            position: relative;
+            &:before {
+                content: '一、';
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            &:nth-of-type(2):before {
+                content: '二、';
+            }
+            &:nth-of-type(3):before {
+                content: '三、';
+            }
+            &:nth-of-type(4):before {
+                content: '四、';
+            }
+            &:nth-of-type(5):before {
+                content: '五、';
+            }
+            &:nth-of-type(6):before {
+                content: '六、';
+            }
+            &:nth-of-type(7):before {
+                content: '七、';
+            }
+            &:nth-of-type(8):before {
+                content: '八、';
+            }
+            &:nth-of-type(9):before {
+                content: '九、';
+            }
+            &:nth-of-type(10):before {
+                content: '十、';
+            }
+        }
+    }
+}
+
+//--fontAwesome ========================================================================
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//--解決animate.css引起的z-index問題 ========================================================================
+.animated {
+    animation-fill-mode: backwards;
+}
+
+//--分隔線 ========================================================================
+.dividingLine {
+    margin: 15px 0px;
+    border-bottom: dashed 1px #bbb;
+    clear: both;
+}
+
+// youtube ==================================================
+.youtube {
+    width: 100%;
+    max-width: 600px;
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    img {
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    &-content {
+        position: relative;
+        padding-bottom: 56.25%;
+        // padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @include maxWidth-md {
+        max-width: 600px;
+    }
+}
+
+// body noScroll ==================================================
+@include maxWidth-md {
+    html, body {
+        &.noScroll {
+            // overflow: hidden;
+        }
+    }
+}
+
+// 文字連結樣式 ==================================================
+.linkStyle {
+    color: #45bfa1;
+    border-bottom: solid 1px;
+    transition: 0.3s ease all;
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}

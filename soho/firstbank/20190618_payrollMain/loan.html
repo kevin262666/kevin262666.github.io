@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+	<script src="js/vue.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#00573e">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="shortcut icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/favicon.ico">
+	<link rel="apple-touch-icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad-retina.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone6-plus.png">
+	
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+	<script src="https://kit.fontawesome.com/1b9b519604.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE 9]>
+	<link rel="stylesheet" href="css/forIe9.css">
+	<![endif]-->
+    <title>薪轉戶專區 | 第一銀行</title>
+    <meta property="og:title" content="薪轉戶專區 | 第一銀行">
+    <meta property="og:type" content="website">
+    <!-- <meta property="fb:app_id" content="#"> -->
+    <meta name="description" content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+	<meta property="og:description" content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <!-- <meta property="og:image" content="XXXXXXXXXX/images/fb.png">
+	<meta property="og:url" content="XXXXXXXXXX"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<header-area></header-area>
+
+		<!-- banner -->
+		<div class="banner">
+			<img src="images/bannerBottom.png" alt="" class="banner-bottom type2">
+			<div class="banner-light">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<a href="#goToInfo" class="banner-mouse inner">
+				<img src="images/mouseIcon.png" alt="">
+			</a>
+
+			<navbar-area now="3"></navbar-area>
+
+			<div class="banner-right wow fadeIn">
+				<div class="innerBanner deposit">
+					<img src="images/innerBanner_loan.png" alt="">
+					<h1 class="innerBanner-tit" title="貸款熱門服務">
+						貸款熱門服務
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="indexLink-area innerLink-area" id="goToInfo">
+			<div class="container">
+				<div class="indexLink wow fadeInUp">
+					<a href="https://firstloan.firstbank.com.tw/LoanPlatform/fcb-credit.action" title="線上信貸" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_19.png" alt="線上信貸">
+						</div>
+						<div class="indexLink-tit">
+							線上信貸
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.1s">
+					<a href="https://firstloan.firstbank.com.tw/LoanPlatform/fcb-credit-first-options.action" title="信貸試算" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_9.png" alt="信貸試算">
+						</div>
+						<div class="indexLink-tit">
+							信貸試算
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.2s">
+					<a href="https://firstloan.firstbank.com.tw/LoanPlatform/fcb-mortgage-notice.action" title="線上房貸" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_20.png" alt="線上房貸">
+						</div>
+						<div class="indexLink-tit">
+							線上房貸
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.3s">
+					<a href="https://firstloan.firstbank.com.tw/LoanPlatform/fcb-mortgage-otp.action" title="房貸試算" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_10.png" alt="房貸試算">
+						</div>
+						<div class="indexLink-tit">
+							房貸試算
+						</div>
+					</a>
+				</div>
+				<div class="indexLink-br"></div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.4s">
+					<a href="https://firstloan.firstbank.com.tw/LoanPlatform/fcb-credit-verify.action" title="線上對保" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_11.png" alt="線上對保">
+						</div>
+						<div class="indexLink-tit">
+							線上對保
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.5s">
+					<a href="loan2.html" title="線上補件">
+						<div class="indexLink-img">
+							<!-- <img src="images/indexIcon_13.png" alt="線上補件"> -->
+							<img src="images/indexIcon_21.png" alt="線上補件">
+						</div>
+						<div class="indexLink-tit">
+							<!-- 申辦進度及<br class="pcShowBr"/>線上補件 -->
+							線上補件
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.6s">
+					<a href="https://www.firstbank.com.tw/servlet/fbweb/LoanAssistant" title="常見問題" target="_blank">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_12.png" alt="常見問題">
+						</div>
+						<div class="indexLink-tit">
+							常見問題
+						</div>
+					</a>
+				</div>
+				<div class="indexLink wow fadeInUp" data-wow-delay="0.7s">
+					<a href="reservation.html" title="預約專人諮詢">
+						<div class="indexLink-img">
+							<img src="images/indexIcon_7.png" alt="預約專人諮詢">
+						</div>
+						<div class="indexLink-tit">
+							預約<br/>專人諮詢
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/scrollspy.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

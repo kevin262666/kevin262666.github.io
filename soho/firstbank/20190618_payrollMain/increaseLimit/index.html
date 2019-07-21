@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+    <script src="../js/vue.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#00573e">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone6-plus.png">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/1b9b519604.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <!--[if IE 9]>
+	<link rel="stylesheet" href="../css/forIe9.css">
+	<![endif]-->
+    <title>薪轉戶專區 | 第一銀行</title>
+    <meta property="og:title" content="薪轉戶專區 | 第一銀行">
+    <meta property="og:type" content="website">
+    <!-- <meta property="fb:app_id" content="#"> -->
+    <meta name="description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <meta property="og:description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <!-- <meta property="og:image" content="XXXXXXXXXX/images/fb.png">
+	<meta property="og:url" content="XXXXXXXXXX"> -->
+</head>
+
+<body>
+
+    <div id="content" class="increaseLimit" v-cloak>
+
+        <increase-limit-head></increase-limit-head>
+
+        <section class="container">
+            <div class="increaseLimit-indexContent">
+                <div class="increaseLimit-indexContent-left wow fadeIn">
+                    <div class="increaseLimit-indexContent-tit wow fadeIn" data-wow-delay="0.2s">
+                        信⽤額度調升申請
+                    </div>
+                </div>
+                <div class="increaseLimit-indexContent-right wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="increaseLimit-indexContent-right-text">
+                        <b>歡迎使用第一銀行信用卡額度調升服務</b>，請詳閱以下注意事項開始進行申請
+                    </div>
+                    <div class="increaseLimit-indexContent-right-infoItem">
+                        <h3 class="tit-type2">
+                            申請條件
+                        </h3>
+                        <div class="applyConditions">
+                            <div class="applyConditions-item">
+                                <div class="applyConditions-item-bg">
+                                    <div class="applyConditions-item-no">
+                                        1
+                                    </div>
+                                    <div class="applyConditions-item-text">
+                                        需持有本行信用卡有效正卡
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="applyConditions-item">
+                                <div class="applyConditions-item-bg">
+                                    <div class="applyConditions-item-no">
+                                        2
+                                    </div>
+                                    <div class="applyConditions-item-text">
+                                        不提供僅持公司卡、簽帳金融卡之客戶申請
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="applyConditions-item">
+                                <div class="applyConditions-item-bg">
+                                    <div class="applyConditions-item-no">
+                                        3
+                                    </div>
+                                    <div class="applyConditions-item-text">
+                                        財力證明非必要上傳文件，惟若您提供非於本行的資產證明上傳，有助於提高您的核准額度(最多3份)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="increaseLimit-indexContent-right-infoItem notice">
+                        <h3 class="tit-type2">
+                            注意事項
+                        </h3>
+                        <ol class="noticeList">
+                            <li>
+                                簡訊動態密碼將發送至您申辦本行信用卡留存的行動電話號碼，若超過10分鐘未收到簡訊動態密碼，請洽客服專線0800-052-888或手機請撥02-21732999。
+                            </li>
+                            <li>
+                                本行保留信用卡額度之最終核准與否及調整權利。
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="btn-area">
+                        <div class="btn">
+                            <a href="step1.html" title="立即申請">
+                                立即申請 <i aria-hidden="true" class="fas fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <warning-area></warning-area>
+        <footer-area></footer-area>
+
+        <div class="popup show" data-popup="noCreditCard">
+            <div class="popup-bg"></div>
+            <!-- <div class="popup-bg-type2"></div> -->
+            <div class="popup-info">
+                <!-- <div class="closeBtn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div> -->
+                <div class="popup-info-bg">
+                    <div class="popup-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <!-- <div class="popup-tit">
+                        <strong>提醒您！</strong>
+                    </div> -->
+                    <div class="popup-text">
+                        <div class="text-center">
+                            親愛的客戶您好
+                            <br/>
+                            您尚未持有本行信用卡，歡迎立即申辦。
+                        </div>
+                    </div>
+                    <div class="popup-btnArea">
+                        <div class="btn type2">
+                            <a href="#" title="立即申辦">
+                                立即申辦 <i aria-hidden="true" class="fas fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/scrollspy.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script src="../js/main.min.js"></script>
+
+</body>
+
+</html>

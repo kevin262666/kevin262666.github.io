@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+	<script src="js/vue.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#00573e">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="shortcut icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/favicon.ico">
+	<link rel="apple-touch-icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad-retina.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone6-plus.png">
+	
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+	<script src="https://kit.fontawesome.com/1b9b519604.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE 9]>
+	<link rel="stylesheet" href="css/forIe9.css">
+	<![endif]-->
+    <title>薪轉戶專區 | 第一銀行</title>
+    <meta property="og:title" content="薪轉戶專區 | 第一銀行">
+    <meta property="og:type" content="website">
+    <!-- <meta property="fb:app_id" content="#"> -->
+    <meta name="description" content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+	<meta property="og:description" content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <!-- <meta property="og:image" content="XXXXXXXXXX/images/fb.png">
+	<meta property="og:url" content="XXXXXXXXXX"> -->
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<header-area></header-area>
+
+		<!-- banner -->
+		<div class="banner">
+			<img src="images/bannerBottom.png" alt="" class="banner-bottom type2">
+			<div class="banner-light">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<a href="#goToInfo" class="banner-mouse inner">
+				<img src="images/mouseIcon.png" alt="">
+			</a>
+
+			<navbar-area now="1"></navbar-area>
+
+			<div class="banner-right wow fadeIn">
+				<div class="innerBanner deposit">
+					<img src="images/innerBanner_latestOffers.png" alt="">
+					<h1 class="innerBanner-tit" title="VIP優惠">
+						VIP優惠
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="latestOffers" id="goToInfo">
+			<div class="indexLatestOffers-light-area">
+				<div class="indexLatestOffers-light">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="indexLatestOffers-light">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="indexLatestOffers-light">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="indexLatestOffers-light">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="tabBtn-area wow fadeInUp">
+					<div class="tabBtn-area-bg">
+						<div class="tabBtn">
+							<a href="latestOffers.html#goToInfo" title="薪轉戶優惠活動">
+								薪轉戶優惠活動
+							</a>
+						</div>
+						<div class="tabBtn active">
+							<a href="latestOffers2.html#goToInfo" title="限時搶購">
+								限時搶購
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="latestOffers-item-area">
+					<div class="latestOffers-item clearfix wow fadeInUp">
+						<div class="latestOffers-item-collection" title="加入追蹤">
+							<i class="fas fa-heart"></i>
+						</div>
+						<a title="本月刷卡推薦" target="_blank" href="http://firstbank.allad.com.tw/index2.php">
+							<div class="latestOffers-item-img">
+								<img src="images/latestOffersImg_9.png" alt="">
+							</div>
+							<div class="latestOffers-item-right">
+								<div class="latestOffers-item-tit">
+									本月刷卡推薦
+								</div>
+								<div class="latestOffers-item-text">
+									吃喝玩樂就刷一銀，每月強檔活動回饋送。一卡在手輕鬆賺好康
+								</div>
+								<div class="latestOffers-item-tag">
+									滿額最高享13%回饋
+								</div>
+								<div class="latestOffers-item-tag">
+									吃喝玩樂住宿享6折起
+								</div>
+								<div class="btn en">
+									<div class="btn-fakeBg">
+										more <i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<img src="images/commingSoon.png" alt="" class="commingSoon wow fadeInUp">
+				</div>
+			</div>
+		</div>
+
+		<footer-area></footer-area>
+
+	</div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/scrollspy.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>
