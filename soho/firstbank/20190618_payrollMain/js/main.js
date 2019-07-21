@@ -96,6 +96,7 @@ Vue.component('footerArea', {
             mobileMenuShow: false,
         }
     },
+    props: ['path'],
     template: ` <div>
                     <footer class="footer">
                         <div class="colorLine">
@@ -143,7 +144,7 @@ Vue.component('footerArea', {
                         <div class="container">
                             <div class="pinBottom-item-area">
                                 <div class="pinBottom-item">
-                                    <a href="../index.html" title="首頁">
+                                    <a :href="[path==undefined || path=='' ? '' : '../'] + 'index.html'" title="首頁">
                                         <i class="fas fa-home"></i>
                                         <div class="pinBottom-item-tit">
                                             首頁
@@ -167,7 +168,7 @@ Vue.component('footerArea', {
                                     </a>
                                 </div>
                                 <div class="pinBottom-item">
-                                    <a href="../collection.html" title="追蹤清單">
+                                    <a :href="[path==undefined || path=='' ? '' : '../'] + 'collection.html'" title="追蹤清單">
                                         <i class="far fa-heart"></i>
                                         <div class="pinBottom-item-tit">
                                             追蹤清單
@@ -175,7 +176,7 @@ Vue.component('footerArea', {
                                     </a>
                                 </div>
                                 <div class="pinBottom-item">
-                                    <a href="../member.html" title="會員中心">
+                                    <a :href="[path==undefined || path=='' ? '' : '../'] + 'member.html'" title="會員中心">
                                         <i class="fas fa-user"></i>
                                         <div class="pinBottom-item-tit">
                                             會員中心
@@ -191,27 +192,27 @@ Vue.component('footerArea', {
                             <div class="pinBottom-menu-navbar">
                                 <ul>
                                     <li>
-                                        <a href="../latestOffers.html" title="VIP優惠">
+                                        <a :href="[path==undefined || path=='' ? '' : '../'] + 'latestOffers.html'" title="VIP優惠">
                                             VIP優惠
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../deposit.html" title="外匯">
+                                        <a :href="[path==undefined || path=='' ? '' : '../'] + 'deposit.html'" title="外匯">
                                             外匯
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../loan.html" title="貸款">
+                                        <a :href="[path==undefined || path=='' ? '' : '../'] + 'loan.html'" title="貸款">
                                             貸款
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../insurance.html" title="保險">
+                                        <a :href="[path==undefined || path=='' ? '' : '../'] + 'insurance.html'" title="保險">
                                             保險
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="../creditCard.html" title="信用卡">
+                                        <a :href="[path==undefined || path=='' ? '' : '../'] + 'creditCard.html'" title="信用卡">
                                             信用卡
                                         </a>
                                     </li>
