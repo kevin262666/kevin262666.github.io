@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+    <script src="../js/vue.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#00573e">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://www.firstbank.com.tw/servlet/FirstbankWeb/images/touch-icon-iphone6-plus.png">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/1b9b519604.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <!--[if IE 9]>
+	<link rel="stylesheet" href="../css/forIe9.css">
+	<![endif]-->
+    <title>薪轉戶專區 | 第一銀行</title>
+    <meta property="og:title" content="薪轉戶專區 | 第一銀行">
+    <meta property="og:type" content="website">
+    <!-- <meta property="fb:app_id" content="#"> -->
+    <meta name="description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <meta property="og:description"
+        content="一銀百年來與台灣社會、經濟一起成長、茁壯，一貫秉持「顧客至上，服務第一」的經營理念，爲客戶的財富與託付創造更多的價值。期許能成為活躍亞洲的區域型銀行；予客戶最滿意之金融服務，予股東最豐碩且穩健之獲利，予員工最佳的生涯發展空間。">
+    <!-- <meta property="og:image" content="XXXXXXXXXX/images/fb.png">
+	<meta property="og:url" content="XXXXXXXXXX"> -->
+</head>
+
+<body>
+
+    <div id="content" class="increaseLimit" v-cloak>
+
+        <increase-limit-head></increase-limit-head>
+
+        <step-area other-class="step3"></step-area>
+
+        <section class="container">
+            <div class="increaseLimit-formContent wow fadeInUp">
+                <div class="increaseLimit-formContent-text first">
+                    親愛的客戶您好，於本頁面您可以上傳相關財力證明文件，上傳格式限JPG、TIF及GIF檔，最多可上傳五個檔案且每個檔案大小不得超過5MB，一個欄位僅能上傳一張圖片，請勿重複上傳。
+                </div>
+                <div class="formArea">
+                    <div class="formArea-item uploadDocument">
+                        <div class="formArea-item-tit">
+                            <label for="identityCard">
+                                <strong>身分證正面</strong>
+                            </label>
+                        </div>
+                        <div class="formArea-item-input">
+                            <label for="identityCard">
+                                <input type="file" name="" id="identityCard">
+                                <div class="uploadDocument-info hasData">
+                                    <img src="../images/example-1.png" alt="">
+                                    <div class="button btn type2">
+                                        <div class="btn-fakeBg">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formArea-item uploadDocument">
+                        <div class="formArea-item-tit">
+                            <label for="identityCardBack">
+                                <strong>身分證背面</strong>
+                            </label>
+                        </div>
+                        <div class="formArea-item-input">
+                            <label for="identityCardBack">
+                                <input type="file" name="" id="identityCardBack">
+                                <div class="uploadDocument-info">
+                                    <img src="../images/example-2.png" alt="">
+                                    <div class="button btn type2">
+                                        <div class="btn-fakeBg">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formArea-item uploadDocument">
+                        <div class="formArea-item-tit">
+                            <label for="financialProof-1">
+                                <strong>財力證明(1)</strong>
+                            </label>
+                        </div>
+                        <div class="formArea-item-input">
+                            <div class="uploadDocument-remove">
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                            <label for="financialProof-1">
+                                <input type="file" name="" id="financialProof-1">
+                                <div class="uploadDocument-info type2">
+                                    <img src="" alt="">
+                                    <div class="button btn type2">
+                                        <div class="btn-fakeBg">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formArea-item uploadDocument">
+                        <div class="formArea-item-tit">
+                            <label for="financialProof-2">
+                                <strong>財力證明(2)</strong>
+                            </label>
+                        </div>
+                        <div class="formArea-item-input">
+                            <div class="uploadDocument-remove">
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                            <label for="financialProof-2">
+                                <input type="file" name="" id="financialProof-2">
+                                <div class="uploadDocument-info type2">
+                                    <img src="" alt="">
+                                    <div class="button btn type2">
+                                        <div class="btn-fakeBg">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formArea-item uploadDocument">
+                        <div class="formArea-item-tit">
+                            <label for="financialProof-3">
+                                <strong>財力證明(3)</strong>
+                            </label>
+                        </div>
+                        <div class="formArea-item-input">
+                            <div class="uploadDocument-remove">
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                            <label for="financialProof-3">
+                                <input type="file" name="" id="financialProof-3">
+                                <div class="uploadDocument-info type2">
+                                    <img src="" alt="">
+                                    <div class="button btn type2">
+                                        <div class="btn-fakeBg">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <div class="btn">
+                        <a href="long-step4.html" title="下一步">
+                            下一步 <i class="fas fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <warning-area></warning-area>
+        <footer-area path="../"></footer-area>
+
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/scrollspy.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script src="../js/main.min.js"></script>
+    <script>
+        // 上傳預覽 示意
+		$('.uploadDocument-info').removeClass('hasData');
+		function readURL(input){
+			if(input.files && input.files[0]){
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					// $(input).parents('label').after('<div class="loading"><div class="loading-info"><div class="loading-icon"><div></div><div></div></div><div class="loading-text">loading...</div></div></div>')
+                    $(input).siblings('.uploadDocument-info').addClass('hasData').find('img').attr('src', e.target.result);
+                    $(input).parents('.formArea-item-input').find('.uploadDocument-remove').show();
+					// setTimeout(function(){
+					// 	$(input).parents('label').siblings('.loading').remove();
+					// }, 2000);
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+		$('input[type="file"]').on('change', function(){
+			readURL(this);
+        });
+        
+        // 刪除選擇的圖檔
+        $('.uploadDocument-remove').click(function() {
+            $(this).hide().siblings('label').find('.hasData').removeClass('hasData');
+            $(this).siblings('label').find('img').attr('src', '');
+        });
+    </script>
+
+</body>
+
+</html>

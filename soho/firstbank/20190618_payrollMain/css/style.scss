@@ -467,7 +467,7 @@ html, body {
     }
     &.type2 {
         a,
-        &-fakeBg {
+        .btn-fakeBg {
             box-shadow: 0px 0px 0px 2px #848282 inset;
             color: #000;
             background: #fff;
@@ -475,7 +475,7 @@ html, body {
     }
     &.type3 {
         a,
-        &-fakeBg {
+        .btn-fakeBg {
             box-shadow: 0px 0px 0px 2px #848282 inset;
             color: #555;
             background: #fff;
@@ -675,6 +675,7 @@ html, body {
     box-shadow: 0px 0px 0px 4px rgba(#fff, 1);
     transform: translate3d(0, 0, 0);
     @extend .baseGreenGradient;
+    z-index: 2;
     &:before {
         content: '';
         position: absolute;
@@ -1990,58 +1991,79 @@ html, body {
             input[type="file"] {
                 display: none;
             }
-            .uploadDocument-info {
-                position: relative;
-                background: #f7f7f7;
-                border: solid 1px $lightGray;
-                border-radius: 8px;
-                overflow: hidden;
-                padding-bottom: 63%;
-                img {
-                    opacity: 0.25;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                    transition: 0.3s ease opacity;
-                    max-width: 100%;
-                    max-height: 100%;
-                    width: auto;
-                    height: auto;
-                }
-                .button {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                    width: 170px;
-                    margin: 0px;
-                    transition: 0.3s ease all;
-                    & > div:before {
-                        content: '上傳 ';
-                        display: inline;
+            .uploadDocument {
+                &-info {
+                    position: relative;
+                    background: #f7f7f7;
+                    border: solid 1px $lightGray;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    padding-bottom: 63%;
+                    &.type2 {
+                        padding-bottom: 140%;
                     }
-                }
-                &.hasData {
-                    background: #fff;
                     img {
-                        opacity: 1;
+                        opacity: 0.25;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        transition: 0.3s ease opacity;
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: auto;
+                        height: auto;
                     }
                     .button {
-                        transform: translateX(0) translateY(0);
-                        top: auto;
-                        left: auto;
-                        right: 0px;
-                        bottom: 0px;
-                        & > div {
-                            background: #fff;
-                            color: #000;
-                            box-shadow: 0 0 0 2px #848282 inset;
-                            &:before {
-                                content: '重新上傳 ';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        width: 170px;
+                        margin: 0px;
+                        transition: 0.3s ease all;
+                        .btn-fakeBg {
+                            font-size: 18px;
+                        }
+                        & > div:before {
+                            content: '上傳 ';
+                            display: inline;
+                        }
+                    }
+                    &.hasData {
+                        background: #fff;
+                        img {
+                            opacity: 1;
+                        }
+                        .button {
+                            transform: translateX(0) translateY(0);
+                            top: auto;
+                            left: auto;
+                            right: 0px;
+                            bottom: 0px;
+                            & > div {
+                                background: #fff;
+                                color: #000;
+                                box-shadow: 0 0 0 2px #848282 inset;
+                                &:before {
+                                    content: '重新上傳 ';
+                                }
                             }
                         }
                     }
+                }
+                &-remove {
+                    position: absolute;
+                    bottom: 7px;
+                    right: 184px;
+                    font-size: 18px;
+                    z-index: 1;
+                    cursor: pointer;
+                    background: #fff;
+                    border-radius: 20px;
+                    border: solid 2px #848282;
+                    padding: 3px 16px;
+                    display: none;
                 }
             }
             .formArea-item-input {
@@ -3401,7 +3423,8 @@ html, body {
     @media screen and (min-width: 992px) {
         &-formContent {
             .btn {
-                a {
+                a,
+                .btn-fakeBg {
                     font-size: 18px;
                 }
             }
@@ -3746,6 +3769,103 @@ html, body {
                 &-right {
                     width: 27px;
                 }
+            }
+        }
+    }
+}
+
+// 身份確認問答
+.identificationQa {
+    margin-top: 10px;
+    border-top: dashed 1px #ccc;
+    padding-top: 25px;
+    &-tit {
+        font-size: 18px;
+        color: #1e9d7e;
+        margin: 0px 0px 6px;
+    }
+    &-item {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        &-area {
+            font-size: 0px;
+            text-align: center;
+            padding: 10px 0px;
+        }
+        &-bg {
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(#000, 0.2);
+        }
+        &-question {
+            font-size: 16px;
+            padding: 40px 15px;
+            font-weight: bold;
+        }
+        &-btnArea {
+            border-top: dashed 1px #ccc;
+            padding: 15px 0px;
+            background: #eee;
+        }
+    }
+    @include maxWidth-sm {
+        .tit-type2 {
+            font-size: 18px;
+        }
+        &-item {
+            display: block;
+            width: auto;
+            &-question {
+                padding: 25px 10px;
+            }
+        }
+    }
+}
+
+.toggleBtn {
+    display: inline-block;
+    vertical-align: middle;
+    label {
+        font-size: 16px;
+        // background: #ccc;
+        background: #fff;
+        color: #ccc;
+        padding: 10px 30px;
+        display: block;
+        border: solid 1px #ccc;
+        // transition: 0.3s ease all;
+        &:hover {
+            background: #fccb51;
+            color: #fff;
+        }
+    }
+    &:nth-of-type(1) {
+        label {
+            border-radius: 30px 0px 0px 30px;
+            border-right: none;
+        }
+    }
+    &:nth-of-type(2) {
+        label {
+            border-radius: 0px 30px 30px 0px;
+            border-left: none;
+        }
+    }
+    &-area {
+        font-size: 0px;
+        text-align: center;
+    }
+    &-radio {
+        display: none;
+        &:checked {
+            & + .toggleBtn label {
+                // @extend .baseGreenGradient;
+                // color: #fff;
+                font-weight: bold;
+                background: #fccb51;
+                color: #000;
             }
         }
     }
