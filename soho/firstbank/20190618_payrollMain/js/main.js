@@ -90,6 +90,49 @@ Vue.component('navbarArea', {
 });
 
 // ========= footer ==============================================================================================================================
+Vue.component('footerCopyright', {
+    template: ` <footer class="footer">
+                    <div class="colorLine">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="container clearfix">
+                        <div class="footer-copyright">
+                            © 第一商業銀行股份有限公司 <br/>First Commercial Bank
+                        </div>
+                        <div class="footer-content">
+                            24小時服務專線：<br/>(02)2181-1111 或 0800-031-111(限市話)
+                        </div>
+                        <div class="footer-socialMedia">
+                            <div class="footer-socialMedia-link">
+                                <a href="https://www.facebook.com/pg/firsthaka/" target="_blank" title="facebook">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </div>
+                            <div class="footer-socialMedia-link">
+                                <a href="https://timeline.line.me/user/_dW1ZzmUBqoshC6wYHZZUuJBpYjMe8434Df3ShHk" target="_blank" title="LINE">
+                                    <i class="fab fa-line"></i>
+                                </a>
+                            </div>
+                            <div class="footer-socialMedia-link">
+                                <a href="https://www.instagram.com/firstbank.tw/" target="_blank" title="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>`,
+})
+Vue.component('topBtn', {
+    template: ` <div class="topBtn">
+                    <a href="#top">
+                        <i class="fas fa-angle-up"></i>
+                        TOP
+                    </a>
+                </div>`,
+})
 Vue.component('footerArea', {
     data: function () {
         return {
@@ -98,46 +141,8 @@ Vue.component('footerArea', {
     },
     props: ['path'],
     template: ` <div>
-                    <footer class="footer">
-                        <div class="colorLine">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="container clearfix">
-                            <div class="footer-copyright">
-                                © 第一商業銀行股份有限公司 <br/>First Commercial Bank
-                            </div>
-                            <div class="footer-content">
-                                24小時服務專線：<br/>(02)2181-1111 或 0800-031-111(限市話)
-                            </div>
-                            <div class="footer-socialMedia">
-                                <div class="footer-socialMedia-link">
-                                    <a href="https://www.facebook.com/pg/firsthaka/" target="_blank" title="facebook">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </a>
-                                </div>
-                                <div class="footer-socialMedia-link">
-                                    <a href="https://timeline.line.me/user/_dW1ZzmUBqoshC6wYHZZUuJBpYjMe8434Df3ShHk" target="_blank" title="LINE">
-                                        <i class="fab fa-line"></i>
-                                    </a>
-                                </div>
-                                <div class="footer-socialMedia-link">
-                                    <a href="https://www.instagram.com/firstbank.tw/" target="_blank" title="instagram">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-
-                    <div class="topBtn">
-                        <a href="#top">
-                            <i class="fas fa-angle-up"></i>
-                            TOP
-                        </a>
-                    </div>
+                    <footer-copyright></footer-copyright>
+                    <top-btn></top-btn>
 
                     <div class="pinBottom-mask" v-if="mobileMenuShow" @click="toggleMobileMenu();"></div>
                     <div class="pinBottom">
@@ -235,6 +240,13 @@ Vue.component('footerArea', {
             this.mobileMenuShow === false ? show(this) : hide(this);
         },
     },
+});
+Vue.component('footerArea_2', {
+    props: ['path'],
+    template: ` <div>
+                    <footer-copyright></footer-copyright>
+                    <top-btn></top-btn>
+                </div>`,
 });
 
 // ========= 燈箱 ==============================================================================================================================

@@ -3281,6 +3281,17 @@ html, body {
 }
 
 // 信⽤額度調升申請 ====================================================================================================
+#content.increaseLimit {
+    @include maxWidth-md {
+        padding-bottom: 86px;
+        .footer {
+            padding-bottom: 0px;
+        }
+    }
+    @include maxWidth-sm {
+        padding-bottom: 189px;
+    }
+}
 .increaseLimit {
     background: #eee;
     .warningArea {
