@@ -750,6 +750,9 @@ html, body {
             box-shadow: 0px 4px 10px rgba(#000, 0.3);
             @media screen and (min-width: 767px) {
                 width: 355px;
+                &.type2 {
+                    width: 475px;
+                }
             }
         }
     }
@@ -3277,6 +3280,171 @@ html, body {
     }
     & + .btn-area {
         margin-top: 25px;
+    }
+}
+
+// 錯誤頁面 ==================================================
+.errorPage {
+    &-area {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+    }
+    &-img {
+        padding-bottom: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    &-tit {
+        font-weight: bold;
+        font-size: 22px;
+        position: relative;
+    }
+    &-btnArea {
+        padding-top: 20px;
+        position: relative;
+        .btn {
+            a {
+                font-size: 18px;
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+        }
+    }
+    &-light {
+        div {
+            position: fixed;
+            border-radius: 100%;
+            background: rgba(#43bb9e, 0.1);
+            width: 30vw;
+            height: 30vw;
+            pointer-events: none;
+            opacity: 0;
+            &:nth-of-type(1) {
+                animation: errorPage-light-1 10s ease-in-out infinite alternate backwards;
+            }
+            &:nth-of-type(2) {
+                animation: errorPage-light-2 10s ease-in-out infinite alternate backwards;
+                animation-delay: 0.4s;
+                width: 40vw;
+                height: 40vw;
+                background: rgba(#7ee795, 0.2);
+            }
+            &:nth-of-type(3) {
+                animation: errorPage-light-3 10s ease-in-out infinite alternate backwards;
+                animation-delay: 0.6s;
+                width: 10vw;
+                height: 10vw;
+            }
+            &:nth-of-type(4) {
+                animation: errorPage-light-4 10s ease-in-out infinite alternate backwards;
+                animation-delay: 1s;
+                width: 15vw;
+                height: 15vw;
+                background: rgba(#7ee795, 0.2);
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-img {
+            width: 80vw;
+        }
+    }
+    @include maxWidth-sm {
+        &-area {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: translateX(0) translateY(0);
+            padding: 60px 0px 30px;
+        }
+    }
+}
+
+@keyframes errorPage-light-1 {
+    0% {
+        top: 0vh;
+        left: 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        top: 80vh;
+        left: 80vw;
+        opacity: 0;
+    }
+}
+@keyframes errorPage-light-2 {
+    0% {
+        bottom: 0vh;
+        right: 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 80vh;
+        right: 80vw;
+        opacity: 0;
+    }
+}
+@keyframes errorPage-light-3 {
+    0% {
+        top: 0vh;
+        right: 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        top: 80vh;
+        right: 80vw;
+        opacity: 0;
+    }
+}
+@keyframes errorPage-light-4 {
+    0% {
+        bottom: 0vh;
+        left: 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 80vh;
+        left: 80vw;
+        opacity: 0;
     }
 }
 
