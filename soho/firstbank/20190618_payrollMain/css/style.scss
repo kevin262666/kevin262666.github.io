@@ -3301,6 +3301,12 @@ html, body {
             width: 100%;
         }
     }
+    &-errorStatus {
+        font-size: 280px;
+        line-height: 1;
+        font-weight: bold;
+        color: #3eb79f;
+    }
     &-tit {
         font-weight: bold;
         font-size: 22px;
@@ -3363,6 +3369,9 @@ html, body {
             left: auto;
             transform: translateX(0) translateY(0);
             padding: 60px 0px 30px;
+        }
+        &-errorStatus {
+            font-size: 40vw;
         }
     }
 }
