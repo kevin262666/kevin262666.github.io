@@ -1,0 +1,430 @@
+/* line 5, ../sass/guide.scss */
+.blackCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 100;
+  display: none;
+}
+/* line 20, ../sass/guide.scss */
+.blackCover.on {
+  display: block;
+  opacity: 0.7;
+}
+
+/* line 29, ../sass/guide.scss */
+.lightboxContainer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 0 auto;
+  z-index: 101;
+  overflow-y: scroll;
+  display: none;
+}
+/* line 52, ../sass/guide.scss */
+.lightboxContainer.on {
+  display: block;
+}
+/* line 59, ../sass/guide.scss */
+.lightboxContainer .closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow:hiden;
+}
+
+.swiper-slide {
+  float:left;
+  box-sizing: border-box;
+  position: relative;
+  padding:0 24px;
+}
+@media screen and (max-width: 1240px) {
+  /* line 59, ../sass/guide.scss */
+  .lightboxContainer .closeBtn {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}
+/* line 79, ../sass/guide.scss */
+.lightboxContainer .closeBtn img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 88, ../sass/guide.scss */
+.lightboxContainer-imageContainer {
+  display: none;
+}
+/* line 91, ../sass/guide.scss */
+.lightboxContainer-imageContainer.on {
+  display: block;
+}
+/* line 95, ../sass/guide.scss */
+.lightboxContainer-imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 105, ../sass/guide.scss */
+.firstBlock {
+  margin-top: 60px;
+}
+/* line 107, ../sass/guide.scss */
+.firstBlock img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 112, ../sass/guide.scss */
+.firstBlock .guideContainer {
+  margin-bottom: 70px;
+}
+/* line 114, ../sass/guide.scss */
+.firstBlock .guideContainer .guideTitle {
+  color: #004E9E;
+  font-size: 1.5rem;
+  margin: 50px 0;
+  text-align: center;
+}
+/* line 120, ../sass/guide.scss */
+.firstBlock .guideContainer .guide-slide-info {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 125, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideImgInfo {
+  position: relative;
+}
+/* line 127, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideImgInfo::before {
+  opacity: 0;
+  background-color: rgba(0, 78, 158, 0.25);
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 137, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideImgInfo:hover img {
+  opacity: .75;
+}
+/* line 140, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideImgInfo:hover::before {
+  opacity: 1;
+}
+/* line 145, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideDetail {
+  height: 85px;
+  background-color: #004E9E;
+  color: white;
+  padding: 20px 25px;
+  margin-top: -1px;
+}
+/* line 151, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideDetail .guidCat {
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+/* line 155, ../sass/guide.scss */
+.firstBlock .guideContainer .swiper-slide .guideDetail .guidInfoTitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+/* line 162, ../sass/guide.scss */
+.firstBlock .guideInfoTitle {
+  color: #004E9E;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 50px 0 20px;
+}
+/* line 168, ../sass/guide.scss */
+.firstBlock .guideInformation {
+  background-color: #f5f6f7;
+}
+/* line 170, ../sass/guide.scss */
+.firstBlock .guideInformation .guideNumbers {
+  text-align: center;
+  padding-bottom: 49px;
+}
+/* line 174, ../sass/guide.scss */
+.firstBlock .guideInformation .guideNumbers ul a {
+  color: #545454;
+  text-decoration: none;
+}
+/* line 177, ../sass/guide.scss */
+.firstBlock .guideInformation .guideNumbers ul a li {
+  background-color: white;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 5px;
+}
+/* line 184, ../sass/guide.scss */
+.firstBlock .guideInformation .guideNumbers ul a li.actived, .firstBlock .guideInformation .guideNumbers ul a li:hover {
+  color: white;
+  background-color: #808080;
+}
+/* line 194, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo {
+  width: 85%;
+  margin: 0 auto;
+}
+/* line 198, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a:nth-child(n+7) {
+  display: none;
+}
+/* line 201, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock {
+  overflow: hidden;
+  width: 100%;
+  max-height: 158px;
+  margin-bottom: 27px;
+  background-color: white;
+  height: 158px;
+}
+/* line 209, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg {
+  width: 30%;
+  max-width: 307px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  max-height: 158px;
+  border-right: 2px solid #004E9E;
+  position: relative;
+  height: 100%;
+}
+/* line 221, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg::before {
+  opacity: 0;
+  background-color: rgba(0, 78, 158, 0.25);
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 230, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* line 241, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg:hover img {
+  opacity: 0.75;
+}
+/* line 244, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg:hover::before {
+  opacity: 1;
+}
+/* line 249, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail {
+  vertical-align: middle;
+  width: 67%;
+  display: inline-block;
+}
+/* line 253, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 256, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideCat {
+  font-size: 1.475rem;
+  color: #004E9E;
+  margin-bottom: 15px;
+}
+/* line 261, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideDate {
+  float: right;
+  color: #bbb;
+  font-size: 0.75rem;
+}
+/* line 266, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guidInfoTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 15px 0 21px;
+}
+/* line 271, ../sass/guide.scss */
+.firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideInfo {
+  color: #808080;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+/* line 281, ../sass/guide.scss */
+.firstBlock .guideInformation .guideSecondFilter {
+  display: block;
+  text-align: right;
+  margin-bottom: 36px;
+}
+/* line 285, ../sass/guide.scss */
+.firstBlock .guideInformation .guideSecondFilter i {
+  font-size: 0.875rem;
+  color: #767d83;
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 292, ../sass/guide.scss */
+.firstBlock .guideInformation .guideSecondFilter i.actived, .firstBlock .guideInformation .guideSecondFilter i:hover {
+  color: #000;
+}
+/* line 294, ../sass/guide.scss */
+.firstBlock .guideInformation .guideSecondFilter i.actived::after, .firstBlock .guideInformation .guideSecondFilter i:hover::after {
+  position: absolute;
+  content: " ";
+  border-bottom: 4px solid #004E99;
+  height: 4px;
+  width: 100%;
+  display: block;
+}
+/* line 305, ../sass/guide.scss */
+.firstBlock .guideInformation .guideFilter {
+  display: block;
+}
+/* line 308, ../sass/guide.scss */
+.firstBlock .guideInformation .guideFilter ul li {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #808080;
+  padding: 0 15px;
+  line-height: 35px;
+}
+/* line 316, ../sass/guide.scss */
+.firstBlock .guideInformation .guideFilter ul li.actived, .firstBlock .guideInformation .guideFilter ul li:hover {
+  padding: 0 15px;
+  text-align: center;
+  height: 35px;
+  border: 1px solid #004E9E;
+  background-color: #E7EEF6;
+  color: #004E9E;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 338, ../sass/guide.scss */
+  .firstBlock {
+    margin-top: 50px;
+  }
+  /* line 341, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideNumbers {
+    padding-bottom: 42px;
+  }
+  /* line 345, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideNumbers ul a li {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+  }
+  /* line 355, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock {
+    max-height: 100px;
+  }
+  /* line 357, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterBlockImg {
+    max-height: 100px;
+  }
+  /* line 361, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo {
+    width: 90%;
+  }
+  /* line 363, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideCat {
+    font-size: 10px;
+  }
+  /* line 366, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideDate {
+    font-size: 10px;
+  }
+  /* line 369, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guidInfoTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 5px 0;
+  }
+  /* line 374, ../sass/guide.scss */
+  .firstBlock .guideInformation .guidFilterInfo a .guidFilterBlock .guideFilterDetail .detailInfo .guideInfo {
+    display: none;
+  }
+  /* line 382, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideSecondFilter {
+    margin-bottom: 30px;
+    margin-top: 23px;
+  }
+  /* line 387, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideFilter ul {
+    text-align: center;
+  }
+  /* line 389, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideFilter ul li {
+    font-size: 1rem;
+    line-height: 32px;
+    padding: 0 2px;
+    width: 30%;
+  }
+  /* line 394, ../sass/guide.scss */
+  .firstBlock .guideInformation .guideFilter ul li.actived, .firstBlock .guideInformation .guideFilter ul li:hover {
+    line-height: 1.875rem;
+    height: 1.875rem;
+    padding: 0 2px;
+  }
+  /* line 406, ../sass/guide.scss */
+  .firstBlock .guideContainer .swiper-slide .guideDetail {
+    padding: 15px 20px;
+  }
+  /* line 408, ../sass/guide.scss */
+  .firstBlock .guideContainer .swiper-slide .guideDetail .guidCat {
+    margin-bottom: 10px;
+  }
+  /* line 411, ../sass/guide.scss */
+  .firstBlock .guideContainer .swiper-slide .guideDetail .guidInfoTitle {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 422, ../sass/guide.scss */
+  .firstBlock .guideContainer .guide-slide-info {
+    width: 65%;
+  }
+}

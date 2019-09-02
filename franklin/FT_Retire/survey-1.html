@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<script src="survey/js/vue.js"></script>
+	<!-- Google Tag Manager -->
+	<!-- <script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script> -->
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#062061">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesheets/common.css">
+
+	<link rel="stylesheet" href="stylesheets/guide.css">
+	<link rel="stylesheet" href="lib/slick/slick.css">
+	<link rel="stylesheet" href="lib/slick/slick-theme.css">
+
+	<link rel="stylesheet" href="survey/css/style.css">
+    <title>跨世代議題：退休後的「第二人生」 | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="跨世代議題：退休後的「第二人生」">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="富蘭克林坦伯頓基金集團 退休收入策略暨預期調查">
+	<meta property="og:description" content="富蘭克林坦伯頓基金集團 退休收入策略暨預期調查">
+    <meta property="og:image" content="https://event.franklin.com.tw/FT_Retire/survey/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/FT_Retire/survey-1.html">
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+	<!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<!-- ie用的遮罩 -->
+		<div class="ieUseMask">
+			<div class="ieUseMask-text">
+				<strong>建議您使用現代化瀏覽器瀏覽</strong><br/><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+				<div class="ieUseMask-dot"></div>
+			</div>
+		</div>
+
+		<!-- main -->
+		<article class="main">
+
+			<!-- banner -->
+			<banner-area switch-btn-no="1"></banner-area>
+
+			<section class="survey-item">
+				<div class="container">
+					<div class="content">
+
+						<h2 class="survey-tit type1" title="台灣人普遍有退休準備意識，但缺乏長期計畫，退休金準備進度落後，被迫「晚退」的比例越來越高。">
+							台灣人普遍有退休準備意識，但缺乏長期計畫，退休金準備進度落後，被迫「晚退」的比例越來越高。
+						</h2>
+
+						<div class="survey-faceItem-area">
+							<div class="survey-faceItem wow fadeInUp">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-1.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										<b><span class="wow digitalAnimation" data-digital_animation="54">0</span>%</b>的受訪者
+										<br/>已開始準備退休金
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.3s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-2.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										其中卻有<b><span class="wow digitalAnimation" data-digital_animation="73">0</span>%</b>
+										<br />表示進度落後
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.6s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-3.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										<b><span class="wow digitalAnimation" data-digital_animation="65">0</span>%</b>
+										<br />認為退休準備缺乏長期計畫
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.9s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-4.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										以至於有<b><span class="wow digitalAnimation" data-digital_animation="57">0</span>%</b>
+										<br />需要延後退休，以支應老年生活
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item">
+				<div class="container">
+					<div class="content">
+
+						<div class="survey-textArea survey-textAlign-center wow fadeInUp">
+							你想提早十年退休？但不知道如何準備退休基金？
+							<br/>富蘭克林提供精心製作的退休旅程指南，<b class="survey-underLine">只要簡單五步驟，助您輕鬆規劃專屬的退休理財方案</b>：
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item firstBlock">
+				<div class="guideContainer">
+					<div class="container">
+						<div class="content">
+
+							<!-- <h2 class="survey-tit type1" title="第ㄧ步：瞭解自己，找出適合自己的退休計畫">
+								第ㄧ步：瞭解自己，找出適合自己的退休計畫
+							</h2> -->
+
+							<div class="guideContent">
+								<div class="sdTitle">第ㄧ步：<br class="mobileShow" />瞭解自己，找出適合自己的退休計畫</div>
+								<div class="swiper-container">
+									<div id="wrap01" class="swiper-wrapper">
+										<div id="card_4" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="心態養成" src="./image/card/4@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">心態養成篇</h4>
+												<p class="guidInfoTitle">四種理財態度，你是哪一種？</p>
+											</div>
+
+										</div>
+										<div id="card_3" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="心態養成" src="./image/card/3@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">心態養成篇</h4>
+												<p class="guidInfoTitle">開始退休規劃前：了解自己的現況與性格</p>
+											</div>
+
+										</div>
+										<div id="card_1" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/1@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">心態養成篇</h4>
+												<p class="guidInfoTitle">不同退休族群策略比一比</p>
+											</div>
+
+										</div>
+										<div id="card_8" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/8@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">理財觀念篇</h4>
+												<p class="guidInfoTitle">為自己量身打造專屬的退休計畫</p>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+
+								<div class="sdTitle" style="padding-top:50px;">第二步：<br class="mobileShow" />規劃退休之旅，要留意的風險和變數</div>
+								<div class="swiper-container1">
+									<div id="wrap02" class="swiper-wrapper">
+										<div id="card_5" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/5@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">理財觀念篇</h4>
+												<p class="guidInfoTitle">影響退休規劃-你不可不知的風險</p>
+											</div>
+
+										</div>
+										<div id="card_2" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="政策風向" src="./image/card/2@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">心態養成篇</h4>
+												<p class="guidInfoTitle">打破養兒防老的迷思</p>
+											</div>
+
+										</div>
+										<div id="card_11" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/11@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">資訊風向篇</h4>
+												<p class="guidInfoTitle">你的退休能全靠年金嗎？</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="sdTitle" style="padding-top:50px;">第三步：<br class="mobileShow" />別錯過各種資源，協助您規劃退休旅程</div>
+								<div class="swiper-container2">
+									<div id="wrap03" class="swiper-wrapper">
+										<div id="card_9" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/9@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">資訊風向篇</h4>
+												<p class="guidInfoTitle">退休保障漢堡包</p>
+											</div>
+
+										</div>
+										<div id="card_10" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/10@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">資訊風向篇</h4>
+												<p class="guidInfoTitle">退休後別忘了你的兩筆退休金。</p>
+											</div>
+
+										</div>
+										<div id="card_7" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/7@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">理財觀念篇</h4>
+												<p class="guidInfoTitle">如何留住退休老本？五大管道報你知。</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="sdTitle" style="padding-top:50px;">第四步：<br class="mobileShow" />打造美好退休生活，您該知道的理財觀念</div>
+								<div class="swiper-container">
+									<div id="wrap04" class="swiper-wrapper">
+										<div id="card_6" class="swiper-slide">
+
+											<div class="guideImgInfo">
+												<img alt="理財觀念" src="./image/card/6@2x.jpg">
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">理財觀念篇</h4>
+												<p class="guidInfoTitle">優質退休生活，你該知道的理財觀念。</p>
+											</div>
+
+										</div>
+										<!--<div class="swiper-slide">
+										<a href="#">
+											<div class="guideImgInfo">
+												<img data-src="./image/card/9@2x.jpg" alt="理財觀念" class="swiper-lazy" />
+											</div>
+											<div class="guideDetail">
+												<h4 class="guidCat">理財觀念篇</h4>
+												<p class="guidInfoTitle">全球退休理財趨勢，你跟上了嗎？</p>
+											</div>
+										</a>
+									</div>-->
+									</div>
+									<!-- Add Pagination -->
+								</div>
+								<div class="sdTitle" style="padding-top:50px;">第五步：<br class="mobileShow" />搭乘富蘭克林退休準備列車，快樂退休不是夢</div>
+								<p class="rBTitle_con" style="text-align: center">看完上述四步驟，已等不及規劃自己的退休旅程嗎？快搭乘富蘭克林退休準備列車，提早開創專屬自己的美好旅程吧！</p>
+								<img src="image/guide/end.jpg" style="display:block;width:100%;margin:0 auto 15px;max-width:800px;">
+								<div class="btnBox">
+									<a href="station.html" class="moreBtn">立即搭乘退休準備列車</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item firstBlock type3">
+				<div class="guideInformation">
+					<div class="container">
+						<div class="content">
+
+							<h2 title="退休指南輕鬆看" class="survey-tit type1">
+								退休指南輕鬆看
+							</h2>
+							<div class="survey-textArea survey-textAlign-center">
+								想知道更多退休準備的撇步和理財觀念嗎？富蘭克林精選豐富的退休資訊，助您全方位規劃退休旅程！
+							</div>
+
+							<survey1-news></survey1-news>
+							<!-- <div class="guidFilterInfo">
+								<div v-for="news in newsList">
+									<a v-bind:href="'./readnews.html?id=' + news.ArticleId">
+										<div class="guidFilterBlock">
+											<div class="guideFilterBlockImg"><img v-bind:src="news.PictureUrl" v-bind:alt="news.Title"></div>
+											<div class="guideFilterDetail">
+												<div class="detailInfo"><i class="guideCat">{{ news.Category }}</i><i
+														class="guideDate">{{ news.ReportDate | onlydate }}</i>
+													<h3 class="guidInfoTitle">{{ news.Title }}</h3>
+													<h4 class="guideInfo">{{ news.Abstract }}...</h4>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div> -->
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item type2">
+				<div class="container">
+					<div class="content">
+
+						<switch-btn tit="了解其他階段" active-no="0" home-link="true"></switch-btn>
+
+					</div>
+				</div>
+			</section>
+
+			<survey-source></survey-source>
+
+		</article>
+		
+		<!-- <div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div> -->
+
+		<fixed-right-btn></fixed-right-btn>
+
+		<div class="lightboxContainer">
+			<div class="closeBtn"><img src="./image/icon/closeBtn.png" alt=""></div>
+			<div class="lightboxContainer-imageContainer"><img src="./image/guideLightboxCard/1@2x.png"></div>
+		</div>
+		<div class="blackCover"></div>
+
+	</div>
+
+    <script src="survey/js/jquery.js"></script>
+	<script src="survey/js/wow.min.js"></script>
+	<script src="survey/js/scrollspy.js"></script>
+	<script src="js/common.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+	<script>
+		$(function () {
+			$('#wrap01,#wrap02,#wrap03,#wrap04').slick({
+				dots: false,
+				infinite: false,
+
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				responsive: [{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: false,
+							dots: false,
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+
+		});
+	</script>
+	<script>
+		$(function () {
+			$(".swiper-slide").click(function () {
+				var cardID = $(this).attr('id');
+				var num = cardID.split('_');
+				$('.blackCover,.lightboxContainer,.lightboxContainer-imageContainer').addClass('on');
+				$('.lightboxContainer .lightboxContainer-imageContainer').find('img').attr('src', './image/guideLightboxCard/' + num[1] + '@2x.png');
+
+			});
+			$('.closeBtn').click(function () {
+				$('.lightboxContainer-imageContainer').removeClass('on');
+				$('.blackCover,.lightboxContainer').removeClass('on');
+			});
+		});
+	</script>
+	<script type="text/javascript" src='https://momentjs.com/downloads/moment.min.js'></script>
+	<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/vue-resource@1.3.4'></script>
+	<script type="text/javascript" src="./js/config.js"></script>
+	<script src="survey/js/main.min.js"></script>
+
+</body>
+</html>

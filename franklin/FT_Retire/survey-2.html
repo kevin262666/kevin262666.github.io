@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<script src="survey/js/vue.js"></script>
+	<!-- Google Tag Manager -->
+	<!-- <script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script> -->
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#062061">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesheets/common.css">
+
+	<link rel="stylesheet" href="survey/css/style.css">
+    <title>跨世代議題：退休後的「第二人生」 | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="跨世代議題：退休後的「第二人生」">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="富蘭克林坦伯頓基金集團 退休收入策略暨預期調查">
+	<meta property="og:description" content="富蘭克林坦伯頓基金集團 退休收入策略暨預期調查">
+    <meta property="og:image" content="https://event.franklin.com.tw/FT_Retire/survey/images/fb.png">
+	<meta property="og:url" content="https://event.franklin.com.tw/FT_Retire/survey-2.html">
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+	<!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<!-- ie用的遮罩 -->
+		<div class="ieUseMask">
+			<div class="ieUseMask-text">
+				<strong>建議您使用現代化瀏覽器瀏覽</strong><br/><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+				<div class="ieUseMask-dot"></div>
+			</div>
+		</div>
+
+		<!-- main -->
+		<article class="main">
+
+			<!-- banner -->
+			<banner-area switch-btn-no="2"></banner-area>
+
+			<section class="survey-item">
+				<div class="container">
+					<div class="content">
+
+						<h2 class="survey-tit type1" title="退休生活只靠勞退肯定不夠！但，你有投資嗎？">
+							退休生活只靠勞退肯定不夠！<br class="mobileShow"/>但，你有投資嗎？
+						</h2>
+
+						<div class="survey-textArea survey-textAlign-center">
+							多數台灣人理財竟然只放保險或存款，難怪退休金目標難達成。
+						</div>
+
+						<div class="survey-faceItem-area">
+							<div class="survey-faceItem wow fadeInUp">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-4.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										民眾認為勞退僅能支應 <b><span class="wow digitalAnimation" data-digital_animation="41">0</span>%</b>
+										的退休金需求，剩下的還是得靠自己
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.3s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-5.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										為了達到退休目標，<b><span class="wow digitalAnimation" data-digital_animation="81">0</span>%</b>
+										的民眾願意提高投資理財金額
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.6s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-6.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										但多數人的投資方式
+										<br/>
+										<b>過於保守</b>
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.9s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/head-7.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-text">
+										<b><span class="wow digitalAnimation" data-digital_animation="66">0</span>%</b>保險，
+										<b><span class="wow digitalAnimation" data-digital_animation="55">0</span>%</b>儲蓄
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item type2">
+				<div class="container">
+					<div class="content">
+
+						<h2 class="survey-tit type1" title="跌破眼鏡！愛儲蓄的台灣人，退休金準備還不如偏好及時享樂的美國人？">
+							跌破眼鏡！愛儲蓄的台灣人，退休金準備還不如偏好及時享樂的美國人？
+						</h2>
+
+						<div class="survey-textArea survey-textAlign-center">
+							比較台灣與美國的退休調查結果，竟發現美國人的各項退休準備情況都優於台灣人！
+						</div>
+
+						<div class="survey-comparisonChart">
+							<img src="survey/images/man-taiwan.png" alt="" class="survey-comparisonChart-man man-1 wow fadeInLeft">
+							<img src="survey/images/man-usa.png" alt="" class="survey-comparisonChart-man man-2 wow fadeInRight">
+							<div class="survey-comparisonChart-chart">
+								<div class="survey-comparisonChart-chart-row">
+									<div class="survey-comparisonChart-chart-col">
+										<img src="survey/images/flag-taiwan.png" alt="" class="flag flag-taiwan">
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<b class="survey-comparisonChart-chart-col-vs">vs.</b>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<img src="survey/images/flag-usa.png" alt="" class="flag flag-usa">
+									</div>
+								</div>
+								<div class="survey-comparisonChart-chart-row wow fadeInUp" data-wow-delay="0.2s">
+									<div class="survey-comparisonChart-chart-col">
+										46%
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-tit">
+											尚未開始儲蓄退休金
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-num">
+											<span data-digital_animation="23" class="wow digitalAnimation">0</span>%
+											<img src="survey/images/semicolon.png" alt="" class="survey-comparisonChart-chart-col-num-semicolon">
+										</div>
+									</div>
+								</div>
+								<div class="survey-comparisonChart-chart-row wow fadeInUp" data-wow-delay="0.4s">
+									<div class="survey-comparisonChart-chart-col">
+										50%
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-tit">
+											以個人儲蓄為主要退休收入
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-num">
+											<span data-digital_animation="10" class="wow digitalAnimation">0</span>%
+											<img src="survey/images/semicolon.png" alt="" class="survey-comparisonChart-chart-col-num-semicolon">
+										</div>
+									</div>
+								</div>
+								<div class="survey-comparisonChart-chart-row wow fadeInUp" data-wow-delay="0.6s">
+									<div class="survey-comparisonChart-chart-col">
+										35%
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-tit">
+											具備長期(30Y+)的退休計畫
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-num">
+											<span data-digital_animation="46" class="wow digitalAnimation">0</span>%
+											<img src="survey/images/semicolon.png" alt="" class="survey-comparisonChart-chart-col-num-semicolon">
+										</div>
+									</div>
+								</div>
+								<div class="survey-comparisonChart-chart-row wow fadeInUp" data-wow-delay="0.8s">
+									<div class="survey-comparisonChart-chart-col">
+										57%
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-tit">
+											退休金不足時以延後退休因應
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-num">
+											<span data-digital_animation="36" class="wow digitalAnimation">0</span>%
+											<img src="survey/images/semicolon.png" alt="" class="survey-comparisonChart-chart-col-num-semicolon">
+										</div>
+									</div>
+								</div>
+								<div class="survey-comparisonChart-chart-row wow fadeInUp" data-wow-delay="1s">
+									<div class="survey-comparisonChart-chart-col">
+										81%
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-tit">
+											儲備退休帶來壓力
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-col">
+										<div class="survey-comparisonChart-chart-col-num">
+											<span data-digital_animation="67" class="wow digitalAnimation">0</span>%
+											<img src="survey/images/semicolon.png" alt="" class="survey-comparisonChart-chart-col-num-semicolon">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item">
+				<div class="container">
+					<div class="content">
+
+						<div class="survey-col2Item-area">
+							<div class="survey-col2Item wow fadeInLeft">
+								<h2 title="原來是因為…不愛儲蓄的美國人更善於「投資」" class="survey-tit type1">
+									原來是因為…<br class="mobileShow" />不愛儲蓄的美國人更善於「投資」
+								</h2>
+								<div class="survey-textArea survey-textAlign-center">
+									在美國，多數勞工為了爭取免稅優惠，會參加政府的退休福利計劃，參加者須提撥部分薪資，用於投資下列自選標的，股票、基金、年金保險、債券、專項定期存款等，可見退休準備的「投資方式」選擇很重要！
+								</div>
+							</div>
+							<div class="survey-col2Item wow fadeInUp" data-wow-delay="0.3s">
+								<div class="survey-comparisonChart-chart type2">
+									<div class="survey-comparisonChart-chart-row">
+										<div class="survey-comparisonChart-chart-col">
+											<img src="survey/images/flag-taiwan.png" alt="" class="flag flag-taiwan">
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											<b class="survey-comparisonChart-chart-col-tit">
+												退休後最主要收入
+											</b>
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											<img src="survey/images/flag-usa.png" alt="" class="flag flag-usa">
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-row">
+										<div class="survey-comparisonChart-chart-col">
+											個人儲蓄
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											<div class="survey-comparisonChart-chart-col-no">
+												1
+											</div>
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											退休投資帳戶<br/>(例如401K)
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-row">
+										<div class="survey-comparisonChart-chart-col">
+											勞退新舊制
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											<div class="survey-comparisonChart-chart-col-no">
+												2
+											</div>
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											社會福利
+										</div>
+									</div>
+									<div class="survey-comparisonChart-chart-row">
+										<div class="survey-comparisonChart-chart-col">
+											投資利息收入
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											<div class="survey-comparisonChart-chart-col-no">
+												3
+											</div>
+										</div>
+										<div class="survey-comparisonChart-chart-col">
+											個人儲蓄
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item type3">
+				<div class="container">
+					<div class="content">
+
+						<h2 title="退休金投資方式比一比" class="survey-tit type1">
+							退休金投資方式比一比
+						</h2>
+
+						<div class="survey-faceItem-area investmentMethod">
+							<div class="survey-faceItem wow fadeInUp">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/investmentMethodIcon-1.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-tit">
+										儲蓄
+									</div>
+									<div class="survey-faceItem-text">
+										低利率時代再考慮通膨，放在銀行的定存等於每年都在縮水，本金不夠多的情況下，退休只靠儲蓄太單薄。
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.3s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/investmentMethodIcon-2.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-tit">
+										保險
+									</div>
+									<div class="survey-faceItem-text">
+										醫療型保險可以減輕年老時的醫療支出負擔，但只靠收益率低的年金保險恐無法完整支應退休生活。
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.6s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/investmentMethodIcon-3.png" alt="" class="survey-faceItem-face">
+									<div class="survey-faceItem-tit">
+										股票
+									</div>
+									<div class="survey-faceItem-text">
+										俗話說「10個股民9個虧」想在股市中賺大錢，得承受較高的風險，而且一張股票門檻過高、起步難。
+									</div>
+								</div>
+							</div>
+							<div class="survey-faceItem wow fadeInUp" data-wow-delay="0.9s">
+								<div class="survey-faceItem-bg">
+									<img src="survey/images/investmentMethodIcon-4.png" alt="" class="survey-faceItem-face">
+									<img src="survey/images/certification.png" alt="" class="certification">
+									<div class="survey-faceItem-tit">
+										基金
+									</div>
+									<div class="survey-faceItem-text">
+										基金的投資風險較股票分散，而且投資種類多元、起點低、有專業經理人操盤，適合各人生階段的投資人。
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="survey-investmentMethod">
+							<img src="survey/images/page3-man-1.png" alt="" class="survey-investmentMethod-man wow fadeInLeft">
+							<div class="survey-investmentMethod-table wow fadeIn">
+								<div class="survey-investmentMethod-table-row tit">
+									<div class="survey-investmentMethod-table-col">
+										&nbsp;
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										<b>儲蓄</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										<b>保險</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										<b>股票</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										<b>基金</b>
+									</div>
+								</div>
+								<div class="survey-investmentMethod-table-row">
+									<div class="survey-investmentMethod-table-col">
+										<b>投資門檻</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										中
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										高
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+								</div>
+								<div class="survey-investmentMethod-table-row">
+									<div class="survey-investmentMethod-table-col">
+										<b>收益率</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										高
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低～高
+									</div>
+								</div>
+								<div class="survey-investmentMethod-table-row">
+									<div class="survey-investmentMethod-table-col">
+										<b>資金靈活度</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										高
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										高
+									</div>
+								</div>
+								<div class="survey-investmentMethod-table-row">
+									<div class="survey-investmentMethod-table-col">
+										<b>風險性</b>
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										高
+									</div>
+									<div class="survey-investmentMethod-table-col">
+										低～高
+									</div>
+								</div>
+								<div class="survey-investmentMethod-table-emphasis wow fadeIn" data-wow-delay="0.5s"></div>
+								<img src="survey/images/certification.png" alt="" class="certification">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item">
+				<div class="container">
+					<div class="content">
+
+						<div class="survey-col2Item-area type2">
+							<div class="survey-col2Item wow fadeInLeft">
+								<h2 title="借助理財專家的幫助，更容易達成目標唷！" class="survey-tit type1">
+									想透過基金投資來準備退休金，但不知道怎麼開始嗎？
+									<br/>借助理財專家的幫助，更容易達成目標唷！
+								</h2>
+								<div class="survey-textArea survey-textAlign-center">
+									統計顯示，有向專家諮詢建議者，退休金的準備會更有效率
+								</div>
+								<div class="pcShow">
+									<div class="dividingLine"></div>
+									<h3 title="買基金就找國民投資專家富蘭克林" class="survey-tit type2">
+										買基金就找<span class="focus survey-underLine">國民投資專家</span>富蘭克林
+									</h3>
+									<div class="survey-btn-area">
+										<div class="survey-btn type2">
+											<a title="立即開戶" href="https://etrade.franklin.com.tw/Open/Entrance?_ga=2.208322578.1469198285.1558324636-1105955615.1553681100" target="_blank" class="event-open">
+												立即開戶
+											</a>
+										</div>
+										<div class="survey-btn">
+											<a title="智能客服" href="https://m.me/franklin.taiwan/" target="_blank" class="event-robo">
+												智能客服
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="survey-col2Item wow fadeInUp" data-wow-delay="0.3s">
+								<div class="survey-findExpertw">
+									<img src="survey/images/page3-man-2.png" alt="" class="survey-findExpertw-man">
+									<div class="survey-findExpertw-qaList">
+										<div class="survey-findExpertw-qaList-item wow fadeInUp" data-wow-delay="0.3s">
+											<div class="survey-findExpertw-qaList-item-tit">
+												清楚政府提供的退休福利
+											</div>
+											<div class="survey-findExpertw-qaList-item-ans clearfix">
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													<b>有諮詢</b>
+													<b class="survey-findExpertw-qaList-item-ans-item-focus">
+														<span data-digital_animation="60" class="wow digitalAnimation">0</span>%
+													</b>
+												</div>
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													未諮詢：35%
+												</div>
+											</div>
+										</div>
+										<div class="survey-findExpertw-qaList-item wow fadeInUp" data-wow-delay="0.3s">
+											<div class="survey-findExpertw-qaList-item-tit">
+												退休金足夠支應30年以上
+											</div>
+											<div class="survey-findExpertw-qaList-item-ans clearfix">
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													<b>有諮詢</b>
+													<b class="survey-findExpertw-qaList-item-ans-item-focus">
+														<span data-digital_animation="51" class="wow digitalAnimation">0</span>%
+													</b>
+												</div>
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													未諮詢：24%
+												</div>
+											</div>
+										</div>
+										<div class="survey-findExpertw-qaList-item wow fadeInUp" data-wow-delay="0.3s">
+											<div class="survey-findExpertw-qaList-item-tit">
+												退休金準備進度落後
+											</div>
+											<div class="survey-findExpertw-qaList-item-ans clearfix">
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													<b>有諮詢</b>
+													<b class="survey-findExpertw-qaList-item-ans-item-focus">
+														<span data-digital_animation="64" class="wow digitalAnimation">0</span>%
+													</b>
+												</div>
+												<div class="survey-findExpertw-qaList-item-ans-item">
+													未諮詢：80%
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mobileShow">
+									<div class="dividingLine"></div>
+									<h3 title="買基金就找國民投資專家富蘭克林" class="survey-tit type2">
+										買基金就找<span class="focus survey-underLine">國民投資專家</span>富蘭克林
+									</h3>
+									<div class="survey-btn-area">
+										<div class="survey-btn type2">
+											<a title="立即開戶" href="https://etrade.franklin.com.tw/Open/Entrance?_ga=2.208322578.1469198285.1558324636-1105955615.1553681100" target="_blank" class="event-open">
+												立即開戶
+											</a>
+										</div>
+										<div class="survey-btn">
+											<a title="智能客服" href="https://m.me/franklin.taiwan/" target="_blank" class="event-robo">
+												智能客服
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="survey-item type2">
+				<div class="container">
+					<div class="content">
+
+						<switch-btn tit="了解其他階段" active-no="0" home-link="true"></switch-btn>
+
+					</div>
+				</div>
+			</section>
+
+			<survey-source></survey-source>
+
+		</article>
+		
+		<!-- <div class="topBtn">
+			<a href="#top">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div> -->
+
+		<fixed-right-btn></fixed-right-btn>
+
+	</div>
+
+    <script src="survey/js/jquery.js"></script>
+	<script src="survey/js/wow.min.js"></script>
+	<script src="survey/js/scrollspy.js"></script>
+	<script src="js/common.js"></script>
+	<script src="survey/js/main.min.js"></script>
+
+</body>
+</html>
