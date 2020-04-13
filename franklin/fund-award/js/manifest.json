@@ -1,0 +1,24 @@
+{
+    "lang": "zh-Hant-TW",
+    "short_name": "有「金」才敢大聲！",
+    "name": "有「金」才敢大聲！",
+    "icons": [
+        {
+            "src": "https://event.franklin.com.tw/commonResources/images/192x192.png",
+            "type": "image/png",
+            "sizes": "300x300"
+        },
+        {
+            "src": "https://event.franklin.com.tw/commonResources/images/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://event.franklin.com.tw/fund-award/index.html",
+    "background_color": "#114790",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000",
+    "orientation": "portrait",
+    "description": "每次都聽專家說，這次讓我們聽聽富蘭克林金牌基金怎麼說！"
+}

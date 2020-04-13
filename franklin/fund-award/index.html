@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<script src="https://event.franklin.com.tw/commonResources/js/vue-v2.min.js"></script>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#114791">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="manifest" href="js/manifest.json" crossorigin="use-credentials">
+
+	<link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico">
+	<link rel=”apple-touch-icon” sizes=”192×192″ href="https://event.franklin.com.tw/commonResources/images/192x192.png"/>
+	<link rel="stylesheet" href="css/style.css">
+    <title>有「金」才敢大聲！ | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="有「金」才敢大聲！">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+    <meta name="description" content="每次都聽專家說，這次讓我們聽聽富蘭克林金牌基金怎麼說！">
+	<meta property="og:description" content="每次都聽專家說，這次讓我們聽聽富蘭克林金牌基金怎麼說！">
+	<meta property="og:image" content="https://event.franklin.com.tw/fund-award/images/fb.png">
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:url" content="https://event.franklin.com.tw/fund-award/index.html">
+</head>
+<body>
+
+	<div id="content" v-cloak>
+
+		<!-- ie用的遮罩 -->
+		<div class="ieUseMask" v-if="ieUseMask">
+			<div class="ieUseMask-text">
+				<strong>建議您使用現代化瀏覽器瀏覽</strong><br/><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+				<div class="ieUseMask-dot"></div>
+			</div>
+		</div>
+
+		<div id="top"></div>
+
+		<!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+		<!-- header -->
+		<header class="header">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+						<picture>
+							<source media="(max-width: 991px)" srcset="https://event.franklin.com.tw/commonResources/images/logo2019.svg">
+							<img src="https://event.franklin.com.tw/commonResources/images/header-logo.png" alt="富蘭克林‧國民的基金">
+						</picture>
+						<div class="logo-text">
+							富蘭克林‧國民的基金
+						</div>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+
+			<section class="banner">
+				<picture>
+					<source media="(max-width: 767px)" srcset="images/banner-mobile.jpg">
+					<img src="images/banner-pc.jpg" alt="" class="banner-bg">
+				</picture>
+				<div class="container">
+					<div class="banner-kv">
+						<img src="images/banner-man.png" alt="" class="banner-kv-man">
+						<img src="images/banner-mike.png" alt="" class="banner-kv-mike">
+					</div>
+					<div class="banner-content">
+						<h1 title="有「金」才敢大聲！">
+							有「金」才敢大聲！
+						</h1>
+						<img src="images/banner-tit.png" alt="有「金」才敢大聲！" class="banner-content-tit">
+						<p class="banner-content-text">
+							每年三月天，<br class="mobileShow"/>都是各大基金獎百花綻放的季節，
+							<br/>這一次究竟獎落誰家？
+							<br/>基金贏家-富蘭克林又有哪些好基金含金量高？
+						</p>
+					</div>
+				</div>
+			</section>
+			<div id="trigger-fixedShare"></div>
+
+			<section class="item introduction">
+				<div class="container">
+					<h2 class="tit-type1" title="每次都聽專家說 這次讓我們聽聽富蘭克林金牌基金怎麼說！">
+						<div class="stit">
+							每次都聽專家說
+						</div>
+						這次讓我們聽聽<br class="mobileShow"/>富蘭克林金牌基金怎麼說！
+					</h2>
+					<img src="images/mike-2.png" alt="" class="introduction-mike">
+				</div>
+			</section>
+
+			<section class="item medals">
+				<div class="medals-bottom"></div>
+				<div class="container">
+					<img src="images/stage.png" alt="" class="medals-stage">
+					<div id="medals-item-area"></div>
+					<div class="medals-item-area">
+						<div class="medals-item" :class="speech_no == 0 ? 'active' : ''" @click="speech_no = 0; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金手套
+							</div>
+							<img src="images/medals-1.png" alt="金手套" class="medals-item-img">
+						</div>
+						<div class="medals-item" :class="speech_no == 1 ? 'active' : ''" @click="speech_no = 1; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金妥當
+							</div>
+							<img src="images/medals-2.png" alt="金妥當" class="medals-item-img">
+						</div>
+						<div class="medals-item" :class="speech_no == 2 ? 'active' : ''" @click="speech_no = 2; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金神氣
+							</div>
+							<img src="images/medals-3.png" alt="金神氣" class="medals-item-img">
+						</div>
+						<div class="medals-item" :class="speech_no == 3 ? 'active' : ''" @click="speech_no = 3; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金有料
+							</div>
+							<img src="images/medals-4.png" alt="金有料" class="medals-item-img">
+						</div>
+						<div class="medals-item" :class="speech_no == 4 ? 'active' : ''" @click="speech_no = 4; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金厲害
+							</div>
+							<img src="images/medals-5.png" alt="金厲害" class="medals-item-img">
+						</div>
+						<div class="medals-item" :class="speech_no == 5 ? 'active' : ''" @click="speech_no = 5; scrollToMedals(); toggleMedals();">
+							<div class="medals-item-tag">
+								金出息
+							</div>
+							<img src="images/medals-6.png" alt="金出息" class="medals-item-img">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item speech">
+				<img src="images/screenBg.jpg" alt="" class="speech-bg">
+				<div class="container">
+					<div class="speech-content">
+						<div class="speech-content-img">
+							<div class="speech-content-img-light">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="speech-content-img-bg"></div>
+							<img src="images/stage.png" alt="" class="speech-content-img-stage">
+							<img :src="speech_content[speech_no].img" alt="" class="speech-content-img-man">
+							<img src="images/trophy.png" alt="" class="speech-content-img-trophy">
+							<img src="images/mike-2.png" alt="" class="speech-content-img-mike">
+						</div>
+						<div class="speech-content-bubble">
+							<div class="speech-content-bubble-bubbleArrow"></div>
+							<div class="speech-content-bubble-arrow-area">
+								<div class="speech-content-bubble-arrow" @click="preSpeech(); toggleMedals();">
+									<i class="fas fa-angle-left"></i>
+								</div>
+								<div class="speech-content-bubble-arrow" @click="nextSpeech(); toggleMedals();">
+									<i class="fas fa-angle-right"></i>
+								</div>
+							</div>
+							<div class="speech-content-tag" v-html="speech_content[speech_no].tag">
+								<!-- 金妥當 -->
+							</div>
+							<h2 class="speech-content-tit" :title="speech_content[speech_no].fundName + speech_content[speech_no].fundWarning">
+								{{speech_content[speech_no].fundName}}<span class="focus" v-if="speech_content[speech_no].fundWarning != ''">{{speech_content[speech_no].fundWarning}}</span>
+							</h2>
+							<div class="speech-content-text" v-html="speech_content[speech_no].text">
+								<!-- <p>各位觀眾，請叫我沉惦惦吃三碗公的好基金，當大家都在追逐市場熱門標的的時候，只有我堅持走自己的路！</p>
+								<p>我堅持投資美國電力、天然氣、自來水等民生必需公司，獲利相對穩定，當別人為了貿易紛爭與疫情變數焦頭爛額時，我卻可以高枕無憂！此外，這些公司大多穩定配發股利，所以投資我除了享有資本增值機會外，也可坐擁高股利投資收益。</p>
+								<p>我的堅持讓我自2010年以來在台累積獲獎數達8座*，在詭譎多變的2020年，投資我最妥當啦！</p> -->
+							</div>
+							<p class="speech-content-source" v-html="speech_content[speech_no].source" v-if="speech_content[speech_no].source != ''">
+								<!-- *資料來源：得獎紀錄統計美元A股及美元A1股歷史得獎紀錄，財團法人台北金融研究發展基金會，指標雜誌、晨星暨Smart智富，截至2019/2/19，獎項評選期間截至頒獎年度之前一年年底(指標台灣基金獎截至九月底)。查詢完整得獎記錄請見 <a href="https://www.franklin.com.tw/Award.html" target="_blank">https://www.franklin.com.tw/Award.html</a>。 -->
+							</p>
+							<div class="btnArea threeBtn">
+								<div class="btn type3">
+									<a :href="speech_content[speech_no].moreLink" target="_blank" title="了解更多">
+										了解更多 <i class="fas fa-angle-right"></i>
+									</a>
+								</div>
+								<div class="btn">
+									<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即申購">
+										立即申購 <i class="fas fa-angle-right"></i>
+									</a>
+								</div>
+								<div class="btn type2">
+									<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="免費開戶">
+										免費開戶 <i class="fas fa-angle-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item notice">
+				<div class="container">
+					<h2 class="tit-type1" title="金牌好基金，單筆申購0">
+						金牌好基金，單筆申購0
+					</h2>
+					<ol class="notice-list">
+						<li>
+							即日起至2020/4/30止，於國民e帳戶單筆新申購富蘭克林「金牌好基金」(含各股份類別)，不限申購次數均享手續費0元優惠，前述「金牌好基金」限本活動網頁所列為準。
+						</li>
+						<li>
+							本活動優惠限透過國民e帳戶網路交易新申購使用，轉換、既有契約新扣款或AI智能理財專區交易不適用；尚未辦理國民e帳戶開戶客戶，需於活動期間完成開戶、核印與變更密碼啟用交易權限，方可使用本活動優惠。
+						</li>
+						<li>
+							本季完整活動說明請參考 <a href="https://event.franklin.com.tw/latest-offers/index.html" target="_blank" title="最新優惠">最新優惠</a> 或依富蘭克林基金理財網公告為準；本公司保留是否接受開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動權利。
+						</li>
+					</ol>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+		
+		<div class="topBtn">
+			<a href="#top" title="返回最上面">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<div class="fixedRightBtn-area clearfix">
+			<div class="fixedRightBtn">
+				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="申辦國民e帳戶">
+					申辦國民e帳戶 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="fixedRightBtn type2">
+				<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單享優惠">
+					立即下單享優惠 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Google Tag Manager -->
+	<!-- <script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script> -->
+	<!-- End Google Tag Manager -->
+
+	<!-- Google Tag Manager -->
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+	<!-- End Google Tag Manager -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+	<script src="js/main.min.js"></script>
+
+	<script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+
+</body>
+</html>
