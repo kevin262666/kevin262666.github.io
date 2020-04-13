@@ -1,6 +1,6 @@
-[vueIcon]: https://docs.google.com/uc?id=1UPehuzcSYyZP0usXhrZ8w9ZjsUEerH_J&export=download
-[html5]: https://docs.google.com/uc?id=1nn5rGT5Vp10Fb_3ajVeYe8QloyeSIgVV&export=download
-[css3]: https://docs.google.com/uc?id=1azta7ANQ5vRsbrmN43XgRLkC8bqEW4bL&export=download
+[vueIcon]: https://img.shields.io/badge/vue.js-v2.x-green
+[html5]: https://img.shields.io/badge/HTML5-e44d27
+[css3]: https://img.shields.io/badge/CSS3-036db5
 
 ## 富蘭克林(投顧)
 + **[2018第四季活動-理財大補湯]** 
