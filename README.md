@@ -13,7 +13,7 @@
 ![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
 
 + **[美國機會基金]** 
-[![awwwards Nominee](https://docs.google.com/uc?id=18iD9oekPeMxhJrTwunhX_lBiEhpkZ3yU&export=download)](https://reurl.cc/OLAe3) ![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
+[![awwwards Nominee](https://img.shields.io/badge/awwwards.-Nominee-5abdb2)](https://reurl.cc/OLAe3) ![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
 
 + **[不知如何選基金？]** 
 ![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
