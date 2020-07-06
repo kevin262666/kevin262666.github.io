@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#003680">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v3.7.2.css"/>
+	<link rel="stylesheet" href="css/style.css?v=20200528">
+
+    <title>線上開戶超輕鬆，基金投資零負擔 | 富蘭克林 國民的基金</title>
+	<meta property="og:title" content="線上開戶超輕鬆，基金投資零負擔｜富蘭克林 國民的基金">
+	<meta name="twitter:title" content="線上開戶超輕鬆，基金投資零負擔｜富蘭克林 國民的基金">
+
+	<meta name="description" content="開戶免出門，一指就搞定！馬上開立富蘭克林國民e帳戶，即刻規劃屬於自己的財富藍圖！">
+	<meta property="og:description" content="開戶免出門，一指就搞定！馬上開立富蘭克林國民e帳戶，即刻規劃屬於自己的財富藍圖！">
+	<meta name="twitter:description" content="開戶免出門，一指就搞定！馬上開立富蘭克林國民e帳戶，即刻規劃屬於自己的財富藍圖！">
+
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:image" content="https://event.franklin.com.tw/signup/images/fb.jpg">
+	<meta name="twitter:image" content="https://event.franklin.com.tw/signup/images/fb.jpg">
+	<meta name="twitter:card" content="https://event.franklin.com.tw/signup/images/fb.jpg" >
+
+	<meta property="og:url" content="https://event.franklin.com.tw/signup/index.html">
+	<meta name="twitter:site" content="@franklin_tw">
+
+	<script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+
+	<!-- Google Tag Manager -->
+	<!-- <script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script> -->
+	<!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+	<!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<div id="top"></div>
+
+		<!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+		<!-- header -->
+		<header-area :active-number="100"></header-area>
+
+		<!-- main -->
+		<article class="main">
+
+			<section class="banner">
+				<img src="images/banner-bg.png" alt="" class="banner-bg">
+				<img src="images/banner-textTattoo-1.png" alt="" class="banner-textTattoo banner-textTattoo-1">
+				<img src="images/banner-textTattoo-2.png" alt="" class="banner-textTattoo banner-textTattoo-2">
+				<div class="container">
+					<h1 title="線上開戶超輕鬆、基金投資零負擔">
+						線上開戶超輕鬆、基金投資零負擔
+					</h1>
+					<div class="banner-mascot">
+						<img src="images/banner-mascot-2.png" alt="富國民" class="banner-mascot-2">
+						<img src="images/banner-mascot-3.png" alt="富國民" class="banner-mascot-3">
+						<img src="images/banner-mascot-1.png" alt="富國民" class="banner-mascot-1">
+					</div>
+					<img src="images/banner-highlights-pc.png" alt="" class="banner-highlights">
+					<img src="images/banner-tit-1.png" alt="線上開戶超輕鬆、基金投資零負擔" class="banner-tit banner-tit-1">
+					<img src="images/banner-tit-2.png" alt="線上開戶超輕鬆、基金投資零負擔" class="banner-tit banner-tit-2">
+				</div>
+				<div class="itemArrow-bottom"></div>
+			</section>
+
+			<section class="banner-bottom">
+				<div class="container">
+					<h2 title="開戶完成 送定期定額下單0手續費">
+						<img src="images/banner-promotionText.png" alt="開戶完成 送定期定額下單0手續費">
+					</h2>
+					<div class="btnArea">
+						<div class="btn">
+							<a href="https://etrade.franklin.com.tw/Open/Entrance" title="立即開戶" target="_blank">
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item plaidBg">
+				<div class="itemArrow-top bottomArrow"></div>
+				<div class="container">
+					<h3 class="tit-type1 wow fadeInUp" title="開戶免出門，一指就搞定">
+						開戶免出門，一指就搞定
+					</h3>
+					<article class="features">
+						<section class="features-item wow fadeInUp">
+							<div class="features-item-img">
+								<img src="images/features-icon-1.png" alt="">
+							</div>
+							<h4 class="features-item-tit" title="便利">
+								便利
+							</h4>
+							<p>
+								24H全天候可申請<br/>線上開戶免出門
+							</p>
+						</section>
+						<section class="features-item wow fadeInUp">
+							<div class="features-item-img">
+								<img src="images/features-icon-2.png" alt="">
+							</div>
+							<h4 class="features-item-tit" title="快速">
+								快速
+							</h4>
+							<p>
+								只要3分鐘<br/>最快隔日下單
+							</p>
+						</section>
+						<section class="features-item wow fadeInUp">
+							<div class="features-item-img special">
+								<img src="images/features-icon-3.png" alt="">
+							</div>
+							<h4 class="features-item-tit" title="零負擔">
+								零負擔
+							</h4>
+							<p>
+								最低可1,000元<br/>投資1檔基金
+							</p>
+						</section>
+					</article>
+				</div>
+				<div class="itemArrow-bottom" style="border-right-color: #fac400;"></div>
+				<img src="images/bgTit-1.png" alt="" class="bgTit posBottom-left bgTit-1">
+				<img src="images/bgTit-2.png" alt="" class="bgTit posBottom-right bgTit-2">
+			</section>
+
+			<section class="item openAccount yellowBg noArrow">
+				<img src="images/earthBg.png" alt="" class="openAccount-bg">
+				<div class="container">
+					<h3 class="tit-type1 wow fadeInUp" title="今天給我3分鐘的時間，明天讓你投資全世界">
+						今天給我3分鐘的時間，<br class="mobileShow"/>明天讓你投資全世界
+					</h3>
+					<p class="text-center wow fadeInUp">
+						搶先開放  <b class="focusTag">華南、元大、兆豐、彰化、三信、第一銀行</b>  網路銀行客戶申請中！
+					</p>
+					<div class="internetBank">
+						<div class="internetBank-content">
+							<div class="internetBank-paperwork">
+								<div class="internetBank-paperwork-item wow fadeInRight">
+									<div class="internetBank-paperwork-item-tit">
+										身分證
+									</div>
+									<img src="images/paperwork-1.png" alt="身分證">
+								</div>
+								<div class="internetBank-paperwork-item wow fadeInRight">
+									<div class="internetBank-paperwork-item-tit">
+										健保卡
+									</div>
+									<img src="images/paperwork-2.png" alt="健保卡">
+								</div>
+								<div class="internetBank-paperwork-item wow fadeInRight">
+									<div class="internetBank-paperwork-item-tit">
+										銀行帳戶
+									</div>
+									<img src="images/paperwork-3.png" alt="銀行帳戶">
+								</div>
+							</div>
+							<div class="internetBank-mascot wow fadeInLeft">
+								<img src="images/mascot-1.png" alt="">
+								<div class="internetBank-mascot-bubble">
+									只要備好三樣資料，<br/>就能立即開戶！
+								</div>
+							</div>
+						</div>
+						<div class="btnArea wow fadeInUp">
+							<div class="btn">
+								<a href="https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated?" target="_blank" title="立即申辦">
+									立即申辦 <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post-content">
+							<div class="post-left">
+								<h3 class="tit-type1 wow fadeInUp" title="沒有以上銀行帳戶？">
+									沒有以上銀行帳戶？
+								</h3>
+								<p class="text-center wow fadeInUp">
+									可以透過「網路預約寄件開戶」，<br class="pcShow"/>適用全台超過30家銀行帳戶，申辦一樣很簡單唷！
+								</p>
+							</div>
+							<div class="post-right wow fadeInUp">
+								<p>
+									<b>「網路預約寄件開戶」教學影片</b>
+								</p>
+								<div class="youtube">
+									<div class="youtube-content">
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/l4IUPATZsPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btnArea wow fadeInUp">
+							<div class="btn type2">
+								<a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&" target="_blank" title="馬上體驗">
+									馬上體驗 <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="images/bgTit-3.png" alt="" class="bgTit posTop-left bgTit-3">
+				<img src="images/bgTit-4.png" alt="" class="bgTit posTop-right bgTit-4">
+			</section>
+
+			<section class="item plaidBg">
+				<div class="itemArrow-top" style="border-left-color: #fac400;"></div>
+				<div class="container">
+					<h3 class="tit-type1 wow fadeInUp" title="重點來了，富蘭克林貼心到底，替您大省荷包！">
+						重點來了，富蘭克林貼心到底，<br class="mobileShow"/>替您大省荷包！
+					</h3>
+					<div class="saveMoney">
+						<div class="saveMoney-item wow fadeInUp">
+							<div class="saveMoney-item-icon">
+								低
+							</div>
+							<p class="saveMoney-item-text">
+								投資門檻
+							</p>
+						</div>
+						<div class="saveMoney-item wow fadeInUp">
+							<div class="saveMoney-item-icon">
+								低
+							</div>
+							<p class="saveMoney-item-text">
+								申購手續費
+							</p>
+						</div>
+						<div class="saveMoney-item wow fadeInUp">
+							<div class="saveMoney-item-icon">
+								零
+							</div>
+							<p class="saveMoney-item-text">
+								信託管理費
+							</p>
+						</div>
+						<div class="saveMoney-item wow fadeInUp">
+							<div class="saveMoney-item-icon">
+								零
+							</div>
+							<p class="saveMoney-item-text">
+								基金轉換費
+							</p>
+						</div>
+						<img src="images/mascot-2.png" alt="" class="saveMoney-mascot">
+					</div>
+				</div>
+				<div class="itemArrow-bottom" style="border-right-color: #fac400;"></div>
+				<img src="images/bgTit-5.png" alt="" class="bgTit posBottom-left bgTit-5">
+				<img src="images/bgTit-6.png" alt="" class="bgTit posBottom-right bgTit-6">
+			</section>
+
+			<section class="item yellowBg noArrow">
+				<div class="container">
+					<h3 class="tit-type1 wow fadeInUp" title="會員專屬手續費優惠">
+						會員專屬手續費優惠
+					</h3>
+					<article class="gift">
+						<section class="gift-item wow fadeInUp">
+							<div class="gift-content">
+								<h4 class="gift-item-tit" title="精選禮">
+									精選禮
+								</h4>
+								<p class="gift-item-stit">
+									15檔精選基金
+								</p>
+								<p class="gift-item-text">
+									單筆、定期定額自由選<br/>手續費0元
+								</p>
+							</div>
+							<img src="images/giftBox-top.png" alt="" class="gift-item-top">
+							<img src="images/giftBox-bottom.png" alt="" class="gift-item-bottom">
+						</section>
+						<section class="gift-item wow fadeInUp">
+							<div class="gift-content">
+								<h4 class="gift-item-tit" title="新戶限定">
+									新戶限定
+								</h4>
+								<p class="gift-item-stit">
+									開戶見面禮
+								</p>
+								<p class="gift-item-text">
+									1筆定期定額自由選<br/>24次手續費0元
+								</p>
+							</div>
+							<img src="images/giftBox-top.png" alt="" class="gift-item-top">
+							<img src="images/giftBox-bottom.png" alt="" class="gift-item-bottom">
+						</section>
+					</article>
+					<p class="remark text-center wow fadeInUp">
+						※活動期間為2020/04/15(三)~2020/06/30(二)，本活動完整規則與優惠使用限制請參考 <a href="https://event.franklin.com.tw/latest-offers/index.html" target="_blank" title="最新優惠" class="link">最新優惠</a> 說明。
+					</p>
+					<div class="btnArea wow fadeInUp">
+						<div class="btn type2">
+							<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="我要拿好康">
+								我要拿好康 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+					<img src="images/mascot-3.png" alt="" class="gift-mascot gift-mascot-1">
+					<img src="images/mascot-4.png" alt="" class="gift-mascot gift-mascot-2">
+				</div>
+				<img src="images/bgTit-7.png" alt="" class="bgTit posTop-right bgTit-7">
+			</section>
+
+			<section class="item blackBg noArrow">
+				<div class="container">
+					<h3 class="tit-type1 wow fadeInUp" title="新手上路，不知道要買什麼基金？">
+						新手上路，<br class="mobileShow"/>不知道要買什麼基金？
+					</h3>
+					<div class="tiro">
+						<div class="tiro-link">
+							<a href="https://event.franklin.com.tw/fundeasy/index.html" target="_blank" title="富蘭克林教你從個性挑基金">
+								富蘭克林教你從個性挑基金 <i class="fas fa-angle-double-right"></i>
+							</a>
+						</div>
+						<div class="tiro-link">
+							<a href="https://www.franklin.com.tw/AI_robo/onepage.html" target="_blank" title="讓智能機器人幫我挑基金">
+								讓智能機器人幫我挑基金 <i class="fas fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item noArrow notice">
+				<div class="container">
+					<h3 class="tit-type2 wow fadeInUp" title="注意事項">
+						注意事項
+					</h3>
+					<ul class="notice-text wow fadeInUp">
+						<li>
+							見面禮：活動期間完成國民e帳戶開戶、送件成功並核印完成，即享1筆定期定額自由選申購手續費0元限量優惠，該筆優惠於核印成功隔日匯入，優惠匯入後隔日起算60天內(含假日)需下單完成，完成下單第1-24次扣款手續費享0元優惠，第25次(含)起享0.1%優惠，不限基金。
+						</li>
+						<li>
+							「1000元投資一檔基金」需透過「國民輕鬆扣」專屬活動下單頁以台幣單筆(1萬元起)或定期定額自由選(組合每次扣款最低2千元起，1檔基金1千元)申購，唯須以新申購為主，轉換、既有契約新扣款或AI智能理財專區交易不適用此申購門檻。
+						</li>
+						<li>
+							若會員下單時同時適用多個優惠專案，將依會員在系統下單時自行選擇的手續費折扣方案，送出後即無法更改。
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+		
+		<div class="topBtn">
+			<a href="#top" title="返回最上面">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<div class="fixedRightBtn-area clearfix">
+			<div class="fixedRightBtn">
+				<a href="https://etrade.franklin.com.tw/Trade/LumpSum" target="_blank" title="立即申購">
+					立即申購 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="fixedRightBtn type2">
+				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+					立即開戶 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<!-- <modal ref="warning" :can-close="false" class="md">
+			<slot slot="infoArea">
+				xxxx
+			</slot>
+		</modal> -->
+
+	</div>
+
+	
+	<script src="js/main.min.js?v=20200528"></script>
+	<script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1091 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#003680">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css"/>
+	<link rel="stylesheet" href="css/style.css?v=20200624">
+
+    <title>國民理財機器人 你的投資神隊友 | 富蘭克林 國民的基金</title>
+	<meta property="og:title" content="國民理財機器人 你的投資神隊友">
+	<meta name="twitter:title" content="國民理財機器人 你的投資神隊友">
+
+	<meta name="description" content="立即親身體驗金融科技正如何改變投資這件事">
+	<meta property="og:description" content="立即親身體驗金融科技正如何改變投資這件事">
+	<meta name="twitter:description" content="立即親身體驗金融科技正如何改變投資這件事">
+
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1060402337367331">
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg">
+	<meta name="twitter:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg">
+	<meta name="twitter:card" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg" >
+
+	<meta property="og:url" content="https://event.franklin.com.tw/AI_robo/index.html">
+	<meta name="twitter:site" content="@franklin_tw">
+
+	<script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+	<!-- <script src="js/wow.min.js"></script> -->
+	<script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+
+	<!-- Google Tag Manager -->
+	<!-- <script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script> -->
+	<!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+	<!-- End Google Tag Manager -->
+
+	<div id="content" v-cloak>
+
+		<div id="top"></div>
+
+		<!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+		<!-- header -->
+		<header-area :active-number="0"></header-area>
+
+		<!-- main -->
+		<article class="main">
+
+			<section class="banner">
+				<img src="images/banner-tattoo-1.png" alt="" class="banner-tattoo banner-tattoo-1">
+				<img src="images/banner-tattoo-2.png" alt="" class="banner-tattoo banner-tattoo-2">
+				<div class="container">
+					<div class="banner-content">
+						<h1 title="國民理財機器人 你的投資神隊友">
+							國民理財機器人 你的投資神隊友
+						</h1>
+						<img src="images/banner-tit.png" alt="" class="banner-tit">
+						<p class="banner-text">
+							定期定額功能已開啟! <br/>每月5,000 輕裝上線!!
+						</p>
+						<div class="btn">
+							<a href="#features" title="認識「國民理財機器人」">
+								認識「國民理財機器人」 <i class="fas fa-angle-double-down"></i>
+							</a>
+						</div>
+					</div>
+					<div class="banner-kv">
+						<img src="images/kv-aperture.png" alt="" class="banner-kv-aperture">
+						<slick
+							ref="slick"
+							:options="slickOptions"
+							class="bannerSlick"
+							@afterChange="handleAfterChange"
+							@beforeChange="handleBeforeChange"
+							@breakpoint="handleBreakpoint"
+							@destroy="handleDestroy"
+							@edge="handleEdge"
+							@init="handleInit"
+							@reInit="handleReInit"
+							@setPosition="handleSetPosition"
+							@swipe="handleSwipe"
+							@lazyLoaded="handleLazyLoaded"
+							@lazyLoadError="handleLazeLoadError">
+							<div>
+								<img src="images/kv-1.png" alt="" class="banner-kv-img">
+							</div>
+							<div>
+								<img src="images/kv-2.png" alt="" class="banner-kv-img">
+							</div>
+							<div>
+								<img src="images/kv-3.png" alt="" class="banner-kv-img">
+							</div>
+							<div>
+								<img src="images/kv-4.png" alt="" class="banner-kv-img">
+							</div>
+						</slick>
+					</div>
+					
+				</div>
+			</section>
+
+			<article class="item grayBg witness">
+				<div class="container">
+					<slick
+						ref="slick"
+						:options="witnessOptions"
+						class="witnessSlick"
+						@afterChange="handleAfterChange"
+						@beforeChange="handleBeforeChange"
+						@breakpoint="handleBreakpoint"
+						@destroy="handleDestroy"
+						@edge="handleEdge"
+						@init="handleInit"
+						@reInit="handleReInit"
+						@setPosition="handleSetPosition"
+						@swipe="handleSwipe"
+						@lazyLoaded="handleLazyLoaded"
+						@lazyLoadError="handleLazeLoadError">
+						<div>
+							<div class="witness-item-area">
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-1.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											台北 David (39)
+										</div>
+										<p class="witness-item-text">
+											一直想投資，但聽來聽去還是很難決定買哪隻對我最好，但嘗試用了機器人，發現只要設好條件，就會自動幫我挑最好的組合，真是太簡單了!
+										</p>
+									</div>
+								</section>
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-2.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											小資  Linda(24)
+										</div>
+										<p class="witness-item-text">
+											只拿薪水哪夠活啊，如果能靠投資增加收入誰不想，就是怕買錯賠錢…，但現在我很放心交給機器人，他好像小錢也能得到專屬的顧問一樣。
+										</p>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div>
+							<div class="witness-item-area">
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-3.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											新竹 陳經理 (45)
+										</div>
+										<p class="witness-item-text">
+											平常上班哪有時間看盤，之前投資好幾次都這樣錯過時機，智能理財最方便就是可以幫我時時監控，還會每月幫我調整，這樣投資才叫做金融科技
+										</p>
+									</div>
+								</section>
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-4.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											台北 行銷企劃(29)
+										</div>
+										<p class="witness-item-text">
+											平常幾乎開加班常駐，說要學投資也一直沒動過，等到自己開始要準備結婚買房了，才發現有投資的朋友就是多一點餘裕，還好機器人連我這種初學者都能用，能早點推出就更好了!
+										</p>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div>
+							<div class="witness-item-area">
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-5.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											台南 小阿姨(33)
+										</div>
+										<p class="witness-item-text">
+											我覺得雙薪家庭才需要機器人，設定好一次，它就會照你的目標去執行，省下更多時間可以陪老公，上班都累死了，理財當然要輕鬆點。
+										</p>
+									</div>
+								</section>
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-6.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											家庭 主婦(26)
+										</div>
+										<p class="witness-item-text">
+											理財很重要啊，用電腦監控，總比理專要業績了才會打給妳強的多，也不用操心買了之後沒人管，電腦都會自動處理，現在投資都變得很方便了
+										</p>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div>
+							<div class="witness-item-area">
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-7.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											天母 爺爺(72)
+										</div>
+										<p class="witness-item-text">
+											希望能照顧好自己的生活，不讓女兒擔心是最好，也希望能多花一點時間陪陪孫子，富蘭克林老品牌了，也一直會用新科技幫助投資人理財，機器人操作也很方便，也都有電話顧問可以教我使用，真的很貼心
+										</p>
+									</div>
+								</section>
+								<section class="witness-item">
+									<div class="witness-item-content">
+										<img src="images/peopleImg-8.jpg" alt="" class="witness-item-img">
+										<div class="witness-item-name">
+											木柵 林太太(54)
+										</div>
+										<p class="witness-item-text">
+											物價越來越高，快退休就老擔心退休金準備的不夠，還好我朋友推薦我用這個機器人，幫我做退休規劃，每個月都會收到調整的通知，雖然錢不多但還是有被照顧得很好的感覺。
+										</p>
+									</div>
+								</section>
+							</div>
+						</div>
+					</slick>
+				</div>
+			</article>
+
+			<div id="features"></div>
+			<section class="item features">
+				<div class="bgArrow"></div>
+				<div class="container">
+					<h2 class="tit-type1" title="國民理財機器人 就4簡單又強大">
+						國民理財機器人
+						<div class="tit-type1-tit2">
+							就4簡單又強大
+						</div>
+					</h2>
+					<div class="features-content">
+						<img src="images/robot-1.png" alt="" class="features-content-robot">
+						<article class="features-item-area">
+							<section class="features-item">
+								<div class="features-item-no">
+									01
+								</div>
+								<h3 class="features-item-tit" title="低門檻">
+									低門檻
+								</h3>
+								<p class="features-item-stit">
+									<strong>
+										小資適用的VIP級理財規劃
+									</strong>
+								</p>
+								<p class="features-item-text">
+									我們認為專業投資不等於高門檻，3萬即可擁有專屬的國民理財機器人服務。
+								</p>
+								<p class="features-item-focusText">
+									<b class="focus">新開放!!</b><br/>定期定額方案 每月只要5,000元
+								</p>
+							</section>
+							<section class="features-item">
+								<div class="features-item-no">
+									02
+								</div>
+								<h3 class="features-item-tit" title="個人化">
+									個人化
+								</h3>
+								<p class="features-item-stit">
+									<strong>
+										真正量身打造的資產配置組合
+									</strong>
+								</p>
+								<p class="features-item-text">
+									依照你的投資目的與風險屬性計算出的專屬投資組合，包含多檔基金來真正堅持「資產配置」觀念的機器人
+								</p>
+							</section>
+							<section class="features-item">
+								<div class="features-item-no">
+									03
+								</div>
+								<h3 class="features-item-tit" title="全監測">
+									全監測
+								</h3>
+								<p class="features-item-stit">
+									<strong>
+										全日實時監控的資產守門員
+									</strong>
+								</p>
+								<p class="features-item-text">
+									每天監控風險與績效變動，計算出最佳的投資組合比例及標的，投資不再需要傷腦筋
+								</p>
+							</section>
+							<section class="features-item">
+								<div class="features-item-no">
+									04
+								</div>
+								<h3 class="features-item-tit" title="再平衡">
+									再平衡
+								</h3>
+								<p class="features-item-stit">
+									<strong>
+										月月評估維持投組最佳化比例
+									</strong>
+								</p>
+								<p class="features-item-text">
+									當發生市場震盪導致資產配置比例失衡，機器人將免費協助你進行調整
+								</p>
+							</section>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<div id="experience"></div>
+			<section class="item dotTattooBg experience">
+				<div class="bgArrow"></div>
+				<div class="container">
+					<img src="images/robot-2.png" alt="" class="experience-robot">
+					<h2 class="tit-type1" title="立即親身體驗 金融科技正如何改變投資這件事">
+						立即親身體驗
+						<div class="tit-type1-tit2">
+							金融科技正如何改變投資這件事
+						</div>
+					</h2>
+					<div id="experience-step"></div>
+					<!-- 
+						這裡控制箭頭亮
+						改[.experience-step]的[.step1~3]
+					 -->
+					<div class="experience-step" :class="'step' + step">
+						<div class="experience-step-item step-1">
+							<img src="images/stepIcon-1.png" alt="" class="experience-step-item-icon">
+							<p class="experience-step-item-text">
+								透過簡單問題，讓機器人了解一點你的投資屬性及需求
+							</p>
+						</div>
+						<div class="experience-step-arrow step-1">
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+						</div>
+						<div class="experience-step-midItem step-1">
+							<img src="images/stepIcon-other-1.png" alt="" class="experience-step-midItem-icon">
+							<p>
+								用戶資訊
+							</p>
+						</div>
+						<div class="experience-step-arrow step-2">
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+						</div>
+						<div class="experience-step-item step-2">
+							<div class="sItem-area">
+								<div class="sItem">
+									<img src="images/stepIcon-2-2.png" alt="" class="sItem-icon">
+									<p>
+										市場資訊
+									</p>
+								</div>
+								<div class="sItem">
+									<img src="images/stepIcon-2-3.png" alt="" class="sItem-icon">
+									<p>
+										演算法
+									</p>
+								</div>
+								<div class="sItem">
+									<img src="images/stepIcon-2-4.png" alt="" class="sItem-icon">
+									<p>
+										投資理論
+									</p>
+								</div>
+							</div>
+							<img src="images/stepIcon-2-1.png" alt="" class="experience-step-item-icon">
+							<p class="experience-step-item-text">
+								機器人會透過AI演算，為你挑選最適合的投資組合
+							</p>
+						</div>
+						<div class="experience-step-arrow step-2">
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+						</div>
+						<div class="experience-step-midItem step-3">
+							<img src="images/stepIcon-other-2.png" alt="" class="experience-step-midItem-icon">
+							<p>
+								最適配置
+							</p>
+						</div>
+						<div class="experience-step-arrow step-3">
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+							<i class="fas fa-chevron-right"></i>
+						</div>
+						<div class="experience-step-item step-3">
+							<img src="images/stepIcon-3.png" alt="" class="experience-step-item-icon">
+							<p class="experience-step-item-text">
+								機器人依據市場的變動來最佳化管理你的投組
+							</p>
+						</div>
+						<div class="mobileStep">
+							<div class="mobileStep-dot"></div>
+							<div class="mobileStep-dot"></div>
+							<div class="mobileStep-dot"></div>
+						</div>
+					</div>
+					<div class="btnArea" v-show="questionnaire == 0">
+						<div class="btn">
+							<!-- 走原本流程用 -->
+							<!-- <a href="#experience-step" title="算出我的最適投組" @click="questionnaire = 1;"> -->
+							<a href="javascript:void(0);" title="算出我的最適投組" @click="toggleModal('warning');">
+								算出我的最適投組 <i class="fas fa-angle-right"></i>
+							</a>
+
+							<!-- 未套程式暫時連到舊的 -->
+							<!-- <a href="https://www.franklin.com.tw/AI_robo/kyc" target="_blank" title="算出我的最適投組">
+								算出我的最適投組 <i class="fas fa-angle-right"></i>
+							</a> -->
+						</div>
+					</div>
+
+					<div class="questionnaire" v-show="questionnaire >= 1 && questionnaire <= 6">
+						<div class="questionnaire-bg"></div>
+						<div class="questionnaire-content">
+							<div class="questionnaire-stit">
+								<span>投資計畫問卷表</span>
+								<span class="questionnaire-stit-no">
+									{{ questionnaire }}/6
+								</span>
+							</div>
+
+							<div v-show="questionnaire == 1">
+								<h3 class="questionnaire-tit" title="我的投資目的是？">
+									我的投資目的是？
+								</h3>
+								<div class="questionnaire-options">
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-1" v-model="q1" value="1-1">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-1">
+												<b>創業基金</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-2" v-model="q1" value="1-2">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-2">
+												<b>購屋準備</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-3" v-model="q1" value="1-3">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-3">
+												<b>教育基金</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-4" v-model="q1" value="1-4">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-4">
+												<b>結婚準備</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-5" v-model="q1" value="1-5">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-5">
+												<b>退休準備</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name='q1' id="1-6" v-model="q1" value="1-6">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="1-6">
+												<b>自訂目標</b>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="questionnaire-textInput" v-show="q1 == '1-6'">
+									<div class="questionnaire-textInput-tit">
+										自訂目標
+									</div>
+									<input type="text">
+								</div>
+								<p v-show="q1 == '1-6'">
+									清楚定義自己的目標是件好事，但可別忘了這個計劃的可行性哦。
+								</p>
+							</div>
+							<div v-show="questionnaire == 2">
+								<h3 class="questionnaire-tit" title="我打算投入">
+									我打算投入
+								</h3>
+								<div class="questionnaire-textInput">
+									<div class="questionnaire-textInput-tit">
+										新臺幣 $
+									</div>
+									<input type="number" min="50000" step="10000" max="30000000" value="50000" class="money">
+								</div>
+								<p>
+									最低投資金額為五萬元新臺幣，累進金額為一萬元新臺幣。
+								</p>
+							</div>
+							<div v-show="questionnaire == 3">
+								<h3 class="questionnaire-tit" title="我打算投資">
+									我打算投資
+								</h3>
+								<div class="questionnaire-options three">
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q3" id="3-1">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="3-1">
+												<b>1年以上 ~ 3年</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q3" id="3-2">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="3-2">
+												<b>3年以上 ~ 5年</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q3" id="3-3">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="3-3">
+												<b>5年以上 ~ 10年</b>
+											</label>
+										</div>
+									</div>
+								</div>
+								<p>
+									基金交易係以長期投資為目的，不宜期待於短期內獲取高收益。
+								</p>
+							</div>
+							<div v-show="questionnaire == 4">
+								<h3 class="questionnaire-tit" title="這筆資金的投資盈虧，對我的生活開支造成影響為">
+									這筆資金的投資盈虧，對我的生活開支造成影響為
+								</h3>
+								<div class="questionnaire-options five">
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q4" id="4-1">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="4-1">
+												<b>影響很大</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q4" id="4-2">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="4-2">
+												<b>有一定程度的影響</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q4" id="4-3">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="4-3">
+												<b>影響程度中低</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q4" id="4-4">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="4-4">
+												<b>影響極小</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q4" id="4-5">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="4-5">
+												<b>完全沒影響</b>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div v-show="questionnaire == 5">
+								<h3 class="questionnaire-tit" title="當市場震盪時，我可接受資產的波動程度">
+									當市場震盪時，我可接受資產的波動程度
+								</h3>
+								<div class="questionnaire-options five">
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q5" id="5-1">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="5-1">
+												<b>最高±5%的波動</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q5" id="5-2">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="5-2">
+												<b>最高±10%的波動</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q5" id="5-3">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="5-3">
+												<b>最高±20%的波動</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q5" id="5-4">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="5-4">
+												<b>最高±30%的波動</b>
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q5" id="5-5">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="5-5">
+												<b>最高±40%的波動</b>
+											</label>
+										</div>
+									</div>
+								</div>
+								<p>
+									波動就像坐雲霄飛車，有上升時的期待、也有下降時的驚險。所以風險承受度較低的人，就應該避免波動較大的投資產品。
+								</p>
+							</div>
+							<div v-show="questionnaire == 6">
+								<h3 class="questionnaire-tit" title="如果我的投資資產下跌了20%，會選擇">
+									如果我的投資資產下跌了20%，會選擇
+								</h3>
+								<div class="questionnaire-options five">
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q6" id="6-1">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="6-1">
+												<b>賣出</b>
+												<br/>（一部份或全部）
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q6" id="6-2">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="6-2">
+												<b>不賣出</b>
+												<br/>（停止定期扣款）
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q6" id="6-3">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="6-3">
+												<b>先觀望</b>
+												<br/>（不賣出、不停扣）
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q6" id="6-4">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="6-4">
+												<b>買進</b>
+												<br/>（小額加碼）
+											</label>
+										</div>
+									</div>
+									<div class="questionnaire-options-item">
+										<input type="radio" name="q6" id="6-5">
+										<div class="questionnaire-options-content">
+											<i class="fas fa-check-circle"></i>
+											<label for="6-5">
+												<b>買進</b>
+												<br/>（大幅加碼）
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="btnArea" :class="{'twoBtn' : questionnaire >= 2}">
+								<div class="btn type3" v-if="questionnaire >= 2 " @click="questionnaire--">
+									<a href="javascript:void(0);" title="上一題">
+										<i class="fas fa-angle-left"></i> 上一題
+									</a>
+								</div>
+								<div class="btn" v-if="questionnaire <= 5">
+									<a href="javascript:void(0);" title="下一題" @click="questionnaire++">
+										下一題 <i class="fas fa-angle-right"></i>
+									</a>
+								</div>
+								<div class="btn" v-if="questionnaire === 6">
+									<a href="#experience-step" title="送出問卷" @click="sendQuestionnaire();">
+										送出問卷 <i class="fas fa-angle-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="questionnaire-binding">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+							<img src="images/binding.png" alt="">
+						</div>
+					</div>
+
+					<div class="midfield" :class="{'complete' : complete}" v-show="step == 2">
+						<div class="midfield-bubble">
+							完成!
+						</div>
+						<img src="images/midfieldIcon.png" alt="" class="midfield-icon">
+						<p class="midfield-text">
+							產生投組中...
+						</p>
+						<div class="btnArea">
+							<div class="btn type3 viewResults">
+								<a href="#experience-step" title="檢視結果" @click="step = 3">
+									檢視結果 <i class="fas fa-angle-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div id="plan"></div>
+					<transition name="plan">
+						<div class="plan" v-show="step == 3">
+							<div class="plan-clip"></div>
+							<div class="plan-content">
+								<img src="images/barcode.png" alt="" class="plan-barcode">
+								<div class="plan-head">
+									<div class="plan-head-robot">
+										<h3 class="plan-head-robot-bubble" title="以下是我們推薦給您的專屬投資計畫">
+											以下是我們推薦給您的<br class="mobileShow"/>專屬投資計畫
+										</h3>
+										<img src="images/robot-3.png" alt="">
+									</div>
+									<p class="plan-head-text">
+										這次投資的目的是 <b class="focus">退休準備</b>
+										<br/>本次打算投入新台幣 <b class="focus">50000</b> 元，<br class="mobileShow"/>預計投資 <b class="focus">5年以上~10年</b>
+										<br/>您的風險值偏好為： <b class="focus">9分</b> (高風險)
+									</p>
+									<p class="plan-head-remark">
+										此為風險接受程度，最低為「1」分、最高為「9」分。依您本次的問卷結果分析，您所能擔受的風險程度為高風險度風險，可進行投資相關的基金組合。
+									</p>
+								</div>
+								<div class="plan-groupInfo">
+									<div class="plan-groupInfo-head">
+										<div class="plan-groupInfo-risklevel">
+											<!-- 
+												[.plan-groupInfo-risklevel-pointer]加class
+												.level1 ~ .level9改變指針
+											 -->
+											<div class="plan-groupInfo-risklevel-pointer level9"></div>
+										</div>
+										<div class="plan-groupInfo-head-content">
+											<h2 class="tit-type1" title="建議您投資 「富國民組合9號」">
+												建議您投資
+												<div class="tit-type1-tit2">
+													「富國民組合9號」
+												</div>
+											</h2>
+											<p>
+												你可以承受較高的風險，為了追求較大的回報，願意接受資產在短期的大幅波動，或是相對較長期的虧損。
+											</p>
+										</div>
+									</div>
+									<div class="plan-groupInfo-percentage">
+										<!-- <div class="plan-groupInfo-percentage-item">
+											歷史年化收益率 *
+											<div class="focus">
+												7.23 <small>%</small>
+											</div>
+										</div> -->
+										<div class="plan-groupInfo-percentage-item">
+											歷史波動率 *
+											<div class="focus">
+												12.52 <small>%</small>
+											</div>
+										</div>
+									</div>
+									<div class="plan-groupInfo-remark">
+										<ul>
+											<!-- <li>
+												歷史年化收益率係依據歷史數據求算得知，歷史年化收益不能完全代表對未來收益之預估，揭露歷史年化收益率的範圍不能代表對最低收益率的承諾。
+											</li> -->
+											<li>
+												歷史波動率係基於投組自2007/1/1起至最近一日之日報酬變動算出日波動率，再將其以252日做年化顯示。可做為了解過去標的資產變動程度，以對未來的價格波動有所預期，但注意標的資產的波動率在不同時間會出現高低變化。
+											</li>
+										</ul>
+									</div>
+								</div>
+								<p class="plan-groupInfo-text">
+									恭喜你離目標又更近了一步! 但我們都知道計畫不去執行，目標就永遠只是個口號!!
+									<br class="pcShow"/>富蘭克林希望實現所有國民的理財目標，
+									<br/>
+									<strong class="focus">特別爭取原申購手續費1%的專案減免優惠，現只收總申購金額的0.5%，無任何其他費用。</strong>
+								</p>
+								<div class="btnArea">
+									<div class="btn">
+										<a href="https://etrade.franklin.com.tw/Open/Entrance" title="立即點我開戶保留專案資格" target="_blank">
+											立即點我開戶保留專案資格 <i class="fas fa-angle-right"></i>
+										</a>
+									</div>
+								</div>
+
+								<div id="plan-toggle"></div>
+								<div class="plan-toggle">
+									<a href="#plan-toggle" class="plan-toggle-btn" :class="planDetails ? 'active' : ''" @click="planDetails ? planDetails = false : planDetails = true">
+										<span v-html="planDetails ? '隱藏投組內容' : '顯示投組內容'">顯示投組內容</span>
+									</a>
+								</div>
+
+								<transition name="plan">
+									<div v-show="planDetails">
+										<div class="plan-details">
+											<h4 class="plan-details-tit" title="投資比例">
+												投資比例
+											</h4>
+											<div class="investmentRatio">
+												<div class="investmentRatio-chart">
+													<!-- 
+														功能請參照 https://www.franklin.com.tw/AI_robo/kyc/report/74A0F757-1720-4F2A-832F-C35AB72AB742
+													-->
+													<svg version="1.1" class="highcharts-root" style="font-family:'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220"><desc>Created with Highcharts 6.1.0</desc><defs><clipPath id="highcharts-ck35xuj-7"><rect x="0" y="0" width="200" height="195" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="220" height="220" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="10" width="200" height="195"></rect><rect fill="none" class="highcharts-plot-border" x="10" y="10" width="200" height="195"></rect><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker " transform="translate(10,10) scale(1 1)" style="cursor:pointer;"><path fill="#fa8666" visibility="hidden" d="M 176.66227960242315 139.67991093115177 A 87.5 87.5 0 0 1 29.276600113935373 149.02136167218208 L 30.084867541204687 148.43254611021428 A 86.5 86.5 0 0 0 175.78613926410975 139.1978548062243 Z" class="highcharts-halo highcharts-color-2" fill-opacity="0.25"></path><path fill="#87c8db" d="M 99.98217859467667 10.000001814871382 A 87.5 87.5 0 0 1 126.92554166386036 14.245779649871679 L 120.19415624789528 35.05933473740376 A 65.625 65.625 0 0 0 99.9866339460075 31.875001361153537 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-0 "></path><path fill="rgb(132,145,199)" d="M 127.00878240756506 14.272746814154658 A 87.5 87.5 0 0 1 176.7044211751877 139.60322757437268 L 157.52831588139077 129.0774206807795 A 65.625 65.625 0 0 0 120.2565868056738 35.07956011061599 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-1 "></path><path fill="rgb(250,134,102)" d="M 176.66227960242315 139.67991093115177 A 87.5 87.5 0 0 1 29.276600113935373 149.02136167218208 L 46.95745008545153 136.14102125413658 A 65.625 65.625 0 0 0 157.49670970181737 129.13493319836383 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-2 "></path><path fill="rgb(244,214,108)" d="M 29.225114122547083 148.95061252340457 A 87.5 87.5 0 0 1 99.87846425541873 10.000084405396194 L 99.90884819156405 31.875063304047146 A 65.625 65.625 0 0 0 46.91883559191031 136.08795939255344 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-3 "></path></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series " transform="translate(10,10) scale(1 1)"></g></g><text x="115" text-anchor="middle" class="highcharts-title" style="color:black;font-size:18px;fill:black;" y="98"><tspan>投資比例</tspan></text><text x="115" text-anchor="middle" class="highcharts-subtitle" style="color:#eb6100;fill:#eb6100;" y="128"><tspan>35.00%</tspan></text><g class="highcharts-legend"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect><g><g></g></g></g><g class="highcharts-label highcharts-tooltip highcharts-color-3" style="cursor:default;pointer-events:none;white-space:nowrap;" transform="translate(31,-9999)" opacity="0" visibility="visible"><path fill="none" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 119.5 0.5 C 122.5 0.5 122.5 0.5 122.5 3.5 L 122.5 30.5 C 122.5 33.5 122.5 33.5 119.5 33.5 L 3.5 33.5 C 0.5 33.5 0.5 33.5 0.5 30.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="#000000" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 119.5 0.5 C 122.5 0.5 122.5 0.5 122.5 3.5 L 122.5 30.5 C 122.5 33.5 122.5 33.5 119.5 33.5 L 3.5 33.5 C 0.5 33.5 0.5 33.5 0.5 30.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="#000000" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 119.5 0.5 C 122.5 0.5 122.5 0.5 122.5 3.5 L 122.5 30.5 C 122.5 33.5 122.5 33.5 119.5 33.5 L 3.5 33.5 C 0.5 33.5 0.5 33.5 0.5 30.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="#000000" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(247,247,247,0.85)" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 119.5 0.5 C 122.5 0.5 122.5 0.5 122.5 3.5 L 122.5 30.5 C 122.5 33.5 122.5 33.5 119.5 33.5 L 3.5 33.5 C 0.5 33.5 0.5 33.5 0.5 30.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#f4d66c" stroke-width="1"></path><text x="8" style="font-size:12px;color:#333333;fill:#333333;" y="20"><tspan style="font-size:.7rem">美國政府基金</tspan><tspan style="font-size:.7rem" dx="0">35.00%</tspan></text></g></svg>
+												</div>
+												<div class="investmentRatio-list">
+													<ul>
+														<li @click="toggleModal('chart');">
+															<div class="investmentRatio-list-icon" style="background: #87c8db;"></div>
+															<div class="investmentRatio-list-text">
+																高成長基金
+																<span class="focus">
+																	(本基金之配息來源可能為本金)
+																</span>
+															</div>
+															<div class="investmentRatio-list-percentage">
+																5
+															</div>
+														</li>
+														<li @click="toggleModal('chart');">
+															<div class="investmentRatio-list-icon" style="background: #8491c7;"></div>
+															<div class="investmentRatio-list-text">
+																全球債券基金—美元
+																<span class="focus">
+																	(本基金之配息來源可能為本金)
+																</span>
+															</div>
+															<div class="investmentRatio-list-percentage">
+																27
+															</div>
+														</li>
+														<li @click="toggleModal('chart');">
+															<div class="investmentRatio-list-icon" style="background: #fa8666;"></div>
+															<div class="investmentRatio-list-text">
+																黃金基金
+																<span class="focus">
+																	(本基金之配息來源可能為本金)
+																</span>
+															</div>
+															<div class="investmentRatio-list-percentage">
+																33
+															</div>
+														</li>
+														<li @click="toggleModal('chart');">
+															<div class="investmentRatio-list-icon" style="background: #f4d66c;"></div>
+															<div class="investmentRatio-list-text">
+																美國政府基金
+																<span class="focus">
+																	(本基金之配息來源可能為本金)
+																</span>
+															</div>
+															<div class="investmentRatio-list-percentage">
+																35
+															</div>
+														</li>
+													</ul>
+													<div class="investmentRatio-list-total">
+														共4檔基金
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="plan-details">
+											<h4 class="plan-details-tit" title="基金類別">
+												基金類別
+											</h4>
+											<div class="fundCategory">
+												<!-- 基金類別圖表放置位置 -->
+											</div>
+										</div>
+									</div>
+								</transition>
+							</div>
+						</div>
+					</transition>
+
+				</div>
+			</section>
+
+			<section class="item grayBg otherInfo">
+				<div class="container">
+					<h2 class="tit-type1" title="還有其他疑問?">
+						還有其他疑問?
+					</h2>
+					<div class="btnArea">
+						<div class="btn type3">
+							<a href="more.html" title="我想了解更多">
+								我想了解更多 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+		
+		<div class="topBtn">
+			<a href="#top" title="返回最上面">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<div class="fixedRightBtn-area clearfix">
+			<div class="fixedRightBtn">
+				<a href="index.html#experience" target="_blank" title="即刻體驗">
+					即刻體驗 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="fixedRightBtn type2">
+				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+					立即開戶 <i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<modal ref="warning" :can-close="false" class="md">
+			<slot slot="infoArea">
+				<div class="alertModal">
+					<div class="alertModal-icon">
+						<i class="fas fa-exclamation-circle"></i>
+					</div>
+					<p>
+						智能理財係依您所填具之風險屬性評估結果及問卷調查結果作為您日後申購基金產品及投資決策時之參考，故請您依實際情況及評估自身投資風險屬性與風險承受度確實完整填答「投資計畫問卷表」。
+					</p>
+					<div class="btnArea">
+						<div class="btn">
+							<a href="#experience-step" title="我已仔細閱讀並同意" @click="questionnaire = 1; toggleModal('warning')">
+								我已仔細閱讀並同意 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</slot>
+		</modal>
+
+		<modal ref="chart" :can-close="true" class="md">
+			<slot slot="infoArea">
+				<div class="alertModal">
+					<div class="plan-fundChart">
+						<!-- 
+							這裡放基金淨值走勢圖
+						 -->
+					</div>
+					<div class="btnArea">
+						<div class="btn type4">
+							<a href="javascript:void(0);" title="關閉" @click="toggleModal('chart')">
+								關閉
+							</a>
+						</div>
+					</div>
+				</div>
+			</slot>
+		</modal>
+
+	</div>
+
+	
+	<script src="js/main.min.js?v=20200616_2"></script>
+	<script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+
+</body>
+</html>
