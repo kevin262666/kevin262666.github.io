@@ -36,6 +36,12 @@
 + **[精選收益基金]** 
 ![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
 
++ **[國民理財機器人]** 
+![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
+
++ **[網銀開戶推展]** 
+![vueIcon][vueIcon] ![html5][html5] ![css3][css3]
+
 [2018第四季活動-理財大補湯]:https://kevin262666.github.io/franklin/C2018_10_Q4/
 [多空策略基金]:https://kevin262666.github.io/franklin/C2018_10_Q4_1641/
 [寵愛粉絲感恩節特別企劃]:https://kevin262666.github.io/franklin/C2018_11_thanksgiving/
@@ -47,6 +53,8 @@
 [2020基金獎]:https://kevin262666.github.io/franklin/fund-award/
 [投資定心丸]:https://kevin262666.github.io/franklin/rsp/
 [精選收益基金]:https://kevin262666.github.io/franklin/strategic-income-fund/
+[國民理財機器人]:https://kevin262666.github.io/franklin/newAIRobo/
+[網銀開戶推展]:https://kevin262666.github.io/franklin/signup/
 
 
 
