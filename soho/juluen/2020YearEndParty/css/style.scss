@@ -1293,6 +1293,13 @@ body {
 body {
     min-width: 1000px;
     // _width: expression((document.documentElement.clientWidth||document.body.clientWidth)<950?"950px":"");
+    background: url(../images/bg.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+#content {
+    min-height: 100vh;
+    position: relative;
 }
 
 a {
@@ -1480,5 +1487,126 @@ a {
     img {
         display: block;
         margin: 0 auto;
+    }
+}
+
+.partyTit,
+.companyLogo {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.companyLogo {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    img {
+        width: 200px;
+        width: 150px;
+    }
+}
+.partyTit {
+    pointer-events: none;
+    margin-top: -80px;
+    img {
+        width: 510px;
+        width: 370px;
+        filter: drop-shadow(0px 10px 7px rgba(#000, 0.7));
+    }
+    // @media screen and (max-height: 800px) {
+    //     img {
+    //         width: 370px;
+    //     }
+    // }
+}
+
+// ------------------2-------------------------------
+h1 {
+    width: 900px;
+    margin: 40px auto;
+    font: 32px "Microsoft Yahei";
+    text-align: center;
+    color: #fff;
+}
+
+.dowebok {
+    width: 894px;
+    height: 563px;
+    margin: 0 auto;
+    // background-image: url(../images/s3_bg.png);
+    width: 548px;
+}
+
+.rotary {
+    position: relative;
+    float: left;
+    width: 504px;
+    height: 504px;
+    margin: 20px 0 20px 20px;
+    background-image: url(../images/g.png);
+    border-radius: 100%;
+    border: solid 20px #f6cd60;
+    border: solid 20px #412140;
+}
+
+.hand {
+    position: absolute;
+    left: 144px;
+    top: 144px;
+    width: 216px;
+    height: 216px;
+    cursor: pointer;
+    line-height: 216px;
+    text-align: center;
+    transition: 0s ease all;
+}
+
+.list {
+    float: right;
+    width: 300px;
+    padding-top: 44px;
+}
+
+.list strong {
+    position: relative;
+    left: -45px;
+    display: block;
+    height: 65px;
+    line-height: 65px;
+    font-size: 32px;
+    color: #ffe63c;
+}
+
+.list h4 {
+    height: 45px;
+    margin: 30px 0 10px;
+    line-height: 45px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.list ul {
+    line-height: 36px;
+    list-style-type: none;
+    font-size: 12px;
+    color: #fff;
+}
+
+.list span {
+    display: inline-block;
+    width: 94px;
+}
+
+$baseRotate: 1440;
+$deg1: 360/12;
+
+@for $i from 1 through 12 {
+    $deg2: ($deg1*$i)-15;
+
+    .rotate#{$i} {
+        transform: rotate(($baseRotate + $deg2) + deg);
+        transition: 3s ease all;
     }
 }
