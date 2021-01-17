@@ -1501,7 +1501,7 @@ a {
 .companyLogo {
     position: absolute;
     top: 40px;
-    right: 20px;
+    right: 50px;
     img {
         width: 200px;
         width: 150px;
@@ -1509,11 +1509,13 @@ a {
 }
 .partyTit {
     pointer-events: none;
-    margin-top: -80px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
     img {
         width: 510px;
         width: 370px;
-        filter: drop-shadow(0px 10px 7px rgba(#000, 0.7));
+        // filter: drop-shadow(0px 10px 7px rgba(#000, 0.7));
     }
     // @media screen and (max-height: 800px) {
     //     img {
@@ -1599,7 +1601,7 @@ h1 {
     width: 94px;
 }
 
-$baseRotate: 1440;
+$baseRotate: 1440*6;
 $deg1: 360/12;
 
 @for $i from 1 through 12 {
@@ -1607,6 +1609,38 @@ $deg1: 360/12;
 
     .rotate#{$i} {
         transform: rotate(($baseRotate + $deg2) + deg);
-        transition: 3s ease all;
+        transition: 10s cubic-bezier(0.29, 0.13, 0, 0.96) all;
+    }
+}
+
+// ---------
+.ansArea {
+    text-align: center;
+    line-height: 1;
+    margin-top: -110px;
+    margin-bottom: -150px;
+    &-tit {
+        font-size: 5vw;
+    }
+    &-ans {
+        font-weight: 900;
+        font-size: 20vw;
+        height: 196px;
+        opacity: 0;
+        transform: scale(10);
+        transition: 1s cubic-bezier(0.68, 0.14, 0.54, 0.4) all;
+    }
+}
+
+.showAns {
+    // animation: showAns 3s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes showAns {
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }

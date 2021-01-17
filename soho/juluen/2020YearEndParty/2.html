@@ -23,9 +23,9 @@
         <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
 
         <link rel="stylesheet" href="css/slick.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.css?v=20210117" />
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
-        <link
+        <!-- <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
             integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -34,7 +34,7 @@
         <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap"
             rel="stylesheet"
-        />
+        /> -->
 
         <!-- <script type="text/javascript" src="js/vue-v2.min.js"></script> -->
         <script type="text/javascript" src="js/vue.js"></script>
@@ -47,6 +47,9 @@
         <div id="content" v-cloak>
             <div class="companyLogo">
                 <img src="images/logo.png" alt="" />
+            </div>
+            <div class="partyTit">
+                <img src="images/tit.png" alt="" />
             </div>
             <div class="contentArea">
                 <div class="dowebok">
@@ -95,19 +98,22 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="partyTit">
-                    <img src="images/tit.png" alt="" />
+                <div class="ansArea">
+                    <div class="ansArea-tit">
+                        得獎的是
+                    </div>
+                    <div class="ansArea-ans" :class="{'showAns': game2Winner[0] != ' '}">
+                        {{game2Winner[0]}}
+                    </div>
                 </div>
-
                 <!-- <div class="slogin">
                     <img src="images/title2.png" alt="">
                 </div> -->
             </div>
         </div>
 
-        <script src="js/main.min.js"></script>
-        <script>
+        <script src="js/main.min.js?v=20210117"></script>
+        <!-- <script>
             $(function () {
                 var $hand = $(".hand"),
                     canUse = true;
@@ -117,6 +123,9 @@
                         canUse = false;
                         var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
                         data = data[Math.floor(Math.random() * data.length)];
+                        setTimeout(()=> {
+                            this.$set(this.game2Winner, 0, data);
+                        }, 7000);
                         switch (data) {
                             case 1:
                                 rotateFunc(1, 16, "中1", data);
@@ -186,6 +195,6 @@
                     }, 100);
                 }
             });
-        </script>
+        </script> -->
     </body>
 </html>

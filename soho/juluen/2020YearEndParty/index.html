@@ -23,9 +23,9 @@
         <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
 
         <link rel="stylesheet" href="css/slick.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.css?v=20210117" />
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
-        <link
+        <!-- <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
             integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -34,7 +34,7 @@
         <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap"
             rel="stylesheet"
-        />
+        /> -->
 
         <!-- <script type="text/javascript" src="js/vue-v2.min.js"></script> -->
         <script type="text/javascript" src="js/vue.js"></script>
@@ -47,6 +47,9 @@
         <div id="content" v-cloak>
             <div class="companyLogo">
                 <img src="images/logo.png" alt="">
+            </div>
+            <div class="partyTit">
+                <img src="images/tit.png" alt="">
             </div>
             <div class="contentArea">
                 <div class="main2">
@@ -78,8 +81,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="partyTit">
-                    <img src="images/tit.png" alt="">
+                <div class="ansArea">
+                    <div class="ansArea-tit">
+                        得獎的是
+                    </div>
+                    <div class="ansArea-ans" :class="{'showAns': winner2[0] != ' '}">
+                        {{winner2[0]}}
+                    </div>
                 </div>
                 
                 <!-- <div class="slogin">
@@ -88,6 +96,6 @@
             </div>
         </div>
 
-        <script src="js/main.min.js"></script>
+        <script src="js/main.min.js?v=20210117"></script>
     </body>
 </html>

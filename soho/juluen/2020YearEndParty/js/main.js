@@ -15,8 +15,11 @@ var content = new Vue({
         TextNum2: "",
         TextNum3: "",
         winner: "",
+        winner2: [],
         numLenght = 3,
         numPos: [-1021, -902, -784, -666, -548, -429, -1614, -1495, -1377, -1258],
+
+        game2Winner: [],
     },
     mounted() {
         this.useJq();
@@ -31,6 +34,10 @@ var content = new Vue({
             this.windowHeight = $(window).innerHeight();
 
             // this.sameHeight('fund1');
+        });
+
+        this.$nextTick(function () {
+            this.game2();
         });
     },
     methods: {
@@ -86,14 +93,14 @@ var content = new Vue({
                 num2 = this.numPos[this.TextNum2],
                 num3 = this.numPos[this.TextNum3];
 
-            $(".num-con1").animate({ top: -1140 }, 1000, "linear", function () {
-                $(this).css("top", 0).animate({ top: num1 }, 1000, "linear");
+            $(".num-con1").animate({ top: -1140 }, 700, "linear", function () {
+                $(this).css("top", 0).animate({ top: num1 }, 3000, "linear");
             });
-            $(".num-con2").animate({ top: -1140 }, 1000, "linear", function () {
-                $(this).css("top", 0).animate({ top: num2 }, 4000, "linear");
+            $(".num-con2").animate({ top: -1140 }, 500, "linear", function () {
+                $(this).css("top", 0).animate({ top: num2 }, 5000, "linear");
             });
-            $(".num-con3").animate({ top: -1140 }, 1000, "linear", function () {
-                $(this).css("top", 0).animate({ top: num3 }, 2000, "linear");
+            $(".num-con3").animate({ top: -1140 }, 600, "linear", function () {
+                $(this).css("top", 0).animate({ top: num3 }, 7000, "linear");
             });
         },
 
@@ -122,14 +129,93 @@ var content = new Vue({
         game() {
             if (!this.flag) {
                 this.flag = true;
+                this.$set(this.winner2, 0, ' ');
                 this.winner = (this.paddingLeft(this.getRandom(1, 280).toString())).split("");
                 this.reset();
                 this.letGo();
                 console.log(this.winner);
                 setTimeout(()=> {
+                    this.$set(this.winner2, 0, this.winner.join(''));
+                }, 7100);
+                setTimeout(()=> {
                     this.flag = false;
-                }, 7000);
+                }, 8100);
             };
+        },
+
+        // ------------------------------------------------------------------
+        game2() {
+            var $hand = $(".hand"),
+                canUse = true;
+
+            $hand.click(()=> {
+                if (canUse) {
+                    canUse = false;
+                    this.$set(this.game2Winner, 0, ' ');
+
+                    var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                    data = data[Math.floor(Math.random() * data.length)];
+
+                    setTimeout(()=> {
+                        this.$set(this.game2Winner, 0, data);
+                    }, 9500);
+
+                    switch (data) {
+                        case 1:
+                            rotateFunc(1, 16, "中1", data);
+                            break;
+                        case 2:
+                            rotateFunc(2, 47, "中2", data);
+                            break;
+                        case 3:
+                            rotateFunc(3, 76, "中3", data);
+                            break;
+                        case 4:
+                            rotateFunc(4, 106, "中4", data);
+                            break;
+                        case 5:
+                            rotateFunc(5, 135, "中5", data);
+                            break;
+                        case 6:
+                            rotateFunc(6, 164, "中6", data);
+                            break;
+                        case 7:
+                            rotateFunc(7, 193, "中7", data);
+                            break;
+                        case 8:
+                            rotateFunc(7, 223, "中8", data);
+                            break;
+                        case 9:
+                            rotateFunc(7, 252, "中9", data);
+                            break;
+                        case 10:
+                            rotateFunc(7, 284, "中10", data);
+                            break;
+                        case 11:
+                            rotateFunc(7, 314, "中11", data);
+                            break;
+                        case 12:
+                            rotateFunc(7, 345, "中12", data);
+                            break;
+                    }
+                    setTimeout(function () {
+                        canUse = true;
+                    }, 10200);
+                }
+            });
+
+            var oldClassName = "";
+            function rotateFunc(awards, angle, text, no) {
+                console.log(awards, angle, text, no);
+                // $hand.css({
+                //   'transform': 'rotate('+ angle +'deg)',
+                // });
+                $hand.removeClass(oldClassName);
+                setTimeout(function () {
+                    oldClassName = "rotate" + no;
+                    $hand.addClass("rotate" + no);
+                }, 100);
+            }
         },
     },
     watch: {
