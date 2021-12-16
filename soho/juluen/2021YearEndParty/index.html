@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!-- 防止搜尋引擎網路檢索器將網頁編入索引 -->
+        <meta name="robots" content="noindex" />
+        <meta name="googlebot" content="noindex" />
+
+        <meta charset="UTF-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#00694f" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+        <title>JULUEN 巨輪興業-輪盤</title>
+        <meta name="description" content="JULUEN 巨輪興業" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="JULUEN 巨輪興業" />
+        <meta property="og:description" content="JULUEN 巨輪興業" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta http-equiv="EXPIRES" content="0" />
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+
+        <link rel="stylesheet" href="css/slick.css" />
+        <link rel="stylesheet" href="css/style.css?v=20211216" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <!-- <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap"
+            rel="stylesheet"
+        /> -->
+
+        <!-- <script type="text/javascript" src="js/vue-v2.min.js"></script> -->
+        <script type="text/javascript" src="js/vue.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/vue-scrollto.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+    </head>
+
+    <body>
+        <div id="content" v-cloak>
+            <!-- <div class="companyLogo">
+                <img src="images/logo.png" alt="" />
+            </div> -->
+            <div class="partyTit">
+                <img src="images/tit.png?v=20210117" alt="" />
+            </div>
+            <div class="contentArea">
+                <div class="dowebok">
+                    <div class="rotary">
+                        <img
+                            class="hand"
+                            id="hand"
+                            src="images/z.png"
+                            alt=""
+                        />
+                        <!-- <div class="hand" id="hand">
+                            123
+                        </div> -->
+                    </div>
+
+                    <div class="list" v-if="false">
+                        <strong>100%中奖</strong>
+                        <h4>中奖用户名单</h4>
+                        <ul>
+                            <li>
+                                <span>154**88</span> <span>获得1个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>6161***034</span>
+                                <span>获得11个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>2349***224</span>
+                                <span>获得1个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>433***54</span> <span>获得2个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>5154***234</span>
+                                <span>获得4个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>3213***123</span>
+                                <span>获得2个月绿钻</span>
+                            </li>
+                            <li>
+                                <span>898****362</span>
+                                <span>获得9个月绿钻</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ansArea">
+                    <div class="ansArea-tit">
+                        得獎的是
+                    </div>
+                    <div class="ansArea-ans" :class="{'showAns': game2Winner[0] != ' '}">
+                        {{game2Winner[0]}}
+                    </div>
+                </div>
+                <!-- <div class="slogin">
+                    <img src="images/title2.png" alt="">
+                </div> -->
+            </div>
+        </div>
+
+        <script src="js/main.min.js?v=20210117"></script>
+        <!-- <script>
+            $(function () {
+                var $hand = $(".hand"),
+                    canUse = true;
+
+                $hand.click(function () {
+                    if (canUse) {
+                        canUse = false;
+                        var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                        data = data[Math.floor(Math.random() * data.length)];
+                        setTimeout(()=> {
+                            this.$set(this.game2Winner, 0, data);
+                        }, 7000);
+                        switch (data) {
+                            case 1:
+                                rotateFunc(1, 16, "中1", data);
+                                break;
+                            case 2:
+                                rotateFunc(2, 47, "中2", data);
+                                break;
+                            case 3:
+                                rotateFunc(3, 76, "中3", data);
+                                break;
+                            case 4:
+                                rotateFunc(4, 106, "中4", data);
+                                break;
+                            case 5:
+                                rotateFunc(5, 135, "中5", data);
+                                break;
+                            case 6:
+                                rotateFunc(6, 164, "中6", data);
+                                break;
+                            case 7:
+                                rotateFunc(7, 193, "中7", data);
+                                break;
+                            case 8:
+                                rotateFunc(7, 223, "中8", data);
+                                break;
+                            case 9:
+                                rotateFunc(7, 252, "中9", data);
+                                break;
+                            case 10:
+                                rotateFunc(7, 284, "中10", data);
+                                break;
+                            case 11:
+                                rotateFunc(7, 314, "中11", data);
+                                break;
+                            case 12:
+                                rotateFunc(7, 345, "中12", data);
+                                break;
+                        }
+                        setTimeout(function () {
+                            canUse = true;
+                        }, 4000);
+                    }
+                });
+
+                // var rotateFunc = function (awards, angle, text) {
+                //   $hand.stopRotate();
+                //   $hand.rotate({
+                //     angle: 0,
+                //     duration: 5000,
+                //     animateTo: angle + 1440,
+                //     callback: function () {
+                //       alert(text);
+                //     }
+                //   });
+                // };
+
+                var oldClassName = "";
+                function rotateFunc(awards, angle, text, no) {
+                    console.log(awards, angle, text, no);
+                    // $hand.css({
+                    //   'transform': 'rotate('+ angle +'deg)',
+                    // });
+                    $hand.removeClass(oldClassName);
+                    setTimeout(function () {
+                        oldClassName = "rotate" + no;
+                        $hand.addClass("rotate" + no);
+                    }, 100);
+                }
+            });
+        </script> -->
+    </body>
+</html>
