@@ -1,0 +1,493 @@
+@charset 'utf-8';
+
+// 投資比重
+.indexPieChart {
+    &-chart {
+        margin: 47px auto;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        .cls-1 {
+            fill: #4e9d2d;
+        }
+        .cls-1,
+        .cls-2,
+        .cls-3,
+        .cls-4,
+        .cls-5,
+        .cls-6,
+        .cls-7 {
+            stroke: #fff;
+            stroke-linejoin: round;
+        }
+        .cls-2 {
+            fill: #82bc00;
+        }
+        .cls-3 {
+            fill: #005598;
+        }
+        .cls-4 {
+            fill: #5fc0eb;
+        }
+        .cls-5 {
+            fill: #00a0dc;
+        }
+        .cls-6 {
+            fill: #a5d7f5;
+        }
+        .cls-7 {
+            fill: #aac671;
+        }
+        .cls-10,
+        .cls-8 {
+            fill: #333;
+        }
+        .cls-8 {
+            font-size: 18px;
+            font-family: $fontFamily-base;
+        }
+        .cls-8,
+        .cls-9 {
+            isolation: isolate;
+        }
+        .cls-9 {
+            fill: #fff;
+            font-size: 21px;
+            font-family: $fontFamily-base;
+        }
+        .cls-10 {
+            font-size: 20px;
+            font-family: $fontFamily-base;
+            font-weight: 700;
+        }
+    }
+    &-table {
+        margin: 20px 0;
+        padding: 0px 10px;
+        border: solid 1px $color-border;
+        border-radius: 5px;
+        display: none;
+        &-category {
+            font-size: 14px;
+        }
+        &-percentage {
+            text-align: right;
+            font-weight: bold;
+            position: relative;
+        }
+        &-category,
+        &-percentage {
+            padding: 5px 0;
+            position: relative;
+            text-shadow: 0px 0px 5px #fff,
+                         0px 0px 5px #fff,
+                         0px 0px 5px #fff,
+                         0px 0px 5px #fff,
+                         0px 0px 5px #fff,
+                         0px 0px 5px #fff;
+        }
+        &-color {
+            position: absolute;
+            top: 3px;
+            bottom: 3px;
+            left: 0;
+            opacity: 0.8;
+        }
+        .el-row {
+            &:nth-of-type(2n+0) {
+                background: $color-blockBg;
+            }
+            .el-col {
+                position: relative;
+            }
+        }
+    }
+    // @include maxWidth-lg {
+    //     &-chart {
+    //         max-width: 435px;
+    //         margin: 57px auto;
+    //     }
+    // }
+    @include maxWidth-md {
+        &-chart {
+            max-width: 100%;
+            margin: 30px auto;
+        }
+    }
+    @include maxWidth-sm {
+        &-chart {
+            margin: 0px 0 20px;
+        }
+        &-table {
+            display: block;
+        }
+    }
+}
+
+// 投資損益查詢
+.indexProfitLossQuery {
+    .fundList {
+        &-infoItem {
+            td {
+                text-align: center;
+                box-sizing: border-box;
+                width: 21%;
+                &:nth-of-type(1),
+                &:nth-of-type(4) {
+                    width: 18%;
+                }
+            }
+        }
+        &-warning {
+            max-width: none;
+            position: relative;
+            top: 5px;
+        }
+    }
+    &-moreBtn {
+        float: right;
+        position: relative;
+        z-index: $zIndex-lv1;
+    }
+    @include maxWidth-md {
+        .fundList-infoItem {
+            &.noInfo {
+                display: none;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        .fundList-infoItem table {
+            min-width: 500px;
+        }
+    }
+}
+
+// 近期優惠
+.indexPromotions {
+    margin: 40px 0px;
+    .slick-list {
+        margin: 0px -10px;
+    }
+    &-item {
+        text-align: center;
+        padding: 0px 10px;
+        .el-card__body {
+            padding: 1px 10px;
+        }
+        &-tit {
+            font-weight: bold;
+            margin: 15px 0px 0px;
+        }
+        &-promotions {
+            color: $color-baseBlue;
+            font-size: 18px;
+            .focus {
+                line-height: 1.2;
+                font-size: 40px;
+            }
+        }
+        &-bottom {
+            background: $color-blockBg;
+            border-radius: 5px;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        &-deadline {
+            font-size: 14px;
+            color: $color-gray1;
+            .calculationFormula {
+                margin: 0;
+                i {
+                    line-height: 1;
+                    bottom: 0;
+                }
+            }
+        }
+        &.stayTuned {
+            .el-card {
+                background: $color-blockBg;
+                &__body {
+                    display: table;
+                    width: 100%;
+                    height: 172px;
+                }
+            }
+            .indexPromotions-item-tit {
+                margin: 0px;
+                display: table-cell;
+                vertical-align: middle;
+                color: $color-gray2;
+            }
+        }
+    }
+    &.profitLossQueryType {
+        margin-top: 15px;
+        .indexPromotions-item {
+            &-promotions {
+                .focus {
+                    font-size: 25px;
+                }
+            }
+            &-bottom {
+                position: relative;
+                // &:before {
+                //     content: '';
+                //     position: absolute;
+                //     top: 10px;
+                //     bottom: 10px;
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     width: 1px;
+                //     border-right: dashed 1px $color-border;
+                // }
+                .el-col {
+                    &:first-of-type {
+                        margin-bottom: 10px;
+                    }
+                    &:last-of-type {
+                        border-left: dashed 1px $color-border;
+                    }
+                }
+            }
+            &-deadline {
+                .text-black {
+                    font-size: 16px;
+                }
+            }
+        }
+        .slick-track {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    @include maxWidth-xl {
+        &.profitLossQueryType {
+            .indexPromotions-item {
+                &-deadline {
+                    font-size: 12px;
+                    letter-spacing: -0.9px;
+                }
+            }
+        }
+    }
+    @include maxWidth-lg {
+        &.profitLossQueryType {
+            .indexPromotions-item {
+                &-deadline {
+                    letter-spacing: 0px;
+                }
+            }
+        }
+    }
+}
+
+// 通知圖卡
+$indexAlertCard_btnAreaWidth: 330px;
+.indexAlertCard {
+    margin: 40px 0px;
+    .el-card {
+        border-color: $color-danger;
+        border-width: 3px;
+        &__body {
+            position: relative;
+            // padding: 20px 0;
+            padding-left: 80px;
+            padding-right: $indexAlertCard_btnAreaWidth;
+        }
+    }
+    &-icon {
+        font-size: 60px;
+        color: $color-danger;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    &-content {
+        padding: 0px 20px;
+        margin: 20px 0px;
+        border-right: solid 1px $color-border;
+    }
+    &-sTit {
+        font-size: 18px;
+    }
+    &-tit {
+        font-size: 30px;
+        font-size: 25px;
+        line-height: 1.2;
+        margin: 0px 0px;
+        color: $color-danger;
+        font-weight: bold;
+    }
+    &-text {
+        padding: 1px 15px;
+        margin: 15px 0px;
+        border-radius: 5px;
+        background: $color-blockBg;
+    }
+    &-btnArea {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: $indexAlertCard_btnAreaWidth;
+        height: 100%;
+        padding: 0px 25px;
+        box-sizing: border-box;
+        &-container {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+        &-content {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+
+    &.insidePageType {
+        margin: 25px 0px;
+    }
+    @include maxWidth-md {
+        .el-card__body {
+            padding-right: 0px;
+        }
+        &-content {
+            border-right: none;
+        }
+        &-btnArea {
+            position: relative;
+            width: auto;
+            padding: 0px 15px;
+            margin: 15px 0;
+            // text-align: right;
+            &-container {
+                display: block;
+            }
+            &-content {
+                border-top: solid 1px $color-border;
+                padding-top: 10px;
+                display: block;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        text-align: center;
+        .el-card__body {
+            padding: 1px 15px;
+        }
+        &-icon {
+            position: relative;
+            top: auto;
+            left: auto;
+            display: block;
+            margin: 15px auto;
+        }
+        &-content {
+            padding: 0px;
+            margin: 0;
+        }
+        &-tit {
+            font-size: 20px;
+        }
+        &-text {
+            font-size: 14px;
+        }
+        &-btnArea {
+            padding: 0px;
+        }
+    }
+}
+
+// 最新公告
+.indexNews {
+    margin: 40px 0px;
+    .slick-arrow {
+        top: 15px;
+    }
+    &-head {
+        border-bottom: solid 1px $color-border;
+        position: relative;
+        margin: 15px 0px;
+        padding-left: 96px;
+        padding-right: 90px;
+        padding-bottom: 10px;
+    }
+    &-sortName {
+        color: #fff;
+        background: $color-baseBlue;
+        position: absolute;
+        top: 1px;
+        left: 0px;
+        padding: 0px 10px;
+    }
+    &-tit {
+        margin: 0px;
+        font-size: 18px;
+    }
+    &-content {
+        background: $color-blockBg;
+        border-radius: 5px;
+        // margin: 15px 0px;
+        padding: 1px 15px;
+        .table {
+            &-bordered {
+                border: 1px solid $color-border;
+                th,
+                td {
+                    border: 1px solid $color-border;
+                }
+            }
+            &-sm {
+                th,
+                td {
+                    padding: 0.3rem;
+                }
+            }
+        }
+        table {
+            border-collapse: collapse;
+            & > thead > tr > th {
+                border-bottom: 2px solid $color-border;
+            }
+            th,
+            td {
+                border-top: 1px solid $color-border;
+            }
+        }
+        .el-button.sBtn {
+            font-size: 16px;
+        }
+    }
+    &.type2 {
+        .indexNews {
+            &-head {
+                padding-left: 46px;
+            }
+            &-content {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        .slick-arrow {
+            top: 10px;
+        }
+        &-head {
+            padding: 0px 0px 10px;
+        }
+        &-sortName {
+            position: relative;
+            top: 0;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        &.type2 {
+            .indexNews {
+                &-head {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}

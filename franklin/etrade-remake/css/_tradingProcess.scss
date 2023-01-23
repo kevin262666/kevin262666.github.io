@@ -1,0 +1,246 @@
+@charset 'utf-8';
+
+.tradingProcess {
+    &-card {
+        margin: 15px 0px;
+        .fundList {
+            &-header-content {
+                cursor: auto;
+            }
+            &-fundName {
+                // font-size: 18px;
+                cursor: auto;
+            }
+        }
+        &-content {
+            background: $color-blockBg;
+            border-radius: 10px;
+            padding: 1px 25px;
+            margin: 15px 0px;
+            &-item {
+                display: table;
+                width: 100%;
+                break-inside: avoid;
+                padding: 10px 0px;
+                &-area {
+                    margin: 10px 0px;
+                    column-count: 4;
+                    column-gap: 30px;
+                    column-rule: dashed 1px $color-divider2;
+                }
+                &-tit,
+                &-content,
+                &-input {
+                    display: table-cell;
+                    // vertical-align: middle;
+                }
+                &-tit {
+                    font-size: 14px;
+                    // line-height: 1.8;
+                    color: $color-gray1;
+                    box-sizing: border-box;
+                    padding-right: 20px;
+                    vertical-align: top;
+                    padding-top: 1px;
+                }
+                &-content {
+                    &.noBreak {
+                        white-space: nowrap;
+                        .el-radio {
+                            white-space: nowrap;
+                        }
+                    }
+                    .price {
+                        font-size: 20px;
+                        line-height: 1.2;
+                    }
+                    & + .tradingProcess-card-content-item-input {
+                        padding-left: 10px;
+                    }
+                    .el-form-item {
+                        margin: 0;
+                    }
+                    .el-date-editor.el-input, .el-date-editor.el-input__inner {
+                        width: 100%;
+                    }
+                }
+                &-input {
+                    // padding-left: 10px;
+                    .el-form-item {
+                        margin: 0;
+                    }
+                }
+            }
+            .el-divider__text {
+                background: $color-blockBg;
+            }
+        }
+    }
+    &-btnArea {
+        margin: 15px 0px;
+        text-align: right;
+    }
+    @include maxWidth-xxl {
+        &-card-content-item-area {
+            column-count: 3;
+        }
+    }
+    @include maxWidth-xl {
+        &-card-content-item {
+            &-area {
+                column-count: 2;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        &-card {
+            .fundList {
+                &-fundName {
+                    // font-size: 16px;
+                }
+            }
+            &-content {
+                padding: 1px 10px;
+                &-item {
+                    display: block;
+                    padding: 0px;
+                    margin: 15px 0px;
+                    &-area {
+                        column-count: auto;
+                    }
+                    &-tit,
+                    &-content,
+                    &-input {
+                        display: block;
+                        width: auto !important;
+                    }
+                    &-tit {
+                        padding-right: 0;
+                        & + .tradingProcess-card-content-item {
+                            &-content,
+                            &-input {
+                                padding-top: 3px;
+                            }
+                        }
+                    }
+                    &-content {
+                        font-size: 16px;
+                        .focus {
+                            font-size: 17px;
+                        }
+                    }
+                    &.specialVersion {
+                        display: table;
+                        .tradingProcess-card-content-item {
+                            &-content,
+                            &-input {
+                                display: table-cell;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-btnArea {
+            text-align: center;
+            font-size: 0px;
+            .el-button {
+                box-sizing: border-box;
+                width: calc(50% - 14px);
+                text-align: center;
+                &.full-sm {
+                    width: calc(100% - 14px);
+                }
+            }
+        }
+    }
+    @include maxWidth-xs {
+        &-btnArea {
+            .el-button.is-round {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.columnBreak {
+    // -webkit-column-break-before: always;
+    // column-break-before: always;
+    break-before: column;
+    @include maxWidth-xl {
+        break-before: auto;
+    }
+}
+.columnSpan {
+    column-span: all; // 添加了就可以獨立一行
+}
+
+.changeFundArrow {
+    font-size: 25px;
+    position: relative;
+    top: -5px;
+    opacity: 0;
+    animation: changeFundArrow 1s ease-in-out infinite;
+}
+@keyframes changeFundArrow {
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: 5px;
+        opacity: 0;
+    }
+}
+
+.columnCount {
+    // &-xxl {
+    //     &-2 {
+    //         column-count: 2;
+    //     }
+    // }
+    @for $colNum from 1 through 10 {
+        &-#{$colNum} {
+            column-count: $colNum;
+        }
+    }
+    @for $size_n from 1 through length($size) {
+        &-#{nth($size, $size_n)} {
+            @media screen and (max-width: map-get($mediaWidth, #{nth($size, $size_n)})) {
+                @for $colNum from 1 through 10 {
+                    &-#{$colNum} {
+                        column-count: $colNum;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 表單
+.el-row.formItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .el-checkbox,
+    .el-radio {
+        margin-top: 10px;
+        &-group {
+            margin-bottom: 10px;
+        }
+    }
+    .el-form-item__content {
+        .text {
+            margin: 10px 0px;
+        }
+    }
+    @include maxWidth-sm {
+        .el-col {
+            .el-form-item {
+                margin: 7px 0px 10px;
+            }
+        }
+    }
+}

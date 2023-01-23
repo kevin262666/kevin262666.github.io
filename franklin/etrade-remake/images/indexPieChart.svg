@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="461" height="365.499" viewBox="0 0 461 365.499">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4e9d2d;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #fff;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        fill: #82bc00;
+      }
+
+      .cls-3 {
+        fill: #005598;
+      }
+
+      .cls-4 {
+        fill: #5fc0eb;
+      }
+
+      .cls-5 {
+        fill: #00a0dc;
+      }
+
+      .cls-6 {
+        fill: #a5d7f5;
+      }
+
+      .cls-7 {
+        fill: #aac671;
+      }
+
+      .cls-10, .cls-8 {
+        fill: #333;
+      }
+
+      .cls-8 {
+        font-size: 18px;
+        font-family: SourceHanSansTW-Regular, Source Han Sans TW;
+      }
+
+      .cls-8, .cls-9 {
+        isolation: isolate;
+      }
+
+      .cls-9 {
+        fill: #fff;
+        font-size: 21px;
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-10 {
+        font-size: 20px;
+        font-family: SourceHanSansTW-Bold, Source Han Sans TW;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="组_156" data-name="组 156" transform="translate(-314 -204)">
+    <g id="chart" transform="translate(314.333 204)">
+      <g id="组_36" data-name="组 36" transform="translate(69.526 37.082)">
+        <path id="路径_42" data-name="路径 42" class="cls-1" d="M1215.685,49.776A163.957,163.957,0,0,1,1363.92,143.6l-74.1,35.066a81.979,81.979,0,0,0-74.117-46.912Z" transform="translate(-1051.761 -49.776)"/>
+        <path id="路径_43" data-name="路径 43" class="cls-2" d="M1334.832,106.805a163.962,163.962,0,0,1,15.555,63.428l-81.913,3.277a81.959,81.959,0,0,0-7.78-31.714Z" transform="translate(-1022.602 -12.831)"/>
+        <path id="路径_44" data-name="路径 44" class="cls-3" d="M1393.744,145.4a163.956,163.956,0,0,1-199.966,166.319l18.065-79.964a81.977,81.977,0,0,0,99.983-83.159Z" transform="translate(-1065.953 12.169)"/>
+        <path id="路径_45" data-name="路径 45" class="cls-4" d="M1224.478,286.123a163.964,163.964,0,0,1-78.338-42.664l57.316-58.613a81.962,81.962,0,0,0,39.169,21.331Z" transform="translate(-1096.813 37.725)"/>
+        <path id="路径_46" data-name="路径 46" class="cls-5" d="M1165.415,318.265a163.958,163.958,0,0,1,17.441-249.071l48.653,65.98a81.975,81.975,0,0,0-8.72,124.536Z" transform="translate(-1116.206 -37.197)"/>
+        <path id="路径_47" data-name="路径 47" class="cls-6" d="M1156.733,81.547a163.966,163.966,0,0,1,86.789-31.572l5.194,81.814a81.989,81.989,0,0,0-43.4,15.786Z" transform="translate(-1089.951 -49.647)"/>
+        <path id="路径_48" data-name="路径 48" class="cls-7" d="M1209.5,50.094q4.991-.311,9.994-.318l.114,81.979q-2.5,0-5,.158Z" transform="translate(-1055.766 -49.776)"/>
+      </g>
+      <g id="组_51" data-name="组 51" transform="translate(0 0)">
+        <text id="產業型" class="cls-8" transform="translate(377.667 73)"><tspan x="-27" y="0">產業型</tspan></text>
+        <text id="債券型" class="cls-8" transform="translate(433.667 173)"><tspan x="-27" y="0">債券型</tspan></text>
+        <text id="美國股票" class="cls-8" transform="translate(386.667 338)"><tspan x="-36" y="0">美國股票</tspan></text>
+        <text id="新興市場" class="cls-8" transform="translate(91.667 352)"><tspan x="-36" y="0">新興市場</tspan></text>
+        <text id="平衡型" class="cls-8" transform="translate(26.667 211)"><tspan x="-27" y="0">平衡型</tspan></text>
+        <text id="歐洲股票" class="cls-8" transform="translate(128.667 45)"><tspan x="-36" y="0">歐洲股票</tspan></text>
+        <text id="投信基金" class="cls-8" transform="translate(227.667 21)"><tspan x="-36" y="0">投信基金</tspan></text>
+      </g>
+      <g id="组_52" data-name="组 52" transform="translate(84.587 70.683)">
+        <text id="_29.2_" data-name="29.2%" class="cls-9" transform="translate(226.08 231.317)"><tspan x="-29.772" y="0">29.2%</tspan></text>
+        <text id="_8.8_" data-name="8.8%" class="cls-9" transform="translate(92.08 242.317)"><tspan x="-23.933" y="0">8.8%</tspan></text>
+        <text id="_27.6_" data-name="27.6%" class="cls-9" transform="translate(30.08 135.317)"><tspan x="-29.772" y="0">27.6%</tspan></text>
+        <text id="_9.1_" data-name="9.1%" class="cls-9" transform="translate(103.08 19.317)"><tspan x="-23.933" y="0">9.1%</tspan></text>
+        <text id="_18.0_" data-name="18.0%" class="cls-9" transform="translate(220.08 42.317)"><tspan x="-29.772" y="0">18.0%</tspan></text>
+        <text id="_6.4_" data-name="6.4%" class="cls-9" transform="translate(266.08 111.317)"><tspan x="-23.933" y="0">6.4%</tspan></text>
+      </g>
+    </g>
+    <text id="投資比重" class="cls-10" transform="translate(545 412)"><tspan x="-40" y="0">投資比重</tspan></text>
+  </g>
+</svg>

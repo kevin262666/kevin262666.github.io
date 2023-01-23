@@ -1,0 +1,111 @@
+@charset 'UTF-8';
+
+// color
+$color-fontColor: #333;
+$color-blue1: #005598;
+$color-blue2: #00a0dc;
+$color-blue3: #5fc0eb;
+$color-blue4: #EEF8FF;
+$color-green1: #519E2F;
+$color-green2: #82bc00;
+$color-green3: #aac671;
+$color-gray1: #797979;
+$color-gray2: #ccc;
+$color-gray3: #e8e8e8;
+$color-gray4: #f3f5f7;
+$color-gray5: #ddd;
+$color-red1: #e03b53;
+$color-yellow1: #ffe97c;
+$color-orange1: #e6a23c;
+
+$color-baseBlue: $color-blue1;
+$color-success: $color-green1;
+$color-warning: $color-orange1;
+$color-danger: $color-red1;
+
+$color-border: $color-gray2;
+$color-blockBg: $color-gray4;
+$color-divider: $color-gray4;
+$color-divider2: $color-gray5;
+
+// 陰影
+$boxShadow-base: 0px 5px 10px rgba(#000, 0.15);
+
+// 圓角
+$borderRadius-base: 10px;
+
+// z-index
+$zIndex-lv1: 1;
+$zIndex-lv2: 2;
+$zIndex-lv3: 3;
+$zIndex-lv4: 4;
+$zIndex-lv99: 99999;
+
+// 字體
+$fontFamily-base: Arial, "Noto Sans TC", sans-serif;
+
+// 字級
+$fontSize-base: 18px;
+$fontSize-sTit: 20px;
+$fontSize-tit: 25px;
+
+// 行距
+$lineHeight-base: 1.6;
+
+// 方向
+$direction: top, right, bottom, left;
+
+// 間距
+$marginWidth: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
+
+// 尺寸
+$size: xxl, xl, lg, md, sm, xs;
+$mediaWidth: (
+    xxl: 1599px,
+    xl: 1399px,
+    lg: 1199px,
+    md: 991px,
+    sm: 767px,
+    xs: 359px,
+);
+
+// 中文項次
+$chineseNo: "一", "二", "三", "四", "五", "六", "七", "八", "九";
+
+// mediaQuery
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: map-get($mediaWidth, xxl)) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: map-get($mediaWidth, xl)) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: map-get($mediaWidth, lg)) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: map-get($mediaWidth, md)) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: map-get($mediaWidth, sm)) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: map-get($mediaWidth, xs)) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+.chart {
+    margin: 15px 0px;
+    &-area {
+        font-size: 0px;
+        text-align: center;
+        margin: 15px -30px;
+        .chart {
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 50%;
+            padding: 0px 30px;
+            margin: 0px;
+        }
+        &.threeChart {
+            .chart {
+                width: (100% / 3);
+            }
+        }
+    }
+    &-tit {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0px;
+        &.type2 {
+            font-size: 24px;
+            &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                background: #005598;
+                width: 8px;
+                height: 26px;
+                border-radius: 4px;
+                position: relative;
+                top: -3px;
+            }
+        }
+        &-bg {
+            background: #ececec;
+            background: $color-baseBlue;
+            border-radius: 30px;
+            display: inline-block;
+            padding: 4px 18px;
+            color: #fff;
+            .focusText {
+                color: #ffcc00;
+            }
+        }
+    }
+    &-img {
+        max-width: 100%;
+        display: block;
+        margin: 15px auto;
+        // border: solid 2px #ccc;
+        // border-radius: 10px;
+        // box-sizing: border-box;
+        // padding: 10px;
+    }
+    &-table {
+        margin: 10px 0px;
+        overflow-x: auto;
+        table {
+            width: 100%;
+            border-spacing: 1px;
+            font-size: $fontSize-base;
+            background: #EBEEF5;
+            tr {
+                background: #fff;
+                transition: 0.3s ease background;
+                td {
+                    text-align: center;
+                    color: #353535;
+                    padding: 12px 10px;
+                    &.text-left {
+                        text-align: left;
+                    }
+                    &[align="right"] {
+                        text-align: right;
+                    }
+                    &[align="left"] {
+                        text-align: left;
+                    }
+                    & > ul,
+                    & > ol {
+                        // margin: 10px 0px;
+                    }
+                }
+                &:nth-of-type(2n+0) {
+                    background: #FAFAFA;
+                }
+                &.focusTr {
+                    background: #fff8e8;
+                }
+                &:hover {
+                    background: #F5F7FA;
+                }
+            }
+            thead tr {
+                background: $color-blockBg;
+                &:nth-of-type(2n+0) {
+                    background: $color-blockBg;
+                }
+                td {
+                    color: #909399;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &-remark {
+        font-size: 14px;
+        margin: 10px 0px;
+        // color: #828282;
+        // text-align: center;
+        color: #666;
+        b, strong {
+            color: #333;
+            &.text-blue {
+                color: $color-baseBlue;
+            }
+        }
+    }
+    &-chartAndText {
+        font-size: 0px;
+        .chart,
+        .chartText {
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            width: 50%;
+        }
+        .chart {
+            &-img {
+                margin-top: 0px;
+            }
+        }
+        .chartText {
+            padding-left: 12px;
+            font-size: 18px;
+        }
+    }
+    @include maxWidth-sm {
+        &-area {
+            margin: 15px 0px;
+            .chart {
+                display: block;
+                padding: 0px;
+                width: auto;
+                margin: 15px 0px;
+                & + .chart {
+                    margin-top: 25px;
+                }
+            }
+            &.threeChart .chart {
+                width: auto;
+            }
+        }
+        &-tit {
+            font-size: 17px;
+            &.type2 {
+                font-size: 17px;
+                &:before {
+                    width: 6px;
+                    height: 17px;
+                    top: -1px;
+                }
+            }
+        }
+        &-table {
+            table {
+                font-size: 14px;
+                // min-width: 600px;
+            }
+        }
+        &-remark {
+            font-size: 12px;
+        }
+        &-chartAndText {
+            .chart,
+            .chartText {
+                display: block;
+                width: auto;
+            }
+            .chartText {
+                padding-left: 0px;
+                font-size: 16px;
+            }
+        }
+    }
+}

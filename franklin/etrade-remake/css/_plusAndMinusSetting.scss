@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+.plusAndMinusSetting {
+    margin: 5px 0px 15px;
+    &-tit {
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-align: center;
+        i {
+            &.el-icon-circle-plus {
+                color: $color-success;
+            }
+            &.el-icon-remove {
+                color: $color-danger;
+            }
+        }
+    }
+    &-table {
+        &-titTd {
+            width: 150px;
+            box-sizing: border-box;
+        }
+        &-inputTd {
+        }
+        .remark {
+            // white-space: nowrap;
+        }
+        .el-form-item {
+            &__error {
+                text-align: left;
+            }
+            & + .remark {
+                text-align: left;
+            }
+        }
+        table {
+            background: $color-border;
+            width: 100%;
+            border-spacing: 1px;
+            text-align: center;
+            border-radius: 5px;
+            tr {
+                td {
+                    background: #fff;
+                    padding: 5px 10px;
+                }
+            }
+            thead {
+                tr {
+                    td {
+                        &:nth-of-type(1) {
+                            border-top-left-radius: 5px;
+                        }
+                        &:last-of-type {
+                            border-top-right-radius: 5px;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    &:last-of-type {
+                        td {
+                            &:nth-of-type(1) {
+                                border-bottom-left-radius: 5px;
+                            }
+                            &:last-of-type {
+                                border-bottom-right-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-errorText {
+        display: none;
+        font-size: 14px;
+        color: $color-danger;
+        margin-top: 5px;
+    }
+    &.is-error {
+        .plusAndMinusSetting {
+            &-table table {
+                box-shadow: 0px 0px 0px 1px $color-danger inset;
+            }
+            &-errorText {
+                display: block;
+            }
+        }
+    }
+    @include maxWidth-xl {
+        &-table {
+            &-titTd {
+                width: 110px;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        &-tit {
+            font-size: 16px;
+            text-align: left;
+        }
+        &-table {
+            font-size: 13px;
+            &-titTd {
+                width: 90px;
+            }
+            .remark {
+                font-size: 12px;
+            }
+            table {
+                tr {
+                    td {
+                        padding: 5px 5px;
+                    }
+                }
+                thead {
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+        }
+        .el-input-group__append,
+        .el-input-group__prepend {
+            padding: 0px 10px;
+        }
+    }
+}

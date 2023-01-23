@@ -1,0 +1,1287 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#114790" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192x192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <title>防疫時代 投資新收益 | 富蘭克林‧國民的基金</title>
+        <meta property="og:title" content="防疫時代 投資新收益 | 富蘭克林‧國民的基金" />
+        <meta name="twitter:title" content="防疫時代 投資新收益 | 富蘭克林‧國民的基金" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "富蘭克林國民的基金",
+                "url": "https://www.franklin.com.tw/",
+                "logo": "https://event.franklin.com.tw/commonResources/images/header-logo.png",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://event.franklin.com.tw/income-fund/index.html"
+                },
+                "headline": "防疫時代 投資新收益 | 富蘭克林‧國民的基金",
+                "image": [
+                    "https://event.franklin.com.tw/income-fund/images/fb.jpg"
+                ],
+            }
+        </script>
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta name="description" content="今年以來美股不再呈現科技獨強，隨著美國復甦趨勢確立，借助多元股債資產配置，依然是後疫情時代分散風險且穩定收益來源的投資主軸。" />
+        <meta property="og:description" content="今年以來美股不再呈現科技獨強，隨著美國復甦趨勢確立，借助多元股債資產配置，依然是後疫情時代分散風險且穩定收益來源的投資主軸。" />
+        <meta name="twitter:description" content="今年以來美股不再呈現科技獨強，隨著美國復甦趨勢確立，借助多元股債資產配置，依然是後疫情時代分散風險且穩定收益來源的投資主軸。" />
+        <meta property="og:url" content="https://event.franklin.com.tw/income-fund/index.html" />
+        <meta property="og:image" content="https://event.franklin.com.tw/income-fund/images/fb.jpg" />
+        <meta name="twitter:image" content="https://event.franklin.com.tw/income-fund/images/fb.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+        <link rel="stylesheet" href="css/style.css?v=20210611_2" />
+
+        <!-- 載入精選基金區塊資料 start -->
+        <!-- <script src="https://event.franklin.com.tw/commonBanner/common-prod.js"></script> -->
+        <!-- <script src="../commonBanner/common-prod.js"></script> -->
+        <!-- 載入精選基金區塊資料 end -->
+
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+
+        <!-- scrollMagic + tweenMax -->
+        <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+
+        <!-- Chart.js -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <script src="js/chart.js"></script>
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-586SXP");
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">
+            //APP用的js
+        </script>
+        <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+            //APP用的js
+        </script>
+    </head>
+
+    <body class="gridTattoo">
+
+        <!-- preload -->
+        <link rel="preload" as="image" href="images/banner-kv-1.png">
+        <link rel="preload" as="image" href="images/banner-kv-2.png">
+        <link rel="preload" as="image" href="images/banner-kv-3.png">
+        <link rel="preload" as="image" href="images/banner-kv-4.png">
+        <link rel="preload" as="image" href="images/banner-kv-5.png">
+        <link rel="preload" as="image" href="images/banner-kv-6.png">
+        <!-- <link rel="preload" as="image" href="../images/banner-kv-0.png"> -->
+        <link rel="preload" as="image" href="images/banner-chart.png">
+        <link rel="preload" as="image" href="images/fund1-chart-3.jpg">
+        <link rel="preload" as="image" href="images/fund2-chart-1.jpg">
+        <link rel="preload" as="image" href="images/fund3-chart-1.jpg">
+
+        <!-- Google Tag Manager -->
+        <!-- <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript> -->
+        <!-- End Google Tag Manager -->
+
+        <div id="content" v-cloak>
+            <sice-provider>
+            <!-- <sice-provider :mock-data="{isApp: true, isLogin: false, openLog: true }"> -->
+
+                <div id="top"></div>
+
+                <!-- header -->
+                <header class="header">
+                    <div class="container clearfix">
+                        <div class="logo">
+                            <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+                                <picture>
+                                    <source media="(max-width: 991px)" srcset="https://event.franklin.com.tw/commonResources/images/logo2019.svg" />
+                                    <img src="https://event.franklin.com.tw/commonResources/images/header-logo.png" alt="富蘭克林‧國民的基金" />
+                                </picture>
+                                <div class="logo-text">富蘭克林‧國民的基金</div>
+                            </a>
+                        </div>
+
+                        <nav class="navBar" :class="{show: navbarShow}" v-if="false">
+                            <ul>
+                                <li :class="{active : (activeNumber == 0)}">
+                                    <a href="#" title="產品推薦" @click="navClick(0, 'recommend')">
+                                        產品推薦
+                                    </a>
+                                </li>
+                                <li :class="{active : (activeNumber == 1)}">
+                                    <a href="#" title="活動說明" @click="navClick(1, 'notice')">
+                                        活動說明
+                                    </a>
+                                </li>
+                                <li :class="{active : (activeNumber == 2)}">
+                                    <a href="#" title="領息存股術" @click="navClick(2, 'skill')">
+                                        領息存股術
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!--手機menu按鍵-->
+						<div class="menuBtn" :class="{active: navbarShow}" @click="toggleMobileNavbar()" v-if="false">
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+						</div>
+                    </div>
+                </header>
+
+                <!-- main -->
+                <article class="main">
+                    
+                    <section class="banner gridTattoo">
+                        <div class="container">
+                            <div class="banner-textTattoo">
+                                <div class="wow animate__animated animate__flipInX">Income</div>
+                                <div class="wow animate__animated animate__flipInX">Upgrade</div>
+                            </div>
+                            <div class="banner-bgChart wow" data-wow-delay="1s" data-wow-duration="1.5s"></div>
+                            <div class="banner-content">
+                                <h1 title="防疫時代新收益 領息必備價值型">
+                                    <div class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
+                                        <span>防疫時代</span><span class="round"><span class="text">新</span></span><span class="round type2"><span class="text">收</span></span><span class="round"><span class="text">益</span></span>
+                                    </div>
+                                    <div class="wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+                                        <span class="focus">領息</span><span>必備價值型</span>
+                                    </div>
+                                </h1>
+                                <div class="banner-text wow animate__animated animate__flipInX" data-wow-delay="0.7s">
+                                    <p>
+                                        防疫升級，投資也要升級！
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="banner-kv wow animate__animated animate__fadeInRight">
+                                <img :src="'images/banner-kv-' + bannerCoinNo +'.png'" alt="防疫升級，投資也要升級！" class="banner-kv-coin">
+                                <img src="images/banner-kv-6.png" alt="防疫升級，投資也要升級！">
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="areYouReady"></div>
+                    <section class="introduction gridTattoo gridTattoo-type2">
+                        <div class="introduction-textTattoo">
+                            <div class="wow animate__animated animate__flipInX" data-wow-delay="1s">
+                                Are you ready?
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="introduction-content">
+                                <p class="wow animate__animated animate__fadeInUp">
+                                    隨著疫苗施打逐漸普及，全球經濟正逐步解封，消費者信心也隨景氣逐步回溫，
+                                </p>
+                                <p class="introduction-focus wow animate__animated animate__fadeInUp">
+                                    <b>
+                                        當趨勢改變，<br v-if="windowWidth > 1199"/>你的資產配置<spna class="focus">是否也做好防疫配置呢？</spna>
+                                    </b>
+                                </p>
+                                <div class="introduction-icon wow animate__animated animate__fadeIn">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 141.2 121.1" style="enable-background:new 0 0 141.2 121.1;" xml:space="preserve">
+                                        <polyline class="st0" points="0,119.6 46.9,119.6 46.9,66.2 13.3,66.2 13.3,117.9 "/>
+                                        <line class="st0" x1="15" y1="78.7" x2="45.3" y2="78.7"/>
+                                        <line class="st0" x1="15" y1="92.9" x2="45.3" y2="92.9"/>
+                                        <line class="st0" x1="15" y1="107.1" x2="45.3" y2="107.1"/>
+                                        <polyline class="st0" points="38.3,60.6 38.3,17 71.9,17 71.9,119.6 "/>
+                                        <line class="st0" x1="40" y1="28.7" x2="70.3" y2="28.7"/>
+                                        <line class="st0" x1="40" y1="41.2" x2="70.3" y2="41.2"/>
+                                        <line class="st0" x1="40" y1="53.7" x2="70.3" y2="53.7"/>
+                                        <line class="st0" x1="53" y1="66.2" x2="70.3" y2="66.2"/>
+                                        <line class="st0" x1="53" y1="78.7" x2="70.3" y2="78.7"/>
+                                        <polyline class="st0" points="53,92.9 98.6,92.9 98.6,117.9 "/>
+                                        <line class="st0" x1="53" y1="107.1" x2="98.6" y2="107.1"/>
+                                        <line class="st0" x1="53" y1="119.6" x2="111.5" y2="119.6"/>
+                                        <polyline class="st0" points="78.2,70.2 103.4,51.2 95.6,40.6 138.7,38.3 124,78.9 116.3,68.3 85.3,91.2 "/>
+                                        <line class="st0" x1="103" y1="64.9" x2="106.2" y2="62.5"/>
+                                        <line class="st0" x1="109.4" y1="60.1" x2="112.6" y2="57.7"/>
+                                        <line class="st0" x1="115.8" y1="55.3" x2="119" y2="53"/>
+                                        <line class="st0" x1="122.2" y1="50.6" x2="125.4" y2="48.2"/>
+                                        <circle class="st0" cx="18" cy="46.8" r="7.3"/>
+                                        <circle class="st0" cx="95.3" cy="15" r="13.2"/>
+                                        <circle class="st0" cx="117.6" cy="98.1" r="6.3"/>
+                                        <g>
+                                            <path class="st0" d="M98.8,10.2c0,0-4.2-3.5-6.2-0.2c-1.9,3.1,3.5,5.4,3.5,5.4s3.2,1.5,1.7,4c-1.3,2.2-4,1.5-5.1,1
+                                                c-1.1-0.5-2.1-1.1-2.1-1.1"/>
+                                            <line class="st0" x1="95.3" y1="5" x2="95.3" y2="8.5"/>
+                                            <line class="st0" x1="95.3" y1="20.8" x2="95.3" y2="24.4"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="whatHasChanged"></div>
+                    <section class="item whatHasChanged">
+                        <div class="whatHasChanged-textTattoo">
+                            <div class="wow animate__animated animate__flipInX" data-wow-offset="300">2021</div>
+                            <div>Trend</div>
+                            <div>Change</div>
+                        </div>
+                        <div class="container">
+                            <div class="whatHasChanged-tit">
+                                <h2 class="tit-type1" title="2021年趨勢改變了什麼？">
+                                    <div class="tit wow animate__animated animate__fadeInLeft">
+                                        2021年趨勢
+                                    </div>
+                                    <div class="sTit wow animate__animated animate__flipInX" data-wow-delay="0.3s">
+                                        改變了什麼？
+                                    </div>
+                                </h2>
+                            </div>
+                            <article class="whatHasChanged-content">
+                                <section class="item wow animate__animated animate__fadeInUp" data-wow-offset="300" v-if="false">
+                                    <h3 class="tit-type2" title="市場無畏殖利率攀升，投資人為縮表找到出口">
+                                        <div class="focus2">市場無畏殖利率攀升<br/>投資人為縮表找到出口</div>
+                                    </h3>
+                                    <p class="text-center">
+                                        長期持有價值股多能參與行情<br/>目前價值/成長股差距有相當收斂空間
+                                    </p>
+                                    <div class="chart">
+                                        <h4 class="chart-tit" title="2000年來MSCI價值、成長股指數,價值-成長表現(%)">
+                                            <div class="chart-tit-bg">
+                                                2000年來MSCI價值、成長股指數,價值-成長表現(%)
+                                            </div>
+                                        </h4>
+                                        <img src="images/chart-1.jpg" alt="2000年來MSCI價值、成長股指數,價值-成長表現(%)" class="chart-img borderType">
+                                        <p class="chart-remark">
+                                            資料來源：彭博資訊，2000~2021年/5月底MSCI價值、成長股指數。
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="item wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                    <h3 class="tit-type2" title="疫苗接種普及帶動消費支出回升，經濟可望加速成長">
+                                        <div class="focus2">疫苗接種普及帶動消費支出回升</div>
+                                        <div class="focus">經濟可望加速成長</div>
+                                    </h3>
+                                    <p class="text-center">
+                                        受惠景氣升溫，金融、工業等價值股與經濟成長的連動性高，為景氣升溫受惠族群
+                                    </p>
+                                    <div class="chart">
+                                        <h4 class="chart-tit" title="全球主要國家疫苗接種進度">
+                                            <div class="chart-tit-bg">
+                                                全球主要國家疫苗接種進度
+                                            </div>
+                                        </h4>
+                                        <img src="images/chart-3.svg" alt="全球主要國家疫苗接種進度" class="chart-img borderType">
+                                        <div class="margin-top-35"></div>
+                                        <h4 class="chart-tit" title="大量儲蓄待釋放，消費支出可望加速">
+                                            <div class="chart-tit-bg">
+                                                大量儲蓄待釋放，消費支出可望加速
+                                            </div>
+                                        </h4>
+                                        <p class="margin-bottom-0">
+                                            高盛證券預估，至今年第二季，美國民眾累積的超額儲蓄將達2.4兆美元。
+                                        </p>
+                                        <div class="chart-img borderType chart1Type">
+                                            <canvas id="chart2"></canvas>
+                                        </div>
+                                        <p class="chart-remark">
+                                            資料來源:高盛證券(2021/3/10)
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="item wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                    <h3 class="tit-type2" title="投資板塊已出現輪動，聚焦金融、工業等價值型類股">
+                                        <div class="focus2">
+                                            投資板塊已出現輪動
+                                        </div>
+                                        <div class="focus">
+                                            聚焦金融、工業等價值型類股
+                                        </div>
+                                    </h3>
+                                    <div class="chart">
+                                        <h4 class="chart-tit">
+                                            <div class="chart-tit-bg">
+                                                美國主要指數及各類股漲跌幅(%)
+                                            </div>
+                                        </h4>
+                                        <slick
+                                            ref="slick"
+                                            :options="whatHasChangedOptions"
+                                            @afterChange="handleAfterChange"
+                                            @beforeChange="handleBeforeChange"
+                                            @breakpoint="handleBreakpoint"
+                                            @destroy="handleDestroy"
+                                            @edge="handleEdge"
+                                            @init="handleInit"
+                                            @reInit="handleReInit"
+                                            @setPosition="handleSetPosition"
+                                            @swipe="handleSwipe"
+                                            @lazyLoaded="handleLazyLoaded"
+                                            @lazyLoadError="handleLazeLoadError"
+                                        >
+                                            <div>
+                                                <div class="chart-table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>美國主要指數</td>
+                                                                <td>2020年%</td>
+                                                                <td>2021年以來%</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="focus">
+                                                                <td>道瓊工業指數</td>
+                                                                <td>9.72</td>
+                                                                <td>12.61</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>史坦普500指數</td>
+                                                                <td>18.39</td>
+                                                                <td>11.28</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>羅素2000指數</td>
+                                                                <td>19.93</td>
+                                                                <td>12.54</td>
+                                                            </tr>
+                                                            <tr class="focus">
+                                                                <td>那斯達克指數</td>
+                                                                <td>45.06</td>
+                                                                <td>4.81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>費城半導體指數</td>
+                                                                <td>53.67</td>
+                                                                <td>9.65</td>
+                                                            </tr>
+                                                            <tr class="focus">
+                                                                <td>羅素3000成長指數</td>
+                                                                <td>38.26</td>
+                                                                <td>4.39</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>羅素3000價值指數</td>
+                                                                <td>2.86</td>
+                                                                <td>17.71</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>美元指數(DXY)</td>
+                                                                <td>-6.69</td>
+                                                                <td>0.09</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="chart-table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>史坦普500類股</td>
+                                                                <td>2020年%</td>
+                                                                <td>2021年以來%</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="focus">
+                                                                <td>能源</td>
+                                                                <td>-33.68</td>
+                                                                <td>39.22</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>金融</td>
+                                                                <td>-1.76</td>
+                                                                <td>28.03</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>原物料</td>
+                                                                <td>20.73</td>
+                                                                <td>20.05</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>不動產</td>
+                                                                <td>-2.17</td>
+                                                                <td>17.03</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>工業</td>
+                                                                <td>11.05</td>
+                                                                <td>16.7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>通訊服務</td>
+                                                                <td>23.61</td>
+                                                                <td>13.69</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>醫療</td>
+                                                                <td>13.45</td>
+                                                                <td>9.96</td>
+                                                            </tr>
+                                                            <tr class="focus">
+                                                                <td>公用事業</td>
+                                                                <td>0.52</td>
+                                                                <td>6.41</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>民生消費</td>
+                                                                <td>10.75</td>
+                                                                <td>5.59</td>
+                                                            </tr>
+                                                            <tr class="focus">
+                                                                <td>科技</td>
+                                                                <td>43.88</td>
+                                                                <td>4.7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>消費耐久財</td>
+                                                                <td>33.3</td>
+                                                                <td>3.86</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </slick>
+                                        <p class="chart-remark">
+                                            資料來源: 彭博資訊，美元計價總報酬率，截至2021/5/21。
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="item wow animate__animated animate__fadeInUp" data-wow-offset="300" v-if="false">
+                                    <h3 class="tit-type2" title="受惠利率反彈，價值股回報看升">
+                                        <div class="focus2">
+                                            受惠利率反彈，價值股回報看升
+                                        </div>
+                                    </h3>
+                                    <div class="chart">
+                                        <h4 class="chart-tit" title="金融股與公債殖利率的關聯">
+                                            <div class="chart-tit-bg">金融股與公債殖利率的關聯</div>
+                                        </h4>
+                                        <img src="images/chart-2.jpg" alt="金融股與公債殖利率的關聯" class="chart-img borderType">
+                                        <p class="chart-remark">
+                                            資料來源：彭博資訊，過去十年至2021/3/9止。
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="item wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                    <h3 class="tit-type2" title="拜登新政刺激帶動復甦">
+                                        <div class="focus2">
+                                            拜登新政刺激帶動復甦
+                                        </div>
+                                    </h3>
+                                    <p class="text-center">
+                                        受惠拜登新政計畫支出2.3兆美元提升美國基礎建設，有望帶動經濟復甦
+                                    </p>
+                                    <div class="chart">
+                                        <h4 class="chart-tit" title="美國經濟成長率預測">
+                                            <div class="chart-tit-bg">
+                                                美國經濟成長率預測
+                                            </div>
+                                        </h4>
+                                        <div class="chart-img borderType chart1Type">
+                                            <canvas id="chart1"></canvas>
+                                        </div>
+                                        <p class="chart-remark">
+                                            資料來源：高盛證券(2021/3/13)。
+                                        </p>
+                                    </div>
+                                </section>
+                            </article>
+                        </div>
+                    </section>
+
+                    <div id="uniqueSkill"></div>
+                    <section class="item gridTattoo gridTattoo-type2 uniqueSkill">
+                        <div class="container">
+                            <div class="uniqueSkill-textTattoo">
+                                <div class="wow animate__animated animate__flipInX" data-wow-offset="400">Three</div>
+                                <div>
+                                    Epidemic<br/>Prevention
+                                </div>
+                            </div>
+                            <h2 title="防疫三招 多元分散，汰弱留強" class="tit-type1">
+                                <span class="tit wow animate__animated animate__fadeInUp" data-wow-offset="300">防疫三招</span>
+                                <span class="sTit wow animate__animated animate__fadeInRight" data-wow-offset="300">多元分散，汰弱留強</span>
+                            </h2>
+                            <div class="row margin-top-30">
+                                <div class="col-8 col-sm-20">
+                                    <div class="uniqueSkill-item">
+                                        <!-- <img src="images/icon-2.png" alt="價值成長並重 掌握輪動機會" class="chart-img"> -->
+                                        <div class="uniqueSkill-item-svg svg1 wow animate__animated animate__flipInX" data-wow-offset="300">
+                                            <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 228 222" style="enable-background:new 0 0 228 222;" xml:space="preserve">
+                                                <polyline class="st0" points="124.2,190.8 4.9,190.8 4.9,21.9 163.9,21.9 163.9,77.2 "/>
+                                                <polyline class="st0" points="163.9,21.9 195.4,10.8 208.6,10.8 208.6,84.2 "/>
+                                                <line class="st0" x1="195.4" y1="10.8" x2="195.4" y2="64.5"/>
+                                                <polyline class="st0" points="150.3,84.2 150.3,35.3 19.9,35.3 19.9,161.6 110.1,161.6 "/>
+                                                <line class="st0" x1="19.9" y1="174.1" x2="26.3" y2="174.1"/>
+                                                <line class="st0" x1="37.6" y1="174.1" x2="43.9" y2="174.1"/>
+                                                <line class="st0" x1="55.2" y1="174.1" x2="61.6" y2="174.1"/>
+                                                <line class="st0" x1="72.8" y1="174.1" x2="79.2" y2="174.1"/>
+                                                <line class="st0" x1="90.5" y1="174.1" x2="96.8" y2="174.1"/>
+                                                <path class="st0" d="M41.4,147.5v-8.8c0,0-0.3-3.4,3.6-3.4s26.7,0,26.7,0s3.1-0.3,3.1,2.5s0,9.6,0,9.6"/>
+                                                <path class="st0" d="M41.4,130.8v-8.8c0,0-0.3-3.4,3.6-3.4s26.7,0,26.7,0s3.1-0.3,3.1,2.5c0,2.8,0,9.6,0,9.6"/>
+                                                <circle class="st0" cx="62.1" cy="80" r="27.3"/>
+                                                <path class="st0" d="M68.4,72.7c0,0-2.9-4-6.4-4c-3.4,0-6.4,2.4-6.4,5.3s2.4,6,6.9,6s6.9,3.1,6.9,5.4s-2.6,6.1-6.4,6.1
+                                                    s-7.6-4.2-7.6-4.2"/>
+                                                <line class="st0" x1="62.1" y1="63.2" x2="62.1" y2="68.7"/>
+                                                <line class="st0" x1="63.9" y1="96.7" x2="63.9" y2="91.5"/>
+                                                <path class="st0" d="M168.8,86.4c0,0-17.9,16.5-40.6,8.6c0,0-20.5,36.6-10.4,66.7s27.8,42.8,50.9,48.2c0,0,37.6-3.2,51.9-48.2
+                                                    c10.8-34.1-12-66.6-12-66.6S184.6,103.3,168.8,86.4z"/>
+                                                <path class="st0" d="M152.9,109.2c8-0.9,16.4-6.6,16.4-6.6s6.9,5.6,14.9,6.6"/>
+                                                <path class="st0" d="M208.6,127.8c0,0,4.2,25.2-4.7,40.5s-22.2,24-34.7,28.2"/>
+                                                <ellipse class="st0" cx="159.7" cy="134.1" rx="6.1" ry="7.8"/>
+                                                <ellipse class="st0" cx="180.2" cy="159.4" rx="6.1" ry="7.8"/>
+                                                <line class="st0" x1="179.2" y1="130.8" x2="158.8" y2="163.8"/>
+                                                <g>
+                                                    <g>
+                                                        <path class="st1" d="M129.1,126.4c0,0-0.4,2.1-0.6,5.5"/>
+                                                        <path class="st2" d="M128.2,141.8c0.3,10,2.3,22.9,9.8,33.2"/>
+                                                        <path class="st1" d="M141.2,178.9c1.2,1.3,2.6,2.6,4.1,3.7"/>
+                                                    </g>
+                                                </g>
+                                                <polyline class="st0" points="89.4,147.5 89.4,135.3 115,135.3 "/>
+                                                <polyline class="st0" points="89.4,130.8 89.4,118.6 118.7,118.6 "/>
+                                                <polyline class="st0" points="89.4,116.2 89.4,104.1 123.9,104.1 "/>
+                                            </svg>
+                                        </div>
+                                        <p class="tit-type2 wow animate__animated animate__fadeInUp">
+                                            <b>價值成長並重<br/>掌握輪動機會</b>
+                                        </p>
+                                        <i class="fas fa-plus-circle wow animate__animated animate__fadeIn"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8 col-sm-20">
+                                    <div class="uniqueSkill-item">
+                                        <!-- <img src="images/icon-3.png" alt="每月配息機制 現金流不中斷" class="chart-img"> -->
+                                        <div class="uniqueSkill-item-svg svg2 wow animate__animated animate__flipInX" data-wow-offset="300" data-wow-delay="0.2s">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 228 222" style="enable-background:new 0 0 228 222;" xml:space="preserve">
+                                                <line class="st0" x1="6.4" y1="209.7" x2="205.1" y2="209.7"/>
+                                                <path class="st0" d="M71.7,153.2H10.3c-3.2,0-5.7-2.6-5.7-5.7V144c0-3.2,2.6-5.7,5.7-5.7h61.4c3.2,0,5.7,2.6,5.7,5.7v3.5
+                                                    C77.5,150.7,74.9,153.2,71.7,153.2z"/>
+                                                <path class="st0" d="M10.3,153.2l6.4,49.4c0,0,1.4,7.1,5.6,7.1"/>
+                                                <path class="st0" d="M70.9,153.2l-6.4,49.4c0,0-1.4,7.1-5.6,7.1"/>
+                                                <path class="st0" d="M3.7,78.4c0,0-3,16.1,3,24S21.4,113,27.2,113"/>
+                                                <path class="st0" d="M16.4,90.4c0,0,30.7,24.2,29,47.8"/>
+                                                <path class="st0" d="M46.8,120.8c0,0-11.1-36.5,38.6-36.9C85.4,83.9,90.2,128,46.8,120.8z"/>
+                                                <path class="st0" d="M46.8,120.8c0,0,6.4-18.2,19.6-23.3"/>
+                                                <polyline class="st0" points="41,7.3 52.9,11.5 35.6,71.5 12,64.8 "/>
+                                                <path class="st0" d="M51.3,17.3c0,0,9.6,1.7,17.5,0.8c7.9-0.9,30.7-5.5,34.2-4.4S130.4,29,130.4,29l21.9,27.9V62"/>
+                                                <path class="st0" d="M123,46.1l-5.1-3.5H93.7c0,0-7.6-1.2-7.4,6c0.2,7.2,20.8,10.2,24.2,10.4s5.8,4.2,5.5,9s-4.8,8.8-14.1,6.4
+                                                    s-34.7-1.8-34.7-1.8s-10.6-2.3-14.8-5.3s-12.9-8.5-12.9-8.5"/>
+                                                <path class="st0" d="M110.5,59c0,0,2.1-6.5,13.9-6.5s20.6,9.4,20.6,20.3c0,10.9-8.1,21-20.5,21s-21.2-7.9-21.2-18.7"/>
+                                                <path class="st0" d="M110.3,98.5l-6.9,6.2l5.8,8.3c0,0,10.8-11.6,22.9-11.6s15.4,0,15.4,0V90.4"/>
+                                                <path class="st0" d="M153.4,76.6c0,0,11.8,2.5,15.9,5.8c0,0,14.6,1.1,26.5-2.9c0,0,1.1,11.4-6.5,20c0,0,4.9,14.5,16.8,15
+                                                    s17.1-0.3,17.1,7c0,7.3,1.8,24.8-5.8,30.8c-7.6,6-15.9,8.3-15.9,8.3s-8.5,16.6-16.2,20.8V209"/>
+                                                <path class="st0" d="M103.4,209.7v-16.2c0,0-16.4-8.5-21.5-20.3"/>
+                                                <path class="st0" d="M162.9,209v-14.6c0,0-20.3,6.2-36.7,2.1"/>
+                                                <line class="st0" x1="126.2" y1="192.9" x2="126.2" y2="209"/>
+                                                <circle class="st0" cx="178.4" cy="125.5" r="5.6"/>
+                                            </svg>
+                                        </div>
+                                        <p class="tit-type2 wow animate__animated animate__fadeInUp">
+                                            <b>每月配息機制<br/>現金流不中斷</b>
+                                        </p>
+                                        <i class="fas fa-plus-circle wow animate__animated animate__fadeIn"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8 col-sm-20">
+                                    <div class="uniqueSkill-item">
+                                        <!-- <img src="images/icon-4.png" alt="順應趨勢 尋找受惠政策標的" class="chart-img"> -->
+                                        <div class="uniqueSkill-item-svg svg3 wow animate__animated animate__flipInX" data-wow-offset="300" data-wow-delay="0.2s">
+                                            <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 228 222" style="enable-background:new 0 0 228 222;" xml:space="preserve">
+                                                <line class="st0" x1="143.3" y1="51" x2="143.3" y2="122.3"/>
+                                                <circle class="st0" cx="62.4" cy="193.9" r="9.5"/>
+                                                <circle class="st0" cx="62.4" cy="193.9" r="25.2"/>
+                                                <path class="st0" d="M125.2,193.9c0,6.2,4.2,11.3,10.6,9.5c45.5-12.4,79.4-51.5,79.4-97.8S181.7,3,114,3S13.4,59.5,13.4,105.4
+                                                    s30.9,71.1,30.9,71.1"/>
+                                                <path class="st0" d="M102.3,142.1c0,3.6,4.4,8.8,9.4,8.8s4.8-3.4,4.8-7.6c0-4.2,0.7-9.7-5.3-9.7s-10.1,6.5-10.1,6.5
+                                                    s-11.8,0.2-5.6,13.4c6.2,13.2,17.5,40.5,29.6,40.5c12.5,0,27-24.9,31.9-38.9s-1.8-15.2-4.6-15c0,0-6.2-6.5-10.8-6.5
+                                                    c-4.6,0-4.8,4.2-4.8,8.3s0.4,8.8,4.8,8.8c4.4,0,9.9-9.2,9.9-9.2"/>
+                                                <path class="st0" d="M115.4,46.2c0,0,3.5-5.3,8.6-5.3s42.5,0,42.5,0s9.4,0.7,9.4,12s0,68.1,0,68.1s-2.5,9.9-7.2,9.9
+                                                    c-4.8,0-8.6,0-8.6,0"/>
+                                                <circle class="st0" cx="126.2" cy="62.3" r="3"/>
+                                                <circle class="st0" cx="126.2" cy="85.9" r="3"/>
+                                                <circle class="st0" cx="126.2" cy="109" r="3"/>
+                                                <circle class="st0" cx="158.8" cy="62.3" r="3"/>
+                                                <circle class="st0" cx="158.8" cy="85.9" r="3"/>
+                                                <circle class="st0" cx="158.8" cy="109" r="3"/>
+                                                <path class="st0" d="M113.2,121.4V90.9c0,0-4.6-14.1-15.4-14.1"/>
+                                                <path class="st0" d="M83.2,151.2H68.4c0,0-12-5.8-12-12.7c0-6.9,0-49.6,0-49.6s1.4-12.1,15.7-12.1"/>
+                                                <path class="st0" d="M68.9,74.3v-9c0,0-4.8,1.3-4.8-4.4s-0.9-10.8,5.6-10.8s32.8,0,32.8,0s4.9,0.9,4.9,4.2c0,3.4,0,7.9,0,7.9
+                                                    s0.4,3-4.8,3v11.5"/>
+                                                <line class="st0" x1="68.9" y1="65.3" x2="102.8" y2="65.3"/>
+                                                <path class="st0" d="M56.4,97.9h29.5c0,0,3.4,0.4,3.4,3.5s0,22.1,0,22.1s0.5,4.1-3.4,4.1s-29.5,0-29.5,0"/>
+                                            </svg>
+                                        </div>
+                                        <p class="tit-type2 wow animate__animated animate__fadeInUp">
+                                            <b>順應趨勢<br/>尋找受惠政策標的</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="youNeed"></div>
+                    <section class="item gridTattoo">
+                        <div class="container">
+                            <h2 title="你需要的防疫新收益 wow animate__animated animate__fadeInUp" class="tit-type1" data-wow-offset="300">
+                                <span class="tit">你需要的</span>
+                                <span class="sTit wow animate__animated animate__flipInX" data-wow-offset="300" data-wow-delay="0.2s">防疫新收益</span>
+                            </h2>
+                        </div>
+                        <article>
+                            <div id="fundId0839"></div>
+                            <section class="item fundIntroduction wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                <div class="container">
+                                    <div class="tit-type1 margin-bottom-30">
+                                        <b class="sTit">
+                                            領息族首選
+                                        </b>
+                                    </div>
+                                    <h3 class="fundIntroduction-fundName" title="富蘭克林坦伯頓穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)-月配息股分">
+                                        富蘭克林坦伯頓穩定月收益基金
+                                        <div class="fundIntroduction-fundName-warning">
+                                            (本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)-月配息股分
+                                        </div>
+                                    </h3>
+                                </div>
+                                <slick
+                                    ref="slick"
+                                    :options="fundIntroductionOptions"
+                                    @afterChange="handleAfterChange"
+                                    @beforeChange="handleBeforeChange"
+                                    @breakpoint="handleBreakpoint"
+                                    @destroy="handleDestroy"
+                                    @edge="handleEdge"
+                                    @init="handleInit"
+                                    @reInit="handleReInit"
+                                    @setPosition="handleSetPosition"
+                                    @swipe="handleSwipe"
+                                    @lazyLoaded="handleLazyLoaded"
+                                    @lazyLoadError="handleLazeLoadError"
+                                >
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="產業多元佈局，網羅輪動契機">
+                                                <div class="focus2">產業多元佈局，網羅輪動契機</div>
+                                            </h4>
+                                            <div class="chart">
+                                                <img src="images/fund1-chart-3.jpg" alt="產業多元佈局，網羅輪動契機" class="chart-img">
+                                                <p class="chart-remark">
+                                                    資料來源：富蘭克林坦伯頓基金集團，截至2021年4月底，包含股票及可轉換證券，考慮現金，加總百分比為四捨五入產生的誤差
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="景氣復甦+政策刺激，多頭行情延續">
+                                                <div class="focus2">景氣復甦+政策刺激，多頭行情延續</div>
+                                            </h4>
+                                            <div class="chart">
+                                                <div class="chart-tit">
+                                                    <div class="chart-tit-bg">
+                                                        <b>次產業獲利與經濟成長率的相關性</b>
+                                                    </div>
+                                                </div>
+                                                <img src="images/fund1-chart-1.jpg" alt="次產業獲利與經濟成長率的相關性" class="chart-img">
+                                                <p class="chart-remark" style="max-width: 730px; margin-left: auto; margin-right: auto;">
+                                                    資料來源：高盛證券(2021/2/24)。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="因應景氣循環與市場環境 『靈活』調整資產配置">
+                                                <div class="focus2">
+                                                    因應景氣循環與市場環境<br/>『靈活』調整資產配置
+                                                </div>
+                                            </h4>
+                                            <div class="chart">
+                                                <div class="fundIntroduction-yearInfo">
+                                                    <div class="fundIntroduction-yearInfo-item" v-for="(item, index) in fundIntroduction_yearInfo" :key="index">
+                                                        <div class="fundIntroduction-yearInfo-item-year" v-html="item.year">
+                                                            2007~2008年
+                                                        </div>
+                                                        <p v-html="item.text">
+                                                            美國房市泡沫引發次級房貸風暴，團隊<span class="focus">加債減股</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <img src="images/fund1-chart-2.jpg" alt="因應景氣循環與市場環境 『靈活』調整資產配置" class="chart-img">
+                                                <p class="chart-remark" style="max-width: 888px; margin-left: auto; margin-right: auto;">
+                                                    資料來源：富蘭克林坦伯頓基金集團，截至2021/3月底，除2018、2019、2020年以外，其餘為年底值，2006~2011年股票比重包含可轉換證券。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="近一年配息紀錄">
+                                                <div class="focus2">
+                                                近一年配息紀錄
+                                            </div>
+                                            </h4>
+                                            <div class="chart">
+                                                <div class="chart-table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>除息日期</td>
+                                                                <td>每單位配息金額(美元)</td>
+                                                                <td>年化配息率(%)</td>
+                                                                <td>當次配息率(%)</td>
+                                                                <td>月報酬率(含息)(%)</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr v-for="(item, index) in fund1Dividend" :key="index">
+                                                                <td v-for="(item2, index2) in item" :key="index2" v-html="item2"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p class="chart-remark">
+                                                    資料來源：◎A股美元月配息類別。配息相關資料取自富蘭克林坦伯頓集團，依據廣告行為規範修正條文，2015/7/31日起基金年化配息率之計算公式統一為:「每單位配息金額 ÷ 除息日前一日之淨值X 一年配息次數X 100%」，年化配息率為估算值。當月配息率係採(每單位配息金額/除息前一日淨值)表示，月報酬率(含息)為截至除息日之前一月底含息報酬率。◎基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動，投資人於獲配息時，宜一併注意基金淨值之變動。基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。本基金進行配息前未先扣除應負擔之費用。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<a href="http://www.Franklin.com.tw" target="_blank" title="富蘭克林‧國民的基金" class="linkText">http://www.Franklin.com.tw</a>)查閱。◎報酬率資料來源均為理柏資訊、原幣計價。基金過去績效不代表未來績效之保證。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </slick>
+                            </section>
+
+                            <div id="fundId150"></div>
+                            <section class="item fundIntroduction wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                <div class="container">
+                                    <div class="tit-type1 margin-bottom-30">
+                                        <b class="sTit">
+                                            小資族首選
+                                        </b>
+                                    </div>
+                                    <h3 class="fundIntroduction-fundName" title="富蘭克林潛力組合基金(本基金之配息來源可能為本金)">
+                                        富蘭克林潛力組合基金
+                                        <div class="fundIntroduction-fundName-warning">
+                                            (本基金之配息來源可能為本金)
+                                        </div>
+                                    </h3>
+                                </div>
+                                <slick
+                                    ref="slick"
+                                    :options="fundIntroductionOptions"
+                                    @afterChange="handleAfterChange"
+                                    @beforeChange="handleBeforeChange"
+                                    @breakpoint="handleBreakpoint"
+                                    @destroy="handleDestroy"
+                                    @edge="handleEdge"
+                                    @init="handleInit"
+                                    @reInit="handleReInit"
+                                    @setPosition="handleSetPosition"
+                                    @swipe="handleSwipe"
+                                    @lazyLoaded="handleLazyLoaded"
+                                    @lazyLoadError="handleLazeLoadError"
+                                >
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="產業配置">
+                                                <div class="focus2">產業配置</div>
+                                            </h4>
+                                            <p class="text-center">
+                                                網羅疫後景氣復甦(金融、工業)以及創新成長(醫療、科技)等多元題材
+                                            </p>
+                                            <div class="chart">
+                                                <img src="images/fund2-chart-1.jpg" alt="產業配置" class="chart-img">
+                                                <p class="chart-remark" style="max-width: 892px; margin-left: auto; margin-right: auto;">
+                                                    資料來源：富蘭克林坦伯頓基金集團，截至2021年4月底。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="精選股價被低估、體質佳的個股">
+                                                <div class="focus2">
+                                                    精選股價被低估、體質佳的個股
+                                                </div>
+                                            </h4>
+                                            <p class="text-center">
+                                                重視企業資產負債結構，選擇能夠獲利但價格仍被市場低估的公司逢低佈局
+                                            </p>
+                                            <div class="chart">
+                                                <div class="chart-tit">
+                                                    <div class="chart-tit-bg">
+                                                        <b>基金前十大持股</b>
+                                                    </div>
+                                                </div>
+                                                <div class="chart-table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>前十大持股(2021/4/30)</td>
+                                                                <td>產業</td>
+                                                                <td>持股比重(%)</td>
+                                                                <td>股價淨值比(倍)</td>
+                                                                <td>本益比(倍)</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr v-for="(item, index) in fund2Shareholding" :key="index">
+                                                                <td v-for="(item2, index2) in item" v-html="item2"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <td colspan="3" align="right">
+                                                                    羅素3000價值指數
+                                                                </td>
+                                                                <td>2.65</td>
+                                                                <td>26.96</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3" align="right">
+                                                                    史坦普500指數
+                                                                </td>
+                                                                <td>4.48</td>
+                                                                <td>29.61</td>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <p class="chart-remark">
+                                                    資料來源：持股資料取自富蘭克林坦伯頓基金集團，2021年4月底前十大持股。股價淨值比取自彭博資訊，2021/5/21更新。<b>&lt;本頁不表對任一個股的買賣建議&gt;</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="擔憂通膨?佈局鎖定具再通膨概念的金融股">
+                                                <div class="focus2">擔憂通膨?</div>
+                                                佈局鎖定具再通膨概念的金融股
+                                            </h4>
+                                            <p class="text-center">
+                                                與景氣正向連動金融股具漲升潛力，且相對大盤評價便宜
+                                            </p>
+                                            <div class="chart">
+                                                <div class="chart-tit">
+                                                    <div class="chart-tit-bg">金融股尚未完全反映景氣好轉的預期</div>
+                                                </div>
+                                                <img src="images/fund2-chart-2.svg" alt="金融股尚未完全反映景氣好轉的預期" class="chart-img">
+                                                <p class="chart-remark">
+                                                    資料來源：摩根士丹利(2021/5/17)。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </slick>
+                            </section>
+
+                            <div id="fundIdIE00BD4GTW91"></div>
+                            <section class="item fundIntroduction wow animate__animated animate__fadeInUp" data-wow-offset="300">
+                                <div class="container">
+                                    <div class="tit-type1 margin-bottom-30">
+                                        <b class="sTit">
+                                            存基金族首選
+                                        </b>
+                                    </div>
+                                    <h3 class="fundIntroduction-fundName" title="美盛凱利基礎建設價值基金(本基金之配息來源可能為本金)">
+                                        美盛凱利基礎建設價值基金
+                                        <div class="fundIntroduction-fundName-warning">
+                                            (本基金之配息來源可能為本金)
+                                        </div>
+                                    </h3>
+                                </div>
+                                <slick
+                                    ref="slick"
+                                    :options="fundIntroductionOptions"
+                                    @afterChange="handleAfterChange"
+                                    @beforeChange="handleBeforeChange"
+                                    @breakpoint="handleBreakpoint"
+                                    @destroy="handleDestroy"
+                                    @edge="handleEdge"
+                                    @init="handleInit"
+                                    @reInit="handleReInit"
+                                    @setPosition="handleSetPosition"
+                                    @swipe="handleSwipe"
+                                    @lazyLoaded="handleLazyLoaded"
+                                    @lazyLoadError="handleLazeLoadError"
+                                >
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="基礎建設投資三大利基">
+                                                <div class="focus2">基礎建設投資三大利基</div>
+                                            </h4>
+                                            <div class="chart">
+                                                <img src="images/fund3-chart-1.jpg" alt="基礎建設投資三大利基" class="chart-img">
+                                                <p class="chart-remark" style="max-width: 776px; margin-left: auto; margin-right: auto;">
+                                                    資料來源: 富蘭克林證券投顧整理，2021年4月。*彭博資訊，截至2021年3月底。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fundIntroduction-slickItem">
+                                            <h4 class="tit-type2" title="掌握拜登新政商機">
+                                                <span class="focus2">掌握拜登新政商機</span>
+                                            </h4>
+                                            <p class="text-center">
+                                                <b>
+                                                    政策受惠拜登新政將推動基礎建設現代化，未來八年支出約2.3兆美元提升美國基礎建設
+                                                </b>
+                                            </p>
+                                            <p class="text-center">
+                                                產業布局兼備三大類基礎建設商機，在各景氣循氣階段皆能彈性調整配置，捕捉投資契機
+                                            </p>
+                                            <article class="row withBidenInfo">
+                                                <section class="col-8 col-sm-24" v-for="(item, index) in fund3WithBidenInfo" :key="index">
+                                                    <div class="withBidenInfo-item">
+                                                        <img :src="item.icon" :alt="item.tit1 + '：' + item.tit2" class="withBidenInfo-item-icon">
+                                                        <h5 class="withBidenInfo-item-tit" :title="item.tit1 + '：' + item.tit2">
+                                                            <div class="focus">
+                                                                {{item.tit1}}
+                                                            </div>
+                                                            {{item.tit2}}
+                                                        </h5>
+                                                        <div class="withBidenInfo-item-text">
+                                                            <p>
+                                                                {{item.text}}
+                                                            </p>
+                                                        </div>
+                                                        <div class="withBidenInfo-item-industry">
+                                                            {{item.industry}}
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </slick>
+                                <div class="container">
+                                    <h4 class="tit-type2 margin-top-50" title="近一年配息紀錄">
+                                        <div class="focus2">近一年配息紀錄</div>
+                                        <div class="focus2">美盛凱利基礎建設價值基金<span style="color: #acacac; text-shadow: none;">(本基金之配息來源可能為本金)-增益配息型</span></div>
+                                    </h4>
+                                    <div class="chart">
+                                        <div class="chart-table">
+                                            <table style="min-width: 600px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td>除息日期</td>
+                                                        <td>每單位配息金額(美元)</td>
+                                                        <td>年化配息率(%)</td>
+                                                        <td>當次配息率(%)</td>
+                                                        <td>月報酬率(含息)(%)</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr v-for="(item, index) in fund3Dividend" :key="index">
+                                                        <td v-for="(item2, index2) in item" :key="index2" v-html="item2"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="chart-remark">
+                                            <b>增益配息型類股:</b> 股票型基金之配息來源為基金投資標的所配發之股票股利，因投資標的股利發放頻率及日期不一，造成基金每月收到之股票股利收入將不平均。若當期收到投資標的之股利收入大於預計配息率，則基金僅由股利收入發放配息。若當期收到投資標的之股利收入低於預計配息率，則投資經理人得利用前期保留之股利收入，於必要時，亦得自本金配息，使配息率穩定。投資經理人將定期審視視投資標的股利率水準及基金績效而調整配息率，使基金配息率貼近股利率，避免配息過度侵蝕本金之情形。增益配息類股的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。
+                                        </p>
+                                        <p class="chart-remark">
+                                            資料來源: 富蘭克林坦伯頓基金集團，以A類股美元增益配息型為準，截至2021/03。基金過去績效不代表未來績效之保證。基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動，投資人於獲配息時，宜一併注意基金淨值之變動。基金年化配息率之計算公式統一為:「每單位配息金額 ÷ 除息日前一日之淨值X 一年配息次數X 100%」，年化配息率為估算值。月配息基金:當月配息率係採(每單位配息金額/除息前一日淨值)表示，月報酬率(含息)為截至除息日之前一月底含息報酬率。基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。本基金進行配息前未先扣除應負擔之費用。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<a href="https://www.Franklin.com.tw" target="_blank" title="富蘭克林‧國民的基金" class="linkText">https://www.Franklin.com.tw</a>)查閱。
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                    </section>
+
+                    <div id="discount"></div>
+                    <section class="item lozenge" v-if="showDiscountInfo">
+                        <div class="container">
+                            <h2 class="tit-type1 text-blue wow animate__animated animate__fadeInUp" title="投資機會不等人，超低優惠也是 6/30前開戶好康與下單優惠享不完">
+                                投資機會不等人，超低優惠也是<br/>6/30前開戶好康與下單優惠享不完
+                            </h2>
+                            <div class="discount-item wow animate__animated animate__fadeInUp">
+                                <div class="row">
+                                    <div class="col-8 col-lg-8 col-sm-24 text-center">
+                                        <h3 class="tit-type3" title="下單優惠">
+                                            下單優惠
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-24 col-lg-24 col-sm-24 text-center">
+                                                <div class="discount-item-head">
+                                                    <img src="images/giftIcon-3.png" alt=" 精選禮">
+                                                    精選禮
+                                                </div>
+                                                <div class="discount-item-tit">
+                                                    平台基金全面優惠
+                                                </div>
+                                                <div class="discount-item-text">
+                                                    <p>
+                                                        配息型基金
+                                                        <br/>限時0手續費
+                                                        <br/>股票型基金
+                                                        <br/>1折手續費                                                 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-16 col-lg-16 col-sm-24 text-center leftline">
+                                        <h3 class="tit-type3" title="開戶首購優惠">
+                                            開戶首購優惠
+                                        </h3>
+                                        <div class="row">
+                                        <div class="col-12 col-lg-12 col-sm-24 text-center">
+                                            <div class="discount-item-head">
+                                                <img src="images/giftIcon-1.png" alt="見面禮">
+                                                見面禮
+                                            </div>
+                                            <div class="discount-item-tit">
+                                                3筆定期定額終身<span class="text-blue">0元</span><br/>+紅利<span class="text-blue">3,000點</span>
+                                            </div>
+                                            <div class="discount-item-text">
+                                                <p>
+                                                    新開戶完成即享
+                                                    <br/>3筆定期定額終身0元優惠
+                                                    <br/>與紅利點數3000點
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-12 col-sm-24 text-center">
+                                            <div class="discount-item-head">
+                                                <img src="images/giftIcon-2.png" alt="首購禮">
+                                                首購禮
+                                            </div>
+                                            <div class="discount-item-tit">
+                                                紅利<span class="text-blue">3,000點</span>
+                                            </div>
+                                            <div class="discount-item-text">
+                                                <p>
+                                                    首次下單扣款成功
+                                                    <br/>得紅利點數3000點
+                                                    <br/>1點折抵1元手續費
+                                                </p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <sice-web-show>
+                                <div class="btnArea twoBtn margin-top-30 wow animate__animated animate__fadeInUp">
+                                    <div class="btn">
+                                        <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="線上申購">
+                                            線上申購 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="btn type2">
+                                        <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                            立即開戶 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </sice-web-show>
+
+                            <sice-app-show>
+                                <div class="btnArea margin-top-30 wow animate__animated animate__fadeInUp">
+                                    <sice-login-show>
+                                        <div class="btn">
+                                            <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="線上申購">
+                                                線上申購 <i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </sice-login-show>
+                                    <sice-login-hide>
+                                        <div class="btn type2">
+                                            <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                                立即開戶 <i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </sice-login-hide>
+                                </div>
+                            </sice-app-show> -->
+                        </div>
+                    </section>
+
+                    <div id="salesAgency"></div>
+                    <section class="item gridTattoo gridTattoo-type2 salesAgency">
+                        <div class="container">
+                            <h2 class="tit-type2 text-blue margin-top-40 wow animate__animated animate__fadeInUp" title="申購請洽所屬銷售機構">
+                                <div>
+                                    申購請洽所屬銷售機構
+                                </div>
+                            </h2>
+                            <!-- <p class="wow animate__animated animate__fadeInUp" :class="{'text-center' : windowWidth > 767}">
+                                <span v-for="(item, index) in bank" :key="index" style="display: inline-block;">
+                                    {{item}}{{bank.length == index+1 ? '': '、'}}
+                                </span>
+                            </p> -->
+                        </div>
+                    </section>
+                    
+                </article>
+
+                <!-- footer -->
+                <footer-area></footer-area>
+
+                <div class="topBtn">
+                    <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                        <span>
+                            <i class="fas fa-caret-up"></i>
+                            TOP
+                        </span>
+                    </a>
+                </div>
+
+                <sice-web-show>
+                    <div class="fixedRightBtn-area twoBtn clearfix" v-if="showDiscountInfo">
+                        <div class="fixedRightBtn">
+                            <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="線上申購">
+                                線上申購 <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="fixedRightBtn type2">
+                            <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                立即開戶 <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </sice-web-show>
+
+                <sice-app-show>
+                    <div class="fixedRightBtn-area clearfix">
+                        <sice-login-show>
+                            <div class="fixedRightBtn">
+                                <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="線上申購">
+                                    線上申購 <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-show>
+                        <sice-login-hide>
+                            <div class="fixedRightBtn type2">
+                                <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                    立即開戶 <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-hide>
+                    </div>
+                </sice-app-show>
+
+                <!-- <modal ref="warning" :can-close="false" class="md">
+                    <slot slot="infoArea">
+                        xxxx
+                    </slot>
+                </modal> -->
+
+                <div class="ieMask" v-if="getIEVersion() != 'edge' && getIEVersion() != -1">
+                    <div class="ieMask-bg"></div>
+                    <div class="ieMask-content">
+                        <div class="container">
+                            <p>
+                                親愛的客戶 您好 因微軟已停止IE版本瀏覽器維護，建議您升級您的IE瀏覽器，或使用下列其他瀏覽器軟體，以獲得最佳 瀏覽體驗。
+                            </p>
+                            <div class="dividingLine"></div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-edge"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            微軟Edge瀏覽器
+                                        </div>
+                                        <div class="btn white">
+                                            <a href="https://www.microsoft.com/zh-tw/edge" title="立即下載 微軟Edge瀏覽器" target="_blank">
+                                                立即下載
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-chrome"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            Google Chrome瀏覽器
+                                        </div>
+                                        <div class="btn white">
+                                            <a href="https://www.google.com/intl/zh-TW/chrome/" title="立即下載 Google Chrome瀏覽器" target="_blank">
+                                                立即下載
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-firefox"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            Mozilla Firefox瀏覽器
+                                        </div>
+                                        <div class="btn white">
+                                            <a href="https://www.mozilla.org/zh-TW/firefox/new/" title="立即下載 Mozilla Firefox瀏覽器" target="_blank">
+                                                立即下載
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </sice-provider>
+        </div>
+
+        <script src="js/main.min.js?v=20210611_2"></script>
+        <!-- <script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script> -->
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

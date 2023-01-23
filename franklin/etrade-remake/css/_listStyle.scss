@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+ul,
+ol {
+    &.chineseListStyle {
+        // 例：(一)
+        list-style: none;
+        padding-left: 40px;
+        & > li {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -40px;
+            }
+            @for $chineseNo_n from 1 through length($chineseNo) {
+                &:nth-of-type(#{$chineseNo_n}) {
+                    &:before {
+                        @if $chineseNo_n > 10 {
+                            font-size: 14px;
+                            top: 1px;
+                            left: -42px;
+                        }
+                        content: "(" + nth($chineseNo, $chineseNo_n) + ")";
+                    }
+                }
+            }
+        }
+    }
+    &.chineseListStyle2 {
+        // 例：一、
+        list-style: none;
+        padding-left: 40px;
+        & > li {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -40px;
+            }
+            @for $chineseNo_n from 1 through length($chineseNo) {
+                &:nth-of-type(#{$chineseNo_n}) {
+                    &:before {
+                        @if $chineseNo_n > 10 {
+                            font-size: 14px;
+                            top: 1px;
+                            left: -42px;
+                        }
+                        content: nth($chineseNo, $chineseNo_n) + "、";
+                    }
+                }
+            }
+        }
+    }
+    &.lowercaseStyle {
+        // 例：a
+        list-style-type: lower-alpha;
+    }
+    &.figuresInBracketsStyle {
+        // 例：(1)
+        list-style: none;
+        padding-left: 30px;
+        & > li {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -30px;
+            }
+            @for $i from 1 through 9 {
+                &:nth-of-type(#{$i}) {
+                    &:before {
+                        content: "(" + $i + ")";
+                    }
+                }
+            }
+            @for $i from 10 through 99 {
+                &:nth-of-type(#{$i}) {
+                    &:before {
+                        letter-spacing: -1.7px;
+                        content: "(" + $i + ")";
+                    }
+                }
+            }
+        }
+    }
+    &.circleNumbersStyle {
+        // 圓圈數字
+        list-style: none;
+        padding-left: 30px;
+        & > li {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: -30px;
+                width: 22px;
+                line-height: 20px;
+                border-radius: 100%;
+                border: solid 1px;
+                font-size: 15px;
+                letter-spacing: -0.8px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            @for $i from 1 through 9 {
+                &:nth-of-type(#{$i}) {
+                    &:before {
+                        content: "#{$i}";
+                    }
+                }
+            }
+        }
+    }
+}

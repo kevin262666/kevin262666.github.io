@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.errorPage {
+    margin: 50px auto;
+    text-align: center;
+    &-img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    &-tit {
+        color: $color-fontColor;
+        h1 {
+            color: $color-baseBlue;
+        }
+    }
+    &-text {
+        span {
+            display: inline-block;
+        }
+    }
+    @include maxWidth-md {
+        &-img {
+            width: 500px;
+        }
+    }
+    @include maxWidth-sm {
+        margin: 30px auto;
+        &-img {
+            width: 90%;
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+}

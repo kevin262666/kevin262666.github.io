@@ -1,0 +1,485 @@
+@charset "utf-8";
+
+$darkColor-blackBase: #1a1f25;
+$darkColor-black1: #292d36;
+$darkColor-black2: #383c46;
+$darkColor-black3: #434956;
+
+$darkColor-lightBase: #fff;
+$darkColor-light1: #bbb;
+$darkColor-light2: #909090;
+
+$darkColor-baseBlue: lighten($color-blue1, 40%);
+$darkColor-success: #74ca51;
+$darkColor-warning: $color-orange1;
+$darkColor-danger: $color-red1;
+
+$darkColor-border: lighten($darkColor-blackBase, 30%);
+
+.switchDarkMode {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 999999999999;
+}
+
+@mixin darkMode {
+    // filter: invert(80%);
+    background: $darkColor-blackBase;
+    color: $darkColor-light1;
+
+    // 區塊 --------------------------------------------------------------
+    .header,
+    .fundList-infoItem,
+    .infoCard-closeBtn-mobileStyle,
+    .tradingProcess-card-content,
+    .toggleDetailBtn-btn,
+    .indexPromotions-item .el-card,
+    .indexAlertCard-text,
+    .indexNews-content,
+    .header-right .mobileNavbar-item-content,
+    .el-table--striped .el-table__body tr.el-table__row--striped td,
+    .fundSmallFile-head-fundName,
+    .fundSmallFile-chart-bottom,
+    .el-divider.type2 .el-divider__text,
+    .el-collapse-item__content {
+        background-color: $darkColor-blackBase;
+    }
+    .header-bottom:before,
+    .footer,
+    .el-input__inner,
+    .infoCard-fundInfo,
+    .el-date-editor .el-range-input,
+    .header-right .mobileNavbar-item-tit,
+    .el-autocomplete-suggestion li.highlighted, .el-autocomplete-suggestion li:hover,
+    .el-select-dropdown__item.hover, .el-select-dropdown__item:hover,
+    .fundList.unimportant .el-card,
+    .fundList.unimportant .el-divider__text,
+    .el-table th, .el-table tr,
+    .fundSmallFile-head,
+    .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev,
+    .el-pagination.is-background .el-pager li,
+    .el-checkbox__input.is-disabled .el-checkbox__inner {
+        background-color: $darkColor-black1;
+    }
+
+    .el-card,
+    .fundList-toggleDetailBtn,
+    .el-input-group__append,
+    .el-input-group__prepend,
+    .el-dialog,
+    .el-divider__text,
+    .el-message-box,
+    .el-date-table td.in-range div, .el-date-table td.in-range div:hover, .el-date-table.is-week-mode .el-date-table__row.current div, .el-date-table.is-week-mode .el-date-table__row:hover div,
+    .el-input-number__decrease, .el-input-number__increase,
+    .plusAndMinusSetting-table table tr td,
+    .littleFilter-tit,
+    .indexPromotions-item-bottom,
+    .el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover,
+    .el-checkbox__inner,
+    .el-radio__inner,
+    .el-collapse-item__header {
+        background-color: $darkColor-black2;
+    }
+
+    .infoCard .el-card,
+    .calendar-date,
+    .el-dropdown-menu,
+    .el-dropdown-menu__item--divided:before,
+    .el-popover,
+    .el-autocomplete-suggestion,
+    .el-select-dropdown,
+    .el-picker-panel,
+    .el-picker-panel [slot=sidebar], .el-picker-panel__sidebar,
+    .infoCard .changeTypeUse .el-divider__text,
+    .el-table thead th,
+    .el-table--enable-row-hover .el-table__body tr:hover>td,
+    .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td,
+    .el-pagination.is-background .el-pager li:not(.disabled).active {
+        background-color: $darkColor-black3;
+    }
+
+    .header-right {
+        @include maxWidth-md {
+            background-color: $darkColor-black1;
+        }
+    }
+    .header-right-btn-area {
+        @include maxWidth-md {
+            background-color: $darkColor-black2;
+        }
+    }
+
+    .el-divider,
+    .el-tabs__nav-wrap:after,
+    .plusAndMinusSetting-table table,
+    .el-table--border::after, .el-table--group::after, .el-table::before,
+    .el-table__fixed-right::before, .el-table__fixed::before {
+        background-color: $darkColor-border;
+    }
+
+    .el-tabs__active-bar,
+    .indexNews-sortName,
+    .sign-optionItem label input[type=radio]:checked+.sign-optionItem-fakeCheckbox,
+    .el-date-table td.current:not(.disabled) span,
+    .calendar:not(.disabled) .calendar-date.active:before {
+        background-color: $darkColor-baseBlue;
+    }
+
+    .slick-dots li.slick-active button {
+        background-color: $darkColor-lightBase;
+    }
+
+    // 文字 --------------------------------------------------------------
+    .simpleMemberInfo-salutatory,
+    .fundList-fundName,
+    .footer-warning-focus,
+    .fundList-infoItem table tr td .focus,
+    .el-input__inner,
+    .el-select .el-input .el-select__caret,
+    .step-item.now .step-item-tit,
+    .step-item.now,
+    .el-message-box__title,
+    .el-popover,
+    .el-date-editor .el-range-input,
+    .header-right .mobileNavbar-item-tit a,
+    .header-right .mobileNavbar-item-tit i,
+    .el-picker-panel__shortcut,
+    .el-picker-panel__icon-btn,
+    .el-date-range-picker__content .el-date-range-picker__header div,
+    .el-input-number__decrease, .el-input-number__increase,
+    .littleFilter-tit,
+    .indexPromotions-item-tit,
+    .slick-arrow:hover,
+    .indexNews-tit,
+    a,
+    .fundList-promptIcon,
+    .el-dropdown-menu.linkType .el-dropdown-menu__item a,
+    .el-autocomplete-suggestion li,
+    .el-select-dropdown__item,
+    .el-dialog__title,
+    .plusAndMinusSetting-tit,
+    .plusAndMinusSetting-table table b,
+    .tit-type2,
+    .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev,
+    .el-pagination.is-background .el-pager li,
+    .el-pagination,
+    .el-collapse-item__header,
+    .el-date-picker__header-label,
+    .calendar:not(.disabled) .calendar-date:hover {
+        color: $darkColor-lightBase;
+    }
+    .el-card,
+    .page-tit,
+    .simpleMemberInfo .goHome a,
+    .footer,
+    .el-input-group__append,
+    .el-input-group__prepend,
+    .el-message-box__content,
+    .el-date-editor .el-range-separator,
+    .header-right .mobileNavbar-item-content li a,
+    .el-picker-panel,
+    .el-tabs__item,
+    .indexPromotions-item-deadline,
+    .fundList.unimportant .fundList-infoItem table tr td .focus,
+    .remark,
+    .el-table,
+    .fundList-fundName .openFundSmallFile,
+    .el-collapse-item__content,
+    .el-year-table td .cell,
+    .el-month-table td .cell,
+    .calendar-date.original {
+        color: $darkColor-light1;
+    }
+    .el-divider__text,
+    .step-item,
+    .fundList.unimportant .fundList-fundName,
+    .fundList.unimportant .el-divider__text,
+    .fundList.unimportant .el-card,
+    .el-pagination.is-background .btn-next.disabled, .el-pagination.is-background .btn-next:disabled, .el-pagination.is-background .btn-prev.disabled, .el-pagination.is-background .btn-prev:disabled,
+    .el-pagination__total,
+    .el-pagination__jump,
+    .fundList-dealDate, .fundList-fundCode,
+    .sign-optionItem.disabled,
+    .el-checkbox__input.is-disabled+span.el-checkbox__label {
+        color: $darkColor-light2;
+    }
+    .simpleMemberInfo-salutatory-name,
+    .simpleMemberInfo-content-price,
+    .simpleMemberInfo-content .referralCode,
+    .page-tit h1,
+    .el-link.el-link--primary,
+    .el-tabs__item.is-active,
+    .indexPromotions-item-promotions,
+    .focusText,
+    .el-pagination.is-background .el-pager li:not(.disabled):hover,
+    .text-blue,
+    .el-year-table td .cell:hover, .el-year-table td.current:not(.disabled) .cell,
+    .el-month-table td.current:not(.disabled) .cell {
+        color: $darkColor-baseBlue;
+    }
+
+    .fundList-transactionMethod.success,
+    .plusAndMinusSetting-tit i.el-icon-circle-plus {
+        color: $darkColor-success;
+    }
+
+    .indexNews-sortName,
+    .sign-optionItem-fakeCheckbox,
+    .el-date-table td.current:not(.disabled) span,
+    .calendar:not(.disabled) .calendar-date.active {
+        color: $darkColor-blackBase;
+    }
+
+    // 圖片 --------------------------------------------------------------
+    .simpleMemberInfo-lvImg,
+    .slick-slide img,
+    .header-right-memberMenu-btn {
+        filter: saturate(65%);
+    }
+
+    // border --------------------------------------------------------------
+    .el-card,
+    .sign-optionItem.disabled .sign-optionItem-fakeCheckbox {
+        border-color: $darkColor-black1;
+    }
+    .el-checkbox__input.is-disabled .el-checkbox__inner {
+        border-color: $darkColor-black2;
+    }
+    .el-input__inner,
+    .el-input-group__append,
+    .el-input-group__prepend,
+    .notice,
+    .simpleMemberInfo-salutatory,
+    .simpleMemberInfo-content-item,
+    .infoCard-fundInfo,
+    .infoCard-fundInfo-item,
+    .fundList-detail,
+    .el-dialog__header,
+    .header-right-btn.signOutBtn,
+    .header-right .mobileNavbar-item-tit,
+    .header-right .mobileNavbar-item-content li,
+    .el-picker-panel,
+    .el-date-range-picker .el-picker-panel__sidebar,
+    .el-date-table th,
+    .el-date-range-picker__content.is-left,
+    .el-input-number__decrease,
+    .el-input-number__increase,
+    .littleFilter-tit,
+    .toggleDetailBtn,
+    .toggleDetailBtn-btn,
+    .indexAlertCard-content,
+    .indexNews-head,
+    .el-dropdown-menu,
+    .el-dropdown-menu__item--divided,
+    .el-popover,
+    .el-autocomplete-suggestion,
+    .el-select-dropdown,
+    .indexAlertCard-btnArea-content,
+    .el-table td, .el-table th.is-leaf,
+    .el-table--border, .el-table--group,
+    .fundSmallFile-head,
+    .el-collapse-item__header,
+    .el-collapse-item__wrap {
+        border-color: $darkColor-border;
+    }
+
+    .el-message-box,
+    .fundList.unimportant .el-card {
+        border-color: transparent;
+    }
+
+    .indexAlertCard .el-card {
+        border-color: $darkColor-danger;
+    }
+
+    .tradingProcess-card-content-item-area {
+        column-rule-color: $darkColor-border;
+    }
+
+    .submitPassword {
+        border-color: $darkColor-baseBlue;
+    }
+
+    // 特製 --------------------------------------------------------------
+    .simpleMemberInfo .goHome a {
+        text-shadow: none;
+    }
+    .el-button {
+        color: $darkColor-lightBase;
+        background: $darkColor-black2;
+        border-color: $darkColor-light2;
+        &.is-plain {
+            &:focus,
+            &:hover {
+                color: $darkColor-lightBase;
+                background: $darkColor-black2;
+                border-color: $darkColor-light2;
+            }
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &--primary {
+            background: $darkColor-baseBlue;
+            color: $darkColor-blackBase;
+            border-color: $darkColor-baseBlue;
+        }
+        &--text,
+        &--text.is-disabled,
+        &--text.is-disabled:focus,
+        &--text.is-disabled:hover,
+        &--text:active {
+            border-color: transparent;
+            background: transparent;
+        }
+    }
+    .el-radio,
+    .el-checkbox {
+        color: $darkColor-lightBase;
+        &__inner:after {
+            color: $darkColor-blackBase;
+        }
+        &__input.is-checked {
+            & + .el-radio__label,
+            & + .el-checkbox__label {
+                color: $darkColor-baseBlue;
+            }
+            .el-radio__inner,
+            .el-checkbox__inner {
+                border-color: $darkColor-baseBlue;
+                background-color: $darkColor-baseBlue;
+            }
+        }
+    }
+    .el-checkbox__inner::after,
+    .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+        border-color: $darkColor-blackBase;
+    }
+
+    .fundList-bottom-content {
+        background-color: $darkColor-black3;
+        // border: solid 1px $darkColor-black2;
+        &.priceNotificationType {
+            // background-color: $darkColor-baseBlue;
+            // color: $darkColor-blackBase;
+            border-color: $darkColor-baseBlue;
+            color: $darkColor-baseBlue;
+            &.pause {
+                // background-color: $darkColor-black3;
+                // color: $darkColor-light2;
+                color: $darkColor-lightBase;
+                background-color: $darkColor-black3;
+            }
+        }
+    }
+
+    .el-date-table td.end-date span, .el-date-table td.start-date span {
+        background-color: $darkColor-baseBlue;
+        color: $darkColor-blackBase;
+    }
+    .el-date-table td.today span,
+    .el-date-table td.available:hover {
+        color: $darkColor-baseBlue;
+    }
+
+    .el-popper[x-placement^=bottom] .popper__arrow {
+        border-bottom-color: $darkColor-border;
+        &:after {
+            border-bottom-color: $darkColor-black3;
+        }
+    }
+    .el-popper[x-placement^=top] .popper__arrow {
+        border-top-color: $darkColor-border;
+        &:after {
+            border-top-color: $darkColor-black3;
+        }
+    }
+
+    .el-alert {
+        &--info.is-light {
+            background-color: $darkColor-black3;
+        }
+        &.borderStyle .el-alert {
+            &__description,
+            &__title {
+                color: $darkColor-lightBase;
+            }
+        }
+    }
+
+    .fundList.selected .el-card {
+        box-shadow: 0px 0px 0px 2px $darkColor-baseBlue inset;
+    }
+
+    .highcharts {
+        &-background {
+            background-color: $darkColor-blackBase;
+            fill: $darkColor-blackBase;
+        }
+        &-title {
+            fill: $darkColor-lightBase !important;
+        }
+        &-button {
+            text {
+                fill: $darkColor-light1 !important;
+            }
+            &-pressed {
+                text {
+                    fill: $darkColor-lightBase !important;
+                }
+            }
+        }
+        &-range-input {
+            text {
+                fill: $darkColor-light1 !important;
+            }
+        }
+        &-axis-labels {
+            text {
+                fill: $darkColor-light1 !important;
+            }
+        }
+        &-scrollbar {
+            &-track {
+                fill: none !important;
+                stroke-width: 1 !important;
+                stroke: $darkColor-border !important;
+            }
+            &-thumb {
+                fill: $darkColor-black2 !important;
+                stroke: $darkColor-border !important;
+            }
+            &-rifles {
+                stroke: $darkColor-light1 !important;
+            }
+            &-button {
+                fill: $darkColor-black2 !important;
+                stroke: $darkColor-border !important;
+            }
+            &-arrow {
+                fill: $darkColor-light1 !important;
+            }
+        }
+        &-navigator-handle {
+            fill: $darkColor-black2 !important;
+            stroke: $darkColor-border !important;
+        }
+        &-yaxis-grid {
+            .highcharts-grid-line {
+                stroke: $darkColor-border !important;
+            }
+        }
+    }
+}
+
+body.darkMode {
+    @include darkMode;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        // @include darkMode;
+    }
+}

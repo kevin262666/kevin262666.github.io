@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.channelReward {
+    max-width: 940px;
+    margin: 20px auto;
+    &-warningContent {
+        border: solid 2px;
+        padding: 1px 15px;
+        margin: 20px 0px;
+    }
+}

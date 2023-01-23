@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#003680" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+
+        <title>富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金</title>
+        <meta property="og:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+        <meta name="twitter:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+
+        <meta name="description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta property="og:description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta name="twitter:description" content="富蘭克林‧國民ｅ帳戶" />
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <!-- <meta property="og:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:card" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" /> -->
+
+        <!-- <meta property="og:url" content="https://event.franklin.com.tw/insurance-area/index.html" /> -->
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <script src="js/polyfill.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="js/vue-router.js"></script>
+
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <!-- app -->
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+        <script src="js/highstock.js"></script>
+
+        <!-- element ui start-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/display.css" />
+        <!--可視化調整&下載區 https://element.eleme.io/#/zh-CN/theme/preview-->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="js/element-ui.js"></script>
+        <!-- <script src="//unpkg.com/element-ui/lib/umd/locale/zh-TW.js"></script> -->
+        <script src="js/zh-TW.js"></script>
+        <!-- element ui end-->
+
+        <link rel="stylesheet" href="css/style.css?v=20210309" />
+
+    </head>
+
+    <body class="notLoggedIn">
+
+        <div id="content" v-cloak>
+
+            <!-- main -->
+            <article class="main">
+                <div class="container">
+
+                    <div class="printContent">
+                        <div class="printContent-header clearfix">
+                            <img src="images/header-logo-black.png" alt="" class="printContent-header-logo">
+                            <h1 class="printContent-tit-type1" title="投資損益查詢(依基金顯示)">
+                                投資損益查詢<small>(依基金顯示)</small>
+                            </h1>
+                        </div>
+                        <!-- <div class="printContent-footer clearfix">
+                            <div class="printContent-footer-left">
+                                列印日期：2021/06/09
+                            </div>
+                            <div class="printContent-footer-right">
+                                國民理財專線： <b>0800-885-888</b>
+                            </div>
+                        </div> -->
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type2" title="合計投資損益">
+                                合計投資損益
+                            </h2>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <td>
+                                            <b>幣別</b>
+                                        </td>
+                                        <td>
+                                            <b>市值</b>
+                                        </td>
+                                        <td>
+                                            <b>成本</b>
+                                        </td>
+                                        <td>
+                                            <b>未實現損益</b>
+                                        </td>
+                                        <td>
+                                            <b>含息報酬率</b>
+                                        </td>
+                                        <td>
+                                            <b>不含息報酬率</b>
+                                        </td>
+                                        <td>
+                                            <b>累積配限金額</b>
+                                        </td>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>665,054,606</span>
+                                            </td>
+                                            <td>
+                                                <span>637,194,499</span>
+                                            </td>
+                                            <td>
+                                                <span>27,860,107</span>
+                                            </td>
+                                            <td>
+                                                <span>94.40%</span>
+                                            </td>
+                                            <td>
+                                                <span>4.37%</span>
+                                            </td>
+                                            <td>
+                                                <span>100</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>歐元</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>日幣</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>人民幣</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type2" title="基金列表">
+                                基金列表
+                            </h2>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>未實現損益</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>含息報酬率</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>參考市值</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>累積單位數</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td width="13%">
+                                                <b>參考淨值</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>參考匯率</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>配息方式</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>配息金額</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>不含息報酬率</b>
+                                            </td>
+                                            <td width="200">
+                                                <b>備註</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0797</small>
+                                                <br/>
+                                                <b>科技基金</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>-280</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>-1.49%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>16,720</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>17,000</span>
+                                            </td>
+                                            <td>
+                                                <span>17.373</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>32.10</span>
+                                                <small>(2020/09/23)</small>
+                                                <div class="printContent-divider"></div>
+                                                <span>29.9825</span>
+                                                <small>(2020/09/23)</small>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>26</span>
+                                            </td>
+                                            <td>
+                                                <span>-1.64%</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>尚有在途交易：本基金尚有集保未回報之申購、贖回、轉換或配息資訊；若為新申購之基金，在資訊回報前將以NA列示。</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <div class="printContent-table-detail">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>
+                                                                    <b>交易方式</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>交易日期</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>未實現損益</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>含息報酬率</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>參考市值</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>投資金額</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>累積單位數</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>交易幣別</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>交易書號</b>
+                                                                </td>
+                                                                <td width="200">
+                                                                    <b>備註</b>
+                                                                </td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <b>(交易處理中)</b>
+                                                                    <br/>
+                                                                    <span>單筆申購</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>2020/08/13</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>-280</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>-1.49%</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>16,720</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>17,000</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>17.373</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>新台幣</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>20201216E00022709</span>
+                                                                </td>
+                                                                <td align="left">
+                                                                    <span>
+                                                                        -
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>未實現損益</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>含息報酬率</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>參考市值</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>累積單位數</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td width="13%">
+                                                <b>參考淨值</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>參考匯率</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>配息方式</b>
+                                                <div class="printContent-divider"></div>
+                                                <b>配息金額</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>不含息報酬率</b>
+                                            </td>
+                                            <td width="200">
+                                                <b>備註</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0426</small>
+                                                <br/>
+                                                <b>精選收益基金—美元</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>9,094</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>6.03%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>160,594</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>151,500</span>
+                                            </td>
+                                            <td>
+                                                <span>567</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>9.44</span>
+                                                <small>(2020/09/23)</small>
+                                                <div class="printContent-divider"></div>
+                                                <span>29.9825</span>
+                                                <small>(2020/09/23)</small>
+                                            </td>
+                                            <td>
+                                                <span>配現金 / 配現</span>
+                                                <div class="printContent-divider"></div>
+                                                <span>36</span>
+                                            </td>
+                                            <td>
+                                                <span>6.00%</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <div class="printContent-table-detail">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <td>
+                                                                    <b>交易方式</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>交易日期</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>未實現損益</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>含息報酬率</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>參考市值</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>投資金額</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>累積單位數</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>交易幣別</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>參考淨值</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>參考匯率</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>配息方式</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>配息金額</b>
+                                                                </td>
+                                                                <td>
+                                                                    <b>不含息報酬率</b>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <b>契約書號</b>
+                                                                </td>
+                                                                <td width="200">
+                                                                    <b>備註</b>
+                                                                </td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <b>(交易處理中)</b>
+                                                                    <br/>
+                                                                    <span>智能定期不定額</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>2020/08/13</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>419</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>9.31%</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>4,919</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>4,500</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>17.38</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>新台幣</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>9.44<small>(2020/09/23)</small></span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>29.9825</span><small>(2020/09/23)</small>
+                                                                </td>
+                                                                <td>
+                                                                    <span>配現金 / 配現</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>9.31%</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>20201216E00022709</span>
+                                                                </td>
+                                                                <td align="left">
+                                                                    <span>
+                                                                        若為暫停扣款且已全部贖回或全部轉換之定期(不)定額契約，仍會顯示該契約以及該契約之累積配現金額。
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>單筆申購</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>2020/06/15</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>9,472</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>14.59%</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>74,472</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>65,000</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>263.12</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>新台幣</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>9.44<small>(2020/09/23)</small></span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>29.9825</span><small>(2020/09/23)</small>
+                                                                </td>
+                                                                <td>
+                                                                    <span>配現金 / 配現</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>13</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>14.57%</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>20201216E00022709</span>
+                                                                </td>
+                                                                <td align="left">
+                                                                    <span>
+                                                                        -
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>單筆申購</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>2020/05/10</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>-797</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>-0.94%</span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span>81,203</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>82,000</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>286.9</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>新台幣</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>9.44<small>(2020/09/23)</small></span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>29.9825</span><small>(2020/09/23)</small>
+                                                                </td>
+                                                                <td>
+                                                                    <span>配現金 / 配現</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>23</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>-0.97%</span>
+                                                                    <div class="printContent-divider"></div>
+                                                                    <span>20201216E00022709</span>
+                                                                </td>
+                                                                <td align="left">
+                                                                    <span>
+                                                                        -
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        上述投資組合損益，為資料期間內已完成交易程序者，資料若有不符，應以臺灣集中保管結算所電腦記錄為準，歡迎您至 <el-link type="primary" icon="fas fa-external-link-alt" href="http://www.tdcc.com.tw/" target="_blank" title="臺灣集中保管結算所">臺灣集中保管結算所</el-link> 網站查詢。
+                                    </li>
+                                    <li>
+                                        申購、贖回及配息資訊所涉之匯率轉換，交易匯率係由臺灣集中保管結算所之收付銀行(華南銀行)提供。不同幣別基金轉換所涉之匯率轉換，交易匯率係由基金保管銀行提供。
+                                    </li>
+                                    <li>
+                                        未實現損益金額係以基準日之單位數、淨值及匯率計算，且不包含已發放之現金配息，投資人實際損益需待贖回分配後確定。單一基金部份贖回之投資成本，係以先進先出法計算。累積配現金額如該檔基金全數贖回，則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        參考報酬率之計算包含已發放之現金分配金額，採((未實現損益+累積配現金額)/投資金額)╳100%方式簡單計算，暫不考慮時間價值。
+                                    </li>
+                                    <li>
+                                        台幣投資結餘係將所有台幣投資部位加總計算，外幣投資結餘則是將相同投資幣別的外幣投資部位加總計算。
+                                    </li>
+                                    <li>
+                                        如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日9：00～18：00撥打免付費客服專線，將有客服專員竭誠為您服務！
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+
+        <script src="js/main.min.js?v=20210315"></script>
+        <script>
+            document.body.classList.remove('fixedBody');
+            $(document).ready(function () {
+                window.print();
+            });
+            window.onafterprint = function () {
+                window.close();
+            };
+        </script>
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

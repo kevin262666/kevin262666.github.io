@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.recommendedFund {
+    &-item {
+        .fundList-fundName {
+            font-size: $fontSize-sTit;
+            .openFundSmallFile {
+                top: -3px;
+            }
+        }
+        &.recommendedType {
+            border: solid 2px $color-baseBlue;
+        }
+    }
+    @include maxWidth-sm {
+        &-item {
+            .fundList-fundName {
+                font-size: 16px;
+            }
+        }
+    }
+}

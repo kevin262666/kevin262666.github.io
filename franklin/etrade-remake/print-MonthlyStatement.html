@@ -1,0 +1,2116 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#003680" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+
+        <title>富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金</title>
+        <meta property="og:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+        <meta name="twitter:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+
+        <meta name="description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta property="og:description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta name="twitter:description" content="富蘭克林‧國民ｅ帳戶" />
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <!-- <meta property="og:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:card" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" /> -->
+
+        <!-- <meta property="og:url" content="https://event.franklin.com.tw/insurance-area/index.html" /> -->
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <script src="js/polyfill.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="js/vue-router.js"></script>
+
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <!-- app -->
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+        <script src="js/highstock.js"></script>
+
+        <!-- element ui start-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/display.css" />
+        <!--可視化調整&下載區 https://element.eleme.io/#/zh-CN/theme/preview-->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="js/element-ui.js"></script>
+        <!-- <script src="//unpkg.com/element-ui/lib/umd/locale/zh-TW.js"></script> -->
+        <script src="js/zh-TW.js"></script>
+        <!-- element ui end-->
+
+        <link rel="stylesheet" href="css/style.css?v=20210309" />
+
+    </head>
+
+    <body class="notLoggedIn">
+
+        <div id="content" v-cloak>
+
+            <!-- main -->
+            <article class="main">
+                <div class="container">
+
+                    <div class="printContent">
+                        <div class="printContent-header clearfix">
+                            <img src="images/header-logo-black.png" alt="" class="printContent-header-logo">
+                            <h1 class="printContent-tit-type1" title="每月對帳單查詢(2020年10月)">
+                                每月對帳單查詢<small>(2020年10月)</small>
+                            </h1>
+                        </div>
+                        <!-- <div class="printContent-footer clearfix">
+                            <div class="printContent-footer-left">
+                                列印日期：2021/06/09
+                            </div>
+                            <div class="printContent-footer-right">
+                                國民理財專線： <b>0800-885-888</b>
+                            </div>
+                        </div> -->
+
+                        <h2 class="printContent-tit-type1" title="境外基金">
+                            【境外基金】
+                        </h2>
+
+                        <h3 class="printContent-tit-type2" title="當月帳戶結餘">
+                            當月帳戶結餘
+                            <small>(以當月最後營業日淨值與參考匯率進行計算)</small>
+                        </h3>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="現行庫存損益總覽參考">
+                                現行庫存損益總覽參考
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>含息報酬率</b>
+                                            </td>
+                                            <td>
+                                                <b>市值</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>未實現損益</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>不含息報酬率</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>配息方式</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>結餘單位數</b>
+                                            </td>
+                                            <td width="5%">
+                                                <b>淨值</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td width="6%">
+                                                <b>匯率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0796</small>
+                                                <b>生技領航基金</b>
+                                            </td>
+                                            <td>
+                                                <span>1.14%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>259,938</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>257,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,938</span>
+                                            </td>
+                                            <td>
+                                                <span>1.14%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>282.361</span>
+                                            </td>
+                                            <td>
+                                                <span>29.95</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>30.7375</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>1049</small>
+                                                <b>新興國家固定收益基金－美元月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>1.93%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>406,429</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>500,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-93,571</span>
+                                            </td>
+                                            <td>
+                                                <span>-18.71%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>103,226</span>
+                                            </td>
+                                            <td>
+                                                <span>配現金 / 配現</span>
+                                            </td>
+                                            <td>
+                                                <span>1,744.405</span>
+                                            </td>
+                                            <td>
+                                                <span>7.58</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>30.7375</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0479</small>
+                                                <b>全球高收益基金－美元月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>-3.19%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>159,741</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>165,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-5,259</span>
+                                            </td>
+                                            <td>
+                                                <span>-3.19%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>685,611</span>
+                                            </td>
+                                            <td>
+                                                <span>7.58</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>30.7375</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0813</small>
+                                                <b>新興國家固定收益基金—美元季配息</b>
+                                            </td>
+                                            <td>
+                                                <span>-4.70%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>47,650</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>50,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-2,350</span>
+                                            </td>
+                                            <td>
+                                                <span>-4.70%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>118.518</span>
+                                            </td>
+                                            <td>
+                                                <span>13.08</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>30.7375</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>0575</small>
+                                                <b>金磚四國基金</b>
+                                            </td>
+                                            <td>
+                                                <span>-19.36%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,015.53</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,500.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-484</span>
+                                            </td>
+                                            <td>
+                                                <span>-19.36%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>117.592</span>
+                                            </td>
+                                            <td>
+                                                <span>17.14</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>2027</small>
+                                                <b>新興國家固定收益基金－南非幣避險月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>3.88%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>15,582.12</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>15,000.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>582</span>
+                                            </td>
+                                            <td>
+                                                <span>3.88%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>176.969</span>
+                                            </td>
+                                            <td>
+                                                <span>88.05</span>
+                                            </td>
+                                            <td>
+                                                <span>南非幣</span>
+                                            </td>
+                                            <td>
+                                                <span>1</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="交易幣別總計">
+                                交易幣別總計
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td>
+                                                <b>參考投資市值</b>
+                                            </td>
+                                            <td>
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>參考報酬率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <b>美元</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,109,120.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,108,910.39</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.00</span>
+                                            </td>
+                                            <td>
+                                                <span>-0.02%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>新台幣</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>28,965,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>28,770,095</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>-0.67%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>日幣</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>60,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>59,088</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>-1.52%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>歐元</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>60,000.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>58,266.97</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.00</span>
+                                            </td>
+                                            <td>
+                                                <span>-2.89%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="原始投資本金報酬參考">
+                                原始投資本金報酬參考
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                <b>交易幣別市值</b>
+                                            </td>
+                                            <td colspan="2">
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>匯率</b>
+                                            </td>
+                                            <td colspan="2">
+                                                <b>原始本金</b>
+                                            </td>
+                                            <td>
+                                                <b>原始本金含息報酬率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>873,758</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>873,758</span>
+                                            </td>
+                                            <td>
+                                                <span>1</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>972,000</span>
+                                            </td>
+                                            <td>
+                                                <span>0.51%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,015.53</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>0.8541</span>
+                                            </td>
+                                            <td>
+                                                <span>歐元</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,135.25</span>
+                                            </td>
+                                            <td>
+                                                <span>-19.37%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>南非幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>15,582.12</span>
+                                            </td>
+                                            <td>
+                                                <span>南非幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>1</span>
+                                            </td>
+                                            <td>
+                                                <span>南非幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>15,000.00</span>
+                                            </td>
+                                            <td>
+                                                <span>3.88%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>投資金額：</b>若該基金曾轉換，以原基金之買回價格作為新基金之投資金額。部分贖回以先進先出法計算投資金額。
+                                    </li>
+                                    <li>
+                                        <b>市值：</b>僅供參考，不代表實際贖回時可得金額。
+                                    </li>
+                                    <li>
+                                        <b>累積配現金額：</b>投資以來已配發之現金利息，如該檔基金全數贖回或轉出，則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        <b>未實現損益：</b>係以本月份對帳單最後營業日之單位數、淨值及匯率計算，且不包含已發放之現金配息，投資人實際損益需待贖回分配後確定。
+                                    </li>
+                                    <li>
+                                        <b>報酬率：</b>包含採定期定額投資與單筆投資之結餘單位數，不考慮投資成本之時間價值。
+                                    </li>
+                                    <li>
+                                        <b>交易幣別市值：</b>台幣投資結餘係將所有台幣投資部位加總計算，外幣投資結餘則是將相同投資幣別且相同原始成本幣別的外幣投資部位加總計算。
+                                    </li>
+                                    <li>
+                                        <b>原始本金：</b>若該基金曾幣別轉換，此為追溯至第一筆投資之交易幣別本金。
+                                    </li>
+                                    <li>
+                                        台幣投資結餘係將所有台幣投資部位加總計算，外幣投資結餘則是將相同投資幣別的外幣投資部位加總計算。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type2" title="當月交易明細">
+                                當月交易明細
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>交易方式</b>
+                                            </td>
+                                            <td>
+                                                <b>交易金額</b>
+                                            </td>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>配息方式</b>
+                                            </td>
+                                            <td>
+                                                <b>淨值</b>
+                                            </td>
+                                            <td>
+                                                <b>淨值日期</b>
+                                            </td>
+                                            <td>
+                                                <b>兌換匯率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>1049</span>
+                                                <b>新興國家固定收益基金－美元月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>單筆</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>30,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>127.565</span>
+                                            </td>
+                                            <td>
+                                                <span>配現金 / 配現</span>
+                                            </td>
+                                            <td>
+                                                <span>7.63</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td>
+                                                <span>30.822500</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>1172</span>
+                                                <b>全球債券總報酬基金—澳幣避險月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>定期定額</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>3,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>13.849</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>9.64</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/20</span>
+                                            </td>
+                                            <td>
+                                                <span>13.849</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>1019</span>
+                                                <b>邊境市場基金</b>
+                                            </td>
+                                            <td>
+                                                <span>轉出</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>16,696.19</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>975.815</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>17.11</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/20</span>
+                                            </td>
+                                            <td>
+                                                <span>1.000000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>0796</span>
+                                                <b>生技領航基金</b>
+                                            </td>
+                                            <td>
+                                                <span>轉入</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>16,696.19</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>588.516</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>28.37</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/20</span>
+                                            </td>
+                                            <td>
+                                                <span>1.000000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>0796</span>
+                                                <b>生技領航基金</b>
+                                            </td>
+                                            <td>
+                                                <span>贖回</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>612.80</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>20.000</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span>30.64</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/25</span>
+                                            </td>
+                                            <td>
+                                                <span>1.000000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>132</span>
+                                                <b>黃金基金</b>
+                                            </td>
+                                            <td>
+                                                <span>定期不定額</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>100.00</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>8.496</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>11.77</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/28</span>
+                                            </td>
+                                            <td>
+                                                <span>1.000000</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>「交易金額」</b>不包含相關申購費用(如申購手續費、轉換手續費等)。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type2" title="當月再投資 / 配權分配明細">
+                                當月再投資 / 配權分配明細
+                                <small>(除息日前一營業日為基準日，依基準日所持有之單位數參與配息)</small>
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>本次分配單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>庫存單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>配息基準日</b>
+                                            </td>
+                                            <td>
+                                                <b>除息日</b>
+                                            </td>
+                                            <td>
+                                                <b>除息日淨值</b>
+                                            </td>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>每單位配現金額</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>0810</span>
+                                                <b>全球債券基金—美元月配息</b>
+                                            </td>
+                                            <td>
+                                                <span>1.002</span>
+                                            </td>
+                                            <td>
+                                                <span>186.985</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/07</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/08</span>
+                                            </td>
+                                            <td>
+                                                <span>17.54</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>0.094000</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>配現金額：</b>未扣除匯款費用。
+                                    </li>
+                                    <li>
+                                        <b>累積配現金額：</b>投資以來已配發之現金利息，如該檔基金全數贖回、則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        當月配息資訊包含單筆、定期(不)定額交易，不包含智能理財專區之交易。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type2" title="當月配現金 / 配現分配明細">
+                                當月配現金 / 配現分配明細
+                                <small>(除息日前一營業日為基準日，依基準日所持有之單位數參與配息)</small>
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>本次配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>庫存單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>配息基準日</b>
+                                            </td>
+                                            <td>
+                                                <b>除息日</b>
+                                            </td>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>兌換匯率</b>
+                                            </td>
+                                            <td>
+                                                <b>每單位配現金額</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>1049</span>
+                                                <b>新興國家固定收益基金－美元月配息</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>207</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>560</span>
+                                            </td>
+                                            <td>
+                                                <span>100.220</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/07</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/08</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>30.882500</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.067</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>1049</span>
+                                                <b>新興國家固定收益基金－美元月配息</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>868.59</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>868.59</span>
+                                            </td>
+                                            <td>
+                                                <span>12,964.103</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/07</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/08</span>
+                                            </td>
+                                            <td>
+                                                <span>美元</span>
+                                            </td>
+                                            <td>
+                                                <span>1.000000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.067</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>配現金額：</b>未扣除匯款費用。
+                                    </li>
+                                    <li>
+                                        <b>累積配現金額：</b>投資以來已配發之現金利息，如該檔基金全數贖回、則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        當月配息資訊包含單筆、定期(不)定額交易，不包含智能理財專區之交易。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                        <h3 class="printContent-tit-type2" title="其他事項">
+                            其他事項
+                        </h3>
+
+                        <div class="printContent-item">
+                            <div>
+                                <b>
+                                    台端所持有基金期間，本公司持續收受基金公司之經理費分成，有關基金經理費率(註)及其分成費率等資訊或其之變動情形如下表
+                                </b>
+                                <br/>
+                                <small>
+                                    台端亦可洽富蘭克林國民理財專線：0800 885 888，我們將竭誠為您服務。
+                                </small>
+                            </div>
+                            <h3 class="printContent-tit-type3" title="基金經理費率(註)及其分成費率">
+                                基金經理費率(註)及其分成費率
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金代碼</b>
+                                            </td>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費(年率)</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費分成(年率)</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>0280</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>美國機會基金—歐元</span>
+                                            </td>
+                                            <td>
+                                                <span>1.0000%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於1.0000%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>0287</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>全球債券總報酬基金—歐元<b>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>0.7500%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於0.7500%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>0349</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>全球債券總報酬基金—歐元月配息<b>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>0.7500%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於0.7500%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>0778</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>全球氣候變遷基金—歐元</span>
+                                            </td>
+                                            <td>
+                                                <span>1.0000%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於1.0000%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="本次經理費用年率暨本公司分成年率有變動者">
+                                本次經理費用年率暨本公司分成年率有變動者
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費(年率)</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費分成(年率)</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>高成長基金<b>(本基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原0.7470% <b>變動為<i class="el-icon-d-arrow-right"></i>0.7460%</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原不多於0.2500% <b>變動為<i class="el-icon-d-arrow-right"></i>不多於0.2500%</b></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>成長基金<b>(本基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原0.6910% <b>變動為<i class="el-icon-d-arrow-right"></i>0.6890%</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原不多於0.2500% <b>變動為<i class="el-icon-d-arrow-right"></i>不多於0.2500%</b></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>公用事業基金<b>(本基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原0.7070% <b>變動為<i class="el-icon-d-arrow-right"></i>0.7020%</b></span>
+                                            </td>
+                                            <td>
+                                                <span>原不多於0.2500% <b>變動為<i class="el-icon-d-arrow-right"></i>不多於0.2500%</b></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>註：</b>美國註冊基金之基金經理費率含經銷費(12b-1 Fee)，本公司經理費分成僅來自12b-1 Fee，惟454富蘭克林坦伯頓法人機構專用基金不收取經銷費(12b-1Fee)。
+                                    </li>
+                                    <li>
+                                        投資人若欲詳知富蘭克林證券投顧總代理之所有境外基金經理費率，可至 
+                                        <el-link type="primary" icon="fas fa-external-link-alt" href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林基金理財網">富蘭克林基金理財網</el-link>
+                                        或 
+                                        <el-link type="primary" icon="fas fa-external-link-alt" href="https://www.fundclear.com.tw/" target="_blank" title="境外基金資訊觀測站">境外基金資訊觀測站</el-link>
+                                        下載基金公開說明書及投資人須知查詢。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="pageBreakAfter"></div>
+
+                        <h2 class="printContent-tit-type1" title="投信基金">
+                            【投信基金】
+                        </h2>
+
+                        <h3 class="printContent-tit-type2" title="當月帳戶結餘">
+                            當月帳戶結餘
+                            <small>(以當月最後營業日淨值與參考匯率進行計算)</small>
+                        </h3>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="現行庫存損益總覽參考">
+                                現行庫存損益總覽參考
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>含息報酬率</b>
+                                            </td>
+                                            <td>
+                                                <b>市值</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>未實現損益</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>不含息報酬率</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>配息方式</b>
+                                            </td>
+                                            <td width="9%">
+                                                <b>結餘單位數</b>
+                                            </td>
+                                            <td width="5%">
+                                                <b>淨值</b>
+                                            </td>
+                                            <td width="8%">
+                                                <b>交易幣別</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <small>6805</small>
+                                                <b>富蘭克林華美新世界股票基金</b>
+                                            </td>
+                                            <td>
+                                                <span>9.26%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,522,632</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,308,794</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>213,838</span>
+                                            </td>
+                                            <td>
+                                                <span>9.26%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>84,228.1</span>
+                                            </td>
+                                            <td>
+                                                <span>29.95</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>6807</small>
+                                                <b>新興趨勢傘型基金之天然資源組合基金</b>
+                                            </td>
+                                            <td>
+                                                <span>-2.73%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,034,041</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,063,087</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-29,046</span>
+                                            </td>
+                                            <td>
+                                                <span>-2.73%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>137,604.4</span>
+                                            </td>
+                                            <td>
+                                                <span>7.58</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>6802</small>
+                                                <b>富蘭克林全球債券組合基金累積型</b>
+                                            </td>
+                                            <td>
+                                                <span>-11.51%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>567,312</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>641,087</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>-73,775</span>
+                                            </td>
+                                            <td>
+                                                <span>-11.51%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>74,843.3</span>
+                                            </td>
+                                            <td>
+                                                <span>7.58</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <small>6830</small>
+                                                <b>中國傘型之中國A股基金人民幣</b>
+                                            </td>
+                                            <td>
+                                                <span>0.18%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>50091.87</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>50,000.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>91.87</span>
+                                            </td>
+                                            <td>
+                                                <span>0.18%</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>再投資 / 配權</span>
+                                            </td>
+                                            <td>
+                                                <span>4,574.6</span>
+                                            </td>
+                                            <td>
+                                                <span>10.95</span>
+                                            </td>
+                                            <td>
+                                                <span>人民幣</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="交易幣別總計">
+                                交易幣別總計
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>投資金額</b>
+                                            </td>
+                                            <td>
+                                                <b>參考投資市值</b>
+                                            </td>
+                                            <td>
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>參考報酬率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <b>美元</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,109,120.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,108,910.39</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.00</span>
+                                            </td>
+                                            <td>
+                                                <span>-0.02%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>新台幣</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>28,965,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>28,770,095</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>-0.67%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>日幣</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>60,000</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>59,088</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>-1.52%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>歐元</b>
+                                            </td>
+                                            <td align="right">
+                                                <span>60,000.00</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>58,266.97</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.00</span>
+                                            </td>
+                                            <td>
+                                                <span>-2.89%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type3" title="原始投資本金報酬參考">
+                                原始投資本金報酬參考
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                <b>交易幣別市值</b>
+                                            </td>
+                                            <td colspan="2">
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td colspan="2">
+                                                <b>原始本金</b>
+                                            </td>
+                                            <td>
+                                                <b>原始本金含息報酬率</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>4,012,968</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>103,226</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>972,000</span>
+                                            </td>
+                                            <td>
+                                                <span>0.51%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>人民幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>50,000.00</span>
+                                            </td>
+                                            <td>
+                                                <span>人民幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0</span>
+                                            </td>
+                                            <td>
+                                                <span>歐元</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>2,135.25</span>
+                                            </td>
+                                            <td>
+                                                <span>-19.37%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>投資金額：</b>若該基金曾轉換，以原基金之買回價格作為新基金之投資金額。部分贖回以先進先出法計算投資金額。
+                                    </li>
+                                    <li>
+                                        <b>市值：</b>僅供參考，不代表實際贖回時可得金額。
+                                    </li>
+                                    <li>
+                                        <b>累積配現金額：</b>投資以來已配發之現金利息，如該檔基金全數贖回或轉出，則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        <b>未實現損益：</b>係以本月份對帳單最後營業日之單位數、淨值及匯率計算，且不包含已發放之現金配息，投資人實際損益需待贖回分配後確定。
+                                    </li>
+                                    <li>
+                                        <b>報酬率：</b>包含採定期定額投資與單筆投資之結餘單位數，不考慮投資成本之時間價值。
+                                    </li>
+                                    <li>
+                                        <b>交易幣別市值：</b>台幣投資結餘係將所有台幣投資部位加總計算，外幣投資結餘則是將相同投資幣別且相同原始成本幣別的外幣投資部位加總計算。
+                                    </li>
+                                    <li>
+                                        <b>原始本金：</b>若該基金曾幣別轉換，此為追溯至第一筆投資之交易幣別本金。
+                                    </li>
+                                    <li>
+                                        台幣投資結餘係將所有台幣投資部位加總計算，外幣投資結餘則是將相同投資幣別的外幣投資部位加總計算。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type2" title="當月交易明細">
+                                當月交易明細
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>交易方式</b>
+                                            </td>
+                                            <td>
+                                                <b>交易日期</b>
+                                            </td>
+                                            <td>
+                                                <b>交易金額</b>
+                                            </td>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>配息方式</b>
+                                            </td>
+                                            <td>
+                                                <b>淨值</b>
+                                            </td>
+                                            <td>
+                                                <b>淨值日期</b>
+                                            </td>
+                                            <td>
+                                                <b>短線費用</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>6807</span>
+                                                <b>新興趨勢傘型基金之天然資源組合基金</b>
+                                            </td>
+                                            <td>
+                                                <span>單筆</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,000,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>129,750.5</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>7.7071</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>6802</span>
+                                                <b>富蘭克林全球債券組合基金累積型</b>
+                                            </td>
+                                            <td>
+                                                <span>定期定額</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>5,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>397.6</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>12.5739</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>6875</span>
+                                                <b>全球醫療保健基金</b>
+                                            </td>
+                                            <td>
+                                                <span>定期不定額</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>3,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>294.4</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>10.19</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/15</span>
+                                            </td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <span>6805</span>
+                                                <b>富蘭克林華美新世界股票基金</b>
+                                            </td>
+                                            <td>
+                                                <span>贖回</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/22</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,000,000</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td>
+                                                <span>1,436.2</span>
+                                            </td>
+                                            <td>
+                                                <span>累積</span>
+                                            </td>
+                                            <td>
+                                                <span>22.53</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/22</span>
+                                            </td>
+                                            <td>
+                                                <span>0</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>「交易金額」</b>不包含相關申購費用(如申購手續費、轉換手續費等)。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                            <h3 class="printContent-tit-type2" title="當月配現金 / 配現分配明細">
+                                當月配現金 / 配現分配明細
+                                <small>(除息日前一營業日為基準日，依基準日所持有之單位數參與配息)</small>
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>發放日</b>
+                                            </td>
+                                            <td>
+                                                <b>本次配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>累積配現金額</b>
+                                            </td>
+                                            <td>
+                                                <b>庫存單位數</b>
+                                            </td>
+                                            <td>
+                                                <b>配息基準日</b>
+                                            </td>
+                                            <td>
+                                                <b>除息日</b>
+                                            </td>
+                                            <td>
+                                                <b>交易幣別</b>
+                                            </td>
+                                            <td>
+                                                <b>每單位配現金額</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                <span>6804</span>
+                                                <b>富蘭克林全球債券組合基金分配型</b>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/14</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,096</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>1,096</span>
+                                            </td>
+                                            <td>
+                                                <span>43,840.0</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/07/31</span>
+                                            </td>
+                                            <td>
+                                                <span>2020/08/01</span>
+                                            </td>
+                                            <td>
+                                                <span>新台幣</span>
+                                            </td>
+                                            <td align="right">
+                                                <span>0.025</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>配現金額：</b>未扣除匯款費用。
+                                    </li>
+                                    <li>
+                                        <b>累積配現金額：</b>投資以來已配發之現金利息，如該檔基金全數贖回、則累積配現金額將歸零。
+                                    </li>
+                                    <li>
+                                        當月配息資訊包含單筆、定期(不)定額交易，不包含智能理財專區之交易。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="printContent-divider"></div>
+
+                        <div class="printContent-item">
+                        <h3 class="printContent-tit-type2" title="其他事項">
+                            其他事項
+                        </h3>
+
+                        <div class="printContent-item">
+                            <div>
+                                <b>
+                                    台端所持有基金期間，本公司持續收受基金公司之經理費分成，有關基金經理費率(註)及其分成費率等資訊或其之變動情形如下表
+                                </b>
+                                <br/>
+                                <small>
+                                    台端亦可洽富蘭克林國民理財專線：0800 885 888，我們將竭誠為您服務。
+                                </small>
+                            </div>
+                            <h3 class="printContent-tit-type3" title="基金經理費率(註)及其分成費率">
+                                基金經理費率(註)及其分成費率
+                            </h3>
+                            <div class="printContent-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <b>基金代碼</b>
+                                            </td>
+                                            <td>
+                                                <b>基金名稱</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費(年率)</b>
+                                            </td>
+                                            <td>
+                                                <b>基金經理費分成(年率)</b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>6801</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>富蘭克林華美第一富基金</span>
+                                            </td>
+                                            <td>
+                                                <span>1.6000%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於1.0000%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>6802</span>
+                                            </td>
+                                            <td align="left">
+                                                <span>富蘭克林全球債券組合基金累積型<b>(本基金之配息來源可能為本金)</b></span>
+                                            </td>
+                                            <td>
+                                                <span>1.0000%</span>
+                                            </td>
+                                            <td>
+                                                <span>不多於1.0000%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="printContent-item">
+                            <h2 class="printContent-tit-type3" title="注意事項">
+                                注意事項
+                            </h2>
+                            <div class="notice-content">
+                                <ol>
+                                    <li>
+                                        <b>註：</b>美國註冊基金之基金經理費率含經銷費(12b-1 Fee)，本公司經理費分成僅來自12b-1 Fee，惟454富蘭克林坦伯頓法人機構專用基金不收取經銷費(12b-1Fee)。
+                                    </li>
+                                    <li>
+                                        投資人若欲詳知富蘭克林證券投顧總代理之所有境外基金經理費率，可至 
+                                        <el-link type="primary" icon="fas fa-external-link-alt" href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林基金理財網">富蘭克林基金理財網</el-link>
+                                        或 
+                                        <el-link type="primary" icon="fas fa-external-link-alt" href="https://www.fundclear.com.tw/" target="_blank" title="境外基金資訊觀測站">境外基金資訊觀測站</el-link>
+                                        下載基金公開說明書及投資人須知查詢。
+                                    </li>
+
+                                    <li>
+                                        本功能僅提供近六個月之境外基金交易對帳單查詢，最新月份的電子對帳單將於台灣集中保管結算所回報當月交易明細資料，完成結算後開始寄發。
+                                    </li>
+                                    <li>
+                                        當月配息資訊：包含所有交易，如單筆、定期定額與智能理財專區。
+                                    </li>
+                                    <li>
+                                        本表之參考市值、報酬率及損益計算僅供參考。所有基金交易異動之投資成本計算，皆以本公司公告之淨值、結存單位數為依據，且在資料期間內已完成交易程序者，所列之交易明細若有誤載或疏漏，應以本公司帳載或臺灣集中保管結算所電腦紀錄為準，歡迎您至 <el-link type="primary" icon="fas fa-external-link-alt" href="http://www.tdcc.com.tw/" target="_blank" title="臺灣集中保管結算所">臺灣集中保管結算所</el-link> 網站查詢。
+                                    </li>
+                                    <li>
+                                        境內基金短線費用：依據富蘭克林華美投信全系列基金短線交易規定，持有境內基金未屆滿14日(含)者，應支付買回價金之百分之零點二(0.2%)之買回費用；買回費用計算至新台幣「元」，不足壹元者不予收取，滿壹元以上者四捨五入。外幣 計價者 (日幣除外 ) ，採四捨五入計算至該幣別「元」以下小數點第二位。
+                                    </li>
+                                    <li>
+                                        交易明細之轉換項目，「轉出」欄位資訊係以計價幣別資料提供之。
+                                    </li>
+                                    <li>
+                                        上述基金結餘參考淨值為每月最後一個營業日公佈之淨值資訊。
+                                    </li>
+                                    <li>
+                                        如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日9：00～18：00撥打免付費客服專線，將有客服專員竭誠為您服務！
+                                    </li>
+                                    <li>
+                                        不合作帳戶規則: 基金代碼後方加上#01(eg. 101#01)
+                                        <ul>
+                                            <li>
+                                                轉入基金為基金代碼後方加上#01(例如:101#01) ，此為於三年到期期限內未繳回美國稅務Form W-8，富蘭克林證券投顧依FATCA規定將投資人本人於富蘭克林證券投顧之美國註冊基金轉列為不合作帳戶(Recalcitrant Account)。
+                                            </li>
+                                            <li>
+                                                轉出基金為基金代碼後方加上#01(例如:101#01) ，此為於三年到期期限後繳回美國稅務Form W-8，富蘭克林證券投顧依FATCA規定將投資人本人於富蘭克林證券投顧之美國註冊基金由不合作帳戶(Recalcitrant Account)轉列為合作帳戶。
+                                            </li>
+                                            <li>
+                                                自不合作帳戶贖回或轉至盧森堡註冊基金，則贖回交易或轉出基金將呈現基金代碼後方加上#01(例如:101#01) 。 針對符合FATCA規定法定條件的存入款項(包含但不限於美國來源所得)由基金公司予以扣繳百分之三十的美國扣繳稅款予美國聯邦政府。
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+
+        <script src="js/main.min.js?v=20210315"></script>
+        <script>
+            document.body.classList.remove('fixedBody');
+            $(document).ready(function () {
+                window.print();
+            });
+            window.onafterprint = function () {
+                window.close();
+            };
+        </script>
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

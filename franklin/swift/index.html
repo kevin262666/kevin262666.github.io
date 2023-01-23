@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <link rel="preload" href="images/banner-pc-bg.jpg" as="image" media="(min-width: 768px)" />
+        <link rel="preload" href="images/banner-mobile-bg.jpg" as="image" media="(max-width: 767px)" />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#114790" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192x192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <title>S.W.I.F.T.策略   快速整裝 | 富蘭克林‧國民的基金</title>
+        <meta property="og:title" content="S.W.I.F.T.策略   快速整裝 | 富蘭克林‧國民的基金" />
+        <meta name="twitter:title" content="S.W.I.F.T.策略   快速整裝 | 富蘭克林‧國民的基金" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "富蘭克林國民的基金",
+                "url": "https://www.franklin.com.tw/",
+                "logo": "https://event.franklin.com.tw/commonResources/images/header-logo.png",
+                "mainEntityOfPage":{
+                   "@type": "WebPage",
+                   "@id": "https://etrade.franklin.com.tw/swift/index.html"
+                },
+                "image":[
+                   "https://etrade.franklin.com.tw/swift/images/fb.jpg"
+                ]
+             }
+        </script>
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta name="description" content="俄烏情勢緊張、通膨居高不下、聯準會加速退場，面對詭譎的國際金融市場，應該鼓足勇氣進場低接？還是保持冷靜隔岸觀望呢？ 備好S.W.I.F.T.對策，多元布局攻守兼備。" />
+        <meta property="og:description" content="俄烏情勢緊張、通膨居高不下、聯準會加速退場，面對詭譎的國際金融市場，應該鼓足勇氣進場低接？還是保持冷靜隔岸觀望呢？ 備好S.W.I.F.T.對策，多元布局攻守兼備。" />
+        <meta name="twitter:description" content="俄烏情勢緊張、通膨居高不下、聯準會加速退場，面對詭譎的國際金融市場，應該鼓足勇氣進場低接？還是保持冷靜隔岸觀望呢？ 備好S.W.I.F.T.對策，多元布局攻守兼備。" />
+        <meta property="og:url" content="https://etrade.franklin.com.tw/swift/index.html" />
+        <link rel="canonical" href="https://etrade.franklin.com.tw/swift/index.html" />
+        <meta property="og:image" content="https://etrade.franklin.com.tw/swift/images/fb.jpg" />
+        <meta name="twitter:image" content="https://etrade.franklin.com.tw/swift/images/fb.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+
+        <!-- 載入精選基金區塊資料 start -->
+        <!-- <script src="https://event.franklin.com.tw/commonBanner/common-prod.js"></script> -->
+        <!-- <script src="../commonBanner/common-prod.js"></script> -->
+        <!-- 載入精選基金區塊資料 end -->
+
+        <!-- scrollMagic + tweenMax -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+
+        <!-- Chart.js -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/chart.js"></script> -->
+
+        <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">
+            //APP用的js
+        </script>
+        <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+            //APP用的js
+        </script>
+    </head>
+
+    <body>
+        <!-- Google Tag Manager -->
+        <!-- <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript> -->
+        <!-- End Google Tag Manager -->
+
+        <div id="content" v-cloak>
+            <sice-provider>
+            <!-- <sice-provider :mock-data="{isApp: true, isLogin: false, openLog: true }"> -->
+
+                <div id="top"></div>
+
+                <!-- header -->
+                <header class="header">
+                    <div class="container clearfix">
+                        <div class="logo">
+                            <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+                                <picture>
+                                    <source media="(max-width: 991px)" srcset="https://event.franklin.com.tw/commonResources/images/logo2019.svg" />
+                                    <img src="https://event.franklin.com.tw/commonResources/images/header-logo.png" alt="富蘭克林‧國民的基金" />
+                                </picture>
+                                <div class="logo-text">富蘭克林‧國民的基金</div>
+                            </a>
+                        </div>
+
+                        <nav class="navBar" :class="{show: navbarShow}" v-if="false">
+                            <ul>
+                                <li :class="{active : (activeNumber == 0)}">
+                                    <a href="#" title="獲獎榮耀" @click="navClick(0, 'divider');">
+                                        獲獎榮耀
+                                    </a>
+                                </li>
+                                <li :class="{active : (activeNumber == 1)}">
+                                    <a href="#" title="關於富蘭克林" @click="navClick(1, 'pricing');">
+                                        關於富蘭克林
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!--手機menu按鍵-->
+						<div class="menuBtn" :class="{active: navbarShow}" @click="toggleMobileNavbar()" v-if="false">
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+							<span>
+							</span>
+						</div>
+                    </div>
+                </header>
+
+                <!-- main -->
+                <article class="main">
+
+                    <section class="banner">
+                        <div class="banner-tattoo"></div>
+                        <div class="container">
+                            <div class="banner-kv">
+                                <img src="images/banner-kv.png" alt="" data-aos="fade-left" data-aos-duration="1000">
+                            </div>
+                            <h1 class="banner-tit" title="swift策略 快速整裝">
+                                <img src="images/banner-tit.png" alt="swift策略 快速整裝" data-aos="zoom-in-left" data-aos-duration="700" data-aos-delay="300">
+                            </h1>
+                        </div>
+                    </section>
+
+                    <section class="banner-bottom">
+                        <div class="container">
+                            <p class="text-center">
+                                俄烏情勢緊張、通膨居高不下、聯準會加速退場，面對詭譎的國際金融市場，應該鼓足勇氣進場低接？還是保持冷靜隔岸觀望呢？ 備好S.W.I.F.T.對策，多元布局攻守兼備。
+                            </p>
+                            <div class="banner-bottom-mouse" @click.prevent="$scrollTo('#variable')">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <i class="fas fa-angle-double-down"></i>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="variable"></div>
+                    <section class="item variable">
+                        <img src="images/banner-bottom-bgArrow.png" alt="" class="variable-arrow">
+                        <div class="variable-tit" data-aos="fade-up">
+                            <h2 class="tit-type1" title="2022年四大烏雲變數">
+                                2022年
+                                <br/>
+                                <span class="focus">
+                                    四大烏雲變數
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="variable-img">
+                            <img src="images/item-1-img.png" alt="" data-aos="fade-left" data-aos-delay="300">
+                        </div>
+                    </section>
+
+                    <div id="video"></div>
+                    <section class="item video">
+                        <div class="video-bg">
+                            <div></div>
+                        </div>
+                        <div class="container">
+                            <div class="youtube" data-aos="flip-down">
+                                <div class="youtube-content">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-X_mz1ThbYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <p class="text-center" data-aos="fade-up">
+                                【第二季投資展望】
+                                <br/>
+                                <b class="text-blue">從通膨、升息、戰事，發掘五大投資商機</b>
+                            </p>
+                        </div>
+                    </section>
+
+                    <div id="fund"></div>
+                    <article class="item" class="fundItem-area">
+                        <section class="fundItem">
+                            <img src="images/fund1-img.png" alt="" class="fundItem-img">
+                            <div class="fundItem-content">
+                                <div class="fundItem-tattoo">
+                                    Safe
+                                </div>
+                                <h2 class="fundItem-tit" title="建立防護部位 具防禦特性高信評債" data-aos="fade-left">
+                                    <div>
+                                        建立防護部位
+                                        <span class="focus">具防禦特性高信評債</span>
+                                    </div>
+                                </h2>
+                                <div class="fundItem-sTit" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="en">
+                                        Safe
+                                    </div>
+                                    <div class="tw">
+                                        防護部位
+                                    </div>
+                                </div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="200">
+                                    波灣富裕債券基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="300">
+                                    <p>
+                                        位處於中東地區的波灣六國為全球知名的富裕國度，其發行的美元債不僅有雄厚的國家資產當靠山，還具備高信評、抗跌防禦特性。
+                                    </p>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="btn">
+                                        <a href="https://event.franklin.com.tw/GCCbond/" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="fundItem">
+                            <img src="images/fund2-img.png" alt="" class="fundItem-img">
+                            <div class="fundItem-content">
+                                <div class="fundItem-tattoo">
+                                    War
+                                </div>
+                                <h2 class="fundItem-tit" title="危機轉投資契機 捕捉市場機遇爆發潛力" data-aos="fade-left">
+                                    <div>
+                                        危機轉投資契機 
+                                        <span class="focus">捕捉市場機遇爆發潛力</span>
+                                    </div>
+                                </h2>
+                                <div class="fundItem-sTit" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="en">
+                                        War
+                                    </div>
+                                    <div class="tw">
+                                        危機財
+                                    </div>
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="200">
+                                    <p>
+                                        面臨高油價和通膨環境，積極型投資人可波段操作天然資源或黃金產業型基金，將俄烏危機轉化為投資契機
+                                    </p>
+                                </div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="300">
+                                    天然資源基金
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="btn">
+                                        <a :href="windowWidth > 991 ? 'https://www.franklin.com.tw/Fund/BasicInformation/0419' : 'https://www.franklin.com.tw/Mobile/Fund/FundInfo?fundGuid=0419'" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="margin-top-30"></div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="500">
+                                    黃金基金<span class="focus">(本基金之配息來源可能為本金)</span>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="btn">
+                                        <a :href="windowWidth > 991 ? 'https://www.franklin.com.tw/Fund/BasicInformation/132' : 'https://www.franklin.com.tw/Mobile/Fund/FundInfo?fundGuid=132'" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="fundItem">
+                            <img src="images/fund3-img.png" alt="" class="fundItem-img">
+                            <div class="fundItem-content">
+                                <div class="fundItem-tattoo">
+                                    Inflation
+                                </div>
+                                <h2 class="fundItem-tit" title="建立防護部位 全球基建兆元商機" data-aos="fade-left">
+                                    <div>
+                                        通膨轉嫁無懼 
+                                        <span class="focus">全球基建兆元商機</span>
+                                    </div>
+                                </h2>
+                                <div class="fundItem-sTit" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="en">
+                                        Inflation
+                                    </div>
+                                    <div class="tw">
+                                        應對通膨
+                                    </div>
+                                </div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="200">
+                                    美盛凱利基礎建設價值基金<span class="focus">(本基金之配息來源可能為本金)</span>
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="300">
+                                    <p>
+                                        美國拜登政府推動基礎建設現代化，投資金額堪稱二戰以來最猛的投資案，在通膨高漲的當前，它也是具備通膨轉嫁能力的投資首選。
+                                    </p>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="btn">
+                                        <a href="https://event.franklin.com.tw/infrastructure-value-fund/" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="fundItem">
+                            <img src="images/fund4-img.png" alt="" class="fundItem-img">
+                            <div class="fundItem-content">
+                                <div class="fundItem-tattoo">
+                                    Flexible
+                                </div>
+                                <h2 class="fundItem-tit" title="布局美國價值部位 世界龍頭美國彈性布局" data-aos="fade-left">
+                                    <div>
+                                        布局美國價值部位 
+                                        <span class="focus">世界龍頭美國彈性布局</span>
+                                    </div>
+                                </h2>
+                                <div class="fundItem-sTit" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="en">
+                                        Flexible
+                                    </div>
+                                    <div class="tw">
+                                        彈性配置
+                                    </div>
+                                </div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="200">
+                                    穩定月收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="300">
+                                    <p>
+                                        以股債平衡投資策略，佈局全球經濟火車頭美國，靈活調整基金投資配比面對多空環境，也能在進攻與防禦之間優遊應對。
+                                    </p>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="btn">
+                                        <a href="https://event.franklin.com.tw/C2017_08_Q3_0839/" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="fundItem">
+                            <img src="images/fund5-img.png" alt="" class="fundItem-img">
+                            <div class="fundItem-content">
+                                <div class="fundItem-tattoo">
+                                    Trend
+                                </div>
+                                <h2 class="fundItem-tit" title="主流趨勢創新契機 長線創新趨勢不變" data-aos="fade-left">
+                                    <div>
+                                        主流趨勢創新契機 
+                                        <span class="focus">長線創新趨勢不變</span>
+                                    </div>
+                                </h2>
+                                <div class="fundItem-sTit" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="en">
+                                        Trend
+                                    </div>
+                                    <div class="tw">
+                                        趨勢商機
+                                    </div>
+                                </div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="200">
+                                    科技基金
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="300">
+                                    <p>
+                                        疫情驅動全球數位轉型浪潮，科技對於生活越顯重要，想捉住跨時代的趨勢主流商機，就靠這一檔獲獎無數的王牌基金吧。
+                                    </p>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="btn">
+                                        <a href="https://event.franklin.com.tw/C2018_07_Q3_0797/index.html" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="margin-top-30"></div>
+                                <div class="fundItem-fundName" data-aos="fade-left" data-aos-delay="500">
+                                    全球氣候變遷基金
+                                </div>
+                                <div class="fundItem-text" data-aos="fade-left" data-aos-delay="600">
+                                    <p>
+                                        「愛地球」不再只是精神口號，一起來響應行動號召，藉由一檔基金投資對環境友善的國際企業，創造投資人、企業以及環境的三贏局面！
+                                    </p>
+                                </div>
+                                <div class="btnArea" data-aos="fade-up" data-aos-delay="700">
+                                    <div class="btn">
+                                        <a href="https://event.franklin.com.tw/global-climate-change-fund/index.html" title="看詳細介紹" target="_blank">
+                                            看詳細介紹 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                    
+                    <div id="discount"></div>
+                    <section class="item lozenge">
+                        <div class="container">
+                            <div>
+                                <h2 class="tit-type1 text-blue" title="線上投資優惠" data-aos="fade-up">
+                                    線上投資優惠
+                                </h2>
+                                <p class="text-center" data-aos="fade-up">
+                                    優惠期間：即日起-2022/06/30
+                                </p>
+                                <div class="discount-item" data-aos="flip-up">
+                                    <div class="row">
+                                        <div class="col-8 col-lg-8 col-sm-24 text-center">
+                                            <h3 class="tit-type2" title="下單優惠">
+                                                下單優惠
+                                            </h3>
+                                            <div class="row">
+                                                <div class="col-24 col-lg-24 col-sm-24 text-center">
+                                                    <div class="discount-item-head">
+                                                        <img src="images/giftIcon-3.png" alt=" 精選禮">
+                                                        精選禮
+                                                    </div>
+                                                    <div class="discount-item-tit">
+                                                        申購手續費
+                                                    </div>
+                                                    <div class="discount-item-text">
+                                                        <p>
+                                                            股票型基金<span class="text-blue">最低0元</span><br>
+                                                            配息型基金<span class="text-blue">0元</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-16 col-lg-16 col-sm-24 text-center leftline">
+                                            <h3 class="tit-type2" title="新開戶額外好禮">
+                                                新開戶額外好禮
+                                            </h3>
+                                            <div class="row">
+                                            <div class="col-12 col-lg-12 col-sm-24 text-center">
+                                                <div class="discount-item-head">
+                                                    <img src="images/giftIcon-1.png" alt="見面禮">
+                                                    見面禮
+                                                </div>
+                                                <div class="discount-item-tit">
+                                                    3筆定期定額終身<span class="text-blue">0元</span><br/>+紅利<span class="text-blue">3,000點</span>
+                                                </div>
+                                                <div class="discount-item-text">
+                                                    <p>
+                                                        新開戶完成即享
+                                                        <br/>3筆定期定額終身0元優惠
+                                                        <br/>與紅利點數3000點
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-12 col-sm-24 text-center">
+                                                <div class="discount-item-head">
+                                                    <img src="images/giftIcon-2.png" alt="首購禮">
+                                                    首購禮
+                                                </div>
+                                                <div class="discount-item-tit">
+                                                    紅利<span class="text-blue">3,000點</span>
+                                                </div>
+                                                <div class="discount-item-text">
+                                                    <p>
+                                                        首次下單扣款成功
+                                                        <br/>得紅利點數3000點
+                                                        <br/>1點折抵1元手續費
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <sice-web-show>
+                                    <div class="btnArea twoBtn margin-top-30" data-aos="fade-up">
+                                        <div class="btn">
+                                            <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即申購">
+                                                立即申購 <i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn type2" data-aos="fade-up">
+                                            <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                                立即開戶 <i class="fas fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </sice-web-show>
+
+                                <sice-app-show>
+                                    <div class="btnArea margin-top-30" data-aos="fade-up">
+                                        <sice-login-show>
+                                            <div class="btn">
+                                                <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即申購">
+                                                    立即申購 <i class="fas fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </sice-login-show>
+                                        <sice-login-hide>
+                                            <div class="btn type2">
+                                                <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
+                                                    立即開戶 <i class="fas fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </sice-login-hide>
+                                    </div>
+                                </sice-app-show>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </article>
+
+                <!-- footer -->
+                <footer-area></footer-area>
+
+                <div class="topBtn">
+                    <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                        <span>
+                            <i class="fas fa-caret-up"></i>
+                            TOP
+                        </span>
+                    </a>
+                </div>
+
+                <sice-web-show>
+                    <div class="fixedRightBtn-area twoBtn clearfix">
+                        <div class="fixedRightBtn">
+                            <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+                                立即下單 <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="fixedRightBtn type2">
+                            <a href="https://etrade.franklin.com.tw/OpenAccount/" target="_blank" title="線上開戶">
+                                線上開戶 <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </sice-web-show>
+
+                <sice-app-show>
+                    <div class="fixedRightBtn-area clearfix">
+                        <sice-login-show>
+                            <div class="fixedRightBtn">
+                                <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單">
+                                    立即下單 <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-show>
+                        <sice-login-hide>
+                            <div class="fixedRightBtn type2">
+                                <a href="https://etrade.franklin.com.tw/OpenAccount/" target="_blank" title="線上開戶">
+                                    線上開戶 <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-hide>
+                    </div>
+                </sice-app-show>
+
+                <!-- <modal ref="warning" :can-close="false" class="md">
+                    <slot slot="infoArea">
+                        xxxx
+                    </slot>
+                </modal> -->
+                
+            </sice-provider>
+        </div>
+
+        <script src="js/main.min.js?v=20220412_2"></script>
+        <!-- <script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script> -->
+
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/0389e2f534.js" crossorigin="anonymous"></script>
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-586SXP");
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

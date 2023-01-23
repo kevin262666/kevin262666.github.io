@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+.fundSmallFile {
+    &-head {
+        margin: 15px 0px;
+        border: solid 1px $color-border;
+        border-radius: 5px;
+        &-fundName,
+        &-fundNameEn {
+            padding: 10px 15px;
+        }
+        &-fundName {
+            border-radius: 5px 5px 0px 0px;
+            background: $color-blockBg;
+            // color: $color-baseBlue;
+            // font-weight: bold;
+        }
+        &-fundNameEn {
+            font-size: 14px;
+            border-radius: 0px 0px 5px 5px;
+            // border: solid 1px $color-border;
+            // border-top: none;
+            color: $color-gray1;
+        }
+    }
+    &-main {
+
+    }
+    &-chart {
+        &-bottom {
+            background: $color-blockBg;
+            padding: 15px 15px;
+            margin: 15px 0px;
+        }
+    }
+    &-table {
+        margin: 10px 0px;
+    }
+    &-yearFilter {
+        max-width: 100px;
+        margin: 0px 0 15px auto;
+    }
+    @include maxWidth-sm {
+        &-chart {
+            .highcharts {
+                &-button text {
+                    transform: translate(0, 6px);
+                }
+                &-range-selector-buttons > text {
+                    display: none;
+                }
+            }
+            &-bottom {
+                span {
+                    display: block;
+                }
+                .el-divider {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.highcharts-range-selector-buttons > text {
+    // display: none;
+}

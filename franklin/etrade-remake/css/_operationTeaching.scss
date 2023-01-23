@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+.teaching {
+    &-openBtn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: $zIndex-lv2;
+    }
+    &-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        background: rgba(#000, 0.75);
+        z-index: $zIndex-lv3;
+    }
+    &-closeBtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        line-height: 1;
+        z-index: $zIndex-lv3;
+    }
+    &-content {
+        position: fixed;
+        z-index: $zIndex-lv3;
+        top: 0px;
+        bottom: 0;
+        box-sizing: border-box;
+        overflow-y: auto;
+        width: 100%;
+        // max-height: 100vh;
+    }
+    &-container {
+        .slick {
+            &-slider {
+                margin-bottom: 0;
+            }
+            &-dots {
+                margin: 0;
+            }
+        }
+        .btnArea {
+            margin: 0;
+            position: fixed;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            .el-button {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-img {
+        // border-radius: 5px;
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+    }
+    &-description {
+        color: #fff;
+        font-size: 18px;
+    }
+    @include maxWidth-lg {
+        &-openBtn {
+            top: -6px;
+            transform: translateY(0);
+        }
+    }
+    @include maxWidth-md {
+        &-openBtn {
+            position: fixed;
+            top: auto;
+            right: auto;
+            bottom: 10px;
+            left: 5px;
+        }
+    }
+    @include maxWidth-sm {
+        // &-mask {
+        //     bottom: 65px;
+        // }
+        &-closeBtn {
+            right: 5px;
+            top: 5px;
+        }
+        &-content {
+            // bottom: 65px;
+        }
+        &-container {
+            // padding: 20px 10px 0;
+            .btnArea {
+                bottom: 15px;
+            }
+        }
+        &-img {
+        }
+        &-description {
+            font-size: 16px;
+        }
+    }
+}

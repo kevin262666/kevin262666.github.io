@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#003680" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+
+        <title>富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金</title>
+        <meta property="og:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+        <meta name="twitter:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+
+        <meta name="description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta property="og:description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta name="twitter:description" content="富蘭克林‧國民ｅ帳戶" />
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <!-- <meta property="og:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:card" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" /> -->
+
+        <!-- <meta property="og:url" content="https://event.franklin.com.tw/insurance-area/index.html" /> -->
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <script src="js/polyfill.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="js/vue-router.js"></script>
+
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <!-- app -->
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+        <script src="js/highstock.js"></script>
+
+        <!-- element ui start-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/display.css" />
+        <!--可視化調整&下載區 https://element.eleme.io/#/zh-CN/theme/preview-->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="js/element-ui.js"></script>
+        <!-- <script src="//unpkg.com/element-ui/lib/umd/locale/zh-TW.js"></script> -->
+        <script src="js/zh-TW.js"></script>
+        <!-- element ui end-->
+
+        <link rel="stylesheet" href="css/style.css?v=20210309" />
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-586SXP");
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">
+            //APP用的js
+        </script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+            //APP用的js
+        </script> -->
+    </head>
+
+    <body class="notLoggedIn">
+        <!-- Google Tag Manager -->
+        <!-- <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript> -->
+        <!-- End Google Tag Manager -->
+
+        <div id="content" v-cloak>
+            <!-- <sice-provider> -->
+                <!-- <sice-provider :mock-data="{ isApp: true, isLogin: false, openLog: true}"> -->
+
+                <div id="top"></div>
+
+                <!-- main -->
+                <article class="main">
+                    <div class="container">
+                        <div class="channelReward">
+                            <el-card shadow="always">
+                                <h1 class="tit-type1 text-center" title="富蘭克林證券投資顧問股份有限公司通路報酬揭露">
+                                    富蘭克林證券投資顧問股份有限公司<br/>通路報酬揭露
+                                </h1>
+                                <div class="tit-type2">
+                                    本公司銷售
+                                    <b>
+                                        富蘭克林公用事業基金美元A股
+                                    </b>
+                                    所收取之通路報酬如下：
+                                </div>
+
+                                <h2 class="tit-type2 margin-bottom-5" title="ㄧ、投資人支付">
+                                    ㄧ、投資人支付
+                                </h2>
+                                <el-table
+                                    :data="channelReward.table1"
+                                    style="width: 100%; margin-top: 5px"
+                                    size="mini"
+                                    border>
+                                    <el-table-column
+                                        prop="tit"
+                                        label="項目"
+                                        :width="channelReward.tdWidth[0]">
+                                        <template slot-scope="scope">
+                                            <span v-html="scope.row.tit"></span>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="info"
+                                        label="說明"
+                                        :width="channelReward.tdWidth[1]">
+                                        <template slot-scope="scope">
+                                            <ol>
+                                                <li v-for="(item, index) in scope.row.info" :key="index" v-html="item"></li>
+                                            </ol>
+                                        </template>
+                                    </el-table-column>
+                                </el-table>
+
+                                <h2 class="tit-type2 margin-bottom-5" title="二、基金公司（或總代理人/境外基金機構）支付">
+                                    二、基金公司（或總代理人/境外基金機構）支付
+                                </h2>
+                                <el-table
+                                    :data="channelReward.table2"
+                                    style="width: 100%; margin-top: 5px"
+                                    size="mini"
+                                    border>
+                                    <el-table-column
+                                        prop="tit"
+                                        label="項目"
+                                        :width="channelReward.tdWidth[0]">
+                                        <template slot-scope="scope">
+                                            <span v-html="scope.row.tit"></span>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="info"
+                                        label="說明"
+                                        :width="channelReward.tdWidth[1]">
+                                        <template slot-scope="scope">
+                                            <span v-html="scope.row.info"></span>
+                                        </template>
+                                    </el-table-column>
+                                </el-table>
+
+                                <h2 class="tit-type2 margin-bottom-5" title="三、其他報酬：">
+                                    三、其他報酬：
+                                </h2>
+                                <p class="margin-top-5">
+                                    本公司無收取。
+                                </p>
+
+                                <div class="tradingProcess-card-content">
+                                    <p>
+                                        <b>範例：</b>「富蘭克林黃金基金美元A股」之申購手續費 <b class="text-red">3.00%</b> 及基金經理費(含經銷費(12b-1 Fee))年率 <b class="text-red">0.7330%</b>，本公司銷售之申購手續費分成不多於 <b class="text-red">3.00%</b>、經理費分成不多於 <b class="text-red">0.25%</b>。故 台端每投資100,000元於「富蘭克林黃金基金美元A股」，本公司每年收取之通路報酬如下：
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            由	台端所支付之3,000元申購手續費中收取不多於3,000元(100,000＊3.00%=3,000元)
+                                        </li>
+                                        <li>
+                                            境外基金機構支付：
+                                            <ol>
+                                                <li>
+                                                    台端持有本基金期間之經理費分成：不多於250元(100,000＊0.25%＝250元) 
+                                                </li>
+                                                <li>
+                                                    產品說明會及員工教育訓練：0元
+                                                </li>
+                                                <li>
+                                                    其他報酬：0元。
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <el-divider></el-divider>
+
+                                <template v-if="true">
+                                    <h2 class="tit-type2 margin-bottom-5" title="基金各級別近五年費用率及報酬率表">
+                                        基金各級別近五年費用率及報酬率表
+                                    </h2>
+                                    <el-table
+                                        :data="channelReward.table3"
+                                        style="width: 100%; margin-top: 5px"
+                                        size="mini"
+                                        :span-method="channelRewardTable3SpanMethod"
+                                        border>
+                                        <el-table-column
+                                            prop="fund"
+                                            label="基金名稱"
+                                            :width="channelReward.tdWidth[2]">
+                                        </el-table-column>
+                                        <el-table-column
+                                            prop="year"
+                                            label="年度"
+                                            :width="channelReward.tdWidth[3]">
+                                        </el-table-column>
+                                        <el-table-column
+                                            prop="rateOfReturn"
+                                            label="報酬率(單位:%)"
+                                            :width="channelReward.tdWidth[4]">
+                                        </el-table-column>
+                                        <el-table-column
+                                            prop="expenseRatio"
+                                            label="費用率(單位:%)"
+                                            :width="channelReward.tdWidth[5]">
+                                        </el-table-column>
+                                    </el-table>
+                                </template>
+                                <template v-else>
+                                    <p>
+                                        註：本基金為新成立基金，無近五年費用率及報酬率資料。
+                                    </p>
+                                </template>
+
+                                <div class="channelReward-warningContent">
+                                    <p>
+                                        <b>
+                                            本公司辦理基金銷售業務，係自各境外基金機構、總代理人及證券投資信託事業收取通路 報酬（各項報酬、費用及其他利益），以支應客戶服務及行銷成本。惟因各基金性質不同且各基金公司之行銷策略不同，致本公司提供不同基金時，自各基金公司收取通路報酬之項目及金額因而有所不同。本公司及業務人員所推介銷售之富蘭克林黃金基金美元A股，容或與  台端個人投資之利益不相一致，請  台端依個人投資目標及基金風險屬性，慎選投資標的。
+                                        </b>
+                                    </p>
+                                </div>
+                            </el-card>
+
+                            <p>
+                                台端所申購之基金有不同級別，台端應於申購前充分瞭解該檔基金各級別之不同，如為不同計價幣別、配息或不配息、手續費為前收或後收等，以投資合適之級別。不同級別之費用率與報酬率或有差異，請詳閱<b>「基金各級別近五年費用率及報酬率表」</b>之該檔基金各級別近五年度之費用率與報酬率資訊
+                            </p>
+                            <p>
+                                註：投資人若欲詳知富蘭克林證券投顧總代理之所有境外基金經理費率，可至富蘭克林基金理財網( <el-link type="primary" href="https://www.Franklin.com.tw" target="_blank">https://www.Franklin.com.tw</el-link> )或境外基金資訊觀測站( <el-link type="primary" href="https://www.Franklin.com.tw" target="_blank">http://www.fundclear.com.tw</el-link> )下載基金公 開說明書及投資人須知查詢。
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 實驗用 切換深色模式 -->
+                <el-switch
+                    v-model="darkMode"
+                    active-color="#ccc"
+                    inactive-color="#000"
+                    class="switchDarkMode"
+                >
+                </el-switch>
+
+                <div class="topBtn">
+                    <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                        <span>
+                            <i class="fas fa-caret-up"></i>
+                            TOP
+                        </span>
+                    </a>
+                </div>
+
+            <!-- </sice-provider> -->
+        </div>
+
+        <!-- 官網寫法參考用 start -->
+        <!-- <script type="text/javascript">
+            $.ajaxSetup({ cache: false });
+            var _inputPosition = { x: -50, y: 0 };
+            //設定資料來源
+            var navDataUrl = 'js/NavData_4000.json';
+            var c = "淨值";
+        </script>
+        <script type="text/javascript">
+            $.ajaxSetup({ cache: false });
+            var _inputPosition = { x: -50, y: 0 };
+            //設定資料來源
+            var performanceDataUrl = 'js/RewardData_4000.json';
+            var navName = "報酬率";
+        </script> -->
+        <!-- 官網寫法參考用 end -->
+
+        <script src="js/main.min.js?v=20210315"></script>
+        <script>
+            document.body.classList.remove('fixedBody');
+        </script>
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+.calendar {
+    font-size: 0px;
+    margin: 15px 0px;
+    position: relative;
+    &-date {
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        width: calc(14.28571% - 6px);
+        text-align: center;
+        font-size: $fontSize-base;
+        // border: solid 1px $color-divider2;
+        cursor: pointer;
+        transition: 0.3s ease-in-out all;
+        padding: 5px;
+        position: relative;
+        border-radius: 5px;
+        margin: 3px;
+        // transition: 0.3s ease-in-out all;
+        background: #fff;
+        &-num {
+            position: relative;
+            z-index: $zIndex-lv1;
+        }
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transition: 0.3s ease-in-out all;
+        }
+        &:nth-of-type(29),
+        &:nth-of-type(30),
+        &:nth-of-type(31) {
+            color: $color-danger;
+        }
+        &.original {
+            color: $color-baseBlue;
+            font-weight: bold;
+            &:before {
+                background: none;
+                border: dotted 2px $color-border;
+                opacity: 1;
+            }
+        }
+    }
+    &:not(.disabled) {
+        .calendar-date {
+            &:hover {
+                color: $color-blue1;
+                background: rgba(#fff, 0.3);
+            }
+            &.active {
+                color: #fff;
+                &:before {
+                    background: $color-baseBlue;
+                    border: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-errorText {
+        display: none;
+        color: $color-danger;
+        font-size: 14px;
+    }
+    &.is-error {
+        .calendar {
+            &-date {
+                box-shadow: 0px 0px 0px 1px $color-danger inset;
+            }
+            &-errorText {
+                display: block;
+            }
+        }
+    }
+    &.disabled {
+        .calendar-date {
+            cursor: not-allowed;
+        }
+    }
+    @include maxWidth-sm {
+        &-date {
+            font-size: 14px;
+            margin: 2px;
+            width: calc(14.28571% - 4px);
+            padding: 9px 0px;
+        }
+    }
+}

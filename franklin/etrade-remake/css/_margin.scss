@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+.margin {
+    @for $direction_n from 1 through length($direction) {
+        // 跑迴圈-方向的數量
+        &-#{nth($direction, $direction_n)} {
+            // 取"方向"陣列的值
+
+            @for $marginWidth_n from 1 through length($marginWidth) {
+                // 跑回圈-間距寬度 的數量
+                &-#{nth($marginWidth, $marginWidth_n)} {
+                    //取"間距寬度"的值
+                    margin-#{nth($direction, $direction_n)}: nth($marginWidth, $marginWidth_n) + px; // 取方向的值給margin   間距寬度的值給單位
+                }
+            }
+
+            @for $size_n from 1 through length($size) {
+                // 跑迴圈-尺寸代號(ex:xl、lg、md) 的數量
+                &-#{nth($size, $size_n)} {
+                    // 取"尺寸代號"陣列的值
+                    @media screen and (max-width: map-get($mediaWidth, #{nth($size, $size_n)})) {
+                        // 取"瀏覽器寬度"陣列的值寫media  名稱變數用"尺寸代號"的
+                        @for $marginWidth_n from 1 through length($marginWidth) {
+                            // 跑回圈-間距寬度 的數量
+                            &-#{nth($marginWidth, $marginWidth_n)} {
+                                //取"間距寬度"的值
+                                margin-#{nth($direction, $direction_n)}: nth($marginWidth, $marginWidth_n) + px; // 取方向的值給margin   間距寬度的值給單位
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* 編譯說明
+    ``` scss例
+    .margin {
+        &-top {
+            &-sm {
+                @media screen and (max-width: 767px) {
+                    &-10 {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    ```
+    編譯出來的css 例：
+    ``` css
+    @media screen and (max-width: 767px) {
+        .margin-top-sm-10 {
+            margin-top: 10px;
+        }
+    }
+    ```
+*/

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+// reset ========================================================================
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: $fontFamily-base;
+    // font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    color: $color-fontColor;
+    font-size: $fontSize-base;
+    line-height: $lineHeight-base;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%; /*強制瀏覽器不要縮放文字*/
+    overflow-x: hidden;
+    @include maxWidth-md {
+        // font-size: 16px;
+    }
+}
+
+/*控制文字選取時的顏色*/
+::selection {
+    background: #b3e27b;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: $color-blue1;
+}
+
+img {
+    outline: none;
+    border: none;
+}
+
+p {
+    margin: 15px 0px;
+}
+
+ul,
+ol {
+    margin: 15px 0px;
+    padding-left: 20px;
+    li {
+        padding-bottom: 3px;
+        &:last-of-type {
+            padding-bottom: 0px;
+        }
+        ul,
+        ol {
+            margin: 3px 0px 0px;
+        }
+    }
+}
+// ol {
+//     & > li > ol {
+//         list-style: none;
+//         & > li {
+//             position: relative;
+//             padding-left: 5px;
+//             &:before {
+//                 content: "";
+//                 position: absolute;
+//                 left: -20px;
+//                 top: 3px;
+//                 font-size: small;
+//                 // color: #fff;
+//                 border: solid 1px;
+//                 border-radius: 20px;
+//                 text-align: center;
+//                 line-height: 17px;
+//                 min-width: 17px;
+//             }
+//             @for $n from 1 through 99 {
+//                 &:nth-of-type(#{$n}) {
+//                     &:before {
+//                         content: "#{$n}";
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @for $direction_n from 1 through length($direction) {
+
+// scrollBar ========================================================================
+// @media screen and (min-width: 992px) {
+//     ::-webkit-scrollbar {
+//         width: 5px;
+//     }
+//     ::-webkit-scrollbar-track {
+//         background-color: $color-baseBlue;
+//     }
+//     ::-webkit-scrollbar-thumb {
+//         background-color: #539011;
+//         border-radius: 20px;
+//     }
+//     ::-webkit-scrollbar-button {
+//         background-color: $color-baseBlue;
+//     }
+//     ::-webkit-scrollbar-corner {
+//         background-color: black;
+//     }
+// }
+
+// input ========================================================================
+input,
+button,
+select {
+    outline: none;
+    font-family: $fontFamily-base;
+}
+
+// base ========================================================================
+#content {
+    overflow-x: hidden;
+    overflow: hidden;
+    &[v-cloak] {
+        opacity: 0;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0px;
+    // width: 1000px;
+    margin: 0px 24px;
+    padding-left: 260px;
+    // @include maxWidth-lg {
+    //     margin: 0px 65px;
+    //     width: auto;
+    // }
+    @include maxWidth-lg {
+        // margin: 0px 25px;
+        padding-left: 0px;
+    }
+    @include maxWidth-sm {
+        margin: 0px 10px;
+    }
+}
+
+.link {
+    border-bottom: solid 1px;
+    color: #005aef;
+    &:hover {
+        border-bottom: none;
+    }
+}
+.fundFocus {
+    color: #519e2f;
+}
+.focusText {
+    color: $color-baseBlue;
+}
+.remark {
+    font-size: 14px;
+    color: $color-gray1;
+}
+
+.hide {
+    display: none !important;
+}
+
+.mobileShow {
+    display: none !important;
+}
+@include maxWidth-md {
+    .pcShow {
+        display: none !important;
+    }
+    .mobileShow {
+        display: initial !important;
+    }
+}
+
+.fontSizeZero {
+    font-size: 0px;
+}
+
+.fixedBody {
+    overflow: hidden;
+    &-sm {
+        @include maxWidth-sm {
+            overflow: hidden;
+        }
+    }
+}
+
+//--fontAwesome ========================================================================
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 900;
+}
+
+//--解決animate.css引起的z-index問題 ========================================================================
+.animated {
+    animation-fill-mode: backwards;
+}
+
+//--分隔線 ========================================================================
+.dividingLine {
+    margin: 40px 0px;
+    border-bottom: dashed 1px #bbb;
+    clear: both;
+}
+
+// youtube ==================================================
+.youtube {
+    width: 100%;
+    max-width: 600px;
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    img {
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    &-content {
+        position: relative;
+        padding-bottom: 56.25%;
+        // padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @include maxWidth-md {
+        max-width: 600px;
+    }
+}

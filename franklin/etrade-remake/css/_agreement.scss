@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.agreement {
+    height: 200px;
+    overflow-y: auto;
+    border: solid 1px $color-border;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin:  15px 0;
+}

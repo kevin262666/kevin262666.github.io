@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#003680" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+
+        <title>富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金</title>
+        <meta property="og:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+        <meta name="twitter:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+
+        <meta name="description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta property="og:description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta name="twitter:description" content="富蘭克林‧國民ｅ帳戶" />
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <!-- <meta property="og:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:card" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" /> -->
+
+        <!-- <meta property="og:url" content="https://event.franklin.com.tw/insurance-area/index.html" /> -->
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <script src="js/polyfill.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="js/vue-router.js"></script>
+
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <!-- app -->
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+        <script src="js/highstock.js"></script>
+
+        <!-- element ui start-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/display.css" />
+        <!--可視化調整&下載區 https://element.eleme.io/#/zh-CN/theme/preview-->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="js/element-ui.js"></script>
+        <!-- <script src="//unpkg.com/element-ui/lib/umd/locale/zh-TW.js"></script> -->
+        <script src="js/zh-TW.js"></script>
+        <!-- element ui end-->
+
+        <link rel="stylesheet" href="css/style.css?v=20210205" />
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-586SXP");
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">
+            //APP用的js
+        </script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+            //APP用的js
+        </script> -->
+    </head>
+
+    <body>
+        <!-- Google Tag Manager -->
+        <!-- <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript> -->
+        <!-- End Google Tag Manager -->
+
+        <div id="content" v-cloak>
+            <!-- <sice-provider> -->
+                <!-- <sice-provider :mock-data="{ isApp: true, isLogin: false, openLog: true}"> -->
+
+                <div id="top"></div>
+
+                <!-- header -->
+                <header class="header" :class="{'fixedHeader': menuShow}">
+                    <div class="container clearfix">
+                        <div class="logo">
+                            <router-link
+                                to="/"
+                                title="富蘭克林‧國民ｅ帳戶"
+                                @click.native="
+                                    windowWidth < 992 ? menuShow = false : ''
+                                    this.document.body.classList.remove('fixedBody-sm')
+                                "
+                            >
+                                <picture>
+                                    <source media="(max-width: 991px)" srcset="images/logo2019.svg" />
+                                    <img src="images/header-logo.png" alt="富蘭克林‧國民ｅ帳戶" />
+                                </picture>
+                                <div class="logo-text">富蘭克林‧國民ｅ帳戶</div>
+                            </router-link>
+                        </div>
+
+                        <el-collapse-transition>
+                            <div class="header-right" v-show="menuShow">
+                                <div class="header-right-btn-area">
+                                    <div class="header-right-btn headerNotification">
+                                        <a href="javascript:void(0);">
+                                            <i class="far fa-bell">
+                                                <div class="headerNotification-num"></div>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <div class="header-right-btn signOutBtn">
+                                        <a href="javascript:void(0);" title="登出">
+                                            登出
+                                            <i class="fas fa-sign-out-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header-right-memberMenu">
+                                    <el-dropdown>
+                                        <span class="el-dropdown-link">
+                                            <img src="images/membershipLevel-3.png" alt="鑽石會員" class="header-right-memberMenu-btn" />
+                                        </span>
+                                        <el-dropdown-menu slot="dropdown" class="linkType">
+                                            <el-dropdown-item>
+                                                <a href="#" title="登出">
+                                                    登出
+                                                    <i class="fas fa-sign-out-alt"></i>
+                                                </a>
+                                            </el-dropdown-item>
+                                            <el-dropdown-item v-for="(item, index) in menu[0].content" :key="index" :divided="item.divided">
+                                                <router-link
+                                                    :to="item.link"
+                                                    :title="item.title"
+                                                >
+                                                    {{item.title}}
+                                                </router-link>
+                                            </el-dropdown-item>
+                                        </el-dropdown-menu>
+                                    </el-dropdown>
+                                </div>
+                                <div class="mobileNavbar">
+                                    <div class="mobileNavbar-item" v-for="(item, index) in menu" :key="index">
+                                        <div class="mobileNavbar-item-tit" @click="item.toggle = !item.toggle" :class="{'active': item.content != false && item.toggle}">
+                                            <!-- <a :href="item.link == '' ? 'javascript:void(0)' : item.link" :title="item.title">
+                                                <b>{{item.title}}</b> <i class="fas fa-angle-down" v-if="item.content != false"></i>
+                                            </a> -->
+                                            <router-link
+                                                :to="item.link == '' ? '' : item.link"
+                                                :title="item.title"
+                                                @click.native="
+                                                    item.link == '' ? '' : (menuShow = false, this.document.body.classList.remove('fixedBody-sm'));
+                                                "
+                                            >
+                                                <b>{{item.title}}</b>
+                                                <i class="fas fa-angle-down" v-if="item.content != false"></i>
+                                            </router-link>
+                                        </div>
+                                        <el-collapse-transition>
+                                            <ul class="mobileNavbar-item-content" v-show="item.toggle">
+                                                <li v-for="(item2, index2) in item.content" :key="index2">
+                                                    <router-link
+                                                        :to="item2.link"
+                                                        :title="item2.title"
+                                                        @click.native="menuShow = false; $scrollTo('body'); this.document.body.classList.remove('fixedBody-sm')"
+                                                    >
+                                                        {{item2.title}}
+                                                    </router-link>
+                                                </li>
+                                            </ul>
+                                        </el-collapse-transition>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-collapse-transition>
+
+                        <div
+                            class="menuBtn"
+                            :class="{'active': menuShow}"
+                            @click="
+                                menuShow = !menuShow;
+                                menuShow ? this.document.body.classList.add('fixedBody-sm') : this.document.body.classList.remove('fixedBody-sm')
+                            "
+                        >
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </div>
+                    </div>
+                </header>
+                <div class="header-bottom">
+                    <div class="container">
+                        <nav class="pcNavbar">
+                            <template v-for="(item, index) in menu">
+                                <el-dropdown :key="index" placement="bottom-start" v-if="item.content != false">
+                                    <a href="javascript:void(0);" :title="item.title" class="el-dropdown-link">
+                                        {{item.title}}
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <el-dropdown-menu slot="dropdown" class="linkType">
+                                        <el-dropdown-item v-for="(item2, index2) in item.content" :key="index2" :divided="item2.divided">
+                                            <router-link :to="item2.link" :title="item2.title">{{item2.title}}</router-link>
+                                        </el-dropdown-item>
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                                <div v-else class="el-dropdown">
+                                    <router-link :to="item.link" :title="item.title" class="el-dropdown-link"> {{item.title}} </router-link>
+                                </div>
+                            </template>
+
+                            <el-dropdown v-for="(item, index) in menu" :key="index" placement="bottom-start" v-if="false">
+                                <router-link :to="item.link == '' ? '' : item.link" :title="item.title" class="el-dropdown-link">
+                                    {{item.title}}
+                                    <i class="fas fa-angle-down" v-if="item.content != false"></i>
+                                </router-link>
+                                <el-dropdown-menu slot="dropdown" class="linkType" v-if="item.content != false">
+                                    <el-dropdown-item v-for="(item2, index2) in item.content" :key="index2">
+                                        <router-link :to="item2.link" :title="item2.title">{{item2.title}}</router-link>
+                                    </el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </nav>
+                        <div class="simpleMemberInfo" :class="{'indexStyle':$route.path === '/'}">
+                            <el-card shadow="always">
+                                <img src="images/membershipLevel-3.png" alt="" class="simpleMemberInfo-lvImg" />
+                                <div class="simpleMemberInfo-salutatory">
+                                    親愛的鑽石會員
+                                    <div class="simpleMemberInfo-salutatory-name"><strong>陳涵風</strong>，您好!</div>
+                                </div>
+                                <div class="simpleMemberInfo-content">
+                                    <div class="simpleMemberInfo-content-item">
+                                        投資總市值(新台幣)
+                                        <div class="simpleMemberInfo-content-price">
+                                            <strong>300,000</strong>
+                                        </div>
+                                    </div>
+                                    <div class="simpleMemberInfo-content-item">紅利點數：1,500</div>
+                                    <div class="simpleMemberInfo-content-item">
+                                        邀請親友開戶
+                                        <br />
+                                        輸入專屬推薦碼
+                                        <el-tooltip effect="dark" content="複製" placement="top-start">
+                                            <span class="referralCode">
+                                                <b>FT1143</b>
+                                                <i class="far fa-copy"></i
+                                            ></span>
+                                        </el-tooltip>
+                                        <br />
+                                        <div class="breakBlock"></div>
+                                        兩人一起拿優惠
+                                    </div>
+                                </div>
+                            </el-card>
+                            <slick
+                                v-if="windowWidth > 991"
+                                ref="slick"
+                                :options="adBannerOptions"
+                                @afterChange="handleAfterChange"
+                                @beforeChange="handleBeforeChange"
+                                @breakpoint="handleBreakpoint"
+                                @destroy="handleDestroy"
+                                @edge="handleEdge"
+                                @init="handleInit"
+                                @reInit="handleReInit"
+                                @setPosition="handleSetPosition"
+                                @swipe="handleSwipe"
+                                @lazyLoaded="handleLazyLoaded"
+                                @lazyLoadError="handleLazeLoadError"
+                            >
+                                <div v-for="(item, index) in adBanner" :key="index">
+                                    <a :href="item.link" :title="item.title" target="_blank">
+                                        <img :src="item.imgSrc" :alt="item.title" />
+                                    </a>
+                                </div>
+                            </slick>
+                            <div class="goHome">
+                                <router-link to="/" title="回首頁">回首頁</router-link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- main -->
+                <article class="main">
+                    <div class="container">
+                        <!-- <router-link to="/foo">Go to Foo</router-link>
+						<router-link to="/bar">Go to Bar</router-link>
+                        <router-view></router-view> -->
+
+                        <el-button round @click="notesOnConversionFees = true;">Dialog常用樣式</el-button>
+
+                        <!-- 轉換手續費須知dialog -->
+                        <el-dialog title="Dialog常用樣式" :visible.sync="notesOnConversionFees">
+                            
+                            <!-- 內容 start -->
+                            <p>
+                                內容放置區
+                            </p>
+                            <!-- 內容 end -->
+
+                            <span slot="footer" class="dialog-footer">
+                                <el-button round @click="notesOnConversionFees = false;"> 關閉/取消 </el-button>
+                                <el-button round type="primary" @click.native="notesOnConversionFees = false;" @click.prevent="$scrollTo('body')"> 確認/同意 </el-button>
+                            </span>
+                        </el-dialog>
+
+                        <el-divider></el-divider>
+
+                        <el-button round @click="failurePopUp">popup樣式示意</el-button>
+                        <p>
+                            <b>說明：</b><br/>
+                            用elementUi的【MessageBox-居中布局】樣式 & 增加自訂的classNamr【popUpStyle】改裝而成
+                        </p>
+
+                    </div>
+                </article>
+
+                <!-- footer -->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-header clearfix">
+                            <div class="footer-header-left">
+                                <div class="footer-header-left-logo">
+                                    <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+                                        <img src="https://event.franklin.com.tw/commonResources/images/footer-logo.png" alt="富蘭克林證券投顧" />
+                                    </a>
+                                </div>
+                                <div class="footer-header-left-companyName">富蘭克林證券投資顧問(股)公司</div>
+                                <div class="footer-header-left-idCode">101年金管投顧新字第025號 | 富蘭克林證券投顧獨立經營管理</div>
+                            </div>
+                            <div class="footer-header-right">
+                                <ul class="footer-header-right-socialMedia">
+                                    <li>
+                                        <a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+                                            <i class="fab fa-facebook-square"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+                                            <i class="fab fa-line"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="footer-header-right-phone">
+                                    <div class="footer-header-right-phone-tit">國民理財專線：</div>
+                                    <div class="footer-header-right-phone-phone">
+                                        <a href="tel:0800-885-888" title="國民理財專線"> 0800-885-888 </a>
+                                    </div>
+                                </div>
+                                <div class="footer-header-right-address">106台北市大安區忠孝東路四段87號8樓</div>
+                                <div class="footer-header-right-telAndFax">電話: (02)2781-0088　傳真: (02)2781-7788</div>
+                            </div>
+                        </div>
+                        <div class="footer-warning">
+                            <ul>
+                                <li v-for="(item, index) in footerWarningList" :key="index" v-html="item.info"></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <div>版權所有富蘭克林證券投顧 FRANKLIN TEMPLETON INVESTMENTS</div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- 實驗用 切換深色模式 -->
+                <el-switch
+                    v-model="darkMode"
+                    active-color="#ccc"
+                    inactive-color="#000"
+                    class="switchDarkMode"
+                >
+                </el-switch>
+
+                <div class="topBtn">
+                    <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                        <span>
+                            <i class="fas fa-caret-up"></i>
+                            TOP
+                        </span>
+                    </a>
+                </div>
+
+            <!-- </sice-provider> -->
+        </div>
+
+        <!-- 官網寫法參考用 start -->
+        <!-- <script type="text/javascript">
+            $.ajaxSetup({ cache: false });
+            var _inputPosition = { x: -50, y: 0 };
+            //設定資料來源
+            var navDataUrl = 'js/NavData_4000.json';
+            var c = "淨值";
+        </script>
+        <script type="text/javascript">
+            $.ajaxSetup({ cache: false });
+            var _inputPosition = { x: -50, y: 0 };
+            //設定資料來源
+            var performanceDataUrl = 'js/RewardData_4000.json';
+            var navName = "報酬率";
+        </script> -->
+        <!-- 官網寫法參考用 end -->
+
+        <script src="js/main.min.js?v=20210205"></script>
+        <script>
+            document.body.classList.remove('fixedBody');
+        </script>
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>

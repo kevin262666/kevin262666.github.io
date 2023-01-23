@@ -1,0 +1,596 @@
+@charset 'utf-8';
+
+.fundList {
+    margin: 40px 0px;
+    &:first-of-type {
+        margin-top: 25px;
+    }
+    &:last-of-type {
+        margin-bottom: 25px;
+    }
+    &-area {
+    }
+    .el-card {
+        position: relative;
+        z-index: 1;
+    }
+    &-header {
+        margin: 10px 0px;
+        // cursor: pointer;
+        &-content {
+            font-size: 0px;
+            cursor: pointer;
+        }
+        &-btnArea {
+            text-align: right;
+        }
+
+        // 有checkbox
+        &.hasCheckbox {
+            position: relative;
+            padding-left: 30px;
+            .el-checkbox {
+                position: absolute;
+                left: 0px;
+                top: 4px;
+            }
+        }
+    }
+    &-promptIcon {
+        padding-top: 5px;
+        color: $color-gray1;
+        position: relative;
+        left: -4px;
+        .fa-ellipsis-v {
+            height: 16px;
+            &:before {
+                content: '';
+                border-radius: 100%;
+                width: 3.5px;
+                height: 3.5px;
+                background: $color-gray1;
+                display: block;
+                box-shadow: 0px 6.5px 0px $color-gray1,
+                            0px 13px 0px $color-gray1;
+            }
+        }
+    }
+    &-fundCode,
+    &-transactionMethod,
+    &-dealDate {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px 0px;
+        margin-right: 10px;
+    }
+    &-fundCode,
+    &-dealDate {
+        font-size: 14px;
+        color: $color-gray1;
+    }
+    &-fundCode,
+    &-transactionMethod,
+    &-dealDate {
+        border: solid 1px;
+        line-height: 23px;
+        padding: 0px 10px;
+    }
+    &-fundCode {
+        border-color: transparent;
+        padding: 0;
+    }
+    &-transactionMethod {
+        font-size: $fontSize-base;
+        &.info {
+            color: $color-baseBlue;
+        }
+        &.success {
+            color: $color-success;
+        }
+        &.warning {
+            color: $color-warning;
+        }
+        &.danger {
+            color: $color-red1;
+        }
+    }
+    &-dealDate {
+    }
+    &-fundName {
+        margin: 0px;
+        font-size: 20px;
+        line-height: 1.3;
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        .openFundSmallFile {
+            position: absolute;
+            top: -1px;
+            left: -4px;
+            font-size: 18px;
+            // color: $color-blue2;
+            color: $color-gray1;
+            padding: 2px 4px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out all;
+            border: solid 1px transparent;
+            &:hover {
+                // background: $color-blockBg;
+                border-color: $color-border;
+            }
+        }
+        &.noFundSmallFile {
+            padding-left: 0;
+        }
+        &.small {
+            font-size: $fontSize-sTit;
+        }
+    }
+    &-infoItem {
+        background: $color-blockBg;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin: 10px -5px;
+        padding: 10px 40px;
+        table {
+            width: 100%;
+            border-spacing: 0px;
+            tr {
+                font-size: 18px;
+                td {
+                    padding: 0px 10px;
+                    span, b {
+                        vertical-align: middle;
+                    }
+                    .focus {
+                        color: $color-baseBlue;
+                    }
+                    .remark {
+                        line-height: 1.2;
+                    }
+                    .el-tooltip:not(.cursor-pointer) {
+                        cursor: auto;
+                    }
+                }
+                &.head {
+                    font-size: 14px;
+                    color: $color-gray1;
+                }
+            }
+        }
+    }
+    &-detail {
+        border-top: solid 1px $color-divider2;
+        padding: 1px 0px;
+        &-item {
+            margin: 15px 0px;
+            border-bottom: dashed 1px $color-divider2;
+            padding-bottom: 10px;
+            &:first-of-type {
+                margin-top: 10px;
+            }
+            &:last-of-type {
+                margin-bottom: 10px;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            .fundList {
+                &-header {
+                    margin-bottom: -5px;
+                    &-content {
+                        cursor: auto;
+                    }
+                }
+                &-fundName {
+                    font-weight: 400;
+                    font-size: 18px;
+                    cursor: auto;
+                    .openFundSmallFile {
+                        top: -3px;
+                    }
+                }
+                &-warning {
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+    &-bottom {
+        &-content {
+            background: #fff;
+            border-radius: 0px 0px 10px 10px;
+            // padding: 24px 20px 12px;
+            padding: 24px 15px 12px;
+            margin-top: -12px;
+            &.priceNotificationType {
+                color: #fff;
+                background: $color-baseBlue;
+                &.pause {
+                    background: $color-gray1;
+                }
+            }
+        }
+    }
+    &-toggleDetailBtn {
+        float: right;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 0px 0px 10px 10px;
+        margin-right: 10px;
+        margin-left: 15px;
+        // margin-top: -1px;
+        padding: 3px 10px;
+        text-align: center;
+        min-width: 168px;
+        box-sizing: border-box;
+        transition: 0.3s ease all;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            box-shadow: 0 3px 6px 0 rgba(#000, 0.16);
+        }
+        & + .fundList-warning {
+            max-width: calc(100% - 190px);
+        }
+    }
+    &-warning {
+        // float: left;
+        position: relative;
+        box-sizing: border-box;
+        font-size: 14px;
+        padding-top: 4px;
+        padding-left: 22px;
+        i {
+            // color: $color-blue2;
+            // font-size: 18px;
+            @extend .tooltipUseIcon;
+            position: absolute;
+            top: 6px;
+            left: 0px;
+        }
+    }
+
+    // 沒有連結
+    &.noNext {
+        .fundList {
+            &-header-content,
+            &-fundName,
+            &-transactionMethod.el-tooltip:not(.cursor-pointer) {
+                cursor: auto;
+            }
+        }
+    }
+
+    // 不重要狀態
+    &.unimportant {
+        .el-card {
+            background: rgba(#fff, 0.2);
+            border-color: rgba(#fff, 0.5);
+            color: rgba($color-fontColor, 0.5);
+        }
+        .el-divider__text {
+            background: #ededed;
+            color: rgba($color-fontColor, 0.5);
+        }
+        .fundList {
+            &-infoItem table tr td .focus {
+                color: rgba($color-fontColor, 0.5);
+            }
+            &-bottom-content {
+                background: none;
+                border: solid 1px rgba(#fff, 0.5);
+                border-top: none;
+            }
+        }
+    }
+
+    // 已選擇狀態 - checkbox勾選
+    &.selected {
+        .el-card {
+            box-shadow: 0px 0px 0px 2px $color-baseBlue inset;
+        }
+    }
+
+    // 轉換的樣式
+    &.isChangeType {
+        h2.fundList-fundName {
+            font-size: 18px;
+        }
+    }
+    @at-root .changeTypeUse {
+        .el-divider--horizontal {
+            margin: 15px 0px;
+        }
+        .changeFundArrow {
+            font-size: 18px;
+        }
+    }
+    
+    @include maxWidth-lg {
+        &-infoItem {
+            padding: 10px 30px;
+        }
+    }
+    @include maxWidth-md {
+        &-infoItem {
+            padding: 10px 10px;
+        }
+    }
+    @include maxWidth-sm {
+        margin: 30px 0px;
+        &:first-of-type {
+            margin-top: 20px;
+        }
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+        &-transactionMethod,
+        &-dealDate {
+            line-height: 20px;
+            padding: 0px 5px;
+        }
+        &-transactionMethod {
+            font-size: 14px;
+        }
+        &-dealDate {
+            font-size: 12px;
+        }
+        &-fundName {
+            font-size: 18px;
+            line-height: 1.5;
+            .openFundSmallFile {
+                font-size: 14px;
+                left: 0;
+                border-color: $color-border;
+            }
+            &.small {
+                font-size: $fontSize-base;
+            }
+        }
+        &-infoItem {
+            margin: 10px 0px;
+            table tr {
+                font-size: 16px;
+                td {
+                    .focus {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        &-detail {
+            &-item {
+                .fundList-fundName {
+                    font-size: 16px;
+                }
+            }
+        }
+        &-bottom {
+            &-content {
+                padding: 24px 10px 12px;
+                font-size: 14px;
+            }
+        }
+        &-toggleDetailBtn {
+            font-size: 14px;
+            min-width: 126px;
+            & + .fundList-warning {
+                max-width: none;
+            }
+        }
+        &-warning {
+            font-size: 12px;
+            padding-left: 18px;
+            i {
+                // font-size: 12px;
+            }
+        }
+
+        // 轉換的樣式
+        &.isChangeType {
+            h2.fundList-fundName {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// 到價通知設定資訊
+.priceNotification {
+    &-info {
+        span {
+            vertical-align: middle;
+        }
+    }
+    &-settingBtnArea {
+        text-align: right;
+        .el-button {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    @include maxWidth-md {
+        &-info {
+            font-size: 14px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+    @include maxWidth-sm {
+        &-settingBtnArea {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+// 扣款日期資訊
+.dateOfDeduction {
+    text-indent: -84px;
+    padding-left: 84px;
+    span {
+        display: inline-block;
+        text-indent: 0px;
+    }
+    @include maxWidth-md {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+}
+
+// infoItem顯示數量
+@mixin fundListInfoItemShowQty() {
+    @for $n from 1 through 10 {
+        &-#{$n} {
+            table td {
+                &:nth-of-type(#{$n}) ~ td {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.fundList-infoItem {
+    &.baseShow {
+        @media screen and (min-width: map-get($mediaWidth, xxl)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.xxlShow {
+        @media screen and (max-width: map-get($mediaWidth, xxl)) and (min-width: map-get($mediaWidth, xl)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.xlShow {
+        @media screen and (max-width: map-get($mediaWidth, xl)) and (min-width: map-get($mediaWidth, lg)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.lgShow {
+        @media screen and (max-width: map-get($mediaWidth, lg)) and (min-width: map-get($mediaWidth, md)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.mdShow {
+        @media screen and (max-width: map-get($mediaWidth, md)) and (min-width: map-get($mediaWidth, sm)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.smShow {
+        @media screen and (max-width: map-get($mediaWidth, sm)) and (min-width: map-get($mediaWidth, xs)+1) {
+            @include fundListInfoItemShowQty();
+        }
+    }
+    &.xsShow {
+        @include maxWidth-xs {
+            @include fundListInfoItemShowQty();
+        }
+    }
+}
+
+@mixin fundListPopoverShowQty() {
+    @for $n from 1 through 10 {
+        &-#{$n} {
+            .popoverContent:nth-of-type(#{$n}) ~ .popoverContent {
+                display: block;
+            }
+        }
+    }
+}
+.fundList-popover {
+    .popoverContent {
+        display: none;
+    }
+    &.baseShow {
+        @media screen and (min-width: map-get($mediaWidth, xxl)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.xxlShow {
+        @media screen and (max-width: map-get($mediaWidth, xxl)) and (min-width: map-get($mediaWidth, xl)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.xlShow {
+        @media screen and (max-width: map-get($mediaWidth, xl)) and (min-width: map-get($mediaWidth, lg)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.lgShow {
+        @media screen and (max-width: map-get($mediaWidth, lg)) and (min-width: map-get($mediaWidth, md)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.mdShow {
+        @media screen and (max-width: map-get($mediaWidth, md)) and (min-width: map-get($mediaWidth, sm)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.smShow {
+        @media screen and (max-width: map-get($mediaWidth, sm)) and (min-width: map-get($mediaWidth, xs)+1) {
+            @include fundListPopoverShowQty();
+        }
+    }
+    &.xsShow {
+        @include maxWidth-xs {
+            @include fundListPopoverShowQty();
+        }
+    }
+}
+
+@mixin infoCardFundInfoShowQty() {
+    @for $n from 1 through 10 {
+        &-#{$n} {
+            .infoCard-fundInfo-item:nth-of-type(#{$n}) ~ .infoCard-fundInfo-item {
+                display: block;
+            }
+        }
+    }
+}
+.infoCard-fundInfo {
+    .infoCard-fundInfo-item {
+        display: none;
+    }
+    &.baseShow {
+        @media screen and (min-width: map-get($mediaWidth, xxl)+1) {
+            @include infoCardFundInfoShowQty();
+        }
+    }
+    &.xxlShow {
+        @media screen and (max-width: map-get($mediaWidth, xxl)) and (min-width: map-get($mediaWidth, xl)+1) {
+            @include infoCardFundInfoShowQty();
+        }
+    }
+    &.xlShow {
+        @media screen and (max-width: map-get($mediaWidth, xl)) and (min-width: map-get($mediaWidth, lg)+1) {
+            @include infoCardFundInfoShowQty();
+        }
+    }
+    &.lgShow {
+        @media screen and (max-width: map-get($mediaWidth, lg)) and (min-width: map-get($mediaWidth, md)+1) {
+            @include infoCardFundInfoShowQty();
+        }
+    }
+    &.mdShow {
+        @media screen and (max-width: map-get($mediaWidth, md)) and (min-width: map-get($mediaWidth, sm)+1) {
+            @include infoCardFundInfoShowQty();
+        }
+    }
+    @include maxWidth-sm {
+        .infoCard-fundInfo-item {
+            display: block;
+        }
+    }
+}
+
+// 頁籤內狀態
+.el-tab-pane {
+    .fundList {
+        &:first-of-type {
+            margin-top: 15px;
+        }
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+}

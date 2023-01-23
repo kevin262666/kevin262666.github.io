@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+
+.text {
+    font-size: $fontSize-base;
+    &-center {
+        text-align: center;
+        @for $size_n from 1 through length($size) {
+            &-#{nth($size, $size_n)} {
+                @media screen and (max-width: map-get($mediaWidth, #{nth($size, $size_n)})) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &-right {
+        text-align: right;
+        @for $size_n from 1 through length($size) {
+            &-#{nth($size, $size_n)} {
+                @media screen and (max-width: map-get($mediaWidth, #{nth($size, $size_n)})) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &-left {
+        text-align: left;
+        @for $size_n from 1 through length($size) {
+            &-#{nth($size, $size_n)} {
+                @media screen and (max-width: map-get($mediaWidth, #{nth($size, $size_n)})) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &-black {
+        color: $color-fontColor;
+    }
+    &-blue {
+        color: $color-baseBlue;
+    }
+    &-green {
+        color: $color-success;
+    }
+    &-red {
+        color: $color-danger;
+    }
+    &-yellow {
+        color: $color-yellow1;
+    }
+    &-underLine {
+        border-bottom: solid 1px;
+    }
+    @include maxWidth-md {
+        font-size: $fontSize-base;
+    }
+}
