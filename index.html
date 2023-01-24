@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+
+        <!-- <link rel="preload" href="images/reel2.webp" as="image" media="(min-width: 768px)" /> -->
+        <!-- <link rel="preload" href="images/reel2.webp" as="image"/> -->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#001a70" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" /> -->
+
+        <link rel="shortcut icon" href="portfolio/images/192x192.png" />
+        <link rel="apple-touch-icon" sizes="192x192" href="portfolio/images/192x192.png" />
+        <title>魏孝峯作品集 | Kwein Wei's Portfolio</title>
+        <meta property="og:title" content="魏孝峯作品集 | Kwein Wei's Portfolio" />
+        <meta name="twitter:title" content="魏孝峯作品集 | Kwein Wei's Portfolio" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "魏孝峯作品集 | Kwein Wei's Portfolio",
+                "url": "https://kevin262666.github.io/",
+                "logo": "https://kevin262666.github.io/portfolio/images/192x192.png",
+                "mainEntityOfPage":{
+                   "@type": "WebPage",
+                   "@id": "https://kevin262666.github.io/index.html"
+                },
+                "image":[
+                   "https://kevin262666.github.io/portfolio/images/fb.jpg"
+                ]
+             }
+        </script>
+
+        <meta property="og:type" content="website" />
+        <!-- <meta property="fb:app_id" content="1060402337367331" /> -->
+        <meta name="description" content="一位持續學習心理學&具備10年設計經驗的網頁設計師，擅長網頁設計、切版、UI Design，具備大型網站、EC網站、形象網站、活動網站開發經驗" />
+        <meta property="og:description" content="一位持續學習心理學&具備10年設計經驗的網頁設計師，擅長網頁設計、切版、UI Design，具備大型網站、EC網站、形象網站、活動網站開發經驗" />
+        <meta name="twitter:description" content="一位持續學習心理學&具備10年設計經驗的網頁設計師，擅長網頁設計、切版、UI Design，具備大型網站、EC網站、形象網站、活動網站開發經驗" />
+        <meta property="og:url" content="https://kevin262666.github.io/" />
+        <link rel="canonical" href="https://kevin262666.github.io/" />
+        <meta property="og:image" content="https://kevin262666.github.io/portfolio/images/fb.jpg" />
+        <meta name="twitter:image" content="https://kevin262666.github.io/portfolio/images/fb.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- <meta name="twitter:site" content="@franklin_tw" /> -->
+
+        <!-- <link rel="stylesheet" type="text/css" href="portfolio/css/slick.css" /> -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="portfolio/css/style.css" />
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-PXDK43H");
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <!-- google font start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700,900&display=swap" rel="stylesheet"> -->
+        <!-- google font end -->
+
+        <script src="https://kit.fontawesome.com/0389e2f534.js" crossorigin="anonymous"></script>
+
+        <script src="portfolio/js/vue-v2.js"></script>
+        <script src="portfolio/js/jquery-v3.4.min.js"></script>
+        <!-- <script src="portfolio/js/slick.min.js"></script> -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="portfolio/js/vue-scrollto.min.js"></script>
+        <script src="portfolio/js/httpVueLoader.js"></script>
+
+        <!-- 數字遞增動畫 -->
+        <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+
+        <!-- iOS 和 Android 的智能應用橫幅 -->
+        <!-- <meta name="apple-itunes-app" content="app-id=1508279002">
+        <meta name="google-play-app" content="app-id=com.sice_app">
+        <link href="css/jquery.smartbanner.css" rel="stylesheet">
+        <script src="js/jquery.smartbanner.js"></script>
+        <script type="text/javascript">
+            $(function() { $.smartbanner() } )
+        </script>
+        <style>
+            #smartbanner {position: relative!important;} #smartbanner .sb-info > span:last-of-type {display: none;} #smartbanner.android .sb-button span {display: none;} #smartbanner.android {border-top-color: #005598;}
+            .sb-button:before {content: '打開'; display: block; line-height: 28px; background: #005598; color: #fff;}
+        </style> -->
+
+        <!-- scrollMagic + tweenMax -->
+        <script src="portfolio/js/ScrollMagic-v2.0.7.min.js"></script>
+        <script src="portfolio/js/debug.addIndicators-v2.0.7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="portfolio/js/animation.gsap.js"></script>
+
+        <!-- Apex Chart -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script> -->
+    </head>
+
+    <body>
+        <!-- Google Tag Manager -->
+        <!-- <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXDK43H" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript> -->
+        <!-- End Google Tag Manager -->
+
+        <div id="content" v-cloak>
+
+            <div id="top"></div>
+
+            <!-- header -->
+            <header class="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="javascript:void(0)" @click="$scrollTo('#top')">
+                            K
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" @click="$scrollTo('#about')" title="關於Ｋevin">
+                                    關於Ｋevin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" @click="$scrollTo('#portfolio')" title="設計作品">
+                                    設計作品
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" @click="$scrollTo('#experience')" title="工作經歷">
+                                    工作經歷
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" @click="$scrollTo('#awards')" title="得獎作品">
+                                    得獎作品
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- main -->
+            <main class="main">
+
+                <section class="firstItem">
+                    <div class="container">
+                        <div class="firstItem-img" data-aos="flip-left">
+                            <img src="portfolio/images/img1.png" alt="">
+                        </div>
+                        <div class="firstItem-content">
+                            <h1 class="firstItem-content-tit" title="魏孝峯 Kevin Wei's Portfolio">
+                                <div class="firstItem-content-tit-twName" data-aos="fade-up">
+                                    魏孝峯
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="200">
+                                    Kevin <b>Wei's</b>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="400">
+                                    Portfolio
+                                </div>
+                            </h1>
+                            <div class="firstItem-content-slills" data-aos="fade-up" data-aos-delay="600">
+                                <span class="firstItem-content-slills-tit">
+                                    Skills：
+                                </span>
+                                <span>HTML</span>
+                                <span>SCSS</span>
+                                <span>RWD</span>
+                                <span>UI</span>
+                                <span>XD</span>
+                                <span>git</span>
+                                <span>jQuery</span>
+                                <!-- <span>vue</span> -->
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                            </div>
+                        </div>
+                        <div class="firstItem-arrow">
+                            <span>scroll</span>
+                        </div>
+                    </div>
+                    <div class="firstItem-marquee">
+                        Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio
+                    </div>
+                </section>
+                
+                <section class="item otherLink">
+                    <div class="container">
+                        <ul class="otherLink-list">
+                            <li data-aos="fade-up">
+                                <a href="https://www.behance.net/kevin2626634eb" target="_blank">
+                                    <i class="fab fa-behance-square"></i>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://www.linkedin.com/in/%E5%AD%9D%E5%B3%AF-%E9%AD%8F-586330b2/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <a href="https://github.com/kevin262666/kevin262666.github.io" target="_blank">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a href="https://www.yona-pet-food.com/" target="_blank">
+                                    <i class="fab fa-blogger"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div id="about"></div>
+                <section class="item about">
+                    <div class="container">
+                        <div class="about-img" data-aos="flip-left">
+                            <img src="portfolio/images/img2.png" alt="">
+                        </div>
+                        <div class="about-content">
+                            <h2 class="itemTit" title="About" data-aos="fade-up">
+                                About
+                            </h2>
+                            <p data-aos="fade-up" data-aos-delay="100">
+                                我叫孝峯(Kevin)，現任職於富蘭克林證券投顧擔任資深網頁設計師，使用<b class="text-yellow">Adobe XD</b>設計EC、會員註冊介面，並利用<b class="text-yellow">scss、html5、vue</b>製作prototype。除<b class="text-yellow">網站改版</b>項目，另負責活動網站、banner、EDM等網宣品製作。另協助部門主管處理設計行政事務，負責新人訓練及工作任務分派等事項。
+                            </p>
+                            <p data-aos="fade-up" data-aos-delay="200">
+                                前份工作於東南旅遊擔任資深網頁設計師，前期負責活動網站、行銷廣告banner/素材製作，後期負責公司官網改版，利用<b class="text-yellow">sketch、photoshop</b>設計mockup，運用scss、bootstrap及原本熟練的網頁開發技能完成prototype，開發期間負責設計/開發規範制定、網站元件產出及<b class="text-yellow">code review</b>，同時需與PD及工程師做開發溝通，期間精進js及跨部門溝通能力，下班時間亦參與設計師相關課程，逐漸增加自我軟硬實力。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="portfolio"></div>
+                <section class="item portfolio">
+                    <div class="container">
+                        <h2 class="itemTit" title="Portfolio" data-aos="fade-right">
+                            Portfolio
+                        </h2>
+                        <ul class="tab-btn" data-aos="fade-up">
+                            <li :class="{'active': tab[0]}" @click="toggleTab('0')">2022</li>
+                            <li :class="{'active': tab[1]}" @click="toggleTab('1')">2021</li>
+                            <li :class="{'active': tab[2]}" @click="toggleTab('2')">2020</li>
+                            <li :class="{'active': tab[3]}" @click="toggleTab('3')">2019</li>
+                            <li :class="{'active': tab[4]}" @click="toggleTab('4')">2018</li>
+                        </ul>
+                        <div class="tab-content" data-aos="fade-left">
+                            <section v-if="tab[0]">
+                                <ul class="portfolio-list">
+                                    <li v-for="item in portfolio2022">
+                                        <div class="portfolio-list-head">
+                                            <a :href="item.link" target="_blank" :title="item.tit">
+                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <div class="portfolio-list-head-tit">
+                                                    {{item.tit}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-list-link">
+                                            <a :href="item.website" target="_blank" title="github">
+                                                website <i class="fas fa-link"></i>
+                                            </a>
+                                            <a :href="item.behance" target="_blank" title="Behance">
+                                                Behance <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section v-if="tab[1]">
+                                <ul class="portfolio-list">
+                                    <li v-for="item in portfolio2021">
+                                        <div class="portfolio-list-head">
+                                            <a :href="item.link" target="_blank" :title="item.tit">
+                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <div class="portfolio-list-head-tit">
+                                                    {{item.tit}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-list-link">
+                                            <a :href="item.website" target="_blank" title="github">
+                                                website <i class="fas fa-link"></i>
+                                            </a>
+                                            <a :href="item.behance" target="_blank" title="Behance">
+                                                Behance <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section v-if="tab[2]">
+                                <ul class="portfolio-list">
+                                    <li v-for="item in portfolio2020">
+                                        <div class="portfolio-list-head">
+                                            <a :href="item.link" target="_blank" :title="item.tit">
+                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <div class="portfolio-list-head-tit">
+                                                    {{item.tit}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-list-link">
+                                            <a :href="item.website" target="_blank" title="github">
+                                                website <i class="fas fa-link"></i>
+                                            </a>
+                                            <a :href="item.behance" target="_blank" title="Behance">
+                                                Behance <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section v-if="tab[3]">
+                                <ul class="portfolio-list">
+                                    <li v-for="item in portfolio2019">
+                                        <div class="portfolio-list-head">
+                                            <a :href="item.link" target="_blank" :title="item.tit">
+                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <div class="portfolio-list-head-tit">
+                                                    {{item.tit}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-list-link">
+                                            <a :href="item.website" target="_blank" title="github">
+                                                website <i class="fas fa-link"></i>
+                                            </a>
+                                            <a :href="item.behance" target="_blank" title="Behance">
+                                                Behance <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section v-if="tab[4]">
+                                <ul class="portfolio-list">
+                                    <li v-for="item in portfolio2018">
+                                        <div class="portfolio-list-head">
+                                            <a :href="item.link" target="_blank" :title="item.tit">
+                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <div class="portfolio-list-head-tit">
+                                                    {{item.tit}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-list-link">
+                                            <a :href="item.website" target="_blank" title="github">
+                                                website <i class="fas fa-link"></i>
+                                            </a>
+                                            <a :href="item.behance" target="_blank" title="Behance" v-if="item.behance != ''">
+                                                Behance <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="btnArea">
+                            <div class="btn borderType whiteStyle">
+                                <a href="https://www.behance.net/kevin2626634eb" target="_blank" title="更多設計作品">
+                                    更多設計作品 <i class="fas fa-caret-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="firstItem-arrow">
+                            <span>scroll</span>
+                        </div>
+                    </div>
+                    <div class="firstItem-marquee">
+                        Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio
+                    </div>
+                </section>
+
+                <div id="experience"></div>
+                <section class="item experience">
+                    <div class="container">
+                        <h2 class="itemTit" title="Experience" data-aos="fade-up">
+                            Experience
+                        </h2>
+                        <ul class="experience-list" data-aos="flip-left">
+                            <li v-for="item in experience">
+                                <div class="experience-list-tit">
+                                    {{item.tit}}
+                                </div>
+                                <div class="experience-list-company">
+                                    {{item.company}}
+                                </div>
+                                <div class="experience-list-time">
+                                    {{item.time}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div id="awards"></div>
+                <section class="item awards">
+                    <div class="container">
+                        <h2 class="itemTit" title="Awards" data-aos="fade-up">
+                            Awards
+                        </h2>
+                        <ul class="awards-list">
+                            <li data-aos="fade-up">
+                                <a href="https://www.awwwards.com/sites/fu-lan-ke-lin-tan-bo-dun-mei-guo-ji-hui-ji-jin-fu-lan-ke-lin-guo-min-de-ji-jin" class="awards-list-img" title="awwwards Nominees-富蘭克林坦伯頓美國機會基金">
+                                    <img src="portfolio/images/C2018_12_Q4_0799.webp" alt="富蘭克林坦伯頓美國機會基金">
+                                </a>
+                                <div class="awards-list-content">
+                                    <a href="https://www.awwwards.com/sites/fu-lan-ke-lin-tan-bo-dun-mei-guo-ji-hui-ji-jin-fu-lan-ke-lin-guo-min-de-ji-jin" title="awwwards Nominees-富蘭克林坦伯頓美國機會基金">
+                                        <img src="portfolio/images/Awwards-logotype-2018.svg" alt="" class="awards-list-logo">
+                                        <div class="awards-list-awards">
+                                            awwwards-Nominees
+                                        </div>
+                                        <div class="awards-list-websiteName">
+                                            富蘭克林坦伯頓美國機會基金
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+            </main>
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="copyright">
+                        Copyright © 2023 Captain Design Studio. All rights reserved.
+                    </div>
+                    <div class="contactInfo">
+                        <a href="tel:0955321911" title="聯絡電話">
+                            <i class="fas fa-phone-alt"></i> 0955-321-911
+                        </a>
+                        <a href="mailto:kevin262666@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i> kevin262666@gmail.com
+                        </a>
+                    </div>
+                    <ul class="otherLink-list">
+                        <li>
+                            <a href="https://www.behance.net/kevin2626634eb" target="_blank">
+                                <i class="fab fa-behance-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/%E5%AD%9D%E5%B3%AF-%E9%AD%8F-586330b2/"
+                                target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kevin262666/kevin262666.github.io" target="_blank">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.yona-pet-food.com/" target="_blank">
+                                <i class="fab fa-blogger"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+
+            <div class="topBtn">
+                <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                    <span>
+                        <i class="fas fa-caret-up"></i>
+                        TOP
+                    </span>
+                </a>
+            </div>
+
+            <!-- <modal ref="warning" :can-close="false" class="md">
+                <slot slot="infoArea">
+                    xxxx
+                </slot>
+            </modal> -->
+            
+        </div>
+
+        <script src="portfolio/js/main.min.js"></script>
+        
+    </body>
+</html>
