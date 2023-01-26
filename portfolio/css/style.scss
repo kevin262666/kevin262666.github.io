@@ -446,6 +446,12 @@ code {
                 color: #fff;
             }
         }
+        &.yellowStyle {
+            a,
+            button {
+                color: var(--yellow);
+            }
+        }
         &.redStyle {
             a,
             button {
@@ -985,7 +991,9 @@ body {
             &-twName {
                 font-weight: normal;
                 color: var(--light-blue);
+                // color: var(--dark-blue);
                 font-size: 46px;
+                text-shadow: none;
             }
             b {
                 // color: var(--light-blue);
@@ -1092,6 +1100,9 @@ body {
         &-marquee {
             font-size: 20vw;
             animation: firstItemMarquee-sm 8s linear infinite;
+            // animation: none;
+            // transform: translateX(-190vw);
+            // transform: translateX(0vw);
             color: #226bb2;
             text-shadow: 1px 1px 0 #fff,
                          -1px -1px 0 #fff,
@@ -1111,7 +1122,7 @@ body {
 }
 @keyframes firstItemMarquee-sm {
     100% {
-        transform: translateX(-204.5vw);
+        transform: translateX(-191vw);
     }
 }
 
@@ -1171,6 +1182,14 @@ body {
         .itemTit {
             
         }
+        p {
+            &::first-letter {
+                font-size: 30px;
+                font-weight: bold;
+                padding-right: 2px;
+                // color: var(--dark-blue);
+            }
+        }
     }
     @include maxWidth-sm {
         .container {
@@ -1192,6 +1211,8 @@ body {
     line-height: 1;
     margin: 30px 0;
     color: var(--light-blue);
+    // color: var(--dark-blue);
+    // background: linear-gradient(transparent 50%, var(--dark-blue) 50%);
     @include maxWidth-sm {
         font-size: 18vw;
     }
@@ -1209,6 +1230,7 @@ body {
         margin: 30px 0;
         li {
             color: var(--light-blue);
+            // color: var(--dark-blue);
             padding: 0 20px;
             position: relative;
             cursor: pointer;
@@ -1218,6 +1240,7 @@ body {
                 width: 2px;
                 height: 15px;
                 background: var(--light-blue);
+                background: var(--dark-blue);
                 position: absolute;
                 bottom: 0;
                 right: 0;
@@ -1361,6 +1384,7 @@ body {
                 top: 0;
                 left: -7px;
                 background: var(--light-blue);
+                background: var(--dark-blue);
                 width: 14px;
                 height: 14px;
                 border-radius: 100%;
@@ -1371,6 +1395,7 @@ body {
                 top: 0;
                 left: 0;
                 background: var(--light-blue);
+                background: var(--dark-blue);
                 width: 1px;
                 height: 100%;
             }
@@ -1497,6 +1522,96 @@ body {
             text-align: center;
             a {
                 display: block;
+            }
+        }
+    }
+}
+
+.projectExperience {
+    padding-bottom: 250px;
+    &-item {
+        margin-bottom: 60px;
+        padding-top: 10px;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            width: 30px;
+            height: 30px;
+            border: solid 2px var(--dark-blue);
+        }
+        &:before {
+            top: 0;
+            left: 0;
+            border-bottom: none;
+            border-right: none;
+        }
+        &:after {
+            bottom: 0;
+            right: 0;
+            border-top: none;
+            border-left: none;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin: 0 0;
+        list-style: none;
+        &-tit {
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--light-blue);
+            // color: var(--dark-blue);
+            padding-left: 20px;
+        }
+        & > li {
+            width: (100% / 3);
+            padding-bottom: 15px;
+            position: relative;
+            padding-left: 15px;
+            box-sizing: border-box;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 5px;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 11px;
+            }
+            .remark {
+                color: var(--light-blue);
+            }
+        }
+        a {
+            color: #fff;
+            border-bottom: solid 1px transparent;
+            transition: 0.3s ease all;
+            i {
+                color: var(--light-blue);
+            }
+            &:hover {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        padding-bottom: 130px;
+        &-list {
+            display: block;
+            &-tit {
+                font-size: 20px;
+            }
+            & > li {
+                width: auto;
             }
         }
     }

@@ -145,13 +145,13 @@
             <header class="header">
                 <div class="container">
                     <div class="logo">
-                        <a href="javascript:void(0)" @click="$scrollTo('#top')">
+                        <a href="javascript:void(0)" @click="$scrollTo('#about')">
                             K
                         </a>
                     </div>
                     <nav>
                         <ul>
-                            <li>
+                            <li v-if="windowWidth > 767">
                                 <a href="javascript:void(0)" @click="$scrollTo('#about')" title="關於Ｋevin">
                                     關於Ｋevin
                                 </a>
@@ -164,6 +164,11 @@
                             <li>
                                 <a href="javascript:void(0)" @click="$scrollTo('#experience')" title="工作經歷">
                                     工作經歷
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" @click="$scrollTo('#projectExperience')" title="專案經歷">
+                                    專案經歷
                                 </a>
                             </li>
                             <li>
@@ -259,10 +264,13 @@
                                 About
                             </h2>
                             <p data-aos="fade-up" data-aos-delay="100">
-                                我叫孝峯(Kevin)，現任職於富蘭克林證券投顧擔任資深網頁設計師，使用<b class="text-yellow">Adobe XD</b>設計EC、會員註冊介面，並利用<b class="text-yellow">scss、html5、vue</b>製作prototype。除<b class="text-yellow">網站改版</b>項目，另負責活動網站、banner、EDM等網宣品製作。另協助部門主管處理設計行政事務，負責新人訓練及工作任務分派等事項。
+                                我叫孝峯(Kevin)，現任職於富蘭克林證券投顧擔任資深網頁設計師，使用<b class="text-yellow">Adobe XD</b>設計EC、會員註冊介面，並利用<b class="text-yellow">scss、html5、vue</b>製作prototype。除<b class="text-yellow">網站改版</b>項目，另負責<b class="text-yellow">活動網站、banner、EDM</b>等網宣品製作。另協助部門主管處理設計行政事務，負責新人訓練及工作任務分派等事項。
                             </p>
                             <p data-aos="fade-up" data-aos-delay="200">
-                                前份工作於東南旅遊擔任資深網頁設計師，前期負責活動網站、行銷廣告banner/素材製作，後期負責公司官網改版，利用<b class="text-yellow">sketch、photoshop</b>設計mockup，運用scss、bootstrap及原本熟練的網頁開發技能完成prototype，開發期間負責設計/開發規範制定、網站元件產出及<b class="text-yellow">code review</b>，同時需與PD及工程師做開發溝通，期間精進js及跨部門溝通能力，下班時間亦參與設計師相關課程，逐漸增加自我軟硬實力。
+                                前份工作於東南旅遊擔任資深網頁設計師，前期負責活動網站、行銷廣告banner/素材製作，後期負責公司官網改版，利用<b class="text-yellow">sketch、photoshop</b>設計<b class="text-yellow">mockup</b>，運用scss、<b class="text-yellow">bootstrap</b>及原本熟練的網頁開發技能完成<b class="text-yellow">prototype</b>，開發期間負責設計/開發規範制定、網站元件產出及<b class="text-yellow">code review</b>，同時需與PD及工程師做開發溝通，期間精進js及跨部門溝通能力，下班時間亦參與設計師相關課程，逐漸增加自我軟硬實力。
+                            </p>
+                            <p data-aos="fade-up" data-aos-delay="200">
+                                近期利用下班時段另修心理學課程，期能專精設計類以外的技能，以擴展技能範圍，並提升工作表現。
                             </p>
                         </div>
                     </div>
@@ -394,9 +402,9 @@
                             </section>
                         </div>
                         <div class="btnArea">
-                            <div class="btn borderType whiteStyle">
+                            <div class="btn borderType" :class="windowWidth > 767 ? 'whiteStyle' : 'yellowStyle'">
                                 <a href="https://www.behance.net/kevin2626634eb" target="_blank" title="更多設計作品">
-                                    更多設計作品 <i class="fas fa-caret-right"></i>
+                                    更多設計作品 <i class="fas fa-angle-double-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -428,6 +436,207 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <div id="projectExperience"></div>
+                <section class="item projectExperience">
+                    <div class="container">
+                        <h2 class="itemTit" title="Project Experience" data-aos="fade-up">
+                            Project Experience
+                        </h2>
+                        <div class="projectExperience-item" data-aos="fade-left">
+                            <h3 class="projectExperience-list-tit" title="2018/7~至今">
+                                2018/7~至今
+                            </h3>
+                            <ul class="projectExperience-list">
+                                <li>
+                                    <a href="https://shopee.tw/product/103398190/13497429673/" target="_blank" title="YONA寵物凍乾">
+                                        YONA寵物凍乾 <span class="remark">(MVP testing)</span> <i
+                                            class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://medium.com/@kevin262666/0%E6%9C%AC%E9%87%91-%E6%9C%88%E9%A0%98%E8%90%AC%E5%85%83%E9%9B%B6%E7%94%A8%E9%8C%A2%E5%AF%A6%E9%A9%97-15e2cace871c" target="_blank"
+                                        title="「0本金」月領萬元零用錢實驗">
+                                        「0本金」月領萬元零用錢實驗 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.franklin.com.tw/DividendDate/index.html" target="_blank"
+                                        title="富蘭克林證券投顧-新官網改版">
+                                        富蘭克林證券投顧-新官網改版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://etrade.franklin.com.tw/ec/login" target="_blank"
+                                        title="富蘭克林證券投顧-國民e帳戶改版">
+                                        富蘭克林證券投顧-國民e帳戶改版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://etrade.franklin.com.tw/openAccount/" target="_blank"
+                                        title="富蘭克林證券投顧-線上開戶改版">
+                                        富蘭克林證券投顧-線上開戶改版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.franklin.com.tw/areas/insurance-area/login.html"
+                                        target="_blank" title="富蘭克林證券投顧-壽險專區改版">
+                                        富蘭克林證券投顧-壽險專區改版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://etrade.ftft.com.tw/open/#/newStep1" target="_blank"
+                                        title="富蘭克林華美投信-線上開戶改版">
+                                        富蘭克林華美投信-線上開戶改版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    字媒體Zimedia
+                                </li>
+                                <li>
+                                    第一銀行-薪轉戶專區
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="projectExperience-item" data-aos="fade-left">
+                            <h3 class="projectExperience-list-tit" title="2017/2~2018/6">
+                                2017/2~2018/6
+                            </h3>
+                            <ul class="projectExperience-list">
+                                <li>
+                                    <a href="https://goo.gl/yeoczR" target="_blank" title="東南旅遊EC網站改版-旅遊票券">
+                                        東南旅遊EC網站改版-旅遊票券 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/ZS4yJq" target="_blank" title="東南旅遊EC網站改版-國際機票">
+                                        東南旅遊EC網站改版-國際機票 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/2KfRRh" target="_blank"
+                                        title="東南旅遊EC網站改版-國際機票-有位有價">
+                                        東南旅遊EC網站改版-國際機票-有位有價 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/ZABFdM" target="_blank" title="東南旅遊EC網站改版-國外團旅">
+                                        東南旅遊EC網站改版-國外團旅 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://is.gd/qd3H3H" target="_blank" title="東南旅遊EC網站改版-自由配">
+                                        東南旅遊EC網站改版-自由配 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    東南旅遊EC網站改版-團體自由行
+                                </li>
+                                <li>
+                                    東南旅遊EC網站改版-國外訂房
+                                </li>
+                                <li>
+                                    東南旅遊EC網站改版-國內旅遊
+                                </li>
+                                <li>
+                                    東南旅遊EC網站改版-付款流程
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="projectExperience-item" data-aos="fade-left">
+                            <h3 class="projectExperience-list-tit" title="2013/7~2017/2">
+                                2013/7~2017/2
+                            </h3>
+                            <ul class="projectExperience-list">
+                                <li>
+                                    創世紀資訊快速套版專案Doweb開發
+                                </li>
+                                <li>
+                                    EcBuy購物網站套版專案開發
+                                </li>
+                                <li>
+                                    韓國人蔘公社正官庄-形象網站
+                                </li>
+                                <li>
+                                    韓國人蔘公社正官庄-購物網站
+                                </li>
+                                <li>
+                                    南僑化學工業股份有限公司 小廚師慢食麵
+                                </li>
+                                <li>
+                                    2017世界大學運動會國際學術研討會網站
+                                </li>
+                                <li>
+                                    天喜國際時尚股份有限公司 SST&C-官網
+                                </li>
+                                <li>
+                                    <a href="https://www.unison.tw/web/index/index.jsp" target="_blank"
+                                        title="國統開發股份有限公司 擁恆文創園區">
+                                        國統開發股份有限公司 擁恆文創園區 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    ovo京典衛浴股份有限公司-官網
+                                </li>
+                                <li>
+                                    遠東銀行 遠銀保險代理人官網
+                                </li>
+                                <li>
+                                    <a href="http://www.bigdome.com.tw/" target="_blank" title="巨蛋展覽股份有限公司">
+                                        巨蛋展覽股份有限公司 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    北都數位有線電視TaipeiNet
+                                </li>
+                                <li>
+                                    麗斯居有限公司 貓樂園
+                                </li>
+                                <li>
+                                    <a href="http://www.liangchi.com.tw/index1.jsp" target="_blank" title="良機實業股份有限公司">
+                                        良機實業股份有限公司-電腦版 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.liangchi.com.tw/mobile/web-tw/index/index.jsp" target="_blank"
+                                        title="良機實業股份有限公司-手機版官網">
+                                        良機實業股份有限公司-手機版官網 <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    巨創策略股份有限公司 EcBuy-購物網站
+                                </li>
+                                <li>
+                                    KEVINLIN-官網
+                                </li>
+                                <li>
+                                    傢作有限公司La déco
+                                </li>
+                                <li>
+                                    桔豐科技股份有限公司-官網＆特約商專區
+                                </li>
+                                <li>
+                                    頂宏生物科技有限公司 FRUSIRNAG 曦之麗
+                                </li>
+                                <li>
+                                    珍愛設計事務所 MARRY LOVE網路花店
+                                </li>
+                                <li>
+                                    銓盛電子股份有限公司
+                                </li>
+                                <li>
+                                    大溪棋院
+                                </li>
+                                <li>
+                                    台灣台北陳文雅網路創作個展
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="firstItem-marquee">
+                        Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio Kevin Wei's Portfolio
                     </div>
                 </section>
 

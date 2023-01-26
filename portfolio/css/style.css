@@ -12,8 +12,7 @@ body {
   font-size: 16px;
   line-height: 1.75;
   -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
-  /*強制瀏覽器不要縮放文字*/
+  -webkit-text-size-adjust: 100%; /*強制瀏覽器不要縮放文字*/
   overflow-x: hidden;
 }
 @media screen and (max-width: 991px) {
@@ -261,7 +260,6 @@ select::-ms-expand {
   .pcShow {
     display: none !important;
   }
-
   .mobileShow {
     display: initial !important;
   }
@@ -418,13 +416,13 @@ select::-ms-expand {
   left: -35px;
 }
 .slick-prev:before {
-  content: "";
+  content: "\f137";
 }
 .slick-next {
   right: -35px;
 }
 .slick-next:before {
-  content: "";
+  content: "\f138";
 }
 @media screen and (max-width: 991px) {
   .slick-prev {
@@ -502,24 +500,20 @@ body.fixedBody {
     width: 5px;
     height: 5px;
   }
-
   ::-webkit-scrollbar-track {
     background-color: #004790;
     background-color: #f5f5f5;
     border-radius: 10px;
   }
-
   ::-webkit-scrollbar-thumb {
     background-color: #539011;
     background-color: #bfbdba;
     border-radius: 20px;
   }
-
   ::-webkit-scrollbar-button {
     background-color: #bfbdba;
     border-radius: 20px;
   }
-
   ::-webkit-scrollbar-corner {
     background-color: #bfbdba;
   }
@@ -890,6 +884,10 @@ code {
 .btn.borderType.whiteStyle a,
 .btn.borderType.whiteStyle button {
   color: #fff;
+}
+.btn.borderType.yellowStyle a,
+.btn.borderType.yellowStyle button {
+  color: var(--yellow);
 }
 .btn.borderType.redStyle a,
 .btn.borderType.redStyle button {
@@ -2801,14 +2799,9 @@ body:before {
   right: 0;
   bottom: 0;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#001a70+0,2b7fc2+100 */
-  background: #001a70;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #001a70 0%, #2b7fc2 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#001a70", endColorstr="#2b7fc2",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background: #001a70; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #001a70 0%, #2b7fc2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#001a70", endColorstr="#2b7fc2",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .header {
@@ -2926,6 +2919,7 @@ body:before {
   font-weight: normal;
   color: var(--light-blue);
   font-size: 46px;
+  text-shadow: none;
 }
 .firstItem-content-slills {
   display: -webkit-box;
@@ -3054,14 +3048,14 @@ body:before {
 }
 @-webkit-keyframes firstItemMarquee-sm {
   100% {
-    -webkit-transform: translateX(-204.5vw);
-            transform: translateX(-204.5vw);
+    -webkit-transform: translateX(-191vw);
+            transform: translateX(-191vw);
   }
 }
 @keyframes firstItemMarquee-sm {
   100% {
-    -webkit-transform: translateX(-204.5vw);
-            transform: translateX(-204.5vw);
+    -webkit-transform: translateX(-191vw);
+            transform: translateX(-191vw);
   }
 }
 .otherLink-list {
@@ -3125,6 +3119,11 @@ body:before {
           box-sizing: border-box;
   padding-left: 50px;
 }
+.about-content p::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 2px;
+}
 @media screen and (max-width: 767px) {
   .about .container {
     display: block;
@@ -3175,6 +3174,7 @@ body:before {
   width: 2px;
   height: 15px;
   background: var(--light-blue);
+  background: var(--dark-blue);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -3318,6 +3318,7 @@ body:before {
   top: 0;
   left: -7px;
   background: var(--light-blue);
+  background: var(--dark-blue);
   width: 14px;
   height: 14px;
   border-radius: 100%;
@@ -3328,6 +3329,7 @@ body:before {
   top: 0;
   left: 0;
   background: var(--light-blue);
+  background: var(--dark-blue);
   width: 1px;
   height: 100%;
 }
@@ -3460,5 +3462,100 @@ body:before {
   }
   .footer .contactInfo a {
     display: block;
+  }
+}
+
+.projectExperience {
+  padding-bottom: 250px;
+}
+.projectExperience-item {
+  margin-bottom: 60px;
+  padding-top: 10px;
+  position: relative;
+}
+.projectExperience-item:before, .projectExperience-item:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border: solid 2px var(--dark-blue);
+}
+.projectExperience-item:before {
+  top: 0;
+  left: 0;
+  border-bottom: none;
+  border-right: none;
+}
+.projectExperience-item:after {
+  bottom: 0;
+  right: 0;
+  border-top: none;
+  border-left: none;
+}
+.projectExperience-item:last-of-type {
+  margin-bottom: 0;
+}
+.projectExperience-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0 0;
+  list-style: none;
+}
+.projectExperience-list-tit {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--light-blue);
+  padding-left: 20px;
+}
+.projectExperience-list > li {
+  width: 33.3333333333%;
+  padding-bottom: 15px;
+  position: relative;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.projectExperience-list > li:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 11px;
+}
+.projectExperience-list > li .remark {
+  color: var(--light-blue);
+}
+.projectExperience-list a {
+  color: #fff;
+  border-bottom: solid 1px transparent;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.projectExperience-list a i {
+  color: var(--light-blue);
+}
+.projectExperience-list a:hover {
+  border-bottom-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .projectExperience {
+    padding-bottom: 130px;
+  }
+  .projectExperience-list {
+    display: block;
+  }
+  .projectExperience-list-tit {
+    font-size: 20px;
+  }
+  .projectExperience-list > li {
+    width: auto;
   }
 }
