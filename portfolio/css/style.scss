@@ -1616,3 +1616,56 @@ body {
         }
     }
 }
+
+.certificate {
+    overflow-x: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    ul {
+        display: flex;
+        padding-left: 0;
+        margin: 40px 0;
+        list-style: none;
+        // justify-content: center;
+        li {
+            text-align: center;
+            font-weight: bold;
+            padding: 20px !important;
+            border: solid 1px var(--light-blue);
+            margin: 0 20px;
+            box-sizing: border-box;
+            flex: 1;
+            a {
+                color: #fff;
+                display: block;
+                transition: 0.3s ease all;
+                position: relative;
+                top: 0;
+                &:hover {
+                    top: -5px;
+                }
+            }
+            i {
+                color: var(--light-blue);
+                &.fa-google {
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                }
+            }
+            .remark {
+                color: var(--light-blue);
+                font-weight: normal;
+            }
+        }
+    }
+    @include maxWidth-md {
+        ul {
+            width: 1060px;
+            justify-content: start;
+            white-space: nowrap;
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}

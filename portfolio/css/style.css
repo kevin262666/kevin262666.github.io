@@ -3559,3 +3559,63 @@ body:before {
     width: auto;
   }
 }
+
+.certificate {
+  overflow-x: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.certificate ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin: 40px 0;
+  list-style: none;
+}
+.certificate ul li {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px !important;
+  border: solid 1px var(--light-blue);
+  margin: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.certificate ul li a {
+  color: #fff;
+  display: block;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  position: relative;
+  top: 0;
+}
+.certificate ul li a:hover {
+  top: -5px;
+}
+.certificate ul li i {
+  color: var(--light-blue);
+}
+.certificate ul li i.fa-google {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.certificate ul li .remark {
+  color: var(--light-blue);
+  font-weight: normal;
+}
+@media screen and (max-width: 991px) {
+  .certificate ul {
+    width: 1060px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    white-space: nowrap;
+  }
+  .certificate ul li {
+    margin: 0 10px;
+  }
+}
