@@ -466,7 +466,7 @@ var content = new Vue({
         // this.useJq();
         this.showTarget();
         this.topBtn();
-        // this.scrollMagic();
+        this.scrollMagic();
 
         // this.sameHeight("notSureWhatItIs2-item-bg");
         // setTimeout(() => {
@@ -507,7 +507,7 @@ var content = new Vue({
     methods: {
         signature() {
             console.log(
-                "%cMade by Captain%c2023/01",
+                "%cMade by CaptainWei%c2023/01",
                 "color: #fff; border-radius: 5px; background: #1a4f9c; padding: 2px 10px; font-weight: bold;",
                 "color: #000; border-radius: 5px; background: #ffde00; padding: 2px 10px; margin: 0px 5px;"
             );
@@ -675,72 +675,22 @@ var content = new Vue({
 
         //-------------------------------------scrollMagic
         scrollMagic() {
-            // // init controller
-            // let controller = new ScrollMagic.Controller(),
-            //     bannerTit = new TimelineMax();
-            // // howToPickTimeLine = new TimelineMax(),
-
-            // new ScrollMagic.Scene({
-            //     triggerElement: ".banner",
-            //     duration: 400,
-            //     // offset: 0,
-            // })
-            //     .setTween(bannerTit)
-            //     // .addIndicators({name: "1 (duration: 0)"})
-            //     .addTo(controller);
-
-            // bannerTit.add(
-            //     TweenMax.from(".banner-tit-sTit", 5, {
-            //         x: 50,
-            //         y: -80,
-            //     })
-            // );
-            // TweenMax.from(".banner", 1, {
-            //     opacity: 0,
-            // });
-
-            // TweenMax.to('.banner-man', 1, { x: 0, y: 0, repeat: -1, yoyo: true, delay: 0.6 });
-            TweenMax.from(".loadingArea-logo img:eq(0)", 1, { opacity: 0 });
-            TweenMax.from(".loadingArea-logo img:eq(1)", 1, {
-                opacity: 0,
-                y: 20,
-            });
-            TweenMax.from(".loadingArea-logo img:eq(2)", 1, {
-                opacity: 0,
-                y: 20,
-                delay: 0.3,
-            });
-            TweenMax.to(".loadingArea-logo-flash:eq(0)", 1, {
-                x: 500,
-                opacity: 0,
-                delay: 1,
-            });
-            TweenMax.to(".loadingArea-logo-flash:eq(1)", 1, {
-                x: 500,
-                opacity: 0,
-                delay: 1.2,
-            });
-            TweenMax.to(".loadingArea-mask div:eq(2)", 1, {
-                x: -2000,
-                delay: 1.8,
-            });
-            TweenMax.to(".loadingArea-mask div:eq(3)", 1, {
-                x: 2000,
-                delay: 1.8,
-            });
-            TweenMax.to(".loadingArea-logo", 0.8, { opacity: 0, delay: 1.6 });
-            TweenMax.to(".loadingArea-mask div:eq(0)", 1, {
-                x: -2000,
-                opacity: 0,
-                delay: 2,
-            });
-            TweenMax.to(".loadingArea-mask div:eq(1)", 1, {
-                x: 2000,
-                opacity: 0,
-                delay: 2,
+            var controller = new ScrollMagic.Controller();
+            
+            // build tween
+            var tween = TweenMax.to(".experience-img-img img", 1, {
+                top: -100,
+                ease: Linear.easeNone,
             });
 
-            TweenMax.from(".banner", 1, { opacity: 0, delay: 2.2 });
+            // build scene
+            var scene = new ScrollMagic.Scene({
+                triggerElement: ".experience .itemTit",
+                duration: 500,
+            })
+                .setTween(tween)
+                // .addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
         },
 
         //-------------------------------------tab

@@ -54,7 +54,7 @@
 
         <!-- <link rel="stylesheet" type="text/css" href="portfolio/css/slick.css" /> -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="portfolio/css/style.css?v=20230128" />
+        <link rel="stylesheet" href="portfolio/css/style.css?v=20230128_2" />
 
         <!-- Google Tag Manager -->
         <!-- <script>
@@ -232,21 +232,25 @@
                             <li data-aos="fade-up">
                                 <a href="https://www.behance.net/kevin2626634eb" target="_blank">
                                     <i class="fab fa-behance-square"></i>
+                                    <br/>Behance
                                 </a>
                             </li>
                             <li data-aos="fade-up" data-aos-delay="100">
                                 <a href="https://www.linkedin.com/in/%E5%AD%9D%E5%B3%AF-%E9%AD%8F-586330b2/" target="_blank">
                                     <i class="fab fa-linkedin"></i>
+                                    <br/>Linkedin
                                 </a>
                             </li>
                             <li data-aos="fade-up" data-aos-delay="200">
                                 <a href="https://github.com/kevin262666/kevin262666.github.io" target="_blank">
                                     <i class="fab fa-github-square"></i>
+                                    <br/>github
                                 </a>
                             </li>
                             <li data-aos="fade-up" data-aos-delay="300">
                                 <a href="https://www.yona-pet-food.com/" target="_blank">
                                     <i class="fab fa-blogger"></i>
+                                    <br/>Blogger
                                 </a>
                             </li>
                         </ul>
@@ -473,19 +477,26 @@
                         <h2 class="itemTit" title="Experience" data-aos="fade-up">
                             Experience
                         </h2>
-                        <ul class="experience-list" data-aos="flip-left">
-                            <li v-for="item in experience">
-                                <div class="experience-list-tit">
-                                    {{item.tit}}
+                        <div class="experience-content">
+                            <div class="experience-img" data-aos="fade-right">
+                                <div class="experience-img-img">
+                                    <img src="portfolio/images/img5.jpeg" alt="">
                                 </div>
-                                <div class="experience-list-company">
-                                    {{item.company}}
-                                </div>
-                                <div class="experience-list-time">
-                                    {{item.time}}
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                            <ul class="experience-list">
+                                <li v-for="(item, index) in experience" data-aos="fade-left" :data-aos-delay="100 * index">
+                                    <div class="experience-list-tit">
+                                        {{item.tit}}
+                                    </div>
+                                    <div class="experience-list-company">
+                                        {{item.company}}
+                                    </div>
+                                    <div class="experience-list-time">
+                                        {{item.time}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -776,7 +787,7 @@
             
         </div>
 
-        <script src="portfolio/js/main.min.js"></script>
+        <script src="portfolio/js/main.min.js?v=20230128"></script>
         
     </body>
 </html>
