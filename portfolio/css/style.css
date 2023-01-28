@@ -2896,10 +2896,12 @@ body:before {
   left: 35px;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 .firstItem-img img {
   width: 100%;
   position: relative;
+  border-radius: 5px;
 }
 .firstItem-content {
   position: absolute;
@@ -2945,6 +2947,7 @@ body:before {
   border: solid 1px;
   padding: 0 10px;
   margin: 5px;
+  border-radius: 5px;
 }
 .firstItem-arrow {
   position: absolute;
@@ -3059,7 +3062,7 @@ body:before {
   }
 }
 .otherLink {
-  padding-bottom: 0;
+  padding: 150px 0 0;
 }
 .otherLink-list {
   list-style: none;
@@ -3084,6 +3087,9 @@ body:before {
   color: #fff;
 }
 @media screen and (max-width: 767px) {
+  .otherLink {
+    padding: 70px 0 50px;
+  }
   .otherLink-list li a i {
     font-size: 50px;
   }
@@ -3111,10 +3117,12 @@ body:before {
   border: solid 2px;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 .about-img img {
   width: 100%;
   position: relative;
+  border-radius: 5px;
 }
 .about-content {
   -webkit-box-flex: 1;
@@ -3250,14 +3258,17 @@ body:before {
   width: 100%;
   height: 80%;
   border: solid 1px var(--light-blue);
+  border-radius: 5px;
 }
 .portfolio-list-head a {
   color: #fff;
   position: relative;
+  display: block;
 }
 .portfolio-list-head img {
   width: 100%;
   display: block;
+  border-radius: 5px;
 }
 .portfolio-list-head-tit {
   position: absolute;
@@ -3279,6 +3290,7 @@ body:before {
   transition: 0.3s ease all;
   opacity: 0;
   font-size: 18px;
+  border-radius: 5px;
 }
 .portfolio-list-link {
   display: -webkit-box;
@@ -3355,15 +3367,18 @@ body:before {
   width: 100%;
   height: 100%;
   border: solid 1px;
+  border-radius: 5px;
 }
 .experience-img-img {
   height: 100%;
   overflow: hidden;
+  border-radius: 5px;
 }
 .experience-img img {
   width: 100%;
   max-width: 640px;
   position: relative;
+  border-radius: 5px;
 }
 .experience-list {
   list-style: none;
@@ -3430,6 +3445,7 @@ body:before {
           align-items: center;
   border: solid 1px;
   padding: 15px !important;
+  border-radius: 5px;
 }
 .awards-list-img {
   -webkit-box-flex: 1;
@@ -3439,6 +3455,7 @@ body:before {
 .awards-list-img img {
   display: block;
   width: 100%;
+  border-radius: 5px;
 }
 .awards-list-content {
   -webkit-box-flex: 2;
@@ -3540,12 +3557,14 @@ body:before {
   left: 0;
   border-bottom: none;
   border-right: none;
+  border-top-left-radius: 5px;
 }
 .projectExperience-item:after {
   bottom: 0;
   right: 0;
   border-top: none;
   border-left: none;
+  border-bottom-right-radius: 5px;
 }
 .projectExperience-item:last-of-type {
   margin-bottom: 0;
@@ -3589,15 +3608,17 @@ body:before {
 }
 .projectExperience-list a {
   color: #fff;
-  border-bottom: solid 1px transparent;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent));
+  background: linear-gradient(transparent 50%);
 }
 .projectExperience-list a i {
   color: var(--light-blue);
 }
 .projectExperience-list a:hover {
-  border-bottom-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, var(--dark-blue)));
+  background: linear-gradient(transparent 50%, var(--dark-blue) 50%);
 }
 @media screen and (max-width: 767px) {
   .projectExperience {
@@ -3638,6 +3659,7 @@ body:before {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-radius: 5px;
 }
 .certificate ul li a {
   color: #fff;
@@ -3671,5 +3693,36 @@ body:before {
   }
   .certificate ul li {
     margin: 0 10px;
+  }
+}
+
+.skillWall {
+  padding-bottom: 50px;
+}
+.skillWall-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--light-blue);
+  font-size: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skillWall-list li {
+  padding: 10px 20px;
+}
+@media screen and (max-width: 767px) {
+  .skillWall {
+    padding-bottom: 30px;
+  }
+  .skillWall-list {
+    font-size: 6vw;
+    padding: 2vw;
   }
 }
