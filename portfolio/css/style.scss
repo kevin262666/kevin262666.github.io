@@ -885,6 +885,14 @@ body {
         background: -webkit-linear-gradient(-45deg,  #001a70 0%,#2b7fc2 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg,  #001a70 0%,#2b7fc2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001a70', endColorstr='#2b7fc2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#120054+0,2b7fc2+84,35ccea+100 */
+background: #120054; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #120054 0%, #2b7fc2 84%, #35ccea 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #120054 0%,#2b7fc2 84%,#35ccea 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #120054 0%,#2b7fc2 84%,#35ccea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#120054', endColorstr='#35ccea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     }
 }
 
@@ -1495,6 +1503,7 @@ body {
         &-tit {
             font-weight: bold;
             font-size: 18px;
+            color: var(--yellow);
         }
         &-company {
 
@@ -1579,6 +1588,14 @@ body {
 
 .footer {
     padding: 50px 0 30px;
+    a {
+        color: #fff;
+        border-bottom: solid 1px transparent;
+        transition: 0.3s ease all;
+        &:hover {
+            border-bottom-color: #fff;
+        }
+    }
     .copyright {
         text-align: center;
     }
@@ -1586,12 +1603,11 @@ body {
         display: flex;
         justify-content: center;
         a {
-            color: #fff;
             padding: 0 10px;
         }
     }
     .otherLink-list {
-        padding-top: 10px;
+        padding: 10px 0;
         li a i {
             font-size: 30px;
         }
