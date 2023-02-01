@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#003680" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+        <script src="https://kit.fontawesome.com/0389e2f534.js" crossorigin="anonymous"></script>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v4.0.0.css" />
+
+        <title>富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金</title>
+        <meta property="og:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+        <meta name="twitter:title" content="富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金" />
+
+        <meta name="description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta property="og:description" content="富蘭克林‧國民ｅ帳戶" />
+        <meta name="twitter:description" content="富蘭克林‧國民ｅ帳戶" />
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="1060402337367331" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <!-- <meta property="og:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:image" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" />
+		<meta name="twitter:card" content="https://event.franklin.com.tw/insurance-area/images/fb.jpg" /> -->
+
+        <!-- <meta property="og:url" content="https://event.franklin.com.tw/insurance-area/index.html" /> -->
+        <meta name="twitter:site" content="@franklin_tw" />
+
+        <script src="js/polyfill.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="js/vue-router.js"></script>
+
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+        <!-- app -->
+        <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+        <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <!-- <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script> -->
+        <script src="https://event.franklin.com.tw/commonResources/js/vue-scrollto.min.js"></script>
+        <script src="js/highstock.js"></script>
+
+        <!-- element ui start-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/display.css" />
+        <!--可視化調整&下載區 https://element.eleme.io/#/zh-CN/theme/preview-->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="js/element-ui.js"></script>
+        <!-- <script src="//unpkg.com/element-ui/lib/umd/locale/zh-TW.js"></script> -->
+        <script src="js/zh-TW.js"></script>
+        <!-- element ui end-->
+
+        <link rel="stylesheet" href="css/style.css?v=20210719_2" />
+
+    </head>
+
+    <body class="notLoggedIn">
+
+        <div id="content" v-cloak>
+
+            <!-- main -->
+            <article class="main margin-top-0 margin-bottom-0">
+
+                    <div class="signIn">
+                        <div class="signIn-header">
+                            <div class="signIn-header-logo">
+                                <picture>
+                                    <source media="(max-width: 991px)" srcset="images/logo2019.svg" />
+                                    <img src="images/header-logo.png" alt="富蘭克林‧國民ｅ帳戶" class="signIn-header-logo-img" />
+                                </picture>
+                                <div class="signIn-header-logo-text">富蘭克林‧國民ｅ帳戶</div>
+                            </div>
+                        </div>
+                        <el-card shadow="always">
+                            <div class="signIn-content clearfix" :class="{'showRight': signInToggleMask == 2, 'showLeft': signInToggleMask == 1}">
+                                <div class="signIn-right">
+                                    <el-form :model="signIn" ref="signIn" label-position="top">
+                                        <h1 class="tit-type1" title="登入國民e帳戶">
+                                            登入國民e帳戶
+                                        </h1>
+                                        <el-form-item
+                                            label="登入帳號"
+                                            prop="Idno"
+                                            :rules="[
+                                                { required: true, message: '請輸入身分證字號'},
+                                            ]"
+                                        >
+                                            <el-input
+                                                v-model="signIn.Idno"
+                                                placeholder="請輸入身分證字號">
+                                            </el-input>
+                                        </el-form-item>
+                                        <el-form-item
+                                            label="登入密碼"
+                                            prop="Pwd"
+                                            :rules="[
+                                                { required: true, message: '請輸入登入密碼'},
+                                            ]"
+                                        >
+                                            <el-input
+                                                v-model="signIn.Pwd"
+                                                placeholder="含數字與英文字母"
+                                                show-password>
+                                            </el-input>
+                                        </el-form-item>
+                                        <el-form-item>
+                                            <el-button type="primary" round class="blockBtn" @click="this.location.href = 'index.html#/';">登入</el-button>
+                                        </el-form-item>
+                                        <div class="signIn-otherLink">
+                                            <el-link href="index.html#/GetLoginPwdHint">忘記密碼</el-link>
+                                            <el-divider direction="vertical"></el-divider>
+                                            <el-link @click="passwordDescription = true;">密碼說明</el-link>
+                                            <el-divider direction="vertical"></el-divider>
+                                            <el-link @click="safetyReminder = true;">安全提醒</el-link>
+                                        </div>
+                                        <div class="text-center" v-if="$root.$data.windowWidth > 991">
+                                            <el-button round class="xsBtn"><i class="far fa-keyboard"></i> 螢幕鍵盤</el-button>
+                                        </div>
+                                    </el-form>
+                                </div>
+                                <div class="signIn-left">
+                                    <div>
+                                        <el-form :model="signIn" ref="signIn" label-position="top">
+                                            <h2 class="tit-type1" title="申辦國民e帳戶">
+                                                申辦國民e帳戶
+                                            </h2>
+                                            <el-form-item
+                                                label="帳號設定(身分證字號)"
+                                                prop="Idno"
+                                                :rules="[
+                                                    { required: true, message: '請輸入身分證字號'},
+                                                ]"
+                                            >
+                                                <el-input
+                                                    v-model="signIn.Idno"
+                                                    placeholder="請輸入身分證字號">
+                                                </el-input>
+                                            </el-form-item>
+                                            <el-form-item>
+                                                <el-button type="primary" round class="blockBtn">下一步</el-button>
+                                            </el-form-item>
+                                        </el-form>
+
+                                        <template v-if="windowWidth > 767">
+                                            <el-divider></el-divider>
+                                            <h2 class="tit-type1" title="或使用手機開戶">
+                                                或使用手機開戶
+                                            </h2>
+                                            <img src="images/openAccount-qrcode.png" alt="使用手機開戶" class="signIn-qrcode">
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="signIn-toggleMask">
+                                    <div class="signIn-toggleMask-tattoo">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="signIn-toggleMask-logo">
+                                        <picture>
+                                            <source media="(max-width: 991px)" srcset="images/logo2019.svg" />
+                                            <img src="images/header-logo.png" alt="富蘭克林‧國民ｅ帳戶" class="signIn-toggleMask-logo-img" />
+                                        </picture>
+                                        <div class="signIn-toggleMask-logo-text">富蘭克林‧國民ｅ帳戶</div>
+                                    </div>
+                                    <div class="signIn-toggleMask-content">
+                                        <h2 class="tit-type1" :title="signInToggleMask == 1 ? '已經有帳號了嗎？' : 'Hi, 還沒開戶嗎？'">
+                                            {{signInToggleMask == 1 ? '已經有帳號了嗎？' : 'Hi, 還沒開戶嗎？'}}
+                                        </h2>
+                                        <p>
+                                            <template v-if="signInToggleMask == 1">
+                                                登入帳號，
+                                                <br/>享有多平台個人化服務
+                                            </template>
+                                            <template v-else>
+                                                5分鐘完成開戶
+                                                <br/>跟著富蘭克林投資全世界！
+                                            </template>
+                                        </p>
+                                        <el-button type="white" round class="blockBtn"
+                                            @click="signInToggleMask != 1 ? signInToggleMask = 1 : signInToggleMask = 2">
+                                            {{signInToggleMask == 1 ? '前往登入' : '線上立即申辦'}}
+                                        </el-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signIn-content-bottom">
+                                <el-link href="#">返回官網</el-link>
+                                <el-divider direction="vertical"></el-divider>
+                                <el-link href="#">常見問題</el-link>
+                                <el-divider direction="vertical"></el-divider>
+                                <el-link href="#">智能客服</el-link>
+                            </div>
+                        </el-card>
+                        <div class="signIn-storeLink">
+                            <div class="signIn-storeLink-item">
+                                <el-tooltip placement="top" effect="light">
+                                    <div slot="content">
+                                        <img src="images/qrcode-google.jpg" alt="" class="signIn-storeLink-item-qrcode">
+                                    </div>
+                                    <a href="https://play.google.com/store/apps/details?id=com.sice_app" target="_blank" title="前往Google Play下載">
+                                        <picture>
+                                            <source media="(max-width: 991px)" srcset="images/googlePlayBtn@2x.png" />
+                                            <img src="images/googlePlayBtn.png" alt="前往Google Play下載" class="signIn-storeLink-item-btn" />
+                                        </picture>
+                                    </a>
+                                </el-tooltip>
+                            </div>
+                            <div class="signIn-storeLink-item">
+                                <el-tooltip placement="top" effect="light">
+                                    <div slot="content">
+                                        <img src="images/qrcode-apple.jpg" alt="" class="signIn-storeLink-item-qrcode">
+                                    </div>
+                                    <a href="https://apps.apple.com/tw/app/%E5%AF%8C%E8%98%AD%E5%85%8B%E6%9E%97-%E5%9C%8B%E6%B0%91e%E5%B8%B3%E6%88%B6/id1508279002" target="_blank" title="前往App Store下載">
+                                        <picture>
+                                            <source media="(max-width: 991px)" srcset="images/appStoreBtn@2x.png" />
+                                            <img src="images/appStoreBtn.png" alt="前往App Store下載" class="signIn-storeLink-item-btn" />
+                                        </picture>
+                                    </a>
+                                </el-tooltip>
+                            </div>
+                            <div class="signIn-storeLink-item" v-if="windowWidth > 767">
+                                <el-tooltip placement="top" effect="light">
+                                    <div slot="content">
+                                        <img src="images/qrcode-signIn.jpg" alt="" class="signIn-storeLink-item-qrcode">
+                                    </div>
+                                    <a href="javascript:void(0);" title="改用手機版">
+                                        <picture>
+                                            <source media="(max-width: 991px)" srcset="images/usePhone@2x.png" />
+                                            <img src="images/usePhone.png" alt="改用手機版" class="signIn-storeLink-item-btn" />
+                                        </picture>
+                                    </a>
+                                </el-tooltip>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 密碼說明 -->
+                    <el-dialog title="密碼說明" :visible.sync="passwordDescription">
+                            
+                        <!-- 內容 start -->
+                        <ul>
+                            <li>
+                                如您初次登入前遺失【登入密碼與交易密碼首次核發通知信】，請直接撥打國民理財專線<el-link href="tel:0800-885-888" type="primary"><i class="el-icon-phone-outline"></i> <b>0800-885-888</b></el-link>，由客服人員為您服務。
+                            </li>
+                            <li>
+                                登入密碼若連續輸入錯誤三次，系統將自動鎖定您的登入密碼。如不確定密碼是否正確或已錯誤三次無法使用需補發，請點選<el-link href="index.html#/GetLoginPwdHint" type="primary">忘記密碼</el-link>。
+                            </li>
+                            <li>
+                                密碼規則：密碼含數字與英文字母，英文字大小寫有別。
+                            </li>
+                            <li>
+                                投資人係本帳戶唯一有權使用者，負有妥善保管個人帳號及授權密碼之責任，不得任意透露於他人，投資人瞭解並同意依據該有效之帳號及授權密碼或其他有效之電子認證方式所為之電子委託，均應自負完全之責任。
+                            </li>
+                        </ul>
+                        <!-- 內容 end -->
+
+                        <span slot="footer" class="dialog-footer">
+                            <el-button round @click="passwordDescription = false;"> 關閉 </el-button>
+                        </span>
+                    </el-dialog>
+
+                    <!-- 安全提醒 -->
+                    <el-dialog title="安全提醒" :visible.sync="safetyReminder">
+                            
+                        <!-- 內容 start -->
+                        <p>
+                            投資人係本帳戶唯一有權使用者，負有妥善保管個人帳號及授權密碼之責任，不得任意透露於他人，投資人瞭解並同意依據該有效之帳號及授權密碼或其他有效之電子認證方式所為之電子委託，均應自負完全之責任。
+                        </p>
+                        <p class="margin-bottom-5">
+                            為保障您的個人資料安全，
+                        </p>
+                        <ol class="margin-top-5">
+                            <li>
+                                請確認網站網址與手機應用程式的正確性。
+                            </li>
+                            <li>
+                                請勿點選來路不明網址及程式並建議安裝防毒軟體。
+                            </li>
+                            <li>
+                                請定期變更密碼且切勿與其他應用系統及服務密碼共用。
+                            </li>
+                            <li>
+                                請勿透過未加密機制傳送密碼。
+                            </li>
+                            <li>
+                                請於輸入密碼時，提高警覺並避免旁人窺視。
+                            </li>
+                        </ol>
+                        <!-- 內容 end -->
+
+                        <span slot="footer" class="dialog-footer">
+                            <el-button round @click="safetyReminder = false;"> 關閉 </el-button>
+                        </span>
+                    </el-dialog>
+
+            </article>
+
+            <ie-mask></ie-mask>
+
+        </div>
+
+        <script src="js/main.min.js?v=20210719_2"></script>
+        <script>
+            document.body.classList.remove('fixedBody');
+        </script>
+        <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+    </body>
+</html>
