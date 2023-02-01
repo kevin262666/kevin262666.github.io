@@ -437,21 +437,159 @@ var content = new Vue({
                 tit: `資深網頁設計師(襄理)`,
                 company: `富蘭克林證券投資顧問股份有限公司(吉富集團)`,
                 time: `2019/8~至今`,
+                jobList: `<ol>
+                            <li>
+                                國民e帳戶改版 + 投顧、投信線上開戶改版 + 壽險專區改版
+                                <ul class="tagList">
+                                    <li>
+                                        制定Web UI Guideline
+                                    </li>
+                                    <li>
+                                        介面與互動設計
+                                    </li>
+                                    <li>
+                                        Mockup(XD) / prototype製作(html、scss、vue)
+                                    </li>
+                                    <li>
+                                        跨部門需求溝通
+                                    </li>
+                                    <li>
+                                        介面優化調整
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                新版官網改版
+                                <ul class="tagList">
+                                    <li>
+                                        切版(html、scss、vue)
+                                    </li>
+                                    <li>
+                                        跨部門需求溝通
+                                    </li>
+                                    <li>
+                                        介面優化調整
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                行銷活動網站設計切版
+                            </li>
+                            <li>
+                                行銷宣傳物製作
+                                <ul class="tagList">
+                                    <li>
+                                        EDM
+                                    </li>
+                                    <li>
+                                        Banner
+                                    </li>
+                                    <li>
+                                        DM
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                舊版網站異動需求
+                            </li>
+                            <li>
+                                新進員工訓練
+                            </li>
+                            <li>
+                                工作分派及進度追蹤
+                            </li>
+                        </ol>`,
             },
             {
                 tit: `資深網頁設計師`,
                 company: `吉立富資訊管理股份有限公司(吉富集團)`,
                 time: `2018/7~2019/8 1年2個月`,
+                jobList: `<ul class="tagList">
+                                <li>
+                                    行銷活動網站設計、切版
+                                </li>
+                                <li>
+                                    行銷活動物製作(EDM/Banner/DM)
+                                </li>
+                                <li>
+                                    舊版網站異動需求
+                                </li>
+                            </ul>`,
             },
             {
                 tit: `資深網頁設計師`,
                 company: `東南旅行社`,
                 time: `2017/2~2018/6 1年5個月`,
+                jobList: `<ol>
+                            <li>
+                                EC網站改版
+                                <ul class="tagList">
+                                    <li>
+                                        制定Web UI Guideline
+                                    </li>
+                                    <li>
+                                        介面與互動設計
+                                    </li>
+                                    <li>
+                                        Mockup(Sketch) / prototype製作(html、scss、jq)
+                                    </li>
+                                    <li>
+                                        code review
+                                    </li>
+                                    <li>
+                                        跨部門需求溝通
+                                    </li>
+                                    <li>
+                                        介面優化調整
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                行銷活動網站設計切版
+                            </li>
+                            <li>
+                                行銷宣傳物製作
+                                <ul class="tagList">
+                                    <li>
+                                        EDM
+                                    </li>
+                                    <li>
+                                        Banner
+                                    </li>
+                                    <li>
+                                        DM
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                舊版網站異動需求
+                            </li>
+                        </ol>`,
             },
             {
                 tit: `網頁設計師`,
                 company: `創世紀資訊股份有限公司`,
                 time: `2013/7~2017/2 3年8個月`,
+                jobList: `<ol class="tagList">
+                            <li>
+                                了解客戶需求，規劃並設計網站UI
+                            </li>
+                            <li>
+                                網站前端切版
+                            </li>
+                            <li>
+                                DM文宣設計
+                            </li>
+                            <li>
+                                網站快速套版方案企劃、建置、執行
+                            </li>
+                            <li>
+                                協助公司自營購物平台行銷資料設計
+                            </li>
+                            <li>
+                                新進設計師培訓
+                            </li>
+                        </ol>`,
             },
         ],
     },
@@ -676,7 +814,7 @@ var content = new Vue({
         //-------------------------------------scrollMagic
         scrollMagic() {
             var controller = new ScrollMagic.Controller();
-            
+
             // build tween
             var tween = TweenMax.to(".experience-img-img img", 1, {
                 top: -100,
