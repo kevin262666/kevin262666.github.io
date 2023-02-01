@@ -1,561 +1,568 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#003680">
-	<meta name="format-detection" content="telephone=no">
-	
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="mobile-web-app-capable" content="yes">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#003680" />
+    <meta name="format-detection" content="telephone=no" />
 
-	<link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico">
-	<link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png"/>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css"/>
-	<link rel="stylesheet" href="css/style.css?v=20200629">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+    <link rel="stylesheet" href="css/style.css?v=20200629" />
 
     <title>國民理財機器人 你的投資神隊友 | 富蘭克林 國民的基金</title>
-	<meta property="og:title" content="國民理財機器人 你的投資神隊友">
-	<meta name="twitter:title" content="國民理財機器人 你的投資神隊友">
+    <meta property="og:title" content="國民理財機器人 你的投資神隊友" />
+    <meta name="twitter:title" content="國民理財機器人 你的投資神隊友" />
 
-	<meta name="description" content="立即親身體驗金融科技正如何改變投資這件事">
-	<meta property="og:description" content="立即親身體驗金融科技正如何改變投資這件事">
-	<meta name="twitter:description" content="立即親身體驗金融科技正如何改變投資這件事">
+    <meta name="description" content="立即親身體驗金融科技正如何改變投資這件事" />
+    <meta property="og:description" content="立即親身體驗金融科技正如何改變投資這件事" />
+    <meta name="twitter:description" content="立即親身體驗金融科技正如何改變投資這件事" />
 
-    <meta property="og:type" content="website">
-    <meta property="fb:app_id" content="1060402337367331">
-	<meta property="og:image:width" content="1200"/>
-	<meta property="og:image:height" content="630"/>
-	<meta property="og:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg">
-	<meta name="twitter:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg">
-	<meta name="twitter:card" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg" >
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1060402337367331" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg" />
+    <meta name="twitter:image" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg" />
+    <meta name="twitter:card" content="https://event.franklin.com.tw/AI_robo/images/fb.jpg" />
 
-	<meta property="og:url" content="https://event.franklin.com.tw/AI_robo/index.html">
-	<meta name="twitter:site" content="@franklin_tw">
+    <meta property="og:url" content="https://event.franklin.com.tw/AI_robo/index.html" />
+    <meta name="twitter:site" content="@franklin_tw" />
 
-	<script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
-	<script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
-	<script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
-	<script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
-	<!-- <script src="js/wow.min.js"></script> -->
-	<script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
-	<script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-	<script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
 
-	<!-- Google Tag Manager -->
-	<!-- <script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
-	</script> -->
-	<!-- End Google Tag Manager -->
-
-</head>
-<body>
-
-	<!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-586SXP");
+    </script> -->
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
     <!-- <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
     </noscript> -->
-	<!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-	<div id="content" v-cloak>
+    <div id="content" v-cloak>
+      <div id="top"></div>
 
-		<div id="top"></div>
+      <!-- header -->
+      <header-area :active-number="1"></header-area>
 
-		<!-- header -->
-		<header-area :active-number="1"></header-area>
+      <!-- main -->
+      <article class="main">
+        <section class="item moreHelp">
+          <div class="container">
+            <h2 class="tit-type1" title="需要更多協助? 以下三種方式都能得到我們線上顧問最即時的協助">
+              需要更多協助?
+              <div class="tit-type1-tit2">
+                以下三種方式都能得到我們線上顧問最即時的協助
+              </div>
+            </h2>
+            <article class="moreHelp-item-area">
+              <section class="moreHelp-item">
+                <img src="images/moreHelp-icon-1.png" alt="" class="moreHelp-item-img" />
+                <h3 class="moreHelp-item-tit" title="即時諮詢">
+                  即時諮詢
+                </h3>
+                <p class="moreHelp-item-text">
+                  早上9點到下午6點
+                </p>
+                <div class="btnArea">
+                  <div class="btn type5">
+                    <a href="tel:0800-885-888" title="0800-885-888"> 0800-885-888 <i class="fas fa-phone"></i> </a>
+                  </div>
+                </div>
+              </section>
+              <section class="moreHelp-item">
+                <img src="images/moreHelp-icon-2.png" alt="" class="moreHelp-item-img" />
+                <h3 class="moreHelp-item-tit" title="智能客服">
+                  智能客服
+                </h3>
+                <p class="moreHelp-item-text">
+                  全年無休線上待命
+                </p>
+                <div class="btnArea">
+                  <div class="btn type5">
+                    <a href="https://m.me/franklin.taiwan/" title="立即對談" target="_blank"> 立即對談 <i class="fas fa-headphones-alt"></i> </a>
+                  </div>
+                </div>
+              </section>
+              <section class="moreHelp-item">
+                <img src="images/moreHelp-icon-3.png" alt="" class="moreHelp-item-img" />
+                <h3 class="moreHelp-item-tit" title="留言詢問">
+                  留言詢問
+                </h3>
+                <p class="moreHelp-item-text">
+                  專人以email或電話做回覆
+                </p>
+                <div class="btnArea">
+                  <div class="btn type5">
+                    <a href="https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage" title="我要留言" target="_blank">
+                      我要留言 <i class="far fa-keyboard"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </section>
 
-		<!-- main -->
-		<article class="main">
+        <section class="item qa dotTattooBg">
+          <div class="bgArrow"></div>
+          <div class="container">
+            <h2 class="tit-type1" title="想了解更多細節? 以下的QA應該能滿足您的好奇心!">
+              想了解更多細節?
+              <div class="tit-type1-tit2">
+                以下的QA應該能滿足您的好奇心!
+              </div>
+            </h2>
+            <tab-area>
+              <tab-content tab-tit="認識國民理財機器人" is-active="true">
+                <article>
+                  <qa-item tit="為什麼需要【國民理財機器人】？">
+                    <p>
+                      金融市場永遠存在變數，根據富蘭克林近三萬份的「2020國民理財大調查」結果顯示，當民眾遭遇市場震盪等理財擔憂時，有61.2%會保持觀望、有8.9%選擇立即進場，僅有3成的人願意勇敢加碼，顯見一般民眾在投資時容易受情緒影響「追高殺低」，再加上有時候「選擇困難」，導致投資機會流失。
+                    </p>
+                    <p>
+                      因此，運用金融科技解決人性弱點是重要關鍵，就算投資人不熟悉各種基金屬性、不知道買賣時點、沒時間研究，但只要知道自身投資目的與風險屬性，剩下的，就交給富蘭克林【國民理財機器人】幫忙煩惱，享受下列好處：
+                    </p>
+                    <ol>
+                      <li>
+                        落實資產配置、貫徹分散投資。
+                      </li>
+                      <li>
+                        貼近投資需求、降低盲從入市。
+                      </li>
+                      <li>
+                        縝密統計分析、精算風險與報酬。
+                      </li>
+                      <li>
+                        佈局全球市場、配置多元資產，避免單一市場衝擊。
+                      </li>
+                      <li>
+                        再平衡投資機制，監控組合表現，投資目標不偏離。
+                      </li>
+                    </ol>
+                  </qa-item>
+                  <qa-item tit="【國民理財機器人】和一般的基金投資有何不同？">
+                    <p>
+                      根據富蘭克林近三萬份的「2020國民理財大調查」結果顯示，投資人普遍存在三大痛點「不知道何時可以進場」、「沒時間研究市場」跟「不知道要買哪一檔基金」。為解決民眾理財時的三大投資難題，富蘭克林【國民理財機器人】從挑選標的、監控、再平衡，調配出最佳投資組合，不管市場高低都能極大化獲利表現與極小化下檔空間，協助各類理財需求的投資人朝財務自由目標前進。AI理財機器人並不是要跟一般的真人基金投資者分勝負，其優勢在於科學化的「紀律投資」，讓投資人不再受情緒波動影響決策。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="【國民理財機器人】推薦的基金組合是如何篩選出來的？">
+                    <p>
+                      富蘭克林【國民理財機器人】推薦的共同基金投資組合，是透過AI智能機器人學習分析巨量金融數據，搭配量化及演算法等科學分析的Black-Litterman計量模型，將各資產類別綜合評比選出的基金，以客戶投資目的、風險屬性與投資時間長短等資訊為基礎，計算出最佳投資組合比例，並透過隨時監控市場情況適時做出再平衡調整，以達客戶投資目標。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="【國民理財機器人】推薦的基金組合一定適合我嗎？">
+                    <p>
+                      富蘭克林【國民理財機器人】推薦的共同基金投資組合，是根據您在做問卷評估當下投資目的與風險承受能力所篩選出的最適組合。問卷結果得出風險偏好值愈大，所建議的基金組合波動也愈大，建議您仍需考量實際風險承受度以做出投資決策。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="使用【國民理財機器人】投資一定會賺錢嗎？">
+                    <p>
+                      富蘭克林【國民理財機器人】的共同基金投資組合，是配合投資人的風險屬性，並根據過去市場長期狀況進行演算分析，將收益與風險作模擬估算而提出的組合建議，但仍無法完全不受短期市場波動影響。在秉持風險分散的原則下，系統進行模擬演算時會避免投資過於單一的市場，當單一市場發生劇烈波動時，可以透過其他負相關的市場發揮避險效果，盡可能減少投資損失。因此，【國民理財機器人】每日監控市場，若投資組合偏離最適比例達一定程度時，將啟動再平衡機制(Rebalancing)，以達成投資人所設定的長期理財目標。投資一定有風險，投資人仍應審慎評估本身之財務狀況與風險承受能力是否適合所投資之基金組合。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="如何申請富蘭克林【國民理財機器人】服務？">
+                    <ol>
+                      <li>
+                        如您尚未成為富蘭克林國民ｅ帳戶之網路交易平台用戶，請先至線上開戶辦理。
+                      </li>
+                      <li>
+                        如您已是富蘭克林國民ｅ帳戶之網路交易平台用戶，可透過帳號(身分證字號)與密碼登入，點選<b>【國民理財機器人】</b>專區，於首次進入時需簽署「智能理財證券投資顧問委任契約」及「Form
+                        W-8BEN」文件，並依說明寄回本公司辦理啟用本服務進行交易。
+                      </li>
+                    </ol>
+                  </qa-item>
+                </article>
+              </tab-content>
+              <tab-content tab-tit="新手上路篇">
+                <article>
+                  <qa-item tit="如何開始【國民理財機器人】投資計畫？">
+                    <p>
+                      首先，您須為富蘭克林國民ｅ帳戶之網路交易平台用戶，並開通<b class="focus">【國民理財機器人】</b
+                      >服務。在開始投資計畫前，建議您先確立投資目標，並審慎思考可承受風險、投資時間長短及預計投資金額…等，以避免風險帶來的虧損超出您可承受的範圍。投資前您需先透過富蘭克林【國民理財機器人】風險屬性問卷評估，經由問卷結果所建議的投資組合進行投資計畫，將更貼近您的投資目的。
+                    </p>
+                    <p>
+                      為因應金融相關法令規範保障投資人權益，以及為讓投資組合建構更貼近投資人需求，本服務無開放70歲以上之投資人使用，請洽詢專人為您服務。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="透過【國民理財機器人】投資會收取什麼費用？">
+                    <p>
+                      透過富蘭克林【國民理財機器人】進行投資，相關費用列示如下：
+                    </p>
+                    <div class="chart">
+                      <div class="chart-table">
+                        <table style="min-width: 400px;">
+                          <tbody>
+                            <tr>
+                              <td>
+                                年度平台服務費
+                              </td>
+                              <td>
+                                免收
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                單筆、定期定額申購手續費
+                              </td>
+                              <td>牌告1％，目前優惠僅收0.5%<br />（包含新增及加碼投資組合）</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                紅利點數折抵手續費
+                              </td>
+                              <td>
+                                單筆申購可折抵紅利至0.3%；定期定額目前不適用
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                再平衡服務
+                              </td>
+                              <td>
+                                不限次數，目前免收。
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                贖回
+                              </td>
+                              <td>
+                                免收
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="chart-remark">
+                        註：若遇特殊折扣活動期間可享更優惠手續費折扣，優惠內容與優惠使用規則將視個別活動為準。實際費率請依富蘭克林<a
+                          href="https://www.franklin.com.tw/AI_robo/"
+                          target="_blank"
+                          class="link"
+                          >活動網站</a
+                        >或<a href="https://event.franklin.com.tw/latest-offers/latest-offers.html" target="_blank" class="link">最新優惠</a>公告為準。
+                      </p>
+                    </div>
+                  </qa-item>
+                  <qa-item tit="【國民理財機器人】的投資方式與最低申購金額為何？">
+                    <p>
+                      目前僅接受新台幣申購，下單方式目前有三種：
+                    </p>
+                    <div class="chart">
+                      <div class="chart-table">
+                        <table style="min-width: 400px;">
+                          <thead>
+                            <tr>
+                              <td>
+                                投資方式
+                              </td>
+                              <td>
+                                最低申購金額
+                              </td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                單筆申購
+                              </td>
+                              <td>新台幣3萬元(以1萬元累加)</td>
+                            </tr>
+                            <tr>
+                              <td>定期定額申購</td>
+                              <td>新台幣5千元(以1千元累加)，扣款日期目前為每月20號。</td>
+                            </tr>
+                            <tr>
+                              <td>單筆申購＋定期定額申購</td>
+                              <td>投資門檻同上述</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">
+                                【補充】單筆申購扣款當日下午1:30前下單即可，定期定額申購則需在扣款當日(目前為每月20日)前一個工作天下午1:30前完成下單。
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <p>
+                      如原約定帳戶存款不足或其他因素，導致投資組合單筆申購之總投資金額不足新台幣3萬元，該投資組合將無法依照富蘭克林【國民理財機器人】建議進行配置，且未來無法啟動再平衡機制。提醒您於申購完成後，務必確認原約定帳戶之存款餘額，以免扣款失敗，影響再平衡啟動權益。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我可以用紅利點數折抵【國民理財機器人】的申購手續費嗎？">
+                    <p>
+                      紅利點數可以折抵「單筆申購」<b class="focus">【國民理財機器人】</b>投資組合時的申購手續費，定期定額目不適用，紅利1點可扣抵1元，<span
+                        class="focus"
+                        >最低可折抵至0.3%費率</span
+                      >，如基金申購扣款失敗將返還紅利點數，部份扣款失敗亦會依比例返還紅利點數。如遇紅利點數不足折抵手續費時，其手續費差額部份將連同申購價金一起從投資人指定扣款帳戶中扣除。
+                    </p>
+                  </qa-item>
+                </article>
+              </tab-content>
+              <tab-content tab-tit="再平衡篇">
+                <article>
+                  <qa-item tit="什麼是再平衡調整？">
+                    <p>
+                      再平衡調整為富蘭克林【國民理財機器人】服務中的定期追蹤與監控市場機制。隨著投資時間增長，投資組合中各檔基金因市場變化導致配置比例與原投資策略產生偏離時，基於風險管理的必要，也為避免您的投資組合不因特定部位之損益干擾影響，再平衡調整即會自動啟動，透過獲利了結，再轉入相對需加碼資產，將組合中的各基金比例調整至最佳狀態。同時也因應景氣循環，各市場產業會因基本面或消息面而各有漲跌，系統亦將定期進行再平衡調整，隨時監控並保護您的投資盈收，以維持最佳的配置狀。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="為何需要再平衡？">
+                    <p>
+                      因應景氣循環，各市場產業會因基本面或消息面而各有漲跌，基於風險管理的必要，為避免您的投資組合不因特定部位之損益干擾影響，系統將定期進行再平衡調整，透過獲利了結，再轉入相對需加碼資產，隨時監控並保護您的投資盈收，以維持最佳的配置狀態。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="再平衡調整是如何運作的？會收取什麼費用嗎？">
+                    <p>
+                      富蘭克林【國民理財機器人】每日會依據最新的市場情況計算出最佳化投資組合，與客戶手中之投資組合進行檢視，評估是否需進行調整，若需調整，則會啟動再平衡調整通知，待您同意後，將投資組合調整至最佳化配置狀態。投資期間因再平衡機制所產生之調整交易費用，目前為免收，未來是否收取將依富蘭克林基金理財網公告為準。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我該如何同意再平衡調整？">
+                    <p>
+                      當您的投資組合標的狀況已經偏離原目標規劃之最佳化推薦比例時，系統會發送再平衡通知提醒訊息至您開戶留存的電子郵件信箱以及手機簡訊，建議您立即啟動再平衡；若發送通知第四天您仍未登入國民e帳戶-富蘭克林國民理財機器人表示是否啟動再平衡，系統將會第二次發送提醒的電子郵件與手機簡訊給您，建議您收到訊息後，登入【富蘭克林國民理財機器人】»【我的投資計畫】，點選該投組再平衡通知並同意啟動再平衡機制，以優化您的投資組合配置。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="為何我的投資組合沒有啟動再平衡調整？">
+                    <p>
+                      除系統定期監控與追蹤市場狀況後認定投資組合不需再平衡調整之外，當符合下列其一狀態時，投資組合亦將不提供再平衡調整：
+                    </p>
+                    <ol>
+                      <li>
+                        投資組合標的內尚有因交易尚未確認之在途單位數(例如：單筆申購、定期定額扣款或部分贖回)，再平衡機制將不會啟動。
+                      </li>
+                      <li>
+                        原約定帳戶存款不足，導致投資組合總投資金額不足申購門檻新台幣3萬元，讓該投資組合無法依照富蘭克林國民理財機器人建議進行配置，將無法啟動自動再平衡機制。您可登入【富蘭克林國民理財機器人】»【我的投資計畫】，選擇【單筆申購/加碼】或【定期定額申購/加碼】增加投資金額，滿足投資門檻新台幣3萬元限制後，下一個工作天即啟動再平衡機制。
+                      </li>
+                      <li>
+                        若投組僅選擇定期定額扣款，需於成功扣款金額累積至新台幣3萬元後，下一個工作天即啟動再平衡機制。
+                      </li>
+                      <li>
+                        於國民e帳戶調整風險屬性時，若與【富蘭克林國民理財機器人】之現有投資組合風險屬性不符(例如：積極型變成穩健型或保守型)、且勾選「不同意，停止再平衡調整」時，再平衡機制將無法運作。
+                      </li>
+                    </ol>
+                  </qa-item>
+                </article>
+              </tab-content>
+              <tab-content tab-tit="交易須知篇">
+                <article>
+                  <qa-item tit="【國民理財機器人】投資計畫中的定期定額扣款日期為何只開放固定日期？">
+                    <p>
+                      因富蘭克林【國民理財機器人】投資組合若有再途交易狀況(例如：交易中單位數尚待集保確認回報中)無法啟動再平衡機制，可能導致投資組合資產配置偏離最適狀況，因此，富蘭克林國民理財機器人定期定額申購扣款日期將會進行限制(目前開放每月20日扣款)。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="【國民理財機器人】投資計畫中的定期定額扣款內容是否可以更改？">
+                    <p>
+                      可以，現行富蘭克林【國民理財機器人】投資組合之定期定額契約可變更項目為扣款金額、停止扣款，未來將持續優化增加可變更項目，以符合投資人各項需求；唯提醒您，定期定額變更需在扣款日前一個工作天下午1:30前，登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲變更的投資組合依定期定額變更流程進行契約內容修改即可。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我想要再增加【國民理財機器人】投資計畫，一定要重新下單投資計畫嗎？">
+                    <p>
+                      可加碼既有投資組合不須重新下單。請登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲加碼的投資計畫，選擇【單筆加碼】或【定期定額加碼】後依說明進行即可；單筆加碼以新台幣1萬元累加、定期定額加碼以新台幣1千元累加。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我可以指定【國民理財機器人】投資組合中特定基金作調整嗎？">
+                    <p>
+                      不可以。為讓富蘭克林【國民理財機器人】投資計畫能達到您在理財規劃的初始期待，避免單一標的調整影響整體投資組合配置，因此無法針對特定基金進行調整。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="投資屬性改變是否會影響【國民理財機器人】理財計畫？">
+                    <p>
+                      當您的本身整體投資風險屬性重新檢測後相較原投資屬性低時(例如：積極型變成穩健型或保守型)，需請您確認是否繼續由富蘭克林【國民理財機器人】提供原投資組合管理服務，若您不同意，仍可維持既有投資組合繼續投資(不一定要贖回)，但本服務將不再提供投組調整建議，亦即不再提供再平衡機制。
+                    </p>
+                    <p>
+                      唯提醒您，無論您是否同意繼續原計畫，請審慎評估本身之財務狀況與風險承受能力是否適合此投資組合，並願意承擔所有投資風險(包括但不限於原始投資金額之損失、價格波動及匯率變動等)，富蘭克林國民理財機器人服務並不保證投資組合之獲利或負擔損失。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我可以贖回部份的投資組合部位嗎？">
+                    <p>
+                      可以。考量您可能有資金上的需求，但仍想要繼續投資，只要該筆計畫保留最低投資金額新台幣3萬元，即可贖回部分比例。您可登入「國民e帳戶」»【國民理財機器人】»【我的投資計畫】，點選欲部分贖回的投資計畫，選擇【部分贖回/終止投資】，依說明進行即可。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="當我全部贖回我的任何一個【國民理財機器人】投資組合，組合中的定期定額仍會繼續扣款嗎？">
+                    <p>
+                      不會繼續扣款。當您全數贖回國民理財機器人某一投資組合時，將視同結束原有投資組合計畫，故會一併終止投資計畫中定期定額契約，若欲持續原投資組合定期定額投資，建議於贖回時保留該計畫最低庫存金額新台幣3萬元即可。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="贖回款項何時入帳？">
+                    <p>
+                      若您的投資計畫或理財目標己改變而提前執行贖回，贖回款項匯款時間需依臺灣集中保管結算所款項收付作業規定，若各匯款銀行無延遲匯入情況，一般贖回款項約在2~7個營業日即匯入您的帳戶中。唯投資組合中每一檔基金贖回入帳時間可能不同，請您透過約定之贖回銀行查詢實際入帳時間。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="我剛剛於【國民理財機器人】新申購投資計畫，同時有單筆申購以及定期定額申購契約，我可以只取消定期定額契約嗎？取消時間有沒有限制？">
+                    <p>
+                      您必須取消整個投資組合，無法單獨取消投資組合中的定期定額契約。請於該投資組合新申購委託生效當日(工作天)下午13:30前，登入【富蘭克林國民理財機器人】單元，點選欲取消委託的投資計畫，點選【委託交易查詢/取消】，按下取消委託後輸入「交易密碼」確認送出，即可完成該投資組合當日交易委託取消作業，若超過新申購委託生效當日(工作天)13:30，則此筆委託將無法取消。
+                    </p>
+                  </qa-item>
+                  <qa-item
+                    tit="我的【國民理財機器人】投資計畫同時有單筆申購以及定期定額契約，並且已經扣款一段時間了，我只想保留單筆申購部位，可以取消定期定額契約嗎？"
+                  >
+                    <p>
+                      可以。請於定期定額扣款日前一個工作天下午1:30前，登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲變更的投資組合依定期定額變更流程進行契約內容修改即可。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="在甚麼狀況下我會無法交易？(申購加碼或部分贖回/終止投資) ">
+                    <p>
+                      當下列狀態其一發生時，會無法執行單筆申購、定期定額扣款或部分贖回/終止投資(定期定額契約內容變更作業不影響)：
+                    </p>
+                    <ol>
+                      <li>
+                        投資組合同時僅能執行一項交易，如當天已經執行過單筆申購、定期定額扣款或部分贖回/終止投資、或再平衡調整其中一項，其他交易功能將暫時關閉。如您希望先執行其他交易，請於委託日13:30前點選【委託交易查詢/取消】，按下取消委託後輸入「交易密碼」確認送出，完成交易委託取消作業後，即可選擇執行其他交易。
+                      </li>
+                      <li>
+                        此投資組合內如尚有因交易尚未入帳之在途單位數，其他交易功能將暫時關閉，待約3~7個營業日全部在途單位數回報後，功能重新開啟後即可執行交易。
+                      </li>
+                      <li>
+                        當【再平衡調整】觸發時，將優先請您決定是否依照新的投資組合建議調整您的資產配置。如您希望先進行其他交易，請於【再平衡調整】選擇「不執行此次再平衡」，即可選擇執行其他交易。
+                      </li>
+                      <li>
+                        於國民e帳戶調整風險屬性(KYC)時，若與本投資組合風險屬性不相符時，不相符之投資組合將無法進行單筆加碼申購、定期定額扣款以及定期定額變更(增加扣款金額)。
+                      </li>
+                      <li>
+                        當投組新申購時約定帳戶存款不足僅扣到投組中部分基金，導致投資組合總投資金額不足申購門檻新台幣3萬元，該投資組合將無法部分贖回，只能全數贖回。建議您選擇【單筆加碼】增加投資金額，滿足投資門檻新台幣3萬元限制，以完整布局國民理財機器人推薦給您的最適投組。
+                      </li>
+                    </ol>
+                  </qa-item>
+                </article>
+              </tab-content>
+              <tab-content tab-tit="帳務查詢篇">
+                <article>
+                  <qa-item tit="如何得知【國民理財機器人】投資計畫申購成功？何時可查到投資計畫與內容？">
+                    <p>
+                      當富蘭克林【國民理財機器人】投組申購交易當日13:30前完成委託且當日下午扣款成功後，當日下午19點後登入登入國民e帳戶
+                      »【富蘭克林國民理財機器人】»【我的投資計畫】，選擇【交易明細】，即可查詢投資計畫與內容之參考資訊，唯提醒您，最終交易確認資訊須待集保之交易確認資料回報後(約3~7個營業日)所寄發之交易確認書內容為準。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="如何查詢【國民理財機器人】投資計畫的對帳單？">
+                    <p>
+                      請您登入國民e帳戶
+                      »【富蘭克林國民理財機器人】»【每月對帳單查詢】，選擇您欲查詢的月份，即可查看各個投資組合之累積投資金額、未實現損益以及參考報酬率等資訊，若按下任一投資組合之「顯示更多」按鈕，亦可查看投組中任一基金之投資明細。
+                    </p>
+                  </qa-item>
+                  <qa-item tit="如何查詢【國民理財機器人】歷史交易記錄？">
+                    <p>
+                      請您登入國民e帳戶
+                      »【富蘭克林國民理財機器人】»【我的投資計畫】»【交易明細】，選擇您欲查詢的資料期間，即可查詢歷史交易記錄，您亦可按下任一交易之「顯示更多」按鈕，即可查看該筆交易細節。
+                    </p>
+                  </qa-item>
+                </article>
+              </tab-content>
+            </tab-area>
+          </div>
+        </section>
 
-			<section class="item moreHelp">
-				<div class="container">
-					<h2 class="tit-type1" title="需要更多協助? 以下三種方式都能得到我們線上顧問最即時的協助">
-						需要更多協助?
-						<div class="tit-type1-tit2">
-							以下三種方式都能得到我們線上顧問最即時的協助
-						</div>
-					</h2>
-					<article class="moreHelp-item-area">
-						<section class="moreHelp-item">
-							<img src="images/moreHelp-icon-1.png" alt="" class="moreHelp-item-img">
-							<h3 class="moreHelp-item-tit" title="即時諮詢">
-								即時諮詢
-							</h3>
-							<p class="moreHelp-item-text">
-								早上9點到下午6點
-							</p>
-							<div class="btnArea">
-								<div class="btn type5">
-									<a href="tel:0800-885-888" title="0800-885-888">
-										0800-885-888 <i class="fas fa-phone"></i>
-									</a>
-								</div>
-							</div>
-						</section>
-						<section class="moreHelp-item">
-							<img src="images/moreHelp-icon-2.png" alt="" class="moreHelp-item-img">
-							<h3 class="moreHelp-item-tit" title="智能客服">
-								智能客服
-							</h3>
-							<p class="moreHelp-item-text">
-								全年無休線上待命
-							</p>
-							<div class="btnArea">
-								<div class="btn type5">
-									<a href="https://m.me/franklin.taiwan/" title="立即對談" target="_blank">
-										立即對談 <i class="fas fa-headphones-alt"></i>
-									</a>
-								</div>
-							</div>
-						</section>
-						<section class="moreHelp-item">
-							<img src="images/moreHelp-icon-3.png" alt="" class="moreHelp-item-img">
-							<h3 class="moreHelp-item-tit" title="留言詢問">
-								留言詢問
-							</h3>
-							<p class="moreHelp-item-text">
-								專人以email或電話做回覆
-							</p>
-							<div class="btnArea">
-								<div class="btn type5">
-									<a href="https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage" title="我要留言" target="_blank">
-										我要留言 <i class="far fa-keyboard"></i>
-									</a>
-								</div>
-							</div>
-						</section>
-					</article>
-				</div>
-			</section>
+        <section class="item grayBg otherInfo">
+          <div class="container">
+            <h2 class="tit-type1" title="還有其他疑問?">
+              還有其他疑問?
+            </h2>
+            <div class="btnArea">
+              <div class="btn type3">
+                <a href="index.html#experience" title="立即親身體驗"> 立即親身體驗 <i class="fas fa-angle-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
 
-			<section class="item qa dotTattooBg">
-				<div class="bgArrow"></div>
-				<div class="container">
-					<h2 class="tit-type1" title="想了解更多細節? 以下的QA應該能滿足您的好奇心!">
-						想了解更多細節?
-						<div class="tit-type1-tit2">
-							以下的QA應該能滿足您的好奇心!
-						</div>
-					</h2>
-					<tab-area>
-						<tab-content tab-tit="認識國民理財機器人" is-active="true">
-							<article>
-								<qa-item tit="為什麼需要【國民理財機器人】？">
-									<p>
-										金融市場永遠存在變數，根據富蘭克林近三萬份的「2020國民理財大調查」結果顯示，當民眾遭遇市場震盪等理財擔憂時，有61.2%會保持觀望、有8.9%選擇立即進場，僅有3成的人願意勇敢加碼，顯見一般民眾在投資時容易受情緒影響「追高殺低」，再加上有時候「選擇困難」，導致投資機會流失。
-									</p>
-									<p>
-										因此，運用金融科技解決人性弱點是重要關鍵，就算投資人不熟悉各種基金屬性、不知道買賣時點、沒時間研究，但只要知道自身投資目的與風險屬性，剩下的，就交給富蘭克林【國民理財機器人】幫忙煩惱，享受下列好處：
-									</p>
-									<ol>
-										<li>
-											落實資產配置、貫徹分散投資。
-										</li>
-										<li>
-											貼近投資需求、降低盲從入市。
-										</li>
-										<li>
-											縝密統計分析、精算風險與報酬。
-										</li>
-										<li>
-											佈局全球市場、配置多元資產，避免單一市場衝擊。
-										</li>
-										<li>
-											再平衡投資機制，監控組合表現，投資目標不偏離。
-										</li>
-									</ol>
-								</qa-item>
-								<qa-item tit="【國民理財機器人】和一般的基金投資有何不同？">
-									<p>
-										根據富蘭克林近三萬份的「2020國民理財大調查」結果顯示，投資人普遍存在三大痛點「不知道何時可以進場」、「沒時間研究市場」跟「不知道要買哪一檔基金」。為解決民眾理財時的三大投資難題，富蘭克林【國民理財機器人】從挑選標的、監控、再平衡，調配出最佳投資組合，不管市場高低都能極大化獲利表現與極小化下檔空間，協助各類理財需求的投資人朝財務自由目標前進。AI理財機器人並不是要跟一般的真人基金投資者分勝負，其優勢在於科學化的「紀律投資」，讓投資人不再受情緒波動影響決策。
-									</p>
-								</qa-item>
-								<qa-item tit="【國民理財機器人】推薦的基金組合是如何篩選出來的？">
-									<p>
-										富蘭克林【國民理財機器人】推薦的共同基金投資組合，是透過AI智能機器人學習分析巨量金融數據，搭配量化及演算法等科學分析的Black-Litterman計量模型，將各資產類別綜合評比選出的基金，以客戶投資目的、風險屬性與投資時間長短等資訊為基礎，計算出最佳投資組合比例，並透過隨時監控市場情況適時做出再平衡調整，以達客戶投資目標。
-									</p>
-								</qa-item>
-								<qa-item tit="【國民理財機器人】推薦的基金組合一定適合我嗎？">
-									<p>
-										富蘭克林【國民理財機器人】推薦的共同基金投資組合，是根據您在做問卷評估當下投資目的與風險承受能力所篩選出的最適組合。問卷結果得出風險偏好值愈大，所建議的基金組合波動也愈大，建議您仍需考量實際風險承受度以做出投資決策。
-									</p>
-								</qa-item>
-								<qa-item tit="使用【國民理財機器人】投資一定會賺錢嗎？">
-									<p>
-										富蘭克林【國民理財機器人】的共同基金投資組合，是配合投資人的風險屬性，並根據過去市場長期狀況進行演算分析，將收益與風險作模擬估算而提出的組合建議，但仍無法完全不受短期市場波動影響。在秉持風險分散的原則下，系統進行模擬演算時會避免投資過於單一的市場，當單一市場發生劇烈波動時，可以透過其他負相關的市場發揮避險效果，盡可能減少投資損失。因此，【國民理財機器人】每日監控市場，若投資組合偏離最適比例達一定程度時，將啟動再平衡機制(Rebalancing)，以達成投資人所設定的長期理財目標。投資一定有風險，投資人仍應審慎評估本身之財務狀況與風險承受能力是否適合所投資之基金組合。
-									</p>
-								</qa-item>
-								<qa-item tit="如何申請富蘭克林【國民理財機器人】服務？">
-									<ol>
-										<li>
-											如您尚未成為富蘭克林國民ｅ帳戶之網路交易平台用戶，請先至線上開戶辦理。
-										</li>
-										<li>
-											如您已是富蘭克林國民ｅ帳戶之網路交易平台用戶，可透過帳號(身分證字號)與密碼登入，點選<b>【國民理財機器人】</b>專區，於首次進入時需簽署「智能理財證券投資顧問委任契約」及「Form W-8BEN」文件，並依說明寄回本公司辦理啟用本服務進行交易。
-										</li>
-									</ol>
-								</qa-item>
-							</article>
-						</tab-content>
-						<tab-content tab-tit="新手上路篇">
-							<article>
-								<qa-item tit="如何開始【國民理財機器人】投資計畫？">
-									<p>
-										首先，您須為富蘭克林國民ｅ帳戶之網路交易平台用戶，並開通<b class="focus">【國民理財機器人】</b>服務。在開始投資計畫前，建議您先確立投資目標，並審慎思考可承受風險、投資時間長短及預計投資金額…等，以避免風險帶來的虧損超出您可承受的範圍。投資前您需先透過富蘭克林【國民理財機器人】風險屬性問卷評估，經由問卷結果所建議的投資組合進行投資計畫，將更貼近您的投資目的。
-									</p>
-									<p>
-										為因應金融相關法令規範保障投資人權益，以及為讓投資組合建構更貼近投資人需求，本服務無開放70歲以上之投資人使用，請洽詢專人為您服務。
-									</p>
-								</qa-item>
-								<qa-item tit="透過【國民理財機器人】投資會收取什麼費用？">
-									<p>
-										透過富蘭克林【國民理財機器人】進行投資，相關費用列示如下：
-									</p>
-									<div class="chart">
-										<div class="chart-table">
-											<table style="min-width: 400px;">
-												<tbody>
-													<tr>
-														<td>
-															年度平台服務費
-														</td>
-														<td>
-															免收
-														</td>
-													</tr>
-													<tr>
-														<td>
-															單筆、定期定額申購手續費
-														</td>
-														<td>
-															牌告1％，目前優惠僅收0.5%<br/>（包含新增及加碼投資組合）
-														</td>
-													</tr>
-													<tr>
-														<td>
-															紅利點數折抵手續費
-														</td>
-														<td>
-															單筆申購可折抵紅利至0.3%；定期定額目前不適用
-														</td>
-													</tr>
-													<tr>
-														<td>
-															再平衡服務
-														</td>
-														<td>
-															不限次數，目前免收。
-														</td>
-													</tr>
-													<tr>
-														<td>
-															贖回
-														</td>
-														<td>
-															免收
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<p class="chart-remark">
-											註：若遇特殊折扣活動期間可享更優惠手續費折扣，優惠內容與優惠使用規則將視個別活動為準。實際費率請依富蘭克林<a href="https://www.franklin.com.tw/AI_robo/" target="_blank" class="link">活動網站</a>或<a href="https://event.franklin.com.tw/latest-offers/latest-offers.html" target="_blank" class="link">最新優惠</a>公告為準。
-										</p>
-									</div>
-								</qa-item>
-								<qa-item tit="【國民理財機器人】的投資方式與最低申購金額為何？">
-									<p>
-										目前僅接受新台幣申購，下單方式目前有三種：
-									</p>
-									<div class="chart">
-										<div class="chart-table">
-											<table style="min-width: 400px;">
-												<thead>
-													<tr>
-														<td>
-															投資方式
-														</td>
-														<td>
-															最低申購金額
-														</td>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>
-															單筆申購
-														</td>
-														<td>新台幣3萬元(以1萬元累加)</td>
-													</tr>
-													<tr>
-														<td>定期定額申購</td>
-														<td>新台幣5千元(以1千元累加)，扣款日期目前為每月20號。</td>
-													</tr>
-													<tr>
-														<td>單筆申購＋定期定額申購</td>
-														<td>投資門檻同上述</td>
-													</tr>
-													<tr>
-														<td colspan="2">【補充】單筆申購扣款當日下午1:30前下單即可，定期定額申購則需在扣款當日(目前為每月20日)前一個工作天下午1:30前完成下單。</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<p>
-										如原約定帳戶存款不足或其他因素，導致投資組合單筆申購之總投資金額不足新台幣3萬元，該投資組合將無法依照富蘭克林【國民理財機器人】建議進行配置，且未來無法啟動再平衡機制。提醒您於申購完成後，務必確認原約定帳戶之存款餘額，以免扣款失敗，影響再平衡啟動權益。
-									</p>
-								</qa-item>
-								<qa-item tit="我可以用紅利點數折抵【國民理財機器人】的申購手續費嗎？">
-									<p>
-										紅利點數可以折抵「單筆申購」<b class="focus">【國民理財機器人】</b>投資組合時的申購手續費，定期定額目不適用，紅利1點可扣抵1元，<span class="focus">最低可折抵至0.3%費率</span>，如基金申購扣款失敗將返還紅利點數，部份扣款失敗亦會依比例返還紅利點數。如遇紅利點數不足折抵手續費時，其手續費差額部份將連同申購價金一起從投資人指定扣款帳戶中扣除。
-									</p>
-								</qa-item>
-							</article>
-						</tab-content>
-						<tab-content tab-tit="再平衡篇">
-							<article>
-								<qa-item tit="什麼是再平衡調整？">
-									<p>
-										再平衡調整為富蘭克林【國民理財機器人】服務中的定期追蹤與監控市場機制。隨著投資時間增長，投資組合中各檔基金因市場變化導致配置比例與原投資策略產生偏離時，基於風險管理的必要，也為避免您的投資組合不因特定部位之損益干擾影響，再平衡調整即會自動啟動，透過獲利了結，再轉入相對需加碼資產，將組合中的各基金比例調整至最佳狀態。同時也因應景氣循環，各市場產業會因基本面或消息面而各有漲跌，系統亦將定期進行再平衡調整，隨時監控並保護您的投資盈收，以維持最佳的配置狀。
-									</p>
-								</qa-item>
-								<qa-item tit="為何需要再平衡？">
-									<p>
-										因應景氣循環，各市場產業會因基本面或消息面而各有漲跌，基於風險管理的必要，為避免您的投資組合不因特定部位之損益干擾影響，系統將定期進行再平衡調整，透過獲利了結，再轉入相對需加碼資產，隨時監控並保護您的投資盈收，以維持最佳的配置狀態。
-									</p>
-								</qa-item>
-								<qa-item tit="再平衡調整是如何運作的？會收取什麼費用嗎？">
-									<p>
-										富蘭克林【國民理財機器人】每日會依據最新的市場情況計算出最佳化投資組合，與客戶手中之投資組合進行檢視，評估是否需進行調整，若需調整，則會啟動再平衡調整通知，待您同意後，將投資組合調整至最佳化配置狀態。投資期間因再平衡機制所產生之調整交易費用，目前為免收，未來是否收取將依富蘭克林基金理財網公告為準。
-									</p>
-								</qa-item>
-								<qa-item tit="我該如何同意再平衡調整？">
-									<p>
-										當您的投資組合標的狀況已經偏離原目標規劃之最佳化推薦比例時，系統會發送再平衡通知提醒訊息至您開戶留存的電子郵件信箱以及手機簡訊，建議您立即啟動再平衡；若發送通知第四天您仍未登入國民e帳戶-富蘭克林國民理財機器人表示是否啟動再平衡，系統將會第二次發送提醒的電子郵件與手機簡訊給您，建議您收到訊息後，登入【富蘭克林國民理財機器人】»【我的投資計畫】，點選該投組再平衡通知並同意啟動再平衡機制，以優化您的投資組合配置。
-									</p>
-								</qa-item>
-								<qa-item tit="為何我的投資組合沒有啟動再平衡調整？">
-									<p>
-										除系統定期監控與追蹤市場狀況後認定投資組合不需再平衡調整之外，當符合下列其一狀態時，投資組合亦將不提供再平衡調整：
-									</p>
-									<ol>
-										<li>
-											投資組合標的內尚有因交易尚未確認之在途單位數(例如：單筆申購、定期定額扣款或部分贖回)，再平衡機制將不會啟動。
-										</li>
-										<li>
-											原約定帳戶存款不足，導致投資組合總投資金額不足申購門檻新台幣3萬元，讓該投資組合無法依照富蘭克林國民理財機器人建議進行配置，將無法啟動自動再平衡機制。您可登入【富蘭克林國民理財機器人】»【我的投資計畫】，選擇【單筆申購/加碼】或【定期定額申購/加碼】增加投資金額，滿足投資門檻新台幣3萬元限制後，下一個工作天即啟動再平衡機制。
-										</li>
-										<li>
-											若投組僅選擇定期定額扣款，需於成功扣款金額累積至新台幣3萬元後，下一個工作天即啟動再平衡機制。
-										</li>
-										<li>
-											於國民e帳戶調整風險屬性時，若與【富蘭克林國民理財機器人】之現有投資組合風險屬性不符(例如：積極型變成穩健型或保守型)、且勾選「不同意，停止再平衡調整」時，再平衡機制將無法運作。
-										</li>
-									</ol>
-								</qa-item>
-							</article>
-						</tab-content>
-						<tab-content tab-tit="交易須知篇">
-							<article>
-								<qa-item tit="【國民理財機器人】投資計畫中的定期定額扣款日期為何只開放固定日期？">
-									<p>
-										因富蘭克林【國民理財機器人】投資組合若有再途交易狀況(例如：交易中單位數尚待集保確認回報中)無法啟動再平衡機制，可能導致投資組合資產配置偏離最適狀況，因此，富蘭克林國民理財機器人定期定額申購扣款日期將會進行限制(目前開放每月20日扣款)。
-									</p>
-								</qa-item>
-								<qa-item tit="【國民理財機器人】投資計畫中的定期定額扣款內容是否可以更改？">
-									<p>
-										可以，現行富蘭克林【國民理財機器人】投資組合之定期定額契約可變更項目為扣款金額、停止扣款，未來將持續優化增加可變更項目，以符合投資人各項需求；唯提醒您，定期定額變更需在扣款日前一個工作天下午1:30前，登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲變更的投資組合依定期定額變更流程進行契約內容修改即可。
-									</p>
-								</qa-item>
-								<qa-item tit="我想要再增加【國民理財機器人】投資計畫，一定要重新下單投資計畫嗎？">
-									<p>
-										可加碼既有投資組合不須重新下單。請登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲加碼的投資計畫，選擇【單筆加碼】或【定期定額加碼】後依說明進行即可；單筆加碼以新台幣1萬元累加、定期定額加碼以新台幣1千元累加。
-									</p>
-								</qa-item>
-								<qa-item tit="我可以指定【國民理財機器人】投資組合中特定基金作調整嗎？">
-									<p>
-										不可以。為讓富蘭克林【國民理財機器人】投資計畫能達到您在理財規劃的初始期待，避免單一標的調整影響整體投資組合配置，因此無法針對特定基金進行調整。
-									</p>
-								</qa-item>
-								<qa-item tit="投資屬性改變是否會影響【國民理財機器人】理財計畫？">
-									<p>
-										當您的本身整體投資風險屬性重新檢測後相較原投資屬性低時(例如：積極型變成穩健型或保守型)，需請您確認是否繼續由富蘭克林【國民理財機器人】提供原投資組合管理服務，若您不同意，仍可維持既有投資組合繼續投資(不一定要贖回)，但本服務將不再提供投組調整建議，亦即不再提供再平衡機制。
-									</p>
-									<p>
-										唯提醒您，無論您是否同意繼續原計畫，請審慎評估本身之財務狀況與風險承受能力是否適合此投資組合，並願意承擔所有投資風險(包括但不限於原始投資金額之損失、價格波動及匯率變動等)，富蘭克林國民理財機器人服務並不保證投資組合之獲利或負擔損失。
-									</p>
-								</qa-item>
-								<qa-item tit="我可以贖回部份的投資組合部位嗎？">
-									<p>
-										可以。考量您可能有資金上的需求，但仍想要繼續投資，只要該筆計畫保留最低投資金額新台幣3萬元，即可贖回部分比例。您可登入「國民e帳戶」»【國民理財機器人】»【我的投資計畫】，點選欲部分贖回的投資計畫，選擇【部分贖回/終止投資】，依說明進行即可。
-									</p>
-								</qa-item>
-								<qa-item tit="當我全部贖回我的任何一個【國民理財機器人】投資組合，組合中的定期定額仍會繼續扣款嗎？">
-									<p>
-										不會繼續扣款。當您全數贖回國民理財機器人某一投資組合時，將視同結束原有投資組合計畫，故會一併終止投資計畫中定期定額契約，若欲持續原投資組合定期定額投資，建議於贖回時保留該計畫最低庫存金額新台幣3萬元即可。
-									</p>
-								</qa-item>
-								<qa-item tit="贖回款項何時入帳？">
-									<p>
-										若您的投資計畫或理財目標己改變而提前執行贖回，贖回款項匯款時間需依臺灣集中保管結算所款項收付作業規定，若各匯款銀行無延遲匯入情況，一般贖回款項約在2~7個營業日即匯入您的帳戶中。唯投資組合中每一檔基金贖回入帳時間可能不同，請您透過約定之贖回銀行查詢實際入帳時間。
-									</p>
-								</qa-item>
-								<qa-item tit="我剛剛於【國民理財機器人】新申購投資計畫，同時有單筆申購以及定期定額申購契約，我可以只取消定期定額契約嗎？取消時間有沒有限制？">
-									<p>
-										您必須取消整個投資組合，無法單獨取消投資組合中的定期定額契約。請於該投資組合新申購委託生效當日(工作天)下午13:30前，登入【富蘭克林國民理財機器人】單元，點選欲取消委託的投資計畫，點選【委託交易查詢/取消】，按下取消委託後輸入「交易密碼」確認送出，即可完成該投資組合當日交易委託取消作業，若超過新申購委託生效當日(工作天)13:30，則此筆委託將無法取消。
-									</p>
-								</qa-item>
-								<qa-item tit="我的【國民理財機器人】投資計畫同時有單筆申購以及定期定額契約，並且已經扣款一段時間了，我只想保留單筆申購部位，可以取消定期定額契約嗎？">
-									<p>
-										可以。請於定期定額扣款日前一個工作天下午1:30前，登入國民e帳戶選擇【國民理財機器人】»【我的投資計畫】，點選欲變更的投資組合依定期定額變更流程進行契約內容修改即可。
-									</p>
-								</qa-item>
-								<qa-item tit="在甚麼狀況下我會無法交易？(申購加碼或部分贖回/終止投資) ">
-									<p>
-										當下列狀態其一發生時，會無法執行單筆申購、定期定額扣款或部分贖回/終止投資(定期定額契約內容變更作業不影響)：
-									</p>
-									<ol>
-										<li>
-											投資組合同時僅能執行一項交易，如當天已經執行過單筆申購、定期定額扣款或部分贖回/終止投資、或再平衡調整其中一項，其他交易功能將暫時關閉。如您希望先執行其他交易，請於委託日13:30前點選【委託交易查詢/取消】，按下取消委託後輸入「交易密碼」確認送出，完成交易委託取消作業後，即可選擇執行其他交易。
-										</li>
-										<li>
-											此投資組合內如尚有因交易尚未入帳之在途單位數，其他交易功能將暫時關閉，待約3~7個營業日全部在途單位數回報後，功能重新開啟後即可執行交易。
-										</li>
-										<li>
-											當【再平衡調整】觸發時，將優先請您決定是否依照新的投資組合建議調整您的資產配置。如您希望先進行其他交易，請於【再平衡調整】選擇「不執行此次再平衡」，即可選擇執行其他交易。
-										</li>
-										<li>
-											於國民e帳戶調整風險屬性(KYC)時，若與本投資組合風險屬性不相符時，不相符之投資組合將無法進行單筆加碼申購、定期定額扣款以及定期定額變更(增加扣款金額)。
-										</li>
-										<li>
-											當投組新申購時約定帳戶存款不足僅扣到投組中部分基金，導致投資組合總投資金額不足申購門檻新台幣3萬元，該投資組合將無法部分贖回，只能全數贖回。建議您選擇【單筆加碼】增加投資金額，滿足投資門檻新台幣3萬元限制，以完整布局國民理財機器人推薦給您的最適投組。
-										</li>
-									</ol>
-								</qa-item>
-							</article>
-						</tab-content>
-						<tab-content tab-tit="帳務查詢篇">
-							<article>
-								<qa-item tit="如何得知【國民理財機器人】投資計畫申購成功？何時可查到投資計畫與內容？">
-									<p>
-										當富蘭克林【國民理財機器人】投組申購交易當日13:30前完成委託且當日下午扣款成功後，當日下午19點後登入登入國民e帳戶 »【富蘭克林國民理財機器人】»【我的投資計畫】，選擇【交易明細】，即可查詢投資計畫與內容之參考資訊，唯提醒您，最終交易確認資訊須待集保之交易確認資料回報後(約3~7個營業日)所寄發之交易確認書內容為準。
-									</p>
-								</qa-item>
-								<qa-item tit="如何查詢【國民理財機器人】投資計畫的對帳單？">
-									<p>
-										請您登入國民e帳戶 »【富蘭克林國民理財機器人】»【每月對帳單查詢】，選擇您欲查詢的月份，即可查看各個投資組合之累積投資金額、未實現損益以及參考報酬率等資訊，若按下任一投資組合之「顯示更多」按鈕，亦可查看投組中任一基金之投資明細。
-									</p>
-								</qa-item>
-								<qa-item tit="如何查詢【國民理財機器人】歷史交易記錄？">
-									<p>
-										請您登入國民e帳戶 »【富蘭克林國民理財機器人】»【我的投資計畫】»【交易明細】，選擇您欲查詢的資料期間，即可查詢歷史交易記錄，您亦可按下任一交易之「顯示更多」按鈕，即可查看該筆交易細節。
-									</p>
-								</qa-item>
-							</article>
-						</tab-content>
-					</tab-area>
-				</div>
-			</section>
+      <!-- footer -->
+      <footer-area></footer-area>
 
-			<section class="item grayBg otherInfo">
-				<div class="container">
-					<h2 class="tit-type1" title="還有其他疑問?">
-						還有其他疑問?
-					</h2>
-					<div class="btnArea">
-						<div class="btn type3">
-							<a href="index.html#experience" title="立即親身體驗">
-								立即親身體驗 <i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
+      <div class="topBtn">
+        <a href="#top" title="返回最上面">
+          <span>
+            <i class="fas fa-caret-up"></i>
+            TOP
+          </span>
+        </a>
+      </div>
 
-		</article>
+      <div class="fixedRightBtn-area clearfix">
+        <div class="fixedRightBtn">
+          <a href="index.html#experience" title="即刻體驗"> 即刻體驗 <i class="fas fa-chevron-right"></i> </a>
+        </div>
+        <div class="fixedRightBtn type2">
+          <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶"> 立即開戶 <i class="fas fa-chevron-right"></i> </a>
+        </div>
+      </div>
 
-		<!-- footer -->
-		<footer-area></footer-area>
-		
-		<div class="topBtn">
-			<a href="#top" title="返回最上面">
-				<span>
-					<i class="fas fa-caret-up"></i>
-					TOP
-				</span>
-			</a>
-		</div>
+      <modal ref="warning" :can-close="false" class="md">
+        <slot slot="infoArea">
+          <div class="alertModal">
+            <div class="alertModal-icon">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <p>
+              智能理財係依您所填具之風險屬性評估結果及問卷調查結果作為您日後申購基金產品及投資決策時之參考，故請您依實際情況及評估自身投資風險屬性與風險承受度確實完整填答「投資計畫問卷表」。
+            </p>
+            <div class="btnArea">
+              <div class="btn">
+                <a href="#experience-step" title="我已仔細閱讀並同意" @click="questionnaire = 1; toggleModal('warning')">
+                  我已仔細閱讀並同意 <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </slot>
+      </modal>
 
-		<div class="fixedRightBtn-area clearfix">
-			<div class="fixedRightBtn">
-				<a href="index.html#experience" title="即刻體驗">
-					即刻體驗 <i class="fas fa-chevron-right"></i>
-				</a>
-			</div>
-			<div class="fixedRightBtn type2">
-				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="立即開戶">
-					立即開戶 <i class="fas fa-chevron-right"></i>
-				</a>
-			</div>
-		</div>
-
-		<modal ref="warning" :can-close="false" class="md">
-			<slot slot="infoArea">
-				<div class="alertModal">
-					<div class="alertModal-icon">
-						<i class="fas fa-exclamation-circle"></i>
-					</div>
-					<p>
-						智能理財係依您所填具之風險屬性評估結果及問卷調查結果作為您日後申購基金產品及投資決策時之參考，故請您依實際情況及評估自身投資風險屬性與風險承受度確實完整填答「投資計畫問卷表」。
-					</p>
-					<div class="btnArea">
-						<div class="btn">
-							<a href="#experience-step" title="我已仔細閱讀並同意" @click="questionnaire = 1; toggleModal('warning')">
-								我已仔細閱讀並同意 <i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</slot>
-		</modal>
-
-		<modal ref="chart" :can-close="true" class="md">
-			<slot slot="infoArea">
-				<div class="alertModal">
-					<div class="plan-fundChart">
-						<!-- 
+      <modal ref="chart" :can-close="true" class="md">
+        <slot slot="infoArea">
+          <div class="alertModal">
+            <div class="plan-fundChart">
+              <!-- 
 							這裡放基金淨值走勢圖
 						 -->
-					</div>
-					<div class="btnArea">
-						<div class="btn type4">
-							<a href="javascript:void(0);" title="關閉" @click="toggleModal('chart')">
-								關閉
-							</a>
-						</div>
-					</div>
-				</div>
-			</slot>
-		</modal>
+            </div>
+            <div class="btnArea">
+              <div class="btn type4">
+                <a href="javascript:void(0);" title="關閉" @click="toggleModal('chart')">
+                  關閉
+                </a>
+              </div>
+            </div>
+          </div>
+        </slot>
+      </modal>
+    </div>
 
-	</div>
-
-	
-	<script src="js/main.min.js"></script>
-	<script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
-
-</body>
+    <script src="js/main.min.js"></script>
+    <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
+  </body>
 </html>

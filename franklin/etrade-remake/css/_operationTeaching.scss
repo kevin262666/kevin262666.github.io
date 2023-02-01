@@ -7,6 +7,9 @@
         right: 0;
         transform: translateY(-50%);
         z-index: $zIndex-lv2;
+        .el-button {
+            margin-right: 0;
+        }
     }
     &-mask {
         position: fixed;
@@ -75,11 +78,12 @@
     }
     @include maxWidth-md {
         &-openBtn {
-            position: fixed;
-            top: auto;
-            right: auto;
-            bottom: 10px;
-            left: 5px;
+            // position: fixed;
+            // top: auto;
+            // right: auto;
+            // bottom: 10px;
+            // left: 5px;
+            display: none;
         }
     }
     @include maxWidth-sm {

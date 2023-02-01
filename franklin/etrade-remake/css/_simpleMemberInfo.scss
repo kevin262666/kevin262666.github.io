@@ -14,6 +14,7 @@
         max-width: 136px;
         border: solid 6px rgba($color-gray1, 0.2);
         box-sizing: border-box;
+        width: 100px;
     }
     &-salutatory {
         color: $color-gray1;
@@ -43,6 +44,9 @@
             }
             .breakBlock {
                 display: none;
+            }
+            @at-root.selectDSType-tit {
+                color: #8492a6;
             }
         }
         &-price {
@@ -189,6 +193,11 @@
                 &:last-of-type {
                     border-right: none;
                 }
+                &.selectDSType {
+                    display: block;
+                    border-right: none;
+                    margin-bottom: 10px;
+                }
             }
         }
         .slick {
@@ -206,6 +215,15 @@
             width: 250px;
             margin-left: auto;
             margin-right: 0;
+        }
+        &.isDSType {
+            .el-card {
+                display: block;
+                width: auto;
+            }
+            .goHome {
+                margin: 10px auto 0;
+            }
         }
     }
     @include maxWidth-md {
@@ -249,6 +267,9 @@
                 text-align: left;
                 padding: 0px;
                 &:first-of-type {
+                    display: block;
+                }
+                &.selectDSType + .simpleMemberInfo-content-item {
                     display: block;
                 }
             }

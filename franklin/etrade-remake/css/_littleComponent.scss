@@ -1,5 +1,38 @@
 @charset 'utf-8';
 
+body {
+    background: #e8e8e8;
+}
+
+.main {
+    min-height: 600px;
+    padding: 1px 0px;
+    margin: 15px 0px;
+    // 特製螢幕寬度大於1200 && 高度小於750
+    @media screen and (min-width: 1200px) and (max-height: 750px) {
+        min-height: 410px;
+    }
+    @include maxWidth-lg {
+        min-height: 0;
+        margin-top: 0px;
+    }
+}
+
+body.notLoggedIn {
+    .header {
+        &-right,
+        &-bottom {
+            display: none;
+        }
+    }
+    .menuBtn {
+        display: none;
+    }
+    .container {
+        padding-left: 0;
+    }
+}
+
 .page {
     // 頁面標題
     &-tit {
@@ -174,6 +207,12 @@
 
 // 標題
 .tit {
+    &-type1 {
+        font-size: 25px;
+        line-height: 1.4;
+        margin: 15px 0px;
+        color: $color-baseBlue;
+    }
     &-type2 {
         font-size: 18px;
         margin: 15px 0px;
@@ -191,6 +230,9 @@
         }
     }
     @include maxWidth-sm {
+        &-type1 {
+            font-size: 21px;
+        }
         &-type2 {
             // font-size: 18px;
             .remark {
@@ -311,5 +353,31 @@
         display: inline-block;
         line-height: 40px;
         padding: 0px 10px;
+    }
+}
+
+// 到價通知設定訂製樣式
+.priceArrivalNoticeSetting {
+    &-input {
+        .el-input-group {
+            &__prepend,
+            &__append {
+                padding: 0 10px;
+            }
+        }
+        .el-input__inner {
+            padding: 0 10px;
+        }
+    }
+    @include maxWidth-sm {
+        &-input {
+            .el-input-group {
+                &__prepend,
+                &__append {
+                    font-size: 12px;
+                    padding: 0 7px;
+                }
+            }
+        }
     }
 }

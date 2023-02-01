@@ -1,17 +1,73 @@
-// ========= 契約扣款明細查詢 ==============================================================================================================================
-const DeductionDetails = {
+// ========= 交易查詢與取消 ==============================================================================================================================
+const TradeHistory = {
     data() {
         return {
             page: {
-                stit: `帳務管理`,
-                tit: `契約扣款明細查詢`,
+                stit: `交易查詢`,
+                tit: `交易查詢與取消`,
             },
+
+            notice: [
+                {
+                    content: `本交易平台可申購本公司已核備之富蘭克林坦伯頓盧森堡及美國註冊之基金(以下簡稱境外基金)，及台灣核准之富蘭克林華美投信基金(以下簡稱境內基金)。`,
+                },
+                {
+                    content: `每營業日13:30:01 ~ 次一營業日 13:30:00 截止，為網路交易系統之同一個交易日。當日申請的委託交易，請於同一個交易日13:30:00前執行取消動作，若逾時則無法取消。`,
+                },
+                {
+                    content: `除法令變更外，每一客戶每日電子交易之買回(不含轉換交易)之上限金額為新台幣3000萬元或等值外幣，其中買回限額之計算，境外基金係以投資人為網路(電子)交易委託前最近公告之基金淨值及匯率為準，境內基金係以輸入交易前二個營業日之基金淨值為準，但屬轉換交易者，得不受上述交易金額規定之限制。如買回金額高於作業準則規定，系統會自動拒絕該筆交易，並請投資人重新輸入買回單位數。因各家銀行作業機制不同，請依各銀行規定之額度限制進行交易，以避免超過額度而造成扣款失敗。※若選擇約定使用『全國性繳費業務指定扣款銀行』自動扣款方式繳付申購款項，每筆申購交易扣款金額(含手續費)不得超過新台幣500萬元，當日累計扣款金額以新台幣3000萬元(含手續費)為上限(實際扣款額上限仍應以客戶所屬扣款行規定為準，惟仍應符合法令規定之最高扣款上限)。若選擇約定使用『集保款項收付指定扣款銀行』自動扣款方式繳付申購款項，則依現行法規的規定限制，自然人客戶以新台幣3000萬元(含手續費)為上限。`,
+                },
+                {
+                    content: `依臺灣集中保管結算所作業規定，受益人如僅約定台幣贖回帳戶，僅能以台幣申購基金；如僅約定外幣贖回帳戶，則申購時應以基金原幣為之。`,
+                },
+                {
+                    content: `境外基金申購之受益權單位數計至小數點三位數時，將會以慣用的進位法計算到最接近的小數點以下三位數；境內基金申購之受益權單位數多於小數點一位數時，將會以慣用的進位法計算到最接近的小數點以下一位數；惟實際分配之單位數，受益人應以臺灣集中保管結算所計算分配為準。`,
+                },
+                {
+                    content: `受益人同意授權臺灣集中保管結算所辦理境外基金申購、贖回或孳息分派等款項之結匯事項，並同意授權臺灣集中保管結算所得與銀行議定單一之買進或賣出匯率，辦理結匯作業。`,
+                },
+                {
+                    content: `擇時交易/短線交易說明：`,
+                    innerList: [
+                        {
+                            content: `境外基金：依公開說明書及投資人須知之規定，本公司不鼓勵短期或是過度交易(以下稱「擇時交易」)，當基金公司或股務代理機構認定投資人的交易可能妨礙基金投資組合效率管理、可能實質增加基金交易成本、管理成本或稅捐，或是在其他方面不利於基金公司及其股東權益時，會試圖限制或拒絕此類交易。故當投資人的交易行為被認定為擇時交易時，有可能暫時或是永久禁止投資人後續之申購或轉申購委託。`,
+                        },
+                        {
+                            content: `境內基金：基金經理公司不歡迎受益人對基金進行短線申購贖回之交易，故持有境內基金未屆滿14日者應支付買回價金之百分之零點二之買回費用。買回費用採四捨五入計算至新台幣「元」，如不足一元則不予收取；外幣計價者(日幣除外)，採四捨五入計算至該幣別「元」以下小數點第二位。申購交易日期計算方式：以「請求買回之書面或其他約定方式到達經理公司或其銷售機構營業日或次一營業日(各基金買回淨值日須依各基金公開說明書之規定)」之日期減去「申購日」之日期，小於14日(含，以日曆日計算)者。`,
+                        },
+                    ],
+                },
+                {
+                    content: `取消成功後將以電子郵件寄發取消委託通知信至約定電子郵件信箱。`,
+                },
+                {
+                    content: `因網路壅塞、通訊斷線、斷電或發生天然災害或中華民國境內或境外相關主管機關限制、交易停止等不可抗力事由，或因非可歸責於富蘭克林證券投顧之因素所致之系統遲延或委託執行遲延，富蘭克林證券投顧及其主管、職員、受僱人或銷售機構，皆不負相關責任。`,
+                },
+            ],
+            tdccStipulate: false,
         };
     },
     template: ` <div>
                     <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
-                    <div class="clearfix fontSizeZero">
-                        <rangeDate></rangeDate>
+                    <div class="clearfix fontSizeZero margin-bottom-15">
+                        <div class="page-changeDisplayMethod">
+                            <el-button
+                                round
+                                class="sBtn"
+                                :plain="$route.path !== '/TradeHistory/list'"
+                                :type="$route.path === '/TradeHistory/list' ? 'primary' : 'secondary'"
+                                @click="$router.push('/TradeHistory/list')">
+                                委託查詢 / 取消
+                            </el-button>
+                            <el-button
+                                round
+                                class="sBtn"
+                                :plain="$route.path !== '/TradeHistory/inTransitDealInquiry'"
+                                :type="$route.path === '/TradeHistory/inTransitDealInquiry' ? 'primary' : 'secondary'"
+                                @click="$router.push('/TradeHistory/inTransitDealInquiry')">
+                                在途交易查詢
+                            </el-button>
+                        </div>
                     </div>
                     <transition enter-active-class="animate__animated animate__fadeIn">
                         <router-view></router-view>
@@ -22,14 +78,16 @@ const DeductionDetails = {
                         </h4>
                         <div class="notice-content">
                             <ol>
-                                <li>
-                                    上述交易明細，資料若有不符，應以臺灣集中保管結算所電腦記錄為準。若於同一指定帳戶內同時授權二個以上基金申購款項扣款轉帳付款作業，將依集保結算所指定之扣款順序逐筆扣款，申購人不得異議。
+                                <li v-for="(item, index) in notice" :key="index">
+                                    <div v-html="item.content"></div>
+                                    <ul v-if="item.innerList != undefined">
+                                        <li v-for="(item2, index2) in item.innerList" :key="index2">
+                                            <div v-html="item2.content"></div>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    因網路壅塞、通訊斷線、斷電或發生天然災害或中華民國境內或境外相關主管機關限制、交易停止等不可抗力事由，或因非可歸責於富蘭克林證券投顧之因素所致之系統遲延或委託執行遲延，富蘭克林證券投顧及其主管、職員、受僱人或銷售機構，皆不負相關責任。
-                                </li>
-                                <li>
-                                    如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日9：00～18：00撥打免付費客服專線，將有客服專員竭誠為您服務！
+                                    如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日 9：00～18：00 撥打免付費客服專線，將有客服專員竭誠為您服務！
                                 </li>
                             </ol>
                         </div>
@@ -37,289 +95,2151 @@ const DeductionDetails = {
                 </div>`,
     components: {
         pageTit: pageTit,
-        rangeDate: rangeDate,
     },
 };
 
-const DeductionDetails_list = {
-    mixins: [fundListGroup],
-    data() {
-        return {
-            fund: [
+const tradeHistoryFund = [
+    [
+        {
+            hasCheckbox: true,
+            checkbox: false,
+            checkboxContent: "勾選您欲取消之項目",
+            transactionMethod: "委託成功",
+            fundCode: "6885",
+            fundName: "富蘭克林華美特別股收益基金B分配型南非幣",
+            info: [
                 {
-                    transactionMethod: "交易成功",
-                    transactionMethodType: "",
-                    dealDateName: "扣款日期：",
-                    dealDate: "2020/12/01",
-                    fundCode: "0812",
-                    fundName: "美國政府基金—月配息",
-                    info: [
-                        {
-                            tit: "交易總額",
-                            text: "30,000.00",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "申購單位數",
-                            text: "3,325.942",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款幣別",
-                            text: "美元",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款帳號",
-                            text: "華南銀行 11111111***",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "交易序號",
-                            text: "20201127D00391548",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "投資金額",
-                            text: "30,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "外幣投資金額",
-                            text: "30,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "手續費",
-                            text: "0.00",
-                            focusText: false,
-                            remark: "",
-                            hasTooltip: true,
-                            tooltipContent: `優惠費率0.6000%，紅利折抵180.00元`,
-                        },
-                        {
-                            tit: "配息方式",
-                            text: "配現金 / 配現",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "淨值",
-                            text: "9.02",
-                            focusText: false,
-                            remark: "(2020/12/01)",
-                        },
-                        {
-                            tit: "匯率",
-                            text: "1",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "委託來源",
-                            text: "網路",
-                            focusText: false,
-                            remark: "",
-                        },
-                    ],
-                    hasPopover: false,
+                    tit: "申購價金",
+                    text: "15,000.00",
+                    focusText: true,
+                    remark: "",
                 },
                 {
-                    transactionMethod: "交易失敗",
-                    transactionMethodType: "danger",
-                    transactionMethodTooltip: true,
-                    transactionMethodTooltipText: `存款不足`,
-                    dealDateName: "扣款日期：",
-                    dealDate: "2020/12/01",
-                    fundCode: "1022",
-                    fundName: "邊境市場基金—歐元",
-                    info: [
-                        {
-                            tit: "交易總額",
-                            text: "5,000.00",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "申購單位數",
-                            text: "261.233",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款幣別",
-                            text: "歐元",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款帳號",
-                            text: "華南銀行 11111111***",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "交易序號",
-                            text: "20201127D00391549",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "投資金額",
-                            text: "5,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "外幣投資金額",
-                            text: "5,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "手續費",
-                            text: "0.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "配息方式",
-                            text: "累積",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "淨值",
-                            text: "19.14",
-                            focusText: false,
-                            remark: "(2020/12/01)",
-                        },
-                        {
-                            tit: "匯率",
-                            text: "1",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "委託來源",
-                            text: "網路",
-                            focusText: false,
-                            remark: "",
-                        },
-                    ],
-                    hasPopover: false,
+                    tit: "配息方式",
+                    text: "配現金 / 配現",
+                    focusText: false,
+                    remark: "",
                 },
                 {
-                    transactionMethod: "交易成功",
-                    transactionMethodType: "",
-                    dealDateName: "扣款日期：",
-                    dealDate: "2020/12/01",
-                    fundCode: "1716",
-                    fundName: "穩定月收益基金—澳幣避險月配息",
-                    info: [
-                        {
-                            tit: "交易總額",
-                            text: "20,000.00",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "申購單位數",
-                            text: "2,412.545",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款幣別",
-                            text: "澳幣",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "扣款帳號",
-                            text: "華南銀行 11111111***",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "交易序號",
-                            text: "20201127D00391550",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "投資金額",
-                            text: "20,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "外幣投資金額",
-                            text: "20,000.00",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "手續費",
-                            text: "0.00",
-                            focusText: false,
-                            remark: "",
-                            hasTooltip: true,
-                            tooltipContent: `優惠費率0.3000%，紅利折抵60.00元`,
-                        },
-                        {
-                            tit: "配息方式",
-                            text: "配現金 / 配現",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "淨值",
-                            text: "8.29",
-                            focusText: false,
-                            remark: "(2020/12/01)",
-                        },
-                        {
-                            tit: "匯率",
-                            text: "1",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "委託來源",
-                            text: "網路",
-                            focusText: false,
-                            remark: "",
-                        },
-                    ],
-                    hasPopover: false,
+                    tit: "計價幣別",
+                    text: "南非幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "南非幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "參考手續費",
+                    text: "180.00",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/17",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201216E00022709",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/16</span> <span>15:26:05</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
                 },
             ],
-            fundListSetting: {
-                toggleCardBtnText: "更多資訊",
-                minWidth: "0",
-                pcShowQty: {
-                    base: "8",
-                    xxl: "6",
-                    xl: "5",
-                    lg: "5",
-                    md: "4",
-                    sm: "3",
-                    xs: "2",
+            hasPopover: false,
+        },
+        {
+            listItemOtherClass: "unimportant",
+            transactionMethod: "交易取消",
+            fundCode: "6805",
+            fundName: "富蘭克林華美新世界股票基金",
+            info: [
+                {
+                    tit: "申購價金",
+                    text: "10,000",
+                    focusText: true,
+                    remark: "",
                 },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "參考手續費",
+                    text: "0",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/17",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201216E00022708",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/16</span> <span>15:06:15</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0287",
+            fundName: "全球債券總報酬基金—歐元",
+            info: [
+                {
+                    tit: "申購價金",
+                    text: "50,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "參考手續費",
+                    text: "0",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/16",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201215E00022702",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/15</span> <span>18:10:38</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+    ],
+    [
+        {
+            transactionType: "定期不定額",
+            hasCheckbox: true,
+            checkbox: false,
+            checkboxContent: "勾選您欲取消之項目",
+            transactionMethod: "委託成功",
+            fundCode: "0349",
+            fundName: "全球債券總報酬基金—歐元月配息",
+            info: [
+                {
+                    tit: "(基準)扣款金額",
+                    text: "5,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易類型",
+                    text: "定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "手續費率",
+                    text: "0.3598%",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/15",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "254726",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/14</span> <span>16:58:00</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            bottomContent: {
+                type: "dateOfDeduction",
             },
+            dateOfDeduction: ["02", "03", "05", "06", "07", "08", "09", "10", "11", "12", "13", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "29", "31"],
+        },
+        {
+            transactionType: "定期不定額",
+            transactionMethod: "已受理",
+            fundCode: "0287",
+            fundName: "全球債券總報酬基金—歐元",
+            info: [
+                {
+                    tit: "(基準)扣款金額",
+                    text: "100,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易類型",
+                    text: "定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "手續費率",
+                    text: "0.3598%",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/09",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "254721",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/09</span> <span>13:22:36</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            bottomContent: {
+                type: "dateOfDeduction",
+            },
+            dateOfDeduction: ["16", "20"],
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0561",
+            fundName: "潛力歐洲基金—歐元年配息",
+            info: [
+                {
+                    tit: "(基準)扣款金額",
+                    text: "40.00",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配現金 / 配現",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易類型",
+                    text: "定期定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "手續費率",
+                    text: "0.5397%",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/07",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "254714",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/04</span> <span>18:14:11</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            bottomContent: {
+                type: "dateOfDeduction",
+            },
+            dateOfDeduction: ["18", "26"],
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0561",
+            fundName: "潛力歐洲基金—歐元年配息",
+            info: [
+                {
+                    tit: "(基準)扣款金額",
+                    text: "40.00",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "扣款金額上限",
+                    text: "100.00",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "扣款金額下限",
+                    text: "40.00",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配現金 / 配現",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易類型",
+                    text: "智能定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "手續費率",
+                    text: "0.5397%",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/07",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "254714",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/04</span> <span>18:14:11</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            bottomContent: {
+                type: "dateOfDeduction",
+            },
+            dateOfDeduction: ["18", "26"],
+        },
+    ],
+    [
+        {
+            transactionType: "定期不定額",
+            hasCheckbox: true,
+            checkbox: false,
+            checkboxContent: "勾選您欲取消之項目",
+            transactionMethod: "已受理",
+            fundCode: "0797",
+            fundName: "科技基金",
+            info: [
+                {
+                    tit: "變更後(基準)扣款金額",
+                    text: "8,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款狀態",
+                    text: "正常扣款",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後交易類型",
+                    text: "定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款日期",
+                    text: `<span>05日</span> / <span>10日</span> / <span>15日</span> / <span>20日</span> / <span>25日</span> / <span>30日</span>`,
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/18",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "394",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/17</span> <span>14:34:27</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            detail: [
+                {
+                    transactionMethod: "原契約",
+                    info: [
+                        {
+                            tit: "原(基準)扣款金額",
+                            text: "2,000",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款狀態",
+                            text: "正常扣款",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原交易類型",
+                            text: "定期不定額",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款日期",
+                            text: `<span>06日</span> / <span>16日</span> / <span>26日</span>`,
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+            ],
+        },
+        {
+            transactionType: "定期不定額",
+            transactionMethod: "已受理",
+            fundCode: "0287",
+            fundName: "全球債券總報酬基金—歐元",
+            info: [
+                {
+                    tit: "變更後(基準)扣款金額",
+                    text: "100,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款狀態",
+                    text: "正常扣款",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後交易類型",
+                    text: "定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款日期",
+                    text: `<span>12日</span> / <span>16日</span> / <span>19日</span> / <span>20日</span>`,
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/16",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "388",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/15</span> <span>18:07:05</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            detail: [
+                {
+                    transactionMethod: "原契約",
+                    info: [
+                        {
+                            tit: "原(基準)扣款金額",
+                            text: "100,000",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款狀態",
+                            text: "正常扣款",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原交易類型",
+                            text: "定期定額",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款日期",
+                            text: ` <span>16日</span> / <span>20日</span>`,
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+            ],
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0349",
+            fundName: "全球債券總報酬基金—歐元月配息",
+            info: [
+                {
+                    tit: "變更後(基準)扣款金額",
+                    text: "5,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款狀態",
+                    text: "正常扣款",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後交易類型",
+                    text: "定期定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款日期",
+                    text: ` <span>02日</span> / <span>03日</span> / <span>05日</span> / <span>06日</span> / <span>07日</span> / <span>08日</span> / <span>09日</span> / <span>10日</span> / <span>13日</span> / <span>15日</span> / <span>16日</span> / <span>20日</span> / <span>21日</span> / <span>22日</span> / <span>23日</span> / <span>24日</span> / <span>25日</span> / <span>26日</span> / <span>27日</span> / <span>28日</span> / <span>29日</span> / <span>31日</span>`,
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/16",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "387",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/15</span> <span>16:21:01</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            detail: [
+                {
+                    transactionMethod: "原契約",
+                    info: [
+                        {
+                            tit: "原(基準)扣款金額",
+                            text: "5,000",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款狀態",
+                            text: "正常扣款",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原交易類型",
+                            text: "定期不定額",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款日期",
+                            text: ` <span>02日</span> / <span>03日</span> / <span>05日</span> / <span>06日</span> / <span>07日</span> / <span>08日</span> / <span>09日</span> / <span>10日</span> / <span>11日</span> / <span>12日</span> / <span>13日</span> / <span>15日</span> / <span>16日</span> / <span>17日</span> / <span>18日</span> / <span>19日</span> / <span>20日</span> / <span>21日</span> / <span>22日</span> / <span>23日</span> /<span>24日</span> /<span>25日</span> /<span>26日</span> /<span>27日</span> /<span>28日</span> /<span>29日</span> / <span>31日</span>`,
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+            ],
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0349",
+            fundName: "全球債券總報酬基金—歐元月配息",
+            info: [
+                {
+                    tit: "變更後(基準)扣款金額",
+                    text: "3,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款金額上限",
+                    text: "5,000",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款金額下限",
+                    text: "1,000",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款狀態",
+                    text: "正常扣款",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後交易類型",
+                    text: "智能定期不定額",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "變更後扣款日期",
+                    text: ` <span>02日</span> / <span>03日</span> / <span>05日</span> / <span>06日</span> / <span>07日</span> / <span>08日</span> / <span>09日</span> / <span>10日</span> / <span>13日</span> / <span>15日</span> / <span>16日</span> / <span>20日</span> / <span>21日</span> / <span>22日</span> / <span>23日</span> / <span>24日</span> / <span>25日</span> / <span>26日</span> / <span>27日</span> / <span>28日</span> / <span>29日</span> / <span>31日</span>`,
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/16",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "387",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/15</span> <span>16:21:01</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            detail: [
+                {
+                    transactionMethod: "原契約",
+                    info: [
+                        {
+                            tit: "原(基準)扣款金額",
+                            text: "5,000",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款金額上限",
+                            text: "5,000",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款金額下限",
+                            text: "1,000",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款狀態",
+                            text: "正常扣款",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原交易類型",
+                            text: "智能定期不定額",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "原扣款日期",
+                            text: ` <span>02日</span> / <span>03日</span>`,
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+            ],
+        },
+    ],
+    [
+        {
+            hasCheckbox: true,
+            checkbox: false,
+            checkboxContent: "勾選您欲取消之項目",
+            transactionMethod: "委託成功",
+            fundCode: "0427",
+            fundName: "精選收益基金—美元月配息",
+            info: [
+                {
+                    tit: "贖回單位數",
+                    text: "1,000.742",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配息",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/17",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201217000039875",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/17</span> <span>11:49:47</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            listItemOtherClass: "unimportant",
+            transactionMethod: "交易取消",
+            fundCode: "0804",
+            fundName: "拉丁美洲基金—年配息",
+            info: [
+                {
+                    tit: "贖回單位數",
+                    text: "20.487",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "外幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/11",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201210000039414",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/10</span> <span>13:53:01</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            transactionMethod: "已受理",
+            fundCode: "0384",
+            fundName: "亞洲債券基金—美元",
+            info: [
+                {
+                    tit: "贖回單位數",
+                    text: "12.081",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "不指定",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/10",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201210000039403",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/10</span> <span>11:14:27</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            transactionMethod: "交易成功",
+            fundCode: "0349",
+            fundName: "全球債券總報酬基金—歐元月配息",
+            info: [
+                {
+                    tit: "贖回單位數",
+                    text: "6.000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配息",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/02",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201202000038840",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/02</span> <span>10:30:37</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+    ],
+    [
+        {
+            hasCheckbox: true,
+            checkbox: false,
+            checkboxContent: "勾選您欲取消之項目",
+            transactionMethod: "轉出基金",
+            fundCode: "6885",
+            fundName: "富蘭克林華美特別股收益基金B分配型南非幣",
+            isChange: true,
+            changeTypeUseData: {
+                transactionMethod: "委託成功",
+                fundCode: "0797",
+                fundName: "科技基金",
+            },
+            info: [
+                {
+                    tit: "轉出單位數",
+                    text: "90.000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "轉入計價幣別",
+                    text: "歐元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉入配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "不指定",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉換手續費",
+                    text: "新台幣 $0",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/18",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201217000039876",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/17</span> <span>14:04:59</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            listItemOtherClass: "unimportant",
+            transactionMethod: "轉出基金",
+            fundCode: "1172",
+            fundName: "全球債券總報酬基金—澳幣避險月配息",
+            isChange: true,
+            changeTypeUseData: {
+                transactionMethod: "交易取消",
+                fundCode: " 454",
+                fundName: "富蘭克林坦伯頓法人機構專用基金-國際股票系列Primary股",
+            },
+            info: [
+                {
+                    tit: "轉出單位數",
+                    text: "300.003",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "轉入計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉入配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "外幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉換手續費",
+                    text: "新台幣 $0",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/18",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201218000039986",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/17</span> <span>14:04:59</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+        {
+            transactionMethod: "轉出基金",
+            fundCode: "2026",
+            fundName: "穩定月收益基金—南非幣避險月配息",
+            isChange: true,
+            changeTypeUseData: {
+                transactionMethod: "交易成功",
+                fundCode: "0810",
+                fundName: "全球債券基金—美元月配息",
+            },
+            info: [
+                {
+                    tit: "轉出單位數",
+                    text: "87.549",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "轉入計價幣別",
+                    text: "美元",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉入配息方式",
+                    text: "再投資 / 配權",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配息",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "外幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "轉換手續費",
+                    text: "新台幣 $0",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託生效日",
+                    text: "2020/12/14",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託單號",
+                    text: "20201214000039612",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託時間",
+                    text: "<span>2020/12/14</span> <span>11:38:52</span>",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "委託來源",
+                    text: "網路",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+        },
+    ],
+];
+
+const tradeHistoryFundListSetting = [
+    {
+        toggleCardBtnText: "更多資訊",
+        promptIcon: "",
+        minWidth: "350px",
+        pcShowQty: {
+            base: "7", // 預設
+            xxl: "6", // 1599px~1400px
+            xl: "5", // 1399px~1200px
+            lg: "5", // 1199px~992px
+            md: "4", // 991px~768px
+            sm: "3", // 767px~360px
+            xs: "3", // 359px以下
+        },
+    },
+    {
+        toggleCardBtnText: "更多資訊",
+        promptIcon: "",
+        minWidth: "350px",
+        pcShowQty: {
+            base: "7", // 預設
+            xxl: "6", // 1599px~1400px
+            xl: "5", // 1399px~1200px
+            lg: "5", // 1199px~992px
+            md: "4", // 991px~768px
+            sm: "3", // 767px~360px
+            xs: "3", // 359px以下
+        },
+    },
+    {
+        toggleCardBtnText: "更多資訊",
+        promptIcon: "",
+        minWidth: "430px",
+        pcShowQty: {
+            base: "6", // 預設
+            xxl: "6", // 1599px~1400px
+            xl: "5", // 1399px~1200px
+            lg: "5", // 1199px~992px
+            md: "4", // 991px~768px
+            sm: "3", // 767px~360px
+            xs: "3", // 359px以下
+        },
+        toggleDetailText: {
+            before: "展開原契約內容",
+            after: "收起原契約內容",
+        },
+        detail: {
+            minWidth: "540px",
+            pcShowQty: {
+                base: "3", // 預設
+                xxl: "3", // 1599px~1400px
+                xl: "3", // 1399px~1200px
+                lg: "3", // 1199px~992px
+                md: "3", // 991px~768px
+                sm: "3", // 767px~360px
+                xs: "3", // 359px以下
+            },
+        },
+    },
+    {
+        toggleCardBtnText: "更多資訊",
+        promptIcon: "",
+        minWidth: "350px",
+        pcShowQty: {
+            base: "6", // 預設
+            xxl: "6", // 1599px~1400px
+            xl: "5", // 1399px~1200px
+            lg: "5", // 1199px~992px
+            md: "4", // 991px~768px
+            sm: "3", // 767px~360px
+            xs: "3", // 359px以下
+        },
+    },
+    {
+        toggleCardBtnText: "更多資訊",
+        promptIcon: "",
+        minWidth: "350px",
+        pcShowQty: {
+            base: "7", // 預設
+            xxl: "6", // 1599px~1400px
+            xl: "5", // 1399px~1200px
+            lg: "5", // 1199px~992px
+            md: "4", // 991px~768px
+            sm: "3", // 767px~360px
+            xs: "3", // 359px以下
+        },
+    },
+];
+
+const TradeHistory_list = {
+    // mixins: [fundListGroup],
+    data() {
+        return {
+            tabPosition: "top",
+            editableTabsValue: "1",
+            editableTabs: [
+                {
+                    title: "單筆申購",
+                    name: "1",
+                    fundType: "1",
+                },
+                {
+                    title: "定期(不)定額申購",
+                    name: "2",
+                    fundType: "2",
+                },
+                {
+                    title: "定期(不)定額變更",
+                    name: "3",
+                    fundType: "3",
+                },
+                {
+                    title: "贖回",
+                    name: "4",
+                    fundType: "1",
+                },
+                {
+                    title: "轉換",
+                    name: "5",
+                    fundType: "2",
+                },
+            ],
+            tabIndex: 5,
+
+            fund: tradeHistoryFund[0],
+            fundListSetting: tradeHistoryFundListSetting[0],
             fundListIndex: 0,
 
-            infoCardBtnType: 0, // PM：因為零散所以不給交易
+            submitPassword: false,
+            transactionPassword: "",
         };
     },
+    template: ` <div>
+                    <el-row :gutter="10">
+                        <el-col :xl="18" :md="14" :sm="12">
+                            <el-alert
+                                class="borderStyle margin-top-0 margin-bottom-0"
+                                type="info"
+                                show-icon
+                                :closable="false"
+                            >
+                                <template v-slot:title>
+                                    勾選您欲取消之項目後，輸入交易密碼並按下確認送出鍵即可取消委託
+                                </template>
+                            </el-alert>
+                        </el-col>
+                        <el-col :xl="6" :md="10" :sm="12">
+                            <div class="clearfix fontSizeZero margin-top-sm-15">
+                                <rangeDate class="type2"></rangeDate>
+                            </div>
+                        </el-col>
+                    </el-row>
+                    <el-tabs
+                        v-model="editableTabsValue"
+                        :tab-position="tabPosition"
+                        @tab-click="handleClick"
+                    >
+                        <el-tab-pane
+                            v-for="(item, index) in editableTabs"
+                            :key="index"
+                            :label="item.title"
+                            :name="item.name"
+                            lazy
+                        >
+                            <el-alert
+                                class="text-center"
+                                type="info"
+                                :closable="false"
+                                v-if="editableTabsValue == '1'"
+                            >
+                                <template v-slot:title>
+                                    尚無交易資料
+                                </template>
+                            </el-alert>
+                            <div class="fundList-area">
+                                <fundList
+                                    v-for="(item, index) in fund"
+                                    :key="index"
+                                    :fundData="item"
+                                    :fundListSetting="fundListSetting"
+                                    @thisIndex2="postFundListIndex(index)"
+                                    @checkboxMethods="checkboxMethods2(index, item)">
+                                </fundList>
+                            </div>
+                        </el-tab-pane>
+                    </el-tabs>
+                    <infoCord
+                        ref="fundCard"
+                        :class="{
+                            'isChangeType' : fund[fundListIndex].isChange,
+                        }"
+                    >
+                        <template v-slot:content>
+                            <cardFundHeardr
+                                :fundData="fund"
+                                :index="fundListIndex">
+                            </cardFundHeardr>
+                            <cardFundHeardr_changeTypeUse
+                                v-if="fund[fundListIndex].isChange != undefined ? fund[fundListIndex].isChange : false"
+                                :fundData="fund"
+                                :index="fundListIndex">
+                            </cardFundHeardr_changeTypeUse>
+                            <cardFundInfoItem
+                                :fundData="fund"
+                                :index="fundListIndex"
+                                :setting="fundListSetting">
+                            </cardFundInfoItem>
+                        </template>
+                        <template v-slot:btnArea>
+                            <div class="infoCard-btnArea" v-show="!fund[fundListIndex].hasCheckbox && fund[fundListIndex].listItemOtherClass != 'unimportant' && (editableTabsValue != '4')">
+                                <template v-if="fund[fundListIndex].transactionType == '定期不定額'">
+                                    <el-button round @click="plusAndMinusSetting">
+                                        加減碼後扣款金額
+                                    </el-button>
+                                    <el-divider direction="vertical"></el-divider>
+                                </template>
+                                <el-button
+                                    round
+                                    @click="$router.push('/SipChange/Subscribe/Step1'); $scrollTo('body')"
+                                    v-if="editableTabsValue == 2"
+                                >
+                                    變更
+                                </el-button>
+                                <el-button round @click="showNotesOnConversionFees">轉換</el-button>
+                                <el-button
+                                    round
+                                    @click="$router.push('/Redemption/Step1')"
+                                    @click.prevent="$scrollTo('body')">
+                                    贖回
+                                </el-button>
+                                <el-button round @click="showPriceArrivalNoticeSetting">到價通知設定</el-button>
+                            </div>
+                            <div class="infoCard-btnArea" v-if="fund[fundListIndex].transactionType == '定期不定額' && fund[fundListIndex].hasCheckbox">
+                                <el-button round
+                                    @click="plusAndMinusSetting"
+                                >
+                                    加減碼後扣款金額
+                                </el-button>
+                            </div>
+                        </template>
+                    </infoCord>
+                    <el-collapse-transition>
+                        <el-card
+                            class="submitPassword"
+                            shadow="hover"
+                            v-show="submitPassword"
+                        >
+                            <el-row>
+                                <el-col :sm="14">
+                                    <el-input
+                                        v-model="transactionPassword"
+                                        placeholder="請輸入您的交易密碼"
+                                        show-password
+                                        class="margin-top-5 margin-bottom-5">
+                                    </el-input>
+                                </el-col>
+                                <el-col :sm="10" class="text-center">
+                                    <el-button
+                                        type="primary"
+                                        round
+                                        @click="
+                                            $message.success('取消委託完成');
+                                            resetCheckbox();
+                                        "
+                                    >
+                                        確認送出
+                                    </el-button>
+                                </el-col>
+                                <el-col :span="24">
+                                    <div class="text-center remark margin-bottom-5">輸入交易密碼並按下確認送出鍵即可取消委託</div>
+                                </el-col>
+                            </el-row>
+                        </el-card>
+                    </el-collapse-transition>
+                </div>`,
+    components: {
+        infoCord: infoCord,
+        rangeDate: rangeDate,
+    },
+    methods: {
+        postFundListIndex(val) {
+            if (val == this.fundListIndex && this.$refs["fundCard"].show) {
+                this.$refs["fundCard"].show = false;
+                // document.body.classList.remove("fixedBody-sm"); // 移除手機版body固定
+            } else {
+                this.fundListIndex = val;
+                this.$refs["fundCard"].show = true;
+                // document.body.classList.add("fixedBody-sm"); // 添加手機版body固定
+            }
+        },
+        handleClick(tab, event) {
+            this.fundListIndex = 0;
+            this.fund = tradeHistoryFund[this.editableTabsValue - 1];
+            this.fundListSetting = tradeHistoryFundListSetting[this.editableTabsValue - 1];
+            this.resetCheckbox();
+        },
+        checkboxMethods2(index, item) {
+            let result = this.fund.filter(x => x.checkbox == true);
+            result.length > 0 ? this.submitPassword = true : this.submitPassword = false;
+            // console.log(result);
+        },
+        resetCheckbox() {
+            this.fund.forEach(function(item, index, array){
+                item.checkbox = false;
+            });
+            this.submitPassword = false;
+        },
+        showNotesOnConversionFees() {
+            content.notesOnConversionFees = true;
+        },
+        showPriceArrivalNoticeSetting() {
+            content.priceArrivalNoticeSetting.show = true;
+        },
+        plusAndMinusSetting() {
+            this.editableTabsValue == "2" ? content.plusAndMinusSetting1 = true : content.plusAndMinusSetting2 = true;
+        },
+    },
+};
+
+const TradeHistory_InTransitDealInquiry = {
+    data() {
+        return {
+        }
+    },
+    template: ` <div class="fundList-area">
+                    <div class="fundList noNext">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                0426
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                定期定額
+                                            </div>
+                                            <div class="fundList-dealDate">
+                                                交易日期： 2020/08/13
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="精選收益基金—美元">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        精選收益基金—美元
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 530px;">
+                                    <tr class="head">
+                                        <td>申購價金</td>
+                                        <td>交易幣別</td>
+                                        <td>申購手續費</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b class="focus">
+                                                15,000.00
+                                            </b>
+                                        </td>
+                                        <td>
+                                            新台幣
+                                        </td>
+                                        <td>
+                                            <el-tooltip
+                                                effect="dark"
+                                                placement="top"
+                                            >
+                                                <div slot="content">
+                                                    優惠費率0.6000%，紅利折抵180.00元
+                                                </div>
+                                                <span class="cursor-pointer">
+                                                    <span>
+                                                        0.00
+                                                    </span>
+                                                    <i class="fas fa-exclamation-circle tooltipUseIcon"></i>
+                                                </span>
+                                            </el-tooltip>
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+
+                    <div class="fundList noNext" v-for="(item, index) in 2">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                0361
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                定期不定額
+                                            </div>
+                                            <div class="fundList-dealDate">
+                                                交易日期： 2020/09/24
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="印度基金">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        印度基金
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 530px;">
+                                    <tr class="head">
+                                        <td>申購價金</td>
+                                        <td>交易幣別</td>
+                                        <td>申購手續費</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <el-tooltip
+                                                effect="dark"
+                                                placement="top"
+                                            >
+                                                <div slot="content">
+                                                    <template v-if="index == 0">
+                                                        逢低加碼
+                                                    </template>
+                                                    <template v-else>
+                                                        逢高減碼
+                                                    </template>
+                                                </div>
+                                                <span class="cursor-pointer">
+                                                    <b class="focus">
+                                                        30,000
+                                                    </b>
+                                                    <span>
+                                                        <template v-if="index == 0">
+                                                            <i class="el-icon-circle-plus text-green"></i>
+                                                        </template>
+                                                        <template v-else>
+                                                            <i class="el-icon-remove text-red"></i>
+                                                        </template>
+                                                    </span>
+                                                </span>
+                                            </el-tooltip>
+                                        </td>
+                                        <td>
+                                            新台幣
+                                        </td>
+                                        <td>
+                                            180
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+
+                    <div class="fundList noNext" v-for="(item, index) in 2">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                0361
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                智能定期不定額
+                                            </div>
+                                            <div class="fundList-dealDate">
+                                                交易日期： 2020/09/24
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="印度基金">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        印度基金
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 530px;">
+                                    <tr class="head">
+                                        <td>申購價金</td>
+                                        <td>交易幣別</td>
+                                        <td>申購手續費</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <el-tooltip
+                                                effect="dark"
+                                                placement="top"
+                                            >
+                                                <div slot="content">
+                                                    <template v-if="index == 0">
+                                                        逢低加碼
+                                                    </template>
+                                                    <template v-else>
+                                                        逢高減碼
+                                                    </template>
+                                                </div>
+                                                <span class="cursor-pointer">
+                                                    <b class="focus">
+                                                        3,000
+                                                    </b>
+                                                    <span>
+                                                        <template v-if="index == 0">
+                                                            <i class="el-icon-circle-plus text-green"></i>
+                                                        </template>
+                                                        <template v-else>
+                                                            <i class="el-icon-remove text-red"></i>
+                                                        </template>
+                                                    </span>
+                                                </span>
+                                            </el-tooltip>
+                                        </td>
+                                        <td>
+                                            新台幣
+                                        </td>
+                                        <td>
+                                            180
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+
+                    <div class="fundList noNext">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                0361
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                單筆申購
+                                            </div>
+                                            <div class="fundList-dealDate">
+                                                交易日期： 2020/09/24
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="印度基金">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        印度基金
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 530px;">
+                                    <tr class="head">
+                                        <td>申購價金</td>
+                                        <td>交易幣別</td>
+                                        <td>申購手續費</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b class="focus">
+                                                30,000
+                                            </b>
+                                        </td>
+                                        <td>
+                                            新台幣
+                                        </td>
+                                        <td>
+                                            180
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+
+                    <div class="fundList noNext">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                0361
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                贖回
+                                            </div>
+                                            <div class="fundList-dealDate">
+                                                交易日期： 2020/09/24
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="印度基金">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        印度基金
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 450px;">
+                                    <tr class="head">
+                                        <td>贖回單位數</td>
+                                        <td>交易幣別</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b class="focus">
+                                                10
+                                            </b>
+                                        </td>
+                                        <td>
+                                            新台幣
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+
+                    <div class="fundList noNext">
+                        <el-card shadow="hover">
+                            <div class="fundList-header">
+                                <el-row :gutter="10">
+                                    <el-col :span="24">
+                                        <div class="fundList-header-content">
+                                            <div class="fundList-fundCode">
+                                                6885
+                                            </div>
+                                            <div class="fundList-transactionMethod">
+                                                轉出基金
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <h2 class="fundList-fundName" title="印度基金">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div>
+                                        富蘭克林華美特別股收益基金B分配型南非幣
+                                    </div>
+                                </h2>
+                                <div class="changeTypeUse">
+                                    <el-divider>
+                                        <i class="fas fa-angle-double-down changeFundArrow"></i>
+                                    </el-divider>
+                                    <el-row :gutter="10">
+                                        <el-col :span="24">
+                                            <div class="fundList-header-content">
+                                                <div class="fundList-fundCode">
+                                                    0797
+                                                </div>
+                                                <div class="fundList-transactionMethod">
+                                                    轉入基金
+                                                </div>
+                                                <div class="fundList-dealDate">
+                                                    交易日期： 2020/09/24
+                                                </div>
+                                            </div>
+                                        </el-col>
+                                    </el-row>
+                                    <h2 class="fundList-fundName" title="印度基金">
+                                        <openFundSmallFile></openFundSmallFile>
+                                        <div>
+                                            富蘭克林華美特別股收益基金B分配型南非幣
+                                        </div>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="fundList-infoItem">
+                                <table style="min-width: 530px;">
+                                    <tr class="head">
+                                        <td>轉出單位數</td>
+                                        <td>轉入計價幣別</td>
+                                        <td>轉換手續費</td>
+                                        <td>交易書號</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b class="focus">
+                                                90.000
+                                            </b>
+                                        </td>
+                                        <td>
+                                            歐元
+                                        </td>
+                                        <td>
+                                            168
+                                        </td>
+                                        <td>
+                                            20201217000039876
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </el-card>
+                    </div>
+                </div>`,
 };
 
 // ========= 到價通知設定 ==============================================================================================================================
@@ -664,7 +2584,7 @@ const BenefitDistributionQuery = {
     data() {
         return {
             page: {
-                stit: `帳務管理`,
+                stit: `交易查詢`,
                 tit: `受益分配查詢`,
             },
         };
@@ -672,7 +2592,9 @@ const BenefitDistributionQuery = {
     template: ` <div>
                     <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
                     <div class="clearfix fontSizeZero datePickerForTabItem">
-                        <rangeDate class="type2"></rangeDate>
+                        <el-tooltip effect="dark" content="每一次查詢區間最長請以半年為限。舉例：2001/3/9-2001/9/8" placement="top-end">
+                            <rangeDate class="type2"></rangeDate>
+                        </el-tooltip>
                     </div>
                     <transition enter-active-class="animate__animated animate__fadeIn">
                         <router-view></router-view>
@@ -1076,6 +2998,7 @@ const BenefitDistributionQuery_list = {
                             :name="item.name"
                             lazy
                         >
+                            <fundQuickSearch class="margin-bottom-15"></fundQuickSearch>
                             <div class="fundList-area">
                                 <fundList
                                     v-for="(item, index) in fund"
@@ -1121,6 +3044,7 @@ const BenefitDistributionQuery_list = {
                 </div>`,
     components: {
         infoCord: infoCord,
+        fundQuickSearch: fundQuickSearch,
     },
     methods: {
         postFundListIndex(val) {
@@ -2178,7 +4102,7 @@ const TradeCFM = {
     data() {
         return {
             page: {
-                stit: `帳務管理`,
+                stit: `交易查詢`,
                 tit: `交易確認書查詢`,
             },
         };
@@ -3900,7 +5824,7 @@ const MonthlyStatement = {
     data() {
         return {
             page: {
-                stit: `帳務管理`,
+                stit: `交易查詢`,
                 tit: `每月對帳單查詢`,
             },
             monthFilter: [
@@ -4423,8 +6347,10 @@ const MonthlyStatement_offshoreFundFund = [
     ],
     [
         {
+            transactionMethod: "合作帳戶",
+            transactionMethodType: "danger",
             noNext: window.innerWidth > 1599 ? true : false, // to前端：請協助改抓你們寫的window.innerWidth 感恩感恩
-            transactionMethod: "單筆",
+            manyTags: ["單筆申購"],
             fundCode: "1049",
             fundName: "新興國家固定收益基金－美元月配息",
             info: [
@@ -4472,10 +6398,69 @@ const MonthlyStatement_offshoreFundFund = [
                 },
             ],
             hasPopover: false,
+            warning: `您的「Form W-8BEN」已過期，富蘭克林證券投顧將依FATCA規定，將您本人於富蘭克林證券投顧之帳戶列為不合作帳戶(Recalcitrant Account)，針對符合FATCA規定法定條件的存入款項(包含但不限於美國來源所得)由基金公司予以扣繳百分之三十的美國扣繳稅款予美國聯邦政府。
+                        敬請您盡速 <a href="https://wt.franklin.com.tw/areas/etrade-remake/#/USFundApply" title="重新簽署文件" target="_blank" class="el-link el-link--primary is-underline">重新簽署文件</a>，以保障您的權益，如您已繳回「Form W-8BEN」，則無需理會此則提醒。
+                        `,
+        },
+        {
+            transactionMethod: "不合作帳戶",
+            transactionMethodType: "danger",
+            noNext: window.innerWidth > 1599 ? true : false, // to前端：請協助改抓你們寫的window.innerWidth 感恩感恩
+            manyTags: ["單筆申購"],
+            fundCode: "1049",
+            fundName: "新興國家固定收益基金－美元月配息",
+            info: [
+                {
+                    tit: "交易金額",
+                    text: "30,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "單位數",
+                    text: "127.565",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "配現金 / 配現",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "淨值",
+                    text: "7.63",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "淨值日期",
+                    text: "2020/08/15",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "兌換匯率",
+                    text: "30.822500",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            warning: `您的「Form W-8BEN」已過期，富蘭克林證券投顧將依FATCA規定，將您本人於富蘭克林證券投顧之帳戶列為不合作帳戶(Recalcitrant Account)，針對符合FATCA規定法定條件的存入款項(包含但不限於美國來源所得)由基金公司予以扣繳百分之三十的美國扣繳稅款予美國聯邦政府。
+                        敬請您盡速 <a href="https://wt.franklin.com.tw/areas/etrade-remake/#/USFundApply" title="重新簽署文件" target="_blank" class="el-link el-link--primary is-underline">重新簽署文件</a>，以保障您的權益，如您已繳回「Form W-8BEN」，則無需理會此則提醒。
+                        `,
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "定期定額",
+            manyTags: ["定期定額"],
             fundCode: "1172",
             fundName: "全球債券總報酬基金—澳幣避險月配息",
             info: [
@@ -4526,7 +6511,7 @@ const MonthlyStatement_offshoreFundFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "轉出",
+            manyTags: ["轉出"],
             fundCode: "1019",
             fundName: "邊境市場基金",
             info: [
@@ -4577,7 +6562,7 @@ const MonthlyStatement_offshoreFundFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "轉入",
+            manyTags: ["轉入"],
             fundCode: "0796",
             fundName: "生技領航基金",
             info: [
@@ -4628,7 +6613,7 @@ const MonthlyStatement_offshoreFundFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "贖回",
+            manyTags: ["贖回"],
             fundCode: "0796",
             fundName: "生技領航基金",
             info: [
@@ -4679,7 +6664,7 @@ const MonthlyStatement_offshoreFundFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "定期不定額",
+            manyTags: ["定期不定額"],
             fundCode: "132",
             fundName: "黃金基金",
             info: [
@@ -5879,8 +7864,10 @@ const MonthlyStatement_SinoAmFund = [
     ],
     [
         {
+            transactionMethod: "合作帳戶",
+            transactionMethodType: "danger",
             noNext: window.innerWidth > 1599 ? true : false, // to前端：請協助改抓你們寫的window.innerWidth 感恩感恩
-            transactionMethod: "單筆",
+            manyTags: ["單筆申購"],
             dealDate: "2020/08/15",
             fundCode: "6807",
             fundName: "新興趨勢傘型基金之天然資源組合基金",
@@ -5929,10 +7916,70 @@ const MonthlyStatement_SinoAmFund = [
                 },
             ],
             hasPopover: false,
+            warning: `您的「Form W-8BEN」已過期，富蘭克林證券投顧將依FATCA規定，將您本人於富蘭克林證券投顧之帳戶列為不合作帳戶(Recalcitrant Account)，針對符合FATCA規定法定條件的存入款項(包含但不限於美國來源所得)由基金公司予以扣繳百分之三十的美國扣繳稅款予美國聯邦政府。
+                        敬請您盡速 <a href="https://wt.franklin.com.tw/areas/etrade-remake/#/USFundApply" title="重新簽署文件" target="_blank" class="el-link el-link--primary is-underline">重新簽署文件</a>，以保障您的權益，如您已繳回「Form W-8BEN」，則無需理會此則提醒。
+                        `,
+        },
+        {
+            transactionMethod: "不合作帳戶",
+            transactionMethodType: "danger",
+            noNext: window.innerWidth > 1599 ? true : false, // to前端：請協助改抓你們寫的window.innerWidth 感恩感恩
+            manyTags: ["單筆申購"],
+            dealDate: "2020/08/15",
+            fundCode: "6807",
+            fundName: "新興趨勢傘型基金之天然資源組合基金",
+            info: [
+                {
+                    tit: "交易金額",
+                    text: "1,000,000",
+                    focusText: true,
+                    remark: "",
+                },
+                {
+                    tit: "交易幣別",
+                    text: "新台幣",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "單位數",
+                    text: "129,750.5",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "配息方式",
+                    text: "累積",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "淨值",
+                    text: "7.7071",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "淨值日期",
+                    text: "2020/08/15",
+                    focusText: false,
+                    remark: "",
+                },
+                {
+                    tit: "短線費用",
+                    text: "0",
+                    focusText: false,
+                    remark: "",
+                },
+            ],
+            hasPopover: false,
+            warning: `您的「Form W-8BEN」已過期，富蘭克林證券投顧將依FATCA規定，將您本人於富蘭克林證券投顧之帳戶列為不合作帳戶(Recalcitrant Account)，針對符合FATCA規定法定條件的存入款項(包含但不限於美國來源所得)由基金公司予以扣繳百分之三十的美國扣繳稅款予美國聯邦政府。
+                        敬請您盡速 <a href="https://wt.franklin.com.tw/areas/etrade-remake/#/USFundApply" title="重新簽署文件" target="_blank" class="el-link el-link--primary is-underline">重新簽署文件</a>，以保障您的權益，如您已繳回「Form W-8BEN」，則無需理會此則提醒。
+                        `,
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "定期定額",
+            manyTags: ["定期定額"],
             dealDate: "2020/08/15",
             fundCode: "6802",
             fundName: "富蘭克林全球債券組合基金累積型",
@@ -5984,7 +8031,7 @@ const MonthlyStatement_SinoAmFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "定期不定額",
+            manyTags: ["定期不定額"],
             dealDate: "2020/08/15",
             fundCode: "6875",
             fundName: "全球醫療保健基金",
@@ -6036,7 +8083,7 @@ const MonthlyStatement_SinoAmFund = [
         },
         {
             noNext: window.innerWidth > 1599 ? true : false,
-            transactionMethod: "贖回",
+            manyTags: ["贖回"],
             dealDate: "2020/08/22",
             fundCode: "6805",
             fundName: "富蘭克林華美新世界股票基金",
@@ -6733,7 +8780,7 @@ const RealizedGainsAndLossesInquiry = {
     data() {
         return {
             page: {
-                stit: `帳務管理`,
+                stit: `交易查詢`,
                 tit: `已實現損益查詢`,
             },
         };
@@ -6765,6 +8812,33 @@ const RealizedGainsAndLossesInquiry = {
                     <transition enter-active-class="animate__animated animate__fadeIn">
                         <router-view></router-view>
                     </transition>
+                    <section class="notice">
+                        <h4 class="tit-type2" title="注意事項">
+                            注意事項
+                        </h4>
+                        <div class="notice-content">
+                            <ol>
+                                <li>
+                                    上述「參考入帳金額」僅供參考，實際入帳金額應以贖回款項匯入投資人銀行帳戶為準；若贖回資料有任何不符，應以本公司寄發之交易確認書所載或臺灣集中保管結算所電腦記錄為準，您可至「<el-link href="https://www.tdcc.com.tw/portal/zh/" target="_blank" type="primary">臺灣集中保管結算所</el-link>」網站查詢。
+                                </li>
+                                <li>
+                                    申購、贖回及配息資訊所涉之匯率轉換，交易匯率係由臺灣集中保管結算所之款項收付銀行(華南銀行)提供。不同幣別基金轉換所涉之匯率轉換，交易匯率係由基金保管銀行提供。
+                                </li>
+                                <li>
+                                    「已實現損益」之金額，係以贖回委託當下之可贖回單位數、贖回實際交易日之淨值，以及贖回價款實際入帳當日匯率(華南銀行提供)計算，實際損益需待各筆贖回交易確認後確定，並可從本項功能查詢相關細節資訊。
+                                </li>
+                                <li>
+                                    若贖回來源為轉申購交易，該筆贖回之「投資金額」係指轉換基金轉出當時換算成轉入基金之成本金額顯示。
+                                </li>
+                                <li>
+                                    若為現金配息之基金庫存辦理「部分贖回」，表該基金並未結清庫存，「累積配現金額」欄位金額以”0”顯示，「含息報酬率」亦不納入累積配息金額計算，若為「全部贖回」，「累積配現金額」欄位將顯示已取得之累積配息金額，而「含息報酬率」之計算亦包含已發放之現金分配金額，計算方式採：((已實現損益+配息金額)/投資金額)╳100% 簡單計算，暫不考慮時間價值；欲查詢累積配息金額細節，您可至「投資損益查詢」單元或「受益分配查詢」單元參閱。
+                                </li>
+                                <li>
+                                    如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日9：00～18：00撥打免付費客服專線，將有客服專員竭誠為您服務！
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
                 </div>`,
     components: {
         pageTit: pageTit,
@@ -7895,6 +9969,373 @@ const RealizedGainsAndLossesInquiry_byOriginalPrice = {
             fundListIndex: 0,
 
             infoCardBtnType: 0,
+        };
+    },
+};
+
+// ========= 扣款明細查詢 ==============================================================================================================================
+const DeductionDetails = {
+    data() {
+        return {
+            page: {
+                stit: `交易查詢`,
+                tit: `扣款明細查詢`,
+            },
+
+            transactionTypeOptions: [
+                {
+                    value: "1",
+                    label: "全部",
+                },
+                {
+                    value: "2",
+                    label: "單筆申購",
+                },
+                {
+                    value: "3",
+                    label: "定期(不)定額",
+                },
+            ],
+            transactionTypeValue: "1",
+        };
+    },
+    template: ` <div>
+                    <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+                    <el-row :gutter="10">
+                        <el-col :xl="4" :lg="7" :md="7" :sm="12">
+                            <littleFilter tit="交易類型" class="margin-top-sm-10">
+                                <template v-slot:input>
+                                    <el-select v-model="transactionTypeValue" placeholder="請選擇">
+                                        <el-option
+                                            v-for="item in transactionTypeOptions"
+                                            :key="item.value"
+                                            :label="item.label"
+                                            :value="item.value"
+                                        >
+                                        </el-option>
+                                    </el-select>
+                                </template>
+                            </littleFilter>
+                        </el-col>
+                        <el-col :xl="14" :lg="7" :md="8" :sm="12">
+                            <fundQuickSearch class="margin-top-sm-10"></fundQuickSearch>
+                        </el-col>
+                        <el-col :xl="6" :lg="10" :md="9">
+                            <div class="clearfix fontSizeZero">
+                                <rangeDate class="margin-top-0 margin-top-md-10"></rangeDate>
+                            </div>
+                        </el-col>
+                    </el-row>
+                    <transition enter-active-class="animate__animated animate__fadeIn">
+                        <router-view></router-view>
+                    </transition>
+                    <section class="notice">
+                        <h4 class="tit-type2" title="注意事項">
+                            注意事項
+                        </h4>
+                        <div class="notice-content">
+                            <ol>
+                                <li>
+                                    上述交易明細，資料若有不符，應以臺灣集中保管結算所電腦記錄為準。若於同一指定帳戶內同時授權二個以上基金申購款項扣款轉帳付款作業，將依集保結算所指定之扣款順序逐筆扣款，申購人不得異議。
+                                </li>
+                                <li>
+                                    因網路壅塞、通訊斷線、斷電或發生天然災害或中華民國境內或境外相關主管機關限制、交易停止等不可抗力事由，或因非可歸責於富蘭克林證券投顧之因素所致之系統遲延或委託執行遲延，富蘭克林證券投顧及其主管、職員、受僱人或銷售機構，皆不負相關責任。
+                                </li>
+                                <li>
+                                    如有任何疑問或建議，可透過 <el-link type="primary" icon="far fa-envelope" href="mailto:service@franklin.com.tw" title="客服信箱">客服信箱</el-link> 或於營業日9：00～18：00撥打免付費客服專線，將有客服專員竭誠為您服務！
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>`,
+    components: {
+        pageTit: pageTit,
+        rangeDate: rangeDate,
+        fundQuickSearch,
+        littleFilter,
+    },
+};
+
+const DeductionDetails_list = {
+    mixins: [fundListGroup],
+    data() {
+        return {
+            fund: [
+                {
+                    transactionMethod: "扣款成功",
+                    transactionMethodType: "success",
+                    manyTags: ['定期(不)定額'],
+                    dealDateName: "扣款日期：",
+                    dealDate: "2020/12/01",
+                    fundCode: "0812",
+                    fundName: "美國政府基金—月配息",
+                    info: [
+                        {
+                            tit: "交易總額",
+                            text: "30,000.00",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "申購單位數",
+                            text: "3,325.942",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款幣別",
+                            text: "美元",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款帳號",
+                            text: "華南銀行 11111111***",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "交易序號",
+                            text: "20201127D00391548",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "投資金額",
+                            text: "30,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "外幣投資金額",
+                            text: "30,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "手續費",
+                            text: "0.00",
+                            focusText: false,
+                            remark: "",
+                            hasTooltip: true,
+                            tooltipContent: `優惠費率0.6000%，紅利折抵180.00元`,
+                        },
+                        {
+                            tit: "配息方式",
+                            text: "配現金 / 配現",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "淨值",
+                            text: "9.02",
+                            focusText: false,
+                            remark: "(2020/12/01)",
+                        },
+                        {
+                            tit: "匯率",
+                            text: "1",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "委託來源",
+                            text: "網路",
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: false,
+                },
+                {
+                    transactionMethod: "扣款失敗",
+                    transactionMethodType: "danger",
+                    transactionMethodTooltip: true,
+                    transactionMethodTooltipText: `存款不足`,
+                    manyTags: ['單筆申購'],
+                    dealDateName: "扣款日期：",
+                    dealDate: "2020/12/01",
+                    fundCode: "1022",
+                    fundName: "邊境市場基金—歐元",
+                    info: [
+                        {
+                            tit: "交易總額",
+                            text: "5,000.00",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "申購單位數",
+                            text: "261.233",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款幣別",
+                            text: "歐元",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款帳號",
+                            text: "華南銀行 11111111***",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "交易序號",
+                            text: "20201127D00391549",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "投資金額",
+                            text: "5,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "外幣投資金額",
+                            text: "5,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "手續費",
+                            text: "0.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "配息方式",
+                            text: "累積",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "淨值",
+                            text: "19.14",
+                            focusText: false,
+                            remark: "(2020/12/01)",
+                        },
+                        {
+                            tit: "匯率",
+                            text: "1",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "委託來源",
+                            text: "網路",
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: false,
+                },
+                {
+                    transactionMethod: "扣款成功",
+                    transactionMethodType: "success",
+                    manyTags: ['單筆申購'],
+                    dealDateName: "扣款日期：",
+                    dealDate: "2020/12/01",
+                    fundCode: "1716",
+                    fundName: "穩定月收益基金—澳幣避險月配息",
+                    info: [
+                        {
+                            tit: "交易總額",
+                            text: "20,000.00",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "申購單位數",
+                            text: "2,412.545",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款幣別",
+                            text: "澳幣",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "扣款帳號",
+                            text: "華南銀行 11111111***",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "交易序號",
+                            text: "20201127D00391550",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "投資金額",
+                            text: "20,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "外幣投資金額",
+                            text: "20,000.00",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "手續費",
+                            text: "0.00",
+                            focusText: false,
+                            remark: "",
+                            hasTooltip: true,
+                            tooltipContent: `優惠費率0.3000%，紅利折抵60.00元`,
+                        },
+                        {
+                            tit: "配息方式",
+                            text: "配現金 / 配現",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "淨值",
+                            text: "8.29",
+                            focusText: false,
+                            remark: "(2020/12/01)",
+                        },
+                        {
+                            tit: "匯率",
+                            text: "1",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "委託來源",
+                            text: "網路",
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: false,
+                },
+            ],
+            fundListSetting: {
+                toggleCardBtnText: "更多資訊",
+                minWidth: "0",
+                pcShowQty: {
+                    base: "8",
+                    xxl: "6",
+                    xl: "5",
+                    lg: "5",
+                    md: "4",
+                    sm: "3",
+                    xs: "2",
+                },
+            },
+            fundListIndex: 0,
+
+            infoCardBtnType: 0, // PM：因為零散所以不給交易
         };
     },
 };

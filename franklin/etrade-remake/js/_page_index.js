@@ -402,7 +402,7 @@ const Index = {
                             <!--/div-->
                         </el-col>
                     </el-row>
-                    <div class="indexPromotions">
+                    <div class="indexPromotions" v-if="$root.$data.dsListVal == '0'">
                         <el-card>
                             <h2 class="tit-type2" title="近期優惠">
                                 近期優惠
@@ -451,7 +451,7 @@ const Index = {
                             </slick>
                         </el-card>
                     </div>
-                    <indexAlertCard>
+                    <indexAlertCard v-if="$root.$data.dsListVal == '0'">
                         <template v-slot:title>
                             您的風險屬性評估<br class="hidden-sm-and-up"/>已過期!
                         </template>
@@ -465,7 +465,7 @@ const Index = {
                             <el-button type="danger" class="sBtn" round>重新進行風險屬性評估</el-button>
                         </template>
                     </indexAlertCard>
-                    <indexAlertCard>
+                    <indexAlertCard v-if="$root.$data.dsListVal == '0'">
                         <template v-slot:title>
                             您所簽署的W-8BEN<br class="hidden-sm-and-up"/>三年期限已到期!
                         </template>
@@ -502,7 +502,7 @@ const Index = {
                             <el-button type="secondary" class="sBtn" round plain>暫不變更，半年後再提醒</el-button>
                         </template>
                     </indexAlertCard>
-                    <indexAlertCard>
+                    <indexAlertCard v-if="$root.$data.dsListVal == '0'">
                         <template v-slot:title>
                             您尚未進行CRS文件填寫
                         </template>

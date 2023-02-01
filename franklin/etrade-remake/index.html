@@ -13,12 +13,7 @@
 
         <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
         <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-            crossorigin="anonymous"
-        />
+        <script src="https://kit.fontawesome.com/0389e2f534.js" crossorigin="anonymous"></script>
         <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
@@ -70,7 +65,7 @@
         <script src="js/zh-TW.js"></script>
         <!-- element ui end-->
 
-        <link rel="stylesheet" href="css/style.css?v=20210611"/>
+        <link rel="stylesheet" href="css/style.css?v=20211007"/>
 
         <!-- Google Tag Manager -->
         <!-- <script>
@@ -142,7 +137,7 @@
                                         </a>
                                     </div>
                                     <div class="header-right-btn signOutBtn">
-                                        <a href="javascript:void(0);" title="登出">
+                                        <a href="signIn.html#/" title="登出">
                                             登出
                                             <i class="fas fa-sign-out-alt"></i>
                                         </a>
@@ -155,18 +150,20 @@
                                         </span>
                                         <el-dropdown-menu slot="dropdown" class="linkType">
                                             <el-dropdown-item>
-                                                <a href="#" title="登出">
+                                                <a href="signIn.html#/" title="登出">
                                                     登出
                                                     <i class="fas fa-sign-out-alt"></i>
                                                 </a>
                                             </el-dropdown-item>
-                                            <el-dropdown-item v-for="(item, index) in menu[0].content" :key="index" :divided="item.divided">
+                                            <el-dropdown-item v-for="(item, index) in menu[0].content" :key="index" :divided="item.divided" :disabled="item.link == false">
                                                 <router-link
+                                                    v-if="item.link != ''"
                                                     :to="item.link"
                                                     :title="item.title"
                                                 >
                                                     {{item.title}}
                                                 </router-link>
+                                                <div class="dropdownMenuStit" v-if="item.link == ''"><b>{{item.title}}</b></div>
                                             </el-dropdown-item>
                                         </el-dropdown-menu>
                                     </el-dropdown>
@@ -192,15 +189,26 @@
                                             <ul class="mobileNavbar-item-content" v-show="item.toggle">
                                                 <li v-for="(item2, index2) in item.content" :key="index2">
                                                     <router-link
+                                                        v-if="item2.link != ''"
                                                         :to="item2.link"
                                                         :title="item2.title"
                                                         @click.native="menuShow = false; $scrollTo('body'); this.document.body.classList.remove('fixedBody-sm')"
                                                     >
                                                         {{item2.title}}
                                                     </router-link>
+                                                    <div class="mobileNavbar-item-content-tit" v-if="item2.link == ''">
+                                                        <b>{{item2.title}}</b>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </el-collapse-transition>
+                                    </div>
+                                    <div class="mobileNavbar-item" v-if="dsListVal == '0'">
+                                        <div class="mobileNavbar-item-tit" @click="this.window.open('//www.franklin.com.tw/qa/','_blank')">
+                                            <a href="//www.franklin.com.tw/qa/" target="_blank" title="常見問題">
+                                                <b>常見問題</b>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -232,8 +240,9 @@
                                         <i class="fas fa-angle-down"></i>
                                     </a>
                                     <el-dropdown-menu slot="dropdown" class="linkType">
-                                        <el-dropdown-item v-for="(item2, index2) in item.content" :key="index2" :divided="item2.divided">
-                                            <router-link :to="item2.link" :title="item2.title">{{item2.title}}</router-link>
+                                        <el-dropdown-item v-for="(item2, index2) in item.content" :key="index2" :divided="item2.divided" :disabled="item2.link == false">
+                                            <router-link v-if="item2.link != ''" :to="item2.link" :title="item2.title">{{item2.title}}</router-link>
+                                            <div class="dropdownMenuStit" v-if="item2.link == ''"><b>{{item2.title}}</b></div>
                                         </el-dropdown-item>
                                     </el-dropdown-menu>
                                 </el-dropdown>
@@ -254,7 +263,7 @@
                                 </el-dropdown-menu>
                             </el-dropdown>
                         </nav>
-                        <div class="simpleMemberInfo" :class="{'indexStyle':$route.path === '/'}">
+                        <div class="simpleMemberInfo" :class="{'indexStyle':$route.path === '/', 'isDSType': dsListVal != '0'}">
                             <el-card shadow="always">
                                 <img src="images/membershipLevel-3.png" alt="" class="simpleMemberInfo-lvImg" />
                                 <div class="simpleMemberInfo-salutatory">
@@ -262,32 +271,56 @@
                                     <div class="simpleMemberInfo-salutatory-name"><strong>陳涵風</strong>，您好!</div>
                                 </div>
                                 <div class="simpleMemberInfo-content">
-                                    <div class="simpleMemberInfo-content-item">
-                                        投資總市值(新台幣)
-                                        <div class="simpleMemberInfo-content-price">
-                                            <strong>300,000</strong>
+                                    <div class="simpleMemberInfo-content-item selectDSType">
+                                        目前帳戶：{{dsListOptions[dsListVal].label1}}
+                                        <el-select v-model="dsListVal" placeholder="請選擇帳戶">
+                                            <el-option
+                                                v-for="item in dsListOptions"
+                                                :key="item.value"
+                                                :label="item.label2"
+                                                :value="item.value"
+                                                size="small">
+                                                <el-row :gutter="16">
+                                                    <el-col :lg="9" :sm="5">
+                                                        <span class="selectDSType-tit">
+                                                            {{item.label1}}
+                                                        </span>
+                                                    </el-col>
+                                                    <el-col :lg="15" :sm="19">
+                                                        {{item.label2}}
+                                                    </el-col>
+                                                </el-row>
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                    <template v-if="dsListVal == '0'">
+                                        <div class="simpleMemberInfo-content-item">
+                                            投資總市值(新台幣)
+                                            <div class="simpleMemberInfo-content-price">
+                                                <strong>300,000</strong>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="simpleMemberInfo-content-item">投資總成本(新台幣)：300,000</div>
-                                    <div class="simpleMemberInfo-content-item">紅利點數：1,500</div>
-                                    <div class="simpleMemberInfo-content-item">
-                                        邀請親友開戶
-                                        <br />
-                                        輸入專屬推薦碼
-                                        <el-tooltip effect="dark" content="複製" placement="top-start">
-                                            <span class="referralCode">
-                                                <b>FT1143</b>
-                                                <i class="far fa-copy"></i
-                                            ></span>
-                                        </el-tooltip>
-                                        <br />
-                                        <div class="breakBlock"></div>
-                                        兩人一起拿優惠
-                                    </div>
+                                        <div class="simpleMemberInfo-content-item">投資總成本(新台幣)：300,000</div>
+                                        <div class="simpleMemberInfo-content-item">紅利點數：1,500</div>
+                                        <div class="simpleMemberInfo-content-item">
+                                            邀請親友開戶
+                                            <br />
+                                            輸入專屬推薦碼
+                                            <el-tooltip effect="dark" content="複製" placement="top-start">
+                                                <span class="referralCode">
+                                                    <b>FT1143</b>
+                                                    <i class="far fa-copy"></i
+                                                ></span>
+                                            </el-tooltip>
+                                            <br />
+                                            <div class="breakBlock"></div>
+                                            兩人一起拿優惠
+                                        </div>
+                                    </template>
                                 </div>
                             </el-card>
                             <slick
-                                v-if="windowWidth > 991"
+                                v-if="windowWidth > 991 && dsListVal == '0'"
                                 ref="slick"
                                 :options="adBannerOptions"
                                 @afterChange="handleAfterChange"
@@ -312,8 +345,10 @@
                                 <router-link to="/" title="回首頁">回首頁</router-link>
                             </div>
                         </div>
-                        <div class="teaching-openBtn" v-if="teachingShowBtn()">
-                            <el-button type="primary" round plain class="sBtn" @click="showTeaching();"><i class="far fa-lightbulb"></i> 操作教學</el-button>
+                        <div class="teaching-openBtn" v-if="dsListVal == '0'">
+                            <el-button type="primary" round plain class="sBtn" @click="this.window.open('//www.franklin.com.tw/qa/','_blank')">
+                                <i class="far fa-lightbulb"></i> 常見問題
+                            </el-button>
                         </div>
                     </div>
                 </div>
@@ -324,6 +359,14 @@
                         <!-- <router-link to="/foo">Go to Foo</router-link>
 						<router-link to="/bar">Go to Bar</router-link>
                         <router-view></router-view> -->
+                        <el-alert
+                            description="如欲聯繫您的理財顧問 王小明，請撥打02-2781-0088 分機123。"
+                            type="info"
+                            class="borderStyle"
+                            :closable="false"
+                            show-icon
+                            v-if="dsListVal != '0'">
+                        </el-alert>
                         <transition enter-active-class="animate__animated animate__fadeIn">
                             <router-view></router-view>
                         </transition>
@@ -351,35 +394,46 @@
                             <div>
                                 <p>無正負號視為正數，設定方式可參閱下方「注意事項」</p>
                                 <el-form ref="priceArrivalNoticeSetting" :model="priceArrivalNoticeSetting">
-                                    <el-form-item>
-                                        <el-radio v-model="priceArrivalNoticeSetting.form.accordingTo" label="1"> 報酬率 </el-radio>
-                                        <el-radio v-model="priceArrivalNoticeSetting.form.accordingTo" label="2"> 指定淨值 </el-radio>
-                                    </el-form-item>
-                                    <el-form-item>
-                                        <el-row :gutter="10">
-                                            <el-col :sm="8">
-                                                <el-input placeholder="請輸入" v-model="priceArrivalNoticeSetting.form.val1">
-                                                    <template slot="prepend">≧</template>
-                                                    <template slot="append" v-if="priceArrivalNoticeSetting.form.accordingTo == 1">%</template>
-                                                </el-input>
-                                            </el-col>
-                                            <el-col :sm="8" class="margin-top-sm-10">
-                                                <el-input placeholder="請輸入" v-model="priceArrivalNoticeSetting.form.val2">
-                                                    <template slot="prepend">≦</template>
-                                                    <template slot="append" v-if="priceArrivalNoticeSetting.form.accordingTo == 1">%</template>
-                                                </el-input>
-                                            </el-col>
-                                        </el-row>
-                                    </el-form-item>
-
-                                    <el-form-item>
-                                        <el-select v-model="priceArrivalNoticeSetting.form.frequency" placeholder="請選擇通知頻率">
-                                            <el-option label="暫停" value="pause"></el-option>
-                                            <el-option label="一次" value="once"></el-option>
-                                            <el-option label="每次" value="each"></el-option>
-                                        </el-select>
-                                    </el-form-item>
+                                    <el-tabs v-model="priceArrivalNoticeSetting.form.accordingTo">
+                                        <el-tab-pane label="以基金設定" name="1">
+                                            <el-form-item>
+                                                <el-row :gutter="10">
+                                                    <el-col :sm="8">
+                                                        <el-input placeholder="請輸入" v-model="priceArrivalNoticeSetting.form.val1">
+                                                            <template slot="prepend">≧</template>
+                                                            <template slot="append">%</template>
+                                                        </el-input>
+                                                    </el-col>
+                                                    <el-col :sm="8" class="margin-top-sm-10">
+                                                        <el-input placeholder="請輸入" v-model="priceArrivalNoticeSetting.form.val2">
+                                                            <template slot="prepend">≦</template>
+                                                            <template slot="append">%</template>
+                                                        </el-input>
+                                                    </el-col>
+                                                </el-row>
+                                            </el-form-item>
+    
+                                            <el-form-item>
+                                                <el-select v-model="priceArrivalNoticeSetting.form.frequency" placeholder="請選擇通知頻率">
+                                                    <el-option label="暫停" value="pause"></el-option>
+                                                    <el-option label="一次" value="once"></el-option>
+                                                    <el-option label="每次" value="each"></el-option>
+                                                </el-select>
+                                            </el-form-item>
+                                        </el-tab-pane>
+                                        <el-tab-pane label="以交易方式設定" name="2">
+                                            <div class="tradingProcess-card-content changeFundType">
+                                                <fund-list
+                                                    v-for="(item, index) in priceArrivalNoticeSetting.fund"
+                                                    :key="index"
+                                                    :fund-data="item"
+                                                    :fund-list-setting="priceArrivalNoticeSetting.fundListSetting">
+                                                </fund-list>
+                                            </div>
+                                        </el-tab-pane>
+                                    </el-tabs>
                                 </el-form>
+
                                 <el-divider><i class="el-icon-more"></i></el-divider>
                                 <div class="tit-type2">
                                     <b>注意事項</b>
@@ -636,6 +690,15 @@
                                                 </el-table-column>
                                             </el-table>
                                         </el-tab-pane>
+                                        <el-tab-pane
+                                            label="基金月報"
+                                            name="5"
+                                            lazy
+                                        >
+                                            <div class="text-center">
+                                                <el-button round @click="this.window.open('https://www.franklin.com.tw/areas/month_report/bonds.html?FundId=4008', '_blank')">開啟基金月報</el-button>
+                                            </div>
+                                        </el-tab-pane>
                                     </el-tabs>
                                 </div>
                             </template>
@@ -722,7 +785,7 @@
                                 <div>
                                     <ol>
                                         <li>
-                                            富蘭克林【智能定期不定額】運用演算法，根據每一檔基金之每日淨值偏離布林通道均線(歷史均線)幾個標準差時，智能算出該日最適的加減碼扣款金額比例(觸發區間為偏離布林通道均線正負2個標準差以內，若淨值波動大於此區間，將不會觸發本機制)。
+                                            富蘭克林【智能定期不定額】運用演算法，根據每一檔基金之每日淨值偏離布林通道均線(歷史均線)幾個標準差時，智能算出該日最適的加減碼扣款金額比例。
                                         </li>
                                         <li>
                                             若投資人選用此功能，系統將會自動依加減碼扣款比例算出加減碼金額，依投資人預設之(基準)扣款金額加計加減碼金額後，在投資人的約定扣款日進行扣款。
@@ -746,6 +809,9 @@
                                             選擇【智能定期不定額】功能下全數買回基金庫存單位數，並不代表該筆【智能定期不定額】暫停扣款或終止契約。若投資人已無繼續此【智能定期不定額】計畫，需登入國民e帳戶申請暫停扣款或終止契約；此外，因考量智能演算法特殊性，已生效之【智能定期不定額】契約不得變更交易類型為定期定額或定期不定額，反之，已生效之定期定額與定期不定額契約亦不可變更交易類型為【智能定期不定額】。
                                         </li>
                                         <li>
+                                            若申購基金有申購額度限制(例如:該檔基金啟動Soft Closure機制或暫停銷售等)，致無法增加申購金額或扣款次數時，【智能定期不定額】之委託將依該基金申購額度限制，扣款金額或次數將不超過原約定基準扣款金額或次數。
+                                        </li>
+                                        <li>
                                             本公司保留改變智能演算法計算加減碼規則之權利，並於改變後公告在本公司官網不另行通知。
                                         </li>
                                     </ol>
@@ -766,7 +832,7 @@
                             :visible.sync="smartRSP_mechanism">
                             <div>
                                 <p>
-                                    <b>富蘭克林【智能定期不定額】</b>運用演算法，根據每一檔基金之每日淨值偏離布林通道均線(歷史均線)幾個標準差時，智能算出該日最適的加減碼扣款金額比例(觸發區間為偏離布林通道均線正負2個標準差以內，若淨值波動大於此區間，將不會觸發本機制)。
+                                    <b>富蘭克林【智能定期不定額】</b>運用演算法，根據每一檔基金之每日淨值偏離布林通道均線(歷史均線)幾個標準差時，智能算出該日最適的加減碼扣款金額比例。
                                 </p>
                                 <el-card shadow="never">
                                     <img src="images/smartRSP-Description-1.svg" alt="布林通道" class="chart-img">
@@ -778,7 +844,7 @@
                                     淨值上行
                                 </h4>
                                 <el-card shadow="never">
-                                    <img src="images/smartRSP-Description-2.svg" alt="淨值上行" class="chart-img">
+                                    <img src="images/smartRSP-Description-2.svg?v=20210722" alt="淨值上行" class="chart-img">
                                 </el-card>
                                 <p class="margin-bottom-5">
                                     <b>當基金淨值為上行趨勢：</b>
@@ -788,10 +854,10 @@
                                         淨值高於均線時將少量加碼扣款金額。
                                     </li>
                                     <li>
-                                        淨值低於均線時將大量加碼扣款金額(最多加碼至：基準扣款金額*160%)。
+                                        淨值低於均線時將大量加碼扣款金額(最多加碼至：基準扣款金額*180%)。
                                     </li>
                                 </ul>
-                                <el-collapse-transition>
+                                <!-- <el-collapse-transition>
                                     <div class="chart" v-if="smartRSP_mechanismInfo.showUpInfo">
                                         <div class="chart-table">
                                             <table>
@@ -818,7 +884,7 @@
                                     <div class="toggleDetailBtn-btn" @click="smartRSP_mechanismInfo.showUpInfo = !smartRSP_mechanismInfo.showUpInfo">
                                         {{smartRSP_mechanismInfo.showUpInfo ? '收起' : '顯示'}}詳細百分比 <i :class="smartRSP_mechanismInfo.showUpInfo ? 'fas fa-angle-up' : 'fas fa-bars'"></i>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <el-divider class="margin-top-40 margin-bottom-40"><i class="el-icon-more"></i></el-divider>
 
@@ -839,7 +905,7 @@
                                         淨值低於均線時將少量減碼扣款金額。
                                     </li>
                                 </ul>
-                                <el-collapse-transition>
+                                <!-- <el-collapse-transition>
                                     <div class="chart" v-if="smartRSP_mechanismInfo.showDownInfo">
                                         <div class="chart-table">
                                             <table>
@@ -866,7 +932,7 @@
                                     <div class="toggleDetailBtn-btn" @click="smartRSP_mechanismInfo.showDownInfo = !smartRSP_mechanismInfo.showDownInfo">
                                         {{smartRSP_mechanismInfo.showDownInfo ? '收起' : '顯示'}}詳細百分比 <i :class="smartRSP_mechanismInfo.showDownInfo ? 'fas fa-angle-up' : 'fas fa-bars'"></i>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                             </div>
                             <span slot="footer" class="dialog-footer">
@@ -1428,6 +1494,8 @@
                     </div>
                 </transition>
 
+                <ie-mask></ie-mask>
+
             <!-- </sice-provider> -->
         </div>
 
@@ -1448,8 +1516,7 @@
         </script> -->
         <!-- 官網寫法參考用 end -->
 
-        <script src="js/main.min.js?v=20210611"></script>
+        <script src="js/main.min.js?v=20211020"></script>
         <script src="https://kevin262666.github.io/demoUs/demoUs.js"></script>
-
     </body>
 </html>

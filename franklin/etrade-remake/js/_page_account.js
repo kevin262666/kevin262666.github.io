@@ -3,7 +3,7 @@ const Status = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `帳戶狀態`,
             },
 
@@ -101,7 +101,7 @@ const Status = {
                             </div>
                         </div>
                     </el-card>
-                    <el-card class="tradingProcess-card margin-top-30">
+                    <el-card class="tradingProcess-card margin-top-30" v-if="$root.$data.dsListVal == '0'">
                         <h2 class="tit-type2" title="核印狀態">
                             核印狀態
                         </h2>
@@ -148,7 +148,7 @@ const PersonalData = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `個人基本資料`,
             },
 
@@ -162,21 +162,6 @@ const PersonalData = {
                 {
                     tit: "英文姓名",
                     content: "WU WUN-NAN",
-                    alone: false,
-                },
-                {
-                    tit: "開戶日期",
-                    content: "2016/09/29",
-                    alone: false,
-                },
-                {
-                    tit: "身分證字號",
-                    content: "D268024***",
-                    alone: false,
-                },
-                {
-                    tit: "出生日期",
-                    content: "1991/08/**",
                     alone: false,
                 },
             ],
@@ -206,7 +191,51 @@ const PersonalData = {
     },
     template: ` <div>
                     <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
-                    <el-card class="tradingProcess-card">
+                    <el-card class="tradingProcess-card" v-if="$root.$data.dsListVal != '0'">
+                        <h2 class="tit-type2" title="聯名戶資料">
+                            聯名戶資料
+                        </h2>
+                        <div class="tradingProcess-card-content">
+                            <div class="tradingProcess-card-content-item-area">
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        戶名
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        {{$root.$data.dsListOptions[$root.$data.dsListVal].label2}}
+                                    </div>
+                                </div>
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        英文戶名
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        CHEN HAN FENG, CHEN TA-FENG, CHEN HSIAO-FENG, RD
+                                    </div>
+                                </div>
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        開戶日期
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        2021/06/06
+                                    </div>
+                                </div>
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        贖回銀行
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        OO銀行 00065220000***
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </el-card>
+                    <el-card class="tradingProcess-card" :class="{'margin-top-30': $root.$data.dsListVal != '0'}">
+                        <h2 id="contactInfo" class="tit-type2" title="受益人資料" v-if="$root.$data.dsListVal != '0'">
+                            受益人資料
+                        </h2>
                         <div class="tradingProcess-card-content">
                             <div class="tradingProcess-card-content-item-area">
                                 <div class="tradingProcess-card-content-item"
@@ -222,6 +251,30 @@ const PersonalData = {
                                     </div>
                                 </div>
                                 
+                                <div class="tradingProcess-card-content-item" v-if="$root.$data.dsListVal == '0'">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        開戶日期
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        	2016/09/29
+                                    </div>
+                                </div>
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        身分證字號
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        D268024***
+                                    </div>
+                                </div>
+                                <div class="tradingProcess-card-content-item">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        出生日期
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        1991/08/**
+                                    </div>
+                                </div>
                                 <div class="tradingProcess-card-content-item">
                                     <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
                                         風險屬性
@@ -230,7 +283,7 @@ const PersonalData = {
                                         積極
                                     </div>
                                 </div>
-                                <div class="tradingProcess-card-content-item">
+                                <div class="tradingProcess-card-content-item" v-if="$root.$data.dsListVal == '0'">
                                     <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
                                         投信基金
                                     </div>
@@ -243,9 +296,17 @@ const PersonalData = {
                                             @click="$router.push('/Sign'); $scrollTo('body')">
                                             申請申購投信基金
                                         </el-button>
+                                        <el-button
+                                            round
+                                            plain
+                                            class="sBtn baseFontSize"
+                                            type="primary"
+                                            @click="$router.push('/FtftPrintApply'); $scrollTo('body')">
+                                            申請申購投信基金-未成年版
+                                        </el-button>
                                     </div>
                                 </div>
-                                <div class="tradingProcess-card-content-item">
+                                <div class="tradingProcess-card-content-item" v-if="$root.$data.dsListVal == '0'">
                                     <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
                                         美國註冊基金
                                     </div>
@@ -269,9 +330,27 @@ const PersonalData = {
                                         <small>(1042-S文件僅供參考，如需正本請來電客服0800-885-888索取)</small>
                                     </div>
                                 </div>
+                                <div class="tradingProcess-card-content-item columnSpan" v-if="$root.$data.dsListVal != '0'">
+                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                        海外所得文件
+                                    </div>
+                                    <div class="tradingProcess-card-content-item-content">
+                                        <el-link
+                                            type="primary"
+                                        >
+                                            前一年度海外所得會計單 <small>(請依法申報)</small> <i class="fas fa-file-download"></i>
+                                        </el-link>
+                                        &nbsp;&nbsp;/&nbsp;&nbsp;
+                                        <el-link
+                                            type="primary"
+                                        >
+                                            今年度截至昨日的海外各類所得資料 <i class="fas fa-file-download"></i>
+                                        </el-link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="tradingProcess-card-content">
+                        <div class="tradingProcess-card-content" v-if="$root.$data.dsListVal == '0'">
                             <div class="tradingProcess-card-content-item-area">
                                 <div class="tradingProcess-card-content-item columnSpan">
                                     <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
@@ -318,7 +397,7 @@ const PersonalData = {
                     <el-form :model="form" ref="form">
                         <el-card class="tradingProcess-card margin-top-30">
                             <h2 id="contactInfo" class="tit-type2" title="通訊資料">
-                                通訊資料
+                                {{$root.$data.dsListVal == '0' ? '': '受益人'}}通訊資料 <small>(※請勿留存郵政信箱)</small>
                             </h2>
                             <div class="tradingProcess-card-content">
                                 <div class="tradingProcess-card-content-item-area">
@@ -663,7 +742,7 @@ const PersonalDataModify = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `受益人資料變更說明`,
             },
             stepsDirection: this.$root.$data.windowWidth > 991 ? 'horizontal' : 'vertical',
@@ -987,7 +1066,7 @@ const Sign = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `線上簽署專區`,
             },
         };
@@ -1002,8 +1081,22 @@ const Sign = {
                             v-if="$route.path === '/Sign/List'"
                             round
                             type="primary"
-                            @click="$router.push('/Sign/Complete'); $scrollTo('body')">
+                            @click="$router.push('/Sign/IdentityVerification'); $scrollTo('body')">
                             下一步
+                        </el-button>
+                        <el-button
+                            v-if="$route.path === '/Sign/IdentityVerification'"
+                            round
+                            type="primary"
+                            @click="$router.push('/Sign/DomesticTransactionAuthority'); $scrollTo('body')">
+                            我已輸入驗證碼
+                        </el-button>
+                        <el-button
+                            v-if="$route.path === '/Sign/DomesticTransactionAuthority'"
+                            round
+                            type="primary"
+                            @click="$router.push('/Sign/Complete'); $scrollTo('body')">
+                            進行線上簽署
                         </el-button>
                         <el-button
                             v-if="$route.path === '/Sign/Complete'"
@@ -1073,6 +1166,223 @@ const Sign_List = {
     },
 };
 
+const Sign_IdentityVerification = {
+    data() {
+        return {
+            form: {
+                birthday: "",
+                captcha: '',
+                transactionPassword: '',
+            },
+            step: 0,
+        };
+    },
+    template: ` <div>
+                    <el-card class="tradingProcess-card">
+                        <h2 title="身分驗證" class="tit-type2">
+                            身分驗證
+                        </h2>
+                        <el-form :model="form" ref="form" label-position="top">
+                            <div class="tradingProcess-card-content">
+                                <el-row :gutter="30" class="formItem">
+                                    <el-col :xl="5" :sm="12">
+                                        <el-form-item
+                                            label="1. 請輸入交易密碼"
+                                            prop="transactionPassword"
+                                            :rules="[
+                                                { required: true, message: '請輸入交易密碼'},
+                                            ]"
+                                        >
+                                            <el-input
+                                                v-model="form.transactionPassword"
+                                                placeholder="請輸入您的交易密碼"
+                                                show-password>
+                                            </el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                    <el-col :xl="5" :sm="12">
+                                        <el-form-item
+                                            label="2. 執行手機簡訊驗證"
+                                        >
+                                            <el-button type="primary" round plain class="margin-top-0 margin-bottom-0" @click="step++">
+                                                <template v-if="step < 1">
+                                                    發送簡訊驗證碼
+                                                </template>
+                                                <template v-else>
+                                                    <i class="el-icon-time"></i> 157秒後可重新發送認證碼
+                                                </template>
+                                            </el-button>
+                                        </el-form-item>
+                                    </el-col>
+                                    <transition enter-active-class="animate__animated animate__fadeIn">
+                                        <el-col :xl="7" :md="12" v-if="step > 0">
+                                            <el-form-item
+                                                label="3. 請輸入簡訊驗證碼"
+                                                prop="captcha"
+                                                :rules="[
+                                                    { required: true, message: '請輸入', trigger: 'change' }
+                                                ]"
+                                            >
+                                                <el-input v-model="form.captcha" maxlength="6" class="text-center" placeholder="請輸入6碼簡訊驗證碼"></el-input>
+                                            </el-form-item>
+                                            <el-alert
+                                                class="borderStyle"
+                                                type="info"
+                                                show-icon
+                                                :closable="false"
+                                            >
+                                                <slot name="description">
+                                                    簡訊認證碼將發送至您於本公司留存的手機號碼09***87912
+                                                </slot>
+                                            </el-alert>
+                                        </el-col>
+                                    </transition>
+                                </el-row>
+                            </div>
+                        </el-form>
+                    </el-card>
+                </div>`,
+    components: {
+    },
+};
+
+const Sign_DomesticTransactionAuthority = {
+    data() {
+        return {
+            form: {
+                
+            },
+            demo: {
+                // -- 上傳證件
+                uploadDocument: {
+                    documentExample: false,
+                    dialogImageUrl: ["", "",],
+                    dialogVisible: {
+                        no0: false,
+                        no1: false,
+                    },
+                    uploadDisabled: {
+                        no0: false,
+                        no1: false,
+                    },
+                },
+            },
+        };
+    },
+    template: ` <div>
+                    <el-card class="tradingProcess-card">
+                        <h2 title="新增境內基金交易權限" class="tit-type2">
+                            新增境內基金交易權限
+                        </h2>
+                        <el-form :model="form" ref="form" label-position="top">
+                            <div class="tradingProcess-card-content">
+                                <el-row :gutter="30" class="formItem">
+                                    <el-col :md="8" :sm="12">
+                                        <el-form-item
+                                            label="上傳及確認身分證正面"
+                                        >
+                                            <el-upload
+                                                action="#"
+                                                list-type="picture-card"
+                                                drag
+                                                :auto-upload="false"
+                                                :on-change="function (file, no) {return handlePictureAdd0(file, 0)}"
+                                                class="uploadDocument"
+                                                :class="{'disabled': demo.uploadDocument.uploadDisabled.no0}"
+                                            >
+                                                <img src="images/idCard-front.jpg" class="uploadDocument-example" />
+                                                <i class="fas fa-plus-circle"></i>
+                                                <div slot="file" slot-scope="scope">
+                                                    <img class="el-upload-list__item-thumbnail" :src="scope.file.url" alt="" />
+                                                    <span class="el-upload-list__item-actions">
+                                                        <span class="el-upload-list__item-preview" @click="handlePictureCardPreview0(scope.file)">
+                                                            <i class="el-icon-zoom-in"></i>
+                                                        </span>
+                                                        <span class="el-upload-list__item-delete">
+                                                            <i class="el-icon-text"> 重新上傳 </i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </el-upload>
+                                        </el-form-item>
+                                        <el-dialog title="預覽" :visible.sync="demo.uploadDocument.dialogVisible.no0">
+                                            <img :src="demo.uploadDocument.dialogImageUrl[0]" alt="" class="uploadDocument-dialogImg" />
+                                        </el-dialog>
+                                    </el-col>
+                                    <el-col :md="8" :sm="12">
+                                        <el-form-item
+                                            label="上傳及確認身分證反面"
+                                        >
+                                            <el-upload
+                                                action="#"
+                                                list-type="picture-card"
+                                                drag
+                                                :auto-upload="false"
+                                                :on-change="function (file, no) {return handlePictureAdd1(file, 1)}"
+                                                class="uploadDocument"
+                                                :class="{'disabled': demo.uploadDocument.uploadDisabled.no1}"
+                                            >
+                                                <img src="images/idCard-back.jpg" class="uploadDocument-example" />
+                                                <i class="fas fa-plus-circle"></i>
+                                                <div slot="file" slot-scope="scope">
+                                                    <img class="el-upload-list__item-thumbnail" :src="scope.file.url" alt="" />
+                                                    <span class="el-upload-list__item-actions">
+                                                        <span class="el-upload-list__item-preview" @click="handlePictureCardPreview1(scope.file)">
+                                                            <i class="el-icon-zoom-in"></i>
+                                                        </span>
+                                                        <span class="el-upload-list__item-delete">
+                                                            <i class="el-icon-text"> 重新上傳 </i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </el-upload>
+                                        </el-form-item>
+                                        <el-dialog title="預覽" :visible.sync="demo.uploadDocument.dialogVisible.no1">
+                                            <img :src="demo.uploadDocument.dialogImageUrl[1]" alt="" class="uploadDocument-dialogImg" />
+                                        </el-dialog>
+                                    </el-col>
+                                </el-row>
+                            </div>
+                        </el-form>
+                    </el-card>
+                </div>`,
+    components: {
+    },
+    methods: {
+        // -- 上傳證件
+        handlePictureAdd0(file, no) {
+            this.demo.uploadDocument.dialogImageUrl[no] = file.url;
+            this.demo.uploadDocument.uploadDisabled.no0 = true;
+
+            this.$notify.error({
+                title: "錯誤",
+                message: "上傳圖檔只能是JPG或PNG格式上傳(錯誤訊息示意)",
+                position: "bottom-right",
+            });
+        },
+        handlePictureAdd1(file, no) {
+            this.demo.uploadDocument.dialogImageUrl[no] = file.url;
+            this.demo.uploadDocument.uploadDisabled.no1 = true;
+
+            this.$notify.error({
+                title: "錯誤",
+                message: "上傳圖檔只能是JPG或PNG格式上傳(錯誤訊息示意)",
+                position: "bottom-right",
+            });
+        },
+
+        // 預覽選擇的證件
+        handlePictureCardPreview0(file) {
+            this.demo.uploadDocument.dialogImageUrl[0] = file.url;
+            this.demo.uploadDocument.dialogVisible.no0 = true;
+        },
+        handlePictureCardPreview1(file) {
+            this.demo.uploadDocument.dialogImageUrl[0] = file.url;
+            this.demo.uploadDocument.dialogVisible.no1 = true;
+        },
+    },
+};
+
 const Sign_Complete = {
     data() {
         return {
@@ -1086,6 +1396,7 @@ const Sign_Complete = {
                             </b>
                             <el-button
                                 plain
+                                round
                                 class="sBtn baseFontSize margin-left-0"
                                 type="primary"
                             >
@@ -1108,22 +1419,182 @@ const Sign_Complete = {
     },
 };
 
+// ========= 申請申購投信基金-未成年版 ==============================================================================================================================
+const FtftPrintApply = {
+    data() {
+        return {
+            page: {
+                stit: `會員中心`,
+                tit: `申請申購投信基金`,
+            },
+            itemTitWidth: "105px",
+            form: {
+                SendWhere: '',
+            },
+            step: 1,
+        }
+    },
+    template: ` <el-form :model="form" ref="form">
+                    <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+                    <el-card class="tradingProcess-card">
+                        <div class="tradingProcess-card-content" v-if="step == 1">
+                            <p>
+                                歡迎您經由國民e帳戶電子交易平台申購境內基金，<b class="text-red">請選擇</b>以下文件寄送方式，並於<b class="text-red text-underLine">簽署文件後寄回</b>富蘭克林辦理，我們將於收到文件後為您辦理開啟境內基金交易權限。
+                            </p>
+                            <div class="tradingProcess-card-content-item-area">
+                                <el-divider class="columnSpan margin-top-10 margin-bottom-10"></el-divider>
+                                    <div class="tradingProcess-card-content-item columnSpan">
+                                        <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                            文件取得方式
+                                        </div>
+                                        <div class="tradingProcess-card-content-item-content">
+                                            <el-form-item
+                                                prop="SendWhere"
+                                                :rules="[
+                                                    { required: true, message: '請選擇', trigger: 'change' }
+                                                ]"
+                                            >
+                                                <el-radio-group v-model="form.SendWhere">
+                                                    <el-radio :label="1">自行下載/列印文件</el-radio>
+                                                    <el-radio :label="2">郵寄至通訊地址：354 - 苗栗縣獅潭鄉中*****</el-radio>
+                                                </el-radio-group>
+                                            </el-form-item>
+                                        </div>
+                                    </div>
+                                </el-divider>
+                            </div>
+                        </div>
+
+
+                        <template v-if="step == 2">
+                            <div class="tit-type2">
+                                <template v-if="form.SendWhere != 2">
+                                    <b>
+                                        申請新增境內基金交易權限暨境內基金電子交易約定書
+                                    </b>
+                                    <span>
+                                        已為您準備好！
+                                    </span>
+                                </template>
+                                <template v-else>
+                                    <b>
+                                        「境內基金電子交易約定書暨增訂約定事項」
+                                    </b>
+                                    <span>
+                                        已為您準備好，我們會盡快以掛號郵寄文件至您指定的地址，提醒您留意收件！
+                                    </span>
+                                </template>
+                            </div>
+                            <el-alert
+                                v-if="form.SendWhere != 2"
+                                class="borderStyle margin-bottom-20"
+                                type="warning"
+                                show-icon
+                                :closable="false"
+                            >
+                                <template v-slot:title>
+                                    <b>提醒您</b>
+                                </template>
+                                <slot name="description">
+                                    文件已加密處理，請輸入您的身分證字號以開啟文件。<b class="text-red">(請勿雙面列印)</b>
+                                </slot>
+                            </el-alert>
+                        </template>
+                        <div class="tradingProcess-card-content" v-if="step == 2">
+                            <h2 title="填寫/寄回方式說明" class="tit-type2">
+                                填寫/寄回方式說明
+                            </h2>
+                            <ol class="margin-bottom-20">
+                                <li>
+                                    <b>填寫方式：</b>
+                                    <ol class="lowercaseStyle">
+                                        <li>
+                                            檢附身份證正反面影本
+                                        </li>
+                                        <li>
+                                            申請新增境內基金交易權限暨境內基金電子交易約定書
+                                            <br/>
+                                            <b>請於約定書第2頁右下方的「原留印鑑」處，<span class="text-red">加蓋受益人開戶時的原留印鑑(簽名或蓋章)</span>。</b>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <b>寄回方式：</b>可選擇
+                                    <ol class="lowercaseStyle">
+                                        <li>
+                                            <b>郵局：</b>郵寄至10690台北郵政53-0665號信箱 富蘭克林證券投顧 收
+                                        </li>
+                                        <li>
+                                            <b>7-11宅急便：</b>索取宅急便「到付託運單」，收件人請填10690 台北市大安區忠孝東路四段87號8樓 富蘭克林證券投顧 客服部 收
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </el-card>
+                    <div class="tradingProcess-btnArea">
+                        <el-button
+                            v-if="step == 1"
+                            round
+                            type="primary"
+                            @click="nextStep()"
+                        >
+                            確認送出
+                        </el-button>
+                        <el-button
+                            v-if="form.SendWhere != 2 && step == 2"
+                            round
+                            type="primary"
+                            @click="nextStep()"
+                        >
+                            下載 / 列印文件
+                        </el-button>
+                        <el-button
+                            v-if="step == 2"
+                            plain
+                            round
+                            type="secondary"
+                            @click="$router.push('/'); $scrollTo('body')">
+                            回國民e帳戶
+                        </el-button>
+                    </div>
+                </el-form>`,
+    components: {
+        pageTit: pageTit,
+    },
+    methods: {
+        nextStep() {
+            if (this.step == 1) {
+                this.step == 1 ? this.$scrollTo('#confirmInfo') : this.$scrollTo('body');
+                this.step++;
+            }else {
+                window.open('https://wt.franklin.com.tw:8081/docv2/Member/ApplyFtft/3d9cfd19-2269-45ff-b494-ea42a1280c1d?handler=Download');
+            }
+        },
+    },
+};
+
 // ========= 申購美國註冊基金申請及同意書 ==============================================================================================================================
 const USFundApply = {
     mixins: [showErrorMessage_2],
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `申購美國註冊基金申請及同意書`,
+
+                stit2: `國民理財機器人`,
+                tit2: `國民理財機器人使用申請`,
             },
 
             itemTitWidth: "105px",
 
             step: 1,
+            otpStep: 0,
 
             form: {
                 transactionPassword: "",
+                captcha: '',
 
                 BF_NAME_E_Last: 'WU',
                 BF_NAME_E_First: 'WUN-NAN',
@@ -1136,18 +1607,101 @@ const USFundApply = {
 
                 checked1: [],
             },
+
+            robotType: false,
+            minorType: false,
+
+            demo: {
+                // -- 上傳證件
+                uploadDocument: {
+                    documentExample: false,
+                    dialogImageUrl: ["", "",],
+                    dialogVisible: {
+                        no0: false,
+                    },
+                    uploadDisabled: {
+                        no0: false,
+                    },
+                },
+            },
         };
     },
-    template: ` <el-form :model="form" ref="form">
-                    <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+    template: ` <el-form :model="form" ref="form" label-position="top">
+                    <pageTit :stit="page.stit" :tit="page.tit" v-if="!robotType"></pageTit>
+                    <pageTit :stit="page.stit2" :tit="page.tit2" v-else></pageTit>
                     <el-card class="tradingProcess-card">
                         <div class="tradingProcess-card-content" v-if="step == 1 || step == 2">
-                            <p>
-                                歡迎您經由國民e帳戶電子交易平台申購富蘭克林旗下美國註冊基金，在您開戶之際已聲明本人非美國公民、加拿大居民、綠卡持有人、美國稅務居民或美國納稅義務人，本公司為配合美國稅務機構要求：
-                            </p>
-                            <ul>
+                            <template v-if="!robotType">
+                                <p>
+                                    歡迎您經由國民e帳戶電子交易平台申購富蘭克林旗下美國註冊基金，在您開戶之際已聲明本人非美國公民、加拿大居民、綠卡持有人、美國稅務居民或美國納稅義務人，本公司為配合美國稅務機構要求：
+                                </p>
+                            </template>
+                            <template v-else>
+                                <div class="tit-type2">
+                                    <b>【投資基金的新選擇】</b>
+                                </div>
+                                <p>
+                                    國民理財機器人三大貼心服務，讓挑選基金不再苦惱、管理部位不再費神
+                                </p>
+                            </template>
+
+                            <template v-if="robotType">
+                                <el-row :gutter="20">
+                                    <el-col :sm="8" class="margin-bottom-sm-20">
+                                        <el-card shadow="hover">
+                                            <img src="images/roboFeatureIcon-1.svg" alt="智慧選配投組" class="chart-img" style="max-width: 120px" />
+                                            <div class="tit-type1 text-center margin-top-0">
+                                                <small class="text-black">智慧選配投組</small>
+                                                <br/><b>超·用·心</b>
+                                            </div>
+                                            <el-divider></el-divider>
+                                            <p>
+                                                透過問卷了解投資人理財目的與風險承受度，以巨量金融數據演算法，提供投資者像私人顧問一般挑選最適基金組合方案。
+                                            </p>
+                                        </el-card>
+                                    </el-col>
+                                    <el-col :sm="8" class="margin-bottom-sm-20">
+                                        <el-card shadow="hover">
+                                            <img src="images/roboFeatureIcon-2.svg" alt="落實資產配置" class="chart-img" style="max-width: 120px" />
+                                            <div class="tit-type1 text-center margin-top-0">
+                                                <small class="text-black">落實資產配置</small>
+                                                <br/><b>超·放·心</b>
+                                            </div>
+                                            <el-divider></el-divider>
+                                            <p>
+                                                智能演算法以資產配置理論為基礎，並採由下而上的嚴謹選股策略，篩選出各類別的最佳比例，分散投資風險。
+                                            </p>
+                                        </el-card>
+                                    </el-col>
+                                    <el-col :sm="8">
+                                        <el-card shadow="hover">
+                                            <img src="images/roboFeatureIcon-3.svg" alt="監控市場再平衡" class="chart-img" style="max-width: 120px" />
+                                            <div class="tit-type1 text-center margin-top-0">
+                                                <small class="text-black">監控市場再平衡</small>
+                                                <br/><b>超·省·心</b>
+                                            </div>
+                                            <el-divider></el-divider>
+                                            <p>
+                                                提供投資者不間斷地監控全球金融市場波動服務，及時優化現有基金組合表現，有效做到風險控制自動化。
+                                            </p>
+                                        </el-card>
+                                    </el-col>
+                                </el-row>
+                                <p class="text-right">
+                                    <el-link type="primary" href="https://www.franklin.com.tw/AI_robo/newAIRobo/index.html" target="_blank" title="了解更多">
+                                        了解更多 <i class="fas fa-angle-right"></i>
+                                    </el-link>
+                                </p>
+                                <div class="tit-type2 margin-top-40">
+                                    <b>距離體驗便利的智能理財服務只差最後一步!</b>
+                                </div>
+                                <p>
+                                    本公司為配合美國稅務機構要求，需請您完成申請「申購美國註冊基金申請及同意書」流程，完成後方能申購。<b class="text-red">該文件每三年需重新簽署</b>。
+                                </p>
+                            </template>
+                            <ul v-else>
                                 <li>
-                                    若您尚未簽署「Form W-8BEN」：請您簽署「Form W-8BEN」郵寄回本公司辦理，完成後方能申購。<b class="text-red">該文件每三年需重新簽署。</b>
+                                    若您尚未簽署「Form W-8BEN」：請您完成申請「申購美國註冊基金申請及同意書」流程，完成後方能申購。<b class="text-red">該文件每三年需重新簽署。</b>
                                 </li>
                                 <li>
                                     若您已簽署「Form W-8BEN」：請確認或提供以下資料以利相關查核申報作業，完成後即可繼續申購
@@ -1170,14 +1724,16 @@ const USFundApply = {
                                 </slot>
                             </el-alert>
                         </div>
-                        <div class="tradingProcess-card-content" v-if="step == 1">
-                            <div class="tradingProcess-card-content-item-area">
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        交易密碼
-                                    </div>
-                                    <div class="tradingProcess-card-content-item-input">
+
+                        <template v-if="step == 1">
+                            <h2 title="身分驗證" class="tit-type2">
+                                身分驗證
+                            </h2>
+                            <div class="tradingProcess-card-content">
+                                <el-row :gutter="30" class="formItem">
+                                    <el-col :xl="5" :sm="12">
                                         <el-form-item
+                                            :label="!minorType ? '1. 請輸入交易密碼' : '請輸入交易密碼'"
                                             prop="transactionPassword"
                                             :rules="[
                                                 { required: true, message: '請輸入交易密碼'},
@@ -1189,10 +1745,47 @@ const USFundApply = {
                                                 show-password>
                                             </el-input>
                                         </el-form-item>
-                                    </div>
-                                </div>
+                                    </el-col>
+                                    <el-col :xl="5" :sm="12" v-if="!minorType">
+                                        <el-form-item
+                                            label="2. 執行手機簡訊驗證"
+                                        >
+                                            <el-button type="primary" round plain class="margin-top-0 margin-bottom-0" @click="otpStep++">
+                                                <template v-if="otpStep < 1">
+                                                    發送簡訊驗證碼
+                                                </template>
+                                                <template v-else>
+                                                    <i class="el-icon-time"></i> 157秒後可重新發送認證碼
+                                                </template>
+                                            </el-button>
+                                        </el-form-item>
+                                    </el-col>
+                                    <transition enter-active-class="animate__animated animate__fadeIn">
+                                        <el-col :xl="7" :md="12" v-if="otpStep > 0 && !minorType">
+                                            <el-form-item
+                                                label="3. 請輸入簡訊驗證碼"
+                                                prop="captcha"
+                                                :rules="[
+                                                    { required: true, message: '請輸入', trigger: 'change' }
+                                                ]"
+                                            >
+                                                <el-input v-model="form.captcha" maxlength="6" class="text-center" placeholder="請輸入6碼簡訊驗證碼"></el-input>
+                                            </el-form-item>
+                                            <el-alert
+                                                class="borderStyle"
+                                                type="info"
+                                                show-icon
+                                                :closable="false"
+                                            >
+                                                <slot name="description">
+                                                    簡訊認證碼將發送至您於本公司留存的手機號碼09***87912
+                                                </slot>
+                                            </el-alert>
+                                        </el-col>
+                                    </transition>
+                                </el-row>
                             </div>
-                        </div>
+                        </template>
                         <transition enter-active-class="animate__animated animate__fadeIn">
                             <template v-if="step == 2">
                                 <div class="tradingProcess-card-content">
@@ -1332,25 +1925,48 @@ const USFundApply = {
                                                 </el-alert>
                                             </div>
                                         </div>
-                                        <el-divider class="columnSpan margin-top-10 margin-bottom-10"></el-divider>
-                                        <div class="tradingProcess-card-content-item columnSpan">
+                                        <div class="tradingProcess-card-content-item columnSpan" v-show="!minorType">
                                             <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                                文件取得方式
+                                                上傳手寫簽名
                                             </div>
                                             <div class="tradingProcess-card-content-item-content">
-                                                <el-form-item
-                                                    prop="SendWhere"
-                                                    :rules="[
-                                                        { required: true, message: '請選擇', trigger: 'change' }
-                                                    ]"
-                                                >
-                                                    <el-radio-group v-model="form.SendWhere">
-                                                        <el-radio :label="1">自行下載/列印文件</el-radio>
-                                                        <el-radio :label="2">郵寄至通訊地址：354 - 苗栗縣獅潭鄉中*****</el-radio>
-                                                    </el-radio-group>
+                                                <el-form-item>
+                                                    <el-upload
+                                                        action="#"
+                                                        list-type="picture-card"
+                                                        drag
+                                                        :auto-upload="false"
+                                                        :on-change="function (file, no) {return handlePictureAdd0(file, 0)}"
+                                                        class="uploadDocument"
+                                                        :class="{'disabled': demo.uploadDocument.uploadDisabled.no0}"
+                                                    >
+                                                        <img src="images/signature.jpg" class="uploadDocument-example" />
+                                                        <i class="fas fa-plus-circle"></i>
+                                                        <div slot="file" slot-scope="scope">
+                                                            <img class="el-upload-list__item-thumbnail" :src="scope.file.url" alt="" />
+                                                            <span class="el-upload-list__item-actions">
+                                                                <span class="el-upload-list__item-preview" @click="handlePictureCardPreview0(scope.file)">
+                                                                    <i class="el-icon-zoom-in"></i>
+                                                                </span>
+                                                                <span class="el-upload-list__item-delete">
+                                                                    <i class="el-icon-text"> 重新上傳 </i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </el-upload>
                                                 </el-form-item>
+                                                <el-dialog title="預覽" :visible.sync="demo.uploadDocument.dialogVisible.no0">
+                                                    <img :src="demo.uploadDocument.dialogImageUrl[0]" alt="" class="uploadDocument-dialogImg" />
+                                                </el-dialog>
                                             </div>
                                         </div>
+                                        <div class="tradingProcess-card-content-item columnSpan" v-if="robotType">
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <b>國民理財機器人證券投資顧問委任契約</b>
+                                                <br/>內容將說明國民理財機器人所提供投資諮詢顧問服務事項，請確認同意約定條款後簽屬並郵寄回本公司辦理。
+                                            </div>
+                                        </div>
+                                        <el-divider class="columnSpan margin-top-10 margin-bottom-10"></el-divider>
                                         <div class="tradingProcess-card-content-item columnSpan">
                                             <div class="tradingProcess-card-content-item-content">
                                                 <el-form-item
@@ -1366,6 +1982,30 @@ const USFundApply = {
                                                 </el-form-item>
                                             </div>
                                         </div>
+                                        <template v-if="minorType">
+                                            <el-divider class="columnSpan margin-top-10 margin-bottom-10"></el-divider>
+                                            <div class="tradingProcess-card-content-item columnSpan">
+                                                <b>請您簽署「Form W-8BEN」後郵寄回本公司辦理。<b class="text-red">請選擇</b>以下文件取得方式，並於<b class="text-red text-underLine">簽署文件後寄回</b>富蘭克林辦理，我們將於收到文件後為您辦理。</b>
+                                            </div>
+                                            <div class="tradingProcess-card-content-item columnSpan">
+                                                <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                    文件取得方式
+                                                </div>
+                                                <div class="tradingProcess-card-content-item-content">
+                                                    <el-form-item
+                                                        prop="SendWhere"
+                                                        :rules="[
+                                                            { required: true, message: '請選擇', trigger: 'change' }
+                                                        ]"
+                                                    >
+                                                        <el-radio-group v-model="form.SendWhere">
+                                                            <el-radio :label="1">自行下載/列印文件</el-radio>
+                                                            <el-radio :label="2">郵寄至通訊地址：354 - 苗栗縣獅潭鄉中*****</el-radio>
+                                                        </el-radio-group>
+                                                    </el-form-item>
+                                                </div>
+                                            </div>
+                                        </template>
                                     </div>
                                 </div>
                             </template>
@@ -1473,7 +2113,7 @@ const USFundApply = {
                             </ol>
                         </div>
                     </el-card>
-                    <div class="tradingProcess-btnArea">
+                    <div class="tradingProcess-btnArea" v-if="otpStep > 0">
                         <el-button
                             v-if="step != 3"
                             round
@@ -1484,7 +2124,12 @@ const USFundApply = {
                                 進行確認
                             </template>
                             <template v-if="step == 2">
-                                確認送出
+                                <template v-if="minorType">
+                                    確認送出
+                                </template>
+                                <template v-else>
+                                    確認送出並進行線上簽署
+                                </template>
                             </template>
                         </el-button>
                         <el-button
@@ -1505,6 +2150,14 @@ const USFundApply = {
                         </el-button>
                     </div>
                     <showErrorMessage_1 @click.native="submitForm('form')"></showErrorMessage_1>
+                    <div @click="robotType = !robotType" v-if="step != 3"
+                        style="position: fixed; bottom: 0px; right: 110px; background: rgb(0, 0, 0); border-radius: 5px; color: #fff; font-size: 12px; padding: 0px 5px; cursor: pointer;">
+                        {{robotType ? '切換成申購樣式' : '切換成robo樣式'}}
+                    </div>
+                    <div @click="minorTypeSwitch()" v-if="step != 3"
+                        style="position: fixed; bottom: 0px; right: 210px; background: rgb(0, 0, 0); border-radius: 5px; color: #fff; font-size: 12px; padding: 0px 5px; cursor: pointer;">
+                        {{minorType ? '切換為已成年樣式' : '切換為未成年樣式'}}
+                    </div>
                 </el-form>`,
     components: {
         pageTit: pageTit,
@@ -1512,11 +2165,112 @@ const USFundApply = {
     methods: {
         nextStep() {
             if (this.step == 1 || this.step == 2) {
-                this.step == 1 ? this.$scrollTo('#confirmInfo') : this.$scrollTo('body');
+                // this.step == 1 ? this.$scrollTo('#confirmInfo') : this.$scrollTo('body');
+                if (this.step == 1){
+                    this.$scrollTo('#confirmInfo');
+                }else {
+                    this.$scrollTo('body');
+                    if (!this.minorType){
+                        this.$router.push('/USFundApply_Adult');
+                    }
+                }
                 this.step++;
             }else {
                 window.open('https://wt.franklin.com.tw:8081/docv2/Member/W8Ben/4604952c-3b4e-46f2-aa25-2c31e9e30d95?handler=Download');
             }
+        },
+
+        minorTypeSwitch() {
+            // this.minorType = !this.minorType;
+            if (this.minorType) {
+                this.minorType = false;
+                if (this.otpStep == 1) {
+                    this.otpStep = 0
+                }
+            }else {
+                this.minorType = true;
+                if (this.otpStep == 0) {
+                    this.otpStep = 1
+                }
+            }
+        },
+
+        // -- 上傳證件
+        handlePictureAdd0(file, no) {
+            this.demo.uploadDocument.dialogImageUrl[no] = file.url;
+            this.demo.uploadDocument.uploadDisabled.no0 = true;
+
+            this.$notify.error({
+                title: "錯誤",
+                message: "上傳圖檔只能是JPG或PNG格式上傳(錯誤訊息示意)",
+                position: "bottom-right",
+            });
+        },
+
+        // 預覽選擇的證件
+        handlePictureCardPreview0(file) {
+            this.demo.uploadDocument.dialogImageUrl[0] = file.url;
+            this.demo.uploadDocument.dialogVisible.no0 = true;
+        },
+    },
+};
+
+const USFundApply_Adult = {
+    data() {
+        return {
+            page: {
+                stit: `會員中心`,
+                tit: `申購美國註冊基金申請及同意書`,
+
+                stit2: `國民理財機器人`,
+                tit2: `國民理財機器人使用申請`,
+            },
+
+            robotType: false,
+
+            fullscreenLoading: false,
+        };
+    },
+    template: ` <div>
+                    <pageTit :stit="page.stit" :tit="page.tit" v-if="!robotType"></pageTit>
+                    <pageTit :stit="page.stit2" :tit="page.tit2" v-else></pageTit>
+                    <el-card class="tradingProcess-card">
+                        <div class="tit-type2">
+                            <b>
+                                「FORM W-8BEN 於美國扣繳稅款及申報目的之最終受益人外國身分聲明(個人)」已為您延展3年。
+                            </b>
+                        </div>
+                    </el-card>
+                    <div class="tradingProcess-btnArea">
+                        <el-button
+                            round
+                            type="primary"
+                            @click="$router.push('/'); $scrollTo('body')"
+                        >
+                            確認
+                        </el-button>
+                    </div>
+                    <div @click="robotType = !robotType"
+                        style="position: fixed; bottom: 0px; right: 0px; background: rgb(0, 0, 0); border-radius: 5px; color: #fff; font-size: 12px; padding: 0px 5px; cursor: pointer;">
+                        {{robotType ? '切換成申購樣式' : '切換成robo樣式'}}
+                    </div>
+                </div>`,
+    components: {
+        pageTit: pageTit,
+    },
+    mounted() {
+        this.openFullScreen1();
+    },
+    methods: {
+        openFullScreen1() {
+            const loading = this.$loading({
+                lock: true,
+                text: `憑證作業處理中 請勿關閉視窗`,
+                background: 'rgba(0, 0, 0, 1)'
+            });
+            setTimeout(() => {
+                loading.close();
+            }, 5000);
         },
     },
 };
@@ -1527,7 +2281,7 @@ const ChangeLoginPwd = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `變更登入密碼`,
             },
 
@@ -1543,6 +2297,20 @@ const ChangeLoginPwd = {
     },
     template: ` <el-form :model="form" ref="form">
                     <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+                    <el-alert
+                        class="borderStyle"
+                        type="warning"
+                        show-icon
+                        :closable="false"
+                        v-if="$root.$data.dsListVal != '0'"
+                    >
+                        <template v-slot:title>
+                            提醒您
+                        </template>
+                        <slot name="description">
+                            您此次所變更的登入密碼，將適用於您在國民e帳戶之其他帳戶。
+                        </slot>
+                    </el-alert>
                     <el-card class="tradingProcess-card">
                         <div class="tradingProcess-card-content">
                             <div class="tradingProcess-card-content-item-area">
@@ -1709,7 +2477,7 @@ const ChangeTxnPwd = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `變更交易密碼`,
             },
 
@@ -1889,7 +2657,7 @@ const ForgetPassword = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `忘記交易密碼`,
             },
         };
@@ -2088,7 +2856,7 @@ const TxnActivate = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `首次交易密碼變更暨開啟交易權限`,
             },
 
@@ -2353,7 +3121,7 @@ const Kyc = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `風險屬性評估`,
             },
 
@@ -3209,7 +3977,7 @@ const KYCChangeWarning1 = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `您的風險屬性為 積極`,
             },
 
@@ -3324,7 +4092,7 @@ const KYCChangeWarning2 = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `您的風險屬性為 積極`,
             },
 
@@ -3471,7 +4239,7 @@ const Coupon = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `優惠券管理`,
             },
 
@@ -3630,7 +4398,7 @@ const Bonus = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `紅利點數查詢`,
             },
 
@@ -4034,7 +4802,7 @@ const MailGroup = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `通知信寄發管理`,
             },
 
@@ -4161,7 +4929,7 @@ const GetLoginPwdHint = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `查詢/補發會員登入密碼`,
             },
 
@@ -4175,101 +4943,111 @@ const GetLoginPwdHint = {
             step: 1,
         };
     },
-    template: ` <el-form :model="form" ref="form">
-                    <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
-                    <el-card class="tradingProcess-card">
-                        <h2 title="查詢密碼提示" class="tit-type2">
-                            查詢密碼提示
-                        </h2>
-                        <el-alert
-                            class="borderStyle"
-                            type="warning"
-                            show-icon
-                            :closable="false"
-                            v-if="step == 1"
-                        >
-                            <slot name="description">
-                                請輸入您的登入帳號及生日(或公司成立日)來查詢您之前設定的密碼提示
-                            </slot>
-                        </el-alert>
-                        <div class="tradingProcess-card-content">
-                            <div class="tradingProcess-card-content-item-area columnCount-3 columnCount-xxl-2 columnCount-md-1" v-if="step == 1">
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        請輸入<br class="hidden-xs-only"/>登入帳號
+    template: ` <el-row class="text-center">
+                    <el-col :lg="14" :md="20" class="text-left">
+                        <el-form :model="form" ref="form">
+                            <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+                            <el-card class="tradingProcess-card">
+                                <h2 title="查詢密碼提示" class="tit-type2">
+                                    查詢密碼提示
+                                </h2>
+                                <el-alert
+                                    class="borderStyle"
+                                    type="warning"
+                                    show-icon
+                                    :closable="false"
+                                    v-if="step == 1"
+                                >
+                                    <slot name="description">
+                                        請輸入您的登入帳號及生日(或公司成立日)來查詢您之前設定的密碼提示
+                                    </slot>
+                                </el-alert>
+                                <div class="tradingProcess-card-content">
+                                    <div class="tradingProcess-card-content-item-area columnCount-3 columnCount-xxl-2 columnCount-md-1" v-if="step == 1">
+                                        <div class="tradingProcess-card-content-item">
+                                            <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                請輸入<br class="hidden-xs-only"/>登入帳號
+                                            </div>
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <el-form-item
+                                                    prop="Idno"
+                                                    :rules="[
+                                                        { required: true, message: '請輸入登入帳號'},
+                                                    ]"
+                                                >
+                                                    <el-input
+                                                        v-model="form.Idno"
+                                                        placeholder="請輸入您的登入帳號">
+                                                    </el-input>
+                                                </el-form-item>
+                                            </div>
+                                        </div>
+                                        <div class="tradingProcess-card-content-item">
+                                            <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                請輸入您的<br class="hidden-xs-only"/>生日8位數字
+                                            </div>
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <el-form-item
+                                                    prop="Birthday"
+                                                    :rules="[
+                                                        { required: true, message: '請輸入您的生日'},
+                                                    ]"
+                                                >
+                                                    <el-input
+                                                        v-model="form.Birthday"
+                                                        placeholder="範例:19110801"
+                                                        type="number"
+                                                    >
+                                                    </el-input>
+                                                </el-form-item>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tradingProcess-card-content-item-content">
-                                        <el-form-item
-                                            prop="Idno"
-                                            :rules="[
-                                                { required: true, message: '請輸入登入帳號'},
-                                            ]"
-                                        >
-                                            <el-input
-                                                v-model="form.Idno"
-                                                placeholder="請輸入您的登入帳號">
-                                            </el-input>
-                                        </el-form-item>
-                                    </div>
+                                    <template v-if="step == 2">
+                                        <p>
+                                            您的密碼提示語為：<b class="text-red">富蘭克林‧國民ｅ帳戶</b>
+                                        </p>
+                                        <p>
+                                            如果您已經知道登入密碼，請回登入頁繼續使用，如果您仍忘記登入密碼，請選擇補發登入密碼，依照提示重新設定。
+                                        </p>
+                                    </template>
                                 </div>
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        請輸入您的<br class="hidden-xs-only"/>生日8位數字
-                                    </div>
-                                    <div class="tradingProcess-card-content-item-content">
-                                        <el-form-item
-                                            prop="Birthday"
-                                            :rules="[
-                                                { required: true, message: '請輸入您的生日'},
-                                            ]"
-                                        >
-                                            <el-input
-                                                v-model="form.Birthday"
-                                                placeholder="範例:19110801"
-                                                type="number"
-                                            >
-                                            </el-input>
-                                        </el-form-item>
-                                    </div>
-                                </div>
+                            </el-card>
+                            <div class="tradingProcess-btnArea">
+                                <el-button
+                                    round
+                                    type="primary"
+                                    class="full-sm"
+                                    @click="nextStep(); $scrollTo('body')"
+                                >
+                                
+                                    <template v-if="step == 1">
+                                        查詢密碼提示
+                                    </template>
+                                    <template v-if="step == 2">
+                                        補發登入密碼
+                                    </template>
+                                </el-button>
+                                <el-button
+                                    type="text"
+                                    @click="this.location.href = 'signIn.html#/';"
+                                >
+                                    回登入頁
+                                </el-button>
                             </div>
-                            <template v-if="step == 2">
-                                <p>
-                                    您的密碼提示語為：<b class="text-red">富蘭克林‧國民ｅ帳戶</b>
-                                </p>
-                                <p>
-                                    如果您已經知道登入密碼，請回登入頁繼續使用，如果您仍忘記登入密碼，請選擇補發登入密碼，依照提示重新設定。
-                                </p>
-                            </template>
-                        </div>
-                    </el-card>
-                    <div class="tradingProcess-btnArea">
-                        <el-button
-                            round
-                            type="primary"
-                            class="full-sm"
-                            @click="nextStep(); $scrollTo('body')"
-                        >
-                        
-                            <template v-if="step == 1">
-                                查詢密碼提示
-                            </template>
-                            <template v-if="step == 2">
-                                補發登入密碼
-                            </template>
-                        </el-button>
-                        <el-button
-                            type="text"
-                            @click="$router.push('/'); $scrollTo('body')"
-                        >
-                            回登入頁
-                        </el-button>
-                    </div>
-                    <showErrorMessage_1 @click.native="submitForm('form')"></showErrorMessage_1>
-                </el-form>`,
+                            <showErrorMessage_1 @click.native="submitForm('form')"></showErrorMessage_1>
+                        </el-form>
+                    </el-col>
+                </el-row>`,
     components: {
         pageTit: pageTit,
     },
+    created() {
+        this.$root.notLoggedIn();
+    },
+    // beforeDestroy() {
+    //     this.$root.alreadyLoggedIn();
+    // },
     methods: {
         nextStep() {
             this.step == 1 ? this.step++ : this.$router.push('/ResetLoginPwd');
@@ -4283,7 +5061,7 @@ const ResetLoginPwd = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `補發登入密碼`,
             },
 
@@ -4296,105 +5074,115 @@ const ResetLoginPwd = {
             },
         };
     },
-    template: ` <el-form :model="form" ref="form">
-                    <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
-                    <el-card class="tradingProcess-card">
-                        <el-alert
-                            class="borderStyle"
-                            type="warning"
-                            show-icon
-                            :closable="false"
-                        >
-                            <template v-slot:title>
-                                如果您確定要補發登入密碼
-                            </template>
-                            <slot name="description">
-                                我們會將新的「登入密碼」寄至您的電子郵件信箱，當您收到「登入密碼」後，您可自行於本系統登入並重設登入密碼。
-                            </slot>
-                        </el-alert>
-                        <div class="tradingProcess-card-content">
-                            <div class="tradingProcess-card-content-item-area columnCount-3 columnCount-xxl-2 columnCount-md-1">
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        請輸入<br class="hidden-xs-only"/>登入帳號
-                                    </div>
-                                    <div class="tradingProcess-card-content-item-content">
-                                        <el-form-item
-                                            prop="Idno"
-                                            :rules="[
-                                                { required: true, message: '請輸入登入帳號'},
-                                            ]"
-                                        >
-                                            <el-input
-                                                v-model="form.Idno"
-                                                placeholder="請輸入您的登入帳號">
-                                            </el-input>
-                                        </el-form-item>
+    template: ` <el-row class="text-center">
+                    <el-col :lg="14" :md="20" class="text-left">
+                        <el-form :model="form" ref="form">
+                            <pageTit :stit="page.stit" :tit="page.tit"></pageTit>
+                            <el-card class="tradingProcess-card">
+                                <el-alert
+                                    class="borderStyle"
+                                    type="warning"
+                                    show-icon
+                                    :closable="false"
+                                >
+                                    <template v-slot:title>
+                                        如果您確定要補發登入密碼
+                                    </template>
+                                    <slot name="description">
+                                        我們會將新的「登入密碼」寄至您的電子郵件信箱，當您收到「登入密碼」後，您可自行於本系統登入並重設登入密碼。
+                                    </slot>
+                                </el-alert>
+                                <div class="tradingProcess-card-content">
+                                    <div class="tradingProcess-card-content-item-area columnCount-3 columnCount-xxl-2 columnCount-md-1">
+                                        <div class="tradingProcess-card-content-item">
+                                            <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                請輸入<br class="hidden-xs-only"/>登入帳號
+                                            </div>
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <el-form-item
+                                                    prop="Idno"
+                                                    :rules="[
+                                                        { required: true, message: '請輸入登入帳號'},
+                                                    ]"
+                                                >
+                                                    <el-input
+                                                        v-model="form.Idno"
+                                                        placeholder="請輸入您的登入帳號">
+                                                    </el-input>
+                                                </el-form-item>
+                                            </div>
+                                        </div>
+                                        <div class="tradingProcess-card-content-item">
+                                            <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                請輸入您的<br class="hidden-xs-only"/>生日8位數字
+                                            </div>
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <el-form-item
+                                                    prop="Birthday"
+                                                    :rules="[
+                                                        { required: true, message: '請輸入您的生日'},
+                                                    ]"
+                                                >
+                                                    <el-input
+                                                        v-model="form.Birthday"
+                                                        placeholder="範例:19110801"
+                                                        type="number"
+                                                    >
+                                                    </el-input>
+                                                </el-form-item>
+                                            </div>
+                                        </div>
+                                        <div class="tradingProcess-card-content-item">
+                                            <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
+                                                請輸入您留存的<br class="hidden-xs-only"/>電子郵件信箱
+                                            </div>
+                                            <div class="tradingProcess-card-content-item-content">
+                                                <el-form-item
+                                                    prop="Email"
+                                                    :rules="[
+                                                        { required: true, message: '請輸入電子郵件信箱'},
+                                                    ]"
+                                                >
+                                                    <el-input
+                                                        v-model="form.Email"
+                                                        placeholder="電子郵件信箱"
+                                                        type="email"
+                                                    >
+                                                    </el-input>
+                                                </el-form-item>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        請輸入您的<br class="hidden-xs-only"/>生日8位數字
-                                    </div>
-                                    <div class="tradingProcess-card-content-item-content">
-                                        <el-form-item
-                                            prop="Birthday"
-                                            :rules="[
-                                                { required: true, message: '請輸入您的生日'},
-                                            ]"
-                                        >
-                                            <el-input
-                                                v-model="form.Birthday"
-                                                placeholder="範例:19110801"
-                                                type="number"
-                                            >
-                                            </el-input>
-                                        </el-form-item>
-                                    </div>
-                                </div>
-                                <div class="tradingProcess-card-content-item">
-                                    <div class="tradingProcess-card-content-item-tit" :style="{width: itemTitWidth,}">
-                                        請輸入您留存的<br class="hidden-xs-only"/>電子郵件信箱
-                                    </div>
-                                    <div class="tradingProcess-card-content-item-content">
-                                        <el-form-item
-                                            prop="Email"
-                                            :rules="[
-                                                { required: true, message: '請輸入電子郵件信箱'},
-                                            ]"
-                                        >
-                                            <el-input
-                                                v-model="form.Email"
-                                                placeholder="電子郵件信箱"
-                                                type="email"
-                                            >
-                                            </el-input>
-                                        </el-form-item>
-                                    </div>
-                                </div>
+                            </el-card>
+                            <div class="tradingProcess-btnArea">
+                                <el-button
+                                    round
+                                    type="primary"
+                                    class="full-sm"
+                                    @click="successPopUp()"
+                                >
+                                    確定補發登入密碼
+                                </el-button>
+                                <el-button
+                                    type="text"
+                                    @click="this.location.href = 'signIn.html#/';"
+                                >
+                                    回登入頁
+                                </el-button>
                             </div>
-                        </div>
-                    </el-card>
-                    <div class="tradingProcess-btnArea">
-                        <el-button
-                            round
-                            type="primary"
-                            class="full-sm"
-                            @click="successPopUp()"
-                        >
-                            確定補發登入密碼
-                        </el-button>
-                        <el-button
-                            type="text"
-                            @click="$router.push('/'); $scrollTo('body')"
-                        >
-                            回登入頁
-                        </el-button>
-                    </div>
-                    <showErrorMessage_1 @click.native="submitForm('form')"></showErrorMessage_1>
-                </el-form>`,
+                            <showErrorMessage_1 @click.native="submitForm('form')"></showErrorMessage_1>
+                        </el-form>
+                    </el-col>
+                </el-row>`,
     components: {
         pageTit: pageTit,
+    },
+    created() {
+        this.$root.notLoggedIn();
+    },
+    beforeDestroy() {
+        this.$root.alreadyLoggedIn();
     },
     methods: {
         successPopUp() {
@@ -4422,8 +5210,9 @@ const ResetLoginPwd = {
                 //     this.$scrollTo("body");
                 // })
                 .catch(() => {
-                    this.$router.push("/");
-                    this.$scrollTo("body");
+                    // this.$router.push("/");
+                    // this.$scrollTo("body");
+                    location.href = 'signIn.html#/';
                 });
         },
     },
@@ -4435,7 +5224,7 @@ const CRS = {
     data() {
         return {
             page: {
-                stit: `我的帳戶`,
+                stit: `會員中心`,
                 tit: `申購CRS自我證明表`,
             },
 

@@ -24,6 +24,9 @@
 @import "_chart.scss";  // 圖表
 @import "_recommendedFund.scss"; // 推薦基金
 @import "_agreement.scss"; // 條款
+@import "_signIn.scss"; // 登入頁
+@import "_ieMask.scss"; // ie遮罩
+@import "_resetKeyboard.scss"; // 重置Keyboard樣式
 
 @import "_margin.scss"; // 間距
 @import "_cursor.scss"; // 游標
@@ -286,39 +289,5 @@
             line-height: 30px;
             padding: 0px 12px;
         }
-    }
-}
-
-// 特製區 ==================================================
-body {
-    background: #e8e8e8;
-}
-
-.main {
-    min-height: 600px;
-    padding: 1px 0px;
-    margin: 15px 0px;
-    // 特製螢幕寬度大於1200 && 高度小於750
-    @media screen and (min-width: 1200px) and (max-height: 750px) {
-        min-height: 410px;
-    }
-    @include maxWidth-lg {
-        min-height: 0;
-        margin-top: 0px;
-    }
-}
-
-body.notLoggedIn {
-    .header {
-        &-right,
-        &-bottom {
-            display: none;
-        }
-    }
-    .menuBtn {
-        display: none;
-    }
-    .container {
-        padding-left: 0;
     }
 }

@@ -293,10 +293,10 @@ var content = new Vue({
                 behance: `https://www.behance.net/gallery/121536213/_`,
             },
             {
-                link: `https://kevin262666.github.io/franklin/etrade-remake/`,
+                link: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
                 tit: `EC國民e帳戶`,
                 img: `etrade-remake.webp`,
-                website: `https://kevin262666.github.io/franklin/etrade-remake`,
+                website: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
                 behance: `https://www.behance.net/gallery/154738505/-e`,
             },
         ],

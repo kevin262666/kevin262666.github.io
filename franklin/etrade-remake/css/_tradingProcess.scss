@@ -17,16 +17,34 @@
             border-radius: 10px;
             padding: 1px 25px;
             margin: 15px 0px;
+            &.changeFundType {
+                background: $color-gray3;
+                border: solid 1px $color-border;
+                .fundList {
+                    margin: 20px auto;
+                }
+            }
             &-item {
                 display: table;
                 width: 100%;
                 break-inside: avoid;
-                padding: 10px 0px;
+                padding: 10px 15px;
+                width: 25%;
+                box-sizing: border-box;
+                border-right: dashed 1px $color-divider2;
+                &:nth-of-type(4n+0) {
+                    border-right: none;
+                }
+                &:last-of-type {
+                    border-right: none;
+                }
                 &-area {
-                    margin: 10px 0px;
-                    column-count: 4;
-                    column-gap: 30px;
-                    column-rule: dashed 1px $color-divider2;
+                    margin: 10px -15px;
+                    // column-count: 4;
+                    // column-gap: 30px;
+                    // column-rule: dashed 1px $color-divider2;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
                 &-tit,
                 &-content,
@@ -81,14 +99,33 @@
         text-align: right;
     }
     @include maxWidth-xxl {
-        &-card-content-item-area {
-            column-count: 3;
+        &-card-content-item {
+            width: (100% / 3);
+            &:nth-of-type(4n+0) {
+                border-right: dashed 1px $color-divider2;
+            }
+            &:nth-of-type(3n+0) {
+                border-right: none;
+            }
+            &-area {
+                // column-count: 3;
+            }
         }
     }
     @include maxWidth-xl {
         &-card-content-item {
+            width: (100% / 2);
+            &:nth-of-type(3n+0) {
+                border-right: dashed 1px $color-divider2;
+            }
+            &:nth-of-type(4n+0) {
+                border-right: none;
+            }
+            &:nth-of-type(2n+0) {
+                border-right: none;
+            }
             &-area {
-                column-count: 2;
+                // column-count: 2;
             }
         }
     }
@@ -103,10 +140,15 @@
                 padding: 1px 10px;
                 &-item {
                     display: block;
+                    width: auto;
                     padding: 0px;
                     margin: 15px 0px;
+                    border-right: none !important;
                     &-area {
-                        column-count: auto;
+                        // column-count: auto;
+                        display: block;
+                        margin-left: 0;
+                        margin-right: 0;
                     }
                     &-tit,
                     &-content,
@@ -173,7 +215,9 @@
     }
 }
 .columnSpan {
-    column-span: all; // 添加了就可以獨立一行
+    // column-span: all; // 添加了就可以獨立一行
+    width: 100%;
+    border-right: none;
 }
 
 .changeFundArrow {

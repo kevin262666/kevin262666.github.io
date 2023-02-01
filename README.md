@@ -88,7 +88,7 @@ https://kevin262666.github.io/
 [國民理財機器人]:https://kevin262666.github.io/franklin/newAIRobo/
 [網銀開戶推展]:https://kevin262666.github.io/franklin/signup/
 
-[EC國民e帳戶]:https://kevin262666.github.io/franklin/etrade-remake/
+[EC國民e帳戶]:https://kevin262666.github.io/franklin/etrade-remake/signIn.html
 [投資攻略網頁]:https://kevin262666.github.io/franklin/income-fund/
 [美盛官網]:https://kevin262666.github.io/franklin/legg-mason/
 [投資策略SWIFT]:https://kevin262666.github.io/franklin/swift/

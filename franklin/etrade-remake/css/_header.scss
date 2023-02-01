@@ -132,6 +132,12 @@
                             padding: 10px;
                         }
                     }
+                    &-tit {
+                        padding: 15px 10px 5px;
+                        color: #bbb;
+                        margin-bottom: -1px;
+                        background: $color-blockBg;
+                    }
                 }
             }
         }
@@ -169,9 +175,19 @@
             }
         }
     }
+    @include maxWidth-xl {
+        &-bottom {
+            .pcNavbar .el-dropdown {
+                margin-right: 35px;
+            }
+        }
+    }
     @include maxWidth-lg {
         &-bottom {
             padding: 15px 0px 0;
+            .pcNavbar .el-dropdown {
+                margin-right: 40px;
+            }
         }
     }
     @include maxWidth-md {

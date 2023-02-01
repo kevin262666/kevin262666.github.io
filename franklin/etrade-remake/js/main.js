@@ -6,6 +6,9 @@
 // 我的帳戶
 // @prepros-prepend _page_account.js
 
+// 我的庫存
+// @prepros-prepend _page_myInventory.js
+
 // 基金交易
 // @prepros-prepend _page_trade.js
 
@@ -44,7 +47,7 @@ const router = new VueRouter({
                 title: "富蘭克林‧國民ｅ帳戶",
             },
         },
-        // 我的帳戶 --------------------------------------------
+        // 會員中心 --------------------------------------------
         {
             // 帳戶狀態
             path: "/Status",
@@ -83,6 +86,20 @@ const router = new VueRouter({
                     },
                 },
                 {
+                    path: "IdentityVerification",
+                    component: Sign_IdentityVerification,
+                    meta: {
+                        title: "身分驗證",
+                    },
+                },
+                {
+                    path: "DomesticTransactionAuthority",
+                    component: Sign_DomesticTransactionAuthority,
+                    meta: {
+                        title: "新增境內基金交易權限",
+                    },
+                },
+                {
                     path: "Complete",
                     component: Sign_Complete,
                     meta: {
@@ -92,9 +109,25 @@ const router = new VueRouter({
             ],
         },
         {
+            // 申請申購投信基金-未成年版 (從【個人基本資料】-【投信基金】按鍵連過來)
+            path: "/FtftPrintApply",
+            component: FtftPrintApply,
+            meta: {
+                title: "申請申購投信基金",
+            },
+        },
+        {
             // 申購美國註冊基金申請及同意書 (從【個人基本資料】-【美國註冊基金】按鍵連過來)
             path: "/USFundApply",
             component: USFundApply,
+            meta: {
+                title: "申購美國註冊基金申請及同意書",
+            },
+        },
+        {
+            // 申購美國註冊基金申請及同意書-已成年版結果頁
+            path: "/USFundApply_Adult",
+            component: USFundApply_Adult,
             meta: {
                 title: "申購美國註冊基金申請及同意書",
             },
@@ -228,6 +261,23 @@ const router = new VueRouter({
             },
         },
 
+        // 我的庫存 --------------------------------------------
+        {
+            // 我的庫存
+            path: "/MyInventory",
+            component: MyInventory,
+            redirect: "/MyInventory/list",
+            children: [
+                {
+                    path: "list",
+                    component: MyInventory_List,
+                    meta: {
+                        title: "我的庫存",
+                    },
+                },
+            ],
+        },
+
         // 基金交易 --------------------------------------------
         {
             // 單筆申購
@@ -275,6 +325,81 @@ const router = new VueRouter({
                 },
             ],
         },
+        // {
+        //     // 轉換 / 贖回
+        //     path: "/RedemptionAndChange",
+        //     component: RedemptionAndChange,
+        //     redirect: "/RedemptionAndChange/list",
+        //     children: [
+        //         {
+        //             path: "list",
+        //             component: RedemptionAndChange_list,
+        //             meta: {
+        //                 title: "轉換 / 贖回",
+        //             },
+        //         },
+        //     ],
+        // },
+        {
+            // 贖回流程
+            path: "/Redemption",
+            component: Redemption,
+            redirect: "/Redemption/Step1",
+            children: [
+                {
+                    path: "Step1",
+                    component: Redemption_step1,
+                    meta: {
+                        title: "贖回 - 填寫贖回明細",
+                    },
+                },
+                {
+                    path: "Step2",
+                    component: Redemption_step2,
+                    meta: {
+                        title: "贖回 - 確認事項",
+                    },
+                },
+                {
+                    path: "Step3",
+                    component: Redemption_step3,
+                    meta: {
+                        title: "贖回 - 完成委託",
+                    },
+                },
+            ],
+        },
+        {
+            // 轉換流程
+            path: "/Change",
+            component: Change,
+            redirect: "/Change/Step1",
+            children: [
+                {
+                    path: "Step1",
+                    component: Change_step1,
+                    meta: {
+                        title: "轉換 - 填寫轉換明細",
+                    },
+                },
+                {
+                    path: "Step2",
+                    component: Change_step2,
+                    meta: {
+                        title: "轉換 - 確認事項",
+                    },
+                },
+                {
+                    path: "Step3",
+                    component: Change_step3,
+                    meta: {
+                        title: "轉換 - 完成委託",
+                    },
+                },
+            ],
+        },
+
+        // 定期(不)定額 --------------------------------------------
         {
             // 定期(不)定額申購
             path: "/Sip",
@@ -367,79 +492,8 @@ const router = new VueRouter({
                 },
             ],
         },
-        {
-            // 轉換 / 贖回
-            path: "/RedemptionAndChange",
-            component: RedemptionAndChange,
-            redirect: "/RedemptionAndChange/list",
-            children: [
-                {
-                    path: "list",
-                    component: RedemptionAndChange_list,
-                    meta: {
-                        title: "轉換 / 贖回",
-                    },
-                },
-            ],
-        },
-        {
-            // 贖回流程
-            path: "/Redemption",
-            component: Redemption,
-            redirect: "/Redemption/Step1",
-            children: [
-                {
-                    path: "Step1",
-                    component: Redemption_step1,
-                    meta: {
-                        title: "贖回 - 填寫贖回明細",
-                    },
-                },
-                {
-                    path: "Step2",
-                    component: Redemption_step2,
-                    meta: {
-                        title: "贖回 - 確認事項",
-                    },
-                },
-                {
-                    path: "Step3",
-                    component: Redemption_step3,
-                    meta: {
-                        title: "贖回 - 完成委託",
-                    },
-                },
-            ],
-        },
-        {
-            // 轉換流程
-            path: "/Change",
-            component: Change,
-            redirect: "/Change/Step1",
-            children: [
-                {
-                    path: "Step1",
-                    component: Change_step1,
-                    meta: {
-                        title: "轉換 - 填寫轉換明細",
-                    },
-                },
-                {
-                    path: "Step2",
-                    component: Change_step2,
-                    meta: {
-                        title: "轉換 - 確認事項",
-                    },
-                },
-                {
-                    path: "Step3",
-                    component: Change_step3,
-                    meta: {
-                        title: "轉換 - 完成委託",
-                    },
-                },
-            ],
-        },
+        
+        // 交易查詢 --------------------------------------------
         {
             // 交易查詢與取消
             path: "/TradeHistory",
@@ -462,38 +516,6 @@ const router = new VueRouter({
                 },
             ],
         },
-
-        // 帳務管理 --------------------------------------------
-        {
-            // 契約扣款明細查詢
-            path: "/DeductionDetails",
-            component: DeductionDetails,
-            redirect: "/DeductionDetails/list",
-            children: [
-                {
-                    path: "list",
-                    component: DeductionDetails_list,
-                    meta: {
-                        title: "契約扣款明細查詢",
-                    },
-                },
-            ],
-        },
-        {
-            // 到價通知設定
-            path: "/PriceArrivalNotice",
-            component: PriceArrivalNotice,
-            redirect: "/PriceArrivalNotice/list",
-            children: [
-                {
-                    path: "list",
-                    component: PriceArrivalNotice_list,
-                    meta: {
-                        title: "到價通知設定",
-                    },
-                },
-            ],
-        },
         {
             // 受益分配查詢
             path: "/BenefitDistributionQuery",
@@ -505,28 +527,6 @@ const router = new VueRouter({
                     component: BenefitDistributionQuery_list,
                     meta: {
                         title: "受益分配查詢",
-                    },
-                },
-            ],
-        },
-        {
-            // 投資損益查詢
-            path: "/ProfitLossQuery",
-            component: ProfitLossQuery,
-            redirect: "/ProfitLossQuery/byFundId",
-            children: [
-                {
-                    path: "byFundId",
-                    component: ProfitLossQuery_byFundId,
-                    meta: {
-                        title: "投資損益查詢 - 依基金顯示",
-                    },
-                },
-                {
-                    path: "byTransactionMethod",
-                    component: ProfitLossQuery_byTransactionMethod,
-                    meta: {
-                        title: "投資損益查詢 - 依交易方式顯示",
                     },
                 },
             ],
@@ -597,6 +597,58 @@ const router = new VueRouter({
                 },
             ],
         },
+        {
+            // 扣款明細查詢
+            path: "/DeductionDetails",
+            component: DeductionDetails,
+            redirect: "/DeductionDetails/list",
+            children: [
+                {
+                    path: "list",
+                    component: DeductionDetails_list,
+                    meta: {
+                        title: "扣款明細查詢",
+                    },
+                },
+            ],
+        },
+        // {
+        //     // 到價通知設定
+        //     path: "/PriceArrivalNotice",
+        //     component: PriceArrivalNotice,
+        //     redirect: "/PriceArrivalNotice/list",
+        //     children: [
+        //         {
+        //             path: "list",
+        //             component: PriceArrivalNotice_list,
+        //             meta: {
+        //                 title: "到價通知設定",
+        //             },
+        //         },
+        //     ],
+        // },
+        // {
+        //     // 投資損益查詢
+        //     path: "/ProfitLossQuery",
+        //     component: ProfitLossQuery,
+        //     redirect: "/ProfitLossQuery/byFundId",
+        //     children: [
+        //         {
+        //             path: "byFundId",
+        //             component: ProfitLossQuery_byFundId,
+        //             meta: {
+        //                 title: "投資損益查詢 - 依基金顯示",
+        //             },
+        //         },
+        //         {
+        //             path: "byTransactionMethod",
+        //             component: ProfitLossQuery_byTransactionMethod,
+        //             meta: {
+        //                 title: "投資損益查詢 - 依交易方式顯示",
+        //             },
+        //         },
+        //     ],
+        // },
 
         // errorPage --------------------------------------------
         {
@@ -650,10 +702,15 @@ const content = new Vue({
         menuShow: window.innerWidth > 991 ? true : false,
         menu: [
             {
-                title: `我的帳戶`,
+                title: `會員中心`,
                 toggle: false,
                 link: "",
                 content: [
+                    {
+                        title: `個人帳戶`,
+                        link: '',
+                        divided: false,
+                    },
                     {
                         title: `帳戶狀態`,
                         link: "/Status",
@@ -665,9 +722,34 @@ const content = new Vue({
                         divided: false,
                     },
                     {
+                        title: `風險屬性評估`,
+                        link: "/Kyc",
+                        divided: false,
+                    },
+                    {
+                        title: `通知信寄發管理`,
+                        link: "/MailGroup",
+                        divided: false,
+                    },
+                    {
+                        title: `優惠券管理`,
+                        link: "/Coupon",
+                        divided: false,
+                    },
+                    {
+                        title: `紅利點數查詢`,
+                        link: "/Bonus",
+                        divided: false,
+                    },
+                    {
+                        title: `密碼管理`,
+                        link: '',
+                        divided: true,
+                    },
+                    {
                         title: `變更登入密碼`,
                         link: "/ChangeLoginPwd",
-                        divided: true,
+                        divided: false,
                     },
                     {
                         title: `變更交易密碼`,
@@ -684,38 +766,41 @@ const content = new Vue({
                         link: "/TxnActivate",
                         divided: false,
                     },
-                    {
-                        title: `風險屬性評估`,
-                        link: "/Kyc",
-                        divided: true,
-                    },
-                    {
-                        title: `優惠券管理`,
-                        link: "/Coupon",
-                        divided: false,
-                    },
-                    {
-                        title: `紅利點數查詢`,
-                        link: "/Bonus",
-                        divided: false,
-                    },
-                    {
-                        title: `通知信寄發管理`,
-                        link: "/MailGroup",
-                        divided: false,
-                    },
                 ],
             },
             {
-                title: `基金交易`,
+                title: `我的庫存`,
                 toggle: false,
                 link: "",
                 content: [
                     {
-                        title: `單筆申購`,
-                        link: "/LumpSum",
+                        title: `轉換`,
+                        link: "/MyInventory",
                         divided: false,
                     },
+                    {
+                        title: `贖回`,
+                        link: "/MyInventory",
+                        divided: false,
+                    },
+                    {
+                        title: `到價通知設定`,
+                        link: "/MyInventory",
+                        divided: false,
+                    },
+                ]
+            },
+            {
+                title: `單筆申購`,
+                toggle: false,
+                link: "/LumpSum",
+                content: false,
+            },
+            {
+                title: `定期(不)定額`,
+                toggle: false,
+                link: "",
+                content: [
                     {
                         title: `定期(不)定額申購`,
                         link: "/Sip",
@@ -726,47 +811,26 @@ const content = new Vue({
                         link: "/SipChange",
                         divided: false,
                     },
-                    {
-                        title: `轉換 / 贖回`,
-                        link: "/RedemptionAndChange",
-                        divided: false,
-                    },
-                    {
-                        title: `交易查詢與取消`,
-                        link: "/TradeHistory",
-                        divided: false,
-                    },
-                ],
+                ]
             },
             {
-                title: `國民理財機器人`,
-                toggle: false,
-                link: "/",
-                content: false,
-            },
-            {
-                title: `帳務管理`,
+                title: `交易查詢`,
                 toggle: false,
                 link: "",
                 content: [
                     {
-                        title: `契約扣款明細查詢`,
-                        link: "/DeductionDetails",
+                        title: `今日委託查詢與取消`,
+                        link: "/TradeHistory/list",
                         divided: false,
                     },
                     {
-                        title: `到價通知設定`,
-                        link: "/PriceArrivalNotice",
+                        title: `在途交易查詢`,
+                        link: "/TradeHistory/inTransitDealInquiry",
                         divided: false,
                     },
                     {
                         title: `受益分配查詢`,
                         link: "/BenefitDistributionQuery",
-                        divided: false,
-                    },
-                    {
-                        title: `投資損益查詢`,
-                        link: "/profitLossQuery",
                         divided: false,
                     },
                     {
@@ -784,14 +848,63 @@ const content = new Vue({
                         link: "/RealizedGainsAndLossesInquiry",
                         divided: false,
                     },
-                ],
+                    {
+                        title: `扣款明細查詢`,
+                        link: "/DeductionDetails",
+                        divided: false,
+                    },
+                ]
             },
             {
-                title: `常見問題`,
+                title: `國民理財機器人`,
                 toggle: false,
-                link: "/",
+                link: "https://wt.franklin.com.tw/areas/20210701_roboV2/plan.html",
                 content: false,
             },
+            // {
+            //     title: `基金交易`,
+            //     toggle: false,
+            //     link: "",
+            //     content: [
+            //         {
+            //             title: `單筆申購`,
+            //             link: "/LumpSum",
+            //             divided: false,
+            //         },
+                    
+            //         {
+            //             title: `轉換 / 贖回`,
+            //             link: "/RedemptionAndChange",
+            //             divided: false,
+            //         },
+                    
+            //     ],
+            // },
+            // {
+            //     title: `帳務管理`,
+            //     toggle: false,
+            //     link: "",
+            //     content: [
+                    
+            //         {
+            //             title: `到價通知設定`,
+            //             link: "/PriceArrivalNotice",
+            //             divided: false,
+            //         },
+            //         {
+            //             title: `投資損益查詢`,
+            //             link: "/profitLossQuery",
+            //             divided: false,
+            //         },
+                    
+            //     ],
+            // },
+            // {
+            //     title: `常見問題`,
+            //     toggle: false,
+            //     link: "/",
+            //     content: false,
+            // },
         ],
         adBannerOptions: {
             autoplay: true,
@@ -839,6 +952,136 @@ const content = new Vue({
                 val3: "",
                 val4: "",
                 frequency: "",
+            },
+            fund: [
+                {
+                    noNext: true,
+                    transactionMethod: "轉申購",
+                    dealDate: "2021/05/17",
+                    priceArrivalNoticeSettingInfo: true,
+                    info: [
+                        {
+                            tit: "不含息報酬率",
+                            text: "-1.64%",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "參考市值",
+                            text: "16,720",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "未實現損益",
+                            text: "-280",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "含息報酬率",
+                            text: "-1.49%",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "投資金額",
+                            text: "17,000",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "累積單位數",
+                            text: "	17.373",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "可動用單位數",
+                            text: "17.38",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "配息金額",
+                            text: "26",
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+                {
+                    noNext: true,
+                    transactionMethod: "定期(不)定額",
+                    dealDate: "2021/01/27",
+                    priceArrivalNoticeSettingInfo: true,
+                    info: [
+                        {
+                            tit: "不含息報酬率",
+                            text: "9.31%",
+                            focusText: true,
+                            remark: "",
+                        },
+                        {
+                            tit: "參考市值",
+                            text: "4,919",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "未實現損益",
+                            text: "419",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "含息報酬率",
+                            text: "9.31%",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "投資金額",
+                            text: "4,500",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "累積單位數",
+                            text: "17.38",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "可動用單位數",
+                            text: "17.38",
+                            focusText: false,
+                            remark: "",
+                        },
+                        {
+                            tit: "配息金額",
+                            text: "0",
+                            focusText: false,
+                            remark: "",
+                        },
+                    ],
+                    hasPopover: true,
+                },
+            ],
+            fundListSetting: {
+                toggleCardBtnText: "變更",
+                promptIcon: "arrow",
+                minWidth: "550px",
+                pcShowQty: {
+                    base: "4", // 預設
+                    xxl: "4", // 1599px~1400px
+                    xl: "4", // 1399px~1200px
+                    lg: "4", // 1199px~992px
+                    md: "4", // 991px~768px
+                    sm: "4", // 767px~360px
+                    xs: "4", // 359px以下
+                },
             },
         },
 
@@ -1348,7 +1591,7 @@ const content = new Vue({
                 `低於均線1.96個標準差`,
             ],
             up: [
-                `40%`, `50%`, `60%`, `80%`, `100%`, `120%`, `140%`, `150%`, `160%`,
+                `100%`, `110%`, `120%`, `130%`, `140%`, `150%`, `160%`, `170%`, `180%`,
             ],
             down: [
                 `20%`, `25%`, `30%`, `40%`, `50%`, `60%`, `70%`, `75%`, `80%`,
@@ -1411,8 +1654,76 @@ const content = new Vue({
             },
         ],
 
+        // 會員登入頁
+        signIn: {
+            Idno: '',
+            Pwd: '',
+        },
+        signInToggleMask: 0,
+        passwordDescription: false,
+        safetyReminder: false,
+
+        //-------------------------------------ie遮罩用
+        // 取ie版本
+        getIEVersion() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
+            var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
+            var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+            if(isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if(fIEVersion == 7) {
+                    return 7;
+                } else if(fIEVersion == 8) {
+                    return 8;
+                } else if(fIEVersion == 9) {
+                    return 9;
+                } else if(fIEVersion == 10) {
+                    return 10;
+                } else {
+                    return 6; //IE版本<=7
+                }   
+            } else if(isEdge) {
+                return 'edge'; //edge
+            } else if(isIE11) {
+                return 11; //IE11  
+            }else{
+                return -1;//不是ie浏览器
+            }
+        },
+        ieMask() {
+            this.getIEVersion() != 'edge' && this.getIEVersion() != -1 ? document.body.classList.add('fixedBody') : '';
+        },
+
         // 實驗用 切換深色模式
         darkMode: false,
+
+        // DS 聯名戶
+        dsListOptions: [
+            {
+                value: '0',
+                label1: '綜合帳戶',
+                label2: '陳涵風'
+            },
+            {
+                value: '1',
+                label1: '聯名戶',
+                label2: '陳涵風 PD'
+            },
+            {
+                value: '2',
+                label1: '聯名戶',
+                label2: '陳涵風-陳大風-陳小風 RD'
+            },
+            {
+                value: '3',
+                label1: '聯名戶',
+                label2: '陳涵風-陳小風 PD'
+            },
+        ],
+        dsListVal: '0',
     },
     components: {
         slick: slick,
@@ -2815,7 +3126,11 @@ const content = new Vue({
             });
         },
         fundSmallFileTab(tab, event) {
-            this.setLineChart(4000);
+            if (tab.name == 2) {
+                this.setLineChart(4000);
+            }if(tab.name == 5) {
+                window.open('https://www.franklin.com.tw/areas/month_report/bonds.html?FundId=4008', '_blank')
+            };
         },
 
         //------------------------------------- 未登入版面
@@ -2847,11 +3162,11 @@ const content = new Vue({
 
         //------------------------------------- 操作教學
         teachingShowBtn() {
-            return (
-                this.$route.path === "/" ||
-                this.$route.path === "/ProfitLossQuery/byFundId" ||
-                this.$route.path === "/ProfitLossQuery/byTransactionMethod"
-            );
+            // return (
+            //     this.$route.path === "/" ||
+            //     this.$route.path === "/ProfitLossQuery/byFundId" ||
+            //     this.$route.path === "/ProfitLossQuery/byTransactionMethod"
+            // );
         },
         // teachingArea() {
         //     return this.teachingShowBtn() && this.teaching;
@@ -2913,7 +3228,12 @@ const content = new Vue({
                     "富蘭克林‧國民ｅ帳戶 | 富蘭克林 國民的基金"; // 修改<title>
                 if (this.teachingShowBtn()) {
                     this.showTeaching();
-                }
+                };
+
+                // 示意用 轉跳robo的測試切版
+                if (to.path.search('https://wt.franklin.com.tw/areas/20210701_roboV2/plan.html') != -1) {
+                    location.href = 'https://wt.franklin.com.tw/areas/20210701_roboV2/plan.html'
+                };
             },
         },
 

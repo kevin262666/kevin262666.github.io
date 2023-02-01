@@ -1266,6 +1266,7 @@
 // 見證人
 .witness {
     // background: #ebebeb;
+    padding-top: 0px;
     &-item {
         padding: 0px 12px;
         display: inline-block;
@@ -1303,9 +1304,12 @@
         }
     }
     .slick {
+        &-slider {
+            padding-bottom: 30px;
+        }
         &-dots {
-            bottom: auto;
-            top: -30px;
+            bottom: 0;
+            // top: -30px;
             z-index: 2;
         }
     }
@@ -1331,13 +1335,18 @@
                 font-size: 14px;
             }
         }
+        // .slick {
+        //     &-dots {
+        //         bottom: 0px;
+        //     }
+        // }
     }
 }
 
 // 特色
 .features {
     background: #ebebeb;
-    padding-top: 1px;
+    // padding-top: 1px;
     position: relative;
     .container {
         position: relative;
@@ -2198,7 +2207,7 @@ $scale: scale(2);
     &-groupInfo {
         margin: 20px 0px;
         &-risklevel {
-            background: url(../images/risklevel.png) top left no-repeat;
+            // background: url(../images/risklevel.png) top left no-repeat;
             background-size: 100%;
             width: 212px;
             height: 168px;
@@ -2206,8 +2215,14 @@ $scale: scale(2);
             position: absolute;
             top: 20px;
             right: 80px;
+            &-bg {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+            }
             &-pointer {
-                background: url(../images/pointer.png) top left no-repeat;
+                // background: url(../images/pointer.png) top left no-repeat;
                 width: 78px;
                 height: 20px;
                 // width: 36.793%;
@@ -2219,6 +2234,12 @@ $scale: scale(2);
                 transition: transform .8s;
                 transform-origin: 87.5% 50%;
                 display: block;
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                }
                 @for $i from 1 through 10 {
                     &.level#{$i} {
                         transform: rotate(18deg * $i);
@@ -2356,6 +2377,9 @@ $scale: scale(2);
                 position: absolute;
                 left: -10px;
                 top: -12px;
+                & > div {
+                    margin: 0 auto;
+                }
             }
             &-list {
                 ul {
@@ -2560,12 +2584,22 @@ $scale: scale(2);
 
 .highcharts {
     &-title {
-        font-family: Microsoft JhengHei;
-        letter-spacing:.3em
+        // font-family: Microsoft JhengHei;
+        // letter-spacing:.3em
     }
     &-subtitle{
-        font-family: arial, Microsoft JhengHei;
+        // font-family: arial, Microsoft JhengHei;
         font-size:1.8em
+    }
+    &-range-selector-buttons {
+        & > text {
+            display: none;
+        }
+    }
+    &-button {
+        text {
+            transform: translate(0, 6px);
+        }
     }
 }
 
@@ -2879,5 +2913,1184 @@ $scale: scale(2);
         &-remark {
             font-size: 14px;
         }
+    }
+}
+
+// loading
+.loading {
+    position: relative;
+    height: 30px;
+    div {
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        background: #3d6ed0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: top left;
+        transform: scale(0) translateX(-50%) translateY(-50%);
+        opacity: 0;
+        animation: loading 1.5s ease infinite;
+        &:nth-of-type(2) {
+            animation-delay: 0.3s;
+            background: #00dada;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(0) translateX(-50%) translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateX(-50%) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+// 首頁新qa ==================================================
+.indexQa {
+    background: #ebebeb;
+    padding-top: 80px;
+    &-item {
+        &-area {
+            position: relative;
+            padding-top: 80px;
+            margin: 15px -10px;
+        }
+        &-head {
+            position: absolute;
+            top: 0px;
+            width: 25%;
+            box-sizing: border-box;
+            padding: 0px 10px;
+        }
+        &-tit {
+            border: solid 1px #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #3d6ed0;
+            background: #fff;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s ease all;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #555;
+                background: #fff;
+                text-align: center;
+                border-radius: 100%;
+                line-height: 30px;
+                width: 30px;
+                font-size: 16px;
+                // box-shadow: 0px 1px 0px 1px #ccc inset;
+                transition: 0.3s ease all;
+            }
+            @media screen and (min-width: 768px) {
+                &:hover,
+                &.active {
+                    color: #fff;
+                    background: #3d6ed0;
+                    border-color: #3d6ed0;
+                    &:before {
+                        color: #fff;
+                        background: #3d6ed0;
+                        // box-shadow: none;
+                    }
+                }
+            }
+        }
+        &-content {
+            padding: 0px 10px;
+            line-height: 1.6;
+        }
+        @for $i from 1 through 4 {
+            $x: $i - 1;
+            &:nth-of-type(#{$i}) {
+                .indexQa-item {
+                    &-head {
+                        left: 25% * $x;
+                    }
+                    &-tit {
+                        &:before {
+                            content: 'Q' + $i;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth-lg {
+        &-item {
+            &-tit {
+                font-size: 18px;
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-item {
+            &-area {
+                padding-top: 90px;
+            }
+        }
+    }
+    @include maxWidth-sm {
+        padding-top: 40px;
+        &-item {
+            background: #fff;
+            border-radius: 10px;
+            margin: 15px 0px;
+            padding-bottom: 1px;
+            &-area {
+                padding-top: 0px;
+                margin: 15px 0px;
+            }
+            &-head {
+                position: relative;
+                left: auto !important;
+                top: auto;
+                width: auto;
+                padding: 0px;
+            }
+            &-tit {
+                text-align: left;
+                position: relative;
+                padding-left: 50px;
+                padding-right: 30px;
+                background: none;
+                border: none;
+                border-radius: 0;
+                &:before {
+                    top: 7px;
+                    left: 10px;
+                    transform: translateX(0);
+                    background: #666;
+                    color: #fff;
+                    font-size: 13px;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 18px;
+                    right: 10px;
+                    border-top: solid 8px #888;
+                    border-left: solid 5px transparent;
+                    border-right: solid 5px transparent;
+                    transition: 0.3s ease all;
+                }
+                &.active {
+                    &:after {
+                        transform: rotate(-180deg);
+                        transform-origin: center center;
+                    }
+                }
+            }
+            &-content {
+                border-top: dashed 1px #ccc;
+            }
+        }
+        &-enter-active,
+        &-leave-active {
+            transition: opacity .5s;
+        }
+        &-enter,
+        &-leave-to {
+            opacity: 0;
+            top: 50px;
+        }
+    }
+}
+
+// 新問卷 ==================================================
+.newQuestionnaire {
+    margin: 60px 0px 20px;
+    &-item {
+        position: relative;
+        padding: 40px 30px 25px;
+        border: solid 4px #273e78;
+        border-radius: 50px;
+        &-tit {
+            font-size: 36px;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+            color: #273e78;
+            &-content {
+                background: #fff;
+                display: inline-block;
+                padding: 0px 20px;
+            }
+        }
+    }
+    &-no {
+        text-align: center;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .btnArea {
+        &.twoBtn {
+            text-align: right;
+        }
+    }
+    @include maxWidth-md {
+        .btnArea.twoBtn {
+            text-align: center;
+        }
+    }
+    @include maxWidth-sm {
+        &-item {
+            border-radius: 20px;
+            padding: 20px 10px;
+            &-tit {
+                font-size: 18px;
+                top: -15px;
+                text-align: center;
+            }
+        }
+        .btnArea.twoBtn {
+            .btn {
+                width: calc(50% - 10px);
+                padding: 0px 5px;
+            }
+        }
+    }
+}
+
+// -- 目的
+.purpose {
+    font-size: 0px;
+    text-align: center;
+    margin-bottom: 35px;
+    &-item {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: (100% / 3);
+        &-content {
+            cursor: pointer;
+            position: relative;
+            margin: 0 auto;
+            max-width: 290px;
+            input[type="radio"] {
+                display: none;
+                &:checked + .fa-check-circle {
+                    opacity: 1;
+                }
+            }
+            .fa-check-circle {
+                opacity: 0;
+                font-size: 30px;
+                position: absolute;
+                color: #519e2f;
+                bottom: 1%;
+                right: 12%;
+                z-index: 1;
+                transition: 0.3s ease opacity;
+            }
+        }
+        &-ball {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        &-tit {
+            font-size: 20px;
+            color: #59323c;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 14.5%;
+            left: 0px;
+            font-weight: bold;
+        }
+        &-imgArea {
+            position: absolute;
+            top: 9%;
+            left: 9%;
+            right: 9%;
+            bottom: 26.6%;
+            overflow: hidden;
+            // background: rgba(#000, 0.4);
+        }
+        &-img {
+            position: absolute;
+            display: block;
+        }
+    }
+    &-self {
+        margin-top: 30px;
+    }
+    @include maxWidth-sm {
+        margin: 0px -5px;
+        &-item {
+            width: 50%;
+            padding-bottom: 10px;
+            &-tit {
+                font-size: 16px;
+                padding: 2px 0px;
+                bottom: 9.5%;
+                background: #fff;
+            }
+            &-content .fa-check-circle {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.purpose {
+    &-1 .purpose-item {
+        &-img {
+            bottom: 0px;
+            &:nth-of-type(1) {
+                width: 42.05%;
+                right: 28%;
+            }
+            &:nth-of-type(2) {
+                width: 27.756%;
+                left: 24%;
+            }
+        }
+        &-content:hover .purpose-item-img {
+            animation: bounceInUp backwards;
+            animation-duration: 0.6s;
+            &:nth-of-type(2) {
+                animation-delay: 0.1s;
+            }
+        }
+    }
+    &-2 .purpose-item {
+        &-img {
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                bottom: 0px;
+            }
+            &:nth-of-type(1) {
+                left: 20%;
+                width: 13.88%;
+            }
+            &:nth-of-type(2) {
+                left: 27%;
+                width: 50.46%;
+            }
+            &:nth-of-type(3) {
+                left: 22.3%;
+                top: 32%;
+                width: 60.134%;
+            }
+            &:nth-of-type(4) {
+                right: 16%;
+                width: 22.29%;
+            }
+            &:nth-of-type(5) {
+                top: 10%;
+                left: 25%;
+                width: 49.62%;
+            }
+        }
+        &-content:hover .purpose-item-img {
+            &:nth-of-type(1),
+            &:nth-of-type(4) {
+                animation: bounceInUp backwards;
+                animation-duration: 0.4s;
+            }
+            &:nth-of-type(2) {
+                animation: bounceInDown backwards;
+                animation-duration: 0.6s;
+            }
+            &:nth-of-type(3) {
+                animation: bounceInUp backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.1s;
+            }
+            &:nth-of-type(5) {
+                animation: fadeInDown backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.2s;
+            }
+        }
+    }
+    &-3 .purpose-item {
+        &-img {
+            &:nth-of-type(1) {
+                width: 58.45%;
+                top: 22%;
+                left: 20%;
+            }
+            &:nth-of-type(2) {
+                width: 25.656%;
+                top: 31%;
+                right: 25%;
+            }
+            &:nth-of-type(3) {
+                width: 37.01%;
+                bottom: -23%;
+                left: 14%;
+            }
+        }
+        &-content:hover .purpose-item-img {
+            &:nth-of-type(1) {
+                animation: bounceInDown backwards;
+                animation-duration: 0.6s;
+            }
+            &:nth-of-type(2) {
+                animation: bounceInUp backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.15s;
+            }
+            &:nth-of-type(3) {
+                animation: bounceInUp backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.1s;
+            }
+        }
+    }
+    &-4 .purpose-item {
+        &-img {
+            &:nth-of-type(1) {
+                width: 32.38%;
+                left: 34%;
+                top: 10%;
+            }
+            &:nth-of-type(2) {
+                width: 69.388%;
+                left: 17%;
+                top: 15%;
+            }
+            &:nth-of-type(3) {
+                width: 17.243%;
+                top: 11%;
+                right: 2%;
+            }
+        }
+        &-content:hover .purpose-item-img {
+            &:nth-of-type(1) {
+                animation: bounceInUp backwards;
+                animation-duration: 0.6s;
+            }
+            &:nth-of-type(2) {
+                animation: bounceInDown backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.15s;
+            }
+            &:nth-of-type(3) {
+                animation: bounceInDown backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.2s;
+            }
+        }
+    }
+    &-5 .purpose-item {
+        &-img {
+            width: 27.334%;
+            &:nth-of-type(1) {
+                left: 47%;
+                top: 24%;
+            }
+            &:nth-of-type(2) {
+                left: 28%;
+                top: 14%;
+            }
+        }
+        &-content:hover .purpose-item-img {
+            &:nth-of-type(1) {
+                animation: fadeInLeft backwards;
+                animation-duration: 0.6s;
+                animation-delay: 0.15s;
+            }
+            &:nth-of-type(2) {
+                animation: fadeInLeft backwards;
+                animation-duration: 0.6s;
+            }
+        }
+    }
+    &-6 .purpose-item {
+        &-img {
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                width: 12.62%;
+            }
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                width: 8%;
+            }
+            &:nth-of-type(1) {
+                bottom: 8%;
+                left: 21%;
+            }
+            &:nth-of-type(2) {
+                top: 30%;
+                right: 20%;
+            }
+            &:nth-of-type(3) {
+                top: 25%;
+                left: 28%;
+            }
+            &:nth-of-type(4) {
+                bottom: 30%;
+                right: 22%;
+            }
+        }
+        &-content .purpose6Center {
+            position: absolute;
+            background: #fff;
+            border-radius: 100%;
+            width: 35%;
+            padding-bottom: 35%;
+            left: 33%;
+            top: 37%;
+            box-shadow: 0px 0px 10px 5px #fff;
+        }
+        &-content:hover {
+            .purpose-item-img {
+                animation: bounceIn backwards;
+                animation-duration: 0.6s;
+                &:nth-of-type(1) {
+                    animation-delay: 0.1s;
+                }
+                &:nth-of-type(2) {
+                    animation-delay: 0.2s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: 0.15s;
+                }
+                &:nth-of-type(4) {
+                    animation-delay: 0.25s;
+                }
+            }
+            .purpose6Center {
+                animation: rubberBand backwards;
+                animation-duration: 0.6s;
+            }
+        }
+    }
+}
+
+// -- 我打算投入(投資金額)
+.investmentAmount {
+    position: relative;
+    padding-left: 320px;
+    &-img {
+        position: absolute;
+        left: 0px;
+        bottom: -20px;
+        img {
+            display: block;
+        }
+        &-coin {
+            position: absolute;
+            left: 40%;
+            top: -34%;
+            opacity: 0;
+            animation: pigCoin 1s ease-in-out infinite;
+            &.coin {
+                &-1 {
+
+                }
+                &-2 {
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+        &-pig {
+            margin: 0 auto;
+            // transform: scale(1);
+            transform-origin: center bottom;
+            // transition: 0.3s ease all;
+            animation: fadeIn backwards;
+            animation-duration: 0.5s;
+            &.lv1 {
+                transform: scale(0.50);
+            }
+            &.lv2 {
+                transform: scale(0.75);
+                // animation: bounceIn backwards;
+                // animation-duration: 0.5s;
+            }
+            &.lv3 {
+                transform: scale(1);
+                // animation: rubberBand backwards;
+                // animation-duration: 0.5s;
+            }
+        }
+    }
+    &-content {
+        padding: 110px 0px 40px;
+    }
+    &-slider {
+        position: relative;
+        padding-right: 200px;
+        &-tooltip {
+            color: #000 !important;
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+        .el-slider {
+        }
+        .el-input-number {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 150px;
+        }
+    }
+    &-text {
+        padding-top: 20px;
+    }
+    @include maxWidth-md {
+        padding-left: 0px;
+        &-img {
+            position: relative;
+            bottom: 0px;
+            &-coin {
+                left: 46%;
+                width: 50px;
+            }
+        }
+        &-content {
+            padding: 20px 0px 0px;
+        }
+    }
+    @include maxWidth-sm {
+        &-img {
+            &-coin {
+                width: 26px;
+            }
+            &-pig {
+                width: 180px;
+            }
+        }
+        &-content {
+        }
+        &-slider {
+            padding-right: 0px;
+            .el-slider {
+                padding: 0px 18px;
+            }
+            .el-input-number {
+                position: relative;
+                width: 100%;
+                margin-top: 25px;
+            }
+            &-tooltip {
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+
+@keyframes pigCoin {
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 56%;
+        opacity: 0;
+    }
+}
+
+// -- 我打算投資(投資時間)
+.investmentTime {
+    position: relative;
+    &-img {
+        position: absolute;
+        bottom: -63px;
+        left: 0px;
+        img {
+            position: absolute;
+            display: block;
+        }
+        &-bg {
+            position: relative !important;
+        }
+        &-flowerWaterer {
+            top: -210px;
+            left: -60px;
+            animation: flowerWaterer 1.3s ease-in infinite alternate;
+        }
+        &-sapling {
+            bottom: 0px;
+            left: 210px;
+            width: 142px;
+            animation: bounceIn;
+            animation-duration: 0.5s;
+            transform-origin: bottom;
+            &.sapling {
+                &-1 {
+
+                }
+                &-2 {
+
+                }
+                &-3 {
+                    
+                }
+            }
+        }
+    }
+    &-content {
+        padding: 110px 0px 15px;
+        padding-left: 500px;
+    }
+    &-slider {
+        .el-slider__marks-text {
+            white-space: nowrap;
+        }
+    }
+    &-text {
+        padding-top: 20px;
+    }
+    @include maxWidth-md {
+        &-img {
+            position: relative;
+            bottom: 0;
+            margin: 0 auto;
+            width: 600px;
+            &-bg {
+                margin: 0 auto;
+                width: 400px;
+                position: absolute !important;
+                bottom: 0px;
+                left: 17%;
+            }
+            &-sapling {
+                height: 282px;
+                width: auto;
+                position: relative !important;
+                left: 0px;
+                margin: 0 auto;
+            }
+            &-flowerWaterer {
+                width: 200px;
+                top: -70px;
+                left: 10%;
+            }
+        }
+        &-content {
+            padding: 20px 0px 0px;
+        }
+    }
+    @include maxWidth-sm {
+        &-img {
+            width: 262px;
+            &-bg {
+                width: 240px;
+                left: 3%;
+            }
+            &-sapling {
+                height: 187px;
+            }
+            &-flowerWaterer {
+                width: 120px;
+                top: -30px;
+                left: -3%;
+            }
+        }
+        &-content {
+            
+        }
+        &-slider {
+            padding: 0px 18px;
+        }
+    }
+}
+
+@keyframes flowerWaterer {
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.qaBubble {
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(#000, 0.3);
+    top: 0px;
+    right: -60%;
+    padding: 20px 20px;
+    background: #fff;
+    font-weight: bold;
+    border: solid 1px #ccc;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(#000, 0.3);
+    }
+    &:before {
+        width: 15px;
+        height: 10px;
+        top: 100%;
+        left: 0;
+    }
+    &:after {
+        width: 10px;
+        height: 5px;
+        top: 130%;
+        left: -10%;
+    }
+    @include maxWidth-md {
+        top: 40px;
+    }
+    @include maxWidth-sm {
+        top: 20px;
+        right: -30%;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+// -- 這筆資金的投資盈虧，對我的生活開支造成影響為
+.earningImpact {
+    &-img {
+        position: absolute;
+        left: 85px;
+        bottom: 0px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        &-man {
+            animation: flipInY;
+            animation-duration: 0.5s;
+            transform-origin: bottom;
+        }
+        &-bubble {
+            @extend .qaBubble;
+        }
+    }
+    &-content {
+        padding: 125px 0px 100px;
+        padding-left: 320px;
+    }
+    &-slider {
+
+    }
+    @include maxWidth-md {
+        &-img {
+            position: relative;
+            left: 0;
+            margin: 0 auto;
+            width: 155px;
+            padding-top: 40px;
+            padding-right: 20px;
+            &-man {
+                height: 242px;
+            }
+        }
+        &-content {
+            padding: 20px 0px 15px;
+        }
+    }
+    @include maxWidth-sm {
+        &-img {
+            padding-top: 20px;
+            padding-right: 40px;
+            &-man {
+                height: 182px;
+            }
+        }
+        &-content {
+            padding-top: 5px;
+        }
+        &-slider {
+            padding: 0px 18px;
+        }
+    }
+}
+
+// -- 當市場震盪時，我可接受資產的波動程度
+.tolerance {
+    &-content {
+        padding: 125px 0px 100px;
+        padding-left: 470px;
+    }
+    &-img {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        img {
+            display: block;
+        }
+        &-bg {
+            position: absolute;
+            bottom: 60px;
+            left: 5%;
+            width: 90%;
+            opacity: 0.1;
+        }
+        &-curve {
+            animation: pulse;
+            animation-duration: 0.5s;
+            position: relative;
+        }
+        &-heartRhythm {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: pulse 0.5s ease-in infinite alternate;
+            img {
+                
+            }
+            &-text {
+                position: absolute;
+                font-weight: bold;
+                text-align: center;
+                width: 50px;
+                top: 22px;
+                right: 13px;
+            }
+        }
+    }
+    &-slider {
+
+    }
+    @include maxWidth-md {
+        &-img {
+            position: relative;
+            margin: 0 auto;
+            width: 408px;
+            &-curve {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &-content {
+            padding: 20px 0px 15px;
+        }
+    }
+    @include maxWidth-sm {
+        &-img {
+            width: 271px;
+            padding-top: 15px;
+            &-heartRhythm {
+                right: 10px;
+                top: 20px;
+                img {
+                    width: 100px;
+                }
+                &-text {
+                    top: 10px;
+                    right: -3px;
+                    font-size: 12px;
+                }
+            }
+            &-bg {
+                bottom: 0;
+            }
+        }
+        &-content {
+            padding-top: 5px;
+        }
+        &-slider {
+            padding: 0px 18px;
+        }
+    }
+}
+
+// -- 如果我的投資資產下跌了20%，會選擇
+.investmentAssetsFell {
+    &-img {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 410px;
+        width: 370px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        &-body {
+            width: 160px;
+        }
+        &-face {
+            position: absolute;
+            bottom: 92%;
+            left: 34%;
+            img {
+                animation: pulse;
+                animation-duration: 0.5s;
+                transform-origin: bottom;
+            }
+        }
+        &-money {
+            position: absolute;
+            top: -60px;
+            right: -62px;
+            transform: translate(0%, 0%) translateZ(0);
+            // animation: investmentAssetsFell_money 0.3s ease-in infinite backwards;
+            // animation-direction: reverse;
+            animation: none;
+            &.money {
+                &-1 {
+
+                }
+                &-2 {
+                    // animation-delay: 0.1s;
+                }
+            }
+        }
+        &-bag {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        &-bubble {
+            @extend .qaBubble;
+            top: -140px;
+            right: -50px;
+            left: 290px;
+            text-align: center;
+        }
+    }
+    &-content {
+        padding: 125px 0px 100px;
+        padding-left: 470px;
+    }
+    &-slider .el-slider__marks-text {
+        white-space: nowrap;
+    }
+    &.q6Answer {
+        &1 {
+            .investmentAssetsFell-img-money {
+                animation: investmentAssetsFell_money 0.3s ease-in infinite backwards;
+                &.money-2 {
+                    animation-delay: 0.1s;
+                }
+            }
+        }
+        &2 {
+            .investmentAssetsFell-img-money {
+                display: none;
+            }
+        }
+        &3 {
+            .investmentAssetsFell-img-money {
+                animation: investmentAssetsFell_money 3s ease-in infinite backwards;
+                animation-direction: reverse;
+                &.money-2 {
+                    animation-delay: 1s;
+                }
+            }
+        }
+        &4 {
+            .investmentAssetsFell-img-money {
+                animation: investmentAssetsFell_money 1s ease-in infinite backwards;
+                animation-direction: reverse;
+                &.money-2 {
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+        &5 {
+            .investmentAssetsFell-img-money {
+                animation: investmentAssetsFell_money 0.3s ease-in infinite backwards;
+                animation-direction: reverse;
+                &.money-2 {
+                    animation-delay: 0.1s;
+                }
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-img {
+            position: relative;
+            left: -61px;
+            padding-top: 125px;
+            margin: 0 auto;
+            &-body {
+                width: 130px;
+            }
+            &-face {
+                bottom: 49%;
+                left: 36.5%;
+                img {
+                    width: 100px;
+                }
+            }
+            &-money {
+                width: 50px;
+                top: 30px;
+            }
+            &-bag {
+                width: 160px;
+            }
+            &-bubble {
+                top: -10px;
+                left: 250px;
+            }
+        }
+        &-content {
+            padding: 20px 0px 15px;
+        }
+
+    }
+    @include maxWidth-sm {
+        &-img {
+            width: 180px;
+            padding-top: 115px;
+            left: -68px;
+            &-body {
+                width: 60px;
+            }
+            &-face {
+                bottom: 36%;
+                left: 32.5%;
+                img {
+                    width: 63px;
+                }
+            }
+            &-money {
+                width: 22px;
+                top: 100px;
+                right: -22px;
+            }
+            &-bag {
+                width: 70px;
+            }
+            &-bubble {
+                top: 33px;
+                left: 140px;
+                right: -130px;
+            }
+        }
+        &-slider {
+            padding: 0px 18px;
+        }
+    }
+}
+
+@keyframes investmentAssetsFell_money {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-211%, 210%) translateZ(0);
+        opacity: 0;
     }
 }

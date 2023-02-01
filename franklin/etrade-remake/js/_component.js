@@ -428,15 +428,18 @@ const baseFundData = {
                     listItemOtherClass: "", // 在[.fundList]添加其他className用  unimportant(不重要狀態)
                     hasCheckbox: false, // 是否有checkbox
                     checkbox: false,    // checkbox的v-model
+                    checkboxContent: "勾選您欲取消之項目",
                     transactionMethod: "單筆申購",
                     transactionMethodType: "success", // 交易方式標籤狀態 success || warning || danger
                     transactionMethodTooltip: true, // 標籤的tooltip
                     transactionMethodTooltipText: `<b>提醒：</b>存款不足`,   // 標籤tooltip的文字
+                    manyTags: [], // 放很多標籤用
                     errorTag: "已終止契約", // 錯誤訊息標籤
                     dealDateName: "贖回日期：", // 沒有資料時預設顯示交易日期
                     dealDate: "2020/08/13",
                     fundCode: "0797",
                     fundName: "科技基金 ",
+                    functionBtns: true, // 顯示功能按鍵
                     isChange: true,
                     changeTypeUseData: {
                         transactionMethod: "單筆申購",
@@ -447,6 +450,7 @@ const baseFundData = {
                         fundCode: "0797",
                         fundName: "科技基金 ",
                     },
+                    priceArrivalNoticeSettingInfo: true,  // 顯示到價通知設定欄位
                     info: [
                         {
                             tit: "未實現損益",
@@ -455,67 +459,11 @@ const baseFundData = {
                             remark: "",
                             hasTooltip: true,   // 顯示tooltip
                             tooltipContent: `優惠費率0.6000%，紅利折抵180.00元`,    // tooltip內容
+                            inputInfo: "",  // 有這個才會顯示input
+                            inputPlaceholder: "",   // input的placeholder
+                            inputWidth: "", // input寬度
                         },
-                        {
-                            tit: "含息報酬率",
-                            text: "-1.49%",
-                            focusText: true,
-                            remark: "",
-                        },
-                        {
-                            tit: "參考市值",
-                            text: "16,720",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "投資金額",
-                            text: "17,000",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "累積單位數",
-                            text: "17.373",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "交易幣別",
-                            text: "新台幣",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "配息方式",
-                            text: "累積",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "累積配息",
-                            text: "26",
-                            focusText: false,
-                            remark: "",
-                        },
-                        {
-                            tit: "參考淨值",
-                            text: "32.10",
-                            focusText: false,
-                            remark: "(2020/09/23)",
-                        },
-                        {
-                            tit: "參考匯率",
-                            text: "29.9825",
-                            focusText: false,
-                            remark: "(2020/09/23)",
-                        },
-                        {
-                            tit: "不含息報酬率",
-                            text: "-1.64%",
-                            focusText: false,
-                            remark: "",
-                        },
+                        
                     ],
                     hasPopover: false,
                     detail: [
@@ -599,6 +547,14 @@ const baseFundData = {
                             warning: `本基金尚有集保未回報之申購、贖回、轉換或配息資訊；若為新申購之基金，在資訊回報前將以NA列示。`,
                             warningDisplayMethod: `tooltip`, // 警語顯示方式，沒值就會直接顯示
                             warningTooltipTit: `尚有在途交易`,  // tooltip方式警語的標題
+                            newPriceNotification: true, // 顯示新版到價通知資訊
+                            priceNotification: {
+                                // 到價通知設定樣式的資料
+                                condition: "淨值>=25,淨值<=30", // 通知條件
+                                frequency: "一次", // 通知頻率
+                                setUp: false, // 是否設定過
+                                pause: false, // 是否暫停
+                            },
                         },
                     ],
                     warning: `本基金尚有集保未回報之申購、贖回、轉換或配息資訊；若為新申購之基金，在資訊回報前將以NA列示。`,
@@ -610,11 +566,13 @@ const baseFundData = {
                         type: "", // priceArrivalNotice 到價通知設定樣式  ||  text 純文字 || purchase 申購樣式 || dateOfDeduction 扣款日期
                     },
                     bottomContentText: ``,
+                    newPriceNotification: true, // 顯示新版到價通知資訊
                     priceNotification: {
                         // 到價通知設定樣式的資料
                         condition: "淨值>=25,淨值<=30", // 通知條件
                         frequency: "一次", // 通知頻率
                         setUp: false, // 是否設定過
+                        pause: false, // 是否暫停
                     },
                     purchaseInfo: {
                         // 申購樣式的資料
@@ -747,6 +705,13 @@ Vue.component("fundInfoItem", {
                                         <i class="fas fa-exclamation-circle tooltipUseIcon" v-if="item.hasTooltip"></i>
                                     </span>
                                 </el-tooltip>
+                                <el-input
+                                    v-model="item.inputInfo"
+                                    :placeholder="item.inputPlaceholder"
+                                    v-if="item.inputInfo != undefined"
+                                    size="medium"
+                                    :style="{'width': item.inputWidth}">
+                                </el-input>
                                 <div class="remark" v-if="item.remark != ''">
                                     {{item.remark}}
                                 </div>
@@ -769,6 +734,9 @@ Vue.component("cardFundHeardr", {
                             :class="fundData[index].transactionMethodType"
                         >
                             {{fundData[index].transactionMethod}}
+                        </div>
+                        <div class="fundList-transactionMethod" v-if="fundData[index].manyTags!=undefined" v-for="(item, index2) in fundData[index].manyTags" :key="index2">
+                            {{item}}
                         </div>
                         <div class="fundList-transactionMethod danger" v-if="fundData[index].errorTag!=undefined">
                             {{fundData[index].errorTag}}
@@ -870,6 +838,7 @@ Vue.component("fundList", {
         return {
             fundListDetail: false,
             priceNotificationDelPopover: false,
+            detail_priceNotificationDelPopover: false,
         };
     },
     template: ` <div class="fundList"
@@ -890,7 +859,7 @@ Vue.component("fundList", {
                             <el-tooltip
                                 class="item"
                                 effect="dark"
-                                content="勾選您欲取消之項目"
+                                :content="fundData.checkboxContent"
                                 placement="top-start"
                                 v-if="fundData.hasCheckbox != undefined && fundData.hasCheckbox"
                             >
@@ -929,6 +898,9 @@ Vue.component("fundList", {
                                                 {{fundData.transactionMethod}}
                                             </div>
                                         </el-tooltip>
+                                        <div class="fundList-transactionMethod" v-if="fundData.manyTags!=undefined" v-for="(item, index) in fundData.manyTags" :key="index">
+                                            {{item}}
+                                        </div>
                                         <div class="fundList-transactionMethod danger" v-if="fundData.errorTag!=undefined">
                                             {{fundData.errorTag}}
                                         </div>
@@ -957,12 +929,33 @@ Vue.component("fundList", {
                                     </div>
                                 </el-col>
                             </el-row>
-                            <h2 class="fundList-fundName" :title="fundData.fundName">
-                                <openFundSmallFile></openFundSmallFile>
-                                <div @click.stop="thisIndex">
-                                    {{fundData.fundName}}
+                            <div class="clearfix">
+                                <h2 class="fundList-fundName" :title="fundData.fundName" :class="{'floatType': fundData.functionBtns}" v-if="fundData.fundName != undefined">
+                                    <openFundSmallFile></openFundSmallFile>
+                                    <div @click.stop="thisIndex">
+                                        {{fundData.fundName}}
+                                    </div>
+                                </h2>
+                                <div class="fundList-functionBtns" v-if="fundData.functionBtns">
+                                    <el-button round class="xsBtn" plain @click="$root.$data.notesOnConversionFees = true;">
+                                        <i class="el-icon-sort"></i> 轉換
+                                    </el-button>
+                                    <el-button round class="xsBtn" plain @click="$router.push('/Redemption/Step1'); $scrollTo('body')">
+                                        <i class="el-icon-refresh-right"></i> 贖回
+                                    </el-button>
+                                    <el-button round class="xsBtn" plain @click="$root.$data.priceArrivalNoticeSetting.show = true;">
+                                        <i class="el-icon-bell"></i> 到價設定
+                                    </el-button>
+                                    <template v-if="$root.$data.windowWidth > 991">
+                                        <el-button round class="xsBtn" type="primary" plain @click="$router.push('/LumpSum/Subscribe/Step1'); $scrollTo('body')">
+                                            單筆申購
+                                        </el-button>
+                                        <el-button round class="xsBtn" type="primary" plain @click="$router.push('/Sip/Subscribe/Step1'); $scrollTo('body')">
+                                            定期(不)定額
+                                        </el-button>
+                                    </template>
                                 </div>
-                            </h2>
+                            </div>
                             <div class="changeTypeUse" v-if="fundData.isChange != undefined ? fundData.isChange : false">
                                 <el-divider @click.stop="thisIndex">
                                     <i class="fas fa-angle-double-down changeFundArrow"></i>
@@ -1006,7 +999,46 @@ Vue.component("fundList", {
                                 </div>
                             </div>
                         </div>
+                        <el-row :gutter="10" v-if="fundData.priceArrivalNoticeSettingInfo != undefined && fundData.priceArrivalNoticeSettingInfo">
+                            <el-col :sm="8" :xs="12">
+                                <el-input placeholder="請輸入" size="medium" v-model="$root.$data.priceArrivalNoticeSetting.form.val1" class="priceArrivalNoticeSetting-input">
+                                    <template slot="prepend">≧</template>
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-col>
+                            <el-col :sm="8" :xs="12">
+                                <el-input placeholder="請輸入" size="medium" v-model="$root.$data.priceArrivalNoticeSetting.form.val2" class="priceArrivalNoticeSetting-input">
+                                    <template slot="prepend">≦</template>
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-col>
+                            <el-col :sm="8" class="margin-top-sm-10">
+                                <el-select size="medium" v-model="$root.$data.priceArrivalNoticeSetting.form.frequency" placeholder="請選擇通知頻率">
+                                    <el-option label="暫停" value="pause"></el-option>
+                                    <el-option label="一次" value="once"></el-option>
+                                    <el-option label="每次" value="each"></el-option>
+                                </el-select>
+                            </el-col>
+                        </el-row>
                         <fundInfoItem :fundData="fundData" :fundListSetting="fundListSetting" v-if="fundData.info != undefined"></fundInfoItem>
+                        <div class="priceNotification-info type2" v-if="fundData.newPriceNotification" :class="{'pause': fundData.priceNotification.pause}">
+                            <span><b>通知條件：</b>{{fundData.priceNotification.condition}}</span>
+                            <el-divider direction="vertical"></el-divider>
+                            <span><b>通知頻率：</b>{{fundData.priceNotification.frequency}}</span>
+                            <el-popover
+                                placement="top-start"
+                                width="200"
+                                v-model="priceNotificationDelPopover">
+                                <template v-slot="content">
+                                    <p class="text-center">確定要取消通知嗎?</p>
+                                    <div class="text-center margin-bottom-10">
+                                        <el-button round class="sBtn" type="primary" @click="priceNotificationDelPopover = false">是</el-button>
+                                        <el-button round class="sBtn" type="text" @click="priceNotificationDelPopover = false">否</el-button>
+                                    </div>
+                                </template>
+                                <el-button round class="xsBtn" plain slot="reference">取消通知</el-button>
+                            </el-popover>
+                        </div>
                         <el-collapse-transition>
                             <div class="fundList-detail" v-show="fundListDetail">
                                 <div class="fundList-detail-item"
@@ -1040,6 +1072,24 @@ Vue.component("fundList", {
                                         </h3>
                                     </div>
                                     <fundInfoItem :fundData="detailItem" :fundListSetting="fundListSetting.detail"></fundInfoItem>
+                                    <div class="priceNotification-info type2" v-if="detailItem.newPriceNotification" :class="{'pause': detailItem.priceNotification.pause}">
+                                        <span><b>通知條件：</b>{{detailItem.priceNotification.condition}}</span>
+                                        <el-divider direction="vertical"></el-divider>
+                                        <span><b>通知頻率：</b>{{detailItem.priceNotification.frequency}}</span>
+                                        <el-popover
+                                            placement="top-start"
+                                            width="200"
+                                            v-model="detail_priceNotificationDelPopover">
+                                            <template v-slot="content">
+                                                <p class="text-center">確定要取消通知嗎?</p>
+                                                <div class="text-center margin-bottom-10">
+                                                    <el-button round class="sBtn" type="primary" @click="detail_priceNotificationDelPopover = false">是</el-button>
+                                                    <el-button round class="sBtn" type="text" @click="detail_priceNotificationDelPopover = false">否</el-button>
+                                                </div>
+                                            </template>
+                                            <el-button round class="xsBtn" plain slot="reference">取消通知</el-button>
+                                        </el-popover>
+                                    </div>
                                     <div class="fundList-warning" v-if="detailItem.warning != undefined">
                                         <template v-if="detailItem.warningDisplayMethod=='tooltip'">
                                             <el-tooltip placement="bottom-start" effect="dark">
@@ -1143,7 +1193,7 @@ Vue.component("fundList", {
                                     </el-tooltip>
                                 </template>
                                 <template v-else>
-                                    <i class="fas fa-exclamation-circle"></i> {{fundData.warning}}
+                                    <i class="fas fa-exclamation-circle"></i> <span v-html="fundData.warning"></span>
                                 </template>
                             </div>
                         </div>
@@ -1215,6 +1265,21 @@ const fundListGroup = {
                                     @click="$router.push('/Redemption/Step1#test')"
                                     @click.prevent="$scrollTo('body')">
                                     全數贖回
+                                </el-button>
+                            </div>
+                            <div class="infoCard-btnArea" v-if="infoCardBtnType == 3">
+                                <el-button round @click="showNotesOnConversionFees">轉換</el-button>
+                                <el-button
+                                    round
+                                    @click="$router.push('/Redemption/Step1'); $scrollTo('body')">
+                                    贖回
+                                </el-button>
+                                <el-button round @click="showPriceArrivalNoticeSetting">到價設定</el-button>
+                                <el-button round type="primary" plain @click="$router.push('/LumpSum/Subscribe/Step1'); $scrollTo('body')">
+                                    單筆申購
+                                </el-button>
+                                <el-button round type="primary" plain @click="$router.push('/Sip/Subscribe/Step1'); $scrollTo('body')">
+                                    定期(不)定額
                                 </el-button>
                             </div>
                         </template>
@@ -2364,7 +2429,7 @@ Vue.component("whatIsSmartRSP", {
                                 並在<b>您所設定的扣款金額上下限區間</b>內，於約定扣款日幫您進行扣款。
                             </li>
                             <li>
-                                當基金淨值為<b class="text-blue">上行</b>趨勢：淨值高於均線時將少量<b>加碼</b>扣款金額、淨值低於均線時將大量<b>加碼</b>扣款金額。(最多加碼至：基準扣款金額<span style="display: inline-block;">*160%</span>)。
+                                當基金淨值為<b class="text-blue">上行</b>趨勢：淨值高於均線時將少量<b>加碼</b>扣款金額、淨值低於均線時將大量<b>加碼</b>扣款金額(最多加碼至：基準扣款金額*180%)。
                             </li>
                             <li>
                                 當基金淨值為<b class="text-blue">下行</b>趨勢：淨值高於均線時將大量<b>減碼</b>扣款金額、淨值低於均線時將少量<b>減碼</b>扣款金額。(最多減碼至：基準扣款金額<span style="display: inline-block;">*20%</span>)。
@@ -2376,4 +2441,48 @@ Vue.component("whatIsSmartRSP", {
                         <i class="fas fa-exclamation-circle"></i> 什麼是【智能定期不定額】
                     </div>
                 </el-popover>`,
+});
+
+// ========= ie遮罩 ==============================================================================================================================
+Vue.component('ieMask', {
+    template: ` <div class="ieMask" v-if="$root.getIEVersion() != 'edge' && $root.getIEVersion() != -1">
+                    <div class="ieMask-bg"></div>
+                    <div class="ieMask-content">
+                        <div class="container">
+                            <p>
+                                親愛的客戶 您好 因微軟已停止IE版本瀏覽器維護，建議您升級您的IE瀏覽器，或使用下列其他瀏覽器軟體，以獲得最佳 瀏覽體驗。
+                            </p>
+                            <el-divider></el-divider>
+                            <el-row :gutter="20">
+                                <el-col :sm="8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-edge"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            微軟Edge瀏覽器
+                                        </div>
+                                        <el-button type="white" round class="sBtn" @click="this.window.open('https://www.microsoft.com/zh-tw/edge', '_blank')">立即下載</el-button>
+                                    </div>
+                                </el-col>
+                                <el-col :sm="8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-chrome"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            Google Chrome瀏覽器
+                                        </div>
+                                        <el-button type="white" round class="sBtn" @click="this.window.open('https://www.google.com/intl/zh-TW/chrome/', '_blank')">立即下載</el-button>
+                                    </div>
+                                </el-col>
+                                <el-col :sm="8">
+                                    <div class="ieMask-downloadItem">
+                                        <i class="fab fa-firefox"></i>
+                                        <div class="ieMask-downloadItem-tit">
+                                            Mozilla Firefox瀏覽器
+                                        </div>
+                                        <el-button type="white" round class="sBtn" @click="this.window.open('https://www.mozilla.org/zh-TW/firefox/new/', '_blank')">立即下載</el-button>
+                                    </div>
+                                </el-col>
+                            </el-row>
+                        </div>
+                    </div>
+                </div>`,
 });
