@@ -3779,3 +3779,69 @@ body:before {
     padding: 2vw;
   }
 }
+
+.vsTable-container {
+  display: block !important;
+}
+.vsTable-tit {
+  text-align: center;
+  font-size: 25px;
+}
+.vsTable-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.vsTable-row.titRow .vsTable-col {
+  padding: 41px 10px;
+}
+.vsTable-row.titRow .vsTable-col:first-of-type {
+  opacity: 0;
+}
+.vsTable-row.titRow .vsTable-col.selfType {
+  padding: 5px 10px;
+  background: #fff;
+}
+.vsTable-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.vsTable-col.selfType {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+.vsTable-col.selfType i {
+  font-size: 25px;
+}
+.vsTable-col.selfType i.fa-check-circle {
+  color: #029d53;
+}
+.vsTable-col .selfPic {
+  border-radius: 100%;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.vsTable-col i.fa-exclamation-triangle {
+  color: #b59d00;
+}
+@media screen and (max-width: 767px) {
+  .vsTable {
+    overflow-x: auto;
+  }
+  .vsTable-row {
+    min-width: 600px;
+  }
+  .vsTable-row.titRow .vsTable-col {
+    padding: 31px 10px;
+  }
+  .vsTable-col .selfPic {
+    width: 80px;
+  }
+}
