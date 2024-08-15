@@ -150,7 +150,7 @@ ol li ol {
 }
 @media screen and (max-width: 767px) {
   .checkbox-text,
-.radio-text {
+  .radio-text {
     font-size: 16px;
   }
 }
@@ -739,7 +739,7 @@ body.fixedBody {
 }
 
 .linkText {
-  color: #0076ef;
+  color: var(--yellow);
   border-bottom: solid 1px;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
@@ -929,7 +929,7 @@ code {
     padding-right: 0px;
   }
   .btn a,
-.btn button {
+  .btn button {
     font-size: 17px;
     line-height: 45px;
     width: 100%;
@@ -949,7 +949,7 @@ code {
 }
 @media screen and (max-width: 767px) {
   .normal a,
-.normal button {
+  .normal button {
     font-size: 17px;
     line-height: 45px;
     padding: 0px 10px;
@@ -964,7 +964,7 @@ code {
 }
 @media screen and (max-width: 767px) {
   .sBtn a,
-.sBtn button {
+  .sBtn button {
     font-size: 16px;
     padding: 0 5px;
   }

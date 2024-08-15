@@ -444,6 +444,12 @@ var content = new Vue({
                                 <li>
                                     工作分派及進度追蹤
                                 </li>
+                                <li>
+                                    證券APP改版
+                                </li>
+                                <li>
+                                    行銷網頁製作
+                                </li>
                             </ol>`,
             },
             {

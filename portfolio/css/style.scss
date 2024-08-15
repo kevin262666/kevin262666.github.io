@@ -282,7 +282,7 @@ body {
     border-bottom: solid 1px;
 }
 .linkText {
-    color: #0076ef;
+    color: var(--yellow);
     border-bottom: solid 1px;
     transition: 0.3s ease all;
     // border-bottom-color: $baseBlue;
