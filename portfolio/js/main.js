@@ -434,7 +434,7 @@ var content = new Vue({
 
         experience: [
             {
-                tit: `副理(電子商務部)`,
+                tit: `設計副理`,
                 company: `凱基證券`,
                 time: `2023/5~至今`,
                 jobList: `<ol>
