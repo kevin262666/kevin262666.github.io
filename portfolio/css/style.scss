@@ -1344,6 +1344,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#120054', end
                 display: block;
                 border-radius: $borderRadius;
                 border: solid 4px #fff;
+                box-sizing: border-box;
             }
             &-tit {
                 position: absolute;

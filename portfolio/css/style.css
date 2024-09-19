@@ -3269,6 +3269,8 @@ body:before {
   display: block;
   border-radius: 5px;
   border: solid 4px #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .portfolio-list-head-tit {
   position: absolute;
