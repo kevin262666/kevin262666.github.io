@@ -1,0 +1,98 @@
+$size: xxl, xl, lg, md, sm, xs;
+$mediaWidth: (
+    xxl: 1599px,
+    xl: 1399px,
+    lg: 1199px,
+    md: 991px,
+    sm: 767px,
+    xs: 359px,
+);
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: map-get($mediaWidth, xxl)) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: map-get($mediaWidth, xl)) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: map-get($mediaWidth, lg)) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: map-get($mediaWidth, md)) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: map-get($mediaWidth, sm)) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: map-get($mediaWidth, xs)) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/
+
+:root {
+    --color-black-base: #3a3a3a;
+    --color-blue-base: #004194;
+    --color-blue-light: #0062E0;
+    --color-blue-link: #0D6EFD;
+    --color-orange-base: #E15435;
+    --color-orange-base-rgbCode: 225, 84, 53;
+    --color-green-base: #3CAD21;
+    --color-green-base-rgbCode: 60, 173, 33;
+    --color-red-base: #FF0000;
+    --color-red-base-rgbCode: 255, 0, 0;
+    --color-yellow-base: #fde30a;
+    --color-yellow-base-rgbCode: 253, 227, 10;
+    --color-gray-base: #919191;
+    --color-gray-border: #CED4DA;
+    --color-gray-bg: #f4f4f4;
+
+    --border-radius-base: 10px;
+    --border-radius-md: 5px;
+
+    --gap-base: 30px;
+    --gap-lg: 20px;
+    --gap-md: 15px;
+    --gap-sm: 10px;
+    --gap-xs: 5px;
+
+    --fontSize-base: 16px;
+    --fontSize-tittype1: 20px;
+    --fontSize-tittype2: 18px;
+    --fontSize-remark: 14px;
+
+    // reset bootstrap
+    --bs-success-rgb: var(--color-green-base-rgbCode);
+    --bs-warning-rgb: var(--color-orange-base-rgbCode);
+    --bs-danger-rgb: var(--color-red-base-rgbCode);
+    @include maxWidth-sm {
+        // --gap-base: 20px;
+    }
+    @include maxWidth-xs {
+        --fontSize-base: 14px;
+        --fontSize-remark: 12px;
+    }
+}
+
+// 中文項次
+$chineseNo: "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十";
+
+// 方向
+$direction: top, right, bottom, left;
+// 間距
+$marginWidth: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;

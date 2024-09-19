@@ -1,0 +1,202 @@
+#IsOpenInAPP {
+    // display: none;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 99999;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0px 30px;
+    // width: 100%;
+    max-width: 1290px;
+    box-sizing: border-box;
+    &-2 {
+        @extend .container;
+        margin: 0 auto;
+        padding: 0px 30px;
+        max-width: 960px;
+        box-sizing: border-box;
+    }
+    // @include maxWidth-xl {
+    //     margin: 0px 65px;
+    //     padding: 0;
+    // }
+    @include maxWidth-lg {
+        margin: 0px 65px;
+        padding: 0;
+        max-width: none;
+    }
+    @include maxWidth-md {
+        margin: 0px 25px;
+    }
+    @include maxWidth-sm {
+        margin: 0px 8px;
+    }
+}
+
+.block {
+    margin: var(--blockUpAndDownMargin) 0;
+    .orderSet-stockInfo {
+        margin: var(--smUpAndDownMargin) 0;
+    }
+}
+
+// 讓col隨內容伸縮
+.autoCol {
+    flex: auto;
+    max-width: none;
+    flex-grow: 0;
+    margin: 0 -1px;
+    @include maxWidth-xs {
+        margin: 0 -3px;
+    }
+}
+
+.btnArea {
+    display: flex;
+    justify-content: center;
+    @include maxWidth-md {
+        .el-button {
+            flex: 1;
+        }
+    }
+}
+
+// 像tab的切換鍵
+.switchOrder {
+    margin: 20px auto;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-tab {
+        font-size: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            white-space: nowrap;
+            margin: 0;
+            li {
+                padding: 0 20px;
+                border-right: solid 1px var(--dividerColor);
+                a {
+                    color: var(--fontColor);
+                    padding: 4px 0;
+                    transition: 0.3s ease all;
+                    border-bottom: solid 6px transparent;
+                }
+                &.active a,
+                a:hover {
+                    border-bottom-color: var(--color-primary);
+                }
+                &:first-of-type {
+                    padding-left: 0;
+                }
+                &:last-of-type {
+                    border-right: none;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    &-sort {
+        flex: 0;
+        margin-left: 20px;
+        i {
+            cursor: pointer;
+            border-radius: var(--borderRadius_s);
+            line-height: 38px;
+            width: 38px;
+            border: solid 1px;
+            text-align: center;
+            transition: 0.3s ease all;
+            &:hover {
+                background: var(--color-primary);
+                color: #fff;
+            }
+        }
+    }
+    @include maxWidth-md {
+        margin: 0 auto 4px;
+        &.inquiryType {
+            margin: 15px 0;
+        }
+        &-tab {
+            font-size: 18px;
+            ul {
+                li {
+                    padding: 0 4px;
+                    border-right: none;
+                    a {
+                        padding: 4px 14px;
+                        border-bottom-width: 3px;
+                    }
+                }
+            }
+        }
+        &-sort {
+            margin-left: 8px;
+        }
+    }
+}
+.headerNav.switchOrderType {
+    margin-top: 0;
+    // top: 130px;
+    position: static;
+    margin-bottom: 20px;
+    @include maxWidth-md {
+        background: #fff;
+        top: 81px;
+        position: sticky;
+    }
+}
+
+// 確認設定內容的資訊列表
+.confirmDialog-infoList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    li {
+        display: flex;
+        padding: 5px 0;
+        justify-content: center;
+        .fa-angles-down {
+            font-size: 20px;
+        }
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+    &-tit {
+        width: 124px;
+        flex: none;
+    }
+    &-content {
+        flex: auto;
+        padding-left: 10px;
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+// 是否顯示證券/期權鍵
+.hideSecuritiesOrFutures {
+    .securitiesOrFutures {
+        display: none;
+    }
+    .headerNav {
+        top: 0;
+    }
+    @include maxWidth-md {
+        .headerNav.switchOrderType {
+            top: 43px;
+        }
+    }
+}

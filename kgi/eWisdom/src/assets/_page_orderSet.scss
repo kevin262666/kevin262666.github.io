@@ -1,0 +1,396 @@
+.orderSet {
+    &-selectId {
+        display: flex;
+        align-items: center;
+        margin: var(--blockUpAndDownMargin) 0;
+        &-select {
+            flex: auto;
+        }
+        &-description {
+            flex: 0;
+            white-space: nowrap;
+        }
+    }
+    &-stockInfo {
+        @extend .blockStyle;
+        @extend .blockStyle-2;
+        margin: var(--blockUpAndDownMargin) 0;
+        &-input {
+            margin: var(--domUpAndDownMargin) 0;
+            position: relative;
+            &-stockSortList {
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                right: 0;
+                top: calc(100% + 10px);
+                @extend .itemStyle;
+                border-radius: var(--borderRadius_s);
+                padding: 5px 0;
+                max-height: 250px;
+                overflow-y: auto;
+                &-option {
+                    cursor: pointer;
+                    padding: 7px 10px;
+                    transition: 0.3s ease all;
+                    &:hover {
+                        background-color: var(--el-fill-color-light);
+                    }
+                }
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        position: relative;
+                        padding-bottom: 0;
+                        &.hasAfterIcon {
+                            padding-left: 30px !important;
+                            .afterIcon {
+                                position: absolute;
+                                left: 10px;
+                                top: 12px;
+                                transition: 0.3s ease all;
+                                cursor: pointer;
+                            }
+                        }
+                        &.hasBeforeIcon {
+                            padding-right: 30px !important;
+                            .beforeIcon {
+                                position: absolute;
+                                right: 10px;
+                                top: 12px;
+                                transition: 0.3s ease all;
+                                cursor: pointer;
+                                &:hover {
+                                    color: var(--color-primary);
+                                }
+                            }
+                        }
+                        &.notOption {
+                            padding: 7px 10px !important;
+                        }
+                        &.hasBtn {
+                            display: flex;
+                            justify-content: center;
+                            .el-button {
+                                // flex: 1;
+                            }
+                        }
+                        &.notFind {
+                            text-align: center;
+                        }
+                        &.hasCheckbox {
+                            .el-checkbox {
+                                position: absolute;
+                                right: 10px;
+                                top: 0;
+                            }
+                            .orderSet-stockInfo-input-stockSortList-option {
+                                padding-right: 40px;
+                            }
+                            .kgiCheckbox {
+                                position: absolute;
+                                right: 10px;
+                                top: 6px;
+                            }
+                        }
+                    }
+                }
+                &.editWishlistType {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    box-shadow: none;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &-info {
+            margin: var(--domUpAndDownMargin) 0;
+            ul {
+                padding-left: 0;
+                margin: 0 -10px;
+                list-style: none;
+                display: flex;
+                li {
+                    padding: 0 5px !important;
+                    flex: 1;
+                    display: flex;
+                    border-right: solid 1px var(--fontColor);
+                    align-items: center;
+                    line-height: 1.4;
+                    &:last-of-type {
+                        border-right: 0;
+                    }
+                }
+            }
+            &-tit,
+            &-num {
+                flex: 1;
+            }
+            &-tit {
+
+            }
+            &-num {
+                text-align: center;
+            }
+        }
+        &-alreadySelected {
+            display: flex;
+            align-items: center;
+            margin: var(--domUpAndDownMargin) 0;
+            &-content {
+                flex: auto;
+                display: flex;
+                align-items: center;
+                &-stockName {
+                    font-weight: bold;
+                    font-size: var(--smTitFontsize);
+                    margin-right: 20px;
+                }
+                &-info {
+                    display: flex;
+                    align-items: center;
+                    .remark {
+                        margin-right: 20px;
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                    .el-tag {
+    
+                    }
+                }
+            }
+            &-stockBtn {
+                flex: none;
+                padding-left: 10px;
+            }
+        }
+    }
+    @include maxWidth-lg {
+        &-stockInfo {
+            &-info {
+                ul {
+                    li {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-stockInfo {
+            &-info {
+                ul {
+                    flex-wrap: wrap;
+                    margin: 0 -5px;
+                    li {
+                        width: calc(100% / 3);
+                        box-sizing: border-box;
+                        padding: 0 5px !important;
+                        margin: 4px 0;
+                        flex: auto;
+                        &:nth-of-type(3) {
+                            border-right: none;
+                        }
+                    }
+                }
+                &-tit {
+                    font-size: 14px;
+                    flex: none;
+                }
+                &-num {
+                    flex: auto;
+                }
+            }
+            &-alreadySelected {
+                &-content {
+                    display: block;
+                    &-info {
+                        align-items: start;
+                        .remark {
+                            margin-right: 10px;
+                        }
+                        .el-tag--large {
+                            font-size: 14px;
+                            padding: 0 9px;
+                            height: 20px;
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth-xs {
+        &-stockInfo {
+            &-info {
+                ul {
+                    li {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 編輯條件單順序
+.sortOrder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    .el-button {
+        margin-left: 0;
+        margin: 5px 0;
+        margin-right: 12px;
+    }
+}
+
+// 庫存與對應的條件設定
+.inventoryAndCorrespondingConditionsetting {
+
+}
+
+// 設定條件區
+.setConditions {
+    @extend .itemStyle;
+    padding: calc(var(--domUpAndDownMargin) / 2) 24px;
+    margin: var(--smUpAndDownMargin) 0;
+    &.buyType {
+        border: solid 1px var(--color-red) !important;
+    }
+    &.sellType {
+        border: solid 1px var(--color-green) !important;
+    }
+    &-item {
+        margin: calc(calc(var(--domUpAndDownMargin) / 2) - 4px) 0;
+        &-tit {
+            line-height: 1.4;
+            padding-bottom: 4px;
+            padding-top: 4px;
+        }
+        &-input {
+            .el {
+                &-select,
+                &-input,
+                &-input-number,
+                &-date-editor--timerange {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+            .el-col {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+            .el-alert {
+                margin: 0;
+            }
+            .priceAndAddStyle {
+                position: relative;
+                padding-right: 63px;
+                .el-button {
+                    position: absolute;
+                    inset: 0 0 auto auto;
+                }
+            }
+            .stitchBtnAndText {
+                display: flex;
+                // align-items: center;
+                .el-switch {
+                    margin-right: 15px;
+                }
+                label {
+                    padding-top: 2px;
+                }
+            }
+        }
+        & + .el-alert {
+            margin: var(--smUpAndDownMargin) 0;
+            margin-top: 0;
+        }
+    }
+    .orderSet-stockInfo {
+        box-shadow: none;
+    }
+    @include maxWidth-md {
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: var(--borderRadius_s);
+        &-item {
+            display: flex;
+            align-items: center;
+            margin: calc(calc(var(--domUpAndDownMargin) / 2) - 4px) 0;
+            &.alignTop {
+                align-items: start;
+                .setConditions-item-tit {
+                    padding-top: 10px;
+                }
+            }
+            &-tit {
+                width: 100px;
+                flex: none;
+                padding-right: 8px;
+                margin-bottom: 0;
+            }
+            &-input {
+                flex: auto;
+                .el-row {
+                    border-bottom: dashed 1px var(--dividerColor);
+                    padding-bottom: 4px;
+                    margin-bottom: 4px;
+                    &:last-of-type {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                .priceAndAddStyle {
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+}
+
+// 試算
+.calculationList {
+    margin: 0 auto;
+    max-width: 572px;
+}
+
+// 監控條件
+.monitorConditions {
+    &.setConditions {
+        padding-top: 0 !important;
+    }
+    &-tit {
+        text-align: center;
+        margin-left: -24px;
+        margin-right: -24px;
+        border-radius: 16px 16px 0 0;
+        background: color-mix(in srgb, var(--bg-lightBlue) 90%, var(--color-primary));
+        padding: 5px 0;
+    }
+    .orderSet-stockInfo {
+        border-radius: 0;
+        border: none;
+        margin: 0 -24px var(--domUpAndDownMargin) !important;
+    }
+    @include maxWidth-md {
+        &-tit {
+            margin-left: -8px;
+            margin-right: -8px;
+            border-radius: 8px 8px 0 0;
+            padding: 2px 0;
+        }
+        .orderSet-stockInfo {
+            margin: 0 -8px var(--domUpAndDownMargin) !important;
+        }
+    }
+}

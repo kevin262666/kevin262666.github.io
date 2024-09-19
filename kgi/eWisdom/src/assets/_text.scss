@@ -1,0 +1,28 @@
+.remark {
+    color: var(--fontColor-remark);
+    font-size: var(--remarkFontsize);
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-red {
+        color: var(--color-red);
+    }
+    &-black {
+        color:  var(--fontColor);
+    }
+    &-green {
+        color: var(--color-green);
+    }
+    &-orange {
+        color: var(--color-orange);
+    }
+    &-blue {
+        color: var(--color-primary);
+    }
+}

@@ -1,0 +1,114 @@
+.infoList {
+    display: grid;
+    gap: var(--gap-sm);
+    &-grup {
+        display: grid;
+        gap: var(--gap-lg);
+    }
+    &-item {
+        padding-bottom: var(--gap-lg);
+        border-bottom: solid 1px var(--color-gray-border);
+        display: flex;
+        gap: var(--gap-sm);
+        flex-wrap: wrap;
+        &-tit {
+            display: flex;
+            gap: var(--gap-sm);
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+            order: -1;
+            &-month {
+                font-size: var(--fontSize-tittype2);
+                font-weight: bold;
+                flex: auto;
+            }
+            &-total {
+                text-align: right;
+                flex: auto;
+            }
+            i {
+                transition: .3s ease all;
+            }
+        }
+        .infoList {
+            width: 100%;
+            &.show {
+                & + .infoList-item-tit {
+                    i {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+    &-list {
+        display: flex;
+        gap: var(--gap-sm);
+        align-items: center;
+        padding: 15px;
+        border-radius: var(--border-radius-base);
+        background: #fff;
+    }
+    a.infoList-list {
+        color: var(--color-black-base);
+        &:after {
+            @extend .fontAwesomeIcon;
+            content: '\f061';
+            transition: 0.3s ease all;
+        }
+        &:hover {
+            &:after {
+                transform: translateX(3px);
+            }
+        }
+    }
+    &-left {
+        display: flex;
+        gap: var(--gap-sm);
+        align-items: center;
+        flex: auto;
+        flex-wrap: wrap;
+    }
+    &-time {
+        color: var(--color-gray-base);
+        font-size: var(--fontSize-remark);
+    }
+    &-text {
+        font-size: var(--fontSize-remark);
+    }
+    &-right {
+        width: 133px;
+        text-align: right;
+    }
+    &-price {
+        font-size: 18px;
+        color: var(--color-gray-base);
+    }
+    &-remark {
+        @extend .remark;
+        display: flex;
+        & > div  {
+            flex: auto;
+        }
+    }
+    @include maxWidth-sm {
+        &-left {
+            gap: var(--gap-xs);
+        }
+        &-text {
+            width: 100%;
+        }
+    }
+    @include maxWidth-xs {
+        &-list {
+            gap: var(--gap-xs);
+        }
+        &-right {
+            width: 100px;
+        }
+        &-price {
+            font-size: 14px;
+        }
+    }
+}

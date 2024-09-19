@@ -1,0 +1,159 @@
+.settingResultCard {
+    width: calc(calc(100% / 3) - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+    @extend .itemStyle;
+    &-area {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -10px;
+        align-items: start;
+        &-noInfo {
+            text-align: center;
+            flex: auto;
+        }
+    }
+    &-head {
+        background: var(--color-primary);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+        &-top {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+    }
+    &-orderName {
+        flex: none;
+        background: #fff;
+        color: var(--fontColor);
+        font-size: var(--remarkFontsize);
+        line-height: 30px;
+        border-radius: 30px;
+        padding: 0 10px;
+    }
+    &-del {
+        flex: auto;
+        display: flex;
+        justify-content: end;
+        i {
+            cursor: pointer;
+            font-size: 22px;
+        }
+        .el-checkbox {
+            height: 22px;
+        }
+    }
+    &-stockName {
+        margin: 10px 0;
+        font-size: var(--smTitFontsize);
+    }
+    &-tag {
+        border: solid 1px #fff;
+        padding: 1px 10px;
+        margin: 5px 0;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &-area {
+            margin: -5px 0 5px;
+            display: flex;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+    }
+    &-main {
+        padding: 0 16px;
+        .confirmDialog-infoList {
+            padding: 15px 0;
+            border-bottom: solid 1px var(--dividerColor);
+        }
+    }
+    &-sInfo {
+        text-align: center;
+        font-size: var(--remarkFontsize);
+        padding: 4px 0;
+        border-bottom: solid 1px var(--dividerColor);
+    }
+    &-toggleBtn {
+        text-align: center;
+        font-size: var(--remarkFontsize);
+        padding: 10px 0;
+        cursor: pointer;
+        i {
+            transition: 0.3s ease all;
+            margin-left: 5px;
+        }
+        &.active {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &.deleted {
+        .settingResultCard {
+            &-head {
+                background: #767C85;
+            }
+            &-orderName {
+                color: #9A9A9A;
+            }
+            &-main {
+                color: var(--fontColor-lightFont);
+            }
+        }
+        .confirmDialog-infoList {
+            .text {
+                &-orange,
+                &-green {
+                    color: var(--fontColor-lightFont);
+                }
+            }
+        }
+    }
+    &.checked.checkboxType {
+        transform: scale(0.95);
+        // opacity: 0.8;
+        // filter: brightness(50%);
+        .settingResultCard-orderName,
+        .settingResultCard-stockName,
+        .settingResultCard-tag-area {
+            filter: brightness(50%);
+            // filter: blur(1px);
+        }
+        .settingResultCard-main,
+        .settingResultCard-toggleBtn {
+            opacity: 0.5;
+            // filter: blur(1px);
+        }
+    }
+    @include maxWidth-md {
+        width: calc(50% - 20px);
+    }
+    @include maxWidth-sm {
+        width: auto;
+        margin: 20px 0;
+        &-area {
+            display: block;
+            margin: 0;
+        }
+    }
+}
+
+// 非darkMode時刪除的checkbox特製顏色
+html:not(.dark) {
+    .settingResultCard {
+        &-del {
+            .el-checkbox.is-checked .el-checkbox__inner {
+                background: #fff;
+                &:after {
+                    border-color: var(--color-primary);
+                }
+            }
+        }
+    }
+}

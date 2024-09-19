@@ -1,0 +1,33 @@
+.notice {
+    padding: 15px 10px;
+    border: solid 1px var(--color-gray-base);
+    border-radius: var(--border-radius-base);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    &-tit,
+    &-content {
+        width: 100%;
+    }
+    &-tit {
+        margin: 0;
+        text-align: center;
+        background: #fff;
+        border-radius: 100px;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: normal;
+        color: var(--color-black-base);
+        order: -1;
+        i {
+            transform-origin: center center;
+            transition: 0.3s ease all;
+        }
+    }
+    &-content {
+        &.show + .notice-tit i {
+            transform: rotate(-180deg);
+        }
+    }
+}

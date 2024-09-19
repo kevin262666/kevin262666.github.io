@@ -1,0 +1,15 @@
+.tit {
+    &-type1,
+    &-type2 {
+        font-size: var(--fontSize-tittype1);
+        line-height: 1.4;
+        margin: 0;
+        font-weight: bold;
+    }
+    &-type1 {
+        text-align: center;
+    }
+    &-type2 {
+        font-size: var(--fontSize-tittype2);
+    }
+}

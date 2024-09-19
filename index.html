@@ -54,7 +54,7 @@
 
         <!-- <link rel="stylesheet" type="text/css" href="portfolio/css/slick.css" /> -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="portfolio/css/style.css?v=20240902" />
+        <link rel="stylesheet" href="portfolio/css/style.css?v=20240919" />
 
         <!-- Google Tag Manager -->
         <!-- <script>
@@ -546,33 +546,27 @@
                         <h2 class="itemTit" title="Portfolio" data-aos="fade-right">
                             Portfolio
                         </h2>
-                        <p>
-                            想了解更多UI設計作品請前往 <a href="https://www.behance.net/kevin2626634eb" target="_blank" class="linkText">Behance <i class="fas fa-external-link-alt"></i></a>
-                        </p>
                         <ul class="tab-btn" data-aos="fade-up">
-                            <li :class="{'active': tab[0]}" @click="toggleTab('0')">2022</li>
-                            <li :class="{'active': tab[1]}" @click="toggleTab('1')">2021</li>
-                            <li :class="{'active': tab[2]}" @click="toggleTab('2')">2020</li>
-                            <li :class="{'active': tab[3]}" @click="toggleTab('3')">2019</li>
-                            <li :class="{'active': tab[4]}" @click="toggleTab('4')">2018</li>
+                            <li :class="{'active': tab[0]}" @click="toggleTab('0')">UI設計</li>
+                            <li :class="{'active': tab[1]}" @click="toggleTab('1')">行銷設計</li>
                         </ul>
                         <div class="tab-content" data-aos="fade-left">
                             <section v-if="tab[0]">
                                 <ul class="portfolio-list">
-                                    <li v-for="item in portfolio2022">
+                                    <li v-for="item in uiDesign">
                                         <div class="portfolio-list-head">
                                             <a :href="item.link" target="_blank" :title="item.tit">
-                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <img :src="'portfolio/images/uiDesign/' + item.img" :alt="item.tit">
                                                 <div class="portfolio-list-head-tit">
                                                     {{item.tit}}
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="portfolio-list-link">
-                                            <a :href="item.website" target="_blank" title="github">
+                                            <a :href="item.website" target="_blank" title="github" v-if="item.website != ''">
                                                 website <i class="fas fa-link"></i>
                                             </a>
-                                            <a :href="item.behance" target="_blank" title="Behance">
+                                            <a :href="item.behance" target="_blank" title="Behance" v-if="item.behance != ''">
                                                 Behance <i class="fas fa-external-link-alt"></i>
                                             </a>
                                         </div>
@@ -581,83 +575,17 @@
                             </section>
                             <section v-if="tab[1]">
                                 <ul class="portfolio-list">
-                                    <li v-for="item in portfolio2021">
+                                    <li v-for="item in marketing">
                                         <div class="portfolio-list-head">
                                             <a :href="item.link" target="_blank" :title="item.tit">
-                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
+                                                <img :src="'portfolio/images/marketing/' + item.img" :alt="item.tit">
                                                 <div class="portfolio-list-head-tit">
                                                     {{item.tit}}
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="portfolio-list-link">
-                                            <a :href="item.website" target="_blank" title="github">
-                                                website <i class="fas fa-link"></i>
-                                            </a>
-                                            <a :href="item.behance" target="_blank" title="Behance">
-                                                Behance <i class="fas fa-external-link-alt"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section v-if="tab[2]">
-                                <ul class="portfolio-list">
-                                    <li v-for="item in portfolio2020">
-                                        <div class="portfolio-list-head">
-                                            <a :href="item.link" target="_blank" :title="item.tit">
-                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
-                                                <div class="portfolio-list-head-tit">
-                                                    {{item.tit}}
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-list-link">
-                                            <a :href="item.website" target="_blank" title="github">
-                                                website <i class="fas fa-link"></i>
-                                            </a>
-                                            <a :href="item.behance" target="_blank" title="Behance">
-                                                Behance <i class="fas fa-external-link-alt"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section v-if="tab[3]">
-                                <ul class="portfolio-list">
-                                    <li v-for="item in portfolio2019">
-                                        <div class="portfolio-list-head">
-                                            <a :href="item.link" target="_blank" :title="item.tit">
-                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
-                                                <div class="portfolio-list-head-tit">
-                                                    {{item.tit}}
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-list-link">
-                                            <a :href="item.website" target="_blank" title="github">
-                                                website <i class="fas fa-link"></i>
-                                            </a>
-                                            <a :href="item.behance" target="_blank" title="Behance">
-                                                Behance <i class="fas fa-external-link-alt"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section v-if="tab[4]">
-                                <ul class="portfolio-list">
-                                    <li v-for="item in portfolio2018">
-                                        <div class="portfolio-list-head">
-                                            <a :href="item.link" target="_blank" :title="item.tit">
-                                                <img :src="'portfolio/images/' + item.img" :alt="item.tit">
-                                                <div class="portfolio-list-head-tit">
-                                                    {{item.tit}}
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-list-link">
-                                            <a :href="item.website" target="_blank" title="github">
+                                            <a :href="item.website" target="_blank" title="github" v-if="item.website != ''" >
                                                 website <i class="fas fa-link"></i>
                                             </a>
                                             <a :href="item.behance" target="_blank" title="Behance" v-if="item.behance != ''">
@@ -669,11 +597,11 @@
                             </section>
                         </div>
                         <div class="btnArea twoBtn">
-                            <div class="btn borderType yellowStyle">
+                            <!-- <div class="btn borderType yellowStyle">
                                 <a href="https://www.behance.net/gallery/204840059/-e()" target="_blank" title="最新UI設計">
                                     最新UI設計 <i class="fas fa-angle-double-right"></i>
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="btn borderType" :class="windowWidth > 767 ? 'whiteStyle' : 'yellowStyle'">
                                 <a href="https://www.behance.net/kevin2626634eb" target="_blank" title="更多設計作品">
                                     更多設計作品 <i class="fas fa-angle-double-right"></i>
@@ -1087,7 +1015,7 @@
             
         </div>
 
-        <script src="portfolio/js/main.min.js?v=20240912"></script>
+        <script src="portfolio/js/main.min.js?v=20240919"></script>
         
     </body>
 </html>

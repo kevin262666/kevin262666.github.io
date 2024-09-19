@@ -256,7 +256,88 @@ var content = new Vue({
 
         tab: [true, false, false, false, false],
 
-        portfolio2022: [
+        uiDesign: [
+            {
+                link: `https://www.behance.net/gallery/207095973/APP-Light-version`,
+                tit: `凱基證券下單APP Light version提案`,
+                img: `lightKgiApp.png`,
+                website: ``,
+                behance: `https://www.behance.net/gallery/207095973/APP-Light-version`,
+            },
+            {
+                link: `https://kevin262666.github.io/kgi/dist/eWisdom/#/`,
+                tit: `凱基證券-e智慧改版(智慧下單介面)`,
+                img: `eWisdom.png`,
+                website: `https://kevin262666.github.io/kgi/dist/eWisdom/#/`,
+                behance: `https://www.behance.net/gallery/204840059/-e()`,
+            },
+            {
+                link: `https://kevin262666.github.io/kgi/deliveryAcc/index.html`,
+                tit: `凱基證券分戶帳專區改版`,
+                img: `deliveryAcc.png`,
+                website: `https://kevin262666.github.io/kgi/deliveryAcc/index.html`,
+                behance: `https://www.behance.net/gallery/207096491/_`,
+            },
+            {
+                link: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
+                tit: `EC國民e帳戶`,
+                img: `etrade-remake.webp`,
+                website: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
+                behance: `https://www.behance.net/gallery/154738505/-e`,
+            },
+            {
+                link: `https://www.behance.net/gallery/66637683/Settour-New-web-proposal`,
+                tit: `東南旅遊新EC提案`,
+                img: `settourProposal.jpg`,
+                website: ``,
+                behance: `https://www.behance.net/gallery/66637683/Settour-New-web-proposal`,
+            },
+            {
+                link: `https://kevin262666.github.io/ftft/onlineAccountOpen/`,
+                tit: `富蘭克林華美投信-線上開戶`,
+                img: `ftOnlineAccountOpen.webp`,
+                website: `https://kevin262666.github.io/ftft/onlineAccountOpen/`,
+                behance: `https://www.behance.net/gallery/70426239/Franklin-Q4-`,
+            },
+            {
+                link: `https://kevin262666.github.io/soho/zimedia/`,
+                tit: `字媒體Zimedia`,
+                img: `zimedia.webp`,
+                website: `https://kevin262666.github.io/soho/zimedia/`,
+                behance: `https://www.behance.net/gallery/66293219/Zimedia`,
+            },
+        ],
+
+        marketing: [
+            {
+                link: `https://kevin262666.github.io/franklin/C2018_10_Q4_1641/`,
+                tit: `多空策略基金`,
+                img: `C2018_10_Q4_1641.webp`,
+                website: `https://kevin262666.github.io/franklin/C2018_10_Q4_1641/`,
+                behance: `https://www.behance.net/gallery/71122151/Franklin-`,
+            },
+            {
+                link: `https://kevin262666.github.io/ftft/C2018_11_raiders/`,
+                tit: `中國市場 研習攻略`,
+                img: `C2018_11_raiders.webp`,
+                website: `https://kevin262666.github.io/ftft/C2018_11_raiders/`,
+                behance: `https://www.behance.net/gallery/72027353/_`,
+            },
+            {
+                link: `https://kevin262666.github.io/franklin/C2018_11_thanksgiving/`,
+                tit: `寵愛粉絲感恩節特別企劃`,
+                img: `C2018_11_thanksgiving.webp`,
+                website: `https://kevin262666.github.io/franklin/C2018_11_thanksgiving/`,
+                behance: ``,
+            },
+            {
+                link: `https://kevin262666.github.io/franklin/signup/`,
+                tit: `網銀開戶推展`,
+                img: `signup.webp`,
+                website: `https://kevin262666.github.io/franklin/signup/`,
+                behance: `https://www.behance.net/gallery/97750835/_`,
+            },
+
             {
                 link: `https://kevin262666.github.io/franklin/season-offers/`,
                 tit: `2023年旗艦級基金活動網頁`,
@@ -293,32 +374,12 @@ var content = new Vue({
                 behance: `https://www.behance.net/gallery/121536213/_`,
             },
             {
-                link: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
-                tit: `EC國民e帳戶`,
-                img: `etrade-remake.webp`,
-                website: `https://kevin262666.github.io/franklin/etrade-remake/signIn.html`,
-                behance: `https://www.behance.net/gallery/154738505/-e`,
-            },
-        ],
-
-        portfolio2021: [
-            {
-                link: `https://kevin262666.github.io/franklin/signup/`,
-                tit: `網銀開戶推展`,
-                img: `signup.webp`,
-                website: `https://kevin262666.github.io/franklin/signup/`,
-                behance: `https://www.behance.net/gallery/97750835/_`,
-            },
-            {
                 link: `https://kevin262666.github.io/franklin/newAIRobo/`,
                 tit: `國民理財機器人`,
                 img: `newAIRobo.webp`,
                 website: `https://kevin262666.github.io/franklin/newAIRobo/`,
                 behance: `https://www.behance.net/gallery/100135119/_`,
             },
-        ],
-
-        portfolio2020: [
             {
                 link: `https://kevin262666.github.io/franklin/strategic-income-fund/`,
                 tit: `精選收益基金`,
@@ -340,9 +401,6 @@ var content = new Vue({
                 website: `https://kevin262666.github.io/franklin/fund-award/`,
                 behance: `https://www.behance.net/gallery/92251251/Franklin-`,
             },
-        ],
-
-        portfolio2019: [
             {
                 link: `https://kevin262666.github.io/franklin/FT_Retire/survey.html`,
                 tit: `退休後的第二人生`,
@@ -371,29 +429,12 @@ var content = new Vue({
                 website: `https://kevin262666.github.io/franklin/C2019_01_howToChoose/`,
                 behance: `https://www.behance.net/gallery/75487565/Franklin-`,
             },
-        ],
-
-        portfolio2018: [
             {
                 link: `https://kevin262666.github.io/franklin/C2018_12_Q4_0799/`,
                 tit: `美國機會基金`,
                 img: `C2018_12_Q4_0799.webp`,
                 website: `https://kevin262666.github.io/franklin/C2018_12_Q4_0799/`,
                 behance: `https://www.behance.net/gallery/74828197/Franklin-`,
-            },
-            {
-                link: `https://kevin262666.github.io/franklin/C2018_11_thanksgiving/`,
-                tit: `寵愛粉絲感恩節特別企劃`,
-                img: `C2018_11_thanksgiving.webp`,
-                website: `https://kevin262666.github.io/franklin/C2018_11_thanksgiving/`,
-                behance: ``,
-            },
-            {
-                link: `https://kevin262666.github.io/franklin/C2018_10_Q4_1641/`,
-                tit: `多空策略基金`,
-                img: `C2018_10_Q4_1641.webp`,
-                website: `https://kevin262666.github.io/franklin/C2018_10_Q4_1641/`,
-                behance: `https://www.behance.net/gallery/71122151/Franklin-`,
             },
             {
                 link: `https://kevin262666.github.io/franklin/C2018_10_Q4/`,
@@ -403,33 +444,12 @@ var content = new Vue({
                 behance: `https://www.behance.net/gallery/70426239/Franklin-Q4-`,
             },
             {
-                link: `https://kevin262666.github.io/ftft/onlineAccountOpen/`,
-                tit: `富蘭克林華美投信-線上開戶`,
-                img: `ftOnlineAccountOpen.webp`,
-                website: `https://kevin262666.github.io/ftft/onlineAccountOpen/`,
-                behance: `https://www.behance.net/gallery/70426239/Franklin-Q4-`,
-            },
-            {
-                link: `https://kevin262666.github.io/ftft/C2018_11_raiders/`,
-                tit: `中國市場 研習攻略`,
-                img: `C2018_11_raiders.webp`,
-                website: `https://kevin262666.github.io/ftft/C2018_11_raiders/`,
-                behance: `https://www.behance.net/gallery/72027353/_`,
-            },
-            {
                 link: `https://kevin262666.github.io/ftft/180806-line/`,
                 tit: `LINE週週答題搶好康`,
                 img: `180806-line.webp`,
                 website: `https://kevin262666.github.io/ftft/180806-line/`,
                 behance: `https://www.behance.net/gallery/70426555/-LINE-`,
-            },
-            {
-                link: `https://kevin262666.github.io/soho/zimedia/`,
-                tit: `字媒體Zimedia`,
-                img: `zimedia.webp`,
-                website: `https://kevin262666.github.io/soho/zimedia/`,
-                behance: `https://www.behance.net/gallery/66293219/Zimedia`,
-            },
+            }
         ],
 
         experience: [

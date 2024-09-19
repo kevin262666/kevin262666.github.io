@@ -1,0 +1,14 @@
+.error {
+    &-tit {
+        font-size: 30px;
+        font-weight: 900;
+    }
+    @include maxWidth-md {
+        &-tit {
+            font-size: 25px;
+        }
+        &-img {
+            max-width: 70vw;
+        }
+    }
+}

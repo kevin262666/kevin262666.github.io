@@ -1,0 +1,14 @@
+.footer {
+    font-size: 14px;
+    color: var(--color-gray-base);
+    margin-bottom: 30px;
+    div {
+        margin-top: 5px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    @include maxWidth-sm {
+        margin-bottom: 70px;
+    }
+}

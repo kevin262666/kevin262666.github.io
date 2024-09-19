@@ -1,0 +1,90 @@
+.kgiTimePicker {
+    position: relative;
+    &-input {
+        @extend .el-input;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 0 1px var(--el-input-border-color,var(--el-border-color)) inset;
+        border-radius: var(--el-input-border-radius,var(--el-border-radius-base));
+        background-color: var(--el-input-bg-color,var(--el-fill-color-blank));
+        padding: 1px 11px;
+        transition: var(--el-transition-box-shadow);
+        &:hover {
+            box-shadow: 0 0 0 1px #c0c4cc inset;
+        }
+        &:focus {
+            box-shadow: 0 0 0 1px var(--el-input-focus-border-color) inset;
+        }
+        .el-input {
+            &__wrapper {
+                box-shadow: none;
+                padding: 0;
+                background: none;
+            }
+            &__inner {
+                text-align: center;
+            }
+        }
+    }
+    &-option {
+        position: absolute;
+        inset: 100% auto auto 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        padding: 5px;
+        &-content {
+            @extend .itemStyle;
+            border-radius: var(--borderRadius_s) !important;
+            padding: 10px !important;
+        }
+        &-list {
+            display: flex;
+            align-items: center;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+                overflow-y: auto;
+                height: 160px;
+                li {
+                    cursor: pointer;
+                    transition: 0.3s ease all;
+                    text-align: right;
+                    padding: 2px 20px !important;
+                    margin: 0 2px;
+                    &:hover {
+                        background: #f4f4f4;
+                    }
+                    &.active {
+                        color: #fff;
+                        background: var(--color-primary);
+                    }
+                }
+            }
+        }
+        &-btn {
+            text-align: right;
+            border-top: solid 1px var(--dividerColor);
+            padding-top: 5px;
+            margin-top: 5px;
+            display: none;
+        }
+    }
+    @include maxWidth-md {
+        &-option {
+            &-list {
+                ul li {
+                    &:hover {
+                        background: none;
+                    }
+                    &.active {
+                        background: var(--color-primary);
+                    }
+                }
+            }
+            &-btn {
+                display: block;
+            }
+        }
+    }
+}

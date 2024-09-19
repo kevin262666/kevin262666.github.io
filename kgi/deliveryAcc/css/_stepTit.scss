@@ -1,0 +1,54 @@
+.stepTit {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-sm);
+    &-progress {
+        position: relative;
+        &-no {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            b {
+                font-size: 18px;
+                color: var(--color-blue-light);
+            }
+        }
+        svg {
+            --percent: 0;
+            --size: 48px;
+            --border-width: 4px;
+            --color: var(--color-blue-light);
+            --inactive-color: #D6D6D6;
+
+            width: var(--size);
+            height: var(--size);
+            transform: rotate(-90deg);
+            border-radius: 50%;
+            & > circle {
+                cx: calc(var(--size) / 2);
+                cy: calc(var(--size) / 2);
+                r: calc((var(--size) - var(--border-width)) / 2);
+                fill: none;
+                stroke-width: var(--border-width);
+                stroke-linecap: round;
+                stroke: var(--inactive-color);
+                & + circle {
+                    stroke: var(--color);
+                    stroke-dasharray: calc(2 * 3.1415 * (var(--size) - var(--border-width)) / 2 * (var(--percent) / 100)), 1000;
+                }
+            }
+        }
+    }
+    &-info {
+        .tit-type1 {
+            text-align: left;
+        }
+    }
+    &-text {
+        font-size: var(--fontSize-remark);
+        color: var(--color-gray-base);
+    }
+}

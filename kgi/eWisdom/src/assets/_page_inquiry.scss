@@ -1,0 +1,68 @@
+.inquiry {
+    &-topInputArea {
+        display: flex;
+        // align-items: center;
+        margin: var(--blockUpAndDownMargin) 0;
+        flex-wrap: wrap;
+        &-toggleOpenClose {
+            text-align: right;
+            flex: 1;
+        }
+        &-selectId {
+            flex: 2;
+            order: -1
+        }
+        & > .inquiry-filter {
+            width: 100%;
+            margin-top: 15px;
+            box-sizing: border-box
+        }
+    }
+    &-filter {
+        @extend .blockStyle;
+        @extend .blockStyle-2;
+        display: flex;
+        justify-content: center;
+        margin: var(--blockUpAndDownMargin) 0;
+        &-item {
+            display: flex;
+            margin: 15px 0;
+            width: 100%;
+            box-sizing: border-box;
+            &-tit {
+                margin-right: 15px;
+                white-space: nowrap;
+                flex: none;
+                padding-top: 11px;
+            }
+            &-input {
+                flex: auto;
+                .el-date-editor {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-topInputArea {
+            display: block;
+            &-selectId {
+                margin-top: 10px;
+            }
+        }
+        &-filter {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            &-item {
+                display: block;
+                margin: 5px 0;
+                &-tit {
+                    padding-top: 0;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}

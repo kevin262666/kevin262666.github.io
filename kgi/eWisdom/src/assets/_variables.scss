@@ -1,0 +1,114 @@
+$size: xxl, xl, lg, md, sm, xs;
+$mediaWidth: (
+    xxl: 1599px,
+    xl: 1919px,
+    lg: 1199px,
+    md: 991px,
+    sm: 767px,
+    xs: 359px,
+);
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: map-get($mediaWidth, xxl)) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: map-get($mediaWidth, xl)) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: map-get($mediaWidth, lg)) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: map-get($mediaWidth, md)) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: map-get($mediaWidth, sm)) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: map-get($mediaWidth, xs)) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/
+
+// ----var-----------------------------------------------------------------------------
+:root {
+    // color ----------------------
+    --color-primary: #04327A;
+    --color-darkBlue: #041C43;
+    --color-red: #FF0000;
+    --color-orange: #FD623F;
+    --color-green: #50B849;
+    --bg-lightBlue: #F0F4F7;
+    --fontColor: #333;
+    --fontColor-remark: #8D9095;
+    --fontColor-lightFont: #9A9A9A;
+    --bgColor: #fff;
+    --borderRadius: 16px;
+    --borderRadius_s: 8px;
+    --boxShadow: 0 4px 4px rgb(0 0 0 / 25%),
+                 0 4px 4px rgb(0 0 0 / 10%),
+                 -2px -2px 4px rgb(0 0 0 / 10%);
+    --dividerColor: #E5E7EB;
+    --inputBorderColor: #000;
+    --smTitFontsize: 20px;
+    --baseFontsize: 16px;
+    --remarkFontsize: 14px;
+    --blockUpAndDownMargin: 40px;
+    --domUpAndDownMargin: 20px;
+    --smUpAndDownMargin: 8px;
+    @include maxWidth-md {
+        --blockUpAndDownMargin: 8px;
+        --domUpAndDownMargin: 8px;
+    }
+}
+
+// ----extend-----------------------------------------------------------------------------
+.itemStyle {
+    background: #fff;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+}
+
+.blockStyle {
+    @extend .itemStyle;
+    padding: 1px 20px;
+    &-2 {
+        background: var(--bg-lightBlue);
+    }
+    @include maxWidth-md {
+        border-radius: var(--borderRadius_s);
+        padding: 1px 8px;
+    }
+}
+
+// --fontAwesome
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 900;
+}
+
+// DOM 100%
+.width100Percentage {
+    width: 100%;
+    box-sizing: border-box;
+}

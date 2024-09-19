@@ -1,0 +1,420 @@
+:root {
+    --el-component-size: 48px;
+    --el-font-size-base: 16px;
+    --el-border-radius-base: var(--borderRadius_s);
+    --el-color-primary: var(--color-primary);
+    --el-overlay-color-lighter: rgba(0, 0, 0, 0.8);
+    --el-color-warning: var(--color-orange);
+    --el-border-radius-round: 30px;
+    --el-border-color: #000;
+    @include maxWidth-md {
+        :root {
+            --el-component-size: 35px;
+        }
+    }
+}
+
+.el {
+    &-dialog {
+        --el-dialog-border-radius: var(--borderRadius);
+        --el-dialog-title-font-size: 20px;
+        max-width: 98%;
+        &__header {
+            .tit-sm {
+                margin: 0;
+            }
+        }
+        &__body {
+            color: var(--fontColor);
+            font-size: var(--baseFontsize);
+        }
+    }
+    &-input {
+        --el-input-border-color: var(--inputBorderColor);
+        // --el-input-height: 
+        &-number {
+            &__decrease,
+            &__increase {
+                background: none;
+                border: none;
+            }
+        }
+        &__suffix {
+            .el-input__password,
+            .el-input__clear {
+                font-size: 20px;
+            }
+        }
+    }
+    &-link {
+        --el-link-text-color: var(--fontColor);
+        font-weight: normal;
+    }
+    &-button {
+        font-weight: normal;
+        &:not(.el-button--small) {
+            height: 48px;
+        }
+        &--primary.is-plain {
+            --el-button-bg-color: none;
+            --el-button-border-color: var(--color-primary);
+        }
+        &.is-round {
+            padding: 8px 16px;
+        }
+    }
+    &-divider--horizontal {
+        margin: var(--domUpAndDownMargin) 0;
+        border-top-color: var(--fontColor);
+    }
+    &-alert {
+        --el-alert-title-font-size: var(--baseFontsize);
+        align-items: start;
+        margin: 15px 0;
+        &__title {
+            line-height: 1.75;
+        }
+        .el-icon {
+            padding-top: 10px;
+        }
+        &.resetAlert {
+            .el-alert {
+                &__content {
+                    padding: 0;
+                }
+                &__title {
+                    display: flex;
+                    // align-items: start;
+                }
+            }
+            .resetAlert {
+                &-icon {
+                    margin-top: -4px;
+                }
+                &-content {
+                    padding: 0 6px;
+                    // display: flex;
+                    // align-items: center;
+                    .el-checkbox-group {
+                        display: inline-block;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    &-message {
+        &__content {
+            font-size: var(--baseFontsize);
+        }
+    }
+    &-radio {
+        height: 48px;
+        margin-right: 15px;
+        &-button__inner {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        &-group {
+            margin-top: -5px;
+            margin-bottom: -5px;
+            &.buyOrSell {
+                .el-radio-button:not(.is-disabled) {
+                    &:first-of-type {
+                        .el-radio-button__inner {
+                            &:hover {
+                                color: var(--color-red);
+                            }
+                        }
+                        &.is-active {
+                            --el-radio-button-checked-bg-color: var(--color-red);
+                            --el-radio-button-checked-border-color: var(--color-red);
+                            .el-radio-button__inner:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        .el-radio-button__inner {
+                            &:hover {
+                                color: var(--color-green);
+                            }
+                        }
+                        &.is-active {
+                            --el-radio-button-checked-bg-color: var(--color-green);
+                            --el-radio-button-checked-border-color: var(--color-green);
+                            .el-radio-button__inner:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .el-radio-button {
+                margin: 5px 0;
+            }
+        }
+        &.is-bordered {
+            background: #fff;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    &-checkbox {
+        &--large {
+            .el-checkbox__inner {
+                width: 20px !important;
+                height: 20px !important;
+                &:after {
+                    inset: 4px auto auto 7px;
+                }
+            }
+        }
+    }
+    &-tag {
+        &--large {
+            font-size: 16px;
+        }
+    }
+    &-scrollbar__view {
+        li {
+            padding-bottom: 0;
+        }
+    }
+    &-table {
+        --el-table-header-bg-color: var(--bg-lightBlue);
+        font-size: var(--baseFontsize);
+        @extend .itemStyle;
+        margin: var(--domUpAndDownMargin) 0;
+        thead {
+            color: var(--fontColor);
+        }
+        &__cell {
+            padding: 12px 0 !important;
+        }
+    }
+    &-switch {
+        --el-switch-off-color: #dcdfe6;
+    }
+    &-backtop {
+        --el-backtop-bg-color: var(--color-primary);
+        --el-backtop-text-color: #fff;
+        --el-backtop-hover-bg-color: var(--color-darkBlue);
+        border-radius: 4px;
+        font-size: 14px;
+        right: 24px !important;
+        bottom: 50px !important;
+    }
+    &-date-editor {
+        &.fitDatePicker {
+            width: 160px;
+        }
+    }
+    &-select-v2 {
+        font-size: var(--el-font-size-base);
+        &__combobox-input {
+            font-size: var(--el-font-size-base);
+        }
+        &__popper {
+            .el-select-dropdown__option-item {
+                font-size: var(--el-font-size-base);
+            }
+        }
+    }
+    @include maxWidth-md {
+        &-button {
+            &:not(.el-button--small) {
+                height: 35px;
+            }
+            &.is-round {
+                padding: 8px 10px;
+            }
+        }
+        &-message {
+            width: 100%;
+        }
+        &-input {
+            &__inner,
+            &.el-date-editor {
+                --el-input-height: 35px;
+            }
+        }
+        &-radio {
+            height: 35px;
+            &-button__inner {
+                padding-top: 9px;
+                padding-bottom: 8px;
+            }
+            &-group {
+                position: relative;
+                top: -2px;
+            }
+        }
+        &-alert {
+            --el-alert-padding: 2px 16px
+        }
+        &-backtop {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            bottom: 15px !important;
+            right: 15px !important;
+        }
+        &-picker {
+            &-panel {
+                position: fixed !important;
+                top: auto !important;
+                bottom: 0px !important;
+                left: 0px !important;
+                right: auto !important;
+                width: 100%;
+                margin: 0px !important;
+                box-sizing: border-box;
+                box-shadow: var(--boxShadow);
+                border-radius: 0;
+                &[actualvisible="false"] {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 2s ease opacity;
+                }
+                &[actualvisible="true"] {
+                    opacity: 1;
+                    visibility: visible;
+                    
+                }
+                &.el-zoom-in-top-enter-active,
+                &.el-zoom-in-top-leave-active {
+                    transform-origin: center bottom;
+                }
+                .popper__arrow {
+                    display: none;
+                }
+                &__content {
+                    width: calc(100% - 30px) !important;
+                    box-sizing: border-box;
+                    &.is-left {
+                        .el-picker-panel__icon-btn {
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                }
+                & + .el-popper__arrow {
+                    display: none !important;
+                }
+            }
+            &__popper {
+                &.el-popper {
+                    border: none !important;
+                    box-shadow: none !important;
+                }
+                &[aria-hidden="false"] {
+                    visibility: visible !important;
+                    transition: 0s ease visibility;
+                }
+                &[aria-hidden="true"] {
+                    visibility: hidden !important;
+                    transition: 0s ease visibility;
+                }
+            }
+        }
+        &-date {
+            &-editor {
+                &.el-input__wrapper {
+                    --el-input-height: 35px;
+                }
+            }
+            &-range {
+                &-picker {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+            
+                    &.has-sidebar {
+                        width: auto;
+                    }
+                    .el-picker-panel {
+                        &__sidebar {
+                            top: -38px;
+                            bottom: auto;
+                            left: -1px;
+                            right: -1px;
+                            width: auto;
+                            padding: 0px 10px;
+                            box-sizing: border-box;
+                            // border: 1px solid #e4e7ed;
+                            // border-radius: 4px 4px 0px 0px;
+                            white-space: nowrap;
+                            overflow-x: auto;
+                            box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.1);
+                            & + .el-picker-panel__body {
+                                margin-left: 0;
+                            }
+                        }
+                        &__shortcut {
+                            width: auto;
+                            display: inline-block;
+                            padding: 0px 15px;
+                            border: solid 1px #ccc;
+                            margin: 6px 6px;
+                            border-radius: 20px;
+                        }
+                        &__body {
+                            min-width: 0;
+                        }
+                    }
+            
+                    &__content {
+                        width: 100% !important;
+                        box-sizing: border-box;
+                        &.is {
+                            &-left {
+                                float: none;
+                                width: auto;
+                                border: none;
+                            }
+                            &-right {
+                                position: absolute;
+                                top: 0px;
+                                right: 0;
+                                float: none;
+                                width: auto;
+                                .el-date {
+                                    &-table {
+                                        display: none;
+                                    }
+                                    &-range-picker__header {
+                                        div {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-select-v2 {
+            &__wrapper .el-select-v2__input-wrapper input {
+                --el-input-inner-height: 27px
+            }
+        }
+    }
+    @include maxWidth-xs {
+        &-radio-button__inner {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}
+
+html.dark {
+    --el-color-warning: var(--color-orange);
+    --el-color-success: var(--color-green);
+    --el-border-color: #fff;
+    .el {
+        &-table {
+            --el-table-header-bg-color: var(--darkBgColorLv2);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    align-items: center;
+    &-item {
+        width: calc(50% - (var(--gap-sm) / 2));
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-sm);
+        align-items: center;
+        .dateInput {
+            flex: auto;
+        }
+    }
+}

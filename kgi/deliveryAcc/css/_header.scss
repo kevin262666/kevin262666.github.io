@@ -1,0 +1,155 @@
+.header {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(180deg, #004194 0%, #0062E0 100%);
+    padding: 40px 60px 96px;
+    &-bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        div {
+            position: absolute;
+            border-radius: 100%;
+            background: var(--color-blue-light);
+            &:nth-of-type(1) {
+                width: 734px;
+                height: 734px;
+                top: 70px;
+                left: -240px;
+            }
+            &:nth-of-type(2) {
+                width: 27px;
+                height: 27px;
+                top: 70px;
+                left: 338px;
+            }
+            &:nth-of-type(3) {
+                width: 734px;
+                height: 734px;
+                bottom: 0;
+                right: -100px;
+            }
+            &:nth-of-type(4) {
+                width: 66px;
+                height: 66px;
+                bottom: -40px;
+                right: 36px;
+            }
+        }
+    }
+    .navbar {
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        a {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: 0.3s ease all;
+            i {
+                order: 1;
+                margin-left: 5px;
+                line-height: 1.4;
+                &:not(.fa-right-from-bracket) {
+                    display: none;
+                }
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    &-tit {
+        font-size: 40px;
+        margin: 13px 0 0;
+        font-weight: bold;
+        position: relative;
+        line-height: 1.4;
+    }
+    &-stit {
+        font-size: 20px;
+        position: relative;
+    }
+    @include maxWidth-md {
+        padding: 40px 30px 94px;
+        &-bg {
+            div {
+                &:nth-of-type(1) {
+                    left: -450px;
+                }
+                &:nth-of-type(2) {
+                    left: 140px;
+                }
+                &:nth-of-type(3) {
+                    bottom: 50px;
+                    right: -390px;
+                }
+            }
+        }
+        .navbar {
+            justify-content: center;
+        }
+    }
+    @include maxWidth-sm {
+        background: #051928;
+        padding: 0;
+        height: 105px;
+        &-bg,
+        &-tit,
+        &-stit {
+            display: none;
+        }
+        .navbar {
+            position: fixed;
+            z-index: 1;
+            inset: auto 16px 10px;
+            background: #000;
+            border-radius: 100px;
+            font-size: 14px;
+            a {
+                display: block;
+                padding: 0;
+                flex: 1;
+                color: #A2A2A2;
+                padding: 3px 0;
+                position: relative;
+                i {
+                    font-size: 15px;
+                    display: block !important;
+                    order: 0;
+                    margin-left: 0;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 11px;
+                    width: 1px;
+                    background: #A2A2A2;
+                }
+                &.active {
+                    color: #fff;
+                }
+                &:first-of-type {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:nth-of-type(5) {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include maxWidth-xs {
+        .navbar {
+            font-size: 12px;
+            inset: auto 10px 10px;
+        }
+    }
+}

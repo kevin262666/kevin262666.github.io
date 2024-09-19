@@ -1,0 +1,178 @@
+html.dark {
+    --color-primary: #4E91DF;
+    --color-darkBlue: #4E91DF;
+    --fontColor: #fff;
+    --bgColor: #000;
+    --inputBorderColor: #fff;
+    --darkBgColorLv1: #061928;
+    --darkBgColorLv2: #05233D;
+    --darkBgColorLv3: #141E28;
+    --darkBgColorLv4: #141414;
+    .blockStyle,
+    .blockStyle-2 {
+        background: var(--darkBgColorLv3);
+        border: solid 1px #203348;
+    }
+
+    .headerNav {
+        background: var(--darkBgColorLv1);
+        margin-top: 0;
+        padding: 1px 0;
+        // position: sticky;
+        top: -80px;
+        .secondNav {
+            ul {
+                li {
+                    a {
+                        background: none;
+                        border: solid 1px var(--color-primary);
+                    }
+                    &.active a {
+                        background: var(--color-primary);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .switchBtn {
+        li {
+            a {
+                background: none;
+                border: solid 1px var(--color-primary);
+            }
+            &.active a {
+                color: #fff;
+                background: var(--color-primary);
+            }
+        }
+    }
+
+    .el {
+        &-button:not(.el-button--primary, .el-button--success, .el-button--info, .el-button--warning, .el-button--danger) {
+            border-color: #fff;
+        }
+        &-dialog {
+            border: solid 1px #363637;
+        }
+        &-radio {
+            &.is-bordered {
+                background: none;
+            }
+        }
+        &-picker-panel,
+        &-picker-panel__sidebar {
+            border-top: solid 1px #fff;
+        }
+    }
+
+    .orderSet-stockInfo-input-stockSortList {
+        background: var(--darkBgColorLv4);
+        border: solid 1px #858486;
+    }
+
+    // 庫存股票
+    .inventoryStockCard {
+        background: var(--darkBgColorLv3);
+        &-price {
+            &.text-orange {
+            color: var(--color-red);
+            }
+        }
+    }
+
+    // 設定條件區
+    .setConditions {
+        @extend .blockStyle;
+        padding-top: calc(var(--domUpAndDownMargin) / 2);
+        padding-bottom: calc(var(--domUpAndDownMargin) / 2);
+    }
+
+    .settingResultCard {
+        background: var(--darkBgColorLv3);
+        &-head {
+            background: var(--darkBgColorLv2);
+        }
+        &-orderName {
+            background: var(--color-primary);
+        }
+        &-sInfo {
+            border-bottom-color: #858486;
+        }
+        &-main {
+            .confirmDialog-infoList {
+                border-bottom-color: #858486;
+            }
+        }
+        &.deleted {
+            .settingResultCard {
+                &-head {
+                    background: #000;
+                    border: solid 1px #203348;
+                    color: #8D9095;
+                }
+                &-orderName {
+                    background: #4B4A4D;
+                }
+                &-tag {
+                    border-color: #4B4A4D;
+                }
+            }
+        }
+    }
+
+    .login {
+        background: none;
+        &-content {
+            background: #000;
+        }
+    }
+
+    .captcha {
+        .fa-rotate {
+            color: #000;
+        }
+    }
+
+    &.hideSecuritiesOrFutures {
+        .headerNav {
+            top: 0;
+        }
+    }
+
+    // 監控條件
+    .monitorConditions {
+        &.setConditions {
+            background: none;
+        }
+        &-tit {
+            background: var(--darkBgColorLv2);
+        }
+    }
+
+    .fixedBottomFunctionBar-content {
+        background: var(--darkBgColorLv1);
+    }
+
+    .kgiTimePicker-option-content {
+        @extend .blockStyle;
+    }
+
+    .kgiCheckbox-fakeCheckbox {
+        border-color: #fff;
+    }
+    
+    @include maxWidth-md {
+        .headerNav {
+            top: 0;
+            &.switchOrderType {
+                top: 86px;
+            }
+        }
+        &.hideSecuritiesOrFutures {
+            .headerNav.switchOrderType {
+                top: 46px;
+            }
+        }
+    }
+}

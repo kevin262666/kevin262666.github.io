@@ -3198,7 +3198,7 @@ body:before {
 }
 .tab-btn li.active, .tab-btn li:hover {
   color: #fff;
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 900;
 }
 @media screen and (max-width: 991px) {
@@ -3268,6 +3268,7 @@ body:before {
   width: 100%;
   display: block;
   border-radius: 5px;
+  border: solid 4px #fff;
 }
 .portfolio-list-head-tit {
   position: absolute;

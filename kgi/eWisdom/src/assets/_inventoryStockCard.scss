@@ -1,0 +1,58 @@
+.inventoryStockCard {
+    margin: var(--domUpAndDownMargin) 0;
+    @extend .itemStyle;
+    &-head {
+        color: #fff;
+        background: var(--color-darkBlue);
+        padding: 17px 20px;
+        padding-right: 50px;
+        position: relative;
+        font-size: var(--smTitFontsize);
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+        .fa-circle-plus {
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            cursor: pointer;
+        }
+        &.type2 {
+            padding-right: 20px;
+        }
+    }
+    &-main {
+        padding: 10px;
+        text-align: center;
+        .el-col {
+            border-right: solid 1px var(--dividerColor);
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
+    &-qty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        b {
+            color: var(--color-primary);
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 1.2;
+            padding-right: 5px;
+        }
+    }
+    &-price {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    @include maxWidth-xxl {
+        &-qty {
+        b {
+            font-size: 25px;
+        }
+        }
+        &-price {
+            font-size: 25px;
+        }
+    }
+}

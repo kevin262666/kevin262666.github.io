@@ -1270,7 +1270,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#120054', end
             &.active,
             &:hover {
                 color: #fff;
-                font-size: 64px;
+                font-size: 45px;
                 font-weight: 900;
             }
             &.active {
@@ -1343,6 +1343,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#120054', end
                 width: 100%;
                 display: block;
                 border-radius: $borderRadius;
+                border: solid 4px #fff;
             }
             &-tit {
                 position: absolute;

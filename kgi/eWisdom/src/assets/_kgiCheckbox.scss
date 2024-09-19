@@ -1,0 +1,38 @@
+.kgiCheckbox {
+    display: inline-block;
+    font-size: 0;
+    label {
+        display: flex;
+    }
+    input[type="checkbox"] {
+        display: none;
+        &:checked + .kgiCheckbox-fakeCheckbox {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            i {
+                opacity: 1;
+            }
+        }
+    }
+    &-fakeCheckbox {
+        width: 20px;
+        height: 20px;
+        border: solid 1px #000;
+        border-radius: 2px;
+        box-sizing: border-box;
+        margin: 4px 0;
+        text-align: center;
+        transition: 0.3s ease all;
+        i {
+            opacity: 0;
+            transition: 0.3s ease all;
+            color: #fff;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &-text {
+        font-size: var(--baseFontsize);
+        margin-left: 5px;
+    }
+}

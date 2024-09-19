@@ -1,0 +1,35 @@
+.tit {
+    &-type1 {
+        color: #fff;
+        background: var(--color-primary);
+        font-size: 18px;
+        padding: 7px 8px;
+        margin: var(--smUpAndDownMargin) 0;
+        font-weight: normal;
+        position: relative;
+        &.buyType {
+            background: var(--color-red);
+        }
+        &.sellType {
+            background: var(--color-green);
+        }
+        &.hasToggleArrow {
+            cursor: pointer;
+            .fa-angle-down {
+                position: absolute;
+                right: 8px;
+                top: 14px;
+                transition: 0.3s ease all;
+            }
+            &.active {
+                .fa-angle-down {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &-sm {
+        font-size: var(--smTitFontsize);
+        margin: var(--smUpAndDownMargin) 0;
+    }
+}

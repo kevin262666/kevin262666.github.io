@@ -1,0 +1,74 @@
+.linkList {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: var(--gap-sm);
+    align-items: start;
+    a {
+        width: calc(50% - var(--gap-sm) / 2);
+        box-sizing: border-box;
+        display: block;
+        background: #fff;
+        color: var(--color-black-base);
+        border: solid 1px #fff;
+        transition: 0.3s ease all;
+        padding: 15px;
+        padding-right: 39px;
+        border-radius: var(--border-radius-base);
+        position: relative;
+        &:after {
+            @extend .fontAwesomeIcon;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '\f061';
+            transition: 0.1s ease all;
+        }
+        &:hover {
+            background: rgba(#fff, 0.1);
+            &:after {
+                right: 13px;
+            }
+        }
+        &.selectBankAccountType {
+            &:after {
+                content: "\f021";
+            }
+            &:hover {
+                &:after {
+                    right: 15px;
+                }
+            }
+        }
+        &.openNewWindowType {
+            &:after {
+                content: "\f08e";
+            }
+            &:hover {
+                &:after {
+                    right: 15px;
+                }
+            }
+        }
+        .badge + div {
+            margin-top: var(--gap-xs);
+        }
+    }
+    &-price {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    &.type2 {
+        a {
+            border: solid 1px var(--color-gray-border);
+            &:hover {
+                background: var(--color-gray-bg);
+            }
+        }
+    }
+    @include maxWidth-sm {
+        a {
+            width: 100%;
+        }
+    }
+}

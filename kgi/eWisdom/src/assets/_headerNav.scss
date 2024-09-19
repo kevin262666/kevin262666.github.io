@@ -1,0 +1,77 @@
+.headerNav {
+    margin-top: -45px;
+    position: sticky;
+    top: -85px;
+    z-index: 3;
+    padding: 1px 0;
+    // 切換證券/期權
+    .securitiesOrFutures {
+        margin: 0 auto;
+        max-width: 687px;
+    }
+    .secondNav {
+        // max-width: 1067px;
+        margin: 20px auto;
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            margin: 0 -8px;
+            li {
+                flex: 1;
+                margin: 0 8px;
+                a {
+                    display: block;
+                    @extend .itemStyle;
+                    color: var(--color-primary);
+                    display: flex;
+                    align-items: center;
+                    transition: 0.3s ease all;
+                    padding: 16px;
+                    font-size: 20px;
+                    img {
+                        flex: 0;
+                    }
+                    span {
+                        flex: auto;
+                        text-align: center;
+                    }
+                }
+                &.active a,
+                a:hover {
+                    background: var(--color-primary);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    @include maxWidth-md {
+        margin-top: -20px;
+        top: 0px;
+        position: sticky;
+        background: #fff;
+        .secondNav {
+            margin: 4px 0;
+            ul {
+                margin: 0 -2px;
+                li {
+                    margin: 0 2px;
+                    a {
+                        font-size: 18px;
+                        padding: 3px 10px;
+                        line-height: 1.4;
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth-xs {
+        .secondNav ul li a {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.fixedBottomFunctionBar {
+    position: fixed;
+    z-index: 1;
+    inset: auto 0 20px 0;
+    &-content {
+        background: #fff;
+        @extend .itemStyle;
+        padding: 10px;
+    }
+    @include maxWidth-md {
+        .container {
+            padding-right: 30px;
+        }
+    }
+    @include maxWidth-sm {
+        bottom: 10px;
+        font-size: 14px;
+        .container {
+            padding-right: 50px;
+        }
+    }
+}
