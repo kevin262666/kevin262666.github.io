@@ -280,6 +280,9 @@ body:not(.index) {
     gap: var(--gap-sm);
     .btn {
         flex: 1;
+        &-primary {
+            order: 999;
+        }
     }
     &.text-center {
         justify-content: center;
@@ -292,6 +295,9 @@ body:not(.index) {
         .btn {
             flex: none;
             width: 100%;
+            &-primary {
+                order: initial;
+            }
         }
     }
 }
