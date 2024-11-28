@@ -265,10 +265,12 @@ var content = new Vue({
                 behance: `https://www.behance.net/gallery/207095973/APP-Light-version`,
             },
             {
-                link: `https://kevin262666.github.io/kgi/dist/eWisdom/#/`,
+                // link: `https://kevin262666.github.io/kgi/eWisdom/dist/#/`,
+                link: 'https://eventtest.kgi.com.tw/news/event/eWisdom/#/',
                 tit: `凱基證券-e智慧改版(智慧下單介面)`,
                 img: `eWisdom.png`,
-                website: `https://kevin262666.github.io/kgi/dist/eWisdom/#/`,
+                // website: `https://kevin262666.github.io/kgi/eWisdom/dist/#/`,
+                website: 'https://eventtest.kgi.com.tw/news/event/eWisdom/#/',
                 behance: `https://www.behance.net/gallery/204840059/-e()`,
             },
             {

@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/news/event/eWisdom/', // 為了公司server設定基礎路徑
+  base: '/kgi/eWisdom/dist/', // 為了公司server設定基礎路徑
   plugins: [
     vue(),
     vueJsx(),
